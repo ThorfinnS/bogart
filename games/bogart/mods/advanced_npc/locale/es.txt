@@ -1,0 +1,20 @@
+# Template for translations of mobs_npc mod
+# last update: 2016/June/10
+
+#init.lua
+[MOD] Mobs Redo 'NPCs' loaded = [MOD] Mobs Redo 'NPCs' cargado
+#npc.lua
+NPC dropped you an item for gold! = ¡El NPC te da un objecto a cambio de oro!
+NPC stands still. = El NPC se detiene.
+NPC will follow you. = El NPC te seguirá.
+Npc = NPC
+
+#trader.lua
+Trader @1 = El comerciante @1
+[NPC] <Trader @1 > Hello, @2, have a look at my wares. = [NPC] <Comerciante @1 > Hola, @2, echa un vistazo a mi mercancía.
+Trader @1's stock: = Inventario del comerciante @1:
+Selection = Selección
+Price = Precio
+Payment = Pago
+Bought items = Artículos comprados 
+Trader = Comerciante

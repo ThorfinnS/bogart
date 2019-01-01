@@ -1,0 +1,5 @@
+bgm.tryinterval (Delay before trying to play music) int 60
+bgm.probability (Probability music will play on a given try) float 0.2 0.0 1.0
+bgm.time_probability (Probability the chosen song will be related to time of day) float 0.5 0.0 1.0
+bgm.gain (Overall music gain/volume) float 0.1
+bgm.repeats (Allow the same track to be played twice in a row) bool false

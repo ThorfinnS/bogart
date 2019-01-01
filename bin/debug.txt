@@ -1,0 +1,25 @@
+
+
+-------------
+  Separator
+-------------
+
+
+
+-------------
+  Separator
+-------------
+
+
+
+-------------
+  Separator
+-------------
+
+
+
+-------------
+  Separator
+-------------
+
+2019-01-01 13:54:33: ERROR[Main]: La ruta del mundo especificada no existe: /opt/minetest/bin/../worlds/world

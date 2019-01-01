@@ -1,0 +1,1 @@
+return {["playerlist"] = {["singleplayer"] = {["maxmana"] = 200, ["mana"] = 0, ["regen"] = 0, ["remainder"] = 0}}}

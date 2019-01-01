@@ -1,0 +1,76 @@
+extended_attributes = """
+{"3d_armor_inventory":"return {\"\", \"\", \"\", \"\", \"\", \"\"}"}
+
+"""
+breath = 11
+yaw = 62
+pitch = 40.8
+version = 1
+name = singleplayer
+hp = 20
+position = (-15.47,75,18.59)
+PlayerArgsEnd
+List main 32
+Width 0
+Empty
+Empty
+Empty
+Empty
+Empty
+Empty
+Empty
+Empty
+Empty
+Empty
+Empty
+Empty
+Empty
+Empty
+Empty
+Empty
+Empty
+Empty
+Empty
+Empty
+Empty
+Empty
+Empty
+Empty
+Empty
+Empty
+Empty
+Empty
+Empty
+Empty
+Empty
+Empty
+EndInventoryList
+List hand 1
+Width 0
+Empty
+EndInventoryList
+List craft 9
+Width 3
+Empty
+Empty
+Empty
+Empty
+Empty
+Empty
+Empty
+Empty
+Empty
+EndInventoryList
+List craftpreview 1
+Width 0
+Empty
+EndInventoryList
+List craftresult 1
+Width 0
+Empty
+EndInventoryList
+List hunger 1
+Width 0
+Item : 21
+EndInventoryList
+EndInventory

@@ -1,0 +1,1 @@
+Adds randomly playing background music to Minetest.
