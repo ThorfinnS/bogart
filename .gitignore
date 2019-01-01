@@ -34,10 +34,8 @@ gtags.files
 ## Non-static Minetest directories or symlinks to these
 /bin/
 /games/*
-!/games/minimal/
 /cache
 /textures/*
-!/textures/base/
 /screenshots
 /sounds
 /mods/*
