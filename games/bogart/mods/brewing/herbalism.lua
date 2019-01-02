@@ -156,7 +156,7 @@ if mg_name ~= "v6" and mg_name ~= "singlenode" and brewing.settings.generate_min
 			deco_type = "simple",
 			place_on = "default:dirt_with_grass",
 			sidelen = 16,
-			fill_ratio = 0.001,
+			fill_ratio = 0.0005,
 			biomes = {"grassland", "deciduous_forest"},
 			decoration = "brewing:mint",
 			y_min = 1,

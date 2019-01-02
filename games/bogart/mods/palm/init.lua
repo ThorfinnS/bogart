@@ -157,7 +157,7 @@ minetest.register_decoration({
 	place_on = {"default:sand"},
 		sidelen = 16,
 		noise_params = {
-			offset = 0.01,
+			offset = 0.001,
 			scale = 0.002,
 			spread = {x = 250, y = 250, z = 250},
 			seed = 2337,

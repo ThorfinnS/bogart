@@ -32,7 +32,7 @@ hb.settings.forceload_default_hudbars = hb.load_setting("hudbars_forceload_defau
 
 -- Misc. settings
 hb.settings.alignment_pattern = hb.load_setting("hudbars_alignment_pattern", "string", "zigzag", {"zigzag", "stack_up", "stack_down"})
-hb.settings.autohide_breath = hb.load_setting("hudbars_autohide_breath", "bool", false)
+hb.settings.autohide_breath = hb.load_setting("hudbars_autohide_breath", "bool", true)
 
 local sorting = minetest.settings:get("hudbars_sorting")
 if sorting ~= nil then
@@ -43,6 +43,6 @@ if sorting ~= nil then
 		hb.settings.sorting_reverse[tonumber(v)] = k
 	end
 else
-	hb.settings.sorting = { ["health"] = 0, ["breath"] = 1 }
-	hb.settings.sorting_reverse = { [0] = "health", [1] = "breath" }
+	hb.settings.sorting = { ["health"] = 0, ["satiation"] = 1, ["sprint"] = 2, ["armor"] = 3, ["breath"] = 4, ["mana"] = 5 }
+	hb.settings.sorting_reverse = { [0] = "health", [1] = "satiation", [2]="sprint",  [3]="breath", [4]="mana", [5]="armor"}
 end

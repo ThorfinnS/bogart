@@ -19,28 +19,55 @@ fishing = {
 	end,
 	registerfish = function(fish)
 		--habitats are "river", "sea" or "clutter"
-		fishing.fishes[#fishing.fishes+1] = {fish.name, fish.habitat}
-		minetest.register_craftitem(fish.name, {
-			description = S(fish.description),
-			inventory_image = fish.inventory_image,
-			wield_image = fish.wield_image,
-			groups = {food_fish_raw = 1, flammable = 3},
-			on_use = minetest.item_eat(fish.hp_eat),
-		})
+		fishing.fishes[#fishing.fishes+1] = fish
 	end,
 	--custom function to get only array values of tables, not keys
 	arrayvalues = function(arr)
-    	local i = 0
-    	return function() i = i + 1; return arr[i] end
+		local i = 0
+		return function() i = i + 1; return arr[i] end
+	end,
+	registerfishes = function()
+		local i
+		for fish in fishing.arrayvalues(fishing.fishes) do
+   			minetest.register_craftitem(fish.name, {
+				description = S(fish.description),
+				inventory_image = fish.inventory_image..".png",
+				wield_image = fish.wield_image..".png",
+				groups = {food = 3, fish = 3, flammable = 3},
+				on_use = minetest.item_eat(fish.hp_cooked_eat),
+			})
+			if not(fish.habitat == "clutter") then
+   				minetest.register_craftitem(fish.name.."_cooked", {
+					description = S(fish.description.." ".."Cooked"),
+					inventory_image = fish.inventory_image.."_cooked.png",
+					wield_image = fish.wield_image.."_cooked.png",
+					groups = {food = 3, fish = 3, flammable = 3},
+					on_use = minetest.item_eat(fish.hp_cooked_eat),
+				})
+				minetest.register_craft({
+					type = "cooking",
+					output = fish.name.."_cooked",
+					recipe = fish.name,
+					cooktime = fish.cooktime,
+				})
+			end
+		end
 	end,
 }
 
--- Register fishes
-fishing.registerfish{name="fishing:fish_raw", description="Raw Fish", habitat= "river", inventory_image="fishing_fish_raw.png", wield_image="fishing_fish_raw.png", hp_eat=2}
-fishing.registerfish{name="fishing:salmon", description="Salmon", habitat= "river", inventory_image="fishing_salmon.png", wield_image="fishing_salmon.png", hp_eat=3}
-fishing.registerfish{name="fishing:pufferfish", description="Pufferfish", habitat= "sea", inventory_image="fishing_pufferfish.png", wield_image="fishing_pufferfish.png", hp_eat=-5}
-fishing.registerfish{name="fishing:clownfish", description="Clownfish", habitat= "sea", inventory_image="fishing_clownfish.png", wield_image="fishing_clownfish.png", hp_eat=1}
-fishing.registerfish{name="fishing:diamond_ring", description="Diamond Ring", habitat= "clutter", inventory_image="fishing_diamond_ring.png", wield_image="fishingfishing_diamond_ring.png", hp_eat=1}
+-- Register Raw Fishes
+fishing.registerfish{name="fishing:salmon", description="Salmon", habitat= "river", inventory_image="fishing_salmon", wield_image="fishing_salmon", hp_raw_eat=1, hp_cooked_eat=3, cooktime = 2}
+fishing.registerfish{name="fishing:pufferfish", description="Pufferfish", habitat= "sea", inventory_image="fishing_pufferfish", wield_image="fishing_pufferfish", hp_raw_eat=-5, hp_cooked_eat=-3, cooktime = 2}
+fishing.registerfish{name="fishing:sole", description="Sole", habitat= "sea", inventory_image="fishing_sole", wield_image="fishing_sole", hp_raw_eat=1, hp_cooked_eat=3, cooktime = 2}
+fishing.registerfish{name="fishing:gilt_head_bream", description="Gilt Head Bream", habitat= "sea", inventory_image="fishing_gilt_head_bream", wield_image="fishing_gilt_head_bream", hp_raw_eat=1, hp_cooked_eat=3, cooktime = 2}
+fishing.registerfish{name="fishing:snapper", description="Snapper", habitat= "sea", inventory_image="fishing_snapper", wield_image="fishing_snapper", hp_raw_eat=1, hp_cooked_eat=2, cooktime = 2}
+fishing.registerfish{name="fishing:pufferfish", description="Pufferfish", habitat= "sea", inventory_image="fishing_pufferfish", wield_image="fishing_pufferfish", hp_raw_eat=-5, hp_cooked_eat=-3, cooktime = 2}
+fishing.registerfish{name="fishing:clownfish", description="Clownfish", habitat= "sea", inventory_image="fishing_clownfish", wield_image="fishing_clownfish", hp_raw_eat=1, hp_cooked_eat=2, cooktime = 2}
+fishing.registerfish{name="fishing:trout", description="Trout", habitat= "river", inventory_image="fishing_trout", wield_image="fishing_trout", hp_raw_eat=1, hp_cooked_eat=2, cooktime = 2}
+fishing.registerfish{name="fishing:diamond_ring", description="Diamond Ring", habitat= "clutter", inventory_image="fishing_diamond_ring", wield_image="fishing_diamond_ring", nil, nil, nil}
+
+-- Register Raw & Cooked Fishes and cooking crafts
+fishing.registerfishes()
 
 minetest.register_craft({
     type = "shaped",
@@ -57,22 +84,6 @@ minetest.register_craft({
 	output = "default:diamond",
 	recipe = "fishing:diamond_ring",
 	cooktime = 3,
-})
-
--- Cooked Fish
-minetest.register_craftitem("fishing:fish_cooked", {
-	description = S("Cooked Fish"),
-	inventory_image = "fishing_fish_cooked.png",
-	wield_image = "fishing_fish_cooked.png",
-	groups = {food_fish = 1, flammable = 3},
-	on_use = minetest.item_eat(5),
-})
-
-minetest.register_craft({
-	type = "cooking",
-	output = "fishing:fish_cooked",
-	recipe = "fishing:fish_raw",
-	cooktime = 2,
 })
 
 -- Worm
@@ -145,7 +156,7 @@ minetest.register_craftitem("fishing:fishing_rod_baited", {
 			local fish
 			local fishesbyhabitat = {}
 			for fish in fishing.arrayvalues(fishing.fishes) do
-				if fish[2] == node_habitat then
+				if fish.habitat == node_habitat then
 					fishesbyhabitat[#fishesbyhabitat+1] = fish
 				end
 			end
@@ -193,7 +204,7 @@ minetest.register_craftitem("fishing:fishing_rod_baited", {
 					playername = "singleplayer"
 				})
 
-				local fish_inv_img = minetest.registered_craftitems[fishedfish_name].inventory_image
+				local fish_inv_img = minetest.registered_craftitems[fishedfish.name].inventory_image
 
 				minetest.add_particle({
 					pos = fish_pos,
@@ -209,7 +220,7 @@ minetest.register_craftitem("fishing:fishing_rod_baited", {
 
 				minetest.sound_play("fishing")
 				
-				inv:add_item("main", {name = fishedfish_name})
+				inv:add_item("main", {name = fishedfish.name})
 
 				return ItemStack("fishing:fishing_rod")
 			else

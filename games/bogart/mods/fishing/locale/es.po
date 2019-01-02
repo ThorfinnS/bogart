@@ -34,20 +34,59 @@ msgid "Raw Fish"
 msgstr "Pescado crudo"
 
 #: fishing.lua
-msgid "Cooked Fish"
-msgstr "Pescado cocinado"
-
-#: fishing.lua
 msgid "Salmon"
 msgstr "Salmón"
+
+#: fishing.lua
+msgid "Salmon Cooked"
+msgstr "Salmón cocinado"
 
 #: fishing.lua
 msgid "Pufferfish"
 msgstr "Pez globo"
 
 #: fishing.lua
+msgid "Pufferfish Cooked"
+msgstr "Pez globo cocinado"
+
+#: fishing.lua
 msgid "Clownfish"
 msgstr "Pez payaso"
+
+#: fishing.lua
+msgid "Clownfish Cooked"
+msgstr "Pez payaso cocinado"
+
+#: fishing.lua
+msgid "Trout"
+msgstr "Trucha"
+
+#: fishing.lua
+msgid "Trout Cooked"
+msgstr "Trucha cocinada"
+
+msgid "Gilt Head Bream"
+msgstr "Dorada"
+
+#: fishing.lua
+msgid "Gilt Head Bream Cooked"
+msgstr "Dorada cocinada"
+
+#: fishing.lua
+msgid "Snapper"
+msgstr "Pargo"
+
+#: fishing.lua
+msgid "Snapper Cooked"
+msgstr "Pargo cocinado"
+
+#: fishing.lua
+msgid "Sole"
+msgstr "Lenguado"
+
+#: fishing.lua
+msgid "Sole Cooked"
+msgstr "Lenguado cocinado"
 
 #: fishing.lua
 msgid "Diamond Ring"

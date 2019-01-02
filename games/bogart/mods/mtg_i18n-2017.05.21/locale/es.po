@@ -317,11 +317,11 @@ msgstr "Arbusto seco"
 
 #: init.lua
 msgid "Acacia Wood Fence"
-msgstr "Valla de madera de acacia"
+msgstr "Valla de acacia"
 
 #: init.lua
 msgid "Aspen Wood Fence"
-msgstr "Valla de madera de álamo"
+msgstr "Valla de álamo"
 
 #: init.lua
 msgid "Jungle Wood Fence"
@@ -329,11 +329,11 @@ msgstr "Valla de madera tropical"
 
 #: init.lua
 msgid "Pine Wood Fence"
-msgstr "Valla de madera de pino"
+msgstr "Valla de pino"
 
 #: init.lua
 msgid "Apple Wood Fence"
-msgstr "Valla de madera de manzano"
+msgstr "Valla de manzano"
 
 #: init.lua
 msgid "Flint"
@@ -537,7 +537,7 @@ msgstr "Piedra arenisca"
 
 #: init.lua
 msgid "Apple Tree Sapling"
-msgstr "Retoño de álamo"
+msgstr "Retoño de manzano"
 
 #: init.lua
 msgid "Bronze Shovel"
@@ -724,12 +724,12 @@ msgid "Wooden Door"
 msgstr "Puerta de madera"
 
 #: init.lua
-msgid "Acacia Wood Fence Gate"
-msgstr "Puerta de valla de madera de acacia"
+msgid "Acacia Fence Gate"
+msgstr "Puerta de valla de acacia"
 
 #: init.lua
-msgid "Aspen Wood Fence Gate"
-msgstr "Puerta de valla de madera álamo"
+msgid "Aspen Fence Gate"
+msgstr "Puerta de valla de álamo"
 
 #: init.lua
 msgid "Jungle Wood Fence Gate"
@@ -737,11 +737,11 @@ msgstr "Puerta de valla de madera tropical"
 
 #: init.lua
 msgid "Pine Wood Fence Gate"
-msgstr "Puerta de valla de madera pino"
+msgstr "Puerta de valla de pino"
 
 #: init.lua
 msgid "Apple Wood Fence Gate"
-msgstr "Puerta de valla de madera de manzano"
+msgstr "Puerta de valla de manzano"
 
 #: init.lua
 msgid "Hidden Door Segment"
@@ -1510,11 +1510,11 @@ msgstr "Objeto desconocido"
 
 #: init.lua
 msgid "Empty Drinking Glass"
-msgstr "Vaso para beber (vacío)"
+msgstr "Vaso para beber vacío"
 
 #: init.lua
 msgid "Empty Glass Bottle"
-msgstr "Botella de vidrio (vacía)"
+msgstr "Botella de vidrio vacía"
 
 #: init.lua
 msgid "Glass Fragments"
@@ -1526,7 +1526,7 @@ msgstr "Estante de Vasijas"
 
 #: init.lua
 msgid "Empty Heavy Steel Bottle"
-msgstr "Botella de acero (vacía)"
+msgstr "Botella de acero vacía"
 
 #: init.lua
 msgid "Cobblestone Wall"

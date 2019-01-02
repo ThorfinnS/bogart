@@ -18,14 +18,6 @@ msgstr ""
 "X-Generator: Poedit 1.8.11\n"
 
 #: fishing.lua
-msgid "Raw Fish"
-msgstr ""
-
-#: fishing.lua
-msgid "Cooked Fish"
-msgstr ""
-
-#: fishing.lua
 msgid "Worm"
 msgstr ""
 
@@ -42,11 +34,54 @@ msgid "Salmon"
 msgstr ""
 
 #: fishing.lua
+msgid "Salmon Cooked"
+msgstr ""
+
+#: fishing.lua
 msgid "Pufferfish"
 msgstr ""
 
 #: fishing.lua
+msgid "Pufferfish Cooked"
+msgstr ""
+
+#: fishing.lua
 msgid "Clownfish"
+msgstr ""
+
+#: fishing.lua
+msgid "Clownfish Cooked"
+msgstr ""
+
+#: fishing.lua
+msgid "Trout"
+msgstr ""
+
+#: fishing.lua
+msgid "Trout Cooked"
+msgstr ""
+
+msgid "Gilt Head Bream"
+msgstr ""
+
+#: fishing.lua
+msgid "Gilt Head Bream Cooked"
+msgstr ""
+
+#: fishing.lua
+msgid "Snapper"
+msgstr ""
+
+#: fishing.lua
+msgid "Snapper Cooked"
+msgstr ""
+
+#: fishing.lua
+msgid "Sole"
+msgstr ""
+
+#: fishing.lua
+msgid "Sole Cooked"
 msgstr ""
 
 #: fishing.lua
