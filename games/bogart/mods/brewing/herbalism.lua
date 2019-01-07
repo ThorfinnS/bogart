@@ -215,6 +215,40 @@ minetest.register_node("brewing:artic_carrot", {
 	}
 })
 
+-- Artic Carrot
+
+if mg_name ~= "v6" and mg_name ~= "singlenode" and brewing.settings.generate_madragora == true then
+	minetest.register_decoration({
+			deco_type = "simple",
+			place_on = "default:dirt_with_dry_grass",
+			sidelen = 16,
+			fill_ratio = 0.0001,
+			biomes = {"savanna"},
+			decoration = "brewing:mandragora",
+			height = 1,
+		})
+end
+
+minetest.register_node("brewing:mandragora", {
+	description = S("Mandragora"),
+	tiles = {"brewing_mandragora.png"},
+	inventory_image = "brewing_mandragora_inv.png",
+	wield_image = "brewing_mandragora_inv.png",
+	drawtype = "plantlike",
+	paramtype = "light",
+	sunlight_propagates = true,
+	walkable = false,
+	buildable_to = true,
+	stack_max = 99,
+	groups = {snappy = 3, attached_node = 1, flammable = 1, flora = 1, color_white = 1},
+	sounds = default.node_sound_leaves_defaults(),
+	on_use = minetest.item_eat(1),
+	selection_box = {
+		type = "fixed",
+		fixed = {-4 / 16, -0.5, -4 / 16, 4 / 16, -1 / 16, 4 / 16},
+	}
+})
+
 -- Orange Mycena
 
 if mg_name ~= "v6" and mg_name ~= "singlenode" and brewing.settings.generate_orange_mycena == true then

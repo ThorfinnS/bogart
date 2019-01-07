@@ -20,6 +20,7 @@ brewing.settings.generate_pearl_oyster = settings:get_bool("generate_pearl_oyste
 brewing.settings.generate_saffron_crocus = settings:get_bool("generate_saffron_crocus", true)
 brewing.settings.generate_sugarcane  = settings:get_bool("generate_sugarcane", true)
 brewing.settings.generate_yellow_bell = settings:get_bool("generate_yellow_bell", true)
+brewing.settings.generate_madragora = settings:get_bool("mandragora", true)
 brewing.settings.ignitor["image"]= settings:get("ignitor_image")
 brewing.settings.ignitor["name"]= settings:get("ignitor_name")
 brewing.settings.lily_hp = settings:get("lily_hp", true)

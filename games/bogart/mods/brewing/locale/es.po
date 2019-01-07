@@ -374,6 +374,10 @@ msgid "Artic Carrot"
 msgstr "Zanahoria ártica"
 
 #: herbalism.lua
+msgid "Mandragora"
+msgstr "Mandragora"
+
+#: herbalism.lua
 msgid "Creosote Bush"
 msgstr "Arbusto creosote"
 

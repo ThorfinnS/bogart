@@ -24,6 +24,7 @@ brewing = {
 		generate_saffron_crocus = true,
 		generate_yellow_bell = true,
 		generate_sugarcane = true,
+		generate_mandragora = true,
 		-- end herbalism
 		-- Aquatic
 		generate_pearl_oyster = true,

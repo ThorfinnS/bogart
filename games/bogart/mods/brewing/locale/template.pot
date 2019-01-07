@@ -375,6 +375,10 @@ msgid "Artic Carrot"
 msgstr ""
 
 #: herbalism.lua
+msgid "Mandragora"
+msgstr ""
+
+#: herbalism.lua
 msgid "Vial (empty)"
 msgstr ""
 

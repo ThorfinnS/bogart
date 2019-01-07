@@ -2,8 +2,15 @@ local modname = "brewing"
 
 local modpath = minetest.get_modpath(modname)
 
--- Load support for intllib.
-local S = dofile(modpath .. "/intllib.lua")
+local S
+
+if not (minetest.has_feature(minetest.get_biome_name)) then
+	-- Load support for intllib.
+	S = dofile(modpath .. "/intllib.lua") --v0.4.17
+else
+	S = minetest.get_translator(minetest.get_current_modname()) --v5.0
+end
+
 local mg_name = minetest.get_mapgen_setting("mg_name")
 local mod_storage = minetest.get_mod_storage()
 
