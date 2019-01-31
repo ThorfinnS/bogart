@@ -20,11 +20,15 @@ brewing.settings.generate_pearl_oyster = settings:get_bool("generate_pearl_oyste
 brewing.settings.generate_saffron_crocus = settings:get_bool("generate_saffron_crocus", true)
 brewing.settings.generate_sugarcane  = settings:get_bool("generate_sugarcane", true)
 brewing.settings.generate_yellow_bell = settings:get_bool("generate_yellow_bell", true)
-brewing.settings.generate_madragora = settings:get_bool("mandragora", true)
+brewing.settings.generate_mandragora = settings:get_bool("mandragora", true)
+brewing.settings.generate_star_anise_plant  = settings:get_bool("generate_star_anise_plant", true)
+brewing.settings.generate_calla  = settings:get_bool("generate_calla", true)
+brewing.settings.generate_lavender  = settings:get_bool("generate_lavender", true)
 brewing.settings.ignitor["image"]= settings:get("ignitor_image")
 brewing.settings.ignitor["name"]= settings:get("ignitor_name")
 brewing.settings.lily_hp = settings:get("lily_hp", true)
 brewing.settings.star_blue_amulet_speedup= tonumber(settings:get("star_blue_amulet_speedup"))
+brewing.settings.fury_sun_sword_wait_time= tonumber(settings:get("fury_sun_sword_wait_time"))
 -- Mana Mod Settings
 if minetest.get_modpath("mana") ~= nil then
 	--Add

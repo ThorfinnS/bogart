@@ -25,6 +25,9 @@ brewing = {
 		generate_yellow_bell = true,
 		generate_sugarcane = true,
 		generate_mandragora = true,
+		generate_calla = true,
+		generate_lavender = true,
+		generate_creosote_bush = true,
 		-- end herbalism
 		-- Aquatic
 		generate_pearl_oyster = true,
@@ -52,6 +55,8 @@ brewing = {
 		mana_magic_blue_tear_wand = 50,
 		-- Mobs Damage
 		bp_anemon_damage = 5,
+		-- Weapons
+		fury_sun_sword_wait_time = 7.0,
 	},
 	isvalidwater = function(water_name_to_check)
 		local isvalid = false
@@ -201,7 +206,7 @@ brewing = {
 	end,
 	is_night = function()
 		local timeofday = minetest.get_timeofday() * 24000
-		if (timeofday < 4500) or (timeofday> 19500) then
+		if (timeofday < 4500) or (timeofday > 19500) then
 			return true
 		else
 			return false

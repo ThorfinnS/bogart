@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-12-11 23:40+0100\n"
+"POT-Creation-Date: 2019-01-31 19:38+0100\n"
 "PO-Revision-Date: 2018-11-05 23:04+0100\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
@@ -379,6 +379,14 @@ msgid "Mandragora"
 msgstr ""
 
 #: herbalism.lua
+msgid "Star Anise Plant"
+msgstr ""
+
+#: herbalism.lua
+msgid "Star Anise"
+msgstr ""
+
+#: herbalism.lua
 msgid "Vial (empty)"
 msgstr ""
 
@@ -418,6 +426,14 @@ msgstr ""
 msgid "Creosote Bush"
 msgstr ""
 
+#: herbalism.lua
+msgid "Calla"
+msgstr ""
+
+#: herbalism.lua
+msgid "Lavender"
+msgstr ""
+
 #: aquatic.lua
 msgid "Pearl Oyster"
 msgstr ""
@@ -440,4 +456,8 @@ msgstr ""
 
 #: black_pearl_anemon.lua
 msgid "Black Pearl"
+msgstr ""
+
+#: weapons.lua
+msgid "Fury of Sun Sword"
 msgstr ""
