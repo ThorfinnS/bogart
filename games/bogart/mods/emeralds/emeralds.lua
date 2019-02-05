@@ -1,8 +1,8 @@
 local path,modpath = ...
 local settings = Settings(path .. "/settings.txt")
 
--- Load support for intllib.
-local S, NS = dofile(path .. "/intllib.lua")
+-- internationalization boilerplate
+local S = minetest.get_translator(minetest.get_current_modname())
 
 --
 --  Item Registration

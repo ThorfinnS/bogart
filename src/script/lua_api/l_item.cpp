@@ -67,7 +67,7 @@ int LuaItemStack::l_set_name(lua_State *L)
 
 	bool status = true;
 	item.name = luaL_checkstring(L, 2);
-	if (item.name == "" || item.empty()) {
+	if (item.name.empty() || item.empty()) {
 		item.clear();
 		status = false;
 	}
@@ -231,12 +231,11 @@ int LuaItemStack::l_to_table(lua_State *L)
 
 		lua_newtable(L);
 		const StringMap &fields = item.metadata.getStrings();
-		for (StringMap::const_iterator it = fields.begin();
-				it != fields.end(); ++it) {
-			const std::string &name = it->first;
+		for (const auto &field : fields) {
+			const std::string &name = field.first;
 			if (name.empty())
 				continue;
-			const std::string &value = it->second;
+			const std::string &value = field.second;
 			lua_pushlstring(L, name.c_str(), name.size());
 			lua_pushlstring(L, value.c_str(), value.size());
 			lua_settable(L, -3);
@@ -391,10 +390,6 @@ LuaItemStack::LuaItemStack(const ItemStack &item):
 {
 }
 
-LuaItemStack::~LuaItemStack()
-{
-}
-
 const ItemStack& LuaItemStack::getItem() const
 {
 	return m_stack;
@@ -506,14 +501,14 @@ int ModApiItemMod::l_register_item_raw(lua_State *L)
 	// Get the writable item and node definition managers from the server
 	IWritableItemDefManager *idef =
 			getServer(L)->getWritableItemDefManager();
-	IWritableNodeDefManager *ndef =
+	NodeDefManager *ndef =
 			getServer(L)->getWritableNodeDefManager();
 
 	// Check if name is defined
 	std::string name;
 	lua_getfield(L, table, "name");
 	if(lua_isstring(L, -1)){
-		name = lua_tostring(L, -1);
+		name = readParam<std::string>(L, -1);
 		verbosestream<<"register_item_raw: "<<name<<std::endl;
 	} else {
 		throw LuaError("register_item_raw: name is not defined or not a string");
@@ -541,11 +536,16 @@ int ModApiItemMod::l_register_item_raw(lua_State *L)
 	idef->registerItem(def);
 
 	// Read the node definition (content features) and register it
-	if(def.type == ITEM_NODE){
+	if (def.type == ITEM_NODE) {
 		ContentFeatures f = read_content_features(L, table);
+		// when a mod reregisters ignore, only texture changes and such should
+		// be done
+		if (f.name == "ignore")
+			return 0;
+
 		content_t id = ndef->set(f.name, f);
 
-		if(id > MAX_REGISTERED_CONTENT){
+		if (id > MAX_REGISTERED_CONTENT) {
 			throw LuaError("Number of registerable nodes ("
 					+ itos(MAX_REGISTERED_CONTENT+1)
 					+ ") exceeded (" + name + ")");
@@ -566,7 +566,7 @@ int ModApiItemMod::l_unregister_item_raw(lua_State *L)
 
 	// Unregister the node
 	if (idef->get(name).type == ITEM_NODE) {
-		IWritableNodeDefManager *ndef =
+		NodeDefManager *ndef =
 			getServer(L)->getWritableNodeDefManager();
 		ndef->removeNode(name);
 	}
@@ -598,7 +598,7 @@ int ModApiItemMod::l_get_content_id(lua_State *L)
 	NO_MAP_LOCK_REQUIRED;
 	std::string name = luaL_checkstring(L, 1);
 
-	INodeDefManager *ndef = getGameDef(L)->getNodeDefManager();
+	const NodeDefManager *ndef = getGameDef(L)->getNodeDefManager();
 	content_t c = ndef->getId(name);
 
 	lua_pushinteger(L, c);
@@ -611,7 +611,7 @@ int ModApiItemMod::l_get_name_from_content_id(lua_State *L)
 	NO_MAP_LOCK_REQUIRED;
 	content_t c = luaL_checkint(L, 1);
 
-	INodeDefManager *ndef = getGameDef(L)->getNodeDefManager();
+	const NodeDefManager *ndef = getGameDef(L)->getNodeDefManager();
 	const char *name = ndef->get(c).name.c_str();
 
 	lua_pushstring(L, name);

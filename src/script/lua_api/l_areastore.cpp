@@ -156,7 +156,7 @@ int LuaAreaStore::l_get_areas_in_area(lua_State *L)
 	bool include_data = false;
 	bool accept_overlap = false;
 	if (lua_isboolean(L, 4)) {
-		accept_overlap = lua_toboolean(L, 4);
+		accept_overlap = readParam<bool>(L, 4);
 		get_data_and_border_flags(L, 5, &include_borders, &include_data);
 	}
 	std::vector<Area *> res;
@@ -300,20 +300,19 @@ int LuaAreaStore::l_from_file(lua_State *L)
 	return deserialization_helper(L, o->as, is);
 }
 
-LuaAreaStore::LuaAreaStore()
+LuaAreaStore::LuaAreaStore() : as(AreaStore::getOptimalImplementation())
 {
-	this->as = AreaStore::getOptimalImplementation();
 }
 
 LuaAreaStore::LuaAreaStore(const std::string &type)
 {
 #if USE_SPATIAL
 	if (type == "LibSpatial") {
-		this->as = new SpatialAreaStore();
+		as = new SpatialAreaStore();
 	} else
 #endif
 	{
-		this->as = new VectorAreaStore();
+		as = new VectorAreaStore();
 	}
 }
 
@@ -329,7 +328,7 @@ int LuaAreaStore::create_object(lua_State *L)
 	NO_MAP_LOCK_REQUIRED;
 
 	LuaAreaStore *o = (lua_isstring(L, 1)) ?
-		new LuaAreaStore(lua_tostring(L, 1)) :
+		new LuaAreaStore(readParam<std::string>(L, 1)) :
 		new LuaAreaStore();
 
 	*(void **)(lua_newuserdata(L, sizeof(void *))) = o;

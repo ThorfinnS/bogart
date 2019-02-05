@@ -23,6 +23,7 @@ with this program; if not, write to the Free Software Foundation, Inc.,
 #include "common/c_content.h"
 #include "serverenvironment.h"
 #include "map.h"
+#include "mapblock.h"
 #include "server.h"
 
 /*
@@ -57,21 +58,17 @@ void NodeMetaRef::clearMeta()
 	m_env->getMap().removeNodeMetadata(m_p);
 }
 
-void NodeMetaRef::reportMetadataChange()
+void NodeMetaRef::reportMetadataChange(const std::string *name)
 {
 	// NOTE: This same code is in rollback_interface.cpp
 	// Inform other things that the metadata has changed
-	v3s16 blockpos = getNodeBlockPos(m_p);
+	NodeMetadata *meta = dynamic_cast<NodeMetadata*>(m_meta);
+
 	MapEditEvent event;
 	event.type = MEET_BLOCK_NODE_METADATA_CHANGED;
-	event.p = blockpos;
+	event.p = m_p;
+	event.is_private_change = name && meta && meta->isPrivate(*name);
 	m_env->getMap().dispatchEvent(&event);
-	// Set the block to be saved
-	MapBlock *block = m_env->getMap().getBlockNoCreateNoEx(blockpos);
-	if (block) {
-		block->raiseModified(MOD_STATE_WRITE_NEEDED,
-			MOD_REASON_REPORT_META_CHANGE);
-	}
 }
 
 // Exported functions
@@ -108,12 +105,12 @@ int NodeMetaRef::l_mark_as_private(lua_State *L)
 		while (lua_next(L, 2) != 0) {
 			// key at index -2 and value at index -1
 			luaL_checktype(L, -1, LUA_TSTRING);
-			meta->markPrivate(lua_tostring(L, -1), true);
+			meta->markPrivate(readParam<std::string>(L, -1), true);
 			// removes value, keeps key for next iteration
 			lua_pop(L, 1);
 		}
 	} else if (lua_isstring(L, 2)) {
-		meta->markPrivate(lua_tostring(L, 2), true);
+		meta->markPrivate(readParam<std::string>(L, 2), true);
 	}
 	ref->reportMetadataChange();
 
@@ -171,18 +168,13 @@ bool NodeMetaRef::handleFromTable(lua_State *L, int table, Metadata *_meta)
 
 NodeMetaRef::NodeMetaRef(v3s16 p, ServerEnvironment *env):
 	m_p(p),
-	m_env(env),
-	m_is_local(false)
+	m_env(env)
 {
 }
 
 NodeMetaRef::NodeMetaRef(Metadata *meta):
 	m_meta(meta),
 	m_is_local(true)
-{
-}
-
-NodeMetaRef::~NodeMetaRef()
 {
 }
 
@@ -246,6 +238,8 @@ void NodeMetaRef::Register(lua_State *L)
 
 
 const luaL_Reg NodeMetaRef::methodsServer[] = {
+	luamethod(MetaDataRef, contains),
+	luamethod(MetaDataRef, get),
 	luamethod(MetaDataRef, get_string),
 	luamethod(MetaDataRef, set_string),
 	luamethod(MetaDataRef, get_int),
@@ -270,6 +264,8 @@ void NodeMetaRef::RegisterClient(lua_State *L)
 
 
 const luaL_Reg NodeMetaRef::methodsClient[] = {
+	luamethod(MetaDataRef, contains),
+	luamethod(MetaDataRef, get),
 	luamethod(MetaDataRef, get_string),
 	luamethod(MetaDataRef, get_int),
 	luamethod(MetaDataRef, get_float),

@@ -2,14 +2,7 @@ local modname = "brewing"
 
 local modpath = minetest.get_modpath(modname)
 
-local S
-
-if not (minetest.has_feature(minetest.get_biome_name)) then
-	-- Load support for intllib.
-	S = dofile(modpath .. "/intllib.lua") --v0.4.17
-else
-	S = minetest.get_translator(minetest.get_current_modname()) --v5.0
-end
+local S = minetest.get_translator(minetest.get_current_modname())
 
 local mg_name = minetest.get_mapgen_setting("mg_name")
 local mod_storage = minetest.get_mod_storage()
@@ -29,6 +22,7 @@ assert(loadfile(modpath .. "/engine.lua"))(modpath, S) --Definition of the 'brew
 --end
 assert(loadfile(modpath .. "/settings.lua"))(modpath, S) --Read the 'brewing.conf' file
 assert(loadfile(modpath .. "/nodes.lua"))(modpath, S) --Definition of the nodes
+assert(loadfile(modpath .. "/meteor.lua"))(modpath, S, mg_name) --Definition of the meteor stuff
 if minetest.get_modpath("mobs") ~= nil then
 	assert(loadfile(modpath .. "/lily.lua"))(modpath, S) --Definition of the Fairy NPC
 	assert(loadfile(modpath .. "/siren.lua"))(modpath, S) --Definition of the Siren NPC

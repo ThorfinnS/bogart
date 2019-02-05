@@ -19,23 +19,19 @@ with this program; if not, write to the Free Software Foundation, Inc.,
 
 #include "tile.h"
 
+#include <algorithm>
 #include <ICameraSceneNode.h>
 #include "util/string.h"
 #include "util/container.h"
 #include "util/thread.h"
-#include "util/numeric.h"
-#include "irrlichttypes_extrabloated.h"
-#include "debug.h"
 #include "filesys.h"
 #include "settings.h"
 #include "mesh.h"
-#include "log.h"
 #include "gamedef.h"
 #include "util/strfnd.h"
-#include "util/string.h" // for parseColorString()
 #include "imagefilters.h"
 #include "guiscalingfilter.h"
-#include "nodedef.h"
+#include "renderingengine.h"
 
 
 #ifdef __ANDROID__
@@ -95,13 +91,13 @@ std::string getImagePath(std::string path)
 		NULL
 	};
 	// If there is no extension, add one
-	if (removeStringEnd(path, extensions) == "")
+	if (removeStringEnd(path, extensions).empty())
 		path = path + ".png";
 	// Check paths until something is found to exist
 	const char **ext = extensions;
 	do{
 		bool r = replace_ext(path, *ext);
-		if (r == false)
+		if (!r)
 			return "";
 		if (fs::PathExists(path))
 			return path;
@@ -123,7 +119,7 @@ std::string getImagePath(std::string path)
 */
 std::string getTexturePath(const std::string &filename)
 {
-	std::string fullpath = "";
+	std::string fullpath;
 	/*
 		Check from cache
 	*/
@@ -134,17 +130,18 @@ std::string getTexturePath(const std::string &filename)
 	/*
 		Check from texture_path
 	*/
-	const std::string &texture_path = g_settings->get("texture_path");
-	if (texture_path != "") {
-		std::string testpath = texture_path + DIR_DELIM + filename;
+	for (const auto &path : getTextureDirs()) {
+		std::string testpath = path + DIR_DELIM + filename;
 		// Check all filename extensions. Returns "" if not found.
 		fullpath = getImagePath(testpath);
+		if (!fullpath.empty())
+			break;
 	}
 
 	/*
 		Check from default data directory
 	*/
-	if (fullpath == "")
+	if (fullpath.empty())
 	{
 		std::string base_path = porting::path_share + DIR_DELIM + "textures"
 				+ DIR_DELIM + "base" + DIR_DELIM + "pack";
@@ -192,14 +189,12 @@ class SourceImageCache
 {
 public:
 	~SourceImageCache() {
-		for (std::map<std::string, video::IImage*>::iterator iter = m_images.begin();
-				iter != m_images.end(); ++iter) {
-			iter->second->drop();
+		for (auto &m_image : m_images) {
+			m_image.second->drop();
 		}
 		m_images.clear();
 	}
-	void insert(const std::string &name, video::IImage *img,
-			bool prefer_local, video::IVideoDriver *driver)
+	void insert(const std::string &name, video::IImage *img, bool prefer_local)
 	{
 		assert(img); // Pre-condition
 		// Remove old image
@@ -216,8 +211,9 @@ public:
 		// Try to use local texture instead if asked to
 		if (prefer_local){
 			std::string path = getTexturePath(name);
-			if (path != ""){
-				video::IImage *img2 = driver->createImageFromFile(path.c_str());
+			if (!path.empty()) {
+				video::IImage *img2 = RenderingEngine::get_video_driver()->
+					createImageFromFile(path.c_str());
 				if (img2){
 					toadd = img2;
 					need_to_grab = false;
@@ -238,7 +234,7 @@ public:
 		return NULL;
 	}
 	// Primarily fetches from cache, secondarily tries to read from filesystem
-	video::IImage* getOrLoad(const std::string &name, IrrlichtDevice *device)
+	video::IImage *getOrLoad(const std::string &name)
 	{
 		std::map<std::string, video::IImage*>::iterator n;
 		n = m_images.find(name);
@@ -246,9 +242,9 @@ public:
 			n->second->grab(); // Grab for caller
 			return n->second;
 		}
-		video::IVideoDriver* driver = device->getVideoDriver();
+		video::IVideoDriver *driver = RenderingEngine::get_video_driver();
 		std::string path = getTexturePath(name);
-		if (path == ""){
+		if (path.empty()) {
 			infostream<<"SourceImageCache::getOrLoad(): No path found for \""
 					<<name<<"\""<<std::endl;
 			return NULL;
@@ -274,7 +270,7 @@ private:
 class TextureSource : public IWritableTextureSource
 {
 public:
-	TextureSource(IrrlichtDevice *device);
+	TextureSource();
 	virtual ~TextureSource();
 
 	/*
@@ -343,12 +339,6 @@ public:
 
 	virtual Palette* getPalette(const std::string &name);
 
-	// Returns a pointer to the irrlicht device
-	virtual IrrlichtDevice* getDevice()
-	{
-		return m_device;
-	}
-
 	bool isKnownSourceImage(const std::string &name)
 	{
 		bool is_known = false;
@@ -356,7 +346,7 @@ public:
 		if (cache_found)
 			return is_known;
 		// Not found in cache; find out if a local file exists
-		is_known = (getTexturePath(name) != "");
+		is_known = (!getTexturePath(name).empty());
 		m_source_image_existence.set(name, is_known);
 		return is_known;
 	}
@@ -373,12 +363,6 @@ public:
 	// Shall be called from the main thread.
 	void rebuildImagesAndTextures();
 
-	// Render a mesh to a texture.
-	// Returns NULL if render-to-texture failed.
-	// Shall be called from the main thread.
-	video::ITexture* generateTextureFromMesh(
-			const TextureFromMeshParams &params);
-
 	video::ITexture* getNormalTexture(const std::string &name);
 	video::SColor getTextureAverageColor(const std::string &name);
 	video::ITexture *getShaderFlagsTexture(bool normamap_present);
@@ -386,9 +370,7 @@ public:
 private:
 
 	// The id of the thread that is allowed to use irrlicht directly
-	threadid_t m_main_thread;
-	// The irrlicht device
-	IrrlichtDevice *m_device;
+	std::thread::id m_main_thread;
 
 	// Cache of source images
 	// This should be only accessed from the main thread
@@ -417,7 +399,7 @@ private:
 	// Maps a texture name to an index in the former.
 	std::map<std::string, u32> m_name_to_id;
 	// The two former containers are behind this mutex
-	Mutex m_textureinfo_cache_mutex;
+	std::mutex m_textureinfo_cache_mutex;
 
 	// Queued texture fetches (to be processed by the main thread)
 	RequestQueue<std::string, u32, u8, u8> m_get_texture_queue;
@@ -427,7 +409,7 @@ private:
 	std::vector<video::ITexture*> m_texture_trash;
 
 	// Maps image file names to loaded palettes.
-	UNORDERED_MAP<std::string, Palette> m_palettes;
+	std::unordered_map<std::string, Palette> m_palettes;
 
 	// Cached settings needed for making textures from meshes
 	bool m_setting_trilinear_filter;
@@ -435,20 +417,17 @@ private:
 	bool m_setting_anisotropic_filter;
 };
 
-IWritableTextureSource* createTextureSource(IrrlichtDevice *device)
+IWritableTextureSource *createTextureSource()
 {
-	return new TextureSource(device);
+	return new TextureSource();
 }
 
-TextureSource::TextureSource(IrrlichtDevice *device):
-		m_device(device)
+TextureSource::TextureSource()
 {
-	assert(m_device); // Pre-condition
-
-	m_main_thread = thr_get_current_thread_id();
+	m_main_thread = std::this_thread::get_id();
 
 	// Add a NULL TextureInfo as the first index, named ""
-	m_textureinfo_cache.push_back(TextureInfo(""));
+	m_textureinfo_cache.emplace_back("");
 	m_name_to_id[""] = 0;
 
 	// Cache some settings
@@ -461,25 +440,18 @@ TextureSource::TextureSource(IrrlichtDevice *device):
 
 TextureSource::~TextureSource()
 {
-	video::IVideoDriver* driver = m_device->getVideoDriver();
+	video::IVideoDriver *driver = RenderingEngine::get_video_driver();
 
 	unsigned int textures_before = driver->getTextureCount();
 
-	for (std::vector<TextureInfo>::iterator iter =
-			m_textureinfo_cache.begin();
-			iter != m_textureinfo_cache.end(); ++iter)
-	{
+	for (const auto &iter : m_textureinfo_cache) {
 		//cleanup texture
-		if (iter->texture)
-			driver->removeTexture(iter->texture);
+		if (iter.texture)
+			driver->removeTexture(iter.texture);
 	}
 	m_textureinfo_cache.clear();
 
-	for (std::vector<video::ITexture*>::iterator iter =
-			m_texture_trash.begin(); iter != m_texture_trash.end();
-			++iter) {
-		video::ITexture *t = *iter;
-
+	for (auto t : m_texture_trash) {
 		//cleanup trashed texture
 		driver->removeTexture(t);
 	}
@@ -508,43 +480,35 @@ u32 TextureSource::getTextureId(const std::string &name)
 	/*
 		Get texture
 	*/
-	if (thr_is_current_thread(m_main_thread))
-	{
+	if (std::this_thread::get_id() == m_main_thread) {
 		return generateTexture(name);
 	}
-	else
-	{
-		infostream<<"getTextureId(): Queued: name=\""<<name<<"\""<<std::endl;
 
-		// We're gonna ask the result to be put into here
-		static ResultQueue<std::string, u32, u8, u8> result_queue;
 
-		// Throw a request in
-		m_get_texture_queue.add(name, 0, 0, &result_queue);
+	infostream<<"getTextureId(): Queued: name=\""<<name<<"\""<<std::endl;
 
-		/*infostream<<"Waiting for texture from main thread, name=\""
-				<<name<<"\""<<std::endl;*/
+	// We're gonna ask the result to be put into here
+	static ResultQueue<std::string, u32, u8, u8> result_queue;
 
-		try
-		{
-			while(true) {
-				// Wait result for a second
-				GetResult<std::string, u32, u8, u8>
-					result = result_queue.pop_front(1000);
+	// Throw a request in
+	m_get_texture_queue.add(name, 0, 0, &result_queue);
 
-				if (result.key == name) {
-					return result.item;
-				}
+	try {
+		while(true) {
+			// Wait result for a second
+			GetResult<std::string, u32, u8, u8>
+				result = result_queue.pop_front(1000);
+
+			if (result.key == name) {
+				return result.item;
 			}
 		}
-		catch(ItemNotFoundException &e)
-		{
-			errorstream<<"Waiting for texture " << name << " timed out."<<std::endl;
-			return 0;
-		}
+	} catch(ItemNotFoundException &e) {
+		errorstream << "Waiting for texture " << name << " timed out." << std::endl;
+		return 0;
 	}
 
-	infostream<<"getTextureId(): Failed"<<std::endl;
+	infostream << "getTextureId(): Failed" << std::endl;
 
 	return 0;
 }
@@ -577,7 +541,7 @@ static void apply_mask(video::IImage *mask, video::IImage *dst,
 // Draw or overlay a crack
 static void draw_crack(video::IImage *crack, video::IImage *dst,
 		bool use_overlay, s32 frame_count, s32 progression,
-		video::IVideoDriver *driver);
+		video::IVideoDriver *driver, u8 tiles = 1);
 
 // Brighten image
 void brighten(video::IImage *image);
@@ -596,7 +560,7 @@ u32 TextureSource::generateTexture(const std::string &name)
 	//infostream << "generateTexture(): name=\"" << name << "\"" << std::endl;
 
 	// Empty name means texture 0
-	if (name == "") {
+	if (name.empty()) {
 		infostream<<"generateTexture(): name is empty"<<std::endl;
 		return 0;
 	}
@@ -616,13 +580,13 @@ u32 TextureSource::generateTexture(const std::string &name)
 	/*
 		Calling only allowed from main thread
 	*/
-	if (!thr_is_current_thread(m_main_thread)) {
+	if (std::this_thread::get_id() != m_main_thread) {
 		errorstream<<"TextureSource::generateTexture() "
 				"called not from main thread"<<std::endl;
 		return 0;
 	}
 
-	video::IVideoDriver *driver = m_device->getVideoDriver();
+	video::IVideoDriver *driver = RenderingEngine::get_video_driver();
 	sanity_check(driver);
 
 	video::IImage *img = generateImage(name);
@@ -695,12 +659,12 @@ video::ITexture* TextureSource::getTextureForMesh(const std::string &name, u32 *
 Palette* TextureSource::getPalette(const std::string &name)
 {
 	// Only the main thread may load images
-	sanity_check(thr_is_current_thread(m_main_thread));
+	sanity_check(std::this_thread::get_id() == m_main_thread);
 
-	if (name == "")
+	if (name.empty())
 		return NULL;
 
-	UNORDERED_MAP<std::string, Palette>::iterator it = m_palettes.find(name);
+	auto it = m_palettes.find(name);
 	if (it == m_palettes.end()) {
 		// Create palette
 		video::IImage *img = generateImage(name);
@@ -738,7 +702,7 @@ Palette* TextureSource::getPalette(const std::string &name)
 		img->drop();
 		// Fill in remaining elements
 		while (new_palette.size() < 256)
-			new_palette.push_back(video::SColor(0xFFFFFFFF));
+			new_palette.emplace_back(0xFFFFFFFF);
 		m_palettes[name] = new_palette;
 		it = m_palettes.find(name);
 	}
@@ -771,9 +735,9 @@ void TextureSource::insertSourceImage(const std::string &name, video::IImage *im
 {
 	//infostream<<"TextureSource::insertSourceImage(): name="<<name<<std::endl;
 
-	sanity_check(thr_is_current_thread(m_main_thread));
+	sanity_check(std::this_thread::get_id() == m_main_thread);
 
-	m_sourcecache.insert(name, img, true, m_device->getVideoDriver());
+	m_sourcecache.insert(name, img, true);
 	m_source_image_existence.set(name, true);
 }
 
@@ -781,232 +745,146 @@ void TextureSource::rebuildImagesAndTextures()
 {
 	MutexAutoLock lock(m_textureinfo_cache_mutex);
 
-	video::IVideoDriver* driver = m_device->getVideoDriver();
+	video::IVideoDriver *driver = RenderingEngine::get_video_driver();
 	sanity_check(driver);
 
 	// Recreate textures
-	for (u32 i=0; i<m_textureinfo_cache.size(); i++){
-		TextureInfo *ti = &m_textureinfo_cache[i];
-		video::IImage *img = generateImage(ti->name);
+	for (TextureInfo &ti : m_textureinfo_cache) {
+		video::IImage *img = generateImage(ti.name);
 #ifdef __ANDROID__
 		img = Align2Npot2(img, driver);
 #endif
 		// Create texture from resulting image
 		video::ITexture *t = NULL;
 		if (img) {
-			t = driver->addTexture(ti->name.c_str(), img);
-			guiScalingCache(io::path(ti->name.c_str()), driver, img);
+			t = driver->addTexture(ti.name.c_str(), img);
+			guiScalingCache(io::path(ti.name.c_str()), driver, img);
 			img->drop();
 		}
-		video::ITexture *t_old = ti->texture;
+		video::ITexture *t_old = ti.texture;
 		// Replace texture
-		ti->texture = t;
+		ti.texture = t;
 
 		if (t_old)
 			m_texture_trash.push_back(t_old);
 	}
 }
 
-video::ITexture* TextureSource::generateTextureFromMesh(
-		const TextureFromMeshParams &params)
+inline static void applyShadeFactor(video::SColor &color, u32 factor)
 {
-	video::IVideoDriver *driver = m_device->getVideoDriver();
-	sanity_check(driver);
+	u32 f = core::clamp<u32>(factor, 0, 256);
+	color.setRed(color.getRed() * f / 256);
+	color.setGreen(color.getGreen() * f / 256);
+	color.setBlue(color.getBlue() * f / 256);
+}
 
-#ifdef __ANDROID__
-	const GLubyte* renderstr = glGetString(GL_RENDERER);
-	std::string renderer((char*) renderstr);
+static video::IImage *createInventoryCubeImage(
+	video::IImage *top, video::IImage *left, video::IImage *right)
+{
+	core::dimension2du size_top = top->getDimension();
+	core::dimension2du size_left = left->getDimension();
+	core::dimension2du size_right = right->getDimension();
 
-	// use no render to texture hack
-	if (
-		(renderer.find("Adreno") != std::string::npos) ||
-		(renderer.find("Mali") != std::string::npos) ||
-		(renderer.find("Immersion") != std::string::npos) ||
-		(renderer.find("Tegra") != std::string::npos) ||
-		g_settings->getBool("inventory_image_hack")
-		) {
-		// Get a scene manager
-		scene::ISceneManager *smgr_main = m_device->getSceneManager();
-		sanity_check(smgr_main);
-		scene::ISceneManager *smgr = smgr_main->createNewSceneManager();
-		sanity_check(smgr);
+	u32 size = npot2(std::max({
+			size_top.Width, size_top.Height,
+			size_left.Width, size_left.Height,
+			size_right.Width, size_right.Height,
+	}));
 
-		const float scaling = 0.2;
+	// It must be divisible by 4, to let everything work correctly.
+	// But it is a power of 2, so being at least 4 is the same.
+	// And the resulting texture should't be too large as well.
+	size = core::clamp<u32>(size, 4, 64);
 
-		scene::IMeshSceneNode* meshnode =
-				smgr->addMeshSceneNode(params.mesh, NULL,
-						-1, v3f(0,0,0), v3f(0,0,0),
-						v3f(1.0 * scaling,1.0 * scaling,1.0 * scaling), true);
-		meshnode->setMaterialFlag(video::EMF_LIGHTING, true);
-		meshnode->setMaterialFlag(video::EMF_ANTI_ALIASING, true);
-		meshnode->setMaterialFlag(video::EMF_TRILINEAR_FILTER, m_setting_trilinear_filter);
-		meshnode->setMaterialFlag(video::EMF_BILINEAR_FILTER, m_setting_bilinear_filter);
-		meshnode->setMaterialFlag(video::EMF_ANISOTROPIC_FILTER, m_setting_anisotropic_filter);
+	// With such parameters, the cube fits exactly, touching each image line
+	// from `0` to `cube_size - 1`. (Note that division is exact here).
+	u32 cube_size = 9 * size;
+	u32 offset = size / 2;
 
-		scene::ICameraSceneNode* camera = smgr->addCameraSceneNode(0,
-				params.camera_position, params.camera_lookat);
-		// second parameter of setProjectionMatrix (isOrthogonal) is ignored
-		camera->setProjectionMatrix(params.camera_projection_matrix, false);
+	video::IVideoDriver *driver = RenderingEngine::get_video_driver();
 
-		smgr->setAmbientLight(params.ambient_light);
-		smgr->addLightSceneNode(0,
-				params.light_position,
-				params.light_color,
-				params.light_radius*scaling);
-
-		core::dimension2d<u32> screen = driver->getScreenSize();
-
-		// Render scene
-		driver->beginScene(true, true, video::SColor(0,0,0,0));
-		driver->clearZBuffer();
-		smgr->drawAll();
-
-		core::dimension2d<u32> partsize(screen.Width * scaling,screen.Height * scaling);
-
-		irr::video::IImage* rawImage =
-				driver->createImage(irr::video::ECF_A8R8G8B8, partsize);
-
-		u8* pixels = static_cast<u8*>(rawImage->lock());
-		if (!pixels)
-		{
-			rawImage->drop();
-			return NULL;
+	auto lock_image = [size, driver] (video::IImage *&image) -> const u32 * {
+		image->grab();
+		core::dimension2du dim = image->getDimension();
+		video::ECOLOR_FORMAT format = image->getColorFormat();
+		if (dim.Width != size || dim.Height != size || format != video::ECF_A8R8G8B8) {
+			video::IImage *scaled = driver->createImage(video::ECF_A8R8G8B8, {size, size});
+			image->copyToScaling(scaled);
+			image->drop();
+			image = scaled;
 		}
+		sanity_check(image->getPitch() == 4 * size);
+		return reinterpret_cast<u32 *>(image->lock());
+	};
+	auto free_image = [] (video::IImage *image) -> void {
+		image->unlock();
+		image->drop();
+	};
 
-		core::rect<s32> source(
-				screen.Width /2 - (screen.Width  * (scaling / 2)),
-				screen.Height/2 - (screen.Height * (scaling / 2)),
-				screen.Width /2 + (screen.Width  * (scaling / 2)),
-				screen.Height/2 + (screen.Height * (scaling / 2))
-			);
+	video::IImage *result = driver->createImage(video::ECF_A8R8G8B8, {cube_size, cube_size});
+	sanity_check(result->getPitch() == 4 * cube_size);
+	result->fill(video::SColor(0x00000000u));
+	u32 *target = reinterpret_cast<u32 *>(result->lock());
 
-		glReadPixels(source.UpperLeftCorner.X, source.UpperLeftCorner.Y,
-				partsize.Width, partsize.Height, GL_RGBA,
-				GL_UNSIGNED_BYTE, pixels);
-
-		driver->endScene();
-
-		// Drop scene manager
-		smgr->drop();
-
-		unsigned int pixelcount = partsize.Width*partsize.Height;
-
-		u8* runptr = pixels;
-		for (unsigned int i=0; i < pixelcount; i++) {
-
-			u8 B = *runptr;
-			u8 G = *(runptr+1);
-			u8 R = *(runptr+2);
-			u8 A = *(runptr+3);
-
-			//BGRA -> RGBA
-			*runptr = R;
-			runptr ++;
-			*runptr = G;
-			runptr ++;
-			*runptr = B;
-			runptr ++;
-			*runptr = A;
-			runptr ++;
+	// Draws single cube face
+	// `shade_factor` is face brightness, in range [0.0, 1.0]
+	// (xu, xv, x1; yu, yv, y1) form coordinate transformation matrix
+	// `offsets` list pixels to be drawn for single source pixel
+	auto draw_image = [=] (video::IImage *image, float shade_factor,
+			s16 xu, s16 xv, s16 x1,
+			s16 yu, s16 yv, s16 y1,
+			std::initializer_list<v2s16> offsets) -> void {
+		u32 brightness = core::clamp<u32>(256 * shade_factor, 0, 256);
+		const u32 *source = lock_image(image);
+		for (u16 v = 0; v < size; v++) {
+			for (u16 u = 0; u < size; u++) {
+				video::SColor pixel(*source);
+				applyShadeFactor(pixel, brightness);
+				s16 x = xu * u + xv * v + x1;
+				s16 y = yu * u + yv * v + y1;
+				for (const auto &off : offsets)
+					target[(y + off.Y) * cube_size + (x + off.X) + offset] = pixel.color;
+				source++;
+			}
 		}
+		free_image(image);
+	};
 
-		video::IImage* inventory_image =
-				driver->createImage(irr::video::ECF_A8R8G8B8, params.dim);
+	draw_image(top, 1.000000f,
+			4, -4, 4 * (size - 1),
+			2, 2, 0,
+			{
+				                {2, 0}, {3, 0}, {4, 0}, {5, 0},
+				{0, 1}, {1, 1}, {2, 1}, {3, 1}, {4, 1}, {5, 1}, {6, 1}, {7, 1},
+				                {2, 2}, {3, 2}, {4, 2}, {5, 2},
+			});
 
-		rawImage->copyToScaling(inventory_image);
-		rawImage->drop();
+	draw_image(left, 0.836660f,
+			4, 0, 0,
+			2, 5, 2 * size,
+			{
+				{0, 0}, {1, 0},
+				{0, 1}, {1, 1}, {2, 1}, {3, 1},
+				{0, 2}, {1, 2}, {2, 2}, {3, 2},
+				{0, 3}, {1, 3}, {2, 3}, {3, 3},
+				{0, 4}, {1, 4}, {2, 4}, {3, 4},
+				                {2, 5}, {3, 5},
+			});
 
-		guiScalingCache(io::path(params.rtt_texture_name.c_str()), driver, inventory_image);
+	draw_image(right, 0.670820f,
+			4, 0, 4 * size,
+			-2, 5, 4 * size - 2,
+			{
+				                {2, 0}, {3, 0},
+				{0, 1}, {1, 1}, {2, 1}, {3, 1},
+				{0, 2}, {1, 2}, {2, 2}, {3, 2},
+				{0, 3}, {1, 3}, {2, 3}, {3, 3},
+				{0, 4}, {1, 4}, {2, 4}, {3, 4},
+				{0, 5}, {1, 5},
+			});
 
-		video::ITexture *rtt = driver->addTexture(params.rtt_texture_name.c_str(), inventory_image);
-		inventory_image->drop();
-
-		if (rtt == NULL) {
-			errorstream << "TextureSource::generateTextureFromMesh(): failed to recreate texture from image: " << params.rtt_texture_name << std::endl;
-			return NULL;
-		}
-
-		driver->makeColorKeyTexture(rtt, v2s32(0,0));
-
-		if (params.delete_texture_on_shutdown)
-			m_texture_trash.push_back(rtt);
-
-		return rtt;
-	}
-#endif
-
-	if (driver->queryFeature(video::EVDF_RENDER_TO_TARGET) == false)
-	{
-		static bool warned = false;
-		if (!warned)
-		{
-			errorstream<<"TextureSource::generateTextureFromMesh(): "
-				<<"EVDF_RENDER_TO_TARGET not supported."<<std::endl;
-			warned = true;
-		}
-		return NULL;
-	}
-
-	// Create render target texture
-	video::ITexture *rtt = driver->addRenderTargetTexture(
-			params.dim, params.rtt_texture_name.c_str(),
-			video::ECF_A8R8G8B8);
-	if (rtt == NULL)
-	{
-		errorstream<<"TextureSource::generateTextureFromMesh(): "
-			<<"addRenderTargetTexture returned NULL."<<std::endl;
-		return NULL;
-	}
-
-	// Set render target
-	if (!driver->setRenderTarget(rtt, false, true, video::SColor(0,0,0,0))) {
-		driver->removeTexture(rtt);
-		errorstream<<"TextureSource::generateTextureFromMesh(): "
-			<<"failed to set render target"<<std::endl;
-		return NULL;
-	}
-
-	// Get a scene manager
-	scene::ISceneManager *smgr_main = m_device->getSceneManager();
-	assert(smgr_main);
-	scene::ISceneManager *smgr = smgr_main->createNewSceneManager();
-	assert(smgr);
-
-	scene::IMeshSceneNode* meshnode =
-			smgr->addMeshSceneNode(params.mesh, NULL,
-					-1, v3f(0,0,0), v3f(0,0,0), v3f(1,1,1), true);
-	meshnode->setMaterialFlag(video::EMF_LIGHTING, true);
-	meshnode->setMaterialFlag(video::EMF_ANTI_ALIASING, true);
-	meshnode->setMaterialFlag(video::EMF_TRILINEAR_FILTER, m_setting_trilinear_filter);
-	meshnode->setMaterialFlag(video::EMF_BILINEAR_FILTER, m_setting_bilinear_filter);
-	meshnode->setMaterialFlag(video::EMF_ANISOTROPIC_FILTER, m_setting_anisotropic_filter);
-
-	scene::ICameraSceneNode* camera = smgr->addCameraSceneNode(0,
-			params.camera_position, params.camera_lookat);
-	// second parameter of setProjectionMatrix (isOrthogonal) is ignored
-	camera->setProjectionMatrix(params.camera_projection_matrix, false);
-
-	smgr->setAmbientLight(params.ambient_light);
-	smgr->addLightSceneNode(0,
-			params.light_position,
-			params.light_color,
-			params.light_radius);
-
-	// Render scene
-	driver->beginScene(true, true, video::SColor(0,0,0,0));
-	smgr->drawAll();
-	driver->endScene();
-
-	// Drop scene manager
-	smgr->drop();
-
-	// Unset render target
-	driver->setRenderTarget(0, false, true, video::SColor(0,0,0,0));
-
-	if (params.delete_texture_on_shutdown)
-		m_texture_trash.push_back(rtt);
-
-	return rtt;
+	result->unlock();
+	return result;
 }
 
 video::IImage* TextureSource::generateImage(const std::string &name)
@@ -1064,10 +942,6 @@ video::IImage* TextureSource::generateImage(const std::string &name)
 	if (last_separator_pos != -1) {
 		baseimg = generateImage(name.substr(0, last_separator_pos));
 	}
-
-
-	video::IVideoDriver* driver = m_device->getVideoDriver();
-	sanity_check(driver);
 
 	/*
 		Parse out the last part of the name of the image and act
@@ -1138,13 +1012,14 @@ video::IImage * Align2Npot2(video::IImage * image,
 
 	core::dimension2d<u32> dim = image->getDimension();
 
-	std::string extensions = (char*) glGetString(GL_EXTENSIONS);
-
 	// Only GLES2 is trusted to correctly report npot support
-	if (get_GL_major_version() > 1 &&
-			extensions.find("GL_OES_texture_npot") != std::string::npos) {
+	// Note: we cache the boolean result. GL context will never change on Android.
+	static const bool hasNPotSupport = get_GL_major_version() > 1 &&
+		glGetString(GL_EXTENSIONS) &&
+		strstr((char *)glGetString(GL_EXTENSIONS), "GL_OES_texture_npot");
+
+	if (hasNPotSupport)
 		return image;
-	}
 
 	unsigned int height = npot2(dim.Height);
 	unsigned int width  = npot2(dim.Width);
@@ -1196,18 +1071,17 @@ bool TextureSource::generateImagePart(std::string part_of_name,
 		video::IImage *& baseimg)
 {
 	const char escape = '\\'; // same as in generateImage()
-	video::IVideoDriver* driver = m_device->getVideoDriver();
+	video::IVideoDriver *driver = RenderingEngine::get_video_driver();
 	sanity_check(driver);
 
 	// Stuff starting with [ are special commands
-	if (part_of_name.size() == 0 || part_of_name[0] != '[')
-	{
-		video::IImage *image = m_sourcecache.getOrLoad(part_of_name, m_device);
+	if (part_of_name.empty() || part_of_name[0] != '[') {
+		video::IImage *image = m_sourcecache.getOrLoad(part_of_name);
 #ifdef __ANDROID__
 		image = Align2Npot2(image, driver);
 #endif
 		if (image == NULL) {
-			if (part_of_name != "") {
+			if (!part_of_name.empty()) {
 
 				// Do not create normalmap dummies
 				if (part_of_name.find("_normal.png") != std::string::npos) {
@@ -1275,7 +1149,7 @@ bool TextureSource::generateImagePart(std::string part_of_name,
 				blit_with_alpha(image, baseimg, pos_from, pos_to, dim);
 			} else if (dim.Width * dim.Height < dim_dst.Width * dim_dst.Height) {
 				// Upscale overlying image
-				video::IImage* scaled_image = m_device->getVideoDriver()->
+				video::IImage *scaled_image = RenderingEngine::get_video_driver()->
 					createImage(video::ECF_A8R8G8B8, dim_dst);
 				image->copyToScaling(scaled_image);
 
@@ -1283,7 +1157,7 @@ bool TextureSource::generateImagePart(std::string part_of_name,
 				scaled_image->drop();
 			} else {
 				// Upscale base image
-				video::IImage* scaled_base = m_device->getVideoDriver()->
+				video::IImage *scaled_base = RenderingEngine::get_video_driver()->
 					createImage(video::ECF_A8R8G8B8, dim);
 				baseimg->copyToScaling(scaled_base);
 				baseimg->drop();
@@ -1319,11 +1193,22 @@ bool TextureSource::generateImagePart(std::string part_of_name,
 			}
 
 			// Crack image number and overlay option
+			// Format: crack[o][:<tiles>]:<frame_count>:<frame>
 			bool use_overlay = (part_of_name[6] == 'o');
 			Strfnd sf(part_of_name);
 			sf.next(":");
 			s32 frame_count = stoi(sf.next(":"));
 			s32 progression = stoi(sf.next(":"));
+			s32 tiles = 1;
+			// Check whether there is the <tiles> argument, that is,
+			// whether there are 3 arguments. If so, shift values
+			// as the first and not the last argument is optional.
+			auto s = sf.next(":");
+			if (!s.empty()) {
+				tiles = frame_count;
+				frame_count = progression;
+				progression = stoi(s);
+			}
 
 			if (progression >= 0) {
 				/*
@@ -1333,12 +1218,12 @@ bool TextureSource::generateImagePart(std::string part_of_name,
 					horizontally tiled.
 				*/
 				video::IImage *img_crack = m_sourcecache.getOrLoad(
-					"crack_anylength.png", m_device);
+					"crack_anylength.png");
 
 				if (img_crack) {
 					draw_crack(img_crack, baseimg,
 						use_overlay, frame_count,
-						progression, driver);
+						progression, driver, tiles);
 					img_crack->drop();
 				}
 			}
@@ -1358,7 +1243,7 @@ bool TextureSource::generateImagePart(std::string part_of_name,
 				baseimg = driver->createImage(video::ECF_A8R8G8B8, dim);
 				baseimg->fill(video::SColor(0,0,0,0));
 			}
-			while (sf.at_end() == false) {
+			while (!sf.at_end()) {
 				u32 x = stoi(sf.next(","));
 				u32 y = stoi(sf.next("="));
 				std::string filename = unescape_string(sf.next_esc(":", escape), escape);
@@ -1543,89 +1428,14 @@ bool TextureSource::generateImagePart(std::string part_of_name,
 				return true;
 			}
 
-#ifdef __ANDROID__
-			assert(img_top->getDimension().Height == npot2(img_top->getDimension().Height));
-			assert(img_top->getDimension().Width == npot2(img_top->getDimension().Width));
+			baseimg = createInventoryCubeImage(img_top, img_left, img_right);
 
-			assert(img_left->getDimension().Height == npot2(img_left->getDimension().Height));
-			assert(img_left->getDimension().Width == npot2(img_left->getDimension().Width));
-
-			assert(img_right->getDimension().Height == npot2(img_right->getDimension().Height));
-			assert(img_right->getDimension().Width == npot2(img_right->getDimension().Width));
-#endif
-
-			// Create textures from images
-			video::ITexture *texture_top = driver->addTexture(
-					(imagename_top + "__temp__").c_str(), img_top);
-			video::ITexture *texture_left = driver->addTexture(
-					(imagename_left + "__temp__").c_str(), img_left);
-			video::ITexture *texture_right = driver->addTexture(
-					(imagename_right + "__temp__").c_str(), img_right);
-			FATAL_ERROR_IF(!(texture_top && texture_left && texture_right), "");
-
-			// Drop images
+			// Face images are not needed anymore
 			img_top->drop();
 			img_left->drop();
 			img_right->drop();
 
-			/*
-				Draw a cube mesh into a render target texture
-			*/
-			scene::IMesh* cube = createCubeMesh(v3f(1, 1, 1));
-			setMeshColor(cube, video::SColor(255, 255, 255, 255));
-			cube->getMeshBuffer(0)->getMaterial().setTexture(0, texture_top);
-			cube->getMeshBuffer(1)->getMaterial().setTexture(0, texture_top);
-			cube->getMeshBuffer(2)->getMaterial().setTexture(0, texture_right);
-			cube->getMeshBuffer(3)->getMaterial().setTexture(0, texture_right);
-			cube->getMeshBuffer(4)->getMaterial().setTexture(0, texture_left);
-			cube->getMeshBuffer(5)->getMaterial().setTexture(0, texture_left);
-
-			TextureFromMeshParams params;
-			params.mesh = cube;
-			params.dim.set(64, 64);
-			params.rtt_texture_name = part_of_name + "_RTT";
-			// We will delete the rtt texture ourselves
-			params.delete_texture_on_shutdown = false;
-			params.camera_position.set(0, 1.0, -1.5);
-			params.camera_position.rotateXZBy(45);
-			params.camera_lookat.set(0, 0, 0);
-			// Set orthogonal projection
-			params.camera_projection_matrix.buildProjectionMatrixOrthoLH(
-					1.65, 1.65, 0, 100);
-
-			params.ambient_light.set(1.0, 0.2, 0.2, 0.2);
-			params.light_position.set(10, 100, -50);
-			params.light_color.set(1.0, 0.5, 0.5, 0.5);
-			params.light_radius = 1000;
-
-			video::ITexture *rtt = generateTextureFromMesh(params);
-
-			// Drop mesh
-			cube->drop();
-
-			// Free textures
-			driver->removeTexture(texture_top);
-			driver->removeTexture(texture_left);
-			driver->removeTexture(texture_right);
-
-			if (rtt == NULL) {
-				baseimg = generateImage(imagename_top);
-				return true;
-			}
-
-			// Create image of render target
-			video::IImage *image = driver->createImage(rtt, v2s32(0, 0), params.dim);
-			FATAL_ERROR_IF(!image, "Could not create image of render target");
-
-			// Cleanup texture
-			driver->removeTexture(rtt);
-
-			baseimg = driver->createImage(video::ECF_A8R8G8B8, params.dim);
-
-			if (image) {
-				image->copyTo(baseimg);
-				image->drop();
-			}
+			return true;
 		}
 		/*
 			[lowpart:percent:filename
@@ -1856,7 +1666,7 @@ bool TextureSource::generateImagePart(std::string part_of_name,
 			u32 height = stoi(sf.next(""));
 			core::dimension2d<u32> dim(width, height);
 
-			video::IImage* image = m_device->getVideoDriver()->
+			video::IImage *image = RenderingEngine::get_video_driver()->
 				createImage(video::ECF_A8R8G8B8, dim);
 			baseimg->copyToScaling(image);
 			baseimg->drop();
@@ -1912,13 +1722,13 @@ bool TextureSource::generateImagePart(std::string part_of_name,
 
 			std::string mode = sf.next("");
 			u32 mask = 0;
-			if (mode.find("a") != std::string::npos)
+			if (mode.find('a') != std::string::npos)
 				mask |= 0xff000000UL;
-			if (mode.find("r") != std::string::npos)
+			if (mode.find('r') != std::string::npos)
 				mask |= 0x00ff0000UL;
-			if (mode.find("g") != std::string::npos)
+			if (mode.find('g') != std::string::npos)
 				mask |= 0x0000ff00UL;
-			if (mode.find("b") != std::string::npos)
+			if (mode.find('b') != std::string::npos)
 				mask |= 0x000000ffUL;
 
 			core::dimension2d<u32> dim = baseimg->getDimension();
@@ -2142,74 +1952,78 @@ static void apply_mask(video::IImage *mask, video::IImage *dst,
 	}
 }
 
+video::IImage *create_crack_image(video::IImage *crack, s32 frame_index,
+		core::dimension2d<u32> size, u8 tiles, video::IVideoDriver *driver)
+{
+	core::dimension2d<u32> strip_size = crack->getDimension();
+	core::dimension2d<u32> frame_size(strip_size.Width, strip_size.Width);
+	core::dimension2d<u32> tile_size(size / tiles);
+	s32 frame_count = strip_size.Height / strip_size.Width;
+	if (frame_index >= frame_count)
+		frame_index = frame_count - 1;
+	core::rect<s32> frame(v2s32(0, frame_index * frame_size.Height), frame_size);
+	video::IImage *result = nullptr;
+
+// extract crack frame
+	video::IImage *crack_tile = driver->createImage(video::ECF_A8R8G8B8, tile_size);
+	if (!crack_tile)
+		return nullptr;
+	if (tile_size == frame_size) {
+		crack->copyTo(crack_tile, v2s32(0, 0), frame);
+	} else {
+		video::IImage *crack_frame = driver->createImage(video::ECF_A8R8G8B8, frame_size);
+		if (!crack_frame)
+			goto exit__has_tile;
+		crack->copyTo(crack_frame, v2s32(0, 0), frame);
+		crack_frame->copyToScaling(crack_tile);
+		crack_frame->drop();
+	}
+	if (tiles == 1)
+		return crack_tile;
+
+// tile it
+	result = driver->createImage(video::ECF_A8R8G8B8, size);
+	if (!result)
+		goto exit__has_tile;
+	result->fill({});
+	for (u8 i = 0; i < tiles; i++)
+		for (u8 j = 0; j < tiles; j++)
+			crack_tile->copyTo(result, v2s32(i * tile_size.Width, j * tile_size.Height));
+
+exit__has_tile:
+	crack_tile->drop();
+	return result;
+}
+
 static void draw_crack(video::IImage *crack, video::IImage *dst,
 		bool use_overlay, s32 frame_count, s32 progression,
-		video::IVideoDriver *driver)
+		video::IVideoDriver *driver, u8 tiles)
 {
 	// Dimension of destination image
 	core::dimension2d<u32> dim_dst = dst->getDimension();
-	// Dimension of original image
-	core::dimension2d<u32> dim_crack = crack->getDimension();
-	// Count of crack stages
-	s32 crack_count = dim_crack.Height / dim_crack.Width;
 	// Limit frame_count
 	if (frame_count > (s32) dim_dst.Height)
 		frame_count = dim_dst.Height;
 	if (frame_count < 1)
 		frame_count = 1;
-	// Limit progression
-	if (progression > crack_count-1)
-		progression = crack_count-1;
-	// Dimension of a single crack stage
-	core::dimension2d<u32> dim_crack_cropped(
-		dim_crack.Width,
-		dim_crack.Width
-	);
 	// Dimension of the scaled crack stage,
 	// which is the same as the dimension of a single destination frame
-	core::dimension2d<u32> dim_crack_scaled(
+	core::dimension2d<u32> frame_size(
 		dim_dst.Width,
 		dim_dst.Height / frame_count
 	);
-	// Create cropped and scaled crack images
-	video::IImage *crack_cropped = driver->createImage(
-			video::ECF_A8R8G8B8, dim_crack_cropped);
-	video::IImage *crack_scaled = driver->createImage(
-			video::ECF_A8R8G8B8, dim_crack_scaled);
+	video::IImage *crack_scaled = create_crack_image(crack, progression,
+			frame_size, tiles, driver);
+	if (!crack_scaled)
+		return;
 
-	if (crack_cropped && crack_scaled)
-	{
-		// Crop crack image
-		v2s32 pos_crack(0, progression*dim_crack.Width);
-		crack->copyTo(crack_cropped,
-				v2s32(0,0),
-				core::rect<s32>(pos_crack, dim_crack_cropped));
-		// Scale crack image by copying
-		crack_cropped->copyToScaling(crack_scaled);
-		// Copy or overlay crack image onto each frame
-		for (s32 i = 0; i < frame_count; ++i)
-		{
-			v2s32 dst_pos(0, dim_crack_scaled.Height * i);
-			if (use_overlay)
-			{
-				blit_with_alpha_overlay(crack_scaled, dst,
-						v2s32(0,0), dst_pos,
-						dim_crack_scaled);
-			}
-			else
-			{
-				blit_with_alpha(crack_scaled, dst,
-						v2s32(0,0), dst_pos,
-						dim_crack_scaled);
-			}
-		}
+	auto blit = use_overlay ? blit_with_alpha_overlay : blit_with_alpha;
+	for (s32 i = 0; i < frame_count; ++i) {
+		v2s32 dst_pos(0, frame_size.Height * i);
+		blit(crack_scaled, dst, v2s32(0,0), dst_pos, frame_size);
 	}
 
-	if (crack_scaled)
-		crack_scaled->drop();
-
-	if (crack_cropped)
-		crack_cropped->drop();
+	crack_scaled->drop();
 }
 
 void brighten(video::IImage *image)
@@ -2256,9 +2070,8 @@ u32 parseImageTransform(const std::string& s)
 				pos++;
 				break;
 			}
-			else if (!(name_i.empty()) &&
-				lowercase(s.substr(pos, name_i.size())) == name_i)
-			{
+
+			if (!(name_i.empty()) && lowercase(s.substr(pos, name_i.size())) == name_i) {
 				transform = i;
 				pos += name_i.size();
 				break;
@@ -2285,8 +2098,8 @@ core::dimension2d<u32> imageTransformDimension(u32 transform, core::dimension2d<
 {
 	if (transform % 2 == 0)
 		return dim;
-	else
-		return core::dimension2d<u32>(dim.Height, dim.Width);
+
+	return core::dimension2d<u32>(dim.Height, dim.Width);
 }
 
 void imageTransform(u32 transform, video::IImage *src, video::IImage *dst)
@@ -2341,12 +2154,12 @@ video::ITexture* TextureSource::getNormalTexture(const std::string &name)
 	std::string fname_base = name;
 	static const char *normal_ext = "_normal.png";
 	static const u32 normal_ext_size = strlen(normal_ext);
-	size_t pos = fname_base.find(".");
+	size_t pos = fname_base.find('.');
 	std::string fname_normal = fname_base.substr(0, pos) + normal_ext;
 	if (isKnownSourceImage(fname_normal)) {
 		// look for image extension and replace it
 		size_t i = 0;
-		while ((i = fname_base.find(".", i)) != std::string::npos) {
+		while ((i = fname_base.find('.', i)) != std::string::npos) {
 			fname_base.replace(i, 4, normal_ext);
 			i += normal_ext_size;
 		}
@@ -2357,7 +2170,7 @@ video::ITexture* TextureSource::getNormalTexture(const std::string &name)
 
 video::SColor TextureSource::getTextureAverageColor(const std::string &name)
 {
-	video::IVideoDriver *driver = m_device->getVideoDriver();
+	video::IVideoDriver *driver = RenderingEngine::get_video_driver();
 	video::SColor c(0, 0, 0, 0);
 	video::ITexture *texture = getTexture(name);
 	video::IImage *image = driver->createImage(texture,
@@ -2400,15 +2213,21 @@ video::ITexture *TextureSource::getShaderFlagsTexture(bool normalmap_present)
 
 	if (isKnownSourceImage(tname)) {
 		return getTexture(tname);
-	} else {
-		video::IVideoDriver *driver = m_device->getVideoDriver();
-		video::IImage *flags_image = driver->createImage(
-			video::ECF_A8R8G8B8, core::dimension2d<u32>(1, 1));
-		sanity_check(flags_image != NULL);
-		video::SColor c(255, normalmap_present ? 255 : 0, 0, 0);
-		flags_image->setPixel(0, 0, c);
-		insertSourceImage(tname, flags_image);
-		flags_image->drop();
-		return getTexture(tname);
 	}
+
+	video::IVideoDriver *driver = RenderingEngine::get_video_driver();
+	video::IImage *flags_image = driver->createImage(
+		video::ECF_A8R8G8B8, core::dimension2d<u32>(1, 1));
+	sanity_check(flags_image != NULL);
+	video::SColor c(255, normalmap_present ? 255 : 0, 0, 0);
+	flags_image->setPixel(0, 0, c);
+	insertSourceImage(tname, flags_image);
+	flags_image->drop();
+	return getTexture(tname);
+
+}
+
+std::vector<std::string> getTextureDirs()
+{
+	return fs::GetRecursiveDirs(g_settings->get("texture_path"));
 }

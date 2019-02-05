@@ -24,7 +24,7 @@ math.randomseed(os.time())
 minetest = core
 
 -- Load other files
-local scriptdir = core.get_builtin_path() .. DIR_DELIM
+local scriptdir = core.get_builtin_path()
 local gamepath = scriptdir .. "game" .. DIR_DELIM
 local clientpath = scriptdir .. "client" .. DIR_DELIM
 local commonpath = scriptdir .. "common" .. DIR_DELIM

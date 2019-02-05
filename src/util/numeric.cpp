@@ -20,10 +20,11 @@ with this program; if not, write to the Free Software Foundation, Inc.,
 #include "numeric.h"
 
 #include "log.h"
-#include "../constants.h" // BS, MAP_BLOCKSIZE
-#include "../noise.h" // PseudoRandom, PcgRandom
-#include "../threading/mutex_auto_lock.h"
-#include <string.h>
+#include "constants.h" // BS, MAP_BLOCKSIZE
+#include "noise.h" // PseudoRandom, PcgRandom
+#include "threading/mutex_auto_lock.h"
+#include <cstring>
+#include <cmath>
 
 
 // myrand
@@ -107,7 +108,7 @@ bool isBlockInSight(v3s16 blockpos_b, v3f camera_pos, v3f camera_dir,
 {
 	// Maximum radius of a block.  The magic number is
 	// sqrt(3.0) / 2.0 in literal form.
-	const f32 block_max_radius = 0.866025403784 * MAP_BLOCKSIZE * BS;
+	static constexpr const f32 block_max_radius = 0.866025403784f * MAP_BLOCKSIZE * BS;
 
 	v3s16 blockpos_nodes = blockpos_b * MAP_BLOCKSIZE;
 
@@ -124,16 +125,16 @@ bool isBlockInSight(v3s16 blockpos_b, v3f camera_pos, v3f camera_dir,
 	// Total distance
 	f32 d = MYMAX(0, blockpos_relative.getLength() - block_max_radius);
 
-	if(distance_ptr)
+	if (distance_ptr)
 		*distance_ptr = d;
 
 	// If block is far away, it's not in sight
-	if(d > range)
+	if (d > range)
 		return false;
 
 	// If block is (nearly) touching the camera, don't
 	// bother validating further (that is, render it anyway)
-	if(d == 0)
+	if (d == 0)
 		return true;
 
 	// Adjust camera position, for purposes of computing the angle,
@@ -156,8 +157,20 @@ bool isBlockInSight(v3s16 blockpos_b, v3f camera_pos, v3f camera_dir,
 	// HOTFIX: use sligthly increased angle (+10%) to fix too agressive
 	// culling. Somebody have to find out whats wrong with the math here.
 	// Previous value: camera_fov / 2
-	if(cosangle < cos(camera_fov * 0.55))
+	if (cosangle < std::cos(camera_fov * 0.55f))
 		return false;
 
 	return true;
+}
+
+s16 adjustDist(s16 dist, float zoom_fov)
+{
+	// 1.775 ~= 72 * PI / 180 * 1.4, the default FOV on the client.
+	// The heuristic threshold for zooming is half of that.
+	static constexpr const float threshold_fov = 1.775f / 2.0f;
+	if (zoom_fov < 0.001f || zoom_fov > threshold_fov)
+		return dist;
+
+	return std::round(dist * std::cbrt((1.0f - std::cos(threshold_fov)) /
+		(1.0f - std::cos(zoom_fov / 2.0f))));
 }

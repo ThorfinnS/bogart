@@ -3,5 +3,5 @@ APP_ABI := ${TARGET_ABI}
 APP_STL := c++_shared
 APP_DEPRECATED_HEADERS := true
 
-APP_CFLAGS += -mfloat-abi=softfp -mfpu=vfpv3 -O3
-APP_CPPFLAGS += -fexceptions
+APP_CFLAGS += ${TARGET_CFLAGS_ADDON}
+APP_CPPFLAGS += ${TARGET_CXXFLAGS_ADDON} -fexceptions -std=c++11

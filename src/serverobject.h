@@ -17,9 +17,9 @@ with this program; if not, write to the Free Software Foundation, Inc.,
 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 */
 
-#ifndef SERVEROBJECT_HEADER
-#define SERVEROBJECT_HEADER
+#pragma once
 
+#include <unordered_set>
 #include "irrlichttypes_bloated.h"
 #include "activeobject.h"
 #include "inventorymanager.h"
@@ -46,6 +46,7 @@ class ServerEnvironment;
 struct ItemStack;
 struct ToolCapabilities;
 struct ObjectProperties;
+struct PlayerHPChangeReason;
 
 class ServerActiveObject : public ActiveObject
 {
@@ -55,7 +56,7 @@ public:
 		Prototypes are used that way.
 	*/
 	ServerActiveObject(ServerEnvironment *env, v3f pos);
-	virtual ~ServerActiveObject();
+	virtual ~ServerActiveObject() = default;
 
 	virtual ActiveObjectType getSendType() const
 	{ return getType(); }
@@ -77,7 +78,7 @@ public:
 	/*
 		Some simple getters/setters
 	*/
-	v3f getBasePosition(){ return m_base_position; }
+	v3f getBasePosition() const { return m_base_position; }
 	void setBasePosition(v3f pos){ m_base_position = pos; }
 	ServerEnvironment* getEnv(){ return m_env; }
 
@@ -139,7 +140,7 @@ public:
 	{ return 0; }
 	virtual void rightClick(ServerActiveObject *clicker)
 	{}
-	virtual void setHP(s16 hp)
+	virtual void setHP(s16 hp, const PlayerHPChangeReason &reason)
 	{}
 	virtual s16 getHP() const
 	{ return 0; }
@@ -147,12 +148,14 @@ public:
 	virtual void setArmorGroups(const ItemGroupList &armor_groups)
 	{}
 	virtual const ItemGroupList &getArmorGroups()
-	{ static const ItemGroupList rv; return rv; }
+	{ static ItemGroupList rv; return rv; }
 	virtual void setPhysicsOverride(float physics_override_speed, float physics_override_jump, float physics_override_gravity)
 	{}
 	virtual void setAnimation(v2f frames, float frame_speed, float frame_blend, bool frame_loop)
 	{}
 	virtual void getAnimation(v2f *frames, float *frame_speed, float *frame_blend, bool *frame_loop)
+	{}
+	virtual void setAnimationSpeed(float frame_speed)
 	{}
 	virtual void setBonePosition(const std::string &bone, v3f position, v3f rotation)
 	{}
@@ -162,12 +165,15 @@ public:
 	{}
 	virtual void getAttachment(int *parent_id, std::string *bone, v3f *position, v3f *rotation)
 	{}
+	virtual void clearChildAttachments() {}
+	virtual void clearParentAttachment() {}
 	virtual void addAttachmentChild(int child_id)
 	{}
 	virtual void removeAttachmentChild(int child_id)
 	{}
-	virtual const UNORDERED_SET<int> &getAttachmentChildIds()
-	{ static const UNORDERED_SET<int> rv; return rv; }
+	virtual const std::unordered_set<int> &getAttachmentChildIds()
+	{ static std::unordered_set<int> rv; return rv; }
+	virtual ServerActiveObject *getParent() const { return nullptr; }
 	virtual ObjectProperties* accessObjectProperties()
 	{ return NULL; }
 	virtual void notifyObjectPropertiesModified()
@@ -203,7 +209,7 @@ public:
 		deleted until this is 0 to keep the id preserved for the right
 		object.
 	*/
-	u16 m_known_by_count;
+	u16 m_known_by_count = 0;
 
 	/*
 		- Whether this object is to be removed when nobody knows about
@@ -213,7 +219,7 @@ public:
 		- This is usually set to true by the step() method when the object wants
 		  to be deleted but can be set by anything else too.
 	*/
-	bool m_pending_removal;
+	bool m_pending_removal = false;
 
 	/*
 		Same purpose as m_pending_removal but for deactivation.
@@ -222,7 +228,7 @@ public:
 		If this is set alongside with m_pending_removal, removal takes
 		priority.
 	*/
-	bool m_pending_deactivation;
+	bool m_pending_deactivation = false;
 
 	/*
 		A getter that unifies the above to answer the question:
@@ -234,12 +240,12 @@ public:
 	/*
 		Whether the object's static data has been stored to a block
 	*/
-	bool m_static_exists;
+	bool m_static_exists = false;
 	/*
 		The block from which the object was loaded from, and in which
 		a copy of the static data resides.
 	*/
-	v3s16 m_static_block;
+	v3s16 m_static_block = v3s16(1337,1337,1337);
 
 	/*
 		Queue of messages to be sent to the client
@@ -247,6 +253,9 @@ public:
 	std::queue<ActiveObjectMessage> m_messages_out;
 
 protected:
+	virtual void onAttach(int parent_id) {}
+	virtual void onDetach(int parent_id) {}
+
 	// Used for creating objects based on type
 	typedef ServerActiveObject* (*Factory)
 			(ServerEnvironment *env, v3f pos,
@@ -255,12 +264,9 @@ protected:
 
 	ServerEnvironment *m_env;
 	v3f m_base_position;
-	UNORDERED_SET<u32> m_attached_particle_spawners;
+	std::unordered_set<u32> m_attached_particle_spawners;
 
 private:
 	// Used for creating objects based on type
 	static std::map<u16, Factory> m_types;
 };
-
-#endif
-

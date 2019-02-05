@@ -1,15 +1,10 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: Spanish (Minetest)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-12-07 22:13+0100\n"
-"PO-Revision-Date: 2019-01-01 12:20+0000\n"
-"Last-Translator: JDiaz <runspect@gmail.com>\n"
+"POT-Creation-Date: 2019-02-05 00:05+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Spanish <https://hosted.weblate.org/projects/minetest/"
 "mtg_i18n/es/>\n"
 "Language: es\n"
@@ -17,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.4-dev\n"
+"X-Generator: Weblate 3.5-dev\n"
 
 #: init.lua
 msgid "Air (you hacker you!)"
@@ -317,11 +312,11 @@ msgstr "Arbusto seco"
 
 #: init.lua
 msgid "Acacia Wood Fence"
-msgstr "Valla de acacia"
+msgstr "Valla de madera de acacia"
 
 #: init.lua
 msgid "Aspen Wood Fence"
-msgstr "Valla de álamo"
+msgstr "Valla de madera de álamo"
 
 #: init.lua
 msgid "Jungle Wood Fence"
@@ -329,11 +324,11 @@ msgstr "Valla de madera tropical"
 
 #: init.lua
 msgid "Pine Wood Fence"
-msgstr "Valla de pino"
+msgstr "Valla de madera de pino"
 
 #: init.lua
 msgid "Apple Wood Fence"
-msgstr "Valla de manzano"
+msgstr "Valla de madera de manzano"
 
 #: init.lua
 msgid "Flint"
@@ -724,12 +719,12 @@ msgid "Wooden Door"
 msgstr "Puerta de madera"
 
 #: init.lua
-msgid "Acacia Fence Gate"
-msgstr "Puerta de valla de acacia"
+msgid "Acacia Wood Fence Gate"
+msgstr "Puerta de valla de madera de acacia"
 
 #: init.lua
-msgid "Aspen Fence Gate"
-msgstr "Puerta de valla de álamo"
+msgid "Aspen Wood Fence Gate"
+msgstr "Puerta de valla de madera álamo"
 
 #: init.lua
 msgid "Jungle Wood Fence Gate"
@@ -737,11 +732,11 @@ msgstr "Puerta de valla de madera tropical"
 
 #: init.lua
 msgid "Pine Wood Fence Gate"
-msgstr "Puerta de valla de pino"
+msgstr "Puerta de valla de madera pino"
 
 #: init.lua
 msgid "Apple Wood Fence Gate"
-msgstr "Puerta de valla de manzano"
+msgstr "Puerta de valla de madera de manzano"
 
 #: init.lua
 msgid "Hidden Door Segment"
@@ -1616,23 +1611,42 @@ msgstr "Arcoíris de Gato Nyan"
 msgid "Nyan Cat"
 msgstr "Gato Nyan"
 
-#~ msgid "Leaves"
-#~ msgstr "Hojas"
+#: init.lua
+msgid "Fern"
+msgstr "Helecho"
 
-#~ msgid "Sapling"
-#~ msgstr "Retoño"
+#: init.lua
+msgid "Blueberries"
+msgstr "Arándanos"
 
-#~ msgid "Tree"
-#~ msgstr "Madera"
+#: init.lua
+msgid "Marram Grass"
+msgstr "Carrizo"
 
-#~ msgid "Wooden Planks"
-#~ msgstr "Tablas de madera"
+#: init.lua
+msgid "Black Tulip"
+msgstr "Tulipán negro"
 
-#~ msgid "Trapdoor"
-#~ msgstr "Trampilla"
+#: init.lua
+msgid "Green Chrysanthemum"
+msgstr "Crisantemo verde"
 
-#~ msgid "String"
-#~ msgstr "Cuerda"
+#: init.lua
+msgid "Green Coral"
+msgstr "Coral verde"
 
-#~ msgid "Rose"
-#~ msgstr "Rosa"
+#: init.lua
+msgid "Pink Coral"
+msgstr "Coral rosado"
+
+#: init.lua
+msgid "Cyan Coral"
+msgstr "Coral cián"
+
+#: init.lua
+msgid "Kelp"
+msgstr "Alga marina"
+
+#: init.lua
+msgid "Binoculars\nUse with 'Zoom' key"
+msgstr "Binoculares\nUsarlos con la tecla de 'Zoom'"

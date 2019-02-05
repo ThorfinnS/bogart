@@ -2,36 +2,17 @@
 
 echo "Preparing for $TRAVIS_COMMIT_RANGE"
 
-if [[ "$LINT" == "1" ]]; then
-	curl http://apt.llvm.org/llvm-snapshot.gpg.key | sudo apt-key add -
-	sudo add-apt-repository "deb http://apt.llvm.org/trusty/ llvm-toolchain-trusty-3.9 main"
-	sudo apt-get -yq update
-	sudo apt-get install clang-format-3.9
+. util/travis/common.sh
+
+if [[ "${LINT}" == "1" ]]; then
 	exit 0
 fi
 
-. util/travis/common.sh
 needs_compile || exit 0
 
-if [[ $TRAVIS_OS_NAME == "linux" ]]; then
-	sudo apt-get update
-	sudo apt-get install p7zip-full $COMPILER
-fi
-
-if [[ $PLATFORM == "Unix" ]]; then
-	if [[ $TRAVIS_OS_NAME == "linux" ]]; then
-		sudo apt-get update
-		sudo apt-get install libirrlicht-dev cmake libbz2-dev libpng12-dev \
-			libjpeg-dev libxxf86vm-dev libgl1-mesa-dev libsqlite3-dev \
-			libhiredis-dev libogg-dev libgmp-dev libvorbis-dev libopenal-dev \
-			gettext libpq-dev postgresql-server-dev-all
-		# Linking to LevelDB is broken, use a custom build
-		wget http://minetest.kitsunemimi.pw/libleveldb-1.18-ubuntu12.04.7z
-		sudo 7z x -o/usr libleveldb-1.18-ubuntu12.04.7z
-		if [[ "$VALGRIND" == "1" ]]; then
-			sudo apt-get install valgrind
-		fi
-
+if [[ $PLATFORM == "Unix" ]] || [[ $CLANG_TIDY == "1" ]]; then
+	if [[ $TRAVIS_OS_NAME == "linux" ]] || [[ $CLANG_TIDY == "1" ]]; then
+		install_linux_deps
 	else
 		install_macosx_deps
 	fi

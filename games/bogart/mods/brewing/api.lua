@@ -28,6 +28,7 @@ brewing = {
 		generate_calla = true,
 		generate_lavender = true,
 		generate_creosote_bush = true,
+		generate_meteor = true,
 		-- end herbalism
 		-- Aquatic
 		generate_pearl_oyster = true,
@@ -58,7 +59,7 @@ brewing = {
 		-- Weapons
 		fury_sun_sword_wait_time = 7.0,
 	},
-	isvalidwater = function(water_name_to_check)
+	isvalidwater= function(water_name_to_check)
 		local isvalid = false
 		for water_name in brewing.arrayvalues(brewing.settings.water_name) do
 			if  water_name == water_name_to_check then

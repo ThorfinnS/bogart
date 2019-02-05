@@ -14,7 +14,6 @@ public class MtNativeActivity extends NativeActivity {
 		System.loadLibrary("openal");
 		System.loadLibrary("ogg");
 		System.loadLibrary("vorbis");
-		System.loadLibrary("gmp");
 		System.loadLibrary("iconv");
 		System.loadLibrary("minetest");
 	}
@@ -27,6 +26,7 @@ public class MtNativeActivity extends NativeActivity {
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
 		m_MessagReturnCode = -1;
 		m_MessageReturnValue = "";
 	}

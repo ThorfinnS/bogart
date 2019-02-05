@@ -90,6 +90,14 @@ minetest.register_craftitem("brewing:magic_blue_tear_wand", {
 			if minetest.get_modpath("mana") ~= nil then
 				mana.subtract_up_to(user, brewing.settings.mana_magic_blue_tear_wand)
 			end
+		elseif pointed_thing.type == "node" then
+			local node_above = minetest.get_node(pointed_thing.above)			
+			local node_above_name = node_above.name		
+			local pos_above = minetest.get_pointed_thing_position(pointed_thing, above)
+			if  minetest.registered_nodes[node_above_name].groups.water then							
+				minetest.set_node(pos_above, {name = "default:ice"})
+				brewing.magic_sound(dest, pointed_thing, "brewing_freeze")
+			end
 		else
 			brewing.magic_sound("object", pointed_thing, "brewing_magic_failure")
 		end

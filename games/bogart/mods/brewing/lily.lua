@@ -78,6 +78,49 @@ inv:set_size("main", 16)
 inv:set_width("main", 8)
 
 --Lily Identity
+--from here to below
+
+--A function to remove Lily from the world, drop her items, remove ownership, etc.
+local function remove_lily(lily, pos)
+	local lily_owner = lily.owner		
+	-- Drop the items from Lily's inventory
+	local inv = minetest.get_inventory({ type="detached", name="lily_inventory" })
+	if (not inv:is_empty("main")) then
+		for i = 1, inv:get_size("main") do
+			local stack = inv:get_stack("main", i)
+			if stack:get_count() > 0 then
+				minetest.item_drop(stack, lily.object, pos)
+			end
+		end
+	end
+	-- Delete the metadata of the Crystal Ball
+	if lily.crystalball_pos ~= nil then
+		local meta = minetest.get_meta(lily.crystalball_pos)
+		meta:set_string("owner", "")
+		meta:set_string("infotext", "")
+	end
+	-- Delete Lily's Entity
+	brewing.entities.lily.object:remove()
+	brewing.entities.lily = nil
+	-- Remove Lily's detached inventory
+	inv:set_list("main", {})
+	--Close formspec (Then no more dialog with Lily)
+	minetest.close_formspec(lily_owner, formspec)
+end
+
+--In multiplayer mode, remove ownership when lily's owner abandon te game
+--this makes lily available for the other players
+minetest.register_on_leaveplayer(function(player)
+	if not(brewing.entities.lily == nil) and not(minetest.is_singleplayer()) then
+		local player_name = player:get_player_name()
+		if player_name == brewing.entities.lily.owner then
+			local pos = brewing.entities.lily.object:get_pos()
+			remove_lily(brewing.entities.lily, pos)
+		end
+	end
+end)
+
+--lily is defined by 'name' & 'definition'
 
 local name= "brewing:fairy_lily"
 
@@ -112,30 +155,7 @@ local definition = {
 		fly_start = 221, fly_end = 240,
 	},
 	on_die = function(self, pos)
-		local lily_owner = self.owner		
-		-- Drop the items from Lily's inventory
-		local inv = minetest.get_inventory({ type="detached", name="lily_inventory" })
-		if (not inv:is_empty("main")) then
-			for i = 1, inv:get_size("main") do
-				local stack = inv:get_stack("main", i)
-				if stack:get_count() > 0 then
-					minetest.item_drop(stack, self.object, pos)
-				end
-			end
-		end
-		-- Delete the metadata of the Crystal Ball
-		if self.crystalball_pos ~= nil then
-			local meta = minetest.get_meta(self.crystalball_pos)
-			meta:set_string("owner", "")
-			meta:set_string("infotext", "")
-		end
-		-- Delete Lily's Entity
-		brewing.entities.lily.object:remove()
-		brewing.entities.lily = nil
-		-- Remove Lily's detached inventory
-		inv:set_list("main", {})
-		--Close formspec (Then no more dialog with Lily)
-		minetest.close_formspec(lily_owner, formspec)
+		remove_lily(self, pos)
 	end,
 	after_activate = function(self, staticdata, dtime_s)
 		if brewing.entities.lily == nil then
@@ -197,6 +217,7 @@ minetest.register_craftitem("brewing:lily_wings", {
 })
 
 --Magic Ring
+--to call Lily
 minetest.register_craftitem("brewing:magic_ring", {
 	description = S("Magic Ring"),
 	inventory_image = "magic_ring.png",

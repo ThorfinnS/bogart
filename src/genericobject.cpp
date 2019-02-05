@@ -40,7 +40,7 @@ std::string gob_cmd_update_position(
 	v3f position,
 	v3f velocity,
 	v3f acceleration,
-	f32 yaw,
+	v3f rotation,
 	bool do_interpolate,
 	bool is_movement_end,
 	f32 update_interval
@@ -49,19 +49,19 @@ std::string gob_cmd_update_position(
 	// command
 	writeU8(os, GENERIC_CMD_UPDATE_POSITION);
 	// pos
-	writeV3F1000(os, position);
+	writeV3F32(os, position);
 	// velocity
-	writeV3F1000(os, velocity);
+	writeV3F32(os, velocity);
 	// acceleration
-	writeV3F1000(os, acceleration);
-	// yaw
-	writeF1000(os, yaw);
+	writeV3F32(os, acceleration);
+	// rotation
+	writeV3F32(os, rotation);
 	// do_interpolate
 	writeU8(os, do_interpolate);
 	// is_end_position (for interpolation)
 	writeU8(os, is_movement_end);
 	// update_interval (for interpolation)
-	writeF1000(os, update_interval);
+	writeF32(os, update_interval);
 	return os.str();
 }
 
@@ -87,7 +87,7 @@ std::string gob_cmd_set_sprite(
 	// parameters
 	writeV2S16(os, p);
 	writeU16(os, num_frames);
-	writeF1000(os, framelength);
+	writeF32(os, framelength);
 	writeU8(os, select_horiz_by_yawpitch);
 	return os.str();
 }
@@ -109,10 +109,9 @@ std::string gob_cmd_update_armor_groups(const ItemGroupList &armor_groups)
 	std::ostringstream os(std::ios::binary);
 	writeU8(os, GENERIC_CMD_UPDATE_ARMOR_GROUPS);
 	writeU16(os, armor_groups.size());
-	for(ItemGroupList::const_iterator i = armor_groups.begin();
-			i != armor_groups.end(); ++i){
-		os<<serializeString(i->first);
-		writeS16(os, i->second);
+	for (const auto &armor_group : armor_groups) {
+		os<<serializeString(armor_group.first);
+		writeS16(os, armor_group.second);
 	}
 	return os.str();
 }
@@ -124,9 +123,9 @@ std::string gob_cmd_update_physics_override(float physics_override_speed, float 
 	// command
 	writeU8(os, GENERIC_CMD_SET_PHYSICS_OVERRIDE);
 	// parameters
-	writeF1000(os, physics_override_speed);
-	writeF1000(os, physics_override_jump);
-	writeF1000(os, physics_override_gravity);
+	writeF32(os, physics_override_speed);
+	writeF32(os, physics_override_jump);
+	writeF32(os, physics_override_gravity);
 	// these are sent inverted so we get true when the server sends nothing
 	writeU8(os, !sneak);
 	writeU8(os, !sneak_glitch);
@@ -140,11 +139,21 @@ std::string gob_cmd_update_animation(v2f frames, float frame_speed, float frame_
 	// command
 	writeU8(os, GENERIC_CMD_SET_ANIMATION);
 	// parameters
-	writeV2F1000(os, frames);
-	writeF1000(os, frame_speed);
-	writeF1000(os, frame_blend);
+	writeV2F32(os, frames);
+	writeF32(os, frame_speed);
+	writeF32(os, frame_blend);
 	// these are sent inverted so we get true when the server sends nothing
 	writeU8(os, !frame_loop);
+	return os.str();
+}
+
+std::string gob_cmd_update_animation_speed(float frame_speed)
+{
+	std::ostringstream os(std::ios::binary);
+	// command
+	writeU8(os, GENERIC_CMD_SET_ANIMATION_SPEED);
+	// parameters
+	writeF32(os, frame_speed);
 	return os.str();
 }
 
@@ -156,8 +165,8 @@ std::string gob_cmd_update_bone_position(const std::string &bone, v3f position,
 	writeU8(os, GENERIC_CMD_SET_BONE_POSITION);
 	// parameters
 	os<<serializeString(bone);
-	writeV3F1000(os, position);
-	writeV3F1000(os, rotation);
+	writeV3F32(os, position);
+	writeV3F32(os, rotation);
 	return os.str();
 }
 
@@ -170,8 +179,8 @@ std::string gob_cmd_update_attachment(int parent_id, const std::string &bone,
 	// parameters
 	writeS16(os, parent_id);
 	os<<serializeString(bone);
-	writeV3F1000(os, position);
-	writeV3F1000(os, rotation);
+	writeV3F32(os, position);
+	writeV3F32(os, rotation);
 	return os.str();
 }
 

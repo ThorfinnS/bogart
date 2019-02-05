@@ -33,7 +33,7 @@ function core.get_pointed_thing_position(pointed_thing, above)
 		-- The position where a node would be dug
 		return pointed_thing.under
 	elseif pointed_thing.type == "object" then
-		return pointed_thing.ref and pointed_thing.ref:getpos()
+		return pointed_thing.ref and pointed_thing.ref:get_pos()
 	end
 end
 
@@ -197,7 +197,7 @@ function core.get_node_drops(node, toolname)
 		return {nodename}
 	elseif type(drop) == "string" then
 		-- itemstring drop
-		return {drop}
+		return drop ~= "" and {drop} or {}
 	elseif drop.items == nil then
 		-- drop = {} to disable default drop
 		return {}
@@ -331,7 +331,7 @@ function core.item_place_node(itemstack, placer, pointed_thing, param2,
 	-- Calculate the direction for furnaces and chests and stuff
 	elseif (def.paramtype2 == "facedir" or
 			def.paramtype2 == "colorfacedir") and not param2 then
-		local placer_pos = placer and placer:getpos()
+		local placer_pos = placer and placer:get_pos()
 		if placer_pos then
 			local dir = {
 				x = above.x - placer_pos.x,
@@ -441,9 +441,6 @@ function core.item_drop(itemstack, dropper, pos)
 	local cnt = itemstack:get_count()
 	if dropper_is_player then
 		p.y = p.y + 1.2
-		if dropper:get_player_control().sneak then
-			cnt = 1
-		end
 	end
 	local item = itemstack:take_item(cnt)
 	local obj = core.add_item(p, item)
@@ -472,6 +469,11 @@ function core.do_item_eat(hp_change, replace_with_item, itemstack, user, pointed
 	if itemstack:take_item() ~= nil then
 		user:set_hp(user:get_hp() + hp_change)
 
+		local def = itemstack:get_definition()
+		if def and def.sound and def.sound.eat then
+			minetest.sound_play(def.sound.eat, { pos = user:get_pos(), max_hear_distance = 16 })
+		end
+
 		if replace_with_item then
 			if itemstack:is_empty() then
 				itemstack:add_item(replace_with_item)
@@ -481,7 +483,7 @@ function core.do_item_eat(hp_change, replace_with_item, itemstack, user, pointed
 				if inv and inv:room_for_item("main", {name=replace_with_item}) then
 					inv:add_item("main", replace_with_item)
 				else
-					local pos = user:getpos()
+					local pos = user:get_pos()
 					pos.y = math.floor(pos.y + 0.5)
 					core.add_item(pos, replace_with_item)
 				end
@@ -583,6 +585,20 @@ function core.node_dig(pos, node, digger)
 		digger:set_wielded_item(wielded)
 	end
 
+	-- Check to see if metadata should be preserved.
+	if def and def.preserve_metadata then
+		local oldmeta = core.get_meta(pos):to_table().fields
+		-- Copy pos and node because the callback can modify them.
+		local pos_copy = {x=pos.x, y=pos.y, z=pos.z}
+		local node_copy = {name=node.name, param1=node.param1, param2=node.param2}
+		local drop_stacks = {}
+		for k, v in pairs(drops) do
+			drop_stacks[k] = ItemStack(v)
+		end
+		drops = drop_stacks
+		def.preserve_metadata(pos_copy, node_copy, oldmeta, drops)
+	end
+
 	-- Handle drops
 	core.handle_node_drops(pos, drops, digger)
 
@@ -619,6 +635,18 @@ function core.node_dig(pos, node, digger)
 		local node_copy = {name=node.name, param1=node.param1, param2=node.param2}
 		callback(pos_copy, node_copy, digger)
 	end
+end
+
+function core.itemstring_with_palette(item, palette_index)
+	local stack = ItemStack(item) -- convert to ItemStack
+	stack:get_meta():set_int("palette_index", palette_index)
+	return stack:to_string()
+end
+
+function core.itemstring_with_color(item, colorstring)
+	local stack = ItemStack(item) -- convert to ItemStack
+	stack:get_meta():set_string("color", colorstring)
+	return stack:to_string()
 end
 
 -- This is used to allow mods to redefine core.item_place and so on

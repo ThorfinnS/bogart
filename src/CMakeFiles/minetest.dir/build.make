@@ -57,9 +57,105 @@ include src/CMakeFiles/minetest.dir/progress.make
 # Include the compile flags for this target's objects.
 include src/CMakeFiles/minetest.dir/flags.make
 
+src/CMakeFiles/minetest.dir/client/activeobjectmgr.cpp.o: src/CMakeFiles/minetest.dir/flags.make
+src/CMakeFiles/minetest.dir/client/activeobjectmgr.cpp.o: src/client/activeobjectmgr.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object src/CMakeFiles/minetest.dir/client/activeobjectmgr.cpp.o"
+	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/client/activeobjectmgr.cpp.o -c /opt/minetest/src/client/activeobjectmgr.cpp
+
+src/CMakeFiles/minetest.dir/client/activeobjectmgr.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/minetest.dir/client/activeobjectmgr.cpp.i"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /opt/minetest/src/client/activeobjectmgr.cpp > CMakeFiles/minetest.dir/client/activeobjectmgr.cpp.i
+
+src/CMakeFiles/minetest.dir/client/activeobjectmgr.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/minetest.dir/client/activeobjectmgr.cpp.s"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /opt/minetest/src/client/activeobjectmgr.cpp -o CMakeFiles/minetest.dir/client/activeobjectmgr.cpp.s
+
+src/CMakeFiles/minetest.dir/client/activeobjectmgr.cpp.o.requires:
+
+.PHONY : src/CMakeFiles/minetest.dir/client/activeobjectmgr.cpp.o.requires
+
+src/CMakeFiles/minetest.dir/client/activeobjectmgr.cpp.o.provides: src/CMakeFiles/minetest.dir/client/activeobjectmgr.cpp.o.requires
+	$(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/client/activeobjectmgr.cpp.o.provides.build
+.PHONY : src/CMakeFiles/minetest.dir/client/activeobjectmgr.cpp.o.provides
+
+src/CMakeFiles/minetest.dir/client/activeobjectmgr.cpp.o.provides.build: src/CMakeFiles/minetest.dir/client/activeobjectmgr.cpp.o
+
+
+src/CMakeFiles/minetest.dir/client/camera.cpp.o: src/CMakeFiles/minetest.dir/flags.make
+src/CMakeFiles/minetest.dir/client/camera.cpp.o: src/client/camera.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object src/CMakeFiles/minetest.dir/client/camera.cpp.o"
+	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/client/camera.cpp.o -c /opt/minetest/src/client/camera.cpp
+
+src/CMakeFiles/minetest.dir/client/camera.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/minetest.dir/client/camera.cpp.i"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /opt/minetest/src/client/camera.cpp > CMakeFiles/minetest.dir/client/camera.cpp.i
+
+src/CMakeFiles/minetest.dir/client/camera.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/minetest.dir/client/camera.cpp.s"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /opt/minetest/src/client/camera.cpp -o CMakeFiles/minetest.dir/client/camera.cpp.s
+
+src/CMakeFiles/minetest.dir/client/camera.cpp.o.requires:
+
+.PHONY : src/CMakeFiles/minetest.dir/client/camera.cpp.o.requires
+
+src/CMakeFiles/minetest.dir/client/camera.cpp.o.provides: src/CMakeFiles/minetest.dir/client/camera.cpp.o.requires
+	$(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/client/camera.cpp.o.provides.build
+.PHONY : src/CMakeFiles/minetest.dir/client/camera.cpp.o.provides
+
+src/CMakeFiles/minetest.dir/client/camera.cpp.o.provides.build: src/CMakeFiles/minetest.dir/client/camera.cpp.o
+
+
+src/CMakeFiles/minetest.dir/client/client.cpp.o: src/CMakeFiles/minetest.dir/flags.make
+src/CMakeFiles/minetest.dir/client/client.cpp.o: src/client/client.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object src/CMakeFiles/minetest.dir/client/client.cpp.o"
+	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/client/client.cpp.o -c /opt/minetest/src/client/client.cpp
+
+src/CMakeFiles/minetest.dir/client/client.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/minetest.dir/client/client.cpp.i"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /opt/minetest/src/client/client.cpp > CMakeFiles/minetest.dir/client/client.cpp.i
+
+src/CMakeFiles/minetest.dir/client/client.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/minetest.dir/client/client.cpp.s"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /opt/minetest/src/client/client.cpp -o CMakeFiles/minetest.dir/client/client.cpp.s
+
+src/CMakeFiles/minetest.dir/client/client.cpp.o.requires:
+
+.PHONY : src/CMakeFiles/minetest.dir/client/client.cpp.o.requires
+
+src/CMakeFiles/minetest.dir/client/client.cpp.o.provides: src/CMakeFiles/minetest.dir/client/client.cpp.o.requires
+	$(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/client/client.cpp.o.provides.build
+.PHONY : src/CMakeFiles/minetest.dir/client/client.cpp.o.provides
+
+src/CMakeFiles/minetest.dir/client/client.cpp.o.provides.build: src/CMakeFiles/minetest.dir/client/client.cpp.o
+
+
+src/CMakeFiles/minetest.dir/client/clientenvironment.cpp.o: src/CMakeFiles/minetest.dir/flags.make
+src/CMakeFiles/minetest.dir/client/clientenvironment.cpp.o: src/client/clientenvironment.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object src/CMakeFiles/minetest.dir/client/clientenvironment.cpp.o"
+	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/client/clientenvironment.cpp.o -c /opt/minetest/src/client/clientenvironment.cpp
+
+src/CMakeFiles/minetest.dir/client/clientenvironment.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/minetest.dir/client/clientenvironment.cpp.i"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /opt/minetest/src/client/clientenvironment.cpp > CMakeFiles/minetest.dir/client/clientenvironment.cpp.i
+
+src/CMakeFiles/minetest.dir/client/clientenvironment.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/minetest.dir/client/clientenvironment.cpp.s"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /opt/minetest/src/client/clientenvironment.cpp -o CMakeFiles/minetest.dir/client/clientenvironment.cpp.s
+
+src/CMakeFiles/minetest.dir/client/clientenvironment.cpp.o.requires:
+
+.PHONY : src/CMakeFiles/minetest.dir/client/clientenvironment.cpp.o.requires
+
+src/CMakeFiles/minetest.dir/client/clientenvironment.cpp.o.provides: src/CMakeFiles/minetest.dir/client/clientenvironment.cpp.o.requires
+	$(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/client/clientenvironment.cpp.o.provides.build
+.PHONY : src/CMakeFiles/minetest.dir/client/clientenvironment.cpp.o.provides
+
+src/CMakeFiles/minetest.dir/client/clientenvironment.cpp.o.provides.build: src/CMakeFiles/minetest.dir/client/clientenvironment.cpp.o
+
+
 src/CMakeFiles/minetest.dir/client/clientlauncher.cpp.o: src/CMakeFiles/minetest.dir/flags.make
 src/CMakeFiles/minetest.dir/client/clientlauncher.cpp.o: src/client/clientlauncher.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object src/CMakeFiles/minetest.dir/client/clientlauncher.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object src/CMakeFiles/minetest.dir/client/clientlauncher.cpp.o"
 	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/client/clientlauncher.cpp.o -c /opt/minetest/src/client/clientlauncher.cpp
 
 src/CMakeFiles/minetest.dir/client/clientlauncher.cpp.i: cmake_force
@@ -81,9 +177,345 @@ src/CMakeFiles/minetest.dir/client/clientlauncher.cpp.o.provides: src/CMakeFiles
 src/CMakeFiles/minetest.dir/client/clientlauncher.cpp.o.provides.build: src/CMakeFiles/minetest.dir/client/clientlauncher.cpp.o
 
 
+src/CMakeFiles/minetest.dir/client/clientmap.cpp.o: src/CMakeFiles/minetest.dir/flags.make
+src/CMakeFiles/minetest.dir/client/clientmap.cpp.o: src/client/clientmap.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object src/CMakeFiles/minetest.dir/client/clientmap.cpp.o"
+	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/client/clientmap.cpp.o -c /opt/minetest/src/client/clientmap.cpp
+
+src/CMakeFiles/minetest.dir/client/clientmap.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/minetest.dir/client/clientmap.cpp.i"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /opt/minetest/src/client/clientmap.cpp > CMakeFiles/minetest.dir/client/clientmap.cpp.i
+
+src/CMakeFiles/minetest.dir/client/clientmap.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/minetest.dir/client/clientmap.cpp.s"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /opt/minetest/src/client/clientmap.cpp -o CMakeFiles/minetest.dir/client/clientmap.cpp.s
+
+src/CMakeFiles/minetest.dir/client/clientmap.cpp.o.requires:
+
+.PHONY : src/CMakeFiles/minetest.dir/client/clientmap.cpp.o.requires
+
+src/CMakeFiles/minetest.dir/client/clientmap.cpp.o.provides: src/CMakeFiles/minetest.dir/client/clientmap.cpp.o.requires
+	$(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/client/clientmap.cpp.o.provides.build
+.PHONY : src/CMakeFiles/minetest.dir/client/clientmap.cpp.o.provides
+
+src/CMakeFiles/minetest.dir/client/clientmap.cpp.o.provides.build: src/CMakeFiles/minetest.dir/client/clientmap.cpp.o
+
+
+src/CMakeFiles/minetest.dir/client/clientmedia.cpp.o: src/CMakeFiles/minetest.dir/flags.make
+src/CMakeFiles/minetest.dir/client/clientmedia.cpp.o: src/client/clientmedia.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object src/CMakeFiles/minetest.dir/client/clientmedia.cpp.o"
+	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/client/clientmedia.cpp.o -c /opt/minetest/src/client/clientmedia.cpp
+
+src/CMakeFiles/minetest.dir/client/clientmedia.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/minetest.dir/client/clientmedia.cpp.i"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /opt/minetest/src/client/clientmedia.cpp > CMakeFiles/minetest.dir/client/clientmedia.cpp.i
+
+src/CMakeFiles/minetest.dir/client/clientmedia.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/minetest.dir/client/clientmedia.cpp.s"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /opt/minetest/src/client/clientmedia.cpp -o CMakeFiles/minetest.dir/client/clientmedia.cpp.s
+
+src/CMakeFiles/minetest.dir/client/clientmedia.cpp.o.requires:
+
+.PHONY : src/CMakeFiles/minetest.dir/client/clientmedia.cpp.o.requires
+
+src/CMakeFiles/minetest.dir/client/clientmedia.cpp.o.provides: src/CMakeFiles/minetest.dir/client/clientmedia.cpp.o.requires
+	$(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/client/clientmedia.cpp.o.provides.build
+.PHONY : src/CMakeFiles/minetest.dir/client/clientmedia.cpp.o.provides
+
+src/CMakeFiles/minetest.dir/client/clientmedia.cpp.o.provides.build: src/CMakeFiles/minetest.dir/client/clientmedia.cpp.o
+
+
+src/CMakeFiles/minetest.dir/client/clientobject.cpp.o: src/CMakeFiles/minetest.dir/flags.make
+src/CMakeFiles/minetest.dir/client/clientobject.cpp.o: src/client/clientobject.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object src/CMakeFiles/minetest.dir/client/clientobject.cpp.o"
+	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/client/clientobject.cpp.o -c /opt/minetest/src/client/clientobject.cpp
+
+src/CMakeFiles/minetest.dir/client/clientobject.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/minetest.dir/client/clientobject.cpp.i"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /opt/minetest/src/client/clientobject.cpp > CMakeFiles/minetest.dir/client/clientobject.cpp.i
+
+src/CMakeFiles/minetest.dir/client/clientobject.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/minetest.dir/client/clientobject.cpp.s"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /opt/minetest/src/client/clientobject.cpp -o CMakeFiles/minetest.dir/client/clientobject.cpp.s
+
+src/CMakeFiles/minetest.dir/client/clientobject.cpp.o.requires:
+
+.PHONY : src/CMakeFiles/minetest.dir/client/clientobject.cpp.o.requires
+
+src/CMakeFiles/minetest.dir/client/clientobject.cpp.o.provides: src/CMakeFiles/minetest.dir/client/clientobject.cpp.o.requires
+	$(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/client/clientobject.cpp.o.provides.build
+.PHONY : src/CMakeFiles/minetest.dir/client/clientobject.cpp.o.provides
+
+src/CMakeFiles/minetest.dir/client/clientobject.cpp.o.provides.build: src/CMakeFiles/minetest.dir/client/clientobject.cpp.o
+
+
+src/CMakeFiles/minetest.dir/client/clouds.cpp.o: src/CMakeFiles/minetest.dir/flags.make
+src/CMakeFiles/minetest.dir/client/clouds.cpp.o: src/client/clouds.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object src/CMakeFiles/minetest.dir/client/clouds.cpp.o"
+	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/client/clouds.cpp.o -c /opt/minetest/src/client/clouds.cpp
+
+src/CMakeFiles/minetest.dir/client/clouds.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/minetest.dir/client/clouds.cpp.i"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /opt/minetest/src/client/clouds.cpp > CMakeFiles/minetest.dir/client/clouds.cpp.i
+
+src/CMakeFiles/minetest.dir/client/clouds.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/minetest.dir/client/clouds.cpp.s"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /opt/minetest/src/client/clouds.cpp -o CMakeFiles/minetest.dir/client/clouds.cpp.s
+
+src/CMakeFiles/minetest.dir/client/clouds.cpp.o.requires:
+
+.PHONY : src/CMakeFiles/minetest.dir/client/clouds.cpp.o.requires
+
+src/CMakeFiles/minetest.dir/client/clouds.cpp.o.provides: src/CMakeFiles/minetest.dir/client/clouds.cpp.o.requires
+	$(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/client/clouds.cpp.o.provides.build
+.PHONY : src/CMakeFiles/minetest.dir/client/clouds.cpp.o.provides
+
+src/CMakeFiles/minetest.dir/client/clouds.cpp.o.provides.build: src/CMakeFiles/minetest.dir/client/clouds.cpp.o
+
+
+src/CMakeFiles/minetest.dir/client/content_cao.cpp.o: src/CMakeFiles/minetest.dir/flags.make
+src/CMakeFiles/minetest.dir/client/content_cao.cpp.o: src/client/content_cao.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object src/CMakeFiles/minetest.dir/client/content_cao.cpp.o"
+	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/client/content_cao.cpp.o -c /opt/minetest/src/client/content_cao.cpp
+
+src/CMakeFiles/minetest.dir/client/content_cao.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/minetest.dir/client/content_cao.cpp.i"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /opt/minetest/src/client/content_cao.cpp > CMakeFiles/minetest.dir/client/content_cao.cpp.i
+
+src/CMakeFiles/minetest.dir/client/content_cao.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/minetest.dir/client/content_cao.cpp.s"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /opt/minetest/src/client/content_cao.cpp -o CMakeFiles/minetest.dir/client/content_cao.cpp.s
+
+src/CMakeFiles/minetest.dir/client/content_cao.cpp.o.requires:
+
+.PHONY : src/CMakeFiles/minetest.dir/client/content_cao.cpp.o.requires
+
+src/CMakeFiles/minetest.dir/client/content_cao.cpp.o.provides: src/CMakeFiles/minetest.dir/client/content_cao.cpp.o.requires
+	$(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/client/content_cao.cpp.o.provides.build
+.PHONY : src/CMakeFiles/minetest.dir/client/content_cao.cpp.o.provides
+
+src/CMakeFiles/minetest.dir/client/content_cao.cpp.o.provides.build: src/CMakeFiles/minetest.dir/client/content_cao.cpp.o
+
+
+src/CMakeFiles/minetest.dir/client/content_cso.cpp.o: src/CMakeFiles/minetest.dir/flags.make
+src/CMakeFiles/minetest.dir/client/content_cso.cpp.o: src/client/content_cso.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object src/CMakeFiles/minetest.dir/client/content_cso.cpp.o"
+	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/client/content_cso.cpp.o -c /opt/minetest/src/client/content_cso.cpp
+
+src/CMakeFiles/minetest.dir/client/content_cso.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/minetest.dir/client/content_cso.cpp.i"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /opt/minetest/src/client/content_cso.cpp > CMakeFiles/minetest.dir/client/content_cso.cpp.i
+
+src/CMakeFiles/minetest.dir/client/content_cso.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/minetest.dir/client/content_cso.cpp.s"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /opt/minetest/src/client/content_cso.cpp -o CMakeFiles/minetest.dir/client/content_cso.cpp.s
+
+src/CMakeFiles/minetest.dir/client/content_cso.cpp.o.requires:
+
+.PHONY : src/CMakeFiles/minetest.dir/client/content_cso.cpp.o.requires
+
+src/CMakeFiles/minetest.dir/client/content_cso.cpp.o.provides: src/CMakeFiles/minetest.dir/client/content_cso.cpp.o.requires
+	$(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/client/content_cso.cpp.o.provides.build
+.PHONY : src/CMakeFiles/minetest.dir/client/content_cso.cpp.o.provides
+
+src/CMakeFiles/minetest.dir/client/content_cso.cpp.o.provides.build: src/CMakeFiles/minetest.dir/client/content_cso.cpp.o
+
+
+src/CMakeFiles/minetest.dir/client/content_mapblock.cpp.o: src/CMakeFiles/minetest.dir/flags.make
+src/CMakeFiles/minetest.dir/client/content_mapblock.cpp.o: src/client/content_mapblock.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object src/CMakeFiles/minetest.dir/client/content_mapblock.cpp.o"
+	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/client/content_mapblock.cpp.o -c /opt/minetest/src/client/content_mapblock.cpp
+
+src/CMakeFiles/minetest.dir/client/content_mapblock.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/minetest.dir/client/content_mapblock.cpp.i"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /opt/minetest/src/client/content_mapblock.cpp > CMakeFiles/minetest.dir/client/content_mapblock.cpp.i
+
+src/CMakeFiles/minetest.dir/client/content_mapblock.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/minetest.dir/client/content_mapblock.cpp.s"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /opt/minetest/src/client/content_mapblock.cpp -o CMakeFiles/minetest.dir/client/content_mapblock.cpp.s
+
+src/CMakeFiles/minetest.dir/client/content_mapblock.cpp.o.requires:
+
+.PHONY : src/CMakeFiles/minetest.dir/client/content_mapblock.cpp.o.requires
+
+src/CMakeFiles/minetest.dir/client/content_mapblock.cpp.o.provides: src/CMakeFiles/minetest.dir/client/content_mapblock.cpp.o.requires
+	$(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/client/content_mapblock.cpp.o.provides.build
+.PHONY : src/CMakeFiles/minetest.dir/client/content_mapblock.cpp.o.provides
+
+src/CMakeFiles/minetest.dir/client/content_mapblock.cpp.o.provides.build: src/CMakeFiles/minetest.dir/client/content_mapblock.cpp.o
+
+
+src/CMakeFiles/minetest.dir/client/filecache.cpp.o: src/CMakeFiles/minetest.dir/flags.make
+src/CMakeFiles/minetest.dir/client/filecache.cpp.o: src/client/filecache.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object src/CMakeFiles/minetest.dir/client/filecache.cpp.o"
+	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/client/filecache.cpp.o -c /opt/minetest/src/client/filecache.cpp
+
+src/CMakeFiles/minetest.dir/client/filecache.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/minetest.dir/client/filecache.cpp.i"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /opt/minetest/src/client/filecache.cpp > CMakeFiles/minetest.dir/client/filecache.cpp.i
+
+src/CMakeFiles/minetest.dir/client/filecache.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/minetest.dir/client/filecache.cpp.s"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /opt/minetest/src/client/filecache.cpp -o CMakeFiles/minetest.dir/client/filecache.cpp.s
+
+src/CMakeFiles/minetest.dir/client/filecache.cpp.o.requires:
+
+.PHONY : src/CMakeFiles/minetest.dir/client/filecache.cpp.o.requires
+
+src/CMakeFiles/minetest.dir/client/filecache.cpp.o.provides: src/CMakeFiles/minetest.dir/client/filecache.cpp.o.requires
+	$(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/client/filecache.cpp.o.provides.build
+.PHONY : src/CMakeFiles/minetest.dir/client/filecache.cpp.o.provides
+
+src/CMakeFiles/minetest.dir/client/filecache.cpp.o.provides.build: src/CMakeFiles/minetest.dir/client/filecache.cpp.o
+
+
+src/CMakeFiles/minetest.dir/client/fontengine.cpp.o: src/CMakeFiles/minetest.dir/flags.make
+src/CMakeFiles/minetest.dir/client/fontengine.cpp.o: src/client/fontengine.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object src/CMakeFiles/minetest.dir/client/fontengine.cpp.o"
+	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/client/fontengine.cpp.o -c /opt/minetest/src/client/fontengine.cpp
+
+src/CMakeFiles/minetest.dir/client/fontengine.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/minetest.dir/client/fontengine.cpp.i"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /opt/minetest/src/client/fontengine.cpp > CMakeFiles/minetest.dir/client/fontengine.cpp.i
+
+src/CMakeFiles/minetest.dir/client/fontengine.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/minetest.dir/client/fontengine.cpp.s"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /opt/minetest/src/client/fontengine.cpp -o CMakeFiles/minetest.dir/client/fontengine.cpp.s
+
+src/CMakeFiles/minetest.dir/client/fontengine.cpp.o.requires:
+
+.PHONY : src/CMakeFiles/minetest.dir/client/fontengine.cpp.o.requires
+
+src/CMakeFiles/minetest.dir/client/fontengine.cpp.o.provides: src/CMakeFiles/minetest.dir/client/fontengine.cpp.o.requires
+	$(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/client/fontengine.cpp.o.provides.build
+.PHONY : src/CMakeFiles/minetest.dir/client/fontengine.cpp.o.provides
+
+src/CMakeFiles/minetest.dir/client/fontengine.cpp.o.provides.build: src/CMakeFiles/minetest.dir/client/fontengine.cpp.o
+
+
+src/CMakeFiles/minetest.dir/client/game.cpp.o: src/CMakeFiles/minetest.dir/flags.make
+src/CMakeFiles/minetest.dir/client/game.cpp.o: src/client/game.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object src/CMakeFiles/minetest.dir/client/game.cpp.o"
+	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/client/game.cpp.o -c /opt/minetest/src/client/game.cpp
+
+src/CMakeFiles/minetest.dir/client/game.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/minetest.dir/client/game.cpp.i"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /opt/minetest/src/client/game.cpp > CMakeFiles/minetest.dir/client/game.cpp.i
+
+src/CMakeFiles/minetest.dir/client/game.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/minetest.dir/client/game.cpp.s"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /opt/minetest/src/client/game.cpp -o CMakeFiles/minetest.dir/client/game.cpp.s
+
+src/CMakeFiles/minetest.dir/client/game.cpp.o.requires:
+
+.PHONY : src/CMakeFiles/minetest.dir/client/game.cpp.o.requires
+
+src/CMakeFiles/minetest.dir/client/game.cpp.o.provides: src/CMakeFiles/minetest.dir/client/game.cpp.o.requires
+	$(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/client/game.cpp.o.provides.build
+.PHONY : src/CMakeFiles/minetest.dir/client/game.cpp.o.provides
+
+src/CMakeFiles/minetest.dir/client/game.cpp.o.provides.build: src/CMakeFiles/minetest.dir/client/game.cpp.o
+
+
+src/CMakeFiles/minetest.dir/client/gameui.cpp.o: src/CMakeFiles/minetest.dir/flags.make
+src/CMakeFiles/minetest.dir/client/gameui.cpp.o: src/client/gameui.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object src/CMakeFiles/minetest.dir/client/gameui.cpp.o"
+	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/client/gameui.cpp.o -c /opt/minetest/src/client/gameui.cpp
+
+src/CMakeFiles/minetest.dir/client/gameui.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/minetest.dir/client/gameui.cpp.i"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /opt/minetest/src/client/gameui.cpp > CMakeFiles/minetest.dir/client/gameui.cpp.i
+
+src/CMakeFiles/minetest.dir/client/gameui.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/minetest.dir/client/gameui.cpp.s"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /opt/minetest/src/client/gameui.cpp -o CMakeFiles/minetest.dir/client/gameui.cpp.s
+
+src/CMakeFiles/minetest.dir/client/gameui.cpp.o.requires:
+
+.PHONY : src/CMakeFiles/minetest.dir/client/gameui.cpp.o.requires
+
+src/CMakeFiles/minetest.dir/client/gameui.cpp.o.provides: src/CMakeFiles/minetest.dir/client/gameui.cpp.o.requires
+	$(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/client/gameui.cpp.o.provides.build
+.PHONY : src/CMakeFiles/minetest.dir/client/gameui.cpp.o.provides
+
+src/CMakeFiles/minetest.dir/client/gameui.cpp.o.provides.build: src/CMakeFiles/minetest.dir/client/gameui.cpp.o
+
+
+src/CMakeFiles/minetest.dir/client/guiscalingfilter.cpp.o: src/CMakeFiles/minetest.dir/flags.make
+src/CMakeFiles/minetest.dir/client/guiscalingfilter.cpp.o: src/client/guiscalingfilter.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object src/CMakeFiles/minetest.dir/client/guiscalingfilter.cpp.o"
+	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/client/guiscalingfilter.cpp.o -c /opt/minetest/src/client/guiscalingfilter.cpp
+
+src/CMakeFiles/minetest.dir/client/guiscalingfilter.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/minetest.dir/client/guiscalingfilter.cpp.i"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /opt/minetest/src/client/guiscalingfilter.cpp > CMakeFiles/minetest.dir/client/guiscalingfilter.cpp.i
+
+src/CMakeFiles/minetest.dir/client/guiscalingfilter.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/minetest.dir/client/guiscalingfilter.cpp.s"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /opt/minetest/src/client/guiscalingfilter.cpp -o CMakeFiles/minetest.dir/client/guiscalingfilter.cpp.s
+
+src/CMakeFiles/minetest.dir/client/guiscalingfilter.cpp.o.requires:
+
+.PHONY : src/CMakeFiles/minetest.dir/client/guiscalingfilter.cpp.o.requires
+
+src/CMakeFiles/minetest.dir/client/guiscalingfilter.cpp.o.provides: src/CMakeFiles/minetest.dir/client/guiscalingfilter.cpp.o.requires
+	$(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/client/guiscalingfilter.cpp.o.provides.build
+.PHONY : src/CMakeFiles/minetest.dir/client/guiscalingfilter.cpp.o.provides
+
+src/CMakeFiles/minetest.dir/client/guiscalingfilter.cpp.o.provides.build: src/CMakeFiles/minetest.dir/client/guiscalingfilter.cpp.o
+
+
+src/CMakeFiles/minetest.dir/client/hud.cpp.o: src/CMakeFiles/minetest.dir/flags.make
+src/CMakeFiles/minetest.dir/client/hud.cpp.o: src/client/hud.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object src/CMakeFiles/minetest.dir/client/hud.cpp.o"
+	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/client/hud.cpp.o -c /opt/minetest/src/client/hud.cpp
+
+src/CMakeFiles/minetest.dir/client/hud.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/minetest.dir/client/hud.cpp.i"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /opt/minetest/src/client/hud.cpp > CMakeFiles/minetest.dir/client/hud.cpp.i
+
+src/CMakeFiles/minetest.dir/client/hud.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/minetest.dir/client/hud.cpp.s"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /opt/minetest/src/client/hud.cpp -o CMakeFiles/minetest.dir/client/hud.cpp.s
+
+src/CMakeFiles/minetest.dir/client/hud.cpp.o.requires:
+
+.PHONY : src/CMakeFiles/minetest.dir/client/hud.cpp.o.requires
+
+src/CMakeFiles/minetest.dir/client/hud.cpp.o.provides: src/CMakeFiles/minetest.dir/client/hud.cpp.o.requires
+	$(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/client/hud.cpp.o.provides.build
+.PHONY : src/CMakeFiles/minetest.dir/client/hud.cpp.o.provides
+
+src/CMakeFiles/minetest.dir/client/hud.cpp.o.provides.build: src/CMakeFiles/minetest.dir/client/hud.cpp.o
+
+
+src/CMakeFiles/minetest.dir/client/imagefilters.cpp.o: src/CMakeFiles/minetest.dir/flags.make
+src/CMakeFiles/minetest.dir/client/imagefilters.cpp.o: src/client/imagefilters.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object src/CMakeFiles/minetest.dir/client/imagefilters.cpp.o"
+	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/client/imagefilters.cpp.o -c /opt/minetest/src/client/imagefilters.cpp
+
+src/CMakeFiles/minetest.dir/client/imagefilters.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/minetest.dir/client/imagefilters.cpp.i"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /opt/minetest/src/client/imagefilters.cpp > CMakeFiles/minetest.dir/client/imagefilters.cpp.i
+
+src/CMakeFiles/minetest.dir/client/imagefilters.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/minetest.dir/client/imagefilters.cpp.s"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /opt/minetest/src/client/imagefilters.cpp -o CMakeFiles/minetest.dir/client/imagefilters.cpp.s
+
+src/CMakeFiles/minetest.dir/client/imagefilters.cpp.o.requires:
+
+.PHONY : src/CMakeFiles/minetest.dir/client/imagefilters.cpp.o.requires
+
+src/CMakeFiles/minetest.dir/client/imagefilters.cpp.o.provides: src/CMakeFiles/minetest.dir/client/imagefilters.cpp.o.requires
+	$(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/client/imagefilters.cpp.o.provides.build
+.PHONY : src/CMakeFiles/minetest.dir/client/imagefilters.cpp.o.provides
+
+src/CMakeFiles/minetest.dir/client/imagefilters.cpp.o.provides.build: src/CMakeFiles/minetest.dir/client/imagefilters.cpp.o
+
+
 src/CMakeFiles/minetest.dir/client/inputhandler.cpp.o: src/CMakeFiles/minetest.dir/flags.make
 src/CMakeFiles/minetest.dir/client/inputhandler.cpp.o: src/client/inputhandler.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object src/CMakeFiles/minetest.dir/client/inputhandler.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object src/CMakeFiles/minetest.dir/client/inputhandler.cpp.o"
 	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/client/inputhandler.cpp.o -c /opt/minetest/src/client/inputhandler.cpp
 
 src/CMakeFiles/minetest.dir/client/inputhandler.cpp.i: cmake_force
@@ -107,7 +539,7 @@ src/CMakeFiles/minetest.dir/client/inputhandler.cpp.o.provides.build: src/CMakeF
 
 src/CMakeFiles/minetest.dir/client/joystick_controller.cpp.o: src/CMakeFiles/minetest.dir/flags.make
 src/CMakeFiles/minetest.dir/client/joystick_controller.cpp.o: src/client/joystick_controller.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object src/CMakeFiles/minetest.dir/client/joystick_controller.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object src/CMakeFiles/minetest.dir/client/joystick_controller.cpp.o"
 	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/client/joystick_controller.cpp.o -c /opt/minetest/src/client/joystick_controller.cpp
 
 src/CMakeFiles/minetest.dir/client/joystick_controller.cpp.i: cmake_force
@@ -129,9 +561,513 @@ src/CMakeFiles/minetest.dir/client/joystick_controller.cpp.o.provides: src/CMake
 src/CMakeFiles/minetest.dir/client/joystick_controller.cpp.o.provides.build: src/CMakeFiles/minetest.dir/client/joystick_controller.cpp.o
 
 
+src/CMakeFiles/minetest.dir/client/keycode.cpp.o: src/CMakeFiles/minetest.dir/flags.make
+src/CMakeFiles/minetest.dir/client/keycode.cpp.o: src/client/keycode.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object src/CMakeFiles/minetest.dir/client/keycode.cpp.o"
+	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/client/keycode.cpp.o -c /opt/minetest/src/client/keycode.cpp
+
+src/CMakeFiles/minetest.dir/client/keycode.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/minetest.dir/client/keycode.cpp.i"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /opt/minetest/src/client/keycode.cpp > CMakeFiles/minetest.dir/client/keycode.cpp.i
+
+src/CMakeFiles/minetest.dir/client/keycode.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/minetest.dir/client/keycode.cpp.s"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /opt/minetest/src/client/keycode.cpp -o CMakeFiles/minetest.dir/client/keycode.cpp.s
+
+src/CMakeFiles/minetest.dir/client/keycode.cpp.o.requires:
+
+.PHONY : src/CMakeFiles/minetest.dir/client/keycode.cpp.o.requires
+
+src/CMakeFiles/minetest.dir/client/keycode.cpp.o.provides: src/CMakeFiles/minetest.dir/client/keycode.cpp.o.requires
+	$(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/client/keycode.cpp.o.provides.build
+.PHONY : src/CMakeFiles/minetest.dir/client/keycode.cpp.o.provides
+
+src/CMakeFiles/minetest.dir/client/keycode.cpp.o.provides.build: src/CMakeFiles/minetest.dir/client/keycode.cpp.o
+
+
+src/CMakeFiles/minetest.dir/client/localplayer.cpp.o: src/CMakeFiles/minetest.dir/flags.make
+src/CMakeFiles/minetest.dir/client/localplayer.cpp.o: src/client/localplayer.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object src/CMakeFiles/minetest.dir/client/localplayer.cpp.o"
+	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/client/localplayer.cpp.o -c /opt/minetest/src/client/localplayer.cpp
+
+src/CMakeFiles/minetest.dir/client/localplayer.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/minetest.dir/client/localplayer.cpp.i"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /opt/minetest/src/client/localplayer.cpp > CMakeFiles/minetest.dir/client/localplayer.cpp.i
+
+src/CMakeFiles/minetest.dir/client/localplayer.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/minetest.dir/client/localplayer.cpp.s"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /opt/minetest/src/client/localplayer.cpp -o CMakeFiles/minetest.dir/client/localplayer.cpp.s
+
+src/CMakeFiles/minetest.dir/client/localplayer.cpp.o.requires:
+
+.PHONY : src/CMakeFiles/minetest.dir/client/localplayer.cpp.o.requires
+
+src/CMakeFiles/minetest.dir/client/localplayer.cpp.o.provides: src/CMakeFiles/minetest.dir/client/localplayer.cpp.o.requires
+	$(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/client/localplayer.cpp.o.provides.build
+.PHONY : src/CMakeFiles/minetest.dir/client/localplayer.cpp.o.provides
+
+src/CMakeFiles/minetest.dir/client/localplayer.cpp.o.provides.build: src/CMakeFiles/minetest.dir/client/localplayer.cpp.o
+
+
+src/CMakeFiles/minetest.dir/client/mapblock_mesh.cpp.o: src/CMakeFiles/minetest.dir/flags.make
+src/CMakeFiles/minetest.dir/client/mapblock_mesh.cpp.o: src/client/mapblock_mesh.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building CXX object src/CMakeFiles/minetest.dir/client/mapblock_mesh.cpp.o"
+	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/client/mapblock_mesh.cpp.o -c /opt/minetest/src/client/mapblock_mesh.cpp
+
+src/CMakeFiles/minetest.dir/client/mapblock_mesh.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/minetest.dir/client/mapblock_mesh.cpp.i"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /opt/minetest/src/client/mapblock_mesh.cpp > CMakeFiles/minetest.dir/client/mapblock_mesh.cpp.i
+
+src/CMakeFiles/minetest.dir/client/mapblock_mesh.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/minetest.dir/client/mapblock_mesh.cpp.s"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /opt/minetest/src/client/mapblock_mesh.cpp -o CMakeFiles/minetest.dir/client/mapblock_mesh.cpp.s
+
+src/CMakeFiles/minetest.dir/client/mapblock_mesh.cpp.o.requires:
+
+.PHONY : src/CMakeFiles/minetest.dir/client/mapblock_mesh.cpp.o.requires
+
+src/CMakeFiles/minetest.dir/client/mapblock_mesh.cpp.o.provides: src/CMakeFiles/minetest.dir/client/mapblock_mesh.cpp.o.requires
+	$(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/client/mapblock_mesh.cpp.o.provides.build
+.PHONY : src/CMakeFiles/minetest.dir/client/mapblock_mesh.cpp.o.provides
+
+src/CMakeFiles/minetest.dir/client/mapblock_mesh.cpp.o.provides.build: src/CMakeFiles/minetest.dir/client/mapblock_mesh.cpp.o
+
+
+src/CMakeFiles/minetest.dir/client/mesh.cpp.o: src/CMakeFiles/minetest.dir/flags.make
+src/CMakeFiles/minetest.dir/client/mesh.cpp.o: src/client/mesh.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building CXX object src/CMakeFiles/minetest.dir/client/mesh.cpp.o"
+	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/client/mesh.cpp.o -c /opt/minetest/src/client/mesh.cpp
+
+src/CMakeFiles/minetest.dir/client/mesh.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/minetest.dir/client/mesh.cpp.i"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /opt/minetest/src/client/mesh.cpp > CMakeFiles/minetest.dir/client/mesh.cpp.i
+
+src/CMakeFiles/minetest.dir/client/mesh.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/minetest.dir/client/mesh.cpp.s"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /opt/minetest/src/client/mesh.cpp -o CMakeFiles/minetest.dir/client/mesh.cpp.s
+
+src/CMakeFiles/minetest.dir/client/mesh.cpp.o.requires:
+
+.PHONY : src/CMakeFiles/minetest.dir/client/mesh.cpp.o.requires
+
+src/CMakeFiles/minetest.dir/client/mesh.cpp.o.provides: src/CMakeFiles/minetest.dir/client/mesh.cpp.o.requires
+	$(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/client/mesh.cpp.o.provides.build
+.PHONY : src/CMakeFiles/minetest.dir/client/mesh.cpp.o.provides
+
+src/CMakeFiles/minetest.dir/client/mesh.cpp.o.provides.build: src/CMakeFiles/minetest.dir/client/mesh.cpp.o
+
+
+src/CMakeFiles/minetest.dir/client/mesh_generator_thread.cpp.o: src/CMakeFiles/minetest.dir/flags.make
+src/CMakeFiles/minetest.dir/client/mesh_generator_thread.cpp.o: src/client/mesh_generator_thread.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building CXX object src/CMakeFiles/minetest.dir/client/mesh_generator_thread.cpp.o"
+	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/client/mesh_generator_thread.cpp.o -c /opt/minetest/src/client/mesh_generator_thread.cpp
+
+src/CMakeFiles/minetest.dir/client/mesh_generator_thread.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/minetest.dir/client/mesh_generator_thread.cpp.i"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /opt/minetest/src/client/mesh_generator_thread.cpp > CMakeFiles/minetest.dir/client/mesh_generator_thread.cpp.i
+
+src/CMakeFiles/minetest.dir/client/mesh_generator_thread.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/minetest.dir/client/mesh_generator_thread.cpp.s"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /opt/minetest/src/client/mesh_generator_thread.cpp -o CMakeFiles/minetest.dir/client/mesh_generator_thread.cpp.s
+
+src/CMakeFiles/minetest.dir/client/mesh_generator_thread.cpp.o.requires:
+
+.PHONY : src/CMakeFiles/minetest.dir/client/mesh_generator_thread.cpp.o.requires
+
+src/CMakeFiles/minetest.dir/client/mesh_generator_thread.cpp.o.provides: src/CMakeFiles/minetest.dir/client/mesh_generator_thread.cpp.o.requires
+	$(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/client/mesh_generator_thread.cpp.o.provides.build
+.PHONY : src/CMakeFiles/minetest.dir/client/mesh_generator_thread.cpp.o.provides
+
+src/CMakeFiles/minetest.dir/client/mesh_generator_thread.cpp.o.provides.build: src/CMakeFiles/minetest.dir/client/mesh_generator_thread.cpp.o
+
+
+src/CMakeFiles/minetest.dir/client/meshgen/collector.cpp.o: src/CMakeFiles/minetest.dir/flags.make
+src/CMakeFiles/minetest.dir/client/meshgen/collector.cpp.o: src/client/meshgen/collector.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building CXX object src/CMakeFiles/minetest.dir/client/meshgen/collector.cpp.o"
+	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/client/meshgen/collector.cpp.o -c /opt/minetest/src/client/meshgen/collector.cpp
+
+src/CMakeFiles/minetest.dir/client/meshgen/collector.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/minetest.dir/client/meshgen/collector.cpp.i"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /opt/minetest/src/client/meshgen/collector.cpp > CMakeFiles/minetest.dir/client/meshgen/collector.cpp.i
+
+src/CMakeFiles/minetest.dir/client/meshgen/collector.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/minetest.dir/client/meshgen/collector.cpp.s"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /opt/minetest/src/client/meshgen/collector.cpp -o CMakeFiles/minetest.dir/client/meshgen/collector.cpp.s
+
+src/CMakeFiles/minetest.dir/client/meshgen/collector.cpp.o.requires:
+
+.PHONY : src/CMakeFiles/minetest.dir/client/meshgen/collector.cpp.o.requires
+
+src/CMakeFiles/minetest.dir/client/meshgen/collector.cpp.o.provides: src/CMakeFiles/minetest.dir/client/meshgen/collector.cpp.o.requires
+	$(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/client/meshgen/collector.cpp.o.provides.build
+.PHONY : src/CMakeFiles/minetest.dir/client/meshgen/collector.cpp.o.provides
+
+src/CMakeFiles/minetest.dir/client/meshgen/collector.cpp.o.provides.build: src/CMakeFiles/minetest.dir/client/meshgen/collector.cpp.o
+
+
+src/CMakeFiles/minetest.dir/client/minimap.cpp.o: src/CMakeFiles/minetest.dir/flags.make
+src/CMakeFiles/minetest.dir/client/minimap.cpp.o: src/client/minimap.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building CXX object src/CMakeFiles/minetest.dir/client/minimap.cpp.o"
+	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/client/minimap.cpp.o -c /opt/minetest/src/client/minimap.cpp
+
+src/CMakeFiles/minetest.dir/client/minimap.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/minetest.dir/client/minimap.cpp.i"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /opt/minetest/src/client/minimap.cpp > CMakeFiles/minetest.dir/client/minimap.cpp.i
+
+src/CMakeFiles/minetest.dir/client/minimap.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/minetest.dir/client/minimap.cpp.s"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /opt/minetest/src/client/minimap.cpp -o CMakeFiles/minetest.dir/client/minimap.cpp.s
+
+src/CMakeFiles/minetest.dir/client/minimap.cpp.o.requires:
+
+.PHONY : src/CMakeFiles/minetest.dir/client/minimap.cpp.o.requires
+
+src/CMakeFiles/minetest.dir/client/minimap.cpp.o.provides: src/CMakeFiles/minetest.dir/client/minimap.cpp.o.requires
+	$(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/client/minimap.cpp.o.provides.build
+.PHONY : src/CMakeFiles/minetest.dir/client/minimap.cpp.o.provides
+
+src/CMakeFiles/minetest.dir/client/minimap.cpp.o.provides.build: src/CMakeFiles/minetest.dir/client/minimap.cpp.o
+
+
+src/CMakeFiles/minetest.dir/client/particles.cpp.o: src/CMakeFiles/minetest.dir/flags.make
+src/CMakeFiles/minetest.dir/client/particles.cpp.o: src/client/particles.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building CXX object src/CMakeFiles/minetest.dir/client/particles.cpp.o"
+	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/client/particles.cpp.o -c /opt/minetest/src/client/particles.cpp
+
+src/CMakeFiles/minetest.dir/client/particles.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/minetest.dir/client/particles.cpp.i"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /opt/minetest/src/client/particles.cpp > CMakeFiles/minetest.dir/client/particles.cpp.i
+
+src/CMakeFiles/minetest.dir/client/particles.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/minetest.dir/client/particles.cpp.s"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /opt/minetest/src/client/particles.cpp -o CMakeFiles/minetest.dir/client/particles.cpp.s
+
+src/CMakeFiles/minetest.dir/client/particles.cpp.o.requires:
+
+.PHONY : src/CMakeFiles/minetest.dir/client/particles.cpp.o.requires
+
+src/CMakeFiles/minetest.dir/client/particles.cpp.o.provides: src/CMakeFiles/minetest.dir/client/particles.cpp.o.requires
+	$(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/client/particles.cpp.o.provides.build
+.PHONY : src/CMakeFiles/minetest.dir/client/particles.cpp.o.provides
+
+src/CMakeFiles/minetest.dir/client/particles.cpp.o.provides.build: src/CMakeFiles/minetest.dir/client/particles.cpp.o
+
+
+src/CMakeFiles/minetest.dir/client/render/anaglyph.cpp.o: src/CMakeFiles/minetest.dir/flags.make
+src/CMakeFiles/minetest.dir/client/render/anaglyph.cpp.o: src/client/render/anaglyph.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building CXX object src/CMakeFiles/minetest.dir/client/render/anaglyph.cpp.o"
+	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/client/render/anaglyph.cpp.o -c /opt/minetest/src/client/render/anaglyph.cpp
+
+src/CMakeFiles/minetest.dir/client/render/anaglyph.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/minetest.dir/client/render/anaglyph.cpp.i"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /opt/minetest/src/client/render/anaglyph.cpp > CMakeFiles/minetest.dir/client/render/anaglyph.cpp.i
+
+src/CMakeFiles/minetest.dir/client/render/anaglyph.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/minetest.dir/client/render/anaglyph.cpp.s"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /opt/minetest/src/client/render/anaglyph.cpp -o CMakeFiles/minetest.dir/client/render/anaglyph.cpp.s
+
+src/CMakeFiles/minetest.dir/client/render/anaglyph.cpp.o.requires:
+
+.PHONY : src/CMakeFiles/minetest.dir/client/render/anaglyph.cpp.o.requires
+
+src/CMakeFiles/minetest.dir/client/render/anaglyph.cpp.o.provides: src/CMakeFiles/minetest.dir/client/render/anaglyph.cpp.o.requires
+	$(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/client/render/anaglyph.cpp.o.provides.build
+.PHONY : src/CMakeFiles/minetest.dir/client/render/anaglyph.cpp.o.provides
+
+src/CMakeFiles/minetest.dir/client/render/anaglyph.cpp.o.provides.build: src/CMakeFiles/minetest.dir/client/render/anaglyph.cpp.o
+
+
+src/CMakeFiles/minetest.dir/client/render/core.cpp.o: src/CMakeFiles/minetest.dir/flags.make
+src/CMakeFiles/minetest.dir/client/render/core.cpp.o: src/client/render/core.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Building CXX object src/CMakeFiles/minetest.dir/client/render/core.cpp.o"
+	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/client/render/core.cpp.o -c /opt/minetest/src/client/render/core.cpp
+
+src/CMakeFiles/minetest.dir/client/render/core.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/minetest.dir/client/render/core.cpp.i"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /opt/minetest/src/client/render/core.cpp > CMakeFiles/minetest.dir/client/render/core.cpp.i
+
+src/CMakeFiles/minetest.dir/client/render/core.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/minetest.dir/client/render/core.cpp.s"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /opt/minetest/src/client/render/core.cpp -o CMakeFiles/minetest.dir/client/render/core.cpp.s
+
+src/CMakeFiles/minetest.dir/client/render/core.cpp.o.requires:
+
+.PHONY : src/CMakeFiles/minetest.dir/client/render/core.cpp.o.requires
+
+src/CMakeFiles/minetest.dir/client/render/core.cpp.o.provides: src/CMakeFiles/minetest.dir/client/render/core.cpp.o.requires
+	$(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/client/render/core.cpp.o.provides.build
+.PHONY : src/CMakeFiles/minetest.dir/client/render/core.cpp.o.provides
+
+src/CMakeFiles/minetest.dir/client/render/core.cpp.o.provides.build: src/CMakeFiles/minetest.dir/client/render/core.cpp.o
+
+
+src/CMakeFiles/minetest.dir/client/render/factory.cpp.o: src/CMakeFiles/minetest.dir/flags.make
+src/CMakeFiles/minetest.dir/client/render/factory.cpp.o: src/client/render/factory.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Building CXX object src/CMakeFiles/minetest.dir/client/render/factory.cpp.o"
+	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/client/render/factory.cpp.o -c /opt/minetest/src/client/render/factory.cpp
+
+src/CMakeFiles/minetest.dir/client/render/factory.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/minetest.dir/client/render/factory.cpp.i"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /opt/minetest/src/client/render/factory.cpp > CMakeFiles/minetest.dir/client/render/factory.cpp.i
+
+src/CMakeFiles/minetest.dir/client/render/factory.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/minetest.dir/client/render/factory.cpp.s"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /opt/minetest/src/client/render/factory.cpp -o CMakeFiles/minetest.dir/client/render/factory.cpp.s
+
+src/CMakeFiles/minetest.dir/client/render/factory.cpp.o.requires:
+
+.PHONY : src/CMakeFiles/minetest.dir/client/render/factory.cpp.o.requires
+
+src/CMakeFiles/minetest.dir/client/render/factory.cpp.o.provides: src/CMakeFiles/minetest.dir/client/render/factory.cpp.o.requires
+	$(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/client/render/factory.cpp.o.provides.build
+.PHONY : src/CMakeFiles/minetest.dir/client/render/factory.cpp.o.provides
+
+src/CMakeFiles/minetest.dir/client/render/factory.cpp.o.provides.build: src/CMakeFiles/minetest.dir/client/render/factory.cpp.o
+
+
+src/CMakeFiles/minetest.dir/client/render/interlaced.cpp.o: src/CMakeFiles/minetest.dir/flags.make
+src/CMakeFiles/minetest.dir/client/render/interlaced.cpp.o: src/client/render/interlaced.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Building CXX object src/CMakeFiles/minetest.dir/client/render/interlaced.cpp.o"
+	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/client/render/interlaced.cpp.o -c /opt/minetest/src/client/render/interlaced.cpp
+
+src/CMakeFiles/minetest.dir/client/render/interlaced.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/minetest.dir/client/render/interlaced.cpp.i"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /opt/minetest/src/client/render/interlaced.cpp > CMakeFiles/minetest.dir/client/render/interlaced.cpp.i
+
+src/CMakeFiles/minetest.dir/client/render/interlaced.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/minetest.dir/client/render/interlaced.cpp.s"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /opt/minetest/src/client/render/interlaced.cpp -o CMakeFiles/minetest.dir/client/render/interlaced.cpp.s
+
+src/CMakeFiles/minetest.dir/client/render/interlaced.cpp.o.requires:
+
+.PHONY : src/CMakeFiles/minetest.dir/client/render/interlaced.cpp.o.requires
+
+src/CMakeFiles/minetest.dir/client/render/interlaced.cpp.o.provides: src/CMakeFiles/minetest.dir/client/render/interlaced.cpp.o.requires
+	$(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/client/render/interlaced.cpp.o.provides.build
+.PHONY : src/CMakeFiles/minetest.dir/client/render/interlaced.cpp.o.provides
+
+src/CMakeFiles/minetest.dir/client/render/interlaced.cpp.o.provides.build: src/CMakeFiles/minetest.dir/client/render/interlaced.cpp.o
+
+
+src/CMakeFiles/minetest.dir/client/render/pageflip.cpp.o: src/CMakeFiles/minetest.dir/flags.make
+src/CMakeFiles/minetest.dir/client/render/pageflip.cpp.o: src/client/render/pageflip.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_34) "Building CXX object src/CMakeFiles/minetest.dir/client/render/pageflip.cpp.o"
+	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/client/render/pageflip.cpp.o -c /opt/minetest/src/client/render/pageflip.cpp
+
+src/CMakeFiles/minetest.dir/client/render/pageflip.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/minetest.dir/client/render/pageflip.cpp.i"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /opt/minetest/src/client/render/pageflip.cpp > CMakeFiles/minetest.dir/client/render/pageflip.cpp.i
+
+src/CMakeFiles/minetest.dir/client/render/pageflip.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/minetest.dir/client/render/pageflip.cpp.s"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /opt/minetest/src/client/render/pageflip.cpp -o CMakeFiles/minetest.dir/client/render/pageflip.cpp.s
+
+src/CMakeFiles/minetest.dir/client/render/pageflip.cpp.o.requires:
+
+.PHONY : src/CMakeFiles/minetest.dir/client/render/pageflip.cpp.o.requires
+
+src/CMakeFiles/minetest.dir/client/render/pageflip.cpp.o.provides: src/CMakeFiles/minetest.dir/client/render/pageflip.cpp.o.requires
+	$(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/client/render/pageflip.cpp.o.provides.build
+.PHONY : src/CMakeFiles/minetest.dir/client/render/pageflip.cpp.o.provides
+
+src/CMakeFiles/minetest.dir/client/render/pageflip.cpp.o.provides.build: src/CMakeFiles/minetest.dir/client/render/pageflip.cpp.o
+
+
+src/CMakeFiles/minetest.dir/client/render/plain.cpp.o: src/CMakeFiles/minetest.dir/flags.make
+src/CMakeFiles/minetest.dir/client/render/plain.cpp.o: src/client/render/plain.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_35) "Building CXX object src/CMakeFiles/minetest.dir/client/render/plain.cpp.o"
+	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/client/render/plain.cpp.o -c /opt/minetest/src/client/render/plain.cpp
+
+src/CMakeFiles/minetest.dir/client/render/plain.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/minetest.dir/client/render/plain.cpp.i"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /opt/minetest/src/client/render/plain.cpp > CMakeFiles/minetest.dir/client/render/plain.cpp.i
+
+src/CMakeFiles/minetest.dir/client/render/plain.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/minetest.dir/client/render/plain.cpp.s"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /opt/minetest/src/client/render/plain.cpp -o CMakeFiles/minetest.dir/client/render/plain.cpp.s
+
+src/CMakeFiles/minetest.dir/client/render/plain.cpp.o.requires:
+
+.PHONY : src/CMakeFiles/minetest.dir/client/render/plain.cpp.o.requires
+
+src/CMakeFiles/minetest.dir/client/render/plain.cpp.o.provides: src/CMakeFiles/minetest.dir/client/render/plain.cpp.o.requires
+	$(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/client/render/plain.cpp.o.provides.build
+.PHONY : src/CMakeFiles/minetest.dir/client/render/plain.cpp.o.provides
+
+src/CMakeFiles/minetest.dir/client/render/plain.cpp.o.provides.build: src/CMakeFiles/minetest.dir/client/render/plain.cpp.o
+
+
+src/CMakeFiles/minetest.dir/client/render/sidebyside.cpp.o: src/CMakeFiles/minetest.dir/flags.make
+src/CMakeFiles/minetest.dir/client/render/sidebyside.cpp.o: src/client/render/sidebyside.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_36) "Building CXX object src/CMakeFiles/minetest.dir/client/render/sidebyside.cpp.o"
+	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/client/render/sidebyside.cpp.o -c /opt/minetest/src/client/render/sidebyside.cpp
+
+src/CMakeFiles/minetest.dir/client/render/sidebyside.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/minetest.dir/client/render/sidebyside.cpp.i"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /opt/minetest/src/client/render/sidebyside.cpp > CMakeFiles/minetest.dir/client/render/sidebyside.cpp.i
+
+src/CMakeFiles/minetest.dir/client/render/sidebyside.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/minetest.dir/client/render/sidebyside.cpp.s"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /opt/minetest/src/client/render/sidebyside.cpp -o CMakeFiles/minetest.dir/client/render/sidebyside.cpp.s
+
+src/CMakeFiles/minetest.dir/client/render/sidebyside.cpp.o.requires:
+
+.PHONY : src/CMakeFiles/minetest.dir/client/render/sidebyside.cpp.o.requires
+
+src/CMakeFiles/minetest.dir/client/render/sidebyside.cpp.o.provides: src/CMakeFiles/minetest.dir/client/render/sidebyside.cpp.o.requires
+	$(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/client/render/sidebyside.cpp.o.provides.build
+.PHONY : src/CMakeFiles/minetest.dir/client/render/sidebyside.cpp.o.provides
+
+src/CMakeFiles/minetest.dir/client/render/sidebyside.cpp.o.provides.build: src/CMakeFiles/minetest.dir/client/render/sidebyside.cpp.o
+
+
+src/CMakeFiles/minetest.dir/client/render/stereo.cpp.o: src/CMakeFiles/minetest.dir/flags.make
+src/CMakeFiles/minetest.dir/client/render/stereo.cpp.o: src/client/render/stereo.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_37) "Building CXX object src/CMakeFiles/minetest.dir/client/render/stereo.cpp.o"
+	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/client/render/stereo.cpp.o -c /opt/minetest/src/client/render/stereo.cpp
+
+src/CMakeFiles/minetest.dir/client/render/stereo.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/minetest.dir/client/render/stereo.cpp.i"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /opt/minetest/src/client/render/stereo.cpp > CMakeFiles/minetest.dir/client/render/stereo.cpp.i
+
+src/CMakeFiles/minetest.dir/client/render/stereo.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/minetest.dir/client/render/stereo.cpp.s"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /opt/minetest/src/client/render/stereo.cpp -o CMakeFiles/minetest.dir/client/render/stereo.cpp.s
+
+src/CMakeFiles/minetest.dir/client/render/stereo.cpp.o.requires:
+
+.PHONY : src/CMakeFiles/minetest.dir/client/render/stereo.cpp.o.requires
+
+src/CMakeFiles/minetest.dir/client/render/stereo.cpp.o.provides: src/CMakeFiles/minetest.dir/client/render/stereo.cpp.o.requires
+	$(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/client/render/stereo.cpp.o.provides.build
+.PHONY : src/CMakeFiles/minetest.dir/client/render/stereo.cpp.o.provides
+
+src/CMakeFiles/minetest.dir/client/render/stereo.cpp.o.provides.build: src/CMakeFiles/minetest.dir/client/render/stereo.cpp.o
+
+
+src/CMakeFiles/minetest.dir/client/renderingengine.cpp.o: src/CMakeFiles/minetest.dir/flags.make
+src/CMakeFiles/minetest.dir/client/renderingengine.cpp.o: src/client/renderingengine.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_38) "Building CXX object src/CMakeFiles/minetest.dir/client/renderingengine.cpp.o"
+	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/client/renderingengine.cpp.o -c /opt/minetest/src/client/renderingengine.cpp
+
+src/CMakeFiles/minetest.dir/client/renderingengine.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/minetest.dir/client/renderingengine.cpp.i"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /opt/minetest/src/client/renderingengine.cpp > CMakeFiles/minetest.dir/client/renderingengine.cpp.i
+
+src/CMakeFiles/minetest.dir/client/renderingengine.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/minetest.dir/client/renderingengine.cpp.s"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /opt/minetest/src/client/renderingengine.cpp -o CMakeFiles/minetest.dir/client/renderingengine.cpp.s
+
+src/CMakeFiles/minetest.dir/client/renderingengine.cpp.o.requires:
+
+.PHONY : src/CMakeFiles/minetest.dir/client/renderingengine.cpp.o.requires
+
+src/CMakeFiles/minetest.dir/client/renderingengine.cpp.o.provides: src/CMakeFiles/minetest.dir/client/renderingengine.cpp.o.requires
+	$(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/client/renderingengine.cpp.o.provides.build
+.PHONY : src/CMakeFiles/minetest.dir/client/renderingengine.cpp.o.provides
+
+src/CMakeFiles/minetest.dir/client/renderingengine.cpp.o.provides.build: src/CMakeFiles/minetest.dir/client/renderingengine.cpp.o
+
+
+src/CMakeFiles/minetest.dir/client/shader.cpp.o: src/CMakeFiles/minetest.dir/flags.make
+src/CMakeFiles/minetest.dir/client/shader.cpp.o: src/client/shader.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_39) "Building CXX object src/CMakeFiles/minetest.dir/client/shader.cpp.o"
+	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/client/shader.cpp.o -c /opt/minetest/src/client/shader.cpp
+
+src/CMakeFiles/minetest.dir/client/shader.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/minetest.dir/client/shader.cpp.i"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /opt/minetest/src/client/shader.cpp > CMakeFiles/minetest.dir/client/shader.cpp.i
+
+src/CMakeFiles/minetest.dir/client/shader.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/minetest.dir/client/shader.cpp.s"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /opt/minetest/src/client/shader.cpp -o CMakeFiles/minetest.dir/client/shader.cpp.s
+
+src/CMakeFiles/minetest.dir/client/shader.cpp.o.requires:
+
+.PHONY : src/CMakeFiles/minetest.dir/client/shader.cpp.o.requires
+
+src/CMakeFiles/minetest.dir/client/shader.cpp.o.provides: src/CMakeFiles/minetest.dir/client/shader.cpp.o.requires
+	$(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/client/shader.cpp.o.provides.build
+.PHONY : src/CMakeFiles/minetest.dir/client/shader.cpp.o.provides
+
+src/CMakeFiles/minetest.dir/client/shader.cpp.o.provides.build: src/CMakeFiles/minetest.dir/client/shader.cpp.o
+
+
+src/CMakeFiles/minetest.dir/client/sky.cpp.o: src/CMakeFiles/minetest.dir/flags.make
+src/CMakeFiles/minetest.dir/client/sky.cpp.o: src/client/sky.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_40) "Building CXX object src/CMakeFiles/minetest.dir/client/sky.cpp.o"
+	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/client/sky.cpp.o -c /opt/minetest/src/client/sky.cpp
+
+src/CMakeFiles/minetest.dir/client/sky.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/minetest.dir/client/sky.cpp.i"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /opt/minetest/src/client/sky.cpp > CMakeFiles/minetest.dir/client/sky.cpp.i
+
+src/CMakeFiles/minetest.dir/client/sky.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/minetest.dir/client/sky.cpp.s"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /opt/minetest/src/client/sky.cpp -o CMakeFiles/minetest.dir/client/sky.cpp.s
+
+src/CMakeFiles/minetest.dir/client/sky.cpp.o.requires:
+
+.PHONY : src/CMakeFiles/minetest.dir/client/sky.cpp.o.requires
+
+src/CMakeFiles/minetest.dir/client/sky.cpp.o.provides: src/CMakeFiles/minetest.dir/client/sky.cpp.o.requires
+	$(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/client/sky.cpp.o.provides.build
+.PHONY : src/CMakeFiles/minetest.dir/client/sky.cpp.o.provides
+
+src/CMakeFiles/minetest.dir/client/sky.cpp.o.provides.build: src/CMakeFiles/minetest.dir/client/sky.cpp.o
+
+
+src/CMakeFiles/minetest.dir/client/sound.cpp.o: src/CMakeFiles/minetest.dir/flags.make
+src/CMakeFiles/minetest.dir/client/sound.cpp.o: src/client/sound.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_41) "Building CXX object src/CMakeFiles/minetest.dir/client/sound.cpp.o"
+	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/client/sound.cpp.o -c /opt/minetest/src/client/sound.cpp
+
+src/CMakeFiles/minetest.dir/client/sound.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/minetest.dir/client/sound.cpp.i"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /opt/minetest/src/client/sound.cpp > CMakeFiles/minetest.dir/client/sound.cpp.i
+
+src/CMakeFiles/minetest.dir/client/sound.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/minetest.dir/client/sound.cpp.s"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /opt/minetest/src/client/sound.cpp -o CMakeFiles/minetest.dir/client/sound.cpp.s
+
+src/CMakeFiles/minetest.dir/client/sound.cpp.o.requires:
+
+.PHONY : src/CMakeFiles/minetest.dir/client/sound.cpp.o.requires
+
+src/CMakeFiles/minetest.dir/client/sound.cpp.o.provides: src/CMakeFiles/minetest.dir/client/sound.cpp.o.requires
+	$(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/client/sound.cpp.o.provides.build
+.PHONY : src/CMakeFiles/minetest.dir/client/sound.cpp.o.provides
+
+src/CMakeFiles/minetest.dir/client/sound.cpp.o.provides.build: src/CMakeFiles/minetest.dir/client/sound.cpp.o
+
+
+src/CMakeFiles/minetest.dir/client/sound_openal.cpp.o: src/CMakeFiles/minetest.dir/flags.make
+src/CMakeFiles/minetest.dir/client/sound_openal.cpp.o: src/client/sound_openal.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_42) "Building CXX object src/CMakeFiles/minetest.dir/client/sound_openal.cpp.o"
+	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/client/sound_openal.cpp.o -c /opt/minetest/src/client/sound_openal.cpp
+
+src/CMakeFiles/minetest.dir/client/sound_openal.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/minetest.dir/client/sound_openal.cpp.i"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /opt/minetest/src/client/sound_openal.cpp > CMakeFiles/minetest.dir/client/sound_openal.cpp.i
+
+src/CMakeFiles/minetest.dir/client/sound_openal.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/minetest.dir/client/sound_openal.cpp.s"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /opt/minetest/src/client/sound_openal.cpp -o CMakeFiles/minetest.dir/client/sound_openal.cpp.s
+
+src/CMakeFiles/minetest.dir/client/sound_openal.cpp.o.requires:
+
+.PHONY : src/CMakeFiles/minetest.dir/client/sound_openal.cpp.o.requires
+
+src/CMakeFiles/minetest.dir/client/sound_openal.cpp.o.provides: src/CMakeFiles/minetest.dir/client/sound_openal.cpp.o.requires
+	$(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/client/sound_openal.cpp.o.provides.build
+.PHONY : src/CMakeFiles/minetest.dir/client/sound_openal.cpp.o.provides
+
+src/CMakeFiles/minetest.dir/client/sound_openal.cpp.o.provides.build: src/CMakeFiles/minetest.dir/client/sound_openal.cpp.o
+
+
 src/CMakeFiles/minetest.dir/client/tile.cpp.o: src/CMakeFiles/minetest.dir/flags.make
 src/CMakeFiles/minetest.dir/client/tile.cpp.o: src/client/tile.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object src/CMakeFiles/minetest.dir/client/tile.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_43) "Building CXX object src/CMakeFiles/minetest.dir/client/tile.cpp.o"
 	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/client/tile.cpp.o -c /opt/minetest/src/client/tile.cpp
 
 src/CMakeFiles/minetest.dir/client/tile.cpp.i: cmake_force
@@ -153,9 +1089,633 @@ src/CMakeFiles/minetest.dir/client/tile.cpp.o.provides: src/CMakeFiles/minetest.
 src/CMakeFiles/minetest.dir/client/tile.cpp.o.provides.build: src/CMakeFiles/minetest.dir/client/tile.cpp.o
 
 
+src/CMakeFiles/minetest.dir/client/wieldmesh.cpp.o: src/CMakeFiles/minetest.dir/flags.make
+src/CMakeFiles/minetest.dir/client/wieldmesh.cpp.o: src/client/wieldmesh.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_44) "Building CXX object src/CMakeFiles/minetest.dir/client/wieldmesh.cpp.o"
+	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/client/wieldmesh.cpp.o -c /opt/minetest/src/client/wieldmesh.cpp
+
+src/CMakeFiles/minetest.dir/client/wieldmesh.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/minetest.dir/client/wieldmesh.cpp.i"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /opt/minetest/src/client/wieldmesh.cpp > CMakeFiles/minetest.dir/client/wieldmesh.cpp.i
+
+src/CMakeFiles/minetest.dir/client/wieldmesh.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/minetest.dir/client/wieldmesh.cpp.s"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /opt/minetest/src/client/wieldmesh.cpp -o CMakeFiles/minetest.dir/client/wieldmesh.cpp.s
+
+src/CMakeFiles/minetest.dir/client/wieldmesh.cpp.o.requires:
+
+.PHONY : src/CMakeFiles/minetest.dir/client/wieldmesh.cpp.o.requires
+
+src/CMakeFiles/minetest.dir/client/wieldmesh.cpp.o.provides: src/CMakeFiles/minetest.dir/client/wieldmesh.cpp.o.requires
+	$(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/client/wieldmesh.cpp.o.provides.build
+.PHONY : src/CMakeFiles/minetest.dir/client/wieldmesh.cpp.o.provides
+
+src/CMakeFiles/minetest.dir/client/wieldmesh.cpp.o.provides.build: src/CMakeFiles/minetest.dir/client/wieldmesh.cpp.o
+
+
+src/CMakeFiles/minetest.dir/content/content.cpp.o: src/CMakeFiles/minetest.dir/flags.make
+src/CMakeFiles/minetest.dir/content/content.cpp.o: src/content/content.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_45) "Building CXX object src/CMakeFiles/minetest.dir/content/content.cpp.o"
+	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/content/content.cpp.o -c /opt/minetest/src/content/content.cpp
+
+src/CMakeFiles/minetest.dir/content/content.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/minetest.dir/content/content.cpp.i"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /opt/minetest/src/content/content.cpp > CMakeFiles/minetest.dir/content/content.cpp.i
+
+src/CMakeFiles/minetest.dir/content/content.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/minetest.dir/content/content.cpp.s"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /opt/minetest/src/content/content.cpp -o CMakeFiles/minetest.dir/content/content.cpp.s
+
+src/CMakeFiles/minetest.dir/content/content.cpp.o.requires:
+
+.PHONY : src/CMakeFiles/minetest.dir/content/content.cpp.o.requires
+
+src/CMakeFiles/minetest.dir/content/content.cpp.o.provides: src/CMakeFiles/minetest.dir/content/content.cpp.o.requires
+	$(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/content/content.cpp.o.provides.build
+.PHONY : src/CMakeFiles/minetest.dir/content/content.cpp.o.provides
+
+src/CMakeFiles/minetest.dir/content/content.cpp.o.provides.build: src/CMakeFiles/minetest.dir/content/content.cpp.o
+
+
+src/CMakeFiles/minetest.dir/content/mods.cpp.o: src/CMakeFiles/minetest.dir/flags.make
+src/CMakeFiles/minetest.dir/content/mods.cpp.o: src/content/mods.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_46) "Building CXX object src/CMakeFiles/minetest.dir/content/mods.cpp.o"
+	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/content/mods.cpp.o -c /opt/minetest/src/content/mods.cpp
+
+src/CMakeFiles/minetest.dir/content/mods.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/minetest.dir/content/mods.cpp.i"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /opt/minetest/src/content/mods.cpp > CMakeFiles/minetest.dir/content/mods.cpp.i
+
+src/CMakeFiles/minetest.dir/content/mods.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/minetest.dir/content/mods.cpp.s"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /opt/minetest/src/content/mods.cpp -o CMakeFiles/minetest.dir/content/mods.cpp.s
+
+src/CMakeFiles/minetest.dir/content/mods.cpp.o.requires:
+
+.PHONY : src/CMakeFiles/minetest.dir/content/mods.cpp.o.requires
+
+src/CMakeFiles/minetest.dir/content/mods.cpp.o.provides: src/CMakeFiles/minetest.dir/content/mods.cpp.o.requires
+	$(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/content/mods.cpp.o.provides.build
+.PHONY : src/CMakeFiles/minetest.dir/content/mods.cpp.o.provides
+
+src/CMakeFiles/minetest.dir/content/mods.cpp.o.provides.build: src/CMakeFiles/minetest.dir/content/mods.cpp.o
+
+
+src/CMakeFiles/minetest.dir/content/packages.cpp.o: src/CMakeFiles/minetest.dir/flags.make
+src/CMakeFiles/minetest.dir/content/packages.cpp.o: src/content/packages.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_47) "Building CXX object src/CMakeFiles/minetest.dir/content/packages.cpp.o"
+	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/content/packages.cpp.o -c /opt/minetest/src/content/packages.cpp
+
+src/CMakeFiles/minetest.dir/content/packages.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/minetest.dir/content/packages.cpp.i"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /opt/minetest/src/content/packages.cpp > CMakeFiles/minetest.dir/content/packages.cpp.i
+
+src/CMakeFiles/minetest.dir/content/packages.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/minetest.dir/content/packages.cpp.s"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /opt/minetest/src/content/packages.cpp -o CMakeFiles/minetest.dir/content/packages.cpp.s
+
+src/CMakeFiles/minetest.dir/content/packages.cpp.o.requires:
+
+.PHONY : src/CMakeFiles/minetest.dir/content/packages.cpp.o.requires
+
+src/CMakeFiles/minetest.dir/content/packages.cpp.o.provides: src/CMakeFiles/minetest.dir/content/packages.cpp.o.requires
+	$(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/content/packages.cpp.o.provides.build
+.PHONY : src/CMakeFiles/minetest.dir/content/packages.cpp.o.provides
+
+src/CMakeFiles/minetest.dir/content/packages.cpp.o.provides.build: src/CMakeFiles/minetest.dir/content/packages.cpp.o
+
+
+src/CMakeFiles/minetest.dir/content/subgames.cpp.o: src/CMakeFiles/minetest.dir/flags.make
+src/CMakeFiles/minetest.dir/content/subgames.cpp.o: src/content/subgames.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_48) "Building CXX object src/CMakeFiles/minetest.dir/content/subgames.cpp.o"
+	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/content/subgames.cpp.o -c /opt/minetest/src/content/subgames.cpp
+
+src/CMakeFiles/minetest.dir/content/subgames.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/minetest.dir/content/subgames.cpp.i"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /opt/minetest/src/content/subgames.cpp > CMakeFiles/minetest.dir/content/subgames.cpp.i
+
+src/CMakeFiles/minetest.dir/content/subgames.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/minetest.dir/content/subgames.cpp.s"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /opt/minetest/src/content/subgames.cpp -o CMakeFiles/minetest.dir/content/subgames.cpp.s
+
+src/CMakeFiles/minetest.dir/content/subgames.cpp.o.requires:
+
+.PHONY : src/CMakeFiles/minetest.dir/content/subgames.cpp.o.requires
+
+src/CMakeFiles/minetest.dir/content/subgames.cpp.o.provides: src/CMakeFiles/minetest.dir/content/subgames.cpp.o.requires
+	$(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/content/subgames.cpp.o.provides.build
+.PHONY : src/CMakeFiles/minetest.dir/content/subgames.cpp.o.provides
+
+src/CMakeFiles/minetest.dir/content/subgames.cpp.o.provides.build: src/CMakeFiles/minetest.dir/content/subgames.cpp.o
+
+
+src/CMakeFiles/minetest.dir/database/database-dummy.cpp.o: src/CMakeFiles/minetest.dir/flags.make
+src/CMakeFiles/minetest.dir/database/database-dummy.cpp.o: src/database/database-dummy.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_49) "Building CXX object src/CMakeFiles/minetest.dir/database/database-dummy.cpp.o"
+	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/database/database-dummy.cpp.o -c /opt/minetest/src/database/database-dummy.cpp
+
+src/CMakeFiles/minetest.dir/database/database-dummy.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/minetest.dir/database/database-dummy.cpp.i"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /opt/minetest/src/database/database-dummy.cpp > CMakeFiles/minetest.dir/database/database-dummy.cpp.i
+
+src/CMakeFiles/minetest.dir/database/database-dummy.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/minetest.dir/database/database-dummy.cpp.s"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /opt/minetest/src/database/database-dummy.cpp -o CMakeFiles/minetest.dir/database/database-dummy.cpp.s
+
+src/CMakeFiles/minetest.dir/database/database-dummy.cpp.o.requires:
+
+.PHONY : src/CMakeFiles/minetest.dir/database/database-dummy.cpp.o.requires
+
+src/CMakeFiles/minetest.dir/database/database-dummy.cpp.o.provides: src/CMakeFiles/minetest.dir/database/database-dummy.cpp.o.requires
+	$(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/database/database-dummy.cpp.o.provides.build
+.PHONY : src/CMakeFiles/minetest.dir/database/database-dummy.cpp.o.provides
+
+src/CMakeFiles/minetest.dir/database/database-dummy.cpp.o.provides.build: src/CMakeFiles/minetest.dir/database/database-dummy.cpp.o
+
+
+src/CMakeFiles/minetest.dir/database/database-files.cpp.o: src/CMakeFiles/minetest.dir/flags.make
+src/CMakeFiles/minetest.dir/database/database-files.cpp.o: src/database/database-files.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_50) "Building CXX object src/CMakeFiles/minetest.dir/database/database-files.cpp.o"
+	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/database/database-files.cpp.o -c /opt/minetest/src/database/database-files.cpp
+
+src/CMakeFiles/minetest.dir/database/database-files.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/minetest.dir/database/database-files.cpp.i"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /opt/minetest/src/database/database-files.cpp > CMakeFiles/minetest.dir/database/database-files.cpp.i
+
+src/CMakeFiles/minetest.dir/database/database-files.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/minetest.dir/database/database-files.cpp.s"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /opt/minetest/src/database/database-files.cpp -o CMakeFiles/minetest.dir/database/database-files.cpp.s
+
+src/CMakeFiles/minetest.dir/database/database-files.cpp.o.requires:
+
+.PHONY : src/CMakeFiles/minetest.dir/database/database-files.cpp.o.requires
+
+src/CMakeFiles/minetest.dir/database/database-files.cpp.o.provides: src/CMakeFiles/minetest.dir/database/database-files.cpp.o.requires
+	$(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/database/database-files.cpp.o.provides.build
+.PHONY : src/CMakeFiles/minetest.dir/database/database-files.cpp.o.provides
+
+src/CMakeFiles/minetest.dir/database/database-files.cpp.o.provides.build: src/CMakeFiles/minetest.dir/database/database-files.cpp.o
+
+
+src/CMakeFiles/minetest.dir/database/database-leveldb.cpp.o: src/CMakeFiles/minetest.dir/flags.make
+src/CMakeFiles/minetest.dir/database/database-leveldb.cpp.o: src/database/database-leveldb.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_51) "Building CXX object src/CMakeFiles/minetest.dir/database/database-leveldb.cpp.o"
+	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/database/database-leveldb.cpp.o -c /opt/minetest/src/database/database-leveldb.cpp
+
+src/CMakeFiles/minetest.dir/database/database-leveldb.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/minetest.dir/database/database-leveldb.cpp.i"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /opt/minetest/src/database/database-leveldb.cpp > CMakeFiles/minetest.dir/database/database-leveldb.cpp.i
+
+src/CMakeFiles/minetest.dir/database/database-leveldb.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/minetest.dir/database/database-leveldb.cpp.s"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /opt/minetest/src/database/database-leveldb.cpp -o CMakeFiles/minetest.dir/database/database-leveldb.cpp.s
+
+src/CMakeFiles/minetest.dir/database/database-leveldb.cpp.o.requires:
+
+.PHONY : src/CMakeFiles/minetest.dir/database/database-leveldb.cpp.o.requires
+
+src/CMakeFiles/minetest.dir/database/database-leveldb.cpp.o.provides: src/CMakeFiles/minetest.dir/database/database-leveldb.cpp.o.requires
+	$(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/database/database-leveldb.cpp.o.provides.build
+.PHONY : src/CMakeFiles/minetest.dir/database/database-leveldb.cpp.o.provides
+
+src/CMakeFiles/minetest.dir/database/database-leveldb.cpp.o.provides.build: src/CMakeFiles/minetest.dir/database/database-leveldb.cpp.o
+
+
+src/CMakeFiles/minetest.dir/database/database-postgresql.cpp.o: src/CMakeFiles/minetest.dir/flags.make
+src/CMakeFiles/minetest.dir/database/database-postgresql.cpp.o: src/database/database-postgresql.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_52) "Building CXX object src/CMakeFiles/minetest.dir/database/database-postgresql.cpp.o"
+	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/database/database-postgresql.cpp.o -c /opt/minetest/src/database/database-postgresql.cpp
+
+src/CMakeFiles/minetest.dir/database/database-postgresql.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/minetest.dir/database/database-postgresql.cpp.i"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /opt/minetest/src/database/database-postgresql.cpp > CMakeFiles/minetest.dir/database/database-postgresql.cpp.i
+
+src/CMakeFiles/minetest.dir/database/database-postgresql.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/minetest.dir/database/database-postgresql.cpp.s"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /opt/minetest/src/database/database-postgresql.cpp -o CMakeFiles/minetest.dir/database/database-postgresql.cpp.s
+
+src/CMakeFiles/minetest.dir/database/database-postgresql.cpp.o.requires:
+
+.PHONY : src/CMakeFiles/minetest.dir/database/database-postgresql.cpp.o.requires
+
+src/CMakeFiles/minetest.dir/database/database-postgresql.cpp.o.provides: src/CMakeFiles/minetest.dir/database/database-postgresql.cpp.o.requires
+	$(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/database/database-postgresql.cpp.o.provides.build
+.PHONY : src/CMakeFiles/minetest.dir/database/database-postgresql.cpp.o.provides
+
+src/CMakeFiles/minetest.dir/database/database-postgresql.cpp.o.provides.build: src/CMakeFiles/minetest.dir/database/database-postgresql.cpp.o
+
+
+src/CMakeFiles/minetest.dir/database/database-redis.cpp.o: src/CMakeFiles/minetest.dir/flags.make
+src/CMakeFiles/minetest.dir/database/database-redis.cpp.o: src/database/database-redis.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_53) "Building CXX object src/CMakeFiles/minetest.dir/database/database-redis.cpp.o"
+	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/database/database-redis.cpp.o -c /opt/minetest/src/database/database-redis.cpp
+
+src/CMakeFiles/minetest.dir/database/database-redis.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/minetest.dir/database/database-redis.cpp.i"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /opt/minetest/src/database/database-redis.cpp > CMakeFiles/minetest.dir/database/database-redis.cpp.i
+
+src/CMakeFiles/minetest.dir/database/database-redis.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/minetest.dir/database/database-redis.cpp.s"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /opt/minetest/src/database/database-redis.cpp -o CMakeFiles/minetest.dir/database/database-redis.cpp.s
+
+src/CMakeFiles/minetest.dir/database/database-redis.cpp.o.requires:
+
+.PHONY : src/CMakeFiles/minetest.dir/database/database-redis.cpp.o.requires
+
+src/CMakeFiles/minetest.dir/database/database-redis.cpp.o.provides: src/CMakeFiles/minetest.dir/database/database-redis.cpp.o.requires
+	$(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/database/database-redis.cpp.o.provides.build
+.PHONY : src/CMakeFiles/minetest.dir/database/database-redis.cpp.o.provides
+
+src/CMakeFiles/minetest.dir/database/database-redis.cpp.o.provides.build: src/CMakeFiles/minetest.dir/database/database-redis.cpp.o
+
+
+src/CMakeFiles/minetest.dir/database/database-sqlite3.cpp.o: src/CMakeFiles/minetest.dir/flags.make
+src/CMakeFiles/minetest.dir/database/database-sqlite3.cpp.o: src/database/database-sqlite3.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_54) "Building CXX object src/CMakeFiles/minetest.dir/database/database-sqlite3.cpp.o"
+	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/database/database-sqlite3.cpp.o -c /opt/minetest/src/database/database-sqlite3.cpp
+
+src/CMakeFiles/minetest.dir/database/database-sqlite3.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/minetest.dir/database/database-sqlite3.cpp.i"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /opt/minetest/src/database/database-sqlite3.cpp > CMakeFiles/minetest.dir/database/database-sqlite3.cpp.i
+
+src/CMakeFiles/minetest.dir/database/database-sqlite3.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/minetest.dir/database/database-sqlite3.cpp.s"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /opt/minetest/src/database/database-sqlite3.cpp -o CMakeFiles/minetest.dir/database/database-sqlite3.cpp.s
+
+src/CMakeFiles/minetest.dir/database/database-sqlite3.cpp.o.requires:
+
+.PHONY : src/CMakeFiles/minetest.dir/database/database-sqlite3.cpp.o.requires
+
+src/CMakeFiles/minetest.dir/database/database-sqlite3.cpp.o.provides: src/CMakeFiles/minetest.dir/database/database-sqlite3.cpp.o.requires
+	$(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/database/database-sqlite3.cpp.o.provides.build
+.PHONY : src/CMakeFiles/minetest.dir/database/database-sqlite3.cpp.o.provides
+
+src/CMakeFiles/minetest.dir/database/database-sqlite3.cpp.o.provides.build: src/CMakeFiles/minetest.dir/database/database-sqlite3.cpp.o
+
+
+src/CMakeFiles/minetest.dir/database/database.cpp.o: src/CMakeFiles/minetest.dir/flags.make
+src/CMakeFiles/minetest.dir/database/database.cpp.o: src/database/database.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_55) "Building CXX object src/CMakeFiles/minetest.dir/database/database.cpp.o"
+	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/database/database.cpp.o -c /opt/minetest/src/database/database.cpp
+
+src/CMakeFiles/minetest.dir/database/database.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/minetest.dir/database/database.cpp.i"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /opt/minetest/src/database/database.cpp > CMakeFiles/minetest.dir/database/database.cpp.i
+
+src/CMakeFiles/minetest.dir/database/database.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/minetest.dir/database/database.cpp.s"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /opt/minetest/src/database/database.cpp -o CMakeFiles/minetest.dir/database/database.cpp.s
+
+src/CMakeFiles/minetest.dir/database/database.cpp.o.requires:
+
+.PHONY : src/CMakeFiles/minetest.dir/database/database.cpp.o.requires
+
+src/CMakeFiles/minetest.dir/database/database.cpp.o.provides: src/CMakeFiles/minetest.dir/database/database.cpp.o.requires
+	$(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/database/database.cpp.o.provides.build
+.PHONY : src/CMakeFiles/minetest.dir/database/database.cpp.o.provides
+
+src/CMakeFiles/minetest.dir/database/database.cpp.o.provides.build: src/CMakeFiles/minetest.dir/database/database.cpp.o
+
+
+src/CMakeFiles/minetest.dir/gui/guiChatConsole.cpp.o: src/CMakeFiles/minetest.dir/flags.make
+src/CMakeFiles/minetest.dir/gui/guiChatConsole.cpp.o: src/gui/guiChatConsole.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_56) "Building CXX object src/CMakeFiles/minetest.dir/gui/guiChatConsole.cpp.o"
+	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/gui/guiChatConsole.cpp.o -c /opt/minetest/src/gui/guiChatConsole.cpp
+
+src/CMakeFiles/minetest.dir/gui/guiChatConsole.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/minetest.dir/gui/guiChatConsole.cpp.i"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /opt/minetest/src/gui/guiChatConsole.cpp > CMakeFiles/minetest.dir/gui/guiChatConsole.cpp.i
+
+src/CMakeFiles/minetest.dir/gui/guiChatConsole.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/minetest.dir/gui/guiChatConsole.cpp.s"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /opt/minetest/src/gui/guiChatConsole.cpp -o CMakeFiles/minetest.dir/gui/guiChatConsole.cpp.s
+
+src/CMakeFiles/minetest.dir/gui/guiChatConsole.cpp.o.requires:
+
+.PHONY : src/CMakeFiles/minetest.dir/gui/guiChatConsole.cpp.o.requires
+
+src/CMakeFiles/minetest.dir/gui/guiChatConsole.cpp.o.provides: src/CMakeFiles/minetest.dir/gui/guiChatConsole.cpp.o.requires
+	$(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/gui/guiChatConsole.cpp.o.provides.build
+.PHONY : src/CMakeFiles/minetest.dir/gui/guiChatConsole.cpp.o.provides
+
+src/CMakeFiles/minetest.dir/gui/guiChatConsole.cpp.o.provides.build: src/CMakeFiles/minetest.dir/gui/guiChatConsole.cpp.o
+
+
+src/CMakeFiles/minetest.dir/gui/guiConfirmRegistration.cpp.o: src/CMakeFiles/minetest.dir/flags.make
+src/CMakeFiles/minetest.dir/gui/guiConfirmRegistration.cpp.o: src/gui/guiConfirmRegistration.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_57) "Building CXX object src/CMakeFiles/minetest.dir/gui/guiConfirmRegistration.cpp.o"
+	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/gui/guiConfirmRegistration.cpp.o -c /opt/minetest/src/gui/guiConfirmRegistration.cpp
+
+src/CMakeFiles/minetest.dir/gui/guiConfirmRegistration.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/minetest.dir/gui/guiConfirmRegistration.cpp.i"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /opt/minetest/src/gui/guiConfirmRegistration.cpp > CMakeFiles/minetest.dir/gui/guiConfirmRegistration.cpp.i
+
+src/CMakeFiles/minetest.dir/gui/guiConfirmRegistration.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/minetest.dir/gui/guiConfirmRegistration.cpp.s"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /opt/minetest/src/gui/guiConfirmRegistration.cpp -o CMakeFiles/minetest.dir/gui/guiConfirmRegistration.cpp.s
+
+src/CMakeFiles/minetest.dir/gui/guiConfirmRegistration.cpp.o.requires:
+
+.PHONY : src/CMakeFiles/minetest.dir/gui/guiConfirmRegistration.cpp.o.requires
+
+src/CMakeFiles/minetest.dir/gui/guiConfirmRegistration.cpp.o.provides: src/CMakeFiles/minetest.dir/gui/guiConfirmRegistration.cpp.o.requires
+	$(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/gui/guiConfirmRegistration.cpp.o.provides.build
+.PHONY : src/CMakeFiles/minetest.dir/gui/guiConfirmRegistration.cpp.o.provides
+
+src/CMakeFiles/minetest.dir/gui/guiConfirmRegistration.cpp.o.provides.build: src/CMakeFiles/minetest.dir/gui/guiConfirmRegistration.cpp.o
+
+
+src/CMakeFiles/minetest.dir/gui/guiEditBoxWithScrollbar.cpp.o: src/CMakeFiles/minetest.dir/flags.make
+src/CMakeFiles/minetest.dir/gui/guiEditBoxWithScrollbar.cpp.o: src/gui/guiEditBoxWithScrollbar.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_58) "Building CXX object src/CMakeFiles/minetest.dir/gui/guiEditBoxWithScrollbar.cpp.o"
+	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/gui/guiEditBoxWithScrollbar.cpp.o -c /opt/minetest/src/gui/guiEditBoxWithScrollbar.cpp
+
+src/CMakeFiles/minetest.dir/gui/guiEditBoxWithScrollbar.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/minetest.dir/gui/guiEditBoxWithScrollbar.cpp.i"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /opt/minetest/src/gui/guiEditBoxWithScrollbar.cpp > CMakeFiles/minetest.dir/gui/guiEditBoxWithScrollbar.cpp.i
+
+src/CMakeFiles/minetest.dir/gui/guiEditBoxWithScrollbar.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/minetest.dir/gui/guiEditBoxWithScrollbar.cpp.s"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /opt/minetest/src/gui/guiEditBoxWithScrollbar.cpp -o CMakeFiles/minetest.dir/gui/guiEditBoxWithScrollbar.cpp.s
+
+src/CMakeFiles/minetest.dir/gui/guiEditBoxWithScrollbar.cpp.o.requires:
+
+.PHONY : src/CMakeFiles/minetest.dir/gui/guiEditBoxWithScrollbar.cpp.o.requires
+
+src/CMakeFiles/minetest.dir/gui/guiEditBoxWithScrollbar.cpp.o.provides: src/CMakeFiles/minetest.dir/gui/guiEditBoxWithScrollbar.cpp.o.requires
+	$(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/gui/guiEditBoxWithScrollbar.cpp.o.provides.build
+.PHONY : src/CMakeFiles/minetest.dir/gui/guiEditBoxWithScrollbar.cpp.o.provides
+
+src/CMakeFiles/minetest.dir/gui/guiEditBoxWithScrollbar.cpp.o.provides.build: src/CMakeFiles/minetest.dir/gui/guiEditBoxWithScrollbar.cpp.o
+
+
+src/CMakeFiles/minetest.dir/gui/guiEngine.cpp.o: src/CMakeFiles/minetest.dir/flags.make
+src/CMakeFiles/minetest.dir/gui/guiEngine.cpp.o: src/gui/guiEngine.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_59) "Building CXX object src/CMakeFiles/minetest.dir/gui/guiEngine.cpp.o"
+	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/gui/guiEngine.cpp.o -c /opt/minetest/src/gui/guiEngine.cpp
+
+src/CMakeFiles/minetest.dir/gui/guiEngine.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/minetest.dir/gui/guiEngine.cpp.i"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /opt/minetest/src/gui/guiEngine.cpp > CMakeFiles/minetest.dir/gui/guiEngine.cpp.i
+
+src/CMakeFiles/minetest.dir/gui/guiEngine.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/minetest.dir/gui/guiEngine.cpp.s"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /opt/minetest/src/gui/guiEngine.cpp -o CMakeFiles/minetest.dir/gui/guiEngine.cpp.s
+
+src/CMakeFiles/minetest.dir/gui/guiEngine.cpp.o.requires:
+
+.PHONY : src/CMakeFiles/minetest.dir/gui/guiEngine.cpp.o.requires
+
+src/CMakeFiles/minetest.dir/gui/guiEngine.cpp.o.provides: src/CMakeFiles/minetest.dir/gui/guiEngine.cpp.o.requires
+	$(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/gui/guiEngine.cpp.o.provides.build
+.PHONY : src/CMakeFiles/minetest.dir/gui/guiEngine.cpp.o.provides
+
+src/CMakeFiles/minetest.dir/gui/guiEngine.cpp.o.provides.build: src/CMakeFiles/minetest.dir/gui/guiEngine.cpp.o
+
+
+src/CMakeFiles/minetest.dir/gui/guiFormSpecMenu.cpp.o: src/CMakeFiles/minetest.dir/flags.make
+src/CMakeFiles/minetest.dir/gui/guiFormSpecMenu.cpp.o: src/gui/guiFormSpecMenu.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_60) "Building CXX object src/CMakeFiles/minetest.dir/gui/guiFormSpecMenu.cpp.o"
+	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/gui/guiFormSpecMenu.cpp.o -c /opt/minetest/src/gui/guiFormSpecMenu.cpp
+
+src/CMakeFiles/minetest.dir/gui/guiFormSpecMenu.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/minetest.dir/gui/guiFormSpecMenu.cpp.i"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /opt/minetest/src/gui/guiFormSpecMenu.cpp > CMakeFiles/minetest.dir/gui/guiFormSpecMenu.cpp.i
+
+src/CMakeFiles/minetest.dir/gui/guiFormSpecMenu.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/minetest.dir/gui/guiFormSpecMenu.cpp.s"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /opt/minetest/src/gui/guiFormSpecMenu.cpp -o CMakeFiles/minetest.dir/gui/guiFormSpecMenu.cpp.s
+
+src/CMakeFiles/minetest.dir/gui/guiFormSpecMenu.cpp.o.requires:
+
+.PHONY : src/CMakeFiles/minetest.dir/gui/guiFormSpecMenu.cpp.o.requires
+
+src/CMakeFiles/minetest.dir/gui/guiFormSpecMenu.cpp.o.provides: src/CMakeFiles/minetest.dir/gui/guiFormSpecMenu.cpp.o.requires
+	$(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/gui/guiFormSpecMenu.cpp.o.provides.build
+.PHONY : src/CMakeFiles/minetest.dir/gui/guiFormSpecMenu.cpp.o.provides
+
+src/CMakeFiles/minetest.dir/gui/guiFormSpecMenu.cpp.o.provides.build: src/CMakeFiles/minetest.dir/gui/guiFormSpecMenu.cpp.o
+
+
+src/CMakeFiles/minetest.dir/gui/guiKeyChangeMenu.cpp.o: src/CMakeFiles/minetest.dir/flags.make
+src/CMakeFiles/minetest.dir/gui/guiKeyChangeMenu.cpp.o: src/gui/guiKeyChangeMenu.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_61) "Building CXX object src/CMakeFiles/minetest.dir/gui/guiKeyChangeMenu.cpp.o"
+	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/gui/guiKeyChangeMenu.cpp.o -c /opt/minetest/src/gui/guiKeyChangeMenu.cpp
+
+src/CMakeFiles/minetest.dir/gui/guiKeyChangeMenu.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/minetest.dir/gui/guiKeyChangeMenu.cpp.i"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /opt/minetest/src/gui/guiKeyChangeMenu.cpp > CMakeFiles/minetest.dir/gui/guiKeyChangeMenu.cpp.i
+
+src/CMakeFiles/minetest.dir/gui/guiKeyChangeMenu.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/minetest.dir/gui/guiKeyChangeMenu.cpp.s"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /opt/minetest/src/gui/guiKeyChangeMenu.cpp -o CMakeFiles/minetest.dir/gui/guiKeyChangeMenu.cpp.s
+
+src/CMakeFiles/minetest.dir/gui/guiKeyChangeMenu.cpp.o.requires:
+
+.PHONY : src/CMakeFiles/minetest.dir/gui/guiKeyChangeMenu.cpp.o.requires
+
+src/CMakeFiles/minetest.dir/gui/guiKeyChangeMenu.cpp.o.provides: src/CMakeFiles/minetest.dir/gui/guiKeyChangeMenu.cpp.o.requires
+	$(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/gui/guiKeyChangeMenu.cpp.o.provides.build
+.PHONY : src/CMakeFiles/minetest.dir/gui/guiKeyChangeMenu.cpp.o.provides
+
+src/CMakeFiles/minetest.dir/gui/guiKeyChangeMenu.cpp.o.provides.build: src/CMakeFiles/minetest.dir/gui/guiKeyChangeMenu.cpp.o
+
+
+src/CMakeFiles/minetest.dir/gui/guiPasswordChange.cpp.o: src/CMakeFiles/minetest.dir/flags.make
+src/CMakeFiles/minetest.dir/gui/guiPasswordChange.cpp.o: src/gui/guiPasswordChange.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_62) "Building CXX object src/CMakeFiles/minetest.dir/gui/guiPasswordChange.cpp.o"
+	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/gui/guiPasswordChange.cpp.o -c /opt/minetest/src/gui/guiPasswordChange.cpp
+
+src/CMakeFiles/minetest.dir/gui/guiPasswordChange.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/minetest.dir/gui/guiPasswordChange.cpp.i"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /opt/minetest/src/gui/guiPasswordChange.cpp > CMakeFiles/minetest.dir/gui/guiPasswordChange.cpp.i
+
+src/CMakeFiles/minetest.dir/gui/guiPasswordChange.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/minetest.dir/gui/guiPasswordChange.cpp.s"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /opt/minetest/src/gui/guiPasswordChange.cpp -o CMakeFiles/minetest.dir/gui/guiPasswordChange.cpp.s
+
+src/CMakeFiles/minetest.dir/gui/guiPasswordChange.cpp.o.requires:
+
+.PHONY : src/CMakeFiles/minetest.dir/gui/guiPasswordChange.cpp.o.requires
+
+src/CMakeFiles/minetest.dir/gui/guiPasswordChange.cpp.o.provides: src/CMakeFiles/minetest.dir/gui/guiPasswordChange.cpp.o.requires
+	$(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/gui/guiPasswordChange.cpp.o.provides.build
+.PHONY : src/CMakeFiles/minetest.dir/gui/guiPasswordChange.cpp.o.provides
+
+src/CMakeFiles/minetest.dir/gui/guiPasswordChange.cpp.o.provides.build: src/CMakeFiles/minetest.dir/gui/guiPasswordChange.cpp.o
+
+
+src/CMakeFiles/minetest.dir/gui/guiPathSelectMenu.cpp.o: src/CMakeFiles/minetest.dir/flags.make
+src/CMakeFiles/minetest.dir/gui/guiPathSelectMenu.cpp.o: src/gui/guiPathSelectMenu.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_63) "Building CXX object src/CMakeFiles/minetest.dir/gui/guiPathSelectMenu.cpp.o"
+	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/gui/guiPathSelectMenu.cpp.o -c /opt/minetest/src/gui/guiPathSelectMenu.cpp
+
+src/CMakeFiles/minetest.dir/gui/guiPathSelectMenu.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/minetest.dir/gui/guiPathSelectMenu.cpp.i"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /opt/minetest/src/gui/guiPathSelectMenu.cpp > CMakeFiles/minetest.dir/gui/guiPathSelectMenu.cpp.i
+
+src/CMakeFiles/minetest.dir/gui/guiPathSelectMenu.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/minetest.dir/gui/guiPathSelectMenu.cpp.s"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /opt/minetest/src/gui/guiPathSelectMenu.cpp -o CMakeFiles/minetest.dir/gui/guiPathSelectMenu.cpp.s
+
+src/CMakeFiles/minetest.dir/gui/guiPathSelectMenu.cpp.o.requires:
+
+.PHONY : src/CMakeFiles/minetest.dir/gui/guiPathSelectMenu.cpp.o.requires
+
+src/CMakeFiles/minetest.dir/gui/guiPathSelectMenu.cpp.o.provides: src/CMakeFiles/minetest.dir/gui/guiPathSelectMenu.cpp.o.requires
+	$(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/gui/guiPathSelectMenu.cpp.o.provides.build
+.PHONY : src/CMakeFiles/minetest.dir/gui/guiPathSelectMenu.cpp.o.provides
+
+src/CMakeFiles/minetest.dir/gui/guiPathSelectMenu.cpp.o.provides.build: src/CMakeFiles/minetest.dir/gui/guiPathSelectMenu.cpp.o
+
+
+src/CMakeFiles/minetest.dir/gui/guiTable.cpp.o: src/CMakeFiles/minetest.dir/flags.make
+src/CMakeFiles/minetest.dir/gui/guiTable.cpp.o: src/gui/guiTable.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_64) "Building CXX object src/CMakeFiles/minetest.dir/gui/guiTable.cpp.o"
+	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/gui/guiTable.cpp.o -c /opt/minetest/src/gui/guiTable.cpp
+
+src/CMakeFiles/minetest.dir/gui/guiTable.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/minetest.dir/gui/guiTable.cpp.i"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /opt/minetest/src/gui/guiTable.cpp > CMakeFiles/minetest.dir/gui/guiTable.cpp.i
+
+src/CMakeFiles/minetest.dir/gui/guiTable.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/minetest.dir/gui/guiTable.cpp.s"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /opt/minetest/src/gui/guiTable.cpp -o CMakeFiles/minetest.dir/gui/guiTable.cpp.s
+
+src/CMakeFiles/minetest.dir/gui/guiTable.cpp.o.requires:
+
+.PHONY : src/CMakeFiles/minetest.dir/gui/guiTable.cpp.o.requires
+
+src/CMakeFiles/minetest.dir/gui/guiTable.cpp.o.provides: src/CMakeFiles/minetest.dir/gui/guiTable.cpp.o.requires
+	$(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/gui/guiTable.cpp.o.provides.build
+.PHONY : src/CMakeFiles/minetest.dir/gui/guiTable.cpp.o.provides
+
+src/CMakeFiles/minetest.dir/gui/guiTable.cpp.o.provides.build: src/CMakeFiles/minetest.dir/gui/guiTable.cpp.o
+
+
+src/CMakeFiles/minetest.dir/gui/guiVolumeChange.cpp.o: src/CMakeFiles/minetest.dir/flags.make
+src/CMakeFiles/minetest.dir/gui/guiVolumeChange.cpp.o: src/gui/guiVolumeChange.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_65) "Building CXX object src/CMakeFiles/minetest.dir/gui/guiVolumeChange.cpp.o"
+	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/gui/guiVolumeChange.cpp.o -c /opt/minetest/src/gui/guiVolumeChange.cpp
+
+src/CMakeFiles/minetest.dir/gui/guiVolumeChange.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/minetest.dir/gui/guiVolumeChange.cpp.i"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /opt/minetest/src/gui/guiVolumeChange.cpp > CMakeFiles/minetest.dir/gui/guiVolumeChange.cpp.i
+
+src/CMakeFiles/minetest.dir/gui/guiVolumeChange.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/minetest.dir/gui/guiVolumeChange.cpp.s"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /opt/minetest/src/gui/guiVolumeChange.cpp -o CMakeFiles/minetest.dir/gui/guiVolumeChange.cpp.s
+
+src/CMakeFiles/minetest.dir/gui/guiVolumeChange.cpp.o.requires:
+
+.PHONY : src/CMakeFiles/minetest.dir/gui/guiVolumeChange.cpp.o.requires
+
+src/CMakeFiles/minetest.dir/gui/guiVolumeChange.cpp.o.provides: src/CMakeFiles/minetest.dir/gui/guiVolumeChange.cpp.o.requires
+	$(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/gui/guiVolumeChange.cpp.o.provides.build
+.PHONY : src/CMakeFiles/minetest.dir/gui/guiVolumeChange.cpp.o.provides
+
+src/CMakeFiles/minetest.dir/gui/guiVolumeChange.cpp.o.provides.build: src/CMakeFiles/minetest.dir/gui/guiVolumeChange.cpp.o
+
+
+src/CMakeFiles/minetest.dir/gui/intlGUIEditBox.cpp.o: src/CMakeFiles/minetest.dir/flags.make
+src/CMakeFiles/minetest.dir/gui/intlGUIEditBox.cpp.o: src/gui/intlGUIEditBox.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_66) "Building CXX object src/CMakeFiles/minetest.dir/gui/intlGUIEditBox.cpp.o"
+	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/gui/intlGUIEditBox.cpp.o -c /opt/minetest/src/gui/intlGUIEditBox.cpp
+
+src/CMakeFiles/minetest.dir/gui/intlGUIEditBox.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/minetest.dir/gui/intlGUIEditBox.cpp.i"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /opt/minetest/src/gui/intlGUIEditBox.cpp > CMakeFiles/minetest.dir/gui/intlGUIEditBox.cpp.i
+
+src/CMakeFiles/minetest.dir/gui/intlGUIEditBox.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/minetest.dir/gui/intlGUIEditBox.cpp.s"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /opt/minetest/src/gui/intlGUIEditBox.cpp -o CMakeFiles/minetest.dir/gui/intlGUIEditBox.cpp.s
+
+src/CMakeFiles/minetest.dir/gui/intlGUIEditBox.cpp.o.requires:
+
+.PHONY : src/CMakeFiles/minetest.dir/gui/intlGUIEditBox.cpp.o.requires
+
+src/CMakeFiles/minetest.dir/gui/intlGUIEditBox.cpp.o.provides: src/CMakeFiles/minetest.dir/gui/intlGUIEditBox.cpp.o.requires
+	$(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/gui/intlGUIEditBox.cpp.o.provides.build
+.PHONY : src/CMakeFiles/minetest.dir/gui/intlGUIEditBox.cpp.o.provides
+
+src/CMakeFiles/minetest.dir/gui/intlGUIEditBox.cpp.o.provides.build: src/CMakeFiles/minetest.dir/gui/intlGUIEditBox.cpp.o
+
+
+src/CMakeFiles/minetest.dir/gui/modalMenu.cpp.o: src/CMakeFiles/minetest.dir/flags.make
+src/CMakeFiles/minetest.dir/gui/modalMenu.cpp.o: src/gui/modalMenu.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_67) "Building CXX object src/CMakeFiles/minetest.dir/gui/modalMenu.cpp.o"
+	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/gui/modalMenu.cpp.o -c /opt/minetest/src/gui/modalMenu.cpp
+
+src/CMakeFiles/minetest.dir/gui/modalMenu.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/minetest.dir/gui/modalMenu.cpp.i"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /opt/minetest/src/gui/modalMenu.cpp > CMakeFiles/minetest.dir/gui/modalMenu.cpp.i
+
+src/CMakeFiles/minetest.dir/gui/modalMenu.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/minetest.dir/gui/modalMenu.cpp.s"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /opt/minetest/src/gui/modalMenu.cpp -o CMakeFiles/minetest.dir/gui/modalMenu.cpp.s
+
+src/CMakeFiles/minetest.dir/gui/modalMenu.cpp.o.requires:
+
+.PHONY : src/CMakeFiles/minetest.dir/gui/modalMenu.cpp.o.requires
+
+src/CMakeFiles/minetest.dir/gui/modalMenu.cpp.o.provides: src/CMakeFiles/minetest.dir/gui/modalMenu.cpp.o.requires
+	$(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/gui/modalMenu.cpp.o.provides.build
+.PHONY : src/CMakeFiles/minetest.dir/gui/modalMenu.cpp.o.provides
+
+src/CMakeFiles/minetest.dir/gui/modalMenu.cpp.o.provides.build: src/CMakeFiles/minetest.dir/gui/modalMenu.cpp.o
+
+
+src/CMakeFiles/minetest.dir/gui/profilergraph.cpp.o: src/CMakeFiles/minetest.dir/flags.make
+src/CMakeFiles/minetest.dir/gui/profilergraph.cpp.o: src/gui/profilergraph.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_68) "Building CXX object src/CMakeFiles/minetest.dir/gui/profilergraph.cpp.o"
+	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/gui/profilergraph.cpp.o -c /opt/minetest/src/gui/profilergraph.cpp
+
+src/CMakeFiles/minetest.dir/gui/profilergraph.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/minetest.dir/gui/profilergraph.cpp.i"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /opt/minetest/src/gui/profilergraph.cpp > CMakeFiles/minetest.dir/gui/profilergraph.cpp.i
+
+src/CMakeFiles/minetest.dir/gui/profilergraph.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/minetest.dir/gui/profilergraph.cpp.s"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /opt/minetest/src/gui/profilergraph.cpp -o CMakeFiles/minetest.dir/gui/profilergraph.cpp.s
+
+src/CMakeFiles/minetest.dir/gui/profilergraph.cpp.o.requires:
+
+.PHONY : src/CMakeFiles/minetest.dir/gui/profilergraph.cpp.o.requires
+
+src/CMakeFiles/minetest.dir/gui/profilergraph.cpp.o.provides: src/CMakeFiles/minetest.dir/gui/profilergraph.cpp.o.requires
+	$(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/gui/profilergraph.cpp.o.provides.build
+.PHONY : src/CMakeFiles/minetest.dir/gui/profilergraph.cpp.o.provides
+
+src/CMakeFiles/minetest.dir/gui/profilergraph.cpp.o.provides.build: src/CMakeFiles/minetest.dir/gui/profilergraph.cpp.o
+
+
+src/CMakeFiles/minetest.dir/irrlicht_changes/CGUITTFont.cpp.o: src/CMakeFiles/minetest.dir/flags.make
+src/CMakeFiles/minetest.dir/irrlicht_changes/CGUITTFont.cpp.o: src/irrlicht_changes/CGUITTFont.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_69) "Building CXX object src/CMakeFiles/minetest.dir/irrlicht_changes/CGUITTFont.cpp.o"
+	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/irrlicht_changes/CGUITTFont.cpp.o -c /opt/minetest/src/irrlicht_changes/CGUITTFont.cpp
+
+src/CMakeFiles/minetest.dir/irrlicht_changes/CGUITTFont.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/minetest.dir/irrlicht_changes/CGUITTFont.cpp.i"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /opt/minetest/src/irrlicht_changes/CGUITTFont.cpp > CMakeFiles/minetest.dir/irrlicht_changes/CGUITTFont.cpp.i
+
+src/CMakeFiles/minetest.dir/irrlicht_changes/CGUITTFont.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/minetest.dir/irrlicht_changes/CGUITTFont.cpp.s"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /opt/minetest/src/irrlicht_changes/CGUITTFont.cpp -o CMakeFiles/minetest.dir/irrlicht_changes/CGUITTFont.cpp.s
+
+src/CMakeFiles/minetest.dir/irrlicht_changes/CGUITTFont.cpp.o.requires:
+
+.PHONY : src/CMakeFiles/minetest.dir/irrlicht_changes/CGUITTFont.cpp.o.requires
+
+src/CMakeFiles/minetest.dir/irrlicht_changes/CGUITTFont.cpp.o.provides: src/CMakeFiles/minetest.dir/irrlicht_changes/CGUITTFont.cpp.o.requires
+	$(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/irrlicht_changes/CGUITTFont.cpp.o.provides.build
+.PHONY : src/CMakeFiles/minetest.dir/irrlicht_changes/CGUITTFont.cpp.o.provides
+
+src/CMakeFiles/minetest.dir/irrlicht_changes/CGUITTFont.cpp.o.provides.build: src/CMakeFiles/minetest.dir/irrlicht_changes/CGUITTFont.cpp.o
+
+
 src/CMakeFiles/minetest.dir/irrlicht_changes/static_text.cpp.o: src/CMakeFiles/minetest.dir/flags.make
 src/CMakeFiles/minetest.dir/irrlicht_changes/static_text.cpp.o: src/irrlicht_changes/static_text.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object src/CMakeFiles/minetest.dir/irrlicht_changes/static_text.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_70) "Building CXX object src/CMakeFiles/minetest.dir/irrlicht_changes/static_text.cpp.o"
 	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/irrlicht_changes/static_text.cpp.o -c /opt/minetest/src/irrlicht_changes/static_text.cpp
 
 src/CMakeFiles/minetest.dir/irrlicht_changes/static_text.cpp.i: cmake_force
@@ -177,9 +1737,417 @@ src/CMakeFiles/minetest.dir/irrlicht_changes/static_text.cpp.o.provides: src/CMa
 src/CMakeFiles/minetest.dir/irrlicht_changes/static_text.cpp.o.provides.build: src/CMakeFiles/minetest.dir/irrlicht_changes/static_text.cpp.o
 
 
+src/CMakeFiles/minetest.dir/mapgen/cavegen.cpp.o: src/CMakeFiles/minetest.dir/flags.make
+src/CMakeFiles/minetest.dir/mapgen/cavegen.cpp.o: src/mapgen/cavegen.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_71) "Building CXX object src/CMakeFiles/minetest.dir/mapgen/cavegen.cpp.o"
+	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/mapgen/cavegen.cpp.o -c /opt/minetest/src/mapgen/cavegen.cpp
+
+src/CMakeFiles/minetest.dir/mapgen/cavegen.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/minetest.dir/mapgen/cavegen.cpp.i"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /opt/minetest/src/mapgen/cavegen.cpp > CMakeFiles/minetest.dir/mapgen/cavegen.cpp.i
+
+src/CMakeFiles/minetest.dir/mapgen/cavegen.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/minetest.dir/mapgen/cavegen.cpp.s"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /opt/minetest/src/mapgen/cavegen.cpp -o CMakeFiles/minetest.dir/mapgen/cavegen.cpp.s
+
+src/CMakeFiles/minetest.dir/mapgen/cavegen.cpp.o.requires:
+
+.PHONY : src/CMakeFiles/minetest.dir/mapgen/cavegen.cpp.o.requires
+
+src/CMakeFiles/minetest.dir/mapgen/cavegen.cpp.o.provides: src/CMakeFiles/minetest.dir/mapgen/cavegen.cpp.o.requires
+	$(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/mapgen/cavegen.cpp.o.provides.build
+.PHONY : src/CMakeFiles/minetest.dir/mapgen/cavegen.cpp.o.provides
+
+src/CMakeFiles/minetest.dir/mapgen/cavegen.cpp.o.provides.build: src/CMakeFiles/minetest.dir/mapgen/cavegen.cpp.o
+
+
+src/CMakeFiles/minetest.dir/mapgen/dungeongen.cpp.o: src/CMakeFiles/minetest.dir/flags.make
+src/CMakeFiles/minetest.dir/mapgen/dungeongen.cpp.o: src/mapgen/dungeongen.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_72) "Building CXX object src/CMakeFiles/minetest.dir/mapgen/dungeongen.cpp.o"
+	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/mapgen/dungeongen.cpp.o -c /opt/minetest/src/mapgen/dungeongen.cpp
+
+src/CMakeFiles/minetest.dir/mapgen/dungeongen.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/minetest.dir/mapgen/dungeongen.cpp.i"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /opt/minetest/src/mapgen/dungeongen.cpp > CMakeFiles/minetest.dir/mapgen/dungeongen.cpp.i
+
+src/CMakeFiles/minetest.dir/mapgen/dungeongen.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/minetest.dir/mapgen/dungeongen.cpp.s"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /opt/minetest/src/mapgen/dungeongen.cpp -o CMakeFiles/minetest.dir/mapgen/dungeongen.cpp.s
+
+src/CMakeFiles/minetest.dir/mapgen/dungeongen.cpp.o.requires:
+
+.PHONY : src/CMakeFiles/minetest.dir/mapgen/dungeongen.cpp.o.requires
+
+src/CMakeFiles/minetest.dir/mapgen/dungeongen.cpp.o.provides: src/CMakeFiles/minetest.dir/mapgen/dungeongen.cpp.o.requires
+	$(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/mapgen/dungeongen.cpp.o.provides.build
+.PHONY : src/CMakeFiles/minetest.dir/mapgen/dungeongen.cpp.o.provides
+
+src/CMakeFiles/minetest.dir/mapgen/dungeongen.cpp.o.provides.build: src/CMakeFiles/minetest.dir/mapgen/dungeongen.cpp.o
+
+
+src/CMakeFiles/minetest.dir/mapgen/mapgen.cpp.o: src/CMakeFiles/minetest.dir/flags.make
+src/CMakeFiles/minetest.dir/mapgen/mapgen.cpp.o: src/mapgen/mapgen.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_73) "Building CXX object src/CMakeFiles/minetest.dir/mapgen/mapgen.cpp.o"
+	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/mapgen/mapgen.cpp.o -c /opt/minetest/src/mapgen/mapgen.cpp
+
+src/CMakeFiles/minetest.dir/mapgen/mapgen.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/minetest.dir/mapgen/mapgen.cpp.i"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /opt/minetest/src/mapgen/mapgen.cpp > CMakeFiles/minetest.dir/mapgen/mapgen.cpp.i
+
+src/CMakeFiles/minetest.dir/mapgen/mapgen.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/minetest.dir/mapgen/mapgen.cpp.s"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /opt/minetest/src/mapgen/mapgen.cpp -o CMakeFiles/minetest.dir/mapgen/mapgen.cpp.s
+
+src/CMakeFiles/minetest.dir/mapgen/mapgen.cpp.o.requires:
+
+.PHONY : src/CMakeFiles/minetest.dir/mapgen/mapgen.cpp.o.requires
+
+src/CMakeFiles/minetest.dir/mapgen/mapgen.cpp.o.provides: src/CMakeFiles/minetest.dir/mapgen/mapgen.cpp.o.requires
+	$(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/mapgen/mapgen.cpp.o.provides.build
+.PHONY : src/CMakeFiles/minetest.dir/mapgen/mapgen.cpp.o.provides
+
+src/CMakeFiles/minetest.dir/mapgen/mapgen.cpp.o.provides.build: src/CMakeFiles/minetest.dir/mapgen/mapgen.cpp.o
+
+
+src/CMakeFiles/minetest.dir/mapgen/mapgen_carpathian.cpp.o: src/CMakeFiles/minetest.dir/flags.make
+src/CMakeFiles/minetest.dir/mapgen/mapgen_carpathian.cpp.o: src/mapgen/mapgen_carpathian.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_74) "Building CXX object src/CMakeFiles/minetest.dir/mapgen/mapgen_carpathian.cpp.o"
+	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/mapgen/mapgen_carpathian.cpp.o -c /opt/minetest/src/mapgen/mapgen_carpathian.cpp
+
+src/CMakeFiles/minetest.dir/mapgen/mapgen_carpathian.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/minetest.dir/mapgen/mapgen_carpathian.cpp.i"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /opt/minetest/src/mapgen/mapgen_carpathian.cpp > CMakeFiles/minetest.dir/mapgen/mapgen_carpathian.cpp.i
+
+src/CMakeFiles/minetest.dir/mapgen/mapgen_carpathian.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/minetest.dir/mapgen/mapgen_carpathian.cpp.s"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /opt/minetest/src/mapgen/mapgen_carpathian.cpp -o CMakeFiles/minetest.dir/mapgen/mapgen_carpathian.cpp.s
+
+src/CMakeFiles/minetest.dir/mapgen/mapgen_carpathian.cpp.o.requires:
+
+.PHONY : src/CMakeFiles/minetest.dir/mapgen/mapgen_carpathian.cpp.o.requires
+
+src/CMakeFiles/minetest.dir/mapgen/mapgen_carpathian.cpp.o.provides: src/CMakeFiles/minetest.dir/mapgen/mapgen_carpathian.cpp.o.requires
+	$(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/mapgen/mapgen_carpathian.cpp.o.provides.build
+.PHONY : src/CMakeFiles/minetest.dir/mapgen/mapgen_carpathian.cpp.o.provides
+
+src/CMakeFiles/minetest.dir/mapgen/mapgen_carpathian.cpp.o.provides.build: src/CMakeFiles/minetest.dir/mapgen/mapgen_carpathian.cpp.o
+
+
+src/CMakeFiles/minetest.dir/mapgen/mapgen_flat.cpp.o: src/CMakeFiles/minetest.dir/flags.make
+src/CMakeFiles/minetest.dir/mapgen/mapgen_flat.cpp.o: src/mapgen/mapgen_flat.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_75) "Building CXX object src/CMakeFiles/minetest.dir/mapgen/mapgen_flat.cpp.o"
+	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/mapgen/mapgen_flat.cpp.o -c /opt/minetest/src/mapgen/mapgen_flat.cpp
+
+src/CMakeFiles/minetest.dir/mapgen/mapgen_flat.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/minetest.dir/mapgen/mapgen_flat.cpp.i"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /opt/minetest/src/mapgen/mapgen_flat.cpp > CMakeFiles/minetest.dir/mapgen/mapgen_flat.cpp.i
+
+src/CMakeFiles/minetest.dir/mapgen/mapgen_flat.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/minetest.dir/mapgen/mapgen_flat.cpp.s"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /opt/minetest/src/mapgen/mapgen_flat.cpp -o CMakeFiles/minetest.dir/mapgen/mapgen_flat.cpp.s
+
+src/CMakeFiles/minetest.dir/mapgen/mapgen_flat.cpp.o.requires:
+
+.PHONY : src/CMakeFiles/minetest.dir/mapgen/mapgen_flat.cpp.o.requires
+
+src/CMakeFiles/minetest.dir/mapgen/mapgen_flat.cpp.o.provides: src/CMakeFiles/minetest.dir/mapgen/mapgen_flat.cpp.o.requires
+	$(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/mapgen/mapgen_flat.cpp.o.provides.build
+.PHONY : src/CMakeFiles/minetest.dir/mapgen/mapgen_flat.cpp.o.provides
+
+src/CMakeFiles/minetest.dir/mapgen/mapgen_flat.cpp.o.provides.build: src/CMakeFiles/minetest.dir/mapgen/mapgen_flat.cpp.o
+
+
+src/CMakeFiles/minetest.dir/mapgen/mapgen_fractal.cpp.o: src/CMakeFiles/minetest.dir/flags.make
+src/CMakeFiles/minetest.dir/mapgen/mapgen_fractal.cpp.o: src/mapgen/mapgen_fractal.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_76) "Building CXX object src/CMakeFiles/minetest.dir/mapgen/mapgen_fractal.cpp.o"
+	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/mapgen/mapgen_fractal.cpp.o -c /opt/minetest/src/mapgen/mapgen_fractal.cpp
+
+src/CMakeFiles/minetest.dir/mapgen/mapgen_fractal.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/minetest.dir/mapgen/mapgen_fractal.cpp.i"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /opt/minetest/src/mapgen/mapgen_fractal.cpp > CMakeFiles/minetest.dir/mapgen/mapgen_fractal.cpp.i
+
+src/CMakeFiles/minetest.dir/mapgen/mapgen_fractal.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/minetest.dir/mapgen/mapgen_fractal.cpp.s"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /opt/minetest/src/mapgen/mapgen_fractal.cpp -o CMakeFiles/minetest.dir/mapgen/mapgen_fractal.cpp.s
+
+src/CMakeFiles/minetest.dir/mapgen/mapgen_fractal.cpp.o.requires:
+
+.PHONY : src/CMakeFiles/minetest.dir/mapgen/mapgen_fractal.cpp.o.requires
+
+src/CMakeFiles/minetest.dir/mapgen/mapgen_fractal.cpp.o.provides: src/CMakeFiles/minetest.dir/mapgen/mapgen_fractal.cpp.o.requires
+	$(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/mapgen/mapgen_fractal.cpp.o.provides.build
+.PHONY : src/CMakeFiles/minetest.dir/mapgen/mapgen_fractal.cpp.o.provides
+
+src/CMakeFiles/minetest.dir/mapgen/mapgen_fractal.cpp.o.provides.build: src/CMakeFiles/minetest.dir/mapgen/mapgen_fractal.cpp.o
+
+
+src/CMakeFiles/minetest.dir/mapgen/mapgen_singlenode.cpp.o: src/CMakeFiles/minetest.dir/flags.make
+src/CMakeFiles/minetest.dir/mapgen/mapgen_singlenode.cpp.o: src/mapgen/mapgen_singlenode.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_77) "Building CXX object src/CMakeFiles/minetest.dir/mapgen/mapgen_singlenode.cpp.o"
+	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/mapgen/mapgen_singlenode.cpp.o -c /opt/minetest/src/mapgen/mapgen_singlenode.cpp
+
+src/CMakeFiles/minetest.dir/mapgen/mapgen_singlenode.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/minetest.dir/mapgen/mapgen_singlenode.cpp.i"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /opt/minetest/src/mapgen/mapgen_singlenode.cpp > CMakeFiles/minetest.dir/mapgen/mapgen_singlenode.cpp.i
+
+src/CMakeFiles/minetest.dir/mapgen/mapgen_singlenode.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/minetest.dir/mapgen/mapgen_singlenode.cpp.s"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /opt/minetest/src/mapgen/mapgen_singlenode.cpp -o CMakeFiles/minetest.dir/mapgen/mapgen_singlenode.cpp.s
+
+src/CMakeFiles/minetest.dir/mapgen/mapgen_singlenode.cpp.o.requires:
+
+.PHONY : src/CMakeFiles/minetest.dir/mapgen/mapgen_singlenode.cpp.o.requires
+
+src/CMakeFiles/minetest.dir/mapgen/mapgen_singlenode.cpp.o.provides: src/CMakeFiles/minetest.dir/mapgen/mapgen_singlenode.cpp.o.requires
+	$(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/mapgen/mapgen_singlenode.cpp.o.provides.build
+.PHONY : src/CMakeFiles/minetest.dir/mapgen/mapgen_singlenode.cpp.o.provides
+
+src/CMakeFiles/minetest.dir/mapgen/mapgen_singlenode.cpp.o.provides.build: src/CMakeFiles/minetest.dir/mapgen/mapgen_singlenode.cpp.o
+
+
+src/CMakeFiles/minetest.dir/mapgen/mapgen_v5.cpp.o: src/CMakeFiles/minetest.dir/flags.make
+src/CMakeFiles/minetest.dir/mapgen/mapgen_v5.cpp.o: src/mapgen/mapgen_v5.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_78) "Building CXX object src/CMakeFiles/minetest.dir/mapgen/mapgen_v5.cpp.o"
+	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/mapgen/mapgen_v5.cpp.o -c /opt/minetest/src/mapgen/mapgen_v5.cpp
+
+src/CMakeFiles/minetest.dir/mapgen/mapgen_v5.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/minetest.dir/mapgen/mapgen_v5.cpp.i"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /opt/minetest/src/mapgen/mapgen_v5.cpp > CMakeFiles/minetest.dir/mapgen/mapgen_v5.cpp.i
+
+src/CMakeFiles/minetest.dir/mapgen/mapgen_v5.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/minetest.dir/mapgen/mapgen_v5.cpp.s"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /opt/minetest/src/mapgen/mapgen_v5.cpp -o CMakeFiles/minetest.dir/mapgen/mapgen_v5.cpp.s
+
+src/CMakeFiles/minetest.dir/mapgen/mapgen_v5.cpp.o.requires:
+
+.PHONY : src/CMakeFiles/minetest.dir/mapgen/mapgen_v5.cpp.o.requires
+
+src/CMakeFiles/minetest.dir/mapgen/mapgen_v5.cpp.o.provides: src/CMakeFiles/minetest.dir/mapgen/mapgen_v5.cpp.o.requires
+	$(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/mapgen/mapgen_v5.cpp.o.provides.build
+.PHONY : src/CMakeFiles/minetest.dir/mapgen/mapgen_v5.cpp.o.provides
+
+src/CMakeFiles/minetest.dir/mapgen/mapgen_v5.cpp.o.provides.build: src/CMakeFiles/minetest.dir/mapgen/mapgen_v5.cpp.o
+
+
+src/CMakeFiles/minetest.dir/mapgen/mapgen_v6.cpp.o: src/CMakeFiles/minetest.dir/flags.make
+src/CMakeFiles/minetest.dir/mapgen/mapgen_v6.cpp.o: src/mapgen/mapgen_v6.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_79) "Building CXX object src/CMakeFiles/minetest.dir/mapgen/mapgen_v6.cpp.o"
+	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/mapgen/mapgen_v6.cpp.o -c /opt/minetest/src/mapgen/mapgen_v6.cpp
+
+src/CMakeFiles/minetest.dir/mapgen/mapgen_v6.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/minetest.dir/mapgen/mapgen_v6.cpp.i"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /opt/minetest/src/mapgen/mapgen_v6.cpp > CMakeFiles/minetest.dir/mapgen/mapgen_v6.cpp.i
+
+src/CMakeFiles/minetest.dir/mapgen/mapgen_v6.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/minetest.dir/mapgen/mapgen_v6.cpp.s"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /opt/minetest/src/mapgen/mapgen_v6.cpp -o CMakeFiles/minetest.dir/mapgen/mapgen_v6.cpp.s
+
+src/CMakeFiles/minetest.dir/mapgen/mapgen_v6.cpp.o.requires:
+
+.PHONY : src/CMakeFiles/minetest.dir/mapgen/mapgen_v6.cpp.o.requires
+
+src/CMakeFiles/minetest.dir/mapgen/mapgen_v6.cpp.o.provides: src/CMakeFiles/minetest.dir/mapgen/mapgen_v6.cpp.o.requires
+	$(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/mapgen/mapgen_v6.cpp.o.provides.build
+.PHONY : src/CMakeFiles/minetest.dir/mapgen/mapgen_v6.cpp.o.provides
+
+src/CMakeFiles/minetest.dir/mapgen/mapgen_v6.cpp.o.provides.build: src/CMakeFiles/minetest.dir/mapgen/mapgen_v6.cpp.o
+
+
+src/CMakeFiles/minetest.dir/mapgen/mapgen_v7.cpp.o: src/CMakeFiles/minetest.dir/flags.make
+src/CMakeFiles/minetest.dir/mapgen/mapgen_v7.cpp.o: src/mapgen/mapgen_v7.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_80) "Building CXX object src/CMakeFiles/minetest.dir/mapgen/mapgen_v7.cpp.o"
+	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/mapgen/mapgen_v7.cpp.o -c /opt/minetest/src/mapgen/mapgen_v7.cpp
+
+src/CMakeFiles/minetest.dir/mapgen/mapgen_v7.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/minetest.dir/mapgen/mapgen_v7.cpp.i"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /opt/minetest/src/mapgen/mapgen_v7.cpp > CMakeFiles/minetest.dir/mapgen/mapgen_v7.cpp.i
+
+src/CMakeFiles/minetest.dir/mapgen/mapgen_v7.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/minetest.dir/mapgen/mapgen_v7.cpp.s"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /opt/minetest/src/mapgen/mapgen_v7.cpp -o CMakeFiles/minetest.dir/mapgen/mapgen_v7.cpp.s
+
+src/CMakeFiles/minetest.dir/mapgen/mapgen_v7.cpp.o.requires:
+
+.PHONY : src/CMakeFiles/minetest.dir/mapgen/mapgen_v7.cpp.o.requires
+
+src/CMakeFiles/minetest.dir/mapgen/mapgen_v7.cpp.o.provides: src/CMakeFiles/minetest.dir/mapgen/mapgen_v7.cpp.o.requires
+	$(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/mapgen/mapgen_v7.cpp.o.provides.build
+.PHONY : src/CMakeFiles/minetest.dir/mapgen/mapgen_v7.cpp.o.provides
+
+src/CMakeFiles/minetest.dir/mapgen/mapgen_v7.cpp.o.provides.build: src/CMakeFiles/minetest.dir/mapgen/mapgen_v7.cpp.o
+
+
+src/CMakeFiles/minetest.dir/mapgen/mapgen_valleys.cpp.o: src/CMakeFiles/minetest.dir/flags.make
+src/CMakeFiles/minetest.dir/mapgen/mapgen_valleys.cpp.o: src/mapgen/mapgen_valleys.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_81) "Building CXX object src/CMakeFiles/minetest.dir/mapgen/mapgen_valleys.cpp.o"
+	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/mapgen/mapgen_valleys.cpp.o -c /opt/minetest/src/mapgen/mapgen_valleys.cpp
+
+src/CMakeFiles/minetest.dir/mapgen/mapgen_valleys.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/minetest.dir/mapgen/mapgen_valleys.cpp.i"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /opt/minetest/src/mapgen/mapgen_valleys.cpp > CMakeFiles/minetest.dir/mapgen/mapgen_valleys.cpp.i
+
+src/CMakeFiles/minetest.dir/mapgen/mapgen_valleys.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/minetest.dir/mapgen/mapgen_valleys.cpp.s"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /opt/minetest/src/mapgen/mapgen_valleys.cpp -o CMakeFiles/minetest.dir/mapgen/mapgen_valleys.cpp.s
+
+src/CMakeFiles/minetest.dir/mapgen/mapgen_valleys.cpp.o.requires:
+
+.PHONY : src/CMakeFiles/minetest.dir/mapgen/mapgen_valleys.cpp.o.requires
+
+src/CMakeFiles/minetest.dir/mapgen/mapgen_valleys.cpp.o.provides: src/CMakeFiles/minetest.dir/mapgen/mapgen_valleys.cpp.o.requires
+	$(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/mapgen/mapgen_valleys.cpp.o.provides.build
+.PHONY : src/CMakeFiles/minetest.dir/mapgen/mapgen_valleys.cpp.o.provides
+
+src/CMakeFiles/minetest.dir/mapgen/mapgen_valleys.cpp.o.provides.build: src/CMakeFiles/minetest.dir/mapgen/mapgen_valleys.cpp.o
+
+
+src/CMakeFiles/minetest.dir/mapgen/mg_biome.cpp.o: src/CMakeFiles/minetest.dir/flags.make
+src/CMakeFiles/minetest.dir/mapgen/mg_biome.cpp.o: src/mapgen/mg_biome.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_82) "Building CXX object src/CMakeFiles/minetest.dir/mapgen/mg_biome.cpp.o"
+	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/mapgen/mg_biome.cpp.o -c /opt/minetest/src/mapgen/mg_biome.cpp
+
+src/CMakeFiles/minetest.dir/mapgen/mg_biome.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/minetest.dir/mapgen/mg_biome.cpp.i"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /opt/minetest/src/mapgen/mg_biome.cpp > CMakeFiles/minetest.dir/mapgen/mg_biome.cpp.i
+
+src/CMakeFiles/minetest.dir/mapgen/mg_biome.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/minetest.dir/mapgen/mg_biome.cpp.s"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /opt/minetest/src/mapgen/mg_biome.cpp -o CMakeFiles/minetest.dir/mapgen/mg_biome.cpp.s
+
+src/CMakeFiles/minetest.dir/mapgen/mg_biome.cpp.o.requires:
+
+.PHONY : src/CMakeFiles/minetest.dir/mapgen/mg_biome.cpp.o.requires
+
+src/CMakeFiles/minetest.dir/mapgen/mg_biome.cpp.o.provides: src/CMakeFiles/minetest.dir/mapgen/mg_biome.cpp.o.requires
+	$(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/mapgen/mg_biome.cpp.o.provides.build
+.PHONY : src/CMakeFiles/minetest.dir/mapgen/mg_biome.cpp.o.provides
+
+src/CMakeFiles/minetest.dir/mapgen/mg_biome.cpp.o.provides.build: src/CMakeFiles/minetest.dir/mapgen/mg_biome.cpp.o
+
+
+src/CMakeFiles/minetest.dir/mapgen/mg_decoration.cpp.o: src/CMakeFiles/minetest.dir/flags.make
+src/CMakeFiles/minetest.dir/mapgen/mg_decoration.cpp.o: src/mapgen/mg_decoration.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_83) "Building CXX object src/CMakeFiles/minetest.dir/mapgen/mg_decoration.cpp.o"
+	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/mapgen/mg_decoration.cpp.o -c /opt/minetest/src/mapgen/mg_decoration.cpp
+
+src/CMakeFiles/minetest.dir/mapgen/mg_decoration.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/minetest.dir/mapgen/mg_decoration.cpp.i"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /opt/minetest/src/mapgen/mg_decoration.cpp > CMakeFiles/minetest.dir/mapgen/mg_decoration.cpp.i
+
+src/CMakeFiles/minetest.dir/mapgen/mg_decoration.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/minetest.dir/mapgen/mg_decoration.cpp.s"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /opt/minetest/src/mapgen/mg_decoration.cpp -o CMakeFiles/minetest.dir/mapgen/mg_decoration.cpp.s
+
+src/CMakeFiles/minetest.dir/mapgen/mg_decoration.cpp.o.requires:
+
+.PHONY : src/CMakeFiles/minetest.dir/mapgen/mg_decoration.cpp.o.requires
+
+src/CMakeFiles/minetest.dir/mapgen/mg_decoration.cpp.o.provides: src/CMakeFiles/minetest.dir/mapgen/mg_decoration.cpp.o.requires
+	$(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/mapgen/mg_decoration.cpp.o.provides.build
+.PHONY : src/CMakeFiles/minetest.dir/mapgen/mg_decoration.cpp.o.provides
+
+src/CMakeFiles/minetest.dir/mapgen/mg_decoration.cpp.o.provides.build: src/CMakeFiles/minetest.dir/mapgen/mg_decoration.cpp.o
+
+
+src/CMakeFiles/minetest.dir/mapgen/mg_ore.cpp.o: src/CMakeFiles/minetest.dir/flags.make
+src/CMakeFiles/minetest.dir/mapgen/mg_ore.cpp.o: src/mapgen/mg_ore.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_84) "Building CXX object src/CMakeFiles/minetest.dir/mapgen/mg_ore.cpp.o"
+	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/mapgen/mg_ore.cpp.o -c /opt/minetest/src/mapgen/mg_ore.cpp
+
+src/CMakeFiles/minetest.dir/mapgen/mg_ore.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/minetest.dir/mapgen/mg_ore.cpp.i"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /opt/minetest/src/mapgen/mg_ore.cpp > CMakeFiles/minetest.dir/mapgen/mg_ore.cpp.i
+
+src/CMakeFiles/minetest.dir/mapgen/mg_ore.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/minetest.dir/mapgen/mg_ore.cpp.s"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /opt/minetest/src/mapgen/mg_ore.cpp -o CMakeFiles/minetest.dir/mapgen/mg_ore.cpp.s
+
+src/CMakeFiles/minetest.dir/mapgen/mg_ore.cpp.o.requires:
+
+.PHONY : src/CMakeFiles/minetest.dir/mapgen/mg_ore.cpp.o.requires
+
+src/CMakeFiles/minetest.dir/mapgen/mg_ore.cpp.o.provides: src/CMakeFiles/minetest.dir/mapgen/mg_ore.cpp.o.requires
+	$(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/mapgen/mg_ore.cpp.o.provides.build
+.PHONY : src/CMakeFiles/minetest.dir/mapgen/mg_ore.cpp.o.provides
+
+src/CMakeFiles/minetest.dir/mapgen/mg_ore.cpp.o.provides.build: src/CMakeFiles/minetest.dir/mapgen/mg_ore.cpp.o
+
+
+src/CMakeFiles/minetest.dir/mapgen/mg_schematic.cpp.o: src/CMakeFiles/minetest.dir/flags.make
+src/CMakeFiles/minetest.dir/mapgen/mg_schematic.cpp.o: src/mapgen/mg_schematic.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_85) "Building CXX object src/CMakeFiles/minetest.dir/mapgen/mg_schematic.cpp.o"
+	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/mapgen/mg_schematic.cpp.o -c /opt/minetest/src/mapgen/mg_schematic.cpp
+
+src/CMakeFiles/minetest.dir/mapgen/mg_schematic.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/minetest.dir/mapgen/mg_schematic.cpp.i"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /opt/minetest/src/mapgen/mg_schematic.cpp > CMakeFiles/minetest.dir/mapgen/mg_schematic.cpp.i
+
+src/CMakeFiles/minetest.dir/mapgen/mg_schematic.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/minetest.dir/mapgen/mg_schematic.cpp.s"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /opt/minetest/src/mapgen/mg_schematic.cpp -o CMakeFiles/minetest.dir/mapgen/mg_schematic.cpp.s
+
+src/CMakeFiles/minetest.dir/mapgen/mg_schematic.cpp.o.requires:
+
+.PHONY : src/CMakeFiles/minetest.dir/mapgen/mg_schematic.cpp.o.requires
+
+src/CMakeFiles/minetest.dir/mapgen/mg_schematic.cpp.o.provides: src/CMakeFiles/minetest.dir/mapgen/mg_schematic.cpp.o.requires
+	$(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/mapgen/mg_schematic.cpp.o.provides.build
+.PHONY : src/CMakeFiles/minetest.dir/mapgen/mg_schematic.cpp.o.provides
+
+src/CMakeFiles/minetest.dir/mapgen/mg_schematic.cpp.o.provides.build: src/CMakeFiles/minetest.dir/mapgen/mg_schematic.cpp.o
+
+
+src/CMakeFiles/minetest.dir/mapgen/treegen.cpp.o: src/CMakeFiles/minetest.dir/flags.make
+src/CMakeFiles/minetest.dir/mapgen/treegen.cpp.o: src/mapgen/treegen.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_86) "Building CXX object src/CMakeFiles/minetest.dir/mapgen/treegen.cpp.o"
+	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/mapgen/treegen.cpp.o -c /opt/minetest/src/mapgen/treegen.cpp
+
+src/CMakeFiles/minetest.dir/mapgen/treegen.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/minetest.dir/mapgen/treegen.cpp.i"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /opt/minetest/src/mapgen/treegen.cpp > CMakeFiles/minetest.dir/mapgen/treegen.cpp.i
+
+src/CMakeFiles/minetest.dir/mapgen/treegen.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/minetest.dir/mapgen/treegen.cpp.s"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /opt/minetest/src/mapgen/treegen.cpp -o CMakeFiles/minetest.dir/mapgen/treegen.cpp.s
+
+src/CMakeFiles/minetest.dir/mapgen/treegen.cpp.o.requires:
+
+.PHONY : src/CMakeFiles/minetest.dir/mapgen/treegen.cpp.o.requires
+
+src/CMakeFiles/minetest.dir/mapgen/treegen.cpp.o.provides: src/CMakeFiles/minetest.dir/mapgen/treegen.cpp.o.requires
+	$(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/mapgen/treegen.cpp.o.provides.build
+.PHONY : src/CMakeFiles/minetest.dir/mapgen/treegen.cpp.o.provides
+
+src/CMakeFiles/minetest.dir/mapgen/treegen.cpp.o.provides.build: src/CMakeFiles/minetest.dir/mapgen/treegen.cpp.o
+
+
+src/CMakeFiles/minetest.dir/network/address.cpp.o: src/CMakeFiles/minetest.dir/flags.make
+src/CMakeFiles/minetest.dir/network/address.cpp.o: src/network/address.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_87) "Building CXX object src/CMakeFiles/minetest.dir/network/address.cpp.o"
+	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/network/address.cpp.o -c /opt/minetest/src/network/address.cpp
+
+src/CMakeFiles/minetest.dir/network/address.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/minetest.dir/network/address.cpp.i"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /opt/minetest/src/network/address.cpp > CMakeFiles/minetest.dir/network/address.cpp.i
+
+src/CMakeFiles/minetest.dir/network/address.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/minetest.dir/network/address.cpp.s"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /opt/minetest/src/network/address.cpp -o CMakeFiles/minetest.dir/network/address.cpp.s
+
+src/CMakeFiles/minetest.dir/network/address.cpp.o.requires:
+
+.PHONY : src/CMakeFiles/minetest.dir/network/address.cpp.o.requires
+
+src/CMakeFiles/minetest.dir/network/address.cpp.o.provides: src/CMakeFiles/minetest.dir/network/address.cpp.o.requires
+	$(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/network/address.cpp.o.provides.build
+.PHONY : src/CMakeFiles/minetest.dir/network/address.cpp.o.provides
+
+src/CMakeFiles/minetest.dir/network/address.cpp.o.provides.build: src/CMakeFiles/minetest.dir/network/address.cpp.o
+
+
 src/CMakeFiles/minetest.dir/network/clientopcodes.cpp.o: src/CMakeFiles/minetest.dir/flags.make
 src/CMakeFiles/minetest.dir/network/clientopcodes.cpp.o: src/network/clientopcodes.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object src/CMakeFiles/minetest.dir/network/clientopcodes.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_88) "Building CXX object src/CMakeFiles/minetest.dir/network/clientopcodes.cpp.o"
 	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/network/clientopcodes.cpp.o -c /opt/minetest/src/network/clientopcodes.cpp
 
 src/CMakeFiles/minetest.dir/network/clientopcodes.cpp.i: cmake_force
@@ -203,7 +2171,7 @@ src/CMakeFiles/minetest.dir/network/clientopcodes.cpp.o.provides.build: src/CMak
 
 src/CMakeFiles/minetest.dir/network/clientpackethandler.cpp.o: src/CMakeFiles/minetest.dir/flags.make
 src/CMakeFiles/minetest.dir/network/clientpackethandler.cpp.o: src/network/clientpackethandler.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object src/CMakeFiles/minetest.dir/network/clientpackethandler.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_89) "Building CXX object src/CMakeFiles/minetest.dir/network/clientpackethandler.cpp.o"
 	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/network/clientpackethandler.cpp.o -c /opt/minetest/src/network/clientpackethandler.cpp
 
 src/CMakeFiles/minetest.dir/network/clientpackethandler.cpp.i: cmake_force
@@ -227,7 +2195,7 @@ src/CMakeFiles/minetest.dir/network/clientpackethandler.cpp.o.provides.build: sr
 
 src/CMakeFiles/minetest.dir/network/connection.cpp.o: src/CMakeFiles/minetest.dir/flags.make
 src/CMakeFiles/minetest.dir/network/connection.cpp.o: src/network/connection.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object src/CMakeFiles/minetest.dir/network/connection.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_90) "Building CXX object src/CMakeFiles/minetest.dir/network/connection.cpp.o"
 	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/network/connection.cpp.o -c /opt/minetest/src/network/connection.cpp
 
 src/CMakeFiles/minetest.dir/network/connection.cpp.i: cmake_force
@@ -249,9 +2217,33 @@ src/CMakeFiles/minetest.dir/network/connection.cpp.o.provides: src/CMakeFiles/mi
 src/CMakeFiles/minetest.dir/network/connection.cpp.o.provides.build: src/CMakeFiles/minetest.dir/network/connection.cpp.o
 
 
+src/CMakeFiles/minetest.dir/network/connectionthreads.cpp.o: src/CMakeFiles/minetest.dir/flags.make
+src/CMakeFiles/minetest.dir/network/connectionthreads.cpp.o: src/network/connectionthreads.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_91) "Building CXX object src/CMakeFiles/minetest.dir/network/connectionthreads.cpp.o"
+	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/network/connectionthreads.cpp.o -c /opt/minetest/src/network/connectionthreads.cpp
+
+src/CMakeFiles/minetest.dir/network/connectionthreads.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/minetest.dir/network/connectionthreads.cpp.i"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /opt/minetest/src/network/connectionthreads.cpp > CMakeFiles/minetest.dir/network/connectionthreads.cpp.i
+
+src/CMakeFiles/minetest.dir/network/connectionthreads.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/minetest.dir/network/connectionthreads.cpp.s"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /opt/minetest/src/network/connectionthreads.cpp -o CMakeFiles/minetest.dir/network/connectionthreads.cpp.s
+
+src/CMakeFiles/minetest.dir/network/connectionthreads.cpp.o.requires:
+
+.PHONY : src/CMakeFiles/minetest.dir/network/connectionthreads.cpp.o.requires
+
+src/CMakeFiles/minetest.dir/network/connectionthreads.cpp.o.provides: src/CMakeFiles/minetest.dir/network/connectionthreads.cpp.o.requires
+	$(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/network/connectionthreads.cpp.o.provides.build
+.PHONY : src/CMakeFiles/minetest.dir/network/connectionthreads.cpp.o.provides
+
+src/CMakeFiles/minetest.dir/network/connectionthreads.cpp.o.provides.build: src/CMakeFiles/minetest.dir/network/connectionthreads.cpp.o
+
+
 src/CMakeFiles/minetest.dir/network/networkpacket.cpp.o: src/CMakeFiles/minetest.dir/flags.make
 src/CMakeFiles/minetest.dir/network/networkpacket.cpp.o: src/network/networkpacket.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object src/CMakeFiles/minetest.dir/network/networkpacket.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_92) "Building CXX object src/CMakeFiles/minetest.dir/network/networkpacket.cpp.o"
 	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/network/networkpacket.cpp.o -c /opt/minetest/src/network/networkpacket.cpp
 
 src/CMakeFiles/minetest.dir/network/networkpacket.cpp.i: cmake_force
@@ -275,7 +2267,7 @@ src/CMakeFiles/minetest.dir/network/networkpacket.cpp.o.provides.build: src/CMak
 
 src/CMakeFiles/minetest.dir/network/serveropcodes.cpp.o: src/CMakeFiles/minetest.dir/flags.make
 src/CMakeFiles/minetest.dir/network/serveropcodes.cpp.o: src/network/serveropcodes.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object src/CMakeFiles/minetest.dir/network/serveropcodes.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_93) "Building CXX object src/CMakeFiles/minetest.dir/network/serveropcodes.cpp.o"
 	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/network/serveropcodes.cpp.o -c /opt/minetest/src/network/serveropcodes.cpp
 
 src/CMakeFiles/minetest.dir/network/serveropcodes.cpp.i: cmake_force
@@ -299,7 +2291,7 @@ src/CMakeFiles/minetest.dir/network/serveropcodes.cpp.o.provides.build: src/CMak
 
 src/CMakeFiles/minetest.dir/network/serverpackethandler.cpp.o: src/CMakeFiles/minetest.dir/flags.make
 src/CMakeFiles/minetest.dir/network/serverpackethandler.cpp.o: src/network/serverpackethandler.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object src/CMakeFiles/minetest.dir/network/serverpackethandler.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_94) "Building CXX object src/CMakeFiles/minetest.dir/network/serverpackethandler.cpp.o"
 	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/network/serverpackethandler.cpp.o -c /opt/minetest/src/network/serverpackethandler.cpp
 
 src/CMakeFiles/minetest.dir/network/serverpackethandler.cpp.i: cmake_force
@@ -321,9 +2313,33 @@ src/CMakeFiles/minetest.dir/network/serverpackethandler.cpp.o.provides: src/CMak
 src/CMakeFiles/minetest.dir/network/serverpackethandler.cpp.o.provides.build: src/CMakeFiles/minetest.dir/network/serverpackethandler.cpp.o
 
 
+src/CMakeFiles/minetest.dir/network/socket.cpp.o: src/CMakeFiles/minetest.dir/flags.make
+src/CMakeFiles/minetest.dir/network/socket.cpp.o: src/network/socket.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_95) "Building CXX object src/CMakeFiles/minetest.dir/network/socket.cpp.o"
+	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/network/socket.cpp.o -c /opt/minetest/src/network/socket.cpp
+
+src/CMakeFiles/minetest.dir/network/socket.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/minetest.dir/network/socket.cpp.i"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /opt/minetest/src/network/socket.cpp > CMakeFiles/minetest.dir/network/socket.cpp.i
+
+src/CMakeFiles/minetest.dir/network/socket.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/minetest.dir/network/socket.cpp.s"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /opt/minetest/src/network/socket.cpp -o CMakeFiles/minetest.dir/network/socket.cpp.s
+
+src/CMakeFiles/minetest.dir/network/socket.cpp.o.requires:
+
+.PHONY : src/CMakeFiles/minetest.dir/network/socket.cpp.o.requires
+
+src/CMakeFiles/minetest.dir/network/socket.cpp.o.provides: src/CMakeFiles/minetest.dir/network/socket.cpp.o.requires
+	$(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/network/socket.cpp.o.provides.build
+.PHONY : src/CMakeFiles/minetest.dir/network/socket.cpp.o.provides
+
+src/CMakeFiles/minetest.dir/network/socket.cpp.o.provides.build: src/CMakeFiles/minetest.dir/network/socket.cpp.o
+
+
 src/CMakeFiles/minetest.dir/script/common/c_content.cpp.o: src/CMakeFiles/minetest.dir/flags.make
 src/CMakeFiles/minetest.dir/script/common/c_content.cpp.o: src/script/common/c_content.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object src/CMakeFiles/minetest.dir/script/common/c_content.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_96) "Building CXX object src/CMakeFiles/minetest.dir/script/common/c_content.cpp.o"
 	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/script/common/c_content.cpp.o -c /opt/minetest/src/script/common/c_content.cpp
 
 src/CMakeFiles/minetest.dir/script/common/c_content.cpp.i: cmake_force
@@ -347,7 +2363,7 @@ src/CMakeFiles/minetest.dir/script/common/c_content.cpp.o.provides.build: src/CM
 
 src/CMakeFiles/minetest.dir/script/common/c_converter.cpp.o: src/CMakeFiles/minetest.dir/flags.make
 src/CMakeFiles/minetest.dir/script/common/c_converter.cpp.o: src/script/common/c_converter.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object src/CMakeFiles/minetest.dir/script/common/c_converter.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_97) "Building CXX object src/CMakeFiles/minetest.dir/script/common/c_converter.cpp.o"
 	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/script/common/c_converter.cpp.o -c /opt/minetest/src/script/common/c_converter.cpp
 
 src/CMakeFiles/minetest.dir/script/common/c_converter.cpp.i: cmake_force
@@ -371,7 +2387,7 @@ src/CMakeFiles/minetest.dir/script/common/c_converter.cpp.o.provides.build: src/
 
 src/CMakeFiles/minetest.dir/script/common/c_internal.cpp.o: src/CMakeFiles/minetest.dir/flags.make
 src/CMakeFiles/minetest.dir/script/common/c_internal.cpp.o: src/script/common/c_internal.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object src/CMakeFiles/minetest.dir/script/common/c_internal.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_98) "Building CXX object src/CMakeFiles/minetest.dir/script/common/c_internal.cpp.o"
 	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/script/common/c_internal.cpp.o -c /opt/minetest/src/script/common/c_internal.cpp
 
 src/CMakeFiles/minetest.dir/script/common/c_internal.cpp.i: cmake_force
@@ -395,7 +2411,7 @@ src/CMakeFiles/minetest.dir/script/common/c_internal.cpp.o.provides.build: src/C
 
 src/CMakeFiles/minetest.dir/script/common/c_types.cpp.o: src/CMakeFiles/minetest.dir/flags.make
 src/CMakeFiles/minetest.dir/script/common/c_types.cpp.o: src/script/common/c_types.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object src/CMakeFiles/minetest.dir/script/common/c_types.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_99) "Building CXX object src/CMakeFiles/minetest.dir/script/common/c_types.cpp.o"
 	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/script/common/c_types.cpp.o -c /opt/minetest/src/script/common/c_types.cpp
 
 src/CMakeFiles/minetest.dir/script/common/c_types.cpp.i: cmake_force
@@ -417,9 +2433,33 @@ src/CMakeFiles/minetest.dir/script/common/c_types.cpp.o.provides: src/CMakeFiles
 src/CMakeFiles/minetest.dir/script/common/c_types.cpp.o.provides.build: src/CMakeFiles/minetest.dir/script/common/c_types.cpp.o
 
 
+src/CMakeFiles/minetest.dir/script/common/helper.cpp.o: src/CMakeFiles/minetest.dir/flags.make
+src/CMakeFiles/minetest.dir/script/common/helper.cpp.o: src/script/common/helper.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_100) "Building CXX object src/CMakeFiles/minetest.dir/script/common/helper.cpp.o"
+	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/script/common/helper.cpp.o -c /opt/minetest/src/script/common/helper.cpp
+
+src/CMakeFiles/minetest.dir/script/common/helper.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/minetest.dir/script/common/helper.cpp.i"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /opt/minetest/src/script/common/helper.cpp > CMakeFiles/minetest.dir/script/common/helper.cpp.i
+
+src/CMakeFiles/minetest.dir/script/common/helper.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/minetest.dir/script/common/helper.cpp.s"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /opt/minetest/src/script/common/helper.cpp -o CMakeFiles/minetest.dir/script/common/helper.cpp.s
+
+src/CMakeFiles/minetest.dir/script/common/helper.cpp.o.requires:
+
+.PHONY : src/CMakeFiles/minetest.dir/script/common/helper.cpp.o.requires
+
+src/CMakeFiles/minetest.dir/script/common/helper.cpp.o.provides: src/CMakeFiles/minetest.dir/script/common/helper.cpp.o.requires
+	$(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/script/common/helper.cpp.o.provides.build
+.PHONY : src/CMakeFiles/minetest.dir/script/common/helper.cpp.o.provides
+
+src/CMakeFiles/minetest.dir/script/common/helper.cpp.o.provides.build: src/CMakeFiles/minetest.dir/script/common/helper.cpp.o
+
+
 src/CMakeFiles/minetest.dir/script/cpp_api/s_async.cpp.o: src/CMakeFiles/minetest.dir/flags.make
 src/CMakeFiles/minetest.dir/script/cpp_api/s_async.cpp.o: src/script/cpp_api/s_async.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object src/CMakeFiles/minetest.dir/script/cpp_api/s_async.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_101) "Building CXX object src/CMakeFiles/minetest.dir/script/cpp_api/s_async.cpp.o"
 	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/script/cpp_api/s_async.cpp.o -c /opt/minetest/src/script/cpp_api/s_async.cpp
 
 src/CMakeFiles/minetest.dir/script/cpp_api/s_async.cpp.i: cmake_force
@@ -443,7 +2483,7 @@ src/CMakeFiles/minetest.dir/script/cpp_api/s_async.cpp.o.provides.build: src/CMa
 
 src/CMakeFiles/minetest.dir/script/cpp_api/s_base.cpp.o: src/CMakeFiles/minetest.dir/flags.make
 src/CMakeFiles/minetest.dir/script/cpp_api/s_base.cpp.o: src/script/cpp_api/s_base.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object src/CMakeFiles/minetest.dir/script/cpp_api/s_base.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_102) "Building CXX object src/CMakeFiles/minetest.dir/script/cpp_api/s_base.cpp.o"
 	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/script/cpp_api/s_base.cpp.o -c /opt/minetest/src/script/cpp_api/s_base.cpp
 
 src/CMakeFiles/minetest.dir/script/cpp_api/s_base.cpp.i: cmake_force
@@ -467,7 +2507,7 @@ src/CMakeFiles/minetest.dir/script/cpp_api/s_base.cpp.o.provides.build: src/CMak
 
 src/CMakeFiles/minetest.dir/script/cpp_api/s_client.cpp.o: src/CMakeFiles/minetest.dir/flags.make
 src/CMakeFiles/minetest.dir/script/cpp_api/s_client.cpp.o: src/script/cpp_api/s_client.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object src/CMakeFiles/minetest.dir/script/cpp_api/s_client.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_103) "Building CXX object src/CMakeFiles/minetest.dir/script/cpp_api/s_client.cpp.o"
 	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/script/cpp_api/s_client.cpp.o -c /opt/minetest/src/script/cpp_api/s_client.cpp
 
 src/CMakeFiles/minetest.dir/script/cpp_api/s_client.cpp.i: cmake_force
@@ -491,7 +2531,7 @@ src/CMakeFiles/minetest.dir/script/cpp_api/s_client.cpp.o.provides.build: src/CM
 
 src/CMakeFiles/minetest.dir/script/cpp_api/s_entity.cpp.o: src/CMakeFiles/minetest.dir/flags.make
 src/CMakeFiles/minetest.dir/script/cpp_api/s_entity.cpp.o: src/script/cpp_api/s_entity.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object src/CMakeFiles/minetest.dir/script/cpp_api/s_entity.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_104) "Building CXX object src/CMakeFiles/minetest.dir/script/cpp_api/s_entity.cpp.o"
 	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/script/cpp_api/s_entity.cpp.o -c /opt/minetest/src/script/cpp_api/s_entity.cpp
 
 src/CMakeFiles/minetest.dir/script/cpp_api/s_entity.cpp.i: cmake_force
@@ -515,7 +2555,7 @@ src/CMakeFiles/minetest.dir/script/cpp_api/s_entity.cpp.o.provides.build: src/CM
 
 src/CMakeFiles/minetest.dir/script/cpp_api/s_env.cpp.o: src/CMakeFiles/minetest.dir/flags.make
 src/CMakeFiles/minetest.dir/script/cpp_api/s_env.cpp.o: src/script/cpp_api/s_env.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object src/CMakeFiles/minetest.dir/script/cpp_api/s_env.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_105) "Building CXX object src/CMakeFiles/minetest.dir/script/cpp_api/s_env.cpp.o"
 	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/script/cpp_api/s_env.cpp.o -c /opt/minetest/src/script/cpp_api/s_env.cpp
 
 src/CMakeFiles/minetest.dir/script/cpp_api/s_env.cpp.i: cmake_force
@@ -539,7 +2579,7 @@ src/CMakeFiles/minetest.dir/script/cpp_api/s_env.cpp.o.provides.build: src/CMake
 
 src/CMakeFiles/minetest.dir/script/cpp_api/s_inventory.cpp.o: src/CMakeFiles/minetest.dir/flags.make
 src/CMakeFiles/minetest.dir/script/cpp_api/s_inventory.cpp.o: src/script/cpp_api/s_inventory.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object src/CMakeFiles/minetest.dir/script/cpp_api/s_inventory.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_106) "Building CXX object src/CMakeFiles/minetest.dir/script/cpp_api/s_inventory.cpp.o"
 	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/script/cpp_api/s_inventory.cpp.o -c /opt/minetest/src/script/cpp_api/s_inventory.cpp
 
 src/CMakeFiles/minetest.dir/script/cpp_api/s_inventory.cpp.i: cmake_force
@@ -563,7 +2603,7 @@ src/CMakeFiles/minetest.dir/script/cpp_api/s_inventory.cpp.o.provides.build: src
 
 src/CMakeFiles/minetest.dir/script/cpp_api/s_item.cpp.o: src/CMakeFiles/minetest.dir/flags.make
 src/CMakeFiles/minetest.dir/script/cpp_api/s_item.cpp.o: src/script/cpp_api/s_item.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object src/CMakeFiles/minetest.dir/script/cpp_api/s_item.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_107) "Building CXX object src/CMakeFiles/minetest.dir/script/cpp_api/s_item.cpp.o"
 	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/script/cpp_api/s_item.cpp.o -c /opt/minetest/src/script/cpp_api/s_item.cpp
 
 src/CMakeFiles/minetest.dir/script/cpp_api/s_item.cpp.i: cmake_force
@@ -587,7 +2627,7 @@ src/CMakeFiles/minetest.dir/script/cpp_api/s_item.cpp.o.provides.build: src/CMak
 
 src/CMakeFiles/minetest.dir/script/cpp_api/s_mainmenu.cpp.o: src/CMakeFiles/minetest.dir/flags.make
 src/CMakeFiles/minetest.dir/script/cpp_api/s_mainmenu.cpp.o: src/script/cpp_api/s_mainmenu.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object src/CMakeFiles/minetest.dir/script/cpp_api/s_mainmenu.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_108) "Building CXX object src/CMakeFiles/minetest.dir/script/cpp_api/s_mainmenu.cpp.o"
 	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/script/cpp_api/s_mainmenu.cpp.o -c /opt/minetest/src/script/cpp_api/s_mainmenu.cpp
 
 src/CMakeFiles/minetest.dir/script/cpp_api/s_mainmenu.cpp.i: cmake_force
@@ -609,9 +2649,33 @@ src/CMakeFiles/minetest.dir/script/cpp_api/s_mainmenu.cpp.o.provides: src/CMakeF
 src/CMakeFiles/minetest.dir/script/cpp_api/s_mainmenu.cpp.o.provides.build: src/CMakeFiles/minetest.dir/script/cpp_api/s_mainmenu.cpp.o
 
 
+src/CMakeFiles/minetest.dir/script/cpp_api/s_modchannels.cpp.o: src/CMakeFiles/minetest.dir/flags.make
+src/CMakeFiles/minetest.dir/script/cpp_api/s_modchannels.cpp.o: src/script/cpp_api/s_modchannels.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_109) "Building CXX object src/CMakeFiles/minetest.dir/script/cpp_api/s_modchannels.cpp.o"
+	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/script/cpp_api/s_modchannels.cpp.o -c /opt/minetest/src/script/cpp_api/s_modchannels.cpp
+
+src/CMakeFiles/minetest.dir/script/cpp_api/s_modchannels.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/minetest.dir/script/cpp_api/s_modchannels.cpp.i"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /opt/minetest/src/script/cpp_api/s_modchannels.cpp > CMakeFiles/minetest.dir/script/cpp_api/s_modchannels.cpp.i
+
+src/CMakeFiles/minetest.dir/script/cpp_api/s_modchannels.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/minetest.dir/script/cpp_api/s_modchannels.cpp.s"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /opt/minetest/src/script/cpp_api/s_modchannels.cpp -o CMakeFiles/minetest.dir/script/cpp_api/s_modchannels.cpp.s
+
+src/CMakeFiles/minetest.dir/script/cpp_api/s_modchannels.cpp.o.requires:
+
+.PHONY : src/CMakeFiles/minetest.dir/script/cpp_api/s_modchannels.cpp.o.requires
+
+src/CMakeFiles/minetest.dir/script/cpp_api/s_modchannels.cpp.o.provides: src/CMakeFiles/minetest.dir/script/cpp_api/s_modchannels.cpp.o.requires
+	$(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/script/cpp_api/s_modchannels.cpp.o.provides.build
+.PHONY : src/CMakeFiles/minetest.dir/script/cpp_api/s_modchannels.cpp.o.provides
+
+src/CMakeFiles/minetest.dir/script/cpp_api/s_modchannels.cpp.o.provides.build: src/CMakeFiles/minetest.dir/script/cpp_api/s_modchannels.cpp.o
+
+
 src/CMakeFiles/minetest.dir/script/cpp_api/s_node.cpp.o: src/CMakeFiles/minetest.dir/flags.make
 src/CMakeFiles/minetest.dir/script/cpp_api/s_node.cpp.o: src/script/cpp_api/s_node.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building CXX object src/CMakeFiles/minetest.dir/script/cpp_api/s_node.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_110) "Building CXX object src/CMakeFiles/minetest.dir/script/cpp_api/s_node.cpp.o"
 	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/script/cpp_api/s_node.cpp.o -c /opt/minetest/src/script/cpp_api/s_node.cpp
 
 src/CMakeFiles/minetest.dir/script/cpp_api/s_node.cpp.i: cmake_force
@@ -635,7 +2699,7 @@ src/CMakeFiles/minetest.dir/script/cpp_api/s_node.cpp.o.provides.build: src/CMak
 
 src/CMakeFiles/minetest.dir/script/cpp_api/s_nodemeta.cpp.o: src/CMakeFiles/minetest.dir/flags.make
 src/CMakeFiles/minetest.dir/script/cpp_api/s_nodemeta.cpp.o: src/script/cpp_api/s_nodemeta.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building CXX object src/CMakeFiles/minetest.dir/script/cpp_api/s_nodemeta.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_111) "Building CXX object src/CMakeFiles/minetest.dir/script/cpp_api/s_nodemeta.cpp.o"
 	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/script/cpp_api/s_nodemeta.cpp.o -c /opt/minetest/src/script/cpp_api/s_nodemeta.cpp
 
 src/CMakeFiles/minetest.dir/script/cpp_api/s_nodemeta.cpp.i: cmake_force
@@ -659,7 +2723,7 @@ src/CMakeFiles/minetest.dir/script/cpp_api/s_nodemeta.cpp.o.provides.build: src/
 
 src/CMakeFiles/minetest.dir/script/cpp_api/s_player.cpp.o: src/CMakeFiles/minetest.dir/flags.make
 src/CMakeFiles/minetest.dir/script/cpp_api/s_player.cpp.o: src/script/cpp_api/s_player.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building CXX object src/CMakeFiles/minetest.dir/script/cpp_api/s_player.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_112) "Building CXX object src/CMakeFiles/minetest.dir/script/cpp_api/s_player.cpp.o"
 	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/script/cpp_api/s_player.cpp.o -c /opt/minetest/src/script/cpp_api/s_player.cpp
 
 src/CMakeFiles/minetest.dir/script/cpp_api/s_player.cpp.i: cmake_force
@@ -683,7 +2747,7 @@ src/CMakeFiles/minetest.dir/script/cpp_api/s_player.cpp.o.provides.build: src/CM
 
 src/CMakeFiles/minetest.dir/script/cpp_api/s_security.cpp.o: src/CMakeFiles/minetest.dir/flags.make
 src/CMakeFiles/minetest.dir/script/cpp_api/s_security.cpp.o: src/script/cpp_api/s_security.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building CXX object src/CMakeFiles/minetest.dir/script/cpp_api/s_security.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_113) "Building CXX object src/CMakeFiles/minetest.dir/script/cpp_api/s_security.cpp.o"
 	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/script/cpp_api/s_security.cpp.o -c /opt/minetest/src/script/cpp_api/s_security.cpp
 
 src/CMakeFiles/minetest.dir/script/cpp_api/s_security.cpp.i: cmake_force
@@ -707,7 +2771,7 @@ src/CMakeFiles/minetest.dir/script/cpp_api/s_security.cpp.o.provides.build: src/
 
 src/CMakeFiles/minetest.dir/script/cpp_api/s_server.cpp.o: src/CMakeFiles/minetest.dir/flags.make
 src/CMakeFiles/minetest.dir/script/cpp_api/s_server.cpp.o: src/script/cpp_api/s_server.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building CXX object src/CMakeFiles/minetest.dir/script/cpp_api/s_server.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_114) "Building CXX object src/CMakeFiles/minetest.dir/script/cpp_api/s_server.cpp.o"
 	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/script/cpp_api/s_server.cpp.o -c /opt/minetest/src/script/cpp_api/s_server.cpp
 
 src/CMakeFiles/minetest.dir/script/cpp_api/s_server.cpp.i: cmake_force
@@ -731,7 +2795,7 @@ src/CMakeFiles/minetest.dir/script/cpp_api/s_server.cpp.o.provides.build: src/CM
 
 src/CMakeFiles/minetest.dir/script/lua_api/l_areastore.cpp.o: src/CMakeFiles/minetest.dir/flags.make
 src/CMakeFiles/minetest.dir/script/lua_api/l_areastore.cpp.o: src/script/lua_api/l_areastore.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building CXX object src/CMakeFiles/minetest.dir/script/lua_api/l_areastore.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_115) "Building CXX object src/CMakeFiles/minetest.dir/script/lua_api/l_areastore.cpp.o"
 	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/script/lua_api/l_areastore.cpp.o -c /opt/minetest/src/script/lua_api/l_areastore.cpp
 
 src/CMakeFiles/minetest.dir/script/lua_api/l_areastore.cpp.i: cmake_force
@@ -753,9 +2817,33 @@ src/CMakeFiles/minetest.dir/script/lua_api/l_areastore.cpp.o.provides: src/CMake
 src/CMakeFiles/minetest.dir/script/lua_api/l_areastore.cpp.o.provides.build: src/CMakeFiles/minetest.dir/script/lua_api/l_areastore.cpp.o
 
 
+src/CMakeFiles/minetest.dir/script/lua_api/l_auth.cpp.o: src/CMakeFiles/minetest.dir/flags.make
+src/CMakeFiles/minetest.dir/script/lua_api/l_auth.cpp.o: src/script/lua_api/l_auth.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_116) "Building CXX object src/CMakeFiles/minetest.dir/script/lua_api/l_auth.cpp.o"
+	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/script/lua_api/l_auth.cpp.o -c /opt/minetest/src/script/lua_api/l_auth.cpp
+
+src/CMakeFiles/minetest.dir/script/lua_api/l_auth.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/minetest.dir/script/lua_api/l_auth.cpp.i"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /opt/minetest/src/script/lua_api/l_auth.cpp > CMakeFiles/minetest.dir/script/lua_api/l_auth.cpp.i
+
+src/CMakeFiles/minetest.dir/script/lua_api/l_auth.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/minetest.dir/script/lua_api/l_auth.cpp.s"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /opt/minetest/src/script/lua_api/l_auth.cpp -o CMakeFiles/minetest.dir/script/lua_api/l_auth.cpp.s
+
+src/CMakeFiles/minetest.dir/script/lua_api/l_auth.cpp.o.requires:
+
+.PHONY : src/CMakeFiles/minetest.dir/script/lua_api/l_auth.cpp.o.requires
+
+src/CMakeFiles/minetest.dir/script/lua_api/l_auth.cpp.o.provides: src/CMakeFiles/minetest.dir/script/lua_api/l_auth.cpp.o.requires
+	$(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/script/lua_api/l_auth.cpp.o.provides.build
+.PHONY : src/CMakeFiles/minetest.dir/script/lua_api/l_auth.cpp.o.provides
+
+src/CMakeFiles/minetest.dir/script/lua_api/l_auth.cpp.o.provides.build: src/CMakeFiles/minetest.dir/script/lua_api/l_auth.cpp.o
+
+
 src/CMakeFiles/minetest.dir/script/lua_api/l_base.cpp.o: src/CMakeFiles/minetest.dir/flags.make
 src/CMakeFiles/minetest.dir/script/lua_api/l_base.cpp.o: src/script/lua_api/l_base.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building CXX object src/CMakeFiles/minetest.dir/script/lua_api/l_base.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_117) "Building CXX object src/CMakeFiles/minetest.dir/script/lua_api/l_base.cpp.o"
 	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/script/lua_api/l_base.cpp.o -c /opt/minetest/src/script/lua_api/l_base.cpp
 
 src/CMakeFiles/minetest.dir/script/lua_api/l_base.cpp.i: cmake_force
@@ -779,7 +2867,7 @@ src/CMakeFiles/minetest.dir/script/lua_api/l_base.cpp.o.provides.build: src/CMak
 
 src/CMakeFiles/minetest.dir/script/lua_api/l_camera.cpp.o: src/CMakeFiles/minetest.dir/flags.make
 src/CMakeFiles/minetest.dir/script/lua_api/l_camera.cpp.o: src/script/lua_api/l_camera.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Building CXX object src/CMakeFiles/minetest.dir/script/lua_api/l_camera.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_118) "Building CXX object src/CMakeFiles/minetest.dir/script/lua_api/l_camera.cpp.o"
 	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/script/lua_api/l_camera.cpp.o -c /opt/minetest/src/script/lua_api/l_camera.cpp
 
 src/CMakeFiles/minetest.dir/script/lua_api/l_camera.cpp.i: cmake_force
@@ -803,7 +2891,7 @@ src/CMakeFiles/minetest.dir/script/lua_api/l_camera.cpp.o.provides.build: src/CM
 
 src/CMakeFiles/minetest.dir/script/lua_api/l_client.cpp.o: src/CMakeFiles/minetest.dir/flags.make
 src/CMakeFiles/minetest.dir/script/lua_api/l_client.cpp.o: src/script/lua_api/l_client.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Building CXX object src/CMakeFiles/minetest.dir/script/lua_api/l_client.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_119) "Building CXX object src/CMakeFiles/minetest.dir/script/lua_api/l_client.cpp.o"
 	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/script/lua_api/l_client.cpp.o -c /opt/minetest/src/script/lua_api/l_client.cpp
 
 src/CMakeFiles/minetest.dir/script/lua_api/l_client.cpp.i: cmake_force
@@ -827,7 +2915,7 @@ src/CMakeFiles/minetest.dir/script/lua_api/l_client.cpp.o.provides.build: src/CM
 
 src/CMakeFiles/minetest.dir/script/lua_api/l_craft.cpp.o: src/CMakeFiles/minetest.dir/flags.make
 src/CMakeFiles/minetest.dir/script/lua_api/l_craft.cpp.o: src/script/lua_api/l_craft.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Building CXX object src/CMakeFiles/minetest.dir/script/lua_api/l_craft.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_120) "Building CXX object src/CMakeFiles/minetest.dir/script/lua_api/l_craft.cpp.o"
 	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/script/lua_api/l_craft.cpp.o -c /opt/minetest/src/script/lua_api/l_craft.cpp
 
 src/CMakeFiles/minetest.dir/script/lua_api/l_craft.cpp.i: cmake_force
@@ -851,7 +2939,7 @@ src/CMakeFiles/minetest.dir/script/lua_api/l_craft.cpp.o.provides.build: src/CMa
 
 src/CMakeFiles/minetest.dir/script/lua_api/l_env.cpp.o: src/CMakeFiles/minetest.dir/flags.make
 src/CMakeFiles/minetest.dir/script/lua_api/l_env.cpp.o: src/script/lua_api/l_env.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_34) "Building CXX object src/CMakeFiles/minetest.dir/script/lua_api/l_env.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_121) "Building CXX object src/CMakeFiles/minetest.dir/script/lua_api/l_env.cpp.o"
 	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/script/lua_api/l_env.cpp.o -c /opt/minetest/src/script/lua_api/l_env.cpp
 
 src/CMakeFiles/minetest.dir/script/lua_api/l_env.cpp.i: cmake_force
@@ -875,7 +2963,7 @@ src/CMakeFiles/minetest.dir/script/lua_api/l_env.cpp.o.provides.build: src/CMake
 
 src/CMakeFiles/minetest.dir/script/lua_api/l_http.cpp.o: src/CMakeFiles/minetest.dir/flags.make
 src/CMakeFiles/minetest.dir/script/lua_api/l_http.cpp.o: src/script/lua_api/l_http.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_35) "Building CXX object src/CMakeFiles/minetest.dir/script/lua_api/l_http.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_122) "Building CXX object src/CMakeFiles/minetest.dir/script/lua_api/l_http.cpp.o"
 	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/script/lua_api/l_http.cpp.o -c /opt/minetest/src/script/lua_api/l_http.cpp
 
 src/CMakeFiles/minetest.dir/script/lua_api/l_http.cpp.i: cmake_force
@@ -899,7 +2987,7 @@ src/CMakeFiles/minetest.dir/script/lua_api/l_http.cpp.o.provides.build: src/CMak
 
 src/CMakeFiles/minetest.dir/script/lua_api/l_inventory.cpp.o: src/CMakeFiles/minetest.dir/flags.make
 src/CMakeFiles/minetest.dir/script/lua_api/l_inventory.cpp.o: src/script/lua_api/l_inventory.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_36) "Building CXX object src/CMakeFiles/minetest.dir/script/lua_api/l_inventory.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_123) "Building CXX object src/CMakeFiles/minetest.dir/script/lua_api/l_inventory.cpp.o"
 	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/script/lua_api/l_inventory.cpp.o -c /opt/minetest/src/script/lua_api/l_inventory.cpp
 
 src/CMakeFiles/minetest.dir/script/lua_api/l_inventory.cpp.i: cmake_force
@@ -923,7 +3011,7 @@ src/CMakeFiles/minetest.dir/script/lua_api/l_inventory.cpp.o.provides.build: src
 
 src/CMakeFiles/minetest.dir/script/lua_api/l_item.cpp.o: src/CMakeFiles/minetest.dir/flags.make
 src/CMakeFiles/minetest.dir/script/lua_api/l_item.cpp.o: src/script/lua_api/l_item.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_37) "Building CXX object src/CMakeFiles/minetest.dir/script/lua_api/l_item.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_124) "Building CXX object src/CMakeFiles/minetest.dir/script/lua_api/l_item.cpp.o"
 	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/script/lua_api/l_item.cpp.o -c /opt/minetest/src/script/lua_api/l_item.cpp
 
 src/CMakeFiles/minetest.dir/script/lua_api/l_item.cpp.i: cmake_force
@@ -947,7 +3035,7 @@ src/CMakeFiles/minetest.dir/script/lua_api/l_item.cpp.o.provides.build: src/CMak
 
 src/CMakeFiles/minetest.dir/script/lua_api/l_itemstackmeta.cpp.o: src/CMakeFiles/minetest.dir/flags.make
 src/CMakeFiles/minetest.dir/script/lua_api/l_itemstackmeta.cpp.o: src/script/lua_api/l_itemstackmeta.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_38) "Building CXX object src/CMakeFiles/minetest.dir/script/lua_api/l_itemstackmeta.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_125) "Building CXX object src/CMakeFiles/minetest.dir/script/lua_api/l_itemstackmeta.cpp.o"
 	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/script/lua_api/l_itemstackmeta.cpp.o -c /opt/minetest/src/script/lua_api/l_itemstackmeta.cpp
 
 src/CMakeFiles/minetest.dir/script/lua_api/l_itemstackmeta.cpp.i: cmake_force
@@ -971,7 +3059,7 @@ src/CMakeFiles/minetest.dir/script/lua_api/l_itemstackmeta.cpp.o.provides.build:
 
 src/CMakeFiles/minetest.dir/script/lua_api/l_localplayer.cpp.o: src/CMakeFiles/minetest.dir/flags.make
 src/CMakeFiles/minetest.dir/script/lua_api/l_localplayer.cpp.o: src/script/lua_api/l_localplayer.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_39) "Building CXX object src/CMakeFiles/minetest.dir/script/lua_api/l_localplayer.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_126) "Building CXX object src/CMakeFiles/minetest.dir/script/lua_api/l_localplayer.cpp.o"
 	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/script/lua_api/l_localplayer.cpp.o -c /opt/minetest/src/script/lua_api/l_localplayer.cpp
 
 src/CMakeFiles/minetest.dir/script/lua_api/l_localplayer.cpp.i: cmake_force
@@ -995,7 +3083,7 @@ src/CMakeFiles/minetest.dir/script/lua_api/l_localplayer.cpp.o.provides.build: s
 
 src/CMakeFiles/minetest.dir/script/lua_api/l_mainmenu.cpp.o: src/CMakeFiles/minetest.dir/flags.make
 src/CMakeFiles/minetest.dir/script/lua_api/l_mainmenu.cpp.o: src/script/lua_api/l_mainmenu.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_40) "Building CXX object src/CMakeFiles/minetest.dir/script/lua_api/l_mainmenu.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_127) "Building CXX object src/CMakeFiles/minetest.dir/script/lua_api/l_mainmenu.cpp.o"
 	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/script/lua_api/l_mainmenu.cpp.o -c /opt/minetest/src/script/lua_api/l_mainmenu.cpp
 
 src/CMakeFiles/minetest.dir/script/lua_api/l_mainmenu.cpp.i: cmake_force
@@ -1019,7 +3107,7 @@ src/CMakeFiles/minetest.dir/script/lua_api/l_mainmenu.cpp.o.provides.build: src/
 
 src/CMakeFiles/minetest.dir/script/lua_api/l_mapgen.cpp.o: src/CMakeFiles/minetest.dir/flags.make
 src/CMakeFiles/minetest.dir/script/lua_api/l_mapgen.cpp.o: src/script/lua_api/l_mapgen.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_41) "Building CXX object src/CMakeFiles/minetest.dir/script/lua_api/l_mapgen.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_128) "Building CXX object src/CMakeFiles/minetest.dir/script/lua_api/l_mapgen.cpp.o"
 	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/script/lua_api/l_mapgen.cpp.o -c /opt/minetest/src/script/lua_api/l_mapgen.cpp
 
 src/CMakeFiles/minetest.dir/script/lua_api/l_mapgen.cpp.i: cmake_force
@@ -1043,7 +3131,7 @@ src/CMakeFiles/minetest.dir/script/lua_api/l_mapgen.cpp.o.provides.build: src/CM
 
 src/CMakeFiles/minetest.dir/script/lua_api/l_metadata.cpp.o: src/CMakeFiles/minetest.dir/flags.make
 src/CMakeFiles/minetest.dir/script/lua_api/l_metadata.cpp.o: src/script/lua_api/l_metadata.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_42) "Building CXX object src/CMakeFiles/minetest.dir/script/lua_api/l_metadata.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_129) "Building CXX object src/CMakeFiles/minetest.dir/script/lua_api/l_metadata.cpp.o"
 	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/script/lua_api/l_metadata.cpp.o -c /opt/minetest/src/script/lua_api/l_metadata.cpp
 
 src/CMakeFiles/minetest.dir/script/lua_api/l_metadata.cpp.i: cmake_force
@@ -1067,7 +3155,7 @@ src/CMakeFiles/minetest.dir/script/lua_api/l_metadata.cpp.o.provides.build: src/
 
 src/CMakeFiles/minetest.dir/script/lua_api/l_minimap.cpp.o: src/CMakeFiles/minetest.dir/flags.make
 src/CMakeFiles/minetest.dir/script/lua_api/l_minimap.cpp.o: src/script/lua_api/l_minimap.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_43) "Building CXX object src/CMakeFiles/minetest.dir/script/lua_api/l_minimap.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_130) "Building CXX object src/CMakeFiles/minetest.dir/script/lua_api/l_minimap.cpp.o"
 	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/script/lua_api/l_minimap.cpp.o -c /opt/minetest/src/script/lua_api/l_minimap.cpp
 
 src/CMakeFiles/minetest.dir/script/lua_api/l_minimap.cpp.i: cmake_force
@@ -1089,9 +3177,33 @@ src/CMakeFiles/minetest.dir/script/lua_api/l_minimap.cpp.o.provides: src/CMakeFi
 src/CMakeFiles/minetest.dir/script/lua_api/l_minimap.cpp.o.provides.build: src/CMakeFiles/minetest.dir/script/lua_api/l_minimap.cpp.o
 
 
+src/CMakeFiles/minetest.dir/script/lua_api/l_modchannels.cpp.o: src/CMakeFiles/minetest.dir/flags.make
+src/CMakeFiles/minetest.dir/script/lua_api/l_modchannels.cpp.o: src/script/lua_api/l_modchannels.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_131) "Building CXX object src/CMakeFiles/minetest.dir/script/lua_api/l_modchannels.cpp.o"
+	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/script/lua_api/l_modchannels.cpp.o -c /opt/minetest/src/script/lua_api/l_modchannels.cpp
+
+src/CMakeFiles/minetest.dir/script/lua_api/l_modchannels.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/minetest.dir/script/lua_api/l_modchannels.cpp.i"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /opt/minetest/src/script/lua_api/l_modchannels.cpp > CMakeFiles/minetest.dir/script/lua_api/l_modchannels.cpp.i
+
+src/CMakeFiles/minetest.dir/script/lua_api/l_modchannels.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/minetest.dir/script/lua_api/l_modchannels.cpp.s"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /opt/minetest/src/script/lua_api/l_modchannels.cpp -o CMakeFiles/minetest.dir/script/lua_api/l_modchannels.cpp.s
+
+src/CMakeFiles/minetest.dir/script/lua_api/l_modchannels.cpp.o.requires:
+
+.PHONY : src/CMakeFiles/minetest.dir/script/lua_api/l_modchannels.cpp.o.requires
+
+src/CMakeFiles/minetest.dir/script/lua_api/l_modchannels.cpp.o.provides: src/CMakeFiles/minetest.dir/script/lua_api/l_modchannels.cpp.o.requires
+	$(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/script/lua_api/l_modchannels.cpp.o.provides.build
+.PHONY : src/CMakeFiles/minetest.dir/script/lua_api/l_modchannels.cpp.o.provides
+
+src/CMakeFiles/minetest.dir/script/lua_api/l_modchannels.cpp.o.provides.build: src/CMakeFiles/minetest.dir/script/lua_api/l_modchannels.cpp.o
+
+
 src/CMakeFiles/minetest.dir/script/lua_api/l_nodemeta.cpp.o: src/CMakeFiles/minetest.dir/flags.make
 src/CMakeFiles/minetest.dir/script/lua_api/l_nodemeta.cpp.o: src/script/lua_api/l_nodemeta.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_44) "Building CXX object src/CMakeFiles/minetest.dir/script/lua_api/l_nodemeta.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_132) "Building CXX object src/CMakeFiles/minetest.dir/script/lua_api/l_nodemeta.cpp.o"
 	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/script/lua_api/l_nodemeta.cpp.o -c /opt/minetest/src/script/lua_api/l_nodemeta.cpp
 
 src/CMakeFiles/minetest.dir/script/lua_api/l_nodemeta.cpp.i: cmake_force
@@ -1115,7 +3227,7 @@ src/CMakeFiles/minetest.dir/script/lua_api/l_nodemeta.cpp.o.provides.build: src/
 
 src/CMakeFiles/minetest.dir/script/lua_api/l_nodetimer.cpp.o: src/CMakeFiles/minetest.dir/flags.make
 src/CMakeFiles/minetest.dir/script/lua_api/l_nodetimer.cpp.o: src/script/lua_api/l_nodetimer.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_45) "Building CXX object src/CMakeFiles/minetest.dir/script/lua_api/l_nodetimer.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_133) "Building CXX object src/CMakeFiles/minetest.dir/script/lua_api/l_nodetimer.cpp.o"
 	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/script/lua_api/l_nodetimer.cpp.o -c /opt/minetest/src/script/lua_api/l_nodetimer.cpp
 
 src/CMakeFiles/minetest.dir/script/lua_api/l_nodetimer.cpp.i: cmake_force
@@ -1139,7 +3251,7 @@ src/CMakeFiles/minetest.dir/script/lua_api/l_nodetimer.cpp.o.provides.build: src
 
 src/CMakeFiles/minetest.dir/script/lua_api/l_noise.cpp.o: src/CMakeFiles/minetest.dir/flags.make
 src/CMakeFiles/minetest.dir/script/lua_api/l_noise.cpp.o: src/script/lua_api/l_noise.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_46) "Building CXX object src/CMakeFiles/minetest.dir/script/lua_api/l_noise.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_134) "Building CXX object src/CMakeFiles/minetest.dir/script/lua_api/l_noise.cpp.o"
 	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/script/lua_api/l_noise.cpp.o -c /opt/minetest/src/script/lua_api/l_noise.cpp
 
 src/CMakeFiles/minetest.dir/script/lua_api/l_noise.cpp.i: cmake_force
@@ -1163,7 +3275,7 @@ src/CMakeFiles/minetest.dir/script/lua_api/l_noise.cpp.o.provides.build: src/CMa
 
 src/CMakeFiles/minetest.dir/script/lua_api/l_object.cpp.o: src/CMakeFiles/minetest.dir/flags.make
 src/CMakeFiles/minetest.dir/script/lua_api/l_object.cpp.o: src/script/lua_api/l_object.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_47) "Building CXX object src/CMakeFiles/minetest.dir/script/lua_api/l_object.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_135) "Building CXX object src/CMakeFiles/minetest.dir/script/lua_api/l_object.cpp.o"
 	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/script/lua_api/l_object.cpp.o -c /opt/minetest/src/script/lua_api/l_object.cpp
 
 src/CMakeFiles/minetest.dir/script/lua_api/l_object.cpp.i: cmake_force
@@ -1187,7 +3299,7 @@ src/CMakeFiles/minetest.dir/script/lua_api/l_object.cpp.o.provides.build: src/CM
 
 src/CMakeFiles/minetest.dir/script/lua_api/l_particles.cpp.o: src/CMakeFiles/minetest.dir/flags.make
 src/CMakeFiles/minetest.dir/script/lua_api/l_particles.cpp.o: src/script/lua_api/l_particles.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_48) "Building CXX object src/CMakeFiles/minetest.dir/script/lua_api/l_particles.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_136) "Building CXX object src/CMakeFiles/minetest.dir/script/lua_api/l_particles.cpp.o"
 	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/script/lua_api/l_particles.cpp.o -c /opt/minetest/src/script/lua_api/l_particles.cpp
 
 src/CMakeFiles/minetest.dir/script/lua_api/l_particles.cpp.i: cmake_force
@@ -1209,9 +3321,57 @@ src/CMakeFiles/minetest.dir/script/lua_api/l_particles.cpp.o.provides: src/CMake
 src/CMakeFiles/minetest.dir/script/lua_api/l_particles.cpp.o.provides.build: src/CMakeFiles/minetest.dir/script/lua_api/l_particles.cpp.o
 
 
+src/CMakeFiles/minetest.dir/script/lua_api/l_particles_local.cpp.o: src/CMakeFiles/minetest.dir/flags.make
+src/CMakeFiles/minetest.dir/script/lua_api/l_particles_local.cpp.o: src/script/lua_api/l_particles_local.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_137) "Building CXX object src/CMakeFiles/minetest.dir/script/lua_api/l_particles_local.cpp.o"
+	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/script/lua_api/l_particles_local.cpp.o -c /opt/minetest/src/script/lua_api/l_particles_local.cpp
+
+src/CMakeFiles/minetest.dir/script/lua_api/l_particles_local.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/minetest.dir/script/lua_api/l_particles_local.cpp.i"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /opt/minetest/src/script/lua_api/l_particles_local.cpp > CMakeFiles/minetest.dir/script/lua_api/l_particles_local.cpp.i
+
+src/CMakeFiles/minetest.dir/script/lua_api/l_particles_local.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/minetest.dir/script/lua_api/l_particles_local.cpp.s"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /opt/minetest/src/script/lua_api/l_particles_local.cpp -o CMakeFiles/minetest.dir/script/lua_api/l_particles_local.cpp.s
+
+src/CMakeFiles/minetest.dir/script/lua_api/l_particles_local.cpp.o.requires:
+
+.PHONY : src/CMakeFiles/minetest.dir/script/lua_api/l_particles_local.cpp.o.requires
+
+src/CMakeFiles/minetest.dir/script/lua_api/l_particles_local.cpp.o.provides: src/CMakeFiles/minetest.dir/script/lua_api/l_particles_local.cpp.o.requires
+	$(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/script/lua_api/l_particles_local.cpp.o.provides.build
+.PHONY : src/CMakeFiles/minetest.dir/script/lua_api/l_particles_local.cpp.o.provides
+
+src/CMakeFiles/minetest.dir/script/lua_api/l_particles_local.cpp.o.provides.build: src/CMakeFiles/minetest.dir/script/lua_api/l_particles_local.cpp.o
+
+
+src/CMakeFiles/minetest.dir/script/lua_api/l_playermeta.cpp.o: src/CMakeFiles/minetest.dir/flags.make
+src/CMakeFiles/minetest.dir/script/lua_api/l_playermeta.cpp.o: src/script/lua_api/l_playermeta.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_138) "Building CXX object src/CMakeFiles/minetest.dir/script/lua_api/l_playermeta.cpp.o"
+	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/script/lua_api/l_playermeta.cpp.o -c /opt/minetest/src/script/lua_api/l_playermeta.cpp
+
+src/CMakeFiles/minetest.dir/script/lua_api/l_playermeta.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/minetest.dir/script/lua_api/l_playermeta.cpp.i"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /opt/minetest/src/script/lua_api/l_playermeta.cpp > CMakeFiles/minetest.dir/script/lua_api/l_playermeta.cpp.i
+
+src/CMakeFiles/minetest.dir/script/lua_api/l_playermeta.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/minetest.dir/script/lua_api/l_playermeta.cpp.s"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /opt/minetest/src/script/lua_api/l_playermeta.cpp -o CMakeFiles/minetest.dir/script/lua_api/l_playermeta.cpp.s
+
+src/CMakeFiles/minetest.dir/script/lua_api/l_playermeta.cpp.o.requires:
+
+.PHONY : src/CMakeFiles/minetest.dir/script/lua_api/l_playermeta.cpp.o.requires
+
+src/CMakeFiles/minetest.dir/script/lua_api/l_playermeta.cpp.o.provides: src/CMakeFiles/minetest.dir/script/lua_api/l_playermeta.cpp.o.requires
+	$(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/script/lua_api/l_playermeta.cpp.o.provides.build
+.PHONY : src/CMakeFiles/minetest.dir/script/lua_api/l_playermeta.cpp.o.provides
+
+src/CMakeFiles/minetest.dir/script/lua_api/l_playermeta.cpp.o.provides.build: src/CMakeFiles/minetest.dir/script/lua_api/l_playermeta.cpp.o
+
+
 src/CMakeFiles/minetest.dir/script/lua_api/l_rollback.cpp.o: src/CMakeFiles/minetest.dir/flags.make
 src/CMakeFiles/minetest.dir/script/lua_api/l_rollback.cpp.o: src/script/lua_api/l_rollback.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_49) "Building CXX object src/CMakeFiles/minetest.dir/script/lua_api/l_rollback.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_139) "Building CXX object src/CMakeFiles/minetest.dir/script/lua_api/l_rollback.cpp.o"
 	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/script/lua_api/l_rollback.cpp.o -c /opt/minetest/src/script/lua_api/l_rollback.cpp
 
 src/CMakeFiles/minetest.dir/script/lua_api/l_rollback.cpp.i: cmake_force
@@ -1235,7 +3395,7 @@ src/CMakeFiles/minetest.dir/script/lua_api/l_rollback.cpp.o.provides.build: src/
 
 src/CMakeFiles/minetest.dir/script/lua_api/l_server.cpp.o: src/CMakeFiles/minetest.dir/flags.make
 src/CMakeFiles/minetest.dir/script/lua_api/l_server.cpp.o: src/script/lua_api/l_server.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_50) "Building CXX object src/CMakeFiles/minetest.dir/script/lua_api/l_server.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_140) "Building CXX object src/CMakeFiles/minetest.dir/script/lua_api/l_server.cpp.o"
 	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/script/lua_api/l_server.cpp.o -c /opt/minetest/src/script/lua_api/l_server.cpp
 
 src/CMakeFiles/minetest.dir/script/lua_api/l_server.cpp.i: cmake_force
@@ -1259,7 +3419,7 @@ src/CMakeFiles/minetest.dir/script/lua_api/l_server.cpp.o.provides.build: src/CM
 
 src/CMakeFiles/minetest.dir/script/lua_api/l_settings.cpp.o: src/CMakeFiles/minetest.dir/flags.make
 src/CMakeFiles/minetest.dir/script/lua_api/l_settings.cpp.o: src/script/lua_api/l_settings.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_51) "Building CXX object src/CMakeFiles/minetest.dir/script/lua_api/l_settings.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_141) "Building CXX object src/CMakeFiles/minetest.dir/script/lua_api/l_settings.cpp.o"
 	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/script/lua_api/l_settings.cpp.o -c /opt/minetest/src/script/lua_api/l_settings.cpp
 
 src/CMakeFiles/minetest.dir/script/lua_api/l_settings.cpp.i: cmake_force
@@ -1283,7 +3443,7 @@ src/CMakeFiles/minetest.dir/script/lua_api/l_settings.cpp.o.provides.build: src/
 
 src/CMakeFiles/minetest.dir/script/lua_api/l_sound.cpp.o: src/CMakeFiles/minetest.dir/flags.make
 src/CMakeFiles/minetest.dir/script/lua_api/l_sound.cpp.o: src/script/lua_api/l_sound.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_52) "Building CXX object src/CMakeFiles/minetest.dir/script/lua_api/l_sound.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_142) "Building CXX object src/CMakeFiles/minetest.dir/script/lua_api/l_sound.cpp.o"
 	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/script/lua_api/l_sound.cpp.o -c /opt/minetest/src/script/lua_api/l_sound.cpp
 
 src/CMakeFiles/minetest.dir/script/lua_api/l_sound.cpp.i: cmake_force
@@ -1307,7 +3467,7 @@ src/CMakeFiles/minetest.dir/script/lua_api/l_sound.cpp.o.provides.build: src/CMa
 
 src/CMakeFiles/minetest.dir/script/lua_api/l_storage.cpp.o: src/CMakeFiles/minetest.dir/flags.make
 src/CMakeFiles/minetest.dir/script/lua_api/l_storage.cpp.o: src/script/lua_api/l_storage.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_53) "Building CXX object src/CMakeFiles/minetest.dir/script/lua_api/l_storage.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_143) "Building CXX object src/CMakeFiles/minetest.dir/script/lua_api/l_storage.cpp.o"
 	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/script/lua_api/l_storage.cpp.o -c /opt/minetest/src/script/lua_api/l_storage.cpp
 
 src/CMakeFiles/minetest.dir/script/lua_api/l_storage.cpp.i: cmake_force
@@ -1331,7 +3491,7 @@ src/CMakeFiles/minetest.dir/script/lua_api/l_storage.cpp.o.provides.build: src/C
 
 src/CMakeFiles/minetest.dir/script/lua_api/l_util.cpp.o: src/CMakeFiles/minetest.dir/flags.make
 src/CMakeFiles/minetest.dir/script/lua_api/l_util.cpp.o: src/script/lua_api/l_util.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_54) "Building CXX object src/CMakeFiles/minetest.dir/script/lua_api/l_util.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_144) "Building CXX object src/CMakeFiles/minetest.dir/script/lua_api/l_util.cpp.o"
 	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/script/lua_api/l_util.cpp.o -c /opt/minetest/src/script/lua_api/l_util.cpp
 
 src/CMakeFiles/minetest.dir/script/lua_api/l_util.cpp.i: cmake_force
@@ -1355,7 +3515,7 @@ src/CMakeFiles/minetest.dir/script/lua_api/l_util.cpp.o.provides.build: src/CMak
 
 src/CMakeFiles/minetest.dir/script/lua_api/l_vmanip.cpp.o: src/CMakeFiles/minetest.dir/flags.make
 src/CMakeFiles/minetest.dir/script/lua_api/l_vmanip.cpp.o: src/script/lua_api/l_vmanip.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_55) "Building CXX object src/CMakeFiles/minetest.dir/script/lua_api/l_vmanip.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_145) "Building CXX object src/CMakeFiles/minetest.dir/script/lua_api/l_vmanip.cpp.o"
 	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/script/lua_api/l_vmanip.cpp.o -c /opt/minetest/src/script/lua_api/l_vmanip.cpp
 
 src/CMakeFiles/minetest.dir/script/lua_api/l_vmanip.cpp.i: cmake_force
@@ -1379,7 +3539,7 @@ src/CMakeFiles/minetest.dir/script/lua_api/l_vmanip.cpp.o.provides.build: src/CM
 
 src/CMakeFiles/minetest.dir/script/scripting_client.cpp.o: src/CMakeFiles/minetest.dir/flags.make
 src/CMakeFiles/minetest.dir/script/scripting_client.cpp.o: src/script/scripting_client.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_56) "Building CXX object src/CMakeFiles/minetest.dir/script/scripting_client.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_146) "Building CXX object src/CMakeFiles/minetest.dir/script/scripting_client.cpp.o"
 	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/script/scripting_client.cpp.o -c /opt/minetest/src/script/scripting_client.cpp
 
 src/CMakeFiles/minetest.dir/script/scripting_client.cpp.i: cmake_force
@@ -1403,7 +3563,7 @@ src/CMakeFiles/minetest.dir/script/scripting_client.cpp.o.provides.build: src/CM
 
 src/CMakeFiles/minetest.dir/script/scripting_mainmenu.cpp.o: src/CMakeFiles/minetest.dir/flags.make
 src/CMakeFiles/minetest.dir/script/scripting_mainmenu.cpp.o: src/script/scripting_mainmenu.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_57) "Building CXX object src/CMakeFiles/minetest.dir/script/scripting_mainmenu.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_147) "Building CXX object src/CMakeFiles/minetest.dir/script/scripting_mainmenu.cpp.o"
 	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/script/scripting_mainmenu.cpp.o -c /opt/minetest/src/script/scripting_mainmenu.cpp
 
 src/CMakeFiles/minetest.dir/script/scripting_mainmenu.cpp.i: cmake_force
@@ -1427,7 +3587,7 @@ src/CMakeFiles/minetest.dir/script/scripting_mainmenu.cpp.o.provides.build: src/
 
 src/CMakeFiles/minetest.dir/script/scripting_server.cpp.o: src/CMakeFiles/minetest.dir/flags.make
 src/CMakeFiles/minetest.dir/script/scripting_server.cpp.o: src/script/scripting_server.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_58) "Building CXX object src/CMakeFiles/minetest.dir/script/scripting_server.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_148) "Building CXX object src/CMakeFiles/minetest.dir/script/scripting_server.cpp.o"
 	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/script/scripting_server.cpp.o -c /opt/minetest/src/script/scripting_server.cpp
 
 src/CMakeFiles/minetest.dir/script/scripting_server.cpp.i: cmake_force
@@ -1449,9 +3609,57 @@ src/CMakeFiles/minetest.dir/script/scripting_server.cpp.o.provides: src/CMakeFil
 src/CMakeFiles/minetest.dir/script/scripting_server.cpp.o.provides.build: src/CMakeFiles/minetest.dir/script/scripting_server.cpp.o
 
 
+src/CMakeFiles/minetest.dir/server/activeobjectmgr.cpp.o: src/CMakeFiles/minetest.dir/flags.make
+src/CMakeFiles/minetest.dir/server/activeobjectmgr.cpp.o: src/server/activeobjectmgr.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_149) "Building CXX object src/CMakeFiles/minetest.dir/server/activeobjectmgr.cpp.o"
+	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/server/activeobjectmgr.cpp.o -c /opt/minetest/src/server/activeobjectmgr.cpp
+
+src/CMakeFiles/minetest.dir/server/activeobjectmgr.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/minetest.dir/server/activeobjectmgr.cpp.i"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /opt/minetest/src/server/activeobjectmgr.cpp > CMakeFiles/minetest.dir/server/activeobjectmgr.cpp.i
+
+src/CMakeFiles/minetest.dir/server/activeobjectmgr.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/minetest.dir/server/activeobjectmgr.cpp.s"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /opt/minetest/src/server/activeobjectmgr.cpp -o CMakeFiles/minetest.dir/server/activeobjectmgr.cpp.s
+
+src/CMakeFiles/minetest.dir/server/activeobjectmgr.cpp.o.requires:
+
+.PHONY : src/CMakeFiles/minetest.dir/server/activeobjectmgr.cpp.o.requires
+
+src/CMakeFiles/minetest.dir/server/activeobjectmgr.cpp.o.provides: src/CMakeFiles/minetest.dir/server/activeobjectmgr.cpp.o.requires
+	$(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/server/activeobjectmgr.cpp.o.provides.build
+.PHONY : src/CMakeFiles/minetest.dir/server/activeobjectmgr.cpp.o.provides
+
+src/CMakeFiles/minetest.dir/server/activeobjectmgr.cpp.o.provides.build: src/CMakeFiles/minetest.dir/server/activeobjectmgr.cpp.o
+
+
+src/CMakeFiles/minetest.dir/server/mods.cpp.o: src/CMakeFiles/minetest.dir/flags.make
+src/CMakeFiles/minetest.dir/server/mods.cpp.o: src/server/mods.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_150) "Building CXX object src/CMakeFiles/minetest.dir/server/mods.cpp.o"
+	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/server/mods.cpp.o -c /opt/minetest/src/server/mods.cpp
+
+src/CMakeFiles/minetest.dir/server/mods.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/minetest.dir/server/mods.cpp.i"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /opt/minetest/src/server/mods.cpp > CMakeFiles/minetest.dir/server/mods.cpp.i
+
+src/CMakeFiles/minetest.dir/server/mods.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/minetest.dir/server/mods.cpp.s"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /opt/minetest/src/server/mods.cpp -o CMakeFiles/minetest.dir/server/mods.cpp.s
+
+src/CMakeFiles/minetest.dir/server/mods.cpp.o.requires:
+
+.PHONY : src/CMakeFiles/minetest.dir/server/mods.cpp.o.requires
+
+src/CMakeFiles/minetest.dir/server/mods.cpp.o.provides: src/CMakeFiles/minetest.dir/server/mods.cpp.o.requires
+	$(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/server/mods.cpp.o.provides.build
+.PHONY : src/CMakeFiles/minetest.dir/server/mods.cpp.o.provides
+
+src/CMakeFiles/minetest.dir/server/mods.cpp.o.provides.build: src/CMakeFiles/minetest.dir/server/mods.cpp.o
+
+
 src/CMakeFiles/minetest.dir/threading/event.cpp.o: src/CMakeFiles/minetest.dir/flags.make
 src/CMakeFiles/minetest.dir/threading/event.cpp.o: src/threading/event.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_59) "Building CXX object src/CMakeFiles/minetest.dir/threading/event.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_151) "Building CXX object src/CMakeFiles/minetest.dir/threading/event.cpp.o"
 	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/threading/event.cpp.o -c /opt/minetest/src/threading/event.cpp
 
 src/CMakeFiles/minetest.dir/threading/event.cpp.i: cmake_force
@@ -1473,33 +3681,9 @@ src/CMakeFiles/minetest.dir/threading/event.cpp.o.provides: src/CMakeFiles/minet
 src/CMakeFiles/minetest.dir/threading/event.cpp.o.provides.build: src/CMakeFiles/minetest.dir/threading/event.cpp.o
 
 
-src/CMakeFiles/minetest.dir/threading/mutex.cpp.o: src/CMakeFiles/minetest.dir/flags.make
-src/CMakeFiles/minetest.dir/threading/mutex.cpp.o: src/threading/mutex.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_60) "Building CXX object src/CMakeFiles/minetest.dir/threading/mutex.cpp.o"
-	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/threading/mutex.cpp.o -c /opt/minetest/src/threading/mutex.cpp
-
-src/CMakeFiles/minetest.dir/threading/mutex.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/minetest.dir/threading/mutex.cpp.i"
-	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /opt/minetest/src/threading/mutex.cpp > CMakeFiles/minetest.dir/threading/mutex.cpp.i
-
-src/CMakeFiles/minetest.dir/threading/mutex.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/minetest.dir/threading/mutex.cpp.s"
-	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /opt/minetest/src/threading/mutex.cpp -o CMakeFiles/minetest.dir/threading/mutex.cpp.s
-
-src/CMakeFiles/minetest.dir/threading/mutex.cpp.o.requires:
-
-.PHONY : src/CMakeFiles/minetest.dir/threading/mutex.cpp.o.requires
-
-src/CMakeFiles/minetest.dir/threading/mutex.cpp.o.provides: src/CMakeFiles/minetest.dir/threading/mutex.cpp.o.requires
-	$(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/threading/mutex.cpp.o.provides.build
-.PHONY : src/CMakeFiles/minetest.dir/threading/mutex.cpp.o.provides
-
-src/CMakeFiles/minetest.dir/threading/mutex.cpp.o.provides.build: src/CMakeFiles/minetest.dir/threading/mutex.cpp.o
-
-
 src/CMakeFiles/minetest.dir/threading/semaphore.cpp.o: src/CMakeFiles/minetest.dir/flags.make
 src/CMakeFiles/minetest.dir/threading/semaphore.cpp.o: src/threading/semaphore.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_61) "Building CXX object src/CMakeFiles/minetest.dir/threading/semaphore.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_152) "Building CXX object src/CMakeFiles/minetest.dir/threading/semaphore.cpp.o"
 	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/threading/semaphore.cpp.o -c /opt/minetest/src/threading/semaphore.cpp
 
 src/CMakeFiles/minetest.dir/threading/semaphore.cpp.i: cmake_force
@@ -1523,7 +3707,7 @@ src/CMakeFiles/minetest.dir/threading/semaphore.cpp.o.provides.build: src/CMakeF
 
 src/CMakeFiles/minetest.dir/threading/thread.cpp.o: src/CMakeFiles/minetest.dir/flags.make
 src/CMakeFiles/minetest.dir/threading/thread.cpp.o: src/threading/thread.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_62) "Building CXX object src/CMakeFiles/minetest.dir/threading/thread.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_153) "Building CXX object src/CMakeFiles/minetest.dir/threading/thread.cpp.o"
 	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/threading/thread.cpp.o -c /opt/minetest/src/threading/thread.cpp
 
 src/CMakeFiles/minetest.dir/threading/thread.cpp.i: cmake_force
@@ -1547,7 +3731,7 @@ src/CMakeFiles/minetest.dir/threading/thread.cpp.o.provides.build: src/CMakeFile
 
 src/CMakeFiles/minetest.dir/unittest/test.cpp.o: src/CMakeFiles/minetest.dir/flags.make
 src/CMakeFiles/minetest.dir/unittest/test.cpp.o: src/unittest/test.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_63) "Building CXX object src/CMakeFiles/minetest.dir/unittest/test.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_154) "Building CXX object src/CMakeFiles/minetest.dir/unittest/test.cpp.o"
 	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/unittest/test.cpp.o -c /opt/minetest/src/unittest/test.cpp
 
 src/CMakeFiles/minetest.dir/unittest/test.cpp.i: cmake_force
@@ -1569,9 +3753,33 @@ src/CMakeFiles/minetest.dir/unittest/test.cpp.o.provides: src/CMakeFiles/minetes
 src/CMakeFiles/minetest.dir/unittest/test.cpp.o.provides.build: src/CMakeFiles/minetest.dir/unittest/test.cpp.o
 
 
+src/CMakeFiles/minetest.dir/unittest/test_activeobject.cpp.o: src/CMakeFiles/minetest.dir/flags.make
+src/CMakeFiles/minetest.dir/unittest/test_activeobject.cpp.o: src/unittest/test_activeobject.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_155) "Building CXX object src/CMakeFiles/minetest.dir/unittest/test_activeobject.cpp.o"
+	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/unittest/test_activeobject.cpp.o -c /opt/minetest/src/unittest/test_activeobject.cpp
+
+src/CMakeFiles/minetest.dir/unittest/test_activeobject.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/minetest.dir/unittest/test_activeobject.cpp.i"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /opt/minetest/src/unittest/test_activeobject.cpp > CMakeFiles/minetest.dir/unittest/test_activeobject.cpp.i
+
+src/CMakeFiles/minetest.dir/unittest/test_activeobject.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/minetest.dir/unittest/test_activeobject.cpp.s"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /opt/minetest/src/unittest/test_activeobject.cpp -o CMakeFiles/minetest.dir/unittest/test_activeobject.cpp.s
+
+src/CMakeFiles/minetest.dir/unittest/test_activeobject.cpp.o.requires:
+
+.PHONY : src/CMakeFiles/minetest.dir/unittest/test_activeobject.cpp.o.requires
+
+src/CMakeFiles/minetest.dir/unittest/test_activeobject.cpp.o.provides: src/CMakeFiles/minetest.dir/unittest/test_activeobject.cpp.o.requires
+	$(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/unittest/test_activeobject.cpp.o.provides.build
+.PHONY : src/CMakeFiles/minetest.dir/unittest/test_activeobject.cpp.o.provides
+
+src/CMakeFiles/minetest.dir/unittest/test_activeobject.cpp.o.provides.build: src/CMakeFiles/minetest.dir/unittest/test_activeobject.cpp.o
+
+
 src/CMakeFiles/minetest.dir/unittest/test_areastore.cpp.o: src/CMakeFiles/minetest.dir/flags.make
 src/CMakeFiles/minetest.dir/unittest/test_areastore.cpp.o: src/unittest/test_areastore.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_64) "Building CXX object src/CMakeFiles/minetest.dir/unittest/test_areastore.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_156) "Building CXX object src/CMakeFiles/minetest.dir/unittest/test_areastore.cpp.o"
 	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/unittest/test_areastore.cpp.o -c /opt/minetest/src/unittest/test_areastore.cpp
 
 src/CMakeFiles/minetest.dir/unittest/test_areastore.cpp.i: cmake_force
@@ -1593,9 +3801,81 @@ src/CMakeFiles/minetest.dir/unittest/test_areastore.cpp.o.provides: src/CMakeFil
 src/CMakeFiles/minetest.dir/unittest/test_areastore.cpp.o.provides.build: src/CMakeFiles/minetest.dir/unittest/test_areastore.cpp.o
 
 
+src/CMakeFiles/minetest.dir/unittest/test_authdatabase.cpp.o: src/CMakeFiles/minetest.dir/flags.make
+src/CMakeFiles/minetest.dir/unittest/test_authdatabase.cpp.o: src/unittest/test_authdatabase.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_157) "Building CXX object src/CMakeFiles/minetest.dir/unittest/test_authdatabase.cpp.o"
+	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/unittest/test_authdatabase.cpp.o -c /opt/minetest/src/unittest/test_authdatabase.cpp
+
+src/CMakeFiles/minetest.dir/unittest/test_authdatabase.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/minetest.dir/unittest/test_authdatabase.cpp.i"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /opt/minetest/src/unittest/test_authdatabase.cpp > CMakeFiles/minetest.dir/unittest/test_authdatabase.cpp.i
+
+src/CMakeFiles/minetest.dir/unittest/test_authdatabase.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/minetest.dir/unittest/test_authdatabase.cpp.s"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /opt/minetest/src/unittest/test_authdatabase.cpp -o CMakeFiles/minetest.dir/unittest/test_authdatabase.cpp.s
+
+src/CMakeFiles/minetest.dir/unittest/test_authdatabase.cpp.o.requires:
+
+.PHONY : src/CMakeFiles/minetest.dir/unittest/test_authdatabase.cpp.o.requires
+
+src/CMakeFiles/minetest.dir/unittest/test_authdatabase.cpp.o.provides: src/CMakeFiles/minetest.dir/unittest/test_authdatabase.cpp.o.requires
+	$(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/unittest/test_authdatabase.cpp.o.provides.build
+.PHONY : src/CMakeFiles/minetest.dir/unittest/test_authdatabase.cpp.o.provides
+
+src/CMakeFiles/minetest.dir/unittest/test_authdatabase.cpp.o.provides.build: src/CMakeFiles/minetest.dir/unittest/test_authdatabase.cpp.o
+
+
+src/CMakeFiles/minetest.dir/unittest/test_ban.cpp.o: src/CMakeFiles/minetest.dir/flags.make
+src/CMakeFiles/minetest.dir/unittest/test_ban.cpp.o: src/unittest/test_ban.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_158) "Building CXX object src/CMakeFiles/minetest.dir/unittest/test_ban.cpp.o"
+	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/unittest/test_ban.cpp.o -c /opt/minetest/src/unittest/test_ban.cpp
+
+src/CMakeFiles/minetest.dir/unittest/test_ban.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/minetest.dir/unittest/test_ban.cpp.i"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /opt/minetest/src/unittest/test_ban.cpp > CMakeFiles/minetest.dir/unittest/test_ban.cpp.i
+
+src/CMakeFiles/minetest.dir/unittest/test_ban.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/minetest.dir/unittest/test_ban.cpp.s"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /opt/minetest/src/unittest/test_ban.cpp -o CMakeFiles/minetest.dir/unittest/test_ban.cpp.s
+
+src/CMakeFiles/minetest.dir/unittest/test_ban.cpp.o.requires:
+
+.PHONY : src/CMakeFiles/minetest.dir/unittest/test_ban.cpp.o.requires
+
+src/CMakeFiles/minetest.dir/unittest/test_ban.cpp.o.provides: src/CMakeFiles/minetest.dir/unittest/test_ban.cpp.o.requires
+	$(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/unittest/test_ban.cpp.o.provides.build
+.PHONY : src/CMakeFiles/minetest.dir/unittest/test_ban.cpp.o.provides
+
+src/CMakeFiles/minetest.dir/unittest/test_ban.cpp.o.provides.build: src/CMakeFiles/minetest.dir/unittest/test_ban.cpp.o
+
+
+src/CMakeFiles/minetest.dir/unittest/test_clientactiveobjectmgr.cpp.o: src/CMakeFiles/minetest.dir/flags.make
+src/CMakeFiles/minetest.dir/unittest/test_clientactiveobjectmgr.cpp.o: src/unittest/test_clientactiveobjectmgr.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_159) "Building CXX object src/CMakeFiles/minetest.dir/unittest/test_clientactiveobjectmgr.cpp.o"
+	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/unittest/test_clientactiveobjectmgr.cpp.o -c /opt/minetest/src/unittest/test_clientactiveobjectmgr.cpp
+
+src/CMakeFiles/minetest.dir/unittest/test_clientactiveobjectmgr.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/minetest.dir/unittest/test_clientactiveobjectmgr.cpp.i"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /opt/minetest/src/unittest/test_clientactiveobjectmgr.cpp > CMakeFiles/minetest.dir/unittest/test_clientactiveobjectmgr.cpp.i
+
+src/CMakeFiles/minetest.dir/unittest/test_clientactiveobjectmgr.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/minetest.dir/unittest/test_clientactiveobjectmgr.cpp.s"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /opt/minetest/src/unittest/test_clientactiveobjectmgr.cpp -o CMakeFiles/minetest.dir/unittest/test_clientactiveobjectmgr.cpp.s
+
+src/CMakeFiles/minetest.dir/unittest/test_clientactiveobjectmgr.cpp.o.requires:
+
+.PHONY : src/CMakeFiles/minetest.dir/unittest/test_clientactiveobjectmgr.cpp.o.requires
+
+src/CMakeFiles/minetest.dir/unittest/test_clientactiveobjectmgr.cpp.o.provides: src/CMakeFiles/minetest.dir/unittest/test_clientactiveobjectmgr.cpp.o.requires
+	$(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/unittest/test_clientactiveobjectmgr.cpp.o.provides.build
+.PHONY : src/CMakeFiles/minetest.dir/unittest/test_clientactiveobjectmgr.cpp.o.provides
+
+src/CMakeFiles/minetest.dir/unittest/test_clientactiveobjectmgr.cpp.o.provides.build: src/CMakeFiles/minetest.dir/unittest/test_clientactiveobjectmgr.cpp.o
+
+
 src/CMakeFiles/minetest.dir/unittest/test_collision.cpp.o: src/CMakeFiles/minetest.dir/flags.make
 src/CMakeFiles/minetest.dir/unittest/test_collision.cpp.o: src/unittest/test_collision.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_65) "Building CXX object src/CMakeFiles/minetest.dir/unittest/test_collision.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_160) "Building CXX object src/CMakeFiles/minetest.dir/unittest/test_collision.cpp.o"
 	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/unittest/test_collision.cpp.o -c /opt/minetest/src/unittest/test_collision.cpp
 
 src/CMakeFiles/minetest.dir/unittest/test_collision.cpp.i: cmake_force
@@ -1619,7 +3899,7 @@ src/CMakeFiles/minetest.dir/unittest/test_collision.cpp.o.provides.build: src/CM
 
 src/CMakeFiles/minetest.dir/unittest/test_compression.cpp.o: src/CMakeFiles/minetest.dir/flags.make
 src/CMakeFiles/minetest.dir/unittest/test_compression.cpp.o: src/unittest/test_compression.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_66) "Building CXX object src/CMakeFiles/minetest.dir/unittest/test_compression.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_161) "Building CXX object src/CMakeFiles/minetest.dir/unittest/test_compression.cpp.o"
 	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/unittest/test_compression.cpp.o -c /opt/minetest/src/unittest/test_compression.cpp
 
 src/CMakeFiles/minetest.dir/unittest/test_compression.cpp.i: cmake_force
@@ -1643,7 +3923,7 @@ src/CMakeFiles/minetest.dir/unittest/test_compression.cpp.o.provides.build: src/
 
 src/CMakeFiles/minetest.dir/unittest/test_connection.cpp.o: src/CMakeFiles/minetest.dir/flags.make
 src/CMakeFiles/minetest.dir/unittest/test_connection.cpp.o: src/unittest/test_connection.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_67) "Building CXX object src/CMakeFiles/minetest.dir/unittest/test_connection.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_162) "Building CXX object src/CMakeFiles/minetest.dir/unittest/test_connection.cpp.o"
 	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/unittest/test_connection.cpp.o -c /opt/minetest/src/unittest/test_connection.cpp
 
 src/CMakeFiles/minetest.dir/unittest/test_connection.cpp.i: cmake_force
@@ -1665,9 +3945,33 @@ src/CMakeFiles/minetest.dir/unittest/test_connection.cpp.o.provides: src/CMakeFi
 src/CMakeFiles/minetest.dir/unittest/test_connection.cpp.o.provides.build: src/CMakeFiles/minetest.dir/unittest/test_connection.cpp.o
 
 
+src/CMakeFiles/minetest.dir/unittest/test_eventmanager.cpp.o: src/CMakeFiles/minetest.dir/flags.make
+src/CMakeFiles/minetest.dir/unittest/test_eventmanager.cpp.o: src/unittest/test_eventmanager.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_163) "Building CXX object src/CMakeFiles/minetest.dir/unittest/test_eventmanager.cpp.o"
+	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/unittest/test_eventmanager.cpp.o -c /opt/minetest/src/unittest/test_eventmanager.cpp
+
+src/CMakeFiles/minetest.dir/unittest/test_eventmanager.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/minetest.dir/unittest/test_eventmanager.cpp.i"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /opt/minetest/src/unittest/test_eventmanager.cpp > CMakeFiles/minetest.dir/unittest/test_eventmanager.cpp.i
+
+src/CMakeFiles/minetest.dir/unittest/test_eventmanager.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/minetest.dir/unittest/test_eventmanager.cpp.s"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /opt/minetest/src/unittest/test_eventmanager.cpp -o CMakeFiles/minetest.dir/unittest/test_eventmanager.cpp.s
+
+src/CMakeFiles/minetest.dir/unittest/test_eventmanager.cpp.o.requires:
+
+.PHONY : src/CMakeFiles/minetest.dir/unittest/test_eventmanager.cpp.o.requires
+
+src/CMakeFiles/minetest.dir/unittest/test_eventmanager.cpp.o.provides: src/CMakeFiles/minetest.dir/unittest/test_eventmanager.cpp.o.requires
+	$(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/unittest/test_eventmanager.cpp.o.provides.build
+.PHONY : src/CMakeFiles/minetest.dir/unittest/test_eventmanager.cpp.o.provides
+
+src/CMakeFiles/minetest.dir/unittest/test_eventmanager.cpp.o.provides.build: src/CMakeFiles/minetest.dir/unittest/test_eventmanager.cpp.o
+
+
 src/CMakeFiles/minetest.dir/unittest/test_filepath.cpp.o: src/CMakeFiles/minetest.dir/flags.make
 src/CMakeFiles/minetest.dir/unittest/test_filepath.cpp.o: src/unittest/test_filepath.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_68) "Building CXX object src/CMakeFiles/minetest.dir/unittest/test_filepath.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_164) "Building CXX object src/CMakeFiles/minetest.dir/unittest/test_filepath.cpp.o"
 	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/unittest/test_filepath.cpp.o -c /opt/minetest/src/unittest/test_filepath.cpp
 
 src/CMakeFiles/minetest.dir/unittest/test_filepath.cpp.i: cmake_force
@@ -1689,9 +3993,33 @@ src/CMakeFiles/minetest.dir/unittest/test_filepath.cpp.o.provides: src/CMakeFile
 src/CMakeFiles/minetest.dir/unittest/test_filepath.cpp.o.provides.build: src/CMakeFiles/minetest.dir/unittest/test_filepath.cpp.o
 
 
+src/CMakeFiles/minetest.dir/unittest/test_gameui.cpp.o: src/CMakeFiles/minetest.dir/flags.make
+src/CMakeFiles/minetest.dir/unittest/test_gameui.cpp.o: src/unittest/test_gameui.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_165) "Building CXX object src/CMakeFiles/minetest.dir/unittest/test_gameui.cpp.o"
+	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/unittest/test_gameui.cpp.o -c /opt/minetest/src/unittest/test_gameui.cpp
+
+src/CMakeFiles/minetest.dir/unittest/test_gameui.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/minetest.dir/unittest/test_gameui.cpp.i"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /opt/minetest/src/unittest/test_gameui.cpp > CMakeFiles/minetest.dir/unittest/test_gameui.cpp.i
+
+src/CMakeFiles/minetest.dir/unittest/test_gameui.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/minetest.dir/unittest/test_gameui.cpp.s"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /opt/minetest/src/unittest/test_gameui.cpp -o CMakeFiles/minetest.dir/unittest/test_gameui.cpp.s
+
+src/CMakeFiles/minetest.dir/unittest/test_gameui.cpp.o.requires:
+
+.PHONY : src/CMakeFiles/minetest.dir/unittest/test_gameui.cpp.o.requires
+
+src/CMakeFiles/minetest.dir/unittest/test_gameui.cpp.o.provides: src/CMakeFiles/minetest.dir/unittest/test_gameui.cpp.o.requires
+	$(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/unittest/test_gameui.cpp.o.provides.build
+.PHONY : src/CMakeFiles/minetest.dir/unittest/test_gameui.cpp.o.provides
+
+src/CMakeFiles/minetest.dir/unittest/test_gameui.cpp.o.provides.build: src/CMakeFiles/minetest.dir/unittest/test_gameui.cpp.o
+
+
 src/CMakeFiles/minetest.dir/unittest/test_inventory.cpp.o: src/CMakeFiles/minetest.dir/flags.make
 src/CMakeFiles/minetest.dir/unittest/test_inventory.cpp.o: src/unittest/test_inventory.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_69) "Building CXX object src/CMakeFiles/minetest.dir/unittest/test_inventory.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_166) "Building CXX object src/CMakeFiles/minetest.dir/unittest/test_inventory.cpp.o"
 	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/unittest/test_inventory.cpp.o -c /opt/minetest/src/unittest/test_inventory.cpp
 
 src/CMakeFiles/minetest.dir/unittest/test_inventory.cpp.i: cmake_force
@@ -1715,7 +4043,7 @@ src/CMakeFiles/minetest.dir/unittest/test_inventory.cpp.o.provides.build: src/CM
 
 src/CMakeFiles/minetest.dir/unittest/test_keycode.cpp.o: src/CMakeFiles/minetest.dir/flags.make
 src/CMakeFiles/minetest.dir/unittest/test_keycode.cpp.o: src/unittest/test_keycode.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_70) "Building CXX object src/CMakeFiles/minetest.dir/unittest/test_keycode.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_167) "Building CXX object src/CMakeFiles/minetest.dir/unittest/test_keycode.cpp.o"
 	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/unittest/test_keycode.cpp.o -c /opt/minetest/src/unittest/test_keycode.cpp
 
 src/CMakeFiles/minetest.dir/unittest/test_keycode.cpp.i: cmake_force
@@ -1739,7 +4067,7 @@ src/CMakeFiles/minetest.dir/unittest/test_keycode.cpp.o.provides.build: src/CMak
 
 src/CMakeFiles/minetest.dir/unittest/test_map_settings_manager.cpp.o: src/CMakeFiles/minetest.dir/flags.make
 src/CMakeFiles/minetest.dir/unittest/test_map_settings_manager.cpp.o: src/unittest/test_map_settings_manager.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_71) "Building CXX object src/CMakeFiles/minetest.dir/unittest/test_map_settings_manager.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_168) "Building CXX object src/CMakeFiles/minetest.dir/unittest/test_map_settings_manager.cpp.o"
 	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/unittest/test_map_settings_manager.cpp.o -c /opt/minetest/src/unittest/test_map_settings_manager.cpp
 
 src/CMakeFiles/minetest.dir/unittest/test_map_settings_manager.cpp.i: cmake_force
@@ -1763,7 +4091,7 @@ src/CMakeFiles/minetest.dir/unittest/test_map_settings_manager.cpp.o.provides.bu
 
 src/CMakeFiles/minetest.dir/unittest/test_mapnode.cpp.o: src/CMakeFiles/minetest.dir/flags.make
 src/CMakeFiles/minetest.dir/unittest/test_mapnode.cpp.o: src/unittest/test_mapnode.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_72) "Building CXX object src/CMakeFiles/minetest.dir/unittest/test_mapnode.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_169) "Building CXX object src/CMakeFiles/minetest.dir/unittest/test_mapnode.cpp.o"
 	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/unittest/test_mapnode.cpp.o -c /opt/minetest/src/unittest/test_mapnode.cpp
 
 src/CMakeFiles/minetest.dir/unittest/test_mapnode.cpp.i: cmake_force
@@ -1785,9 +4113,33 @@ src/CMakeFiles/minetest.dir/unittest/test_mapnode.cpp.o.provides: src/CMakeFiles
 src/CMakeFiles/minetest.dir/unittest/test_mapnode.cpp.o.provides.build: src/CMakeFiles/minetest.dir/unittest/test_mapnode.cpp.o
 
 
+src/CMakeFiles/minetest.dir/unittest/test_modchannels.cpp.o: src/CMakeFiles/minetest.dir/flags.make
+src/CMakeFiles/minetest.dir/unittest/test_modchannels.cpp.o: src/unittest/test_modchannels.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_170) "Building CXX object src/CMakeFiles/minetest.dir/unittest/test_modchannels.cpp.o"
+	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/unittest/test_modchannels.cpp.o -c /opt/minetest/src/unittest/test_modchannels.cpp
+
+src/CMakeFiles/minetest.dir/unittest/test_modchannels.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/minetest.dir/unittest/test_modchannels.cpp.i"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /opt/minetest/src/unittest/test_modchannels.cpp > CMakeFiles/minetest.dir/unittest/test_modchannels.cpp.i
+
+src/CMakeFiles/minetest.dir/unittest/test_modchannels.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/minetest.dir/unittest/test_modchannels.cpp.s"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /opt/minetest/src/unittest/test_modchannels.cpp -o CMakeFiles/minetest.dir/unittest/test_modchannels.cpp.s
+
+src/CMakeFiles/minetest.dir/unittest/test_modchannels.cpp.o.requires:
+
+.PHONY : src/CMakeFiles/minetest.dir/unittest/test_modchannels.cpp.o.requires
+
+src/CMakeFiles/minetest.dir/unittest/test_modchannels.cpp.o.provides: src/CMakeFiles/minetest.dir/unittest/test_modchannels.cpp.o.requires
+	$(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/unittest/test_modchannels.cpp.o.provides.build
+.PHONY : src/CMakeFiles/minetest.dir/unittest/test_modchannels.cpp.o.provides
+
+src/CMakeFiles/minetest.dir/unittest/test_modchannels.cpp.o.provides.build: src/CMakeFiles/minetest.dir/unittest/test_modchannels.cpp.o
+
+
 src/CMakeFiles/minetest.dir/unittest/test_nodedef.cpp.o: src/CMakeFiles/minetest.dir/flags.make
 src/CMakeFiles/minetest.dir/unittest/test_nodedef.cpp.o: src/unittest/test_nodedef.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_73) "Building CXX object src/CMakeFiles/minetest.dir/unittest/test_nodedef.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_171) "Building CXX object src/CMakeFiles/minetest.dir/unittest/test_nodedef.cpp.o"
 	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/unittest/test_nodedef.cpp.o -c /opt/minetest/src/unittest/test_nodedef.cpp
 
 src/CMakeFiles/minetest.dir/unittest/test_nodedef.cpp.i: cmake_force
@@ -1811,7 +4163,7 @@ src/CMakeFiles/minetest.dir/unittest/test_nodedef.cpp.o.provides.build: src/CMak
 
 src/CMakeFiles/minetest.dir/unittest/test_noderesolver.cpp.o: src/CMakeFiles/minetest.dir/flags.make
 src/CMakeFiles/minetest.dir/unittest/test_noderesolver.cpp.o: src/unittest/test_noderesolver.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_74) "Building CXX object src/CMakeFiles/minetest.dir/unittest/test_noderesolver.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_172) "Building CXX object src/CMakeFiles/minetest.dir/unittest/test_noderesolver.cpp.o"
 	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/unittest/test_noderesolver.cpp.o -c /opt/minetest/src/unittest/test_noderesolver.cpp
 
 src/CMakeFiles/minetest.dir/unittest/test_noderesolver.cpp.i: cmake_force
@@ -1835,7 +4187,7 @@ src/CMakeFiles/minetest.dir/unittest/test_noderesolver.cpp.o.provides.build: src
 
 src/CMakeFiles/minetest.dir/unittest/test_noise.cpp.o: src/CMakeFiles/minetest.dir/flags.make
 src/CMakeFiles/minetest.dir/unittest/test_noise.cpp.o: src/unittest/test_noise.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_75) "Building CXX object src/CMakeFiles/minetest.dir/unittest/test_noise.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_173) "Building CXX object src/CMakeFiles/minetest.dir/unittest/test_noise.cpp.o"
 	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/unittest/test_noise.cpp.o -c /opt/minetest/src/unittest/test_noise.cpp
 
 src/CMakeFiles/minetest.dir/unittest/test_noise.cpp.i: cmake_force
@@ -1859,7 +4211,7 @@ src/CMakeFiles/minetest.dir/unittest/test_noise.cpp.o.provides.build: src/CMakeF
 
 src/CMakeFiles/minetest.dir/unittest/test_objdef.cpp.o: src/CMakeFiles/minetest.dir/flags.make
 src/CMakeFiles/minetest.dir/unittest/test_objdef.cpp.o: src/unittest/test_objdef.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_76) "Building CXX object src/CMakeFiles/minetest.dir/unittest/test_objdef.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_174) "Building CXX object src/CMakeFiles/minetest.dir/unittest/test_objdef.cpp.o"
 	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/unittest/test_objdef.cpp.o -c /opt/minetest/src/unittest/test_objdef.cpp
 
 src/CMakeFiles/minetest.dir/unittest/test_objdef.cpp.i: cmake_force
@@ -1883,7 +4235,7 @@ src/CMakeFiles/minetest.dir/unittest/test_objdef.cpp.o.provides.build: src/CMake
 
 src/CMakeFiles/minetest.dir/unittest/test_player.cpp.o: src/CMakeFiles/minetest.dir/flags.make
 src/CMakeFiles/minetest.dir/unittest/test_player.cpp.o: src/unittest/test_player.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_77) "Building CXX object src/CMakeFiles/minetest.dir/unittest/test_player.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_175) "Building CXX object src/CMakeFiles/minetest.dir/unittest/test_player.cpp.o"
 	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/unittest/test_player.cpp.o -c /opt/minetest/src/unittest/test_player.cpp
 
 src/CMakeFiles/minetest.dir/unittest/test_player.cpp.i: cmake_force
@@ -1907,7 +4259,7 @@ src/CMakeFiles/minetest.dir/unittest/test_player.cpp.o.provides.build: src/CMake
 
 src/CMakeFiles/minetest.dir/unittest/test_profiler.cpp.o: src/CMakeFiles/minetest.dir/flags.make
 src/CMakeFiles/minetest.dir/unittest/test_profiler.cpp.o: src/unittest/test_profiler.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_78) "Building CXX object src/CMakeFiles/minetest.dir/unittest/test_profiler.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_176) "Building CXX object src/CMakeFiles/minetest.dir/unittest/test_profiler.cpp.o"
 	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/unittest/test_profiler.cpp.o -c /opt/minetest/src/unittest/test_profiler.cpp
 
 src/CMakeFiles/minetest.dir/unittest/test_profiler.cpp.i: cmake_force
@@ -1931,7 +4283,7 @@ src/CMakeFiles/minetest.dir/unittest/test_profiler.cpp.o.provides.build: src/CMa
 
 src/CMakeFiles/minetest.dir/unittest/test_random.cpp.o: src/CMakeFiles/minetest.dir/flags.make
 src/CMakeFiles/minetest.dir/unittest/test_random.cpp.o: src/unittest/test_random.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_79) "Building CXX object src/CMakeFiles/minetest.dir/unittest/test_random.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_177) "Building CXX object src/CMakeFiles/minetest.dir/unittest/test_random.cpp.o"
 	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/unittest/test_random.cpp.o -c /opt/minetest/src/unittest/test_random.cpp
 
 src/CMakeFiles/minetest.dir/unittest/test_random.cpp.i: cmake_force
@@ -1955,7 +4307,7 @@ src/CMakeFiles/minetest.dir/unittest/test_random.cpp.o.provides.build: src/CMake
 
 src/CMakeFiles/minetest.dir/unittest/test_schematic.cpp.o: src/CMakeFiles/minetest.dir/flags.make
 src/CMakeFiles/minetest.dir/unittest/test_schematic.cpp.o: src/unittest/test_schematic.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_80) "Building CXX object src/CMakeFiles/minetest.dir/unittest/test_schematic.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_178) "Building CXX object src/CMakeFiles/minetest.dir/unittest/test_schematic.cpp.o"
 	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/unittest/test_schematic.cpp.o -c /opt/minetest/src/unittest/test_schematic.cpp
 
 src/CMakeFiles/minetest.dir/unittest/test_schematic.cpp.i: cmake_force
@@ -1979,7 +4331,7 @@ src/CMakeFiles/minetest.dir/unittest/test_schematic.cpp.o.provides.build: src/CM
 
 src/CMakeFiles/minetest.dir/unittest/test_serialization.cpp.o: src/CMakeFiles/minetest.dir/flags.make
 src/CMakeFiles/minetest.dir/unittest/test_serialization.cpp.o: src/unittest/test_serialization.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_81) "Building CXX object src/CMakeFiles/minetest.dir/unittest/test_serialization.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_179) "Building CXX object src/CMakeFiles/minetest.dir/unittest/test_serialization.cpp.o"
 	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/unittest/test_serialization.cpp.o -c /opt/minetest/src/unittest/test_serialization.cpp
 
 src/CMakeFiles/minetest.dir/unittest/test_serialization.cpp.i: cmake_force
@@ -2001,9 +4353,81 @@ src/CMakeFiles/minetest.dir/unittest/test_serialization.cpp.o.provides: src/CMak
 src/CMakeFiles/minetest.dir/unittest/test_serialization.cpp.o.provides.build: src/CMakeFiles/minetest.dir/unittest/test_serialization.cpp.o
 
 
+src/CMakeFiles/minetest.dir/unittest/test_server_shutdown_state.cpp.o: src/CMakeFiles/minetest.dir/flags.make
+src/CMakeFiles/minetest.dir/unittest/test_server_shutdown_state.cpp.o: src/unittest/test_server_shutdown_state.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_180) "Building CXX object src/CMakeFiles/minetest.dir/unittest/test_server_shutdown_state.cpp.o"
+	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/unittest/test_server_shutdown_state.cpp.o -c /opt/minetest/src/unittest/test_server_shutdown_state.cpp
+
+src/CMakeFiles/minetest.dir/unittest/test_server_shutdown_state.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/minetest.dir/unittest/test_server_shutdown_state.cpp.i"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /opt/minetest/src/unittest/test_server_shutdown_state.cpp > CMakeFiles/minetest.dir/unittest/test_server_shutdown_state.cpp.i
+
+src/CMakeFiles/minetest.dir/unittest/test_server_shutdown_state.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/minetest.dir/unittest/test_server_shutdown_state.cpp.s"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /opt/minetest/src/unittest/test_server_shutdown_state.cpp -o CMakeFiles/minetest.dir/unittest/test_server_shutdown_state.cpp.s
+
+src/CMakeFiles/minetest.dir/unittest/test_server_shutdown_state.cpp.o.requires:
+
+.PHONY : src/CMakeFiles/minetest.dir/unittest/test_server_shutdown_state.cpp.o.requires
+
+src/CMakeFiles/minetest.dir/unittest/test_server_shutdown_state.cpp.o.provides: src/CMakeFiles/minetest.dir/unittest/test_server_shutdown_state.cpp.o.requires
+	$(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/unittest/test_server_shutdown_state.cpp.o.provides.build
+.PHONY : src/CMakeFiles/minetest.dir/unittest/test_server_shutdown_state.cpp.o.provides
+
+src/CMakeFiles/minetest.dir/unittest/test_server_shutdown_state.cpp.o.provides.build: src/CMakeFiles/minetest.dir/unittest/test_server_shutdown_state.cpp.o
+
+
+src/CMakeFiles/minetest.dir/unittest/test_serveractiveobjectmgr.cpp.o: src/CMakeFiles/minetest.dir/flags.make
+src/CMakeFiles/minetest.dir/unittest/test_serveractiveobjectmgr.cpp.o: src/unittest/test_serveractiveobjectmgr.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_181) "Building CXX object src/CMakeFiles/minetest.dir/unittest/test_serveractiveobjectmgr.cpp.o"
+	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/unittest/test_serveractiveobjectmgr.cpp.o -c /opt/minetest/src/unittest/test_serveractiveobjectmgr.cpp
+
+src/CMakeFiles/minetest.dir/unittest/test_serveractiveobjectmgr.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/minetest.dir/unittest/test_serveractiveobjectmgr.cpp.i"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /opt/minetest/src/unittest/test_serveractiveobjectmgr.cpp > CMakeFiles/minetest.dir/unittest/test_serveractiveobjectmgr.cpp.i
+
+src/CMakeFiles/minetest.dir/unittest/test_serveractiveobjectmgr.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/minetest.dir/unittest/test_serveractiveobjectmgr.cpp.s"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /opt/minetest/src/unittest/test_serveractiveobjectmgr.cpp -o CMakeFiles/minetest.dir/unittest/test_serveractiveobjectmgr.cpp.s
+
+src/CMakeFiles/minetest.dir/unittest/test_serveractiveobjectmgr.cpp.o.requires:
+
+.PHONY : src/CMakeFiles/minetest.dir/unittest/test_serveractiveobjectmgr.cpp.o.requires
+
+src/CMakeFiles/minetest.dir/unittest/test_serveractiveobjectmgr.cpp.o.provides: src/CMakeFiles/minetest.dir/unittest/test_serveractiveobjectmgr.cpp.o.requires
+	$(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/unittest/test_serveractiveobjectmgr.cpp.o.provides.build
+.PHONY : src/CMakeFiles/minetest.dir/unittest/test_serveractiveobjectmgr.cpp.o.provides
+
+src/CMakeFiles/minetest.dir/unittest/test_serveractiveobjectmgr.cpp.o.provides.build: src/CMakeFiles/minetest.dir/unittest/test_serveractiveobjectmgr.cpp.o
+
+
+src/CMakeFiles/minetest.dir/unittest/test_servermodmanager.cpp.o: src/CMakeFiles/minetest.dir/flags.make
+src/CMakeFiles/minetest.dir/unittest/test_servermodmanager.cpp.o: src/unittest/test_servermodmanager.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_182) "Building CXX object src/CMakeFiles/minetest.dir/unittest/test_servermodmanager.cpp.o"
+	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/unittest/test_servermodmanager.cpp.o -c /opt/minetest/src/unittest/test_servermodmanager.cpp
+
+src/CMakeFiles/minetest.dir/unittest/test_servermodmanager.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/minetest.dir/unittest/test_servermodmanager.cpp.i"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /opt/minetest/src/unittest/test_servermodmanager.cpp > CMakeFiles/minetest.dir/unittest/test_servermodmanager.cpp.i
+
+src/CMakeFiles/minetest.dir/unittest/test_servermodmanager.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/minetest.dir/unittest/test_servermodmanager.cpp.s"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /opt/minetest/src/unittest/test_servermodmanager.cpp -o CMakeFiles/minetest.dir/unittest/test_servermodmanager.cpp.s
+
+src/CMakeFiles/minetest.dir/unittest/test_servermodmanager.cpp.o.requires:
+
+.PHONY : src/CMakeFiles/minetest.dir/unittest/test_servermodmanager.cpp.o.requires
+
+src/CMakeFiles/minetest.dir/unittest/test_servermodmanager.cpp.o.provides: src/CMakeFiles/minetest.dir/unittest/test_servermodmanager.cpp.o.requires
+	$(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/unittest/test_servermodmanager.cpp.o.provides.build
+.PHONY : src/CMakeFiles/minetest.dir/unittest/test_servermodmanager.cpp.o.provides
+
+src/CMakeFiles/minetest.dir/unittest/test_servermodmanager.cpp.o.provides.build: src/CMakeFiles/minetest.dir/unittest/test_servermodmanager.cpp.o
+
+
 src/CMakeFiles/minetest.dir/unittest/test_settings.cpp.o: src/CMakeFiles/minetest.dir/flags.make
 src/CMakeFiles/minetest.dir/unittest/test_settings.cpp.o: src/unittest/test_settings.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_82) "Building CXX object src/CMakeFiles/minetest.dir/unittest/test_settings.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_183) "Building CXX object src/CMakeFiles/minetest.dir/unittest/test_settings.cpp.o"
 	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/unittest/test_settings.cpp.o -c /opt/minetest/src/unittest/test_settings.cpp
 
 src/CMakeFiles/minetest.dir/unittest/test_settings.cpp.i: cmake_force
@@ -2027,7 +4451,7 @@ src/CMakeFiles/minetest.dir/unittest/test_settings.cpp.o.provides.build: src/CMa
 
 src/CMakeFiles/minetest.dir/unittest/test_socket.cpp.o: src/CMakeFiles/minetest.dir/flags.make
 src/CMakeFiles/minetest.dir/unittest/test_socket.cpp.o: src/unittest/test_socket.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_83) "Building CXX object src/CMakeFiles/minetest.dir/unittest/test_socket.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_184) "Building CXX object src/CMakeFiles/minetest.dir/unittest/test_socket.cpp.o"
 	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/unittest/test_socket.cpp.o -c /opt/minetest/src/unittest/test_socket.cpp
 
 src/CMakeFiles/minetest.dir/unittest/test_socket.cpp.i: cmake_force
@@ -2051,7 +4475,7 @@ src/CMakeFiles/minetest.dir/unittest/test_socket.cpp.o.provides.build: src/CMake
 
 src/CMakeFiles/minetest.dir/unittest/test_threading.cpp.o: src/CMakeFiles/minetest.dir/flags.make
 src/CMakeFiles/minetest.dir/unittest/test_threading.cpp.o: src/unittest/test_threading.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_84) "Building CXX object src/CMakeFiles/minetest.dir/unittest/test_threading.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_185) "Building CXX object src/CMakeFiles/minetest.dir/unittest/test_threading.cpp.o"
 	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/unittest/test_threading.cpp.o -c /opt/minetest/src/unittest/test_threading.cpp
 
 src/CMakeFiles/minetest.dir/unittest/test_threading.cpp.i: cmake_force
@@ -2075,7 +4499,7 @@ src/CMakeFiles/minetest.dir/unittest/test_threading.cpp.o.provides.build: src/CM
 
 src/CMakeFiles/minetest.dir/unittest/test_utilities.cpp.o: src/CMakeFiles/minetest.dir/flags.make
 src/CMakeFiles/minetest.dir/unittest/test_utilities.cpp.o: src/unittest/test_utilities.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_85) "Building CXX object src/CMakeFiles/minetest.dir/unittest/test_utilities.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_186) "Building CXX object src/CMakeFiles/minetest.dir/unittest/test_utilities.cpp.o"
 	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/unittest/test_utilities.cpp.o -c /opt/minetest/src/unittest/test_utilities.cpp
 
 src/CMakeFiles/minetest.dir/unittest/test_utilities.cpp.i: cmake_force
@@ -2099,7 +4523,7 @@ src/CMakeFiles/minetest.dir/unittest/test_utilities.cpp.o.provides.build: src/CM
 
 src/CMakeFiles/minetest.dir/unittest/test_voxelalgorithms.cpp.o: src/CMakeFiles/minetest.dir/flags.make
 src/CMakeFiles/minetest.dir/unittest/test_voxelalgorithms.cpp.o: src/unittest/test_voxelalgorithms.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_86) "Building CXX object src/CMakeFiles/minetest.dir/unittest/test_voxelalgorithms.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_187) "Building CXX object src/CMakeFiles/minetest.dir/unittest/test_voxelalgorithms.cpp.o"
 	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/unittest/test_voxelalgorithms.cpp.o -c /opt/minetest/src/unittest/test_voxelalgorithms.cpp
 
 src/CMakeFiles/minetest.dir/unittest/test_voxelalgorithms.cpp.i: cmake_force
@@ -2121,9 +4545,33 @@ src/CMakeFiles/minetest.dir/unittest/test_voxelalgorithms.cpp.o.provides: src/CM
 src/CMakeFiles/minetest.dir/unittest/test_voxelalgorithms.cpp.o.provides.build: src/CMakeFiles/minetest.dir/unittest/test_voxelalgorithms.cpp.o
 
 
+src/CMakeFiles/minetest.dir/unittest/test_voxelarea.cpp.o: src/CMakeFiles/minetest.dir/flags.make
+src/CMakeFiles/minetest.dir/unittest/test_voxelarea.cpp.o: src/unittest/test_voxelarea.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_188) "Building CXX object src/CMakeFiles/minetest.dir/unittest/test_voxelarea.cpp.o"
+	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/unittest/test_voxelarea.cpp.o -c /opt/minetest/src/unittest/test_voxelarea.cpp
+
+src/CMakeFiles/minetest.dir/unittest/test_voxelarea.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/minetest.dir/unittest/test_voxelarea.cpp.i"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /opt/minetest/src/unittest/test_voxelarea.cpp > CMakeFiles/minetest.dir/unittest/test_voxelarea.cpp.i
+
+src/CMakeFiles/minetest.dir/unittest/test_voxelarea.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/minetest.dir/unittest/test_voxelarea.cpp.s"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /opt/minetest/src/unittest/test_voxelarea.cpp -o CMakeFiles/minetest.dir/unittest/test_voxelarea.cpp.s
+
+src/CMakeFiles/minetest.dir/unittest/test_voxelarea.cpp.o.requires:
+
+.PHONY : src/CMakeFiles/minetest.dir/unittest/test_voxelarea.cpp.o.requires
+
+src/CMakeFiles/minetest.dir/unittest/test_voxelarea.cpp.o.provides: src/CMakeFiles/minetest.dir/unittest/test_voxelarea.cpp.o.requires
+	$(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/unittest/test_voxelarea.cpp.o.provides.build
+.PHONY : src/CMakeFiles/minetest.dir/unittest/test_voxelarea.cpp.o.provides
+
+src/CMakeFiles/minetest.dir/unittest/test_voxelarea.cpp.o.provides.build: src/CMakeFiles/minetest.dir/unittest/test_voxelarea.cpp.o
+
+
 src/CMakeFiles/minetest.dir/unittest/test_voxelmanipulator.cpp.o: src/CMakeFiles/minetest.dir/flags.make
 src/CMakeFiles/minetest.dir/unittest/test_voxelmanipulator.cpp.o: src/unittest/test_voxelmanipulator.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_87) "Building CXX object src/CMakeFiles/minetest.dir/unittest/test_voxelmanipulator.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_189) "Building CXX object src/CMakeFiles/minetest.dir/unittest/test_voxelmanipulator.cpp.o"
 	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/unittest/test_voxelmanipulator.cpp.o -c /opt/minetest/src/unittest/test_voxelmanipulator.cpp
 
 src/CMakeFiles/minetest.dir/unittest/test_voxelmanipulator.cpp.i: cmake_force
@@ -2147,7 +4595,7 @@ src/CMakeFiles/minetest.dir/unittest/test_voxelmanipulator.cpp.o.provides.build:
 
 src/CMakeFiles/minetest.dir/util/areastore.cpp.o: src/CMakeFiles/minetest.dir/flags.make
 src/CMakeFiles/minetest.dir/util/areastore.cpp.o: src/util/areastore.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_88) "Building CXX object src/CMakeFiles/minetest.dir/util/areastore.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_190) "Building CXX object src/CMakeFiles/minetest.dir/util/areastore.cpp.o"
 	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/util/areastore.cpp.o -c /opt/minetest/src/util/areastore.cpp
 
 src/CMakeFiles/minetest.dir/util/areastore.cpp.i: cmake_force
@@ -2171,7 +4619,7 @@ src/CMakeFiles/minetest.dir/util/areastore.cpp.o.provides.build: src/CMakeFiles/
 
 src/CMakeFiles/minetest.dir/util/auth.cpp.o: src/CMakeFiles/minetest.dir/flags.make
 src/CMakeFiles/minetest.dir/util/auth.cpp.o: src/util/auth.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_89) "Building CXX object src/CMakeFiles/minetest.dir/util/auth.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_191) "Building CXX object src/CMakeFiles/minetest.dir/util/auth.cpp.o"
 	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/util/auth.cpp.o -c /opt/minetest/src/util/auth.cpp
 
 src/CMakeFiles/minetest.dir/util/auth.cpp.i: cmake_force
@@ -2195,7 +4643,7 @@ src/CMakeFiles/minetest.dir/util/auth.cpp.o.provides.build: src/CMakeFiles/minet
 
 src/CMakeFiles/minetest.dir/util/base64.cpp.o: src/CMakeFiles/minetest.dir/flags.make
 src/CMakeFiles/minetest.dir/util/base64.cpp.o: src/util/base64.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_90) "Building CXX object src/CMakeFiles/minetest.dir/util/base64.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_192) "Building CXX object src/CMakeFiles/minetest.dir/util/base64.cpp.o"
 	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/util/base64.cpp.o -c /opt/minetest/src/util/base64.cpp
 
 src/CMakeFiles/minetest.dir/util/base64.cpp.i: cmake_force
@@ -2219,7 +4667,7 @@ src/CMakeFiles/minetest.dir/util/base64.cpp.o.provides.build: src/CMakeFiles/min
 
 src/CMakeFiles/minetest.dir/util/directiontables.cpp.o: src/CMakeFiles/minetest.dir/flags.make
 src/CMakeFiles/minetest.dir/util/directiontables.cpp.o: src/util/directiontables.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_91) "Building CXX object src/CMakeFiles/minetest.dir/util/directiontables.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_193) "Building CXX object src/CMakeFiles/minetest.dir/util/directiontables.cpp.o"
 	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/util/directiontables.cpp.o -c /opt/minetest/src/util/directiontables.cpp
 
 src/CMakeFiles/minetest.dir/util/directiontables.cpp.i: cmake_force
@@ -2243,7 +4691,7 @@ src/CMakeFiles/minetest.dir/util/directiontables.cpp.o.provides.build: src/CMake
 
 src/CMakeFiles/minetest.dir/util/enriched_string.cpp.o: src/CMakeFiles/minetest.dir/flags.make
 src/CMakeFiles/minetest.dir/util/enriched_string.cpp.o: src/util/enriched_string.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_92) "Building CXX object src/CMakeFiles/minetest.dir/util/enriched_string.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_194) "Building CXX object src/CMakeFiles/minetest.dir/util/enriched_string.cpp.o"
 	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/util/enriched_string.cpp.o -c /opt/minetest/src/util/enriched_string.cpp
 
 src/CMakeFiles/minetest.dir/util/enriched_string.cpp.i: cmake_force
@@ -2265,9 +4713,33 @@ src/CMakeFiles/minetest.dir/util/enriched_string.cpp.o.provides: src/CMakeFiles/
 src/CMakeFiles/minetest.dir/util/enriched_string.cpp.o.provides.build: src/CMakeFiles/minetest.dir/util/enriched_string.cpp.o
 
 
+src/CMakeFiles/minetest.dir/util/ieee_float.cpp.o: src/CMakeFiles/minetest.dir/flags.make
+src/CMakeFiles/minetest.dir/util/ieee_float.cpp.o: src/util/ieee_float.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_195) "Building CXX object src/CMakeFiles/minetest.dir/util/ieee_float.cpp.o"
+	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/util/ieee_float.cpp.o -c /opt/minetest/src/util/ieee_float.cpp
+
+src/CMakeFiles/minetest.dir/util/ieee_float.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/minetest.dir/util/ieee_float.cpp.i"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /opt/minetest/src/util/ieee_float.cpp > CMakeFiles/minetest.dir/util/ieee_float.cpp.i
+
+src/CMakeFiles/minetest.dir/util/ieee_float.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/minetest.dir/util/ieee_float.cpp.s"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /opt/minetest/src/util/ieee_float.cpp -o CMakeFiles/minetest.dir/util/ieee_float.cpp.s
+
+src/CMakeFiles/minetest.dir/util/ieee_float.cpp.o.requires:
+
+.PHONY : src/CMakeFiles/minetest.dir/util/ieee_float.cpp.o.requires
+
+src/CMakeFiles/minetest.dir/util/ieee_float.cpp.o.provides: src/CMakeFiles/minetest.dir/util/ieee_float.cpp.o.requires
+	$(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/util/ieee_float.cpp.o.provides.build
+.PHONY : src/CMakeFiles/minetest.dir/util/ieee_float.cpp.o.provides
+
+src/CMakeFiles/minetest.dir/util/ieee_float.cpp.o.provides.build: src/CMakeFiles/minetest.dir/util/ieee_float.cpp.o
+
+
 src/CMakeFiles/minetest.dir/util/numeric.cpp.o: src/CMakeFiles/minetest.dir/flags.make
 src/CMakeFiles/minetest.dir/util/numeric.cpp.o: src/util/numeric.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_93) "Building CXX object src/CMakeFiles/minetest.dir/util/numeric.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_196) "Building CXX object src/CMakeFiles/minetest.dir/util/numeric.cpp.o"
 	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/util/numeric.cpp.o -c /opt/minetest/src/util/numeric.cpp
 
 src/CMakeFiles/minetest.dir/util/numeric.cpp.i: cmake_force
@@ -2291,7 +4763,7 @@ src/CMakeFiles/minetest.dir/util/numeric.cpp.o.provides.build: src/CMakeFiles/mi
 
 src/CMakeFiles/minetest.dir/util/pointedthing.cpp.o: src/CMakeFiles/minetest.dir/flags.make
 src/CMakeFiles/minetest.dir/util/pointedthing.cpp.o: src/util/pointedthing.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_94) "Building CXX object src/CMakeFiles/minetest.dir/util/pointedthing.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_197) "Building CXX object src/CMakeFiles/minetest.dir/util/pointedthing.cpp.o"
 	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/util/pointedthing.cpp.o -c /opt/minetest/src/util/pointedthing.cpp
 
 src/CMakeFiles/minetest.dir/util/pointedthing.cpp.i: cmake_force
@@ -2315,7 +4787,7 @@ src/CMakeFiles/minetest.dir/util/pointedthing.cpp.o.provides.build: src/CMakeFil
 
 src/CMakeFiles/minetest.dir/util/serialize.cpp.o: src/CMakeFiles/minetest.dir/flags.make
 src/CMakeFiles/minetest.dir/util/serialize.cpp.o: src/util/serialize.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_95) "Building CXX object src/CMakeFiles/minetest.dir/util/serialize.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_198) "Building CXX object src/CMakeFiles/minetest.dir/util/serialize.cpp.o"
 	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/util/serialize.cpp.o -c /opt/minetest/src/util/serialize.cpp
 
 src/CMakeFiles/minetest.dir/util/serialize.cpp.i: cmake_force
@@ -2339,7 +4811,7 @@ src/CMakeFiles/minetest.dir/util/serialize.cpp.o.provides.build: src/CMakeFiles/
 
 src/CMakeFiles/minetest.dir/util/sha1.cpp.o: src/CMakeFiles/minetest.dir/flags.make
 src/CMakeFiles/minetest.dir/util/sha1.cpp.o: src/util/sha1.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_96) "Building CXX object src/CMakeFiles/minetest.dir/util/sha1.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_199) "Building CXX object src/CMakeFiles/minetest.dir/util/sha1.cpp.o"
 	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/util/sha1.cpp.o -c /opt/minetest/src/util/sha1.cpp
 
 src/CMakeFiles/minetest.dir/util/sha1.cpp.i: cmake_force
@@ -2363,7 +4835,7 @@ src/CMakeFiles/minetest.dir/util/sha1.cpp.o.provides.build: src/CMakeFiles/minet
 
 src/CMakeFiles/minetest.dir/util/sha256.c.o: src/CMakeFiles/minetest.dir/flags.make
 src/CMakeFiles/minetest.dir/util/sha256.c.o: src/util/sha256.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_97) "Building C object src/CMakeFiles/minetest.dir/util/sha256.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_200) "Building C object src/CMakeFiles/minetest.dir/util/sha256.c.o"
 	cd /opt/minetest/src && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/minetest.dir/util/sha256.c.o   -c /opt/minetest/src/util/sha256.c
 
 src/CMakeFiles/minetest.dir/util/sha256.c.i: cmake_force
@@ -2387,7 +4859,7 @@ src/CMakeFiles/minetest.dir/util/sha256.c.o.provides.build: src/CMakeFiles/minet
 
 src/CMakeFiles/minetest.dir/util/srp.cpp.o: src/CMakeFiles/minetest.dir/flags.make
 src/CMakeFiles/minetest.dir/util/srp.cpp.o: src/util/srp.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_98) "Building CXX object src/CMakeFiles/minetest.dir/util/srp.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_201) "Building CXX object src/CMakeFiles/minetest.dir/util/srp.cpp.o"
 	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/util/srp.cpp.o -c /opt/minetest/src/util/srp.cpp
 
 src/CMakeFiles/minetest.dir/util/srp.cpp.i: cmake_force
@@ -2411,7 +4883,7 @@ src/CMakeFiles/minetest.dir/util/srp.cpp.o.provides.build: src/CMakeFiles/minete
 
 src/CMakeFiles/minetest.dir/util/string.cpp.o: src/CMakeFiles/minetest.dir/flags.make
 src/CMakeFiles/minetest.dir/util/string.cpp.o: src/util/string.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_99) "Building CXX object src/CMakeFiles/minetest.dir/util/string.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_202) "Building CXX object src/CMakeFiles/minetest.dir/util/string.cpp.o"
 	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/util/string.cpp.o -c /opt/minetest/src/util/string.cpp
 
 src/CMakeFiles/minetest.dir/util/string.cpp.i: cmake_force
@@ -2435,7 +4907,7 @@ src/CMakeFiles/minetest.dir/util/string.cpp.o.provides.build: src/CMakeFiles/min
 
 src/CMakeFiles/minetest.dir/util/timetaker.cpp.o: src/CMakeFiles/minetest.dir/flags.make
 src/CMakeFiles/minetest.dir/util/timetaker.cpp.o: src/util/timetaker.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_100) "Building CXX object src/CMakeFiles/minetest.dir/util/timetaker.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_203) "Building CXX object src/CMakeFiles/minetest.dir/util/timetaker.cpp.o"
 	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/util/timetaker.cpp.o -c /opt/minetest/src/util/timetaker.cpp
 
 src/CMakeFiles/minetest.dir/util/timetaker.cpp.i: cmake_force
@@ -2459,7 +4931,7 @@ src/CMakeFiles/minetest.dir/util/timetaker.cpp.o.provides.build: src/CMakeFiles/
 
 src/CMakeFiles/minetest.dir/ban.cpp.o: src/CMakeFiles/minetest.dir/flags.make
 src/CMakeFiles/minetest.dir/ban.cpp.o: src/ban.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_101) "Building CXX object src/CMakeFiles/minetest.dir/ban.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_204) "Building CXX object src/CMakeFiles/minetest.dir/ban.cpp.o"
 	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/ban.cpp.o -c /opt/minetest/src/ban.cpp
 
 src/CMakeFiles/minetest.dir/ban.cpp.i: cmake_force
@@ -2481,57 +4953,9 @@ src/CMakeFiles/minetest.dir/ban.cpp.o.provides: src/CMakeFiles/minetest.dir/ban.
 src/CMakeFiles/minetest.dir/ban.cpp.o.provides.build: src/CMakeFiles/minetest.dir/ban.cpp.o
 
 
-src/CMakeFiles/minetest.dir/camera.cpp.o: src/CMakeFiles/minetest.dir/flags.make
-src/CMakeFiles/minetest.dir/camera.cpp.o: src/camera.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_102) "Building CXX object src/CMakeFiles/minetest.dir/camera.cpp.o"
-	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/camera.cpp.o -c /opt/minetest/src/camera.cpp
-
-src/CMakeFiles/minetest.dir/camera.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/minetest.dir/camera.cpp.i"
-	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /opt/minetest/src/camera.cpp > CMakeFiles/minetest.dir/camera.cpp.i
-
-src/CMakeFiles/minetest.dir/camera.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/minetest.dir/camera.cpp.s"
-	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /opt/minetest/src/camera.cpp -o CMakeFiles/minetest.dir/camera.cpp.s
-
-src/CMakeFiles/minetest.dir/camera.cpp.o.requires:
-
-.PHONY : src/CMakeFiles/minetest.dir/camera.cpp.o.requires
-
-src/CMakeFiles/minetest.dir/camera.cpp.o.provides: src/CMakeFiles/minetest.dir/camera.cpp.o.requires
-	$(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/camera.cpp.o.provides.build
-.PHONY : src/CMakeFiles/minetest.dir/camera.cpp.o.provides
-
-src/CMakeFiles/minetest.dir/camera.cpp.o.provides.build: src/CMakeFiles/minetest.dir/camera.cpp.o
-
-
-src/CMakeFiles/minetest.dir/cavegen.cpp.o: src/CMakeFiles/minetest.dir/flags.make
-src/CMakeFiles/minetest.dir/cavegen.cpp.o: src/cavegen.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_103) "Building CXX object src/CMakeFiles/minetest.dir/cavegen.cpp.o"
-	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/cavegen.cpp.o -c /opt/minetest/src/cavegen.cpp
-
-src/CMakeFiles/minetest.dir/cavegen.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/minetest.dir/cavegen.cpp.i"
-	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /opt/minetest/src/cavegen.cpp > CMakeFiles/minetest.dir/cavegen.cpp.i
-
-src/CMakeFiles/minetest.dir/cavegen.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/minetest.dir/cavegen.cpp.s"
-	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /opt/minetest/src/cavegen.cpp -o CMakeFiles/minetest.dir/cavegen.cpp.s
-
-src/CMakeFiles/minetest.dir/cavegen.cpp.o.requires:
-
-.PHONY : src/CMakeFiles/minetest.dir/cavegen.cpp.o.requires
-
-src/CMakeFiles/minetest.dir/cavegen.cpp.o.provides: src/CMakeFiles/minetest.dir/cavegen.cpp.o.requires
-	$(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/cavegen.cpp.o.provides.build
-.PHONY : src/CMakeFiles/minetest.dir/cavegen.cpp.o.provides
-
-src/CMakeFiles/minetest.dir/cavegen.cpp.o.provides.build: src/CMakeFiles/minetest.dir/cavegen.cpp.o
-
-
 src/CMakeFiles/minetest.dir/chat.cpp.o: src/CMakeFiles/minetest.dir/flags.make
 src/CMakeFiles/minetest.dir/chat.cpp.o: src/chat.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_104) "Building CXX object src/CMakeFiles/minetest.dir/chat.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_205) "Building CXX object src/CMakeFiles/minetest.dir/chat.cpp.o"
 	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/chat.cpp.o -c /opt/minetest/src/chat.cpp
 
 src/CMakeFiles/minetest.dir/chat.cpp.i: cmake_force
@@ -2553,57 +4977,9 @@ src/CMakeFiles/minetest.dir/chat.cpp.o.provides: src/CMakeFiles/minetest.dir/cha
 src/CMakeFiles/minetest.dir/chat.cpp.o.provides.build: src/CMakeFiles/minetest.dir/chat.cpp.o
 
 
-src/CMakeFiles/minetest.dir/client.cpp.o: src/CMakeFiles/minetest.dir/flags.make
-src/CMakeFiles/minetest.dir/client.cpp.o: src/client.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_105) "Building CXX object src/CMakeFiles/minetest.dir/client.cpp.o"
-	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/client.cpp.o -c /opt/minetest/src/client.cpp
-
-src/CMakeFiles/minetest.dir/client.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/minetest.dir/client.cpp.i"
-	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /opt/minetest/src/client.cpp > CMakeFiles/minetest.dir/client.cpp.i
-
-src/CMakeFiles/minetest.dir/client.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/minetest.dir/client.cpp.s"
-	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /opt/minetest/src/client.cpp -o CMakeFiles/minetest.dir/client.cpp.s
-
-src/CMakeFiles/minetest.dir/client.cpp.o.requires:
-
-.PHONY : src/CMakeFiles/minetest.dir/client.cpp.o.requires
-
-src/CMakeFiles/minetest.dir/client.cpp.o.provides: src/CMakeFiles/minetest.dir/client.cpp.o.requires
-	$(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/client.cpp.o.provides.build
-.PHONY : src/CMakeFiles/minetest.dir/client.cpp.o.provides
-
-src/CMakeFiles/minetest.dir/client.cpp.o.provides.build: src/CMakeFiles/minetest.dir/client.cpp.o
-
-
-src/CMakeFiles/minetest.dir/clientenvironment.cpp.o: src/CMakeFiles/minetest.dir/flags.make
-src/CMakeFiles/minetest.dir/clientenvironment.cpp.o: src/clientenvironment.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_106) "Building CXX object src/CMakeFiles/minetest.dir/clientenvironment.cpp.o"
-	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/clientenvironment.cpp.o -c /opt/minetest/src/clientenvironment.cpp
-
-src/CMakeFiles/minetest.dir/clientenvironment.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/minetest.dir/clientenvironment.cpp.i"
-	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /opt/minetest/src/clientenvironment.cpp > CMakeFiles/minetest.dir/clientenvironment.cpp.i
-
-src/CMakeFiles/minetest.dir/clientenvironment.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/minetest.dir/clientenvironment.cpp.s"
-	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /opt/minetest/src/clientenvironment.cpp -o CMakeFiles/minetest.dir/clientenvironment.cpp.s
-
-src/CMakeFiles/minetest.dir/clientenvironment.cpp.o.requires:
-
-.PHONY : src/CMakeFiles/minetest.dir/clientenvironment.cpp.o.requires
-
-src/CMakeFiles/minetest.dir/clientenvironment.cpp.o.provides: src/CMakeFiles/minetest.dir/clientenvironment.cpp.o.requires
-	$(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/clientenvironment.cpp.o.provides.build
-.PHONY : src/CMakeFiles/minetest.dir/clientenvironment.cpp.o.provides
-
-src/CMakeFiles/minetest.dir/clientenvironment.cpp.o.provides.build: src/CMakeFiles/minetest.dir/clientenvironment.cpp.o
-
-
 src/CMakeFiles/minetest.dir/clientiface.cpp.o: src/CMakeFiles/minetest.dir/flags.make
 src/CMakeFiles/minetest.dir/clientiface.cpp.o: src/clientiface.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_107) "Building CXX object src/CMakeFiles/minetest.dir/clientiface.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_206) "Building CXX object src/CMakeFiles/minetest.dir/clientiface.cpp.o"
 	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/clientiface.cpp.o -c /opt/minetest/src/clientiface.cpp
 
 src/CMakeFiles/minetest.dir/clientiface.cpp.i: cmake_force
@@ -2625,105 +5001,9 @@ src/CMakeFiles/minetest.dir/clientiface.cpp.o.provides: src/CMakeFiles/minetest.
 src/CMakeFiles/minetest.dir/clientiface.cpp.o.provides.build: src/CMakeFiles/minetest.dir/clientiface.cpp.o
 
 
-src/CMakeFiles/minetest.dir/clientmap.cpp.o: src/CMakeFiles/minetest.dir/flags.make
-src/CMakeFiles/minetest.dir/clientmap.cpp.o: src/clientmap.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_108) "Building CXX object src/CMakeFiles/minetest.dir/clientmap.cpp.o"
-	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/clientmap.cpp.o -c /opt/minetest/src/clientmap.cpp
-
-src/CMakeFiles/minetest.dir/clientmap.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/minetest.dir/clientmap.cpp.i"
-	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /opt/minetest/src/clientmap.cpp > CMakeFiles/minetest.dir/clientmap.cpp.i
-
-src/CMakeFiles/minetest.dir/clientmap.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/minetest.dir/clientmap.cpp.s"
-	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /opt/minetest/src/clientmap.cpp -o CMakeFiles/minetest.dir/clientmap.cpp.s
-
-src/CMakeFiles/minetest.dir/clientmap.cpp.o.requires:
-
-.PHONY : src/CMakeFiles/minetest.dir/clientmap.cpp.o.requires
-
-src/CMakeFiles/minetest.dir/clientmap.cpp.o.provides: src/CMakeFiles/minetest.dir/clientmap.cpp.o.requires
-	$(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/clientmap.cpp.o.provides.build
-.PHONY : src/CMakeFiles/minetest.dir/clientmap.cpp.o.provides
-
-src/CMakeFiles/minetest.dir/clientmap.cpp.o.provides.build: src/CMakeFiles/minetest.dir/clientmap.cpp.o
-
-
-src/CMakeFiles/minetest.dir/clientmedia.cpp.o: src/CMakeFiles/minetest.dir/flags.make
-src/CMakeFiles/minetest.dir/clientmedia.cpp.o: src/clientmedia.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_109) "Building CXX object src/CMakeFiles/minetest.dir/clientmedia.cpp.o"
-	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/clientmedia.cpp.o -c /opt/minetest/src/clientmedia.cpp
-
-src/CMakeFiles/minetest.dir/clientmedia.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/minetest.dir/clientmedia.cpp.i"
-	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /opt/minetest/src/clientmedia.cpp > CMakeFiles/minetest.dir/clientmedia.cpp.i
-
-src/CMakeFiles/minetest.dir/clientmedia.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/minetest.dir/clientmedia.cpp.s"
-	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /opt/minetest/src/clientmedia.cpp -o CMakeFiles/minetest.dir/clientmedia.cpp.s
-
-src/CMakeFiles/minetest.dir/clientmedia.cpp.o.requires:
-
-.PHONY : src/CMakeFiles/minetest.dir/clientmedia.cpp.o.requires
-
-src/CMakeFiles/minetest.dir/clientmedia.cpp.o.provides: src/CMakeFiles/minetest.dir/clientmedia.cpp.o.requires
-	$(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/clientmedia.cpp.o.provides.build
-.PHONY : src/CMakeFiles/minetest.dir/clientmedia.cpp.o.provides
-
-src/CMakeFiles/minetest.dir/clientmedia.cpp.o.provides.build: src/CMakeFiles/minetest.dir/clientmedia.cpp.o
-
-
-src/CMakeFiles/minetest.dir/clientobject.cpp.o: src/CMakeFiles/minetest.dir/flags.make
-src/CMakeFiles/minetest.dir/clientobject.cpp.o: src/clientobject.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_110) "Building CXX object src/CMakeFiles/minetest.dir/clientobject.cpp.o"
-	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/clientobject.cpp.o -c /opt/minetest/src/clientobject.cpp
-
-src/CMakeFiles/minetest.dir/clientobject.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/minetest.dir/clientobject.cpp.i"
-	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /opt/minetest/src/clientobject.cpp > CMakeFiles/minetest.dir/clientobject.cpp.i
-
-src/CMakeFiles/minetest.dir/clientobject.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/minetest.dir/clientobject.cpp.s"
-	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /opt/minetest/src/clientobject.cpp -o CMakeFiles/minetest.dir/clientobject.cpp.s
-
-src/CMakeFiles/minetest.dir/clientobject.cpp.o.requires:
-
-.PHONY : src/CMakeFiles/minetest.dir/clientobject.cpp.o.requires
-
-src/CMakeFiles/minetest.dir/clientobject.cpp.o.provides: src/CMakeFiles/minetest.dir/clientobject.cpp.o.requires
-	$(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/clientobject.cpp.o.provides.build
-.PHONY : src/CMakeFiles/minetest.dir/clientobject.cpp.o.provides
-
-src/CMakeFiles/minetest.dir/clientobject.cpp.o.provides.build: src/CMakeFiles/minetest.dir/clientobject.cpp.o
-
-
-src/CMakeFiles/minetest.dir/clouds.cpp.o: src/CMakeFiles/minetest.dir/flags.make
-src/CMakeFiles/minetest.dir/clouds.cpp.o: src/clouds.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_111) "Building CXX object src/CMakeFiles/minetest.dir/clouds.cpp.o"
-	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/clouds.cpp.o -c /opt/minetest/src/clouds.cpp
-
-src/CMakeFiles/minetest.dir/clouds.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/minetest.dir/clouds.cpp.i"
-	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /opt/minetest/src/clouds.cpp > CMakeFiles/minetest.dir/clouds.cpp.i
-
-src/CMakeFiles/minetest.dir/clouds.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/minetest.dir/clouds.cpp.s"
-	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /opt/minetest/src/clouds.cpp -o CMakeFiles/minetest.dir/clouds.cpp.s
-
-src/CMakeFiles/minetest.dir/clouds.cpp.o.requires:
-
-.PHONY : src/CMakeFiles/minetest.dir/clouds.cpp.o.requires
-
-src/CMakeFiles/minetest.dir/clouds.cpp.o.provides: src/CMakeFiles/minetest.dir/clouds.cpp.o.requires
-	$(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/clouds.cpp.o.provides.build
-.PHONY : src/CMakeFiles/minetest.dir/clouds.cpp.o.provides
-
-src/CMakeFiles/minetest.dir/clouds.cpp.o.provides.build: src/CMakeFiles/minetest.dir/clouds.cpp.o
-
-
 src/CMakeFiles/minetest.dir/collision.cpp.o: src/CMakeFiles/minetest.dir/flags.make
 src/CMakeFiles/minetest.dir/collision.cpp.o: src/collision.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_112) "Building CXX object src/CMakeFiles/minetest.dir/collision.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_207) "Building CXX object src/CMakeFiles/minetest.dir/collision.cpp.o"
 	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/collision.cpp.o -c /opt/minetest/src/collision.cpp
 
 src/CMakeFiles/minetest.dir/collision.cpp.i: cmake_force
@@ -2745,105 +5025,9 @@ src/CMakeFiles/minetest.dir/collision.cpp.o.provides: src/CMakeFiles/minetest.di
 src/CMakeFiles/minetest.dir/collision.cpp.o.provides.build: src/CMakeFiles/minetest.dir/collision.cpp.o
 
 
-src/CMakeFiles/minetest.dir/content_abm.cpp.o: src/CMakeFiles/minetest.dir/flags.make
-src/CMakeFiles/minetest.dir/content_abm.cpp.o: src/content_abm.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_113) "Building CXX object src/CMakeFiles/minetest.dir/content_abm.cpp.o"
-	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/content_abm.cpp.o -c /opt/minetest/src/content_abm.cpp
-
-src/CMakeFiles/minetest.dir/content_abm.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/minetest.dir/content_abm.cpp.i"
-	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /opt/minetest/src/content_abm.cpp > CMakeFiles/minetest.dir/content_abm.cpp.i
-
-src/CMakeFiles/minetest.dir/content_abm.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/minetest.dir/content_abm.cpp.s"
-	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /opt/minetest/src/content_abm.cpp -o CMakeFiles/minetest.dir/content_abm.cpp.s
-
-src/CMakeFiles/minetest.dir/content_abm.cpp.o.requires:
-
-.PHONY : src/CMakeFiles/minetest.dir/content_abm.cpp.o.requires
-
-src/CMakeFiles/minetest.dir/content_abm.cpp.o.provides: src/CMakeFiles/minetest.dir/content_abm.cpp.o.requires
-	$(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/content_abm.cpp.o.provides.build
-.PHONY : src/CMakeFiles/minetest.dir/content_abm.cpp.o.provides
-
-src/CMakeFiles/minetest.dir/content_abm.cpp.o.provides.build: src/CMakeFiles/minetest.dir/content_abm.cpp.o
-
-
-src/CMakeFiles/minetest.dir/content_cao.cpp.o: src/CMakeFiles/minetest.dir/flags.make
-src/CMakeFiles/minetest.dir/content_cao.cpp.o: src/content_cao.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_114) "Building CXX object src/CMakeFiles/minetest.dir/content_cao.cpp.o"
-	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/content_cao.cpp.o -c /opt/minetest/src/content_cao.cpp
-
-src/CMakeFiles/minetest.dir/content_cao.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/minetest.dir/content_cao.cpp.i"
-	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /opt/minetest/src/content_cao.cpp > CMakeFiles/minetest.dir/content_cao.cpp.i
-
-src/CMakeFiles/minetest.dir/content_cao.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/minetest.dir/content_cao.cpp.s"
-	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /opt/minetest/src/content_cao.cpp -o CMakeFiles/minetest.dir/content_cao.cpp.s
-
-src/CMakeFiles/minetest.dir/content_cao.cpp.o.requires:
-
-.PHONY : src/CMakeFiles/minetest.dir/content_cao.cpp.o.requires
-
-src/CMakeFiles/minetest.dir/content_cao.cpp.o.provides: src/CMakeFiles/minetest.dir/content_cao.cpp.o.requires
-	$(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/content_cao.cpp.o.provides.build
-.PHONY : src/CMakeFiles/minetest.dir/content_cao.cpp.o.provides
-
-src/CMakeFiles/minetest.dir/content_cao.cpp.o.provides.build: src/CMakeFiles/minetest.dir/content_cao.cpp.o
-
-
-src/CMakeFiles/minetest.dir/content_cso.cpp.o: src/CMakeFiles/minetest.dir/flags.make
-src/CMakeFiles/minetest.dir/content_cso.cpp.o: src/content_cso.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_115) "Building CXX object src/CMakeFiles/minetest.dir/content_cso.cpp.o"
-	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/content_cso.cpp.o -c /opt/minetest/src/content_cso.cpp
-
-src/CMakeFiles/minetest.dir/content_cso.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/minetest.dir/content_cso.cpp.i"
-	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /opt/minetest/src/content_cso.cpp > CMakeFiles/minetest.dir/content_cso.cpp.i
-
-src/CMakeFiles/minetest.dir/content_cso.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/minetest.dir/content_cso.cpp.s"
-	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /opt/minetest/src/content_cso.cpp -o CMakeFiles/minetest.dir/content_cso.cpp.s
-
-src/CMakeFiles/minetest.dir/content_cso.cpp.o.requires:
-
-.PHONY : src/CMakeFiles/minetest.dir/content_cso.cpp.o.requires
-
-src/CMakeFiles/minetest.dir/content_cso.cpp.o.provides: src/CMakeFiles/minetest.dir/content_cso.cpp.o.requires
-	$(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/content_cso.cpp.o.provides.build
-.PHONY : src/CMakeFiles/minetest.dir/content_cso.cpp.o.provides
-
-src/CMakeFiles/minetest.dir/content_cso.cpp.o.provides.build: src/CMakeFiles/minetest.dir/content_cso.cpp.o
-
-
-src/CMakeFiles/minetest.dir/content_mapblock.cpp.o: src/CMakeFiles/minetest.dir/flags.make
-src/CMakeFiles/minetest.dir/content_mapblock.cpp.o: src/content_mapblock.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_116) "Building CXX object src/CMakeFiles/minetest.dir/content_mapblock.cpp.o"
-	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/content_mapblock.cpp.o -c /opt/minetest/src/content_mapblock.cpp
-
-src/CMakeFiles/minetest.dir/content_mapblock.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/minetest.dir/content_mapblock.cpp.i"
-	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /opt/minetest/src/content_mapblock.cpp > CMakeFiles/minetest.dir/content_mapblock.cpp.i
-
-src/CMakeFiles/minetest.dir/content_mapblock.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/minetest.dir/content_mapblock.cpp.s"
-	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /opt/minetest/src/content_mapblock.cpp -o CMakeFiles/minetest.dir/content_mapblock.cpp.s
-
-src/CMakeFiles/minetest.dir/content_mapblock.cpp.o.requires:
-
-.PHONY : src/CMakeFiles/minetest.dir/content_mapblock.cpp.o.requires
-
-src/CMakeFiles/minetest.dir/content_mapblock.cpp.o.provides: src/CMakeFiles/minetest.dir/content_mapblock.cpp.o.requires
-	$(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/content_mapblock.cpp.o.provides.build
-.PHONY : src/CMakeFiles/minetest.dir/content_mapblock.cpp.o.provides
-
-src/CMakeFiles/minetest.dir/content_mapblock.cpp.o.provides.build: src/CMakeFiles/minetest.dir/content_mapblock.cpp.o
-
-
 src/CMakeFiles/minetest.dir/content_mapnode.cpp.o: src/CMakeFiles/minetest.dir/flags.make
 src/CMakeFiles/minetest.dir/content_mapnode.cpp.o: src/content_mapnode.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_117) "Building CXX object src/CMakeFiles/minetest.dir/content_mapnode.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_208) "Building CXX object src/CMakeFiles/minetest.dir/content_mapnode.cpp.o"
 	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/content_mapnode.cpp.o -c /opt/minetest/src/content_mapnode.cpp
 
 src/CMakeFiles/minetest.dir/content_mapnode.cpp.i: cmake_force
@@ -2867,7 +5051,7 @@ src/CMakeFiles/minetest.dir/content_mapnode.cpp.o.provides.build: src/CMakeFiles
 
 src/CMakeFiles/minetest.dir/content_nodemeta.cpp.o: src/CMakeFiles/minetest.dir/flags.make
 src/CMakeFiles/minetest.dir/content_nodemeta.cpp.o: src/content_nodemeta.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_118) "Building CXX object src/CMakeFiles/minetest.dir/content_nodemeta.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_209) "Building CXX object src/CMakeFiles/minetest.dir/content_nodemeta.cpp.o"
 	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/content_nodemeta.cpp.o -c /opt/minetest/src/content_nodemeta.cpp
 
 src/CMakeFiles/minetest.dir/content_nodemeta.cpp.i: cmake_force
@@ -2891,7 +5075,7 @@ src/CMakeFiles/minetest.dir/content_nodemeta.cpp.o.provides.build: src/CMakeFile
 
 src/CMakeFiles/minetest.dir/content_sao.cpp.o: src/CMakeFiles/minetest.dir/flags.make
 src/CMakeFiles/minetest.dir/content_sao.cpp.o: src/content_sao.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_119) "Building CXX object src/CMakeFiles/minetest.dir/content_sao.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_210) "Building CXX object src/CMakeFiles/minetest.dir/content_sao.cpp.o"
 	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/content_sao.cpp.o -c /opt/minetest/src/content_sao.cpp
 
 src/CMakeFiles/minetest.dir/content_sao.cpp.i: cmake_force
@@ -2915,7 +5099,7 @@ src/CMakeFiles/minetest.dir/content_sao.cpp.o.provides.build: src/CMakeFiles/min
 
 src/CMakeFiles/minetest.dir/convert_json.cpp.o: src/CMakeFiles/minetest.dir/flags.make
 src/CMakeFiles/minetest.dir/convert_json.cpp.o: src/convert_json.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_120) "Building CXX object src/CMakeFiles/minetest.dir/convert_json.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_211) "Building CXX object src/CMakeFiles/minetest.dir/convert_json.cpp.o"
 	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/convert_json.cpp.o -c /opt/minetest/src/convert_json.cpp
 
 src/CMakeFiles/minetest.dir/convert_json.cpp.i: cmake_force
@@ -2939,7 +5123,7 @@ src/CMakeFiles/minetest.dir/convert_json.cpp.o.provides.build: src/CMakeFiles/mi
 
 src/CMakeFiles/minetest.dir/craftdef.cpp.o: src/CMakeFiles/minetest.dir/flags.make
 src/CMakeFiles/minetest.dir/craftdef.cpp.o: src/craftdef.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_121) "Building CXX object src/CMakeFiles/minetest.dir/craftdef.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_212) "Building CXX object src/CMakeFiles/minetest.dir/craftdef.cpp.o"
 	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/craftdef.cpp.o -c /opt/minetest/src/craftdef.cpp
 
 src/CMakeFiles/minetest.dir/craftdef.cpp.i: cmake_force
@@ -2961,177 +5145,9 @@ src/CMakeFiles/minetest.dir/craftdef.cpp.o.provides: src/CMakeFiles/minetest.dir
 src/CMakeFiles/minetest.dir/craftdef.cpp.o.provides.build: src/CMakeFiles/minetest.dir/craftdef.cpp.o
 
 
-src/CMakeFiles/minetest.dir/database-dummy.cpp.o: src/CMakeFiles/minetest.dir/flags.make
-src/CMakeFiles/minetest.dir/database-dummy.cpp.o: src/database-dummy.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_122) "Building CXX object src/CMakeFiles/minetest.dir/database-dummy.cpp.o"
-	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/database-dummy.cpp.o -c /opt/minetest/src/database-dummy.cpp
-
-src/CMakeFiles/minetest.dir/database-dummy.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/minetest.dir/database-dummy.cpp.i"
-	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /opt/minetest/src/database-dummy.cpp > CMakeFiles/minetest.dir/database-dummy.cpp.i
-
-src/CMakeFiles/minetest.dir/database-dummy.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/minetest.dir/database-dummy.cpp.s"
-	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /opt/minetest/src/database-dummy.cpp -o CMakeFiles/minetest.dir/database-dummy.cpp.s
-
-src/CMakeFiles/minetest.dir/database-dummy.cpp.o.requires:
-
-.PHONY : src/CMakeFiles/minetest.dir/database-dummy.cpp.o.requires
-
-src/CMakeFiles/minetest.dir/database-dummy.cpp.o.provides: src/CMakeFiles/minetest.dir/database-dummy.cpp.o.requires
-	$(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/database-dummy.cpp.o.provides.build
-.PHONY : src/CMakeFiles/minetest.dir/database-dummy.cpp.o.provides
-
-src/CMakeFiles/minetest.dir/database-dummy.cpp.o.provides.build: src/CMakeFiles/minetest.dir/database-dummy.cpp.o
-
-
-src/CMakeFiles/minetest.dir/database-files.cpp.o: src/CMakeFiles/minetest.dir/flags.make
-src/CMakeFiles/minetest.dir/database-files.cpp.o: src/database-files.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_123) "Building CXX object src/CMakeFiles/minetest.dir/database-files.cpp.o"
-	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/database-files.cpp.o -c /opt/minetest/src/database-files.cpp
-
-src/CMakeFiles/minetest.dir/database-files.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/minetest.dir/database-files.cpp.i"
-	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /opt/minetest/src/database-files.cpp > CMakeFiles/minetest.dir/database-files.cpp.i
-
-src/CMakeFiles/minetest.dir/database-files.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/minetest.dir/database-files.cpp.s"
-	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /opt/minetest/src/database-files.cpp -o CMakeFiles/minetest.dir/database-files.cpp.s
-
-src/CMakeFiles/minetest.dir/database-files.cpp.o.requires:
-
-.PHONY : src/CMakeFiles/minetest.dir/database-files.cpp.o.requires
-
-src/CMakeFiles/minetest.dir/database-files.cpp.o.provides: src/CMakeFiles/minetest.dir/database-files.cpp.o.requires
-	$(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/database-files.cpp.o.provides.build
-.PHONY : src/CMakeFiles/minetest.dir/database-files.cpp.o.provides
-
-src/CMakeFiles/minetest.dir/database-files.cpp.o.provides.build: src/CMakeFiles/minetest.dir/database-files.cpp.o
-
-
-src/CMakeFiles/minetest.dir/database-leveldb.cpp.o: src/CMakeFiles/minetest.dir/flags.make
-src/CMakeFiles/minetest.dir/database-leveldb.cpp.o: src/database-leveldb.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_124) "Building CXX object src/CMakeFiles/minetest.dir/database-leveldb.cpp.o"
-	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/database-leveldb.cpp.o -c /opt/minetest/src/database-leveldb.cpp
-
-src/CMakeFiles/minetest.dir/database-leveldb.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/minetest.dir/database-leveldb.cpp.i"
-	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /opt/minetest/src/database-leveldb.cpp > CMakeFiles/minetest.dir/database-leveldb.cpp.i
-
-src/CMakeFiles/minetest.dir/database-leveldb.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/minetest.dir/database-leveldb.cpp.s"
-	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /opt/minetest/src/database-leveldb.cpp -o CMakeFiles/minetest.dir/database-leveldb.cpp.s
-
-src/CMakeFiles/minetest.dir/database-leveldb.cpp.o.requires:
-
-.PHONY : src/CMakeFiles/minetest.dir/database-leveldb.cpp.o.requires
-
-src/CMakeFiles/minetest.dir/database-leveldb.cpp.o.provides: src/CMakeFiles/minetest.dir/database-leveldb.cpp.o.requires
-	$(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/database-leveldb.cpp.o.provides.build
-.PHONY : src/CMakeFiles/minetest.dir/database-leveldb.cpp.o.provides
-
-src/CMakeFiles/minetest.dir/database-leveldb.cpp.o.provides.build: src/CMakeFiles/minetest.dir/database-leveldb.cpp.o
-
-
-src/CMakeFiles/minetest.dir/database-postgresql.cpp.o: src/CMakeFiles/minetest.dir/flags.make
-src/CMakeFiles/minetest.dir/database-postgresql.cpp.o: src/database-postgresql.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_125) "Building CXX object src/CMakeFiles/minetest.dir/database-postgresql.cpp.o"
-	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/database-postgresql.cpp.o -c /opt/minetest/src/database-postgresql.cpp
-
-src/CMakeFiles/minetest.dir/database-postgresql.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/minetest.dir/database-postgresql.cpp.i"
-	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /opt/minetest/src/database-postgresql.cpp > CMakeFiles/minetest.dir/database-postgresql.cpp.i
-
-src/CMakeFiles/minetest.dir/database-postgresql.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/minetest.dir/database-postgresql.cpp.s"
-	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /opt/minetest/src/database-postgresql.cpp -o CMakeFiles/minetest.dir/database-postgresql.cpp.s
-
-src/CMakeFiles/minetest.dir/database-postgresql.cpp.o.requires:
-
-.PHONY : src/CMakeFiles/minetest.dir/database-postgresql.cpp.o.requires
-
-src/CMakeFiles/minetest.dir/database-postgresql.cpp.o.provides: src/CMakeFiles/minetest.dir/database-postgresql.cpp.o.requires
-	$(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/database-postgresql.cpp.o.provides.build
-.PHONY : src/CMakeFiles/minetest.dir/database-postgresql.cpp.o.provides
-
-src/CMakeFiles/minetest.dir/database-postgresql.cpp.o.provides.build: src/CMakeFiles/minetest.dir/database-postgresql.cpp.o
-
-
-src/CMakeFiles/minetest.dir/database-redis.cpp.o: src/CMakeFiles/minetest.dir/flags.make
-src/CMakeFiles/minetest.dir/database-redis.cpp.o: src/database-redis.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_126) "Building CXX object src/CMakeFiles/minetest.dir/database-redis.cpp.o"
-	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/database-redis.cpp.o -c /opt/minetest/src/database-redis.cpp
-
-src/CMakeFiles/minetest.dir/database-redis.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/minetest.dir/database-redis.cpp.i"
-	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /opt/minetest/src/database-redis.cpp > CMakeFiles/minetest.dir/database-redis.cpp.i
-
-src/CMakeFiles/minetest.dir/database-redis.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/minetest.dir/database-redis.cpp.s"
-	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /opt/minetest/src/database-redis.cpp -o CMakeFiles/minetest.dir/database-redis.cpp.s
-
-src/CMakeFiles/minetest.dir/database-redis.cpp.o.requires:
-
-.PHONY : src/CMakeFiles/minetest.dir/database-redis.cpp.o.requires
-
-src/CMakeFiles/minetest.dir/database-redis.cpp.o.provides: src/CMakeFiles/minetest.dir/database-redis.cpp.o.requires
-	$(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/database-redis.cpp.o.provides.build
-.PHONY : src/CMakeFiles/minetest.dir/database-redis.cpp.o.provides
-
-src/CMakeFiles/minetest.dir/database-redis.cpp.o.provides.build: src/CMakeFiles/minetest.dir/database-redis.cpp.o
-
-
-src/CMakeFiles/minetest.dir/database-sqlite3.cpp.o: src/CMakeFiles/minetest.dir/flags.make
-src/CMakeFiles/minetest.dir/database-sqlite3.cpp.o: src/database-sqlite3.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_127) "Building CXX object src/CMakeFiles/minetest.dir/database-sqlite3.cpp.o"
-	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/database-sqlite3.cpp.o -c /opt/minetest/src/database-sqlite3.cpp
-
-src/CMakeFiles/minetest.dir/database-sqlite3.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/minetest.dir/database-sqlite3.cpp.i"
-	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /opt/minetest/src/database-sqlite3.cpp > CMakeFiles/minetest.dir/database-sqlite3.cpp.i
-
-src/CMakeFiles/minetest.dir/database-sqlite3.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/minetest.dir/database-sqlite3.cpp.s"
-	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /opt/minetest/src/database-sqlite3.cpp -o CMakeFiles/minetest.dir/database-sqlite3.cpp.s
-
-src/CMakeFiles/minetest.dir/database-sqlite3.cpp.o.requires:
-
-.PHONY : src/CMakeFiles/minetest.dir/database-sqlite3.cpp.o.requires
-
-src/CMakeFiles/minetest.dir/database-sqlite3.cpp.o.provides: src/CMakeFiles/minetest.dir/database-sqlite3.cpp.o.requires
-	$(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/database-sqlite3.cpp.o.provides.build
-.PHONY : src/CMakeFiles/minetest.dir/database-sqlite3.cpp.o.provides
-
-src/CMakeFiles/minetest.dir/database-sqlite3.cpp.o.provides.build: src/CMakeFiles/minetest.dir/database-sqlite3.cpp.o
-
-
-src/CMakeFiles/minetest.dir/database.cpp.o: src/CMakeFiles/minetest.dir/flags.make
-src/CMakeFiles/minetest.dir/database.cpp.o: src/database.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_128) "Building CXX object src/CMakeFiles/minetest.dir/database.cpp.o"
-	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/database.cpp.o -c /opt/minetest/src/database.cpp
-
-src/CMakeFiles/minetest.dir/database.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/minetest.dir/database.cpp.i"
-	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /opt/minetest/src/database.cpp > CMakeFiles/minetest.dir/database.cpp.i
-
-src/CMakeFiles/minetest.dir/database.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/minetest.dir/database.cpp.s"
-	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /opt/minetest/src/database.cpp -o CMakeFiles/minetest.dir/database.cpp.s
-
-src/CMakeFiles/minetest.dir/database.cpp.o.requires:
-
-.PHONY : src/CMakeFiles/minetest.dir/database.cpp.o.requires
-
-src/CMakeFiles/minetest.dir/database.cpp.o.provides: src/CMakeFiles/minetest.dir/database.cpp.o.requires
-	$(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/database.cpp.o.provides.build
-.PHONY : src/CMakeFiles/minetest.dir/database.cpp.o.provides
-
-src/CMakeFiles/minetest.dir/database.cpp.o.provides.build: src/CMakeFiles/minetest.dir/database.cpp.o
-
-
 src/CMakeFiles/minetest.dir/debug.cpp.o: src/CMakeFiles/minetest.dir/flags.make
 src/CMakeFiles/minetest.dir/debug.cpp.o: src/debug.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_129) "Building CXX object src/CMakeFiles/minetest.dir/debug.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_213) "Building CXX object src/CMakeFiles/minetest.dir/debug.cpp.o"
 	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/debug.cpp.o -c /opt/minetest/src/debug.cpp
 
 src/CMakeFiles/minetest.dir/debug.cpp.i: cmake_force
@@ -3155,7 +5171,7 @@ src/CMakeFiles/minetest.dir/debug.cpp.o.provides.build: src/CMakeFiles/minetest.
 
 src/CMakeFiles/minetest.dir/defaultsettings.cpp.o: src/CMakeFiles/minetest.dir/flags.make
 src/CMakeFiles/minetest.dir/defaultsettings.cpp.o: src/defaultsettings.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_130) "Building CXX object src/CMakeFiles/minetest.dir/defaultsettings.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_214) "Building CXX object src/CMakeFiles/minetest.dir/defaultsettings.cpp.o"
 	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/defaultsettings.cpp.o -c /opt/minetest/src/defaultsettings.cpp
 
 src/CMakeFiles/minetest.dir/defaultsettings.cpp.i: cmake_force
@@ -3177,57 +5193,9 @@ src/CMakeFiles/minetest.dir/defaultsettings.cpp.o.provides: src/CMakeFiles/minet
 src/CMakeFiles/minetest.dir/defaultsettings.cpp.o.provides.build: src/CMakeFiles/minetest.dir/defaultsettings.cpp.o
 
 
-src/CMakeFiles/minetest.dir/drawscene.cpp.o: src/CMakeFiles/minetest.dir/flags.make
-src/CMakeFiles/minetest.dir/drawscene.cpp.o: src/drawscene.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_131) "Building CXX object src/CMakeFiles/minetest.dir/drawscene.cpp.o"
-	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/drawscene.cpp.o -c /opt/minetest/src/drawscene.cpp
-
-src/CMakeFiles/minetest.dir/drawscene.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/minetest.dir/drawscene.cpp.i"
-	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /opt/minetest/src/drawscene.cpp > CMakeFiles/minetest.dir/drawscene.cpp.i
-
-src/CMakeFiles/minetest.dir/drawscene.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/minetest.dir/drawscene.cpp.s"
-	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /opt/minetest/src/drawscene.cpp -o CMakeFiles/minetest.dir/drawscene.cpp.s
-
-src/CMakeFiles/minetest.dir/drawscene.cpp.o.requires:
-
-.PHONY : src/CMakeFiles/minetest.dir/drawscene.cpp.o.requires
-
-src/CMakeFiles/minetest.dir/drawscene.cpp.o.provides: src/CMakeFiles/minetest.dir/drawscene.cpp.o.requires
-	$(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/drawscene.cpp.o.provides.build
-.PHONY : src/CMakeFiles/minetest.dir/drawscene.cpp.o.provides
-
-src/CMakeFiles/minetest.dir/drawscene.cpp.o.provides.build: src/CMakeFiles/minetest.dir/drawscene.cpp.o
-
-
-src/CMakeFiles/minetest.dir/dungeongen.cpp.o: src/CMakeFiles/minetest.dir/flags.make
-src/CMakeFiles/minetest.dir/dungeongen.cpp.o: src/dungeongen.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_132) "Building CXX object src/CMakeFiles/minetest.dir/dungeongen.cpp.o"
-	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/dungeongen.cpp.o -c /opt/minetest/src/dungeongen.cpp
-
-src/CMakeFiles/minetest.dir/dungeongen.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/minetest.dir/dungeongen.cpp.i"
-	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /opt/minetest/src/dungeongen.cpp > CMakeFiles/minetest.dir/dungeongen.cpp.i
-
-src/CMakeFiles/minetest.dir/dungeongen.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/minetest.dir/dungeongen.cpp.s"
-	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /opt/minetest/src/dungeongen.cpp -o CMakeFiles/minetest.dir/dungeongen.cpp.s
-
-src/CMakeFiles/minetest.dir/dungeongen.cpp.o.requires:
-
-.PHONY : src/CMakeFiles/minetest.dir/dungeongen.cpp.o.requires
-
-src/CMakeFiles/minetest.dir/dungeongen.cpp.o.provides: src/CMakeFiles/minetest.dir/dungeongen.cpp.o.requires
-	$(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/dungeongen.cpp.o.provides.build
-.PHONY : src/CMakeFiles/minetest.dir/dungeongen.cpp.o.provides
-
-src/CMakeFiles/minetest.dir/dungeongen.cpp.o.provides.build: src/CMakeFiles/minetest.dir/dungeongen.cpp.o
-
-
 src/CMakeFiles/minetest.dir/emerge.cpp.o: src/CMakeFiles/minetest.dir/flags.make
 src/CMakeFiles/minetest.dir/emerge.cpp.o: src/emerge.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_133) "Building CXX object src/CMakeFiles/minetest.dir/emerge.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_215) "Building CXX object src/CMakeFiles/minetest.dir/emerge.cpp.o"
 	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/emerge.cpp.o -c /opt/minetest/src/emerge.cpp
 
 src/CMakeFiles/minetest.dir/emerge.cpp.i: cmake_force
@@ -3251,7 +5219,7 @@ src/CMakeFiles/minetest.dir/emerge.cpp.o.provides.build: src/CMakeFiles/minetest
 
 src/CMakeFiles/minetest.dir/environment.cpp.o: src/CMakeFiles/minetest.dir/flags.make
 src/CMakeFiles/minetest.dir/environment.cpp.o: src/environment.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_134) "Building CXX object src/CMakeFiles/minetest.dir/environment.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_216) "Building CXX object src/CMakeFiles/minetest.dir/environment.cpp.o"
 	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/environment.cpp.o -c /opt/minetest/src/environment.cpp
 
 src/CMakeFiles/minetest.dir/environment.cpp.i: cmake_force
@@ -3275,7 +5243,7 @@ src/CMakeFiles/minetest.dir/environment.cpp.o.provides.build: src/CMakeFiles/min
 
 src/CMakeFiles/minetest.dir/face_position_cache.cpp.o: src/CMakeFiles/minetest.dir/flags.make
 src/CMakeFiles/minetest.dir/face_position_cache.cpp.o: src/face_position_cache.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_135) "Building CXX object src/CMakeFiles/minetest.dir/face_position_cache.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_217) "Building CXX object src/CMakeFiles/minetest.dir/face_position_cache.cpp.o"
 	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/face_position_cache.cpp.o -c /opt/minetest/src/face_position_cache.cpp
 
 src/CMakeFiles/minetest.dir/face_position_cache.cpp.i: cmake_force
@@ -3297,33 +5265,9 @@ src/CMakeFiles/minetest.dir/face_position_cache.cpp.o.provides: src/CMakeFiles/m
 src/CMakeFiles/minetest.dir/face_position_cache.cpp.o.provides.build: src/CMakeFiles/minetest.dir/face_position_cache.cpp.o
 
 
-src/CMakeFiles/minetest.dir/filecache.cpp.o: src/CMakeFiles/minetest.dir/flags.make
-src/CMakeFiles/minetest.dir/filecache.cpp.o: src/filecache.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_136) "Building CXX object src/CMakeFiles/minetest.dir/filecache.cpp.o"
-	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/filecache.cpp.o -c /opt/minetest/src/filecache.cpp
-
-src/CMakeFiles/minetest.dir/filecache.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/minetest.dir/filecache.cpp.i"
-	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /opt/minetest/src/filecache.cpp > CMakeFiles/minetest.dir/filecache.cpp.i
-
-src/CMakeFiles/minetest.dir/filecache.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/minetest.dir/filecache.cpp.s"
-	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /opt/minetest/src/filecache.cpp -o CMakeFiles/minetest.dir/filecache.cpp.s
-
-src/CMakeFiles/minetest.dir/filecache.cpp.o.requires:
-
-.PHONY : src/CMakeFiles/minetest.dir/filecache.cpp.o.requires
-
-src/CMakeFiles/minetest.dir/filecache.cpp.o.provides: src/CMakeFiles/minetest.dir/filecache.cpp.o.requires
-	$(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/filecache.cpp.o.provides.build
-.PHONY : src/CMakeFiles/minetest.dir/filecache.cpp.o.provides
-
-src/CMakeFiles/minetest.dir/filecache.cpp.o.provides.build: src/CMakeFiles/minetest.dir/filecache.cpp.o
-
-
 src/CMakeFiles/minetest.dir/filesys.cpp.o: src/CMakeFiles/minetest.dir/flags.make
 src/CMakeFiles/minetest.dir/filesys.cpp.o: src/filesys.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_137) "Building CXX object src/CMakeFiles/minetest.dir/filesys.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_218) "Building CXX object src/CMakeFiles/minetest.dir/filesys.cpp.o"
 	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/filesys.cpp.o -c /opt/minetest/src/filesys.cpp
 
 src/CMakeFiles/minetest.dir/filesys.cpp.i: cmake_force
@@ -3345,57 +5289,9 @@ src/CMakeFiles/minetest.dir/filesys.cpp.o.provides: src/CMakeFiles/minetest.dir/
 src/CMakeFiles/minetest.dir/filesys.cpp.o.provides.build: src/CMakeFiles/minetest.dir/filesys.cpp.o
 
 
-src/CMakeFiles/minetest.dir/fontengine.cpp.o: src/CMakeFiles/minetest.dir/flags.make
-src/CMakeFiles/minetest.dir/fontengine.cpp.o: src/fontengine.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_138) "Building CXX object src/CMakeFiles/minetest.dir/fontengine.cpp.o"
-	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/fontengine.cpp.o -c /opt/minetest/src/fontengine.cpp
-
-src/CMakeFiles/minetest.dir/fontengine.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/minetest.dir/fontengine.cpp.i"
-	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /opt/minetest/src/fontengine.cpp > CMakeFiles/minetest.dir/fontengine.cpp.i
-
-src/CMakeFiles/minetest.dir/fontengine.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/minetest.dir/fontengine.cpp.s"
-	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /opt/minetest/src/fontengine.cpp -o CMakeFiles/minetest.dir/fontengine.cpp.s
-
-src/CMakeFiles/minetest.dir/fontengine.cpp.o.requires:
-
-.PHONY : src/CMakeFiles/minetest.dir/fontengine.cpp.o.requires
-
-src/CMakeFiles/minetest.dir/fontengine.cpp.o.provides: src/CMakeFiles/minetest.dir/fontengine.cpp.o.requires
-	$(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/fontengine.cpp.o.provides.build
-.PHONY : src/CMakeFiles/minetest.dir/fontengine.cpp.o.provides
-
-src/CMakeFiles/minetest.dir/fontengine.cpp.o.provides.build: src/CMakeFiles/minetest.dir/fontengine.cpp.o
-
-
-src/CMakeFiles/minetest.dir/game.cpp.o: src/CMakeFiles/minetest.dir/flags.make
-src/CMakeFiles/minetest.dir/game.cpp.o: src/game.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_139) "Building CXX object src/CMakeFiles/minetest.dir/game.cpp.o"
-	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/game.cpp.o -c /opt/minetest/src/game.cpp
-
-src/CMakeFiles/minetest.dir/game.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/minetest.dir/game.cpp.i"
-	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /opt/minetest/src/game.cpp > CMakeFiles/minetest.dir/game.cpp.i
-
-src/CMakeFiles/minetest.dir/game.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/minetest.dir/game.cpp.s"
-	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /opt/minetest/src/game.cpp -o CMakeFiles/minetest.dir/game.cpp.s
-
-src/CMakeFiles/minetest.dir/game.cpp.o.requires:
-
-.PHONY : src/CMakeFiles/minetest.dir/game.cpp.o.requires
-
-src/CMakeFiles/minetest.dir/game.cpp.o.provides: src/CMakeFiles/minetest.dir/game.cpp.o.requires
-	$(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/game.cpp.o.provides.build
-.PHONY : src/CMakeFiles/minetest.dir/game.cpp.o.provides
-
-src/CMakeFiles/minetest.dir/game.cpp.o.provides.build: src/CMakeFiles/minetest.dir/game.cpp.o
-
-
 src/CMakeFiles/minetest.dir/genericobject.cpp.o: src/CMakeFiles/minetest.dir/flags.make
 src/CMakeFiles/minetest.dir/genericobject.cpp.o: src/genericobject.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_140) "Building CXX object src/CMakeFiles/minetest.dir/genericobject.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_219) "Building CXX object src/CMakeFiles/minetest.dir/genericobject.cpp.o"
 	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/genericobject.cpp.o -c /opt/minetest/src/genericobject.cpp
 
 src/CMakeFiles/minetest.dir/genericobject.cpp.i: cmake_force
@@ -3419,7 +5315,7 @@ src/CMakeFiles/minetest.dir/genericobject.cpp.o.provides.build: src/CMakeFiles/m
 
 src/CMakeFiles/minetest.dir/gettext.cpp.o: src/CMakeFiles/minetest.dir/flags.make
 src/CMakeFiles/minetest.dir/gettext.cpp.o: src/gettext.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_141) "Building CXX object src/CMakeFiles/minetest.dir/gettext.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_220) "Building CXX object src/CMakeFiles/minetest.dir/gettext.cpp.o"
 	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/gettext.cpp.o -c /opt/minetest/src/gettext.cpp
 
 src/CMakeFiles/minetest.dir/gettext.cpp.i: cmake_force
@@ -3441,225 +5337,9 @@ src/CMakeFiles/minetest.dir/gettext.cpp.o.provides: src/CMakeFiles/minetest.dir/
 src/CMakeFiles/minetest.dir/gettext.cpp.o.provides.build: src/CMakeFiles/minetest.dir/gettext.cpp.o
 
 
-src/CMakeFiles/minetest.dir/guiChatConsole.cpp.o: src/CMakeFiles/minetest.dir/flags.make
-src/CMakeFiles/minetest.dir/guiChatConsole.cpp.o: src/guiChatConsole.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_142) "Building CXX object src/CMakeFiles/minetest.dir/guiChatConsole.cpp.o"
-	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/guiChatConsole.cpp.o -c /opt/minetest/src/guiChatConsole.cpp
-
-src/CMakeFiles/minetest.dir/guiChatConsole.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/minetest.dir/guiChatConsole.cpp.i"
-	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /opt/minetest/src/guiChatConsole.cpp > CMakeFiles/minetest.dir/guiChatConsole.cpp.i
-
-src/CMakeFiles/minetest.dir/guiChatConsole.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/minetest.dir/guiChatConsole.cpp.s"
-	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /opt/minetest/src/guiChatConsole.cpp -o CMakeFiles/minetest.dir/guiChatConsole.cpp.s
-
-src/CMakeFiles/minetest.dir/guiChatConsole.cpp.o.requires:
-
-.PHONY : src/CMakeFiles/minetest.dir/guiChatConsole.cpp.o.requires
-
-src/CMakeFiles/minetest.dir/guiChatConsole.cpp.o.provides: src/CMakeFiles/minetest.dir/guiChatConsole.cpp.o.requires
-	$(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/guiChatConsole.cpp.o.provides.build
-.PHONY : src/CMakeFiles/minetest.dir/guiChatConsole.cpp.o.provides
-
-src/CMakeFiles/minetest.dir/guiChatConsole.cpp.o.provides.build: src/CMakeFiles/minetest.dir/guiChatConsole.cpp.o
-
-
-src/CMakeFiles/minetest.dir/guiEngine.cpp.o: src/CMakeFiles/minetest.dir/flags.make
-src/CMakeFiles/minetest.dir/guiEngine.cpp.o: src/guiEngine.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_143) "Building CXX object src/CMakeFiles/minetest.dir/guiEngine.cpp.o"
-	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/guiEngine.cpp.o -c /opt/minetest/src/guiEngine.cpp
-
-src/CMakeFiles/minetest.dir/guiEngine.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/minetest.dir/guiEngine.cpp.i"
-	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /opt/minetest/src/guiEngine.cpp > CMakeFiles/minetest.dir/guiEngine.cpp.i
-
-src/CMakeFiles/minetest.dir/guiEngine.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/minetest.dir/guiEngine.cpp.s"
-	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /opt/minetest/src/guiEngine.cpp -o CMakeFiles/minetest.dir/guiEngine.cpp.s
-
-src/CMakeFiles/minetest.dir/guiEngine.cpp.o.requires:
-
-.PHONY : src/CMakeFiles/minetest.dir/guiEngine.cpp.o.requires
-
-src/CMakeFiles/minetest.dir/guiEngine.cpp.o.provides: src/CMakeFiles/minetest.dir/guiEngine.cpp.o.requires
-	$(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/guiEngine.cpp.o.provides.build
-.PHONY : src/CMakeFiles/minetest.dir/guiEngine.cpp.o.provides
-
-src/CMakeFiles/minetest.dir/guiEngine.cpp.o.provides.build: src/CMakeFiles/minetest.dir/guiEngine.cpp.o
-
-
-src/CMakeFiles/minetest.dir/guiFileSelectMenu.cpp.o: src/CMakeFiles/minetest.dir/flags.make
-src/CMakeFiles/minetest.dir/guiFileSelectMenu.cpp.o: src/guiFileSelectMenu.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_144) "Building CXX object src/CMakeFiles/minetest.dir/guiFileSelectMenu.cpp.o"
-	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/guiFileSelectMenu.cpp.o -c /opt/minetest/src/guiFileSelectMenu.cpp
-
-src/CMakeFiles/minetest.dir/guiFileSelectMenu.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/minetest.dir/guiFileSelectMenu.cpp.i"
-	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /opt/minetest/src/guiFileSelectMenu.cpp > CMakeFiles/minetest.dir/guiFileSelectMenu.cpp.i
-
-src/CMakeFiles/minetest.dir/guiFileSelectMenu.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/minetest.dir/guiFileSelectMenu.cpp.s"
-	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /opt/minetest/src/guiFileSelectMenu.cpp -o CMakeFiles/minetest.dir/guiFileSelectMenu.cpp.s
-
-src/CMakeFiles/minetest.dir/guiFileSelectMenu.cpp.o.requires:
-
-.PHONY : src/CMakeFiles/minetest.dir/guiFileSelectMenu.cpp.o.requires
-
-src/CMakeFiles/minetest.dir/guiFileSelectMenu.cpp.o.provides: src/CMakeFiles/minetest.dir/guiFileSelectMenu.cpp.o.requires
-	$(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/guiFileSelectMenu.cpp.o.provides.build
-.PHONY : src/CMakeFiles/minetest.dir/guiFileSelectMenu.cpp.o.provides
-
-src/CMakeFiles/minetest.dir/guiFileSelectMenu.cpp.o.provides.build: src/CMakeFiles/minetest.dir/guiFileSelectMenu.cpp.o
-
-
-src/CMakeFiles/minetest.dir/guiFormSpecMenu.cpp.o: src/CMakeFiles/minetest.dir/flags.make
-src/CMakeFiles/minetest.dir/guiFormSpecMenu.cpp.o: src/guiFormSpecMenu.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_145) "Building CXX object src/CMakeFiles/minetest.dir/guiFormSpecMenu.cpp.o"
-	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/guiFormSpecMenu.cpp.o -c /opt/minetest/src/guiFormSpecMenu.cpp
-
-src/CMakeFiles/minetest.dir/guiFormSpecMenu.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/minetest.dir/guiFormSpecMenu.cpp.i"
-	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /opt/minetest/src/guiFormSpecMenu.cpp > CMakeFiles/minetest.dir/guiFormSpecMenu.cpp.i
-
-src/CMakeFiles/minetest.dir/guiFormSpecMenu.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/minetest.dir/guiFormSpecMenu.cpp.s"
-	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /opt/minetest/src/guiFormSpecMenu.cpp -o CMakeFiles/minetest.dir/guiFormSpecMenu.cpp.s
-
-src/CMakeFiles/minetest.dir/guiFormSpecMenu.cpp.o.requires:
-
-.PHONY : src/CMakeFiles/minetest.dir/guiFormSpecMenu.cpp.o.requires
-
-src/CMakeFiles/minetest.dir/guiFormSpecMenu.cpp.o.provides: src/CMakeFiles/minetest.dir/guiFormSpecMenu.cpp.o.requires
-	$(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/guiFormSpecMenu.cpp.o.provides.build
-.PHONY : src/CMakeFiles/minetest.dir/guiFormSpecMenu.cpp.o.provides
-
-src/CMakeFiles/minetest.dir/guiFormSpecMenu.cpp.o.provides.build: src/CMakeFiles/minetest.dir/guiFormSpecMenu.cpp.o
-
-
-src/CMakeFiles/minetest.dir/guiKeyChangeMenu.cpp.o: src/CMakeFiles/minetest.dir/flags.make
-src/CMakeFiles/minetest.dir/guiKeyChangeMenu.cpp.o: src/guiKeyChangeMenu.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_146) "Building CXX object src/CMakeFiles/minetest.dir/guiKeyChangeMenu.cpp.o"
-	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/guiKeyChangeMenu.cpp.o -c /opt/minetest/src/guiKeyChangeMenu.cpp
-
-src/CMakeFiles/minetest.dir/guiKeyChangeMenu.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/minetest.dir/guiKeyChangeMenu.cpp.i"
-	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /opt/minetest/src/guiKeyChangeMenu.cpp > CMakeFiles/minetest.dir/guiKeyChangeMenu.cpp.i
-
-src/CMakeFiles/minetest.dir/guiKeyChangeMenu.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/minetest.dir/guiKeyChangeMenu.cpp.s"
-	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /opt/minetest/src/guiKeyChangeMenu.cpp -o CMakeFiles/minetest.dir/guiKeyChangeMenu.cpp.s
-
-src/CMakeFiles/minetest.dir/guiKeyChangeMenu.cpp.o.requires:
-
-.PHONY : src/CMakeFiles/minetest.dir/guiKeyChangeMenu.cpp.o.requires
-
-src/CMakeFiles/minetest.dir/guiKeyChangeMenu.cpp.o.provides: src/CMakeFiles/minetest.dir/guiKeyChangeMenu.cpp.o.requires
-	$(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/guiKeyChangeMenu.cpp.o.provides.build
-.PHONY : src/CMakeFiles/minetest.dir/guiKeyChangeMenu.cpp.o.provides
-
-src/CMakeFiles/minetest.dir/guiKeyChangeMenu.cpp.o.provides.build: src/CMakeFiles/minetest.dir/guiKeyChangeMenu.cpp.o
-
-
-src/CMakeFiles/minetest.dir/guiPasswordChange.cpp.o: src/CMakeFiles/minetest.dir/flags.make
-src/CMakeFiles/minetest.dir/guiPasswordChange.cpp.o: src/guiPasswordChange.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_147) "Building CXX object src/CMakeFiles/minetest.dir/guiPasswordChange.cpp.o"
-	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/guiPasswordChange.cpp.o -c /opt/minetest/src/guiPasswordChange.cpp
-
-src/CMakeFiles/minetest.dir/guiPasswordChange.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/minetest.dir/guiPasswordChange.cpp.i"
-	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /opt/minetest/src/guiPasswordChange.cpp > CMakeFiles/minetest.dir/guiPasswordChange.cpp.i
-
-src/CMakeFiles/minetest.dir/guiPasswordChange.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/minetest.dir/guiPasswordChange.cpp.s"
-	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /opt/minetest/src/guiPasswordChange.cpp -o CMakeFiles/minetest.dir/guiPasswordChange.cpp.s
-
-src/CMakeFiles/minetest.dir/guiPasswordChange.cpp.o.requires:
-
-.PHONY : src/CMakeFiles/minetest.dir/guiPasswordChange.cpp.o.requires
-
-src/CMakeFiles/minetest.dir/guiPasswordChange.cpp.o.provides: src/CMakeFiles/minetest.dir/guiPasswordChange.cpp.o.requires
-	$(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/guiPasswordChange.cpp.o.provides.build
-.PHONY : src/CMakeFiles/minetest.dir/guiPasswordChange.cpp.o.provides
-
-src/CMakeFiles/minetest.dir/guiPasswordChange.cpp.o.provides.build: src/CMakeFiles/minetest.dir/guiPasswordChange.cpp.o
-
-
-src/CMakeFiles/minetest.dir/guiTable.cpp.o: src/CMakeFiles/minetest.dir/flags.make
-src/CMakeFiles/minetest.dir/guiTable.cpp.o: src/guiTable.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_148) "Building CXX object src/CMakeFiles/minetest.dir/guiTable.cpp.o"
-	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/guiTable.cpp.o -c /opt/minetest/src/guiTable.cpp
-
-src/CMakeFiles/minetest.dir/guiTable.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/minetest.dir/guiTable.cpp.i"
-	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /opt/minetest/src/guiTable.cpp > CMakeFiles/minetest.dir/guiTable.cpp.i
-
-src/CMakeFiles/minetest.dir/guiTable.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/minetest.dir/guiTable.cpp.s"
-	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /opt/minetest/src/guiTable.cpp -o CMakeFiles/minetest.dir/guiTable.cpp.s
-
-src/CMakeFiles/minetest.dir/guiTable.cpp.o.requires:
-
-.PHONY : src/CMakeFiles/minetest.dir/guiTable.cpp.o.requires
-
-src/CMakeFiles/minetest.dir/guiTable.cpp.o.provides: src/CMakeFiles/minetest.dir/guiTable.cpp.o.requires
-	$(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/guiTable.cpp.o.provides.build
-.PHONY : src/CMakeFiles/minetest.dir/guiTable.cpp.o.provides
-
-src/CMakeFiles/minetest.dir/guiTable.cpp.o.provides.build: src/CMakeFiles/minetest.dir/guiTable.cpp.o
-
-
-src/CMakeFiles/minetest.dir/guiVolumeChange.cpp.o: src/CMakeFiles/minetest.dir/flags.make
-src/CMakeFiles/minetest.dir/guiVolumeChange.cpp.o: src/guiVolumeChange.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_149) "Building CXX object src/CMakeFiles/minetest.dir/guiVolumeChange.cpp.o"
-	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/guiVolumeChange.cpp.o -c /opt/minetest/src/guiVolumeChange.cpp
-
-src/CMakeFiles/minetest.dir/guiVolumeChange.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/minetest.dir/guiVolumeChange.cpp.i"
-	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /opt/minetest/src/guiVolumeChange.cpp > CMakeFiles/minetest.dir/guiVolumeChange.cpp.i
-
-src/CMakeFiles/minetest.dir/guiVolumeChange.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/minetest.dir/guiVolumeChange.cpp.s"
-	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /opt/minetest/src/guiVolumeChange.cpp -o CMakeFiles/minetest.dir/guiVolumeChange.cpp.s
-
-src/CMakeFiles/minetest.dir/guiVolumeChange.cpp.o.requires:
-
-.PHONY : src/CMakeFiles/minetest.dir/guiVolumeChange.cpp.o.requires
-
-src/CMakeFiles/minetest.dir/guiVolumeChange.cpp.o.provides: src/CMakeFiles/minetest.dir/guiVolumeChange.cpp.o.requires
-	$(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/guiVolumeChange.cpp.o.provides.build
-.PHONY : src/CMakeFiles/minetest.dir/guiVolumeChange.cpp.o.provides
-
-src/CMakeFiles/minetest.dir/guiVolumeChange.cpp.o.provides.build: src/CMakeFiles/minetest.dir/guiVolumeChange.cpp.o
-
-
-src/CMakeFiles/minetest.dir/guiscalingfilter.cpp.o: src/CMakeFiles/minetest.dir/flags.make
-src/CMakeFiles/minetest.dir/guiscalingfilter.cpp.o: src/guiscalingfilter.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_150) "Building CXX object src/CMakeFiles/minetest.dir/guiscalingfilter.cpp.o"
-	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/guiscalingfilter.cpp.o -c /opt/minetest/src/guiscalingfilter.cpp
-
-src/CMakeFiles/minetest.dir/guiscalingfilter.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/minetest.dir/guiscalingfilter.cpp.i"
-	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /opt/minetest/src/guiscalingfilter.cpp > CMakeFiles/minetest.dir/guiscalingfilter.cpp.i
-
-src/CMakeFiles/minetest.dir/guiscalingfilter.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/minetest.dir/guiscalingfilter.cpp.s"
-	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /opt/minetest/src/guiscalingfilter.cpp -o CMakeFiles/minetest.dir/guiscalingfilter.cpp.s
-
-src/CMakeFiles/minetest.dir/guiscalingfilter.cpp.o.requires:
-
-.PHONY : src/CMakeFiles/minetest.dir/guiscalingfilter.cpp.o.requires
-
-src/CMakeFiles/minetest.dir/guiscalingfilter.cpp.o.provides: src/CMakeFiles/minetest.dir/guiscalingfilter.cpp.o.requires
-	$(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/guiscalingfilter.cpp.o.provides.build
-.PHONY : src/CMakeFiles/minetest.dir/guiscalingfilter.cpp.o.provides
-
-src/CMakeFiles/minetest.dir/guiscalingfilter.cpp.o.provides.build: src/CMakeFiles/minetest.dir/guiscalingfilter.cpp.o
-
-
 src/CMakeFiles/minetest.dir/httpfetch.cpp.o: src/CMakeFiles/minetest.dir/flags.make
 src/CMakeFiles/minetest.dir/httpfetch.cpp.o: src/httpfetch.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_151) "Building CXX object src/CMakeFiles/minetest.dir/httpfetch.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_221) "Building CXX object src/CMakeFiles/minetest.dir/httpfetch.cpp.o"
 	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/httpfetch.cpp.o -c /opt/minetest/src/httpfetch.cpp
 
 src/CMakeFiles/minetest.dir/httpfetch.cpp.i: cmake_force
@@ -3683,7 +5363,7 @@ src/CMakeFiles/minetest.dir/httpfetch.cpp.o.provides.build: src/CMakeFiles/minet
 
 src/CMakeFiles/minetest.dir/hud.cpp.o: src/CMakeFiles/minetest.dir/flags.make
 src/CMakeFiles/minetest.dir/hud.cpp.o: src/hud.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_152) "Building CXX object src/CMakeFiles/minetest.dir/hud.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_222) "Building CXX object src/CMakeFiles/minetest.dir/hud.cpp.o"
 	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/hud.cpp.o -c /opt/minetest/src/hud.cpp
 
 src/CMakeFiles/minetest.dir/hud.cpp.i: cmake_force
@@ -3705,57 +5385,9 @@ src/CMakeFiles/minetest.dir/hud.cpp.o.provides: src/CMakeFiles/minetest.dir/hud.
 src/CMakeFiles/minetest.dir/hud.cpp.o.provides.build: src/CMakeFiles/minetest.dir/hud.cpp.o
 
 
-src/CMakeFiles/minetest.dir/imagefilters.cpp.o: src/CMakeFiles/minetest.dir/flags.make
-src/CMakeFiles/minetest.dir/imagefilters.cpp.o: src/imagefilters.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_153) "Building CXX object src/CMakeFiles/minetest.dir/imagefilters.cpp.o"
-	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/imagefilters.cpp.o -c /opt/minetest/src/imagefilters.cpp
-
-src/CMakeFiles/minetest.dir/imagefilters.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/minetest.dir/imagefilters.cpp.i"
-	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /opt/minetest/src/imagefilters.cpp > CMakeFiles/minetest.dir/imagefilters.cpp.i
-
-src/CMakeFiles/minetest.dir/imagefilters.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/minetest.dir/imagefilters.cpp.s"
-	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /opt/minetest/src/imagefilters.cpp -o CMakeFiles/minetest.dir/imagefilters.cpp.s
-
-src/CMakeFiles/minetest.dir/imagefilters.cpp.o.requires:
-
-.PHONY : src/CMakeFiles/minetest.dir/imagefilters.cpp.o.requires
-
-src/CMakeFiles/minetest.dir/imagefilters.cpp.o.provides: src/CMakeFiles/minetest.dir/imagefilters.cpp.o.requires
-	$(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/imagefilters.cpp.o.provides.build
-.PHONY : src/CMakeFiles/minetest.dir/imagefilters.cpp.o.provides
-
-src/CMakeFiles/minetest.dir/imagefilters.cpp.o.provides.build: src/CMakeFiles/minetest.dir/imagefilters.cpp.o
-
-
-src/CMakeFiles/minetest.dir/intlGUIEditBox.cpp.o: src/CMakeFiles/minetest.dir/flags.make
-src/CMakeFiles/minetest.dir/intlGUIEditBox.cpp.o: src/intlGUIEditBox.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_154) "Building CXX object src/CMakeFiles/minetest.dir/intlGUIEditBox.cpp.o"
-	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/intlGUIEditBox.cpp.o -c /opt/minetest/src/intlGUIEditBox.cpp
-
-src/CMakeFiles/minetest.dir/intlGUIEditBox.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/minetest.dir/intlGUIEditBox.cpp.i"
-	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /opt/minetest/src/intlGUIEditBox.cpp > CMakeFiles/minetest.dir/intlGUIEditBox.cpp.i
-
-src/CMakeFiles/minetest.dir/intlGUIEditBox.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/minetest.dir/intlGUIEditBox.cpp.s"
-	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /opt/minetest/src/intlGUIEditBox.cpp -o CMakeFiles/minetest.dir/intlGUIEditBox.cpp.s
-
-src/CMakeFiles/minetest.dir/intlGUIEditBox.cpp.o.requires:
-
-.PHONY : src/CMakeFiles/minetest.dir/intlGUIEditBox.cpp.o.requires
-
-src/CMakeFiles/minetest.dir/intlGUIEditBox.cpp.o.provides: src/CMakeFiles/minetest.dir/intlGUIEditBox.cpp.o.requires
-	$(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/intlGUIEditBox.cpp.o.provides.build
-.PHONY : src/CMakeFiles/minetest.dir/intlGUIEditBox.cpp.o.provides
-
-src/CMakeFiles/minetest.dir/intlGUIEditBox.cpp.o.provides.build: src/CMakeFiles/minetest.dir/intlGUIEditBox.cpp.o
-
-
 src/CMakeFiles/minetest.dir/inventory.cpp.o: src/CMakeFiles/minetest.dir/flags.make
 src/CMakeFiles/minetest.dir/inventory.cpp.o: src/inventory.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_155) "Building CXX object src/CMakeFiles/minetest.dir/inventory.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_223) "Building CXX object src/CMakeFiles/minetest.dir/inventory.cpp.o"
 	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/inventory.cpp.o -c /opt/minetest/src/inventory.cpp
 
 src/CMakeFiles/minetest.dir/inventory.cpp.i: cmake_force
@@ -3779,7 +5411,7 @@ src/CMakeFiles/minetest.dir/inventory.cpp.o.provides.build: src/CMakeFiles/minet
 
 src/CMakeFiles/minetest.dir/inventorymanager.cpp.o: src/CMakeFiles/minetest.dir/flags.make
 src/CMakeFiles/minetest.dir/inventorymanager.cpp.o: src/inventorymanager.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_156) "Building CXX object src/CMakeFiles/minetest.dir/inventorymanager.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_224) "Building CXX object src/CMakeFiles/minetest.dir/inventorymanager.cpp.o"
 	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/inventorymanager.cpp.o -c /opt/minetest/src/inventorymanager.cpp
 
 src/CMakeFiles/minetest.dir/inventorymanager.cpp.i: cmake_force
@@ -3803,7 +5435,7 @@ src/CMakeFiles/minetest.dir/inventorymanager.cpp.o.provides.build: src/CMakeFile
 
 src/CMakeFiles/minetest.dir/itemdef.cpp.o: src/CMakeFiles/minetest.dir/flags.make
 src/CMakeFiles/minetest.dir/itemdef.cpp.o: src/itemdef.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_157) "Building CXX object src/CMakeFiles/minetest.dir/itemdef.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_225) "Building CXX object src/CMakeFiles/minetest.dir/itemdef.cpp.o"
 	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/itemdef.cpp.o -c /opt/minetest/src/itemdef.cpp
 
 src/CMakeFiles/minetest.dir/itemdef.cpp.i: cmake_force
@@ -3827,7 +5459,7 @@ src/CMakeFiles/minetest.dir/itemdef.cpp.o.provides.build: src/CMakeFiles/minetes
 
 src/CMakeFiles/minetest.dir/itemstackmetadata.cpp.o: src/CMakeFiles/minetest.dir/flags.make
 src/CMakeFiles/minetest.dir/itemstackmetadata.cpp.o: src/itemstackmetadata.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_158) "Building CXX object src/CMakeFiles/minetest.dir/itemstackmetadata.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_226) "Building CXX object src/CMakeFiles/minetest.dir/itemstackmetadata.cpp.o"
 	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/itemstackmetadata.cpp.o -c /opt/minetest/src/itemstackmetadata.cpp
 
 src/CMakeFiles/minetest.dir/itemstackmetadata.cpp.i: cmake_force
@@ -3849,33 +5481,9 @@ src/CMakeFiles/minetest.dir/itemstackmetadata.cpp.o.provides: src/CMakeFiles/min
 src/CMakeFiles/minetest.dir/itemstackmetadata.cpp.o.provides.build: src/CMakeFiles/minetest.dir/itemstackmetadata.cpp.o
 
 
-src/CMakeFiles/minetest.dir/keycode.cpp.o: src/CMakeFiles/minetest.dir/flags.make
-src/CMakeFiles/minetest.dir/keycode.cpp.o: src/keycode.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_159) "Building CXX object src/CMakeFiles/minetest.dir/keycode.cpp.o"
-	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/keycode.cpp.o -c /opt/minetest/src/keycode.cpp
-
-src/CMakeFiles/minetest.dir/keycode.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/minetest.dir/keycode.cpp.i"
-	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /opt/minetest/src/keycode.cpp > CMakeFiles/minetest.dir/keycode.cpp.i
-
-src/CMakeFiles/minetest.dir/keycode.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/minetest.dir/keycode.cpp.s"
-	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /opt/minetest/src/keycode.cpp -o CMakeFiles/minetest.dir/keycode.cpp.s
-
-src/CMakeFiles/minetest.dir/keycode.cpp.o.requires:
-
-.PHONY : src/CMakeFiles/minetest.dir/keycode.cpp.o.requires
-
-src/CMakeFiles/minetest.dir/keycode.cpp.o.provides: src/CMakeFiles/minetest.dir/keycode.cpp.o.requires
-	$(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/keycode.cpp.o.provides.build
-.PHONY : src/CMakeFiles/minetest.dir/keycode.cpp.o.provides
-
-src/CMakeFiles/minetest.dir/keycode.cpp.o.provides.build: src/CMakeFiles/minetest.dir/keycode.cpp.o
-
-
 src/CMakeFiles/minetest.dir/light.cpp.o: src/CMakeFiles/minetest.dir/flags.make
 src/CMakeFiles/minetest.dir/light.cpp.o: src/light.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_160) "Building CXX object src/CMakeFiles/minetest.dir/light.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_227) "Building CXX object src/CMakeFiles/minetest.dir/light.cpp.o"
 	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/light.cpp.o -c /opt/minetest/src/light.cpp
 
 src/CMakeFiles/minetest.dir/light.cpp.i: cmake_force
@@ -3897,33 +5505,9 @@ src/CMakeFiles/minetest.dir/light.cpp.o.provides: src/CMakeFiles/minetest.dir/li
 src/CMakeFiles/minetest.dir/light.cpp.o.provides.build: src/CMakeFiles/minetest.dir/light.cpp.o
 
 
-src/CMakeFiles/minetest.dir/localplayer.cpp.o: src/CMakeFiles/minetest.dir/flags.make
-src/CMakeFiles/minetest.dir/localplayer.cpp.o: src/localplayer.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_161) "Building CXX object src/CMakeFiles/minetest.dir/localplayer.cpp.o"
-	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/localplayer.cpp.o -c /opt/minetest/src/localplayer.cpp
-
-src/CMakeFiles/minetest.dir/localplayer.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/minetest.dir/localplayer.cpp.i"
-	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /opt/minetest/src/localplayer.cpp > CMakeFiles/minetest.dir/localplayer.cpp.i
-
-src/CMakeFiles/minetest.dir/localplayer.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/minetest.dir/localplayer.cpp.s"
-	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /opt/minetest/src/localplayer.cpp -o CMakeFiles/minetest.dir/localplayer.cpp.s
-
-src/CMakeFiles/minetest.dir/localplayer.cpp.o.requires:
-
-.PHONY : src/CMakeFiles/minetest.dir/localplayer.cpp.o.requires
-
-src/CMakeFiles/minetest.dir/localplayer.cpp.o.provides: src/CMakeFiles/minetest.dir/localplayer.cpp.o.requires
-	$(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/localplayer.cpp.o.provides.build
-.PHONY : src/CMakeFiles/minetest.dir/localplayer.cpp.o.provides
-
-src/CMakeFiles/minetest.dir/localplayer.cpp.o.provides.build: src/CMakeFiles/minetest.dir/localplayer.cpp.o
-
-
 src/CMakeFiles/minetest.dir/log.cpp.o: src/CMakeFiles/minetest.dir/flags.make
 src/CMakeFiles/minetest.dir/log.cpp.o: src/log.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_162) "Building CXX object src/CMakeFiles/minetest.dir/log.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_228) "Building CXX object src/CMakeFiles/minetest.dir/log.cpp.o"
 	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/log.cpp.o -c /opt/minetest/src/log.cpp
 
 src/CMakeFiles/minetest.dir/log.cpp.i: cmake_force
@@ -3947,7 +5531,7 @@ src/CMakeFiles/minetest.dir/log.cpp.o.provides.build: src/CMakeFiles/minetest.di
 
 src/CMakeFiles/minetest.dir/main.cpp.o: src/CMakeFiles/minetest.dir/flags.make
 src/CMakeFiles/minetest.dir/main.cpp.o: src/main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_163) "Building CXX object src/CMakeFiles/minetest.dir/main.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_229) "Building CXX object src/CMakeFiles/minetest.dir/main.cpp.o"
 	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/main.cpp.o -c /opt/minetest/src/main.cpp
 
 src/CMakeFiles/minetest.dir/main.cpp.i: cmake_force
@@ -3971,7 +5555,7 @@ src/CMakeFiles/minetest.dir/main.cpp.o.provides.build: src/CMakeFiles/minetest.d
 
 src/CMakeFiles/minetest.dir/map.cpp.o: src/CMakeFiles/minetest.dir/flags.make
 src/CMakeFiles/minetest.dir/map.cpp.o: src/map.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_164) "Building CXX object src/CMakeFiles/minetest.dir/map.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_230) "Building CXX object src/CMakeFiles/minetest.dir/map.cpp.o"
 	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/map.cpp.o -c /opt/minetest/src/map.cpp
 
 src/CMakeFiles/minetest.dir/map.cpp.i: cmake_force
@@ -3995,7 +5579,7 @@ src/CMakeFiles/minetest.dir/map.cpp.o.provides.build: src/CMakeFiles/minetest.di
 
 src/CMakeFiles/minetest.dir/map_settings_manager.cpp.o: src/CMakeFiles/minetest.dir/flags.make
 src/CMakeFiles/minetest.dir/map_settings_manager.cpp.o: src/map_settings_manager.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_165) "Building CXX object src/CMakeFiles/minetest.dir/map_settings_manager.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_231) "Building CXX object src/CMakeFiles/minetest.dir/map_settings_manager.cpp.o"
 	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/map_settings_manager.cpp.o -c /opt/minetest/src/map_settings_manager.cpp
 
 src/CMakeFiles/minetest.dir/map_settings_manager.cpp.i: cmake_force
@@ -4019,7 +5603,7 @@ src/CMakeFiles/minetest.dir/map_settings_manager.cpp.o.provides.build: src/CMake
 
 src/CMakeFiles/minetest.dir/mapblock.cpp.o: src/CMakeFiles/minetest.dir/flags.make
 src/CMakeFiles/minetest.dir/mapblock.cpp.o: src/mapblock.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_166) "Building CXX object src/CMakeFiles/minetest.dir/mapblock.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_232) "Building CXX object src/CMakeFiles/minetest.dir/mapblock.cpp.o"
 	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/mapblock.cpp.o -c /opt/minetest/src/mapblock.cpp
 
 src/CMakeFiles/minetest.dir/mapblock.cpp.i: cmake_force
@@ -4041,225 +5625,9 @@ src/CMakeFiles/minetest.dir/mapblock.cpp.o.provides: src/CMakeFiles/minetest.dir
 src/CMakeFiles/minetest.dir/mapblock.cpp.o.provides.build: src/CMakeFiles/minetest.dir/mapblock.cpp.o
 
 
-src/CMakeFiles/minetest.dir/mapblock_mesh.cpp.o: src/CMakeFiles/minetest.dir/flags.make
-src/CMakeFiles/minetest.dir/mapblock_mesh.cpp.o: src/mapblock_mesh.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_167) "Building CXX object src/CMakeFiles/minetest.dir/mapblock_mesh.cpp.o"
-	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/mapblock_mesh.cpp.o -c /opt/minetest/src/mapblock_mesh.cpp
-
-src/CMakeFiles/minetest.dir/mapblock_mesh.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/minetest.dir/mapblock_mesh.cpp.i"
-	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /opt/minetest/src/mapblock_mesh.cpp > CMakeFiles/minetest.dir/mapblock_mesh.cpp.i
-
-src/CMakeFiles/minetest.dir/mapblock_mesh.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/minetest.dir/mapblock_mesh.cpp.s"
-	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /opt/minetest/src/mapblock_mesh.cpp -o CMakeFiles/minetest.dir/mapblock_mesh.cpp.s
-
-src/CMakeFiles/minetest.dir/mapblock_mesh.cpp.o.requires:
-
-.PHONY : src/CMakeFiles/minetest.dir/mapblock_mesh.cpp.o.requires
-
-src/CMakeFiles/minetest.dir/mapblock_mesh.cpp.o.provides: src/CMakeFiles/minetest.dir/mapblock_mesh.cpp.o.requires
-	$(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/mapblock_mesh.cpp.o.provides.build
-.PHONY : src/CMakeFiles/minetest.dir/mapblock_mesh.cpp.o.provides
-
-src/CMakeFiles/minetest.dir/mapblock_mesh.cpp.o.provides.build: src/CMakeFiles/minetest.dir/mapblock_mesh.cpp.o
-
-
-src/CMakeFiles/minetest.dir/mapgen.cpp.o: src/CMakeFiles/minetest.dir/flags.make
-src/CMakeFiles/minetest.dir/mapgen.cpp.o: src/mapgen.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_168) "Building CXX object src/CMakeFiles/minetest.dir/mapgen.cpp.o"
-	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/mapgen.cpp.o -c /opt/minetest/src/mapgen.cpp
-
-src/CMakeFiles/minetest.dir/mapgen.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/minetest.dir/mapgen.cpp.i"
-	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /opt/minetest/src/mapgen.cpp > CMakeFiles/minetest.dir/mapgen.cpp.i
-
-src/CMakeFiles/minetest.dir/mapgen.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/minetest.dir/mapgen.cpp.s"
-	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /opt/minetest/src/mapgen.cpp -o CMakeFiles/minetest.dir/mapgen.cpp.s
-
-src/CMakeFiles/minetest.dir/mapgen.cpp.o.requires:
-
-.PHONY : src/CMakeFiles/minetest.dir/mapgen.cpp.o.requires
-
-src/CMakeFiles/minetest.dir/mapgen.cpp.o.provides: src/CMakeFiles/minetest.dir/mapgen.cpp.o.requires
-	$(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/mapgen.cpp.o.provides.build
-.PHONY : src/CMakeFiles/minetest.dir/mapgen.cpp.o.provides
-
-src/CMakeFiles/minetest.dir/mapgen.cpp.o.provides.build: src/CMakeFiles/minetest.dir/mapgen.cpp.o
-
-
-src/CMakeFiles/minetest.dir/mapgen_flat.cpp.o: src/CMakeFiles/minetest.dir/flags.make
-src/CMakeFiles/minetest.dir/mapgen_flat.cpp.o: src/mapgen_flat.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_169) "Building CXX object src/CMakeFiles/minetest.dir/mapgen_flat.cpp.o"
-	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/mapgen_flat.cpp.o -c /opt/minetest/src/mapgen_flat.cpp
-
-src/CMakeFiles/minetest.dir/mapgen_flat.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/minetest.dir/mapgen_flat.cpp.i"
-	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /opt/minetest/src/mapgen_flat.cpp > CMakeFiles/minetest.dir/mapgen_flat.cpp.i
-
-src/CMakeFiles/minetest.dir/mapgen_flat.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/minetest.dir/mapgen_flat.cpp.s"
-	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /opt/minetest/src/mapgen_flat.cpp -o CMakeFiles/minetest.dir/mapgen_flat.cpp.s
-
-src/CMakeFiles/minetest.dir/mapgen_flat.cpp.o.requires:
-
-.PHONY : src/CMakeFiles/minetest.dir/mapgen_flat.cpp.o.requires
-
-src/CMakeFiles/minetest.dir/mapgen_flat.cpp.o.provides: src/CMakeFiles/minetest.dir/mapgen_flat.cpp.o.requires
-	$(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/mapgen_flat.cpp.o.provides.build
-.PHONY : src/CMakeFiles/minetest.dir/mapgen_flat.cpp.o.provides
-
-src/CMakeFiles/minetest.dir/mapgen_flat.cpp.o.provides.build: src/CMakeFiles/minetest.dir/mapgen_flat.cpp.o
-
-
-src/CMakeFiles/minetest.dir/mapgen_fractal.cpp.o: src/CMakeFiles/minetest.dir/flags.make
-src/CMakeFiles/minetest.dir/mapgen_fractal.cpp.o: src/mapgen_fractal.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_170) "Building CXX object src/CMakeFiles/minetest.dir/mapgen_fractal.cpp.o"
-	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/mapgen_fractal.cpp.o -c /opt/minetest/src/mapgen_fractal.cpp
-
-src/CMakeFiles/minetest.dir/mapgen_fractal.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/minetest.dir/mapgen_fractal.cpp.i"
-	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /opt/minetest/src/mapgen_fractal.cpp > CMakeFiles/minetest.dir/mapgen_fractal.cpp.i
-
-src/CMakeFiles/minetest.dir/mapgen_fractal.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/minetest.dir/mapgen_fractal.cpp.s"
-	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /opt/minetest/src/mapgen_fractal.cpp -o CMakeFiles/minetest.dir/mapgen_fractal.cpp.s
-
-src/CMakeFiles/minetest.dir/mapgen_fractal.cpp.o.requires:
-
-.PHONY : src/CMakeFiles/minetest.dir/mapgen_fractal.cpp.o.requires
-
-src/CMakeFiles/minetest.dir/mapgen_fractal.cpp.o.provides: src/CMakeFiles/minetest.dir/mapgen_fractal.cpp.o.requires
-	$(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/mapgen_fractal.cpp.o.provides.build
-.PHONY : src/CMakeFiles/minetest.dir/mapgen_fractal.cpp.o.provides
-
-src/CMakeFiles/minetest.dir/mapgen_fractal.cpp.o.provides.build: src/CMakeFiles/minetest.dir/mapgen_fractal.cpp.o
-
-
-src/CMakeFiles/minetest.dir/mapgen_singlenode.cpp.o: src/CMakeFiles/minetest.dir/flags.make
-src/CMakeFiles/minetest.dir/mapgen_singlenode.cpp.o: src/mapgen_singlenode.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_171) "Building CXX object src/CMakeFiles/minetest.dir/mapgen_singlenode.cpp.o"
-	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/mapgen_singlenode.cpp.o -c /opt/minetest/src/mapgen_singlenode.cpp
-
-src/CMakeFiles/minetest.dir/mapgen_singlenode.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/minetest.dir/mapgen_singlenode.cpp.i"
-	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /opt/minetest/src/mapgen_singlenode.cpp > CMakeFiles/minetest.dir/mapgen_singlenode.cpp.i
-
-src/CMakeFiles/minetest.dir/mapgen_singlenode.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/minetest.dir/mapgen_singlenode.cpp.s"
-	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /opt/minetest/src/mapgen_singlenode.cpp -o CMakeFiles/minetest.dir/mapgen_singlenode.cpp.s
-
-src/CMakeFiles/minetest.dir/mapgen_singlenode.cpp.o.requires:
-
-.PHONY : src/CMakeFiles/minetest.dir/mapgen_singlenode.cpp.o.requires
-
-src/CMakeFiles/minetest.dir/mapgen_singlenode.cpp.o.provides: src/CMakeFiles/minetest.dir/mapgen_singlenode.cpp.o.requires
-	$(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/mapgen_singlenode.cpp.o.provides.build
-.PHONY : src/CMakeFiles/minetest.dir/mapgen_singlenode.cpp.o.provides
-
-src/CMakeFiles/minetest.dir/mapgen_singlenode.cpp.o.provides.build: src/CMakeFiles/minetest.dir/mapgen_singlenode.cpp.o
-
-
-src/CMakeFiles/minetest.dir/mapgen_v5.cpp.o: src/CMakeFiles/minetest.dir/flags.make
-src/CMakeFiles/minetest.dir/mapgen_v5.cpp.o: src/mapgen_v5.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_172) "Building CXX object src/CMakeFiles/minetest.dir/mapgen_v5.cpp.o"
-	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/mapgen_v5.cpp.o -c /opt/minetest/src/mapgen_v5.cpp
-
-src/CMakeFiles/minetest.dir/mapgen_v5.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/minetest.dir/mapgen_v5.cpp.i"
-	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /opt/minetest/src/mapgen_v5.cpp > CMakeFiles/minetest.dir/mapgen_v5.cpp.i
-
-src/CMakeFiles/minetest.dir/mapgen_v5.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/minetest.dir/mapgen_v5.cpp.s"
-	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /opt/minetest/src/mapgen_v5.cpp -o CMakeFiles/minetest.dir/mapgen_v5.cpp.s
-
-src/CMakeFiles/minetest.dir/mapgen_v5.cpp.o.requires:
-
-.PHONY : src/CMakeFiles/minetest.dir/mapgen_v5.cpp.o.requires
-
-src/CMakeFiles/minetest.dir/mapgen_v5.cpp.o.provides: src/CMakeFiles/minetest.dir/mapgen_v5.cpp.o.requires
-	$(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/mapgen_v5.cpp.o.provides.build
-.PHONY : src/CMakeFiles/minetest.dir/mapgen_v5.cpp.o.provides
-
-src/CMakeFiles/minetest.dir/mapgen_v5.cpp.o.provides.build: src/CMakeFiles/minetest.dir/mapgen_v5.cpp.o
-
-
-src/CMakeFiles/minetest.dir/mapgen_v6.cpp.o: src/CMakeFiles/minetest.dir/flags.make
-src/CMakeFiles/minetest.dir/mapgen_v6.cpp.o: src/mapgen_v6.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_173) "Building CXX object src/CMakeFiles/minetest.dir/mapgen_v6.cpp.o"
-	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/mapgen_v6.cpp.o -c /opt/minetest/src/mapgen_v6.cpp
-
-src/CMakeFiles/minetest.dir/mapgen_v6.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/minetest.dir/mapgen_v6.cpp.i"
-	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /opt/minetest/src/mapgen_v6.cpp > CMakeFiles/minetest.dir/mapgen_v6.cpp.i
-
-src/CMakeFiles/minetest.dir/mapgen_v6.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/minetest.dir/mapgen_v6.cpp.s"
-	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /opt/minetest/src/mapgen_v6.cpp -o CMakeFiles/minetest.dir/mapgen_v6.cpp.s
-
-src/CMakeFiles/minetest.dir/mapgen_v6.cpp.o.requires:
-
-.PHONY : src/CMakeFiles/minetest.dir/mapgen_v6.cpp.o.requires
-
-src/CMakeFiles/minetest.dir/mapgen_v6.cpp.o.provides: src/CMakeFiles/minetest.dir/mapgen_v6.cpp.o.requires
-	$(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/mapgen_v6.cpp.o.provides.build
-.PHONY : src/CMakeFiles/minetest.dir/mapgen_v6.cpp.o.provides
-
-src/CMakeFiles/minetest.dir/mapgen_v6.cpp.o.provides.build: src/CMakeFiles/minetest.dir/mapgen_v6.cpp.o
-
-
-src/CMakeFiles/minetest.dir/mapgen_v7.cpp.o: src/CMakeFiles/minetest.dir/flags.make
-src/CMakeFiles/minetest.dir/mapgen_v7.cpp.o: src/mapgen_v7.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_174) "Building CXX object src/CMakeFiles/minetest.dir/mapgen_v7.cpp.o"
-	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/mapgen_v7.cpp.o -c /opt/minetest/src/mapgen_v7.cpp
-
-src/CMakeFiles/minetest.dir/mapgen_v7.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/minetest.dir/mapgen_v7.cpp.i"
-	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /opt/minetest/src/mapgen_v7.cpp > CMakeFiles/minetest.dir/mapgen_v7.cpp.i
-
-src/CMakeFiles/minetest.dir/mapgen_v7.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/minetest.dir/mapgen_v7.cpp.s"
-	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /opt/minetest/src/mapgen_v7.cpp -o CMakeFiles/minetest.dir/mapgen_v7.cpp.s
-
-src/CMakeFiles/minetest.dir/mapgen_v7.cpp.o.requires:
-
-.PHONY : src/CMakeFiles/minetest.dir/mapgen_v7.cpp.o.requires
-
-src/CMakeFiles/minetest.dir/mapgen_v7.cpp.o.provides: src/CMakeFiles/minetest.dir/mapgen_v7.cpp.o.requires
-	$(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/mapgen_v7.cpp.o.provides.build
-.PHONY : src/CMakeFiles/minetest.dir/mapgen_v7.cpp.o.provides
-
-src/CMakeFiles/minetest.dir/mapgen_v7.cpp.o.provides.build: src/CMakeFiles/minetest.dir/mapgen_v7.cpp.o
-
-
-src/CMakeFiles/minetest.dir/mapgen_valleys.cpp.o: src/CMakeFiles/minetest.dir/flags.make
-src/CMakeFiles/minetest.dir/mapgen_valleys.cpp.o: src/mapgen_valleys.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_175) "Building CXX object src/CMakeFiles/minetest.dir/mapgen_valleys.cpp.o"
-	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/mapgen_valleys.cpp.o -c /opt/minetest/src/mapgen_valleys.cpp
-
-src/CMakeFiles/minetest.dir/mapgen_valleys.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/minetest.dir/mapgen_valleys.cpp.i"
-	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /opt/minetest/src/mapgen_valleys.cpp > CMakeFiles/minetest.dir/mapgen_valleys.cpp.i
-
-src/CMakeFiles/minetest.dir/mapgen_valleys.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/minetest.dir/mapgen_valleys.cpp.s"
-	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /opt/minetest/src/mapgen_valleys.cpp -o CMakeFiles/minetest.dir/mapgen_valleys.cpp.s
-
-src/CMakeFiles/minetest.dir/mapgen_valleys.cpp.o.requires:
-
-.PHONY : src/CMakeFiles/minetest.dir/mapgen_valleys.cpp.o.requires
-
-src/CMakeFiles/minetest.dir/mapgen_valleys.cpp.o.provides: src/CMakeFiles/minetest.dir/mapgen_valleys.cpp.o.requires
-	$(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/mapgen_valleys.cpp.o.provides.build
-.PHONY : src/CMakeFiles/minetest.dir/mapgen_valleys.cpp.o.provides
-
-src/CMakeFiles/minetest.dir/mapgen_valleys.cpp.o.provides.build: src/CMakeFiles/minetest.dir/mapgen_valleys.cpp.o
-
-
 src/CMakeFiles/minetest.dir/mapnode.cpp.o: src/CMakeFiles/minetest.dir/flags.make
 src/CMakeFiles/minetest.dir/mapnode.cpp.o: src/mapnode.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_176) "Building CXX object src/CMakeFiles/minetest.dir/mapnode.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_233) "Building CXX object src/CMakeFiles/minetest.dir/mapnode.cpp.o"
 	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/mapnode.cpp.o -c /opt/minetest/src/mapnode.cpp
 
 src/CMakeFiles/minetest.dir/mapnode.cpp.i: cmake_force
@@ -4283,7 +5651,7 @@ src/CMakeFiles/minetest.dir/mapnode.cpp.o.provides.build: src/CMakeFiles/minetes
 
 src/CMakeFiles/minetest.dir/mapsector.cpp.o: src/CMakeFiles/minetest.dir/flags.make
 src/CMakeFiles/minetest.dir/mapsector.cpp.o: src/mapsector.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_177) "Building CXX object src/CMakeFiles/minetest.dir/mapsector.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_234) "Building CXX object src/CMakeFiles/minetest.dir/mapsector.cpp.o"
 	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/mapsector.cpp.o -c /opt/minetest/src/mapsector.cpp
 
 src/CMakeFiles/minetest.dir/mapsector.cpp.i: cmake_force
@@ -4305,57 +5673,9 @@ src/CMakeFiles/minetest.dir/mapsector.cpp.o.provides: src/CMakeFiles/minetest.di
 src/CMakeFiles/minetest.dir/mapsector.cpp.o.provides.build: src/CMakeFiles/minetest.dir/mapsector.cpp.o
 
 
-src/CMakeFiles/minetest.dir/mesh.cpp.o: src/CMakeFiles/minetest.dir/flags.make
-src/CMakeFiles/minetest.dir/mesh.cpp.o: src/mesh.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_178) "Building CXX object src/CMakeFiles/minetest.dir/mesh.cpp.o"
-	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/mesh.cpp.o -c /opt/minetest/src/mesh.cpp
-
-src/CMakeFiles/minetest.dir/mesh.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/minetest.dir/mesh.cpp.i"
-	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /opt/minetest/src/mesh.cpp > CMakeFiles/minetest.dir/mesh.cpp.i
-
-src/CMakeFiles/minetest.dir/mesh.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/minetest.dir/mesh.cpp.s"
-	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /opt/minetest/src/mesh.cpp -o CMakeFiles/minetest.dir/mesh.cpp.s
-
-src/CMakeFiles/minetest.dir/mesh.cpp.o.requires:
-
-.PHONY : src/CMakeFiles/minetest.dir/mesh.cpp.o.requires
-
-src/CMakeFiles/minetest.dir/mesh.cpp.o.provides: src/CMakeFiles/minetest.dir/mesh.cpp.o.requires
-	$(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/mesh.cpp.o.provides.build
-.PHONY : src/CMakeFiles/minetest.dir/mesh.cpp.o.provides
-
-src/CMakeFiles/minetest.dir/mesh.cpp.o.provides.build: src/CMakeFiles/minetest.dir/mesh.cpp.o
-
-
-src/CMakeFiles/minetest.dir/mesh_generator_thread.cpp.o: src/CMakeFiles/minetest.dir/flags.make
-src/CMakeFiles/minetest.dir/mesh_generator_thread.cpp.o: src/mesh_generator_thread.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_179) "Building CXX object src/CMakeFiles/minetest.dir/mesh_generator_thread.cpp.o"
-	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/mesh_generator_thread.cpp.o -c /opt/minetest/src/mesh_generator_thread.cpp
-
-src/CMakeFiles/minetest.dir/mesh_generator_thread.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/minetest.dir/mesh_generator_thread.cpp.i"
-	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /opt/minetest/src/mesh_generator_thread.cpp > CMakeFiles/minetest.dir/mesh_generator_thread.cpp.i
-
-src/CMakeFiles/minetest.dir/mesh_generator_thread.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/minetest.dir/mesh_generator_thread.cpp.s"
-	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /opt/minetest/src/mesh_generator_thread.cpp -o CMakeFiles/minetest.dir/mesh_generator_thread.cpp.s
-
-src/CMakeFiles/minetest.dir/mesh_generator_thread.cpp.o.requires:
-
-.PHONY : src/CMakeFiles/minetest.dir/mesh_generator_thread.cpp.o.requires
-
-src/CMakeFiles/minetest.dir/mesh_generator_thread.cpp.o.provides: src/CMakeFiles/minetest.dir/mesh_generator_thread.cpp.o.requires
-	$(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/mesh_generator_thread.cpp.o.provides.build
-.PHONY : src/CMakeFiles/minetest.dir/mesh_generator_thread.cpp.o.provides
-
-src/CMakeFiles/minetest.dir/mesh_generator_thread.cpp.o.provides.build: src/CMakeFiles/minetest.dir/mesh_generator_thread.cpp.o
-
-
 src/CMakeFiles/minetest.dir/metadata.cpp.o: src/CMakeFiles/minetest.dir/flags.make
 src/CMakeFiles/minetest.dir/metadata.cpp.o: src/metadata.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_180) "Building CXX object src/CMakeFiles/minetest.dir/metadata.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_235) "Building CXX object src/CMakeFiles/minetest.dir/metadata.cpp.o"
 	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/metadata.cpp.o -c /opt/minetest/src/metadata.cpp
 
 src/CMakeFiles/minetest.dir/metadata.cpp.i: cmake_force
@@ -4377,153 +5697,33 @@ src/CMakeFiles/minetest.dir/metadata.cpp.o.provides: src/CMakeFiles/minetest.dir
 src/CMakeFiles/minetest.dir/metadata.cpp.o.provides.build: src/CMakeFiles/minetest.dir/metadata.cpp.o
 
 
-src/CMakeFiles/minetest.dir/mg_biome.cpp.o: src/CMakeFiles/minetest.dir/flags.make
-src/CMakeFiles/minetest.dir/mg_biome.cpp.o: src/mg_biome.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_181) "Building CXX object src/CMakeFiles/minetest.dir/mg_biome.cpp.o"
-	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/mg_biome.cpp.o -c /opt/minetest/src/mg_biome.cpp
+src/CMakeFiles/minetest.dir/modchannels.cpp.o: src/CMakeFiles/minetest.dir/flags.make
+src/CMakeFiles/minetest.dir/modchannels.cpp.o: src/modchannels.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_236) "Building CXX object src/CMakeFiles/minetest.dir/modchannels.cpp.o"
+	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/modchannels.cpp.o -c /opt/minetest/src/modchannels.cpp
 
-src/CMakeFiles/minetest.dir/mg_biome.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/minetest.dir/mg_biome.cpp.i"
-	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /opt/minetest/src/mg_biome.cpp > CMakeFiles/minetest.dir/mg_biome.cpp.i
+src/CMakeFiles/minetest.dir/modchannels.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/minetest.dir/modchannels.cpp.i"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /opt/minetest/src/modchannels.cpp > CMakeFiles/minetest.dir/modchannels.cpp.i
 
-src/CMakeFiles/minetest.dir/mg_biome.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/minetest.dir/mg_biome.cpp.s"
-	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /opt/minetest/src/mg_biome.cpp -o CMakeFiles/minetest.dir/mg_biome.cpp.s
+src/CMakeFiles/minetest.dir/modchannels.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/minetest.dir/modchannels.cpp.s"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /opt/minetest/src/modchannels.cpp -o CMakeFiles/minetest.dir/modchannels.cpp.s
 
-src/CMakeFiles/minetest.dir/mg_biome.cpp.o.requires:
+src/CMakeFiles/minetest.dir/modchannels.cpp.o.requires:
 
-.PHONY : src/CMakeFiles/minetest.dir/mg_biome.cpp.o.requires
+.PHONY : src/CMakeFiles/minetest.dir/modchannels.cpp.o.requires
 
-src/CMakeFiles/minetest.dir/mg_biome.cpp.o.provides: src/CMakeFiles/minetest.dir/mg_biome.cpp.o.requires
-	$(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/mg_biome.cpp.o.provides.build
-.PHONY : src/CMakeFiles/minetest.dir/mg_biome.cpp.o.provides
+src/CMakeFiles/minetest.dir/modchannels.cpp.o.provides: src/CMakeFiles/minetest.dir/modchannels.cpp.o.requires
+	$(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/modchannels.cpp.o.provides.build
+.PHONY : src/CMakeFiles/minetest.dir/modchannels.cpp.o.provides
 
-src/CMakeFiles/minetest.dir/mg_biome.cpp.o.provides.build: src/CMakeFiles/minetest.dir/mg_biome.cpp.o
-
-
-src/CMakeFiles/minetest.dir/mg_decoration.cpp.o: src/CMakeFiles/minetest.dir/flags.make
-src/CMakeFiles/minetest.dir/mg_decoration.cpp.o: src/mg_decoration.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_182) "Building CXX object src/CMakeFiles/minetest.dir/mg_decoration.cpp.o"
-	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/mg_decoration.cpp.o -c /opt/minetest/src/mg_decoration.cpp
-
-src/CMakeFiles/minetest.dir/mg_decoration.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/minetest.dir/mg_decoration.cpp.i"
-	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /opt/minetest/src/mg_decoration.cpp > CMakeFiles/minetest.dir/mg_decoration.cpp.i
-
-src/CMakeFiles/minetest.dir/mg_decoration.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/minetest.dir/mg_decoration.cpp.s"
-	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /opt/minetest/src/mg_decoration.cpp -o CMakeFiles/minetest.dir/mg_decoration.cpp.s
-
-src/CMakeFiles/minetest.dir/mg_decoration.cpp.o.requires:
-
-.PHONY : src/CMakeFiles/minetest.dir/mg_decoration.cpp.o.requires
-
-src/CMakeFiles/minetest.dir/mg_decoration.cpp.o.provides: src/CMakeFiles/minetest.dir/mg_decoration.cpp.o.requires
-	$(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/mg_decoration.cpp.o.provides.build
-.PHONY : src/CMakeFiles/minetest.dir/mg_decoration.cpp.o.provides
-
-src/CMakeFiles/minetest.dir/mg_decoration.cpp.o.provides.build: src/CMakeFiles/minetest.dir/mg_decoration.cpp.o
-
-
-src/CMakeFiles/minetest.dir/mg_ore.cpp.o: src/CMakeFiles/minetest.dir/flags.make
-src/CMakeFiles/minetest.dir/mg_ore.cpp.o: src/mg_ore.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_183) "Building CXX object src/CMakeFiles/minetest.dir/mg_ore.cpp.o"
-	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/mg_ore.cpp.o -c /opt/minetest/src/mg_ore.cpp
-
-src/CMakeFiles/minetest.dir/mg_ore.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/minetest.dir/mg_ore.cpp.i"
-	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /opt/minetest/src/mg_ore.cpp > CMakeFiles/minetest.dir/mg_ore.cpp.i
-
-src/CMakeFiles/minetest.dir/mg_ore.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/minetest.dir/mg_ore.cpp.s"
-	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /opt/minetest/src/mg_ore.cpp -o CMakeFiles/minetest.dir/mg_ore.cpp.s
-
-src/CMakeFiles/minetest.dir/mg_ore.cpp.o.requires:
-
-.PHONY : src/CMakeFiles/minetest.dir/mg_ore.cpp.o.requires
-
-src/CMakeFiles/minetest.dir/mg_ore.cpp.o.provides: src/CMakeFiles/minetest.dir/mg_ore.cpp.o.requires
-	$(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/mg_ore.cpp.o.provides.build
-.PHONY : src/CMakeFiles/minetest.dir/mg_ore.cpp.o.provides
-
-src/CMakeFiles/minetest.dir/mg_ore.cpp.o.provides.build: src/CMakeFiles/minetest.dir/mg_ore.cpp.o
-
-
-src/CMakeFiles/minetest.dir/mg_schematic.cpp.o: src/CMakeFiles/minetest.dir/flags.make
-src/CMakeFiles/minetest.dir/mg_schematic.cpp.o: src/mg_schematic.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_184) "Building CXX object src/CMakeFiles/minetest.dir/mg_schematic.cpp.o"
-	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/mg_schematic.cpp.o -c /opt/minetest/src/mg_schematic.cpp
-
-src/CMakeFiles/minetest.dir/mg_schematic.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/minetest.dir/mg_schematic.cpp.i"
-	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /opt/minetest/src/mg_schematic.cpp > CMakeFiles/minetest.dir/mg_schematic.cpp.i
-
-src/CMakeFiles/minetest.dir/mg_schematic.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/minetest.dir/mg_schematic.cpp.s"
-	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /opt/minetest/src/mg_schematic.cpp -o CMakeFiles/minetest.dir/mg_schematic.cpp.s
-
-src/CMakeFiles/minetest.dir/mg_schematic.cpp.o.requires:
-
-.PHONY : src/CMakeFiles/minetest.dir/mg_schematic.cpp.o.requires
-
-src/CMakeFiles/minetest.dir/mg_schematic.cpp.o.provides: src/CMakeFiles/minetest.dir/mg_schematic.cpp.o.requires
-	$(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/mg_schematic.cpp.o.provides.build
-.PHONY : src/CMakeFiles/minetest.dir/mg_schematic.cpp.o.provides
-
-src/CMakeFiles/minetest.dir/mg_schematic.cpp.o.provides.build: src/CMakeFiles/minetest.dir/mg_schematic.cpp.o
-
-
-src/CMakeFiles/minetest.dir/minimap.cpp.o: src/CMakeFiles/minetest.dir/flags.make
-src/CMakeFiles/minetest.dir/minimap.cpp.o: src/minimap.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_185) "Building CXX object src/CMakeFiles/minetest.dir/minimap.cpp.o"
-	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/minimap.cpp.o -c /opt/minetest/src/minimap.cpp
-
-src/CMakeFiles/minetest.dir/minimap.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/minetest.dir/minimap.cpp.i"
-	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /opt/minetest/src/minimap.cpp > CMakeFiles/minetest.dir/minimap.cpp.i
-
-src/CMakeFiles/minetest.dir/minimap.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/minetest.dir/minimap.cpp.s"
-	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /opt/minetest/src/minimap.cpp -o CMakeFiles/minetest.dir/minimap.cpp.s
-
-src/CMakeFiles/minetest.dir/minimap.cpp.o.requires:
-
-.PHONY : src/CMakeFiles/minetest.dir/minimap.cpp.o.requires
-
-src/CMakeFiles/minetest.dir/minimap.cpp.o.provides: src/CMakeFiles/minetest.dir/minimap.cpp.o.requires
-	$(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/minimap.cpp.o.provides.build
-.PHONY : src/CMakeFiles/minetest.dir/minimap.cpp.o.provides
-
-src/CMakeFiles/minetest.dir/minimap.cpp.o.provides.build: src/CMakeFiles/minetest.dir/minimap.cpp.o
-
-
-src/CMakeFiles/minetest.dir/mods.cpp.o: src/CMakeFiles/minetest.dir/flags.make
-src/CMakeFiles/minetest.dir/mods.cpp.o: src/mods.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_186) "Building CXX object src/CMakeFiles/minetest.dir/mods.cpp.o"
-	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/mods.cpp.o -c /opt/minetest/src/mods.cpp
-
-src/CMakeFiles/minetest.dir/mods.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/minetest.dir/mods.cpp.i"
-	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /opt/minetest/src/mods.cpp > CMakeFiles/minetest.dir/mods.cpp.i
-
-src/CMakeFiles/minetest.dir/mods.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/minetest.dir/mods.cpp.s"
-	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /opt/minetest/src/mods.cpp -o CMakeFiles/minetest.dir/mods.cpp.s
-
-src/CMakeFiles/minetest.dir/mods.cpp.o.requires:
-
-.PHONY : src/CMakeFiles/minetest.dir/mods.cpp.o.requires
-
-src/CMakeFiles/minetest.dir/mods.cpp.o.provides: src/CMakeFiles/minetest.dir/mods.cpp.o.requires
-	$(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/mods.cpp.o.provides.build
-.PHONY : src/CMakeFiles/minetest.dir/mods.cpp.o.provides
-
-src/CMakeFiles/minetest.dir/mods.cpp.o.provides.build: src/CMakeFiles/minetest.dir/mods.cpp.o
+src/CMakeFiles/minetest.dir/modchannels.cpp.o.provides.build: src/CMakeFiles/minetest.dir/modchannels.cpp.o
 
 
 src/CMakeFiles/minetest.dir/nameidmapping.cpp.o: src/CMakeFiles/minetest.dir/flags.make
 src/CMakeFiles/minetest.dir/nameidmapping.cpp.o: src/nameidmapping.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_187) "Building CXX object src/CMakeFiles/minetest.dir/nameidmapping.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_237) "Building CXX object src/CMakeFiles/minetest.dir/nameidmapping.cpp.o"
 	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/nameidmapping.cpp.o -c /opt/minetest/src/nameidmapping.cpp
 
 src/CMakeFiles/minetest.dir/nameidmapping.cpp.i: cmake_force
@@ -4547,7 +5747,7 @@ src/CMakeFiles/minetest.dir/nameidmapping.cpp.o.provides.build: src/CMakeFiles/m
 
 src/CMakeFiles/minetest.dir/nodedef.cpp.o: src/CMakeFiles/minetest.dir/flags.make
 src/CMakeFiles/minetest.dir/nodedef.cpp.o: src/nodedef.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_188) "Building CXX object src/CMakeFiles/minetest.dir/nodedef.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_238) "Building CXX object src/CMakeFiles/minetest.dir/nodedef.cpp.o"
 	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/nodedef.cpp.o -c /opt/minetest/src/nodedef.cpp
 
 src/CMakeFiles/minetest.dir/nodedef.cpp.i: cmake_force
@@ -4571,7 +5771,7 @@ src/CMakeFiles/minetest.dir/nodedef.cpp.o.provides.build: src/CMakeFiles/minetes
 
 src/CMakeFiles/minetest.dir/nodemetadata.cpp.o: src/CMakeFiles/minetest.dir/flags.make
 src/CMakeFiles/minetest.dir/nodemetadata.cpp.o: src/nodemetadata.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_189) "Building CXX object src/CMakeFiles/minetest.dir/nodemetadata.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_239) "Building CXX object src/CMakeFiles/minetest.dir/nodemetadata.cpp.o"
 	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/nodemetadata.cpp.o -c /opt/minetest/src/nodemetadata.cpp
 
 src/CMakeFiles/minetest.dir/nodemetadata.cpp.i: cmake_force
@@ -4595,7 +5795,7 @@ src/CMakeFiles/minetest.dir/nodemetadata.cpp.o.provides.build: src/CMakeFiles/mi
 
 src/CMakeFiles/minetest.dir/nodetimer.cpp.o: src/CMakeFiles/minetest.dir/flags.make
 src/CMakeFiles/minetest.dir/nodetimer.cpp.o: src/nodetimer.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_190) "Building CXX object src/CMakeFiles/minetest.dir/nodetimer.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_240) "Building CXX object src/CMakeFiles/minetest.dir/nodetimer.cpp.o"
 	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/nodetimer.cpp.o -c /opt/minetest/src/nodetimer.cpp
 
 src/CMakeFiles/minetest.dir/nodetimer.cpp.i: cmake_force
@@ -4619,7 +5819,7 @@ src/CMakeFiles/minetest.dir/nodetimer.cpp.o.provides.build: src/CMakeFiles/minet
 
 src/CMakeFiles/minetest.dir/noise.cpp.o: src/CMakeFiles/minetest.dir/flags.make
 src/CMakeFiles/minetest.dir/noise.cpp.o: src/noise.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_191) "Building CXX object src/CMakeFiles/minetest.dir/noise.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_241) "Building CXX object src/CMakeFiles/minetest.dir/noise.cpp.o"
 	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/noise.cpp.o -c /opt/minetest/src/noise.cpp
 
 src/CMakeFiles/minetest.dir/noise.cpp.i: cmake_force
@@ -4643,7 +5843,7 @@ src/CMakeFiles/minetest.dir/noise.cpp.o.provides.build: src/CMakeFiles/minetest.
 
 src/CMakeFiles/minetest.dir/objdef.cpp.o: src/CMakeFiles/minetest.dir/flags.make
 src/CMakeFiles/minetest.dir/objdef.cpp.o: src/objdef.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_192) "Building CXX object src/CMakeFiles/minetest.dir/objdef.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_242) "Building CXX object src/CMakeFiles/minetest.dir/objdef.cpp.o"
 	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/objdef.cpp.o -c /opt/minetest/src/objdef.cpp
 
 src/CMakeFiles/minetest.dir/objdef.cpp.i: cmake_force
@@ -4667,7 +5867,7 @@ src/CMakeFiles/minetest.dir/objdef.cpp.o.provides.build: src/CMakeFiles/minetest
 
 src/CMakeFiles/minetest.dir/object_properties.cpp.o: src/CMakeFiles/minetest.dir/flags.make
 src/CMakeFiles/minetest.dir/object_properties.cpp.o: src/object_properties.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_193) "Building CXX object src/CMakeFiles/minetest.dir/object_properties.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_243) "Building CXX object src/CMakeFiles/minetest.dir/object_properties.cpp.o"
 	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/object_properties.cpp.o -c /opt/minetest/src/object_properties.cpp
 
 src/CMakeFiles/minetest.dir/object_properties.cpp.i: cmake_force
@@ -4689,33 +5889,9 @@ src/CMakeFiles/minetest.dir/object_properties.cpp.o.provides: src/CMakeFiles/min
 src/CMakeFiles/minetest.dir/object_properties.cpp.o.provides.build: src/CMakeFiles/minetest.dir/object_properties.cpp.o
 
 
-src/CMakeFiles/minetest.dir/particles.cpp.o: src/CMakeFiles/minetest.dir/flags.make
-src/CMakeFiles/minetest.dir/particles.cpp.o: src/particles.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_194) "Building CXX object src/CMakeFiles/minetest.dir/particles.cpp.o"
-	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/particles.cpp.o -c /opt/minetest/src/particles.cpp
-
-src/CMakeFiles/minetest.dir/particles.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/minetest.dir/particles.cpp.i"
-	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /opt/minetest/src/particles.cpp > CMakeFiles/minetest.dir/particles.cpp.i
-
-src/CMakeFiles/minetest.dir/particles.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/minetest.dir/particles.cpp.s"
-	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /opt/minetest/src/particles.cpp -o CMakeFiles/minetest.dir/particles.cpp.s
-
-src/CMakeFiles/minetest.dir/particles.cpp.o.requires:
-
-.PHONY : src/CMakeFiles/minetest.dir/particles.cpp.o.requires
-
-src/CMakeFiles/minetest.dir/particles.cpp.o.provides: src/CMakeFiles/minetest.dir/particles.cpp.o.requires
-	$(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/particles.cpp.o.provides.build
-.PHONY : src/CMakeFiles/minetest.dir/particles.cpp.o.provides
-
-src/CMakeFiles/minetest.dir/particles.cpp.o.provides.build: src/CMakeFiles/minetest.dir/particles.cpp.o
-
-
 src/CMakeFiles/minetest.dir/pathfinder.cpp.o: src/CMakeFiles/minetest.dir/flags.make
 src/CMakeFiles/minetest.dir/pathfinder.cpp.o: src/pathfinder.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_195) "Building CXX object src/CMakeFiles/minetest.dir/pathfinder.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_244) "Building CXX object src/CMakeFiles/minetest.dir/pathfinder.cpp.o"
 	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/pathfinder.cpp.o -c /opt/minetest/src/pathfinder.cpp
 
 src/CMakeFiles/minetest.dir/pathfinder.cpp.i: cmake_force
@@ -4739,7 +5915,7 @@ src/CMakeFiles/minetest.dir/pathfinder.cpp.o.provides.build: src/CMakeFiles/mine
 
 src/CMakeFiles/minetest.dir/player.cpp.o: src/CMakeFiles/minetest.dir/flags.make
 src/CMakeFiles/minetest.dir/player.cpp.o: src/player.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_196) "Building CXX object src/CMakeFiles/minetest.dir/player.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_245) "Building CXX object src/CMakeFiles/minetest.dir/player.cpp.o"
 	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/player.cpp.o -c /opt/minetest/src/player.cpp
 
 src/CMakeFiles/minetest.dir/player.cpp.i: cmake_force
@@ -4763,7 +5939,7 @@ src/CMakeFiles/minetest.dir/player.cpp.o.provides.build: src/CMakeFiles/minetest
 
 src/CMakeFiles/minetest.dir/porting.cpp.o: src/CMakeFiles/minetest.dir/flags.make
 src/CMakeFiles/minetest.dir/porting.cpp.o: src/porting.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_197) "Building CXX object src/CMakeFiles/minetest.dir/porting.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_246) "Building CXX object src/CMakeFiles/minetest.dir/porting.cpp.o"
 	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/porting.cpp.o -c /opt/minetest/src/porting.cpp
 
 src/CMakeFiles/minetest.dir/porting.cpp.i: cmake_force
@@ -4787,7 +5963,7 @@ src/CMakeFiles/minetest.dir/porting.cpp.o.provides.build: src/CMakeFiles/minetes
 
 src/CMakeFiles/minetest.dir/profiler.cpp.o: src/CMakeFiles/minetest.dir/flags.make
 src/CMakeFiles/minetest.dir/profiler.cpp.o: src/profiler.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_198) "Building CXX object src/CMakeFiles/minetest.dir/profiler.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_247) "Building CXX object src/CMakeFiles/minetest.dir/profiler.cpp.o"
 	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/profiler.cpp.o -c /opt/minetest/src/profiler.cpp
 
 src/CMakeFiles/minetest.dir/profiler.cpp.i: cmake_force
@@ -4811,7 +5987,7 @@ src/CMakeFiles/minetest.dir/profiler.cpp.o.provides.build: src/CMakeFiles/minete
 
 src/CMakeFiles/minetest.dir/quicktune.cpp.o: src/CMakeFiles/minetest.dir/flags.make
 src/CMakeFiles/minetest.dir/quicktune.cpp.o: src/quicktune.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_199) "Building CXX object src/CMakeFiles/minetest.dir/quicktune.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_248) "Building CXX object src/CMakeFiles/minetest.dir/quicktune.cpp.o"
 	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/quicktune.cpp.o -c /opt/minetest/src/quicktune.cpp
 
 src/CMakeFiles/minetest.dir/quicktune.cpp.i: cmake_force
@@ -4835,7 +6011,7 @@ src/CMakeFiles/minetest.dir/quicktune.cpp.o.provides.build: src/CMakeFiles/minet
 
 src/CMakeFiles/minetest.dir/raycast.cpp.o: src/CMakeFiles/minetest.dir/flags.make
 src/CMakeFiles/minetest.dir/raycast.cpp.o: src/raycast.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_200) "Building CXX object src/CMakeFiles/minetest.dir/raycast.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_249) "Building CXX object src/CMakeFiles/minetest.dir/raycast.cpp.o"
 	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/raycast.cpp.o -c /opt/minetest/src/raycast.cpp
 
 src/CMakeFiles/minetest.dir/raycast.cpp.i: cmake_force
@@ -4859,7 +6035,7 @@ src/CMakeFiles/minetest.dir/raycast.cpp.o.provides.build: src/CMakeFiles/minetes
 
 src/CMakeFiles/minetest.dir/reflowscan.cpp.o: src/CMakeFiles/minetest.dir/flags.make
 src/CMakeFiles/minetest.dir/reflowscan.cpp.o: src/reflowscan.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_201) "Building CXX object src/CMakeFiles/minetest.dir/reflowscan.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_250) "Building CXX object src/CMakeFiles/minetest.dir/reflowscan.cpp.o"
 	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/reflowscan.cpp.o -c /opt/minetest/src/reflowscan.cpp
 
 src/CMakeFiles/minetest.dir/reflowscan.cpp.i: cmake_force
@@ -4883,7 +6059,7 @@ src/CMakeFiles/minetest.dir/reflowscan.cpp.o.provides.build: src/CMakeFiles/mine
 
 src/CMakeFiles/minetest.dir/remoteplayer.cpp.o: src/CMakeFiles/minetest.dir/flags.make
 src/CMakeFiles/minetest.dir/remoteplayer.cpp.o: src/remoteplayer.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_202) "Building CXX object src/CMakeFiles/minetest.dir/remoteplayer.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_251) "Building CXX object src/CMakeFiles/minetest.dir/remoteplayer.cpp.o"
 	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/remoteplayer.cpp.o -c /opt/minetest/src/remoteplayer.cpp
 
 src/CMakeFiles/minetest.dir/remoteplayer.cpp.i: cmake_force
@@ -4907,7 +6083,7 @@ src/CMakeFiles/minetest.dir/remoteplayer.cpp.o.provides.build: src/CMakeFiles/mi
 
 src/CMakeFiles/minetest.dir/rollback.cpp.o: src/CMakeFiles/minetest.dir/flags.make
 src/CMakeFiles/minetest.dir/rollback.cpp.o: src/rollback.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_203) "Building CXX object src/CMakeFiles/minetest.dir/rollback.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_252) "Building CXX object src/CMakeFiles/minetest.dir/rollback.cpp.o"
 	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/rollback.cpp.o -c /opt/minetest/src/rollback.cpp
 
 src/CMakeFiles/minetest.dir/rollback.cpp.i: cmake_force
@@ -4931,7 +6107,7 @@ src/CMakeFiles/minetest.dir/rollback.cpp.o.provides.build: src/CMakeFiles/minete
 
 src/CMakeFiles/minetest.dir/rollback_interface.cpp.o: src/CMakeFiles/minetest.dir/flags.make
 src/CMakeFiles/minetest.dir/rollback_interface.cpp.o: src/rollback_interface.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_204) "Building CXX object src/CMakeFiles/minetest.dir/rollback_interface.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_253) "Building CXX object src/CMakeFiles/minetest.dir/rollback_interface.cpp.o"
 	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/rollback_interface.cpp.o -c /opt/minetest/src/rollback_interface.cpp
 
 src/CMakeFiles/minetest.dir/rollback_interface.cpp.i: cmake_force
@@ -4955,7 +6131,7 @@ src/CMakeFiles/minetest.dir/rollback_interface.cpp.o.provides.build: src/CMakeFi
 
 src/CMakeFiles/minetest.dir/serialization.cpp.o: src/CMakeFiles/minetest.dir/flags.make
 src/CMakeFiles/minetest.dir/serialization.cpp.o: src/serialization.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_205) "Building CXX object src/CMakeFiles/minetest.dir/serialization.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_254) "Building CXX object src/CMakeFiles/minetest.dir/serialization.cpp.o"
 	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/serialization.cpp.o -c /opt/minetest/src/serialization.cpp
 
 src/CMakeFiles/minetest.dir/serialization.cpp.i: cmake_force
@@ -4979,7 +6155,7 @@ src/CMakeFiles/minetest.dir/serialization.cpp.o.provides.build: src/CMakeFiles/m
 
 src/CMakeFiles/minetest.dir/server.cpp.o: src/CMakeFiles/minetest.dir/flags.make
 src/CMakeFiles/minetest.dir/server.cpp.o: src/server.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_206) "Building CXX object src/CMakeFiles/minetest.dir/server.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_255) "Building CXX object src/CMakeFiles/minetest.dir/server.cpp.o"
 	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/server.cpp.o -c /opt/minetest/src/server.cpp
 
 src/CMakeFiles/minetest.dir/server.cpp.i: cmake_force
@@ -5003,7 +6179,7 @@ src/CMakeFiles/minetest.dir/server.cpp.o.provides.build: src/CMakeFiles/minetest
 
 src/CMakeFiles/minetest.dir/serverenvironment.cpp.o: src/CMakeFiles/minetest.dir/flags.make
 src/CMakeFiles/minetest.dir/serverenvironment.cpp.o: src/serverenvironment.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_207) "Building CXX object src/CMakeFiles/minetest.dir/serverenvironment.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_256) "Building CXX object src/CMakeFiles/minetest.dir/serverenvironment.cpp.o"
 	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/serverenvironment.cpp.o -c /opt/minetest/src/serverenvironment.cpp
 
 src/CMakeFiles/minetest.dir/serverenvironment.cpp.i: cmake_force
@@ -5027,7 +6203,7 @@ src/CMakeFiles/minetest.dir/serverenvironment.cpp.o.provides.build: src/CMakeFil
 
 src/CMakeFiles/minetest.dir/serverlist.cpp.o: src/CMakeFiles/minetest.dir/flags.make
 src/CMakeFiles/minetest.dir/serverlist.cpp.o: src/serverlist.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_208) "Building CXX object src/CMakeFiles/minetest.dir/serverlist.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_257) "Building CXX object src/CMakeFiles/minetest.dir/serverlist.cpp.o"
 	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/serverlist.cpp.o -c /opt/minetest/src/serverlist.cpp
 
 src/CMakeFiles/minetest.dir/serverlist.cpp.i: cmake_force
@@ -5051,7 +6227,7 @@ src/CMakeFiles/minetest.dir/serverlist.cpp.o.provides.build: src/CMakeFiles/mine
 
 src/CMakeFiles/minetest.dir/serverobject.cpp.o: src/CMakeFiles/minetest.dir/flags.make
 src/CMakeFiles/minetest.dir/serverobject.cpp.o: src/serverobject.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_209) "Building CXX object src/CMakeFiles/minetest.dir/serverobject.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_258) "Building CXX object src/CMakeFiles/minetest.dir/serverobject.cpp.o"
 	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/serverobject.cpp.o -c /opt/minetest/src/serverobject.cpp
 
 src/CMakeFiles/minetest.dir/serverobject.cpp.i: cmake_force
@@ -5075,7 +6251,7 @@ src/CMakeFiles/minetest.dir/serverobject.cpp.o.provides.build: src/CMakeFiles/mi
 
 src/CMakeFiles/minetest.dir/settings.cpp.o: src/CMakeFiles/minetest.dir/flags.make
 src/CMakeFiles/minetest.dir/settings.cpp.o: src/settings.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_210) "Building CXX object src/CMakeFiles/minetest.dir/settings.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_259) "Building CXX object src/CMakeFiles/minetest.dir/settings.cpp.o"
 	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/settings.cpp.o -c /opt/minetest/src/settings.cpp
 
 src/CMakeFiles/minetest.dir/settings.cpp.i: cmake_force
@@ -5097,129 +6273,9 @@ src/CMakeFiles/minetest.dir/settings.cpp.o.provides: src/CMakeFiles/minetest.dir
 src/CMakeFiles/minetest.dir/settings.cpp.o.provides.build: src/CMakeFiles/minetest.dir/settings.cpp.o
 
 
-src/CMakeFiles/minetest.dir/shader.cpp.o: src/CMakeFiles/minetest.dir/flags.make
-src/CMakeFiles/minetest.dir/shader.cpp.o: src/shader.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_211) "Building CXX object src/CMakeFiles/minetest.dir/shader.cpp.o"
-	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/shader.cpp.o -c /opt/minetest/src/shader.cpp
-
-src/CMakeFiles/minetest.dir/shader.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/minetest.dir/shader.cpp.i"
-	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /opt/minetest/src/shader.cpp > CMakeFiles/minetest.dir/shader.cpp.i
-
-src/CMakeFiles/minetest.dir/shader.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/minetest.dir/shader.cpp.s"
-	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /opt/minetest/src/shader.cpp -o CMakeFiles/minetest.dir/shader.cpp.s
-
-src/CMakeFiles/minetest.dir/shader.cpp.o.requires:
-
-.PHONY : src/CMakeFiles/minetest.dir/shader.cpp.o.requires
-
-src/CMakeFiles/minetest.dir/shader.cpp.o.provides: src/CMakeFiles/minetest.dir/shader.cpp.o.requires
-	$(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/shader.cpp.o.provides.build
-.PHONY : src/CMakeFiles/minetest.dir/shader.cpp.o.provides
-
-src/CMakeFiles/minetest.dir/shader.cpp.o.provides.build: src/CMakeFiles/minetest.dir/shader.cpp.o
-
-
-src/CMakeFiles/minetest.dir/sky.cpp.o: src/CMakeFiles/minetest.dir/flags.make
-src/CMakeFiles/minetest.dir/sky.cpp.o: src/sky.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_212) "Building CXX object src/CMakeFiles/minetest.dir/sky.cpp.o"
-	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/sky.cpp.o -c /opt/minetest/src/sky.cpp
-
-src/CMakeFiles/minetest.dir/sky.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/minetest.dir/sky.cpp.i"
-	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /opt/minetest/src/sky.cpp > CMakeFiles/minetest.dir/sky.cpp.i
-
-src/CMakeFiles/minetest.dir/sky.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/minetest.dir/sky.cpp.s"
-	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /opt/minetest/src/sky.cpp -o CMakeFiles/minetest.dir/sky.cpp.s
-
-src/CMakeFiles/minetest.dir/sky.cpp.o.requires:
-
-.PHONY : src/CMakeFiles/minetest.dir/sky.cpp.o.requires
-
-src/CMakeFiles/minetest.dir/sky.cpp.o.provides: src/CMakeFiles/minetest.dir/sky.cpp.o.requires
-	$(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/sky.cpp.o.provides.build
-.PHONY : src/CMakeFiles/minetest.dir/sky.cpp.o.provides
-
-src/CMakeFiles/minetest.dir/sky.cpp.o.provides.build: src/CMakeFiles/minetest.dir/sky.cpp.o
-
-
-src/CMakeFiles/minetest.dir/socket.cpp.o: src/CMakeFiles/minetest.dir/flags.make
-src/CMakeFiles/minetest.dir/socket.cpp.o: src/socket.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_213) "Building CXX object src/CMakeFiles/minetest.dir/socket.cpp.o"
-	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/socket.cpp.o -c /opt/minetest/src/socket.cpp
-
-src/CMakeFiles/minetest.dir/socket.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/minetest.dir/socket.cpp.i"
-	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /opt/minetest/src/socket.cpp > CMakeFiles/minetest.dir/socket.cpp.i
-
-src/CMakeFiles/minetest.dir/socket.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/minetest.dir/socket.cpp.s"
-	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /opt/minetest/src/socket.cpp -o CMakeFiles/minetest.dir/socket.cpp.s
-
-src/CMakeFiles/minetest.dir/socket.cpp.o.requires:
-
-.PHONY : src/CMakeFiles/minetest.dir/socket.cpp.o.requires
-
-src/CMakeFiles/minetest.dir/socket.cpp.o.provides: src/CMakeFiles/minetest.dir/socket.cpp.o.requires
-	$(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/socket.cpp.o.provides.build
-.PHONY : src/CMakeFiles/minetest.dir/socket.cpp.o.provides
-
-src/CMakeFiles/minetest.dir/socket.cpp.o.provides.build: src/CMakeFiles/minetest.dir/socket.cpp.o
-
-
-src/CMakeFiles/minetest.dir/sound.cpp.o: src/CMakeFiles/minetest.dir/flags.make
-src/CMakeFiles/minetest.dir/sound.cpp.o: src/sound.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_214) "Building CXX object src/CMakeFiles/minetest.dir/sound.cpp.o"
-	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/sound.cpp.o -c /opt/minetest/src/sound.cpp
-
-src/CMakeFiles/minetest.dir/sound.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/minetest.dir/sound.cpp.i"
-	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /opt/minetest/src/sound.cpp > CMakeFiles/minetest.dir/sound.cpp.i
-
-src/CMakeFiles/minetest.dir/sound.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/minetest.dir/sound.cpp.s"
-	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /opt/minetest/src/sound.cpp -o CMakeFiles/minetest.dir/sound.cpp.s
-
-src/CMakeFiles/minetest.dir/sound.cpp.o.requires:
-
-.PHONY : src/CMakeFiles/minetest.dir/sound.cpp.o.requires
-
-src/CMakeFiles/minetest.dir/sound.cpp.o.provides: src/CMakeFiles/minetest.dir/sound.cpp.o.requires
-	$(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/sound.cpp.o.provides.build
-.PHONY : src/CMakeFiles/minetest.dir/sound.cpp.o.provides
-
-src/CMakeFiles/minetest.dir/sound.cpp.o.provides.build: src/CMakeFiles/minetest.dir/sound.cpp.o
-
-
-src/CMakeFiles/minetest.dir/sound_openal.cpp.o: src/CMakeFiles/minetest.dir/flags.make
-src/CMakeFiles/minetest.dir/sound_openal.cpp.o: src/sound_openal.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_215) "Building CXX object src/CMakeFiles/minetest.dir/sound_openal.cpp.o"
-	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/sound_openal.cpp.o -c /opt/minetest/src/sound_openal.cpp
-
-src/CMakeFiles/minetest.dir/sound_openal.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/minetest.dir/sound_openal.cpp.i"
-	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /opt/minetest/src/sound_openal.cpp > CMakeFiles/minetest.dir/sound_openal.cpp.i
-
-src/CMakeFiles/minetest.dir/sound_openal.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/minetest.dir/sound_openal.cpp.s"
-	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /opt/minetest/src/sound_openal.cpp -o CMakeFiles/minetest.dir/sound_openal.cpp.s
-
-src/CMakeFiles/minetest.dir/sound_openal.cpp.o.requires:
-
-.PHONY : src/CMakeFiles/minetest.dir/sound_openal.cpp.o.requires
-
-src/CMakeFiles/minetest.dir/sound_openal.cpp.o.provides: src/CMakeFiles/minetest.dir/sound_openal.cpp.o.requires
-	$(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/sound_openal.cpp.o.provides.build
-.PHONY : src/CMakeFiles/minetest.dir/sound_openal.cpp.o.provides
-
-src/CMakeFiles/minetest.dir/sound_openal.cpp.o.provides.build: src/CMakeFiles/minetest.dir/sound_openal.cpp.o
-
-
 src/CMakeFiles/minetest.dir/staticobject.cpp.o: src/CMakeFiles/minetest.dir/flags.make
 src/CMakeFiles/minetest.dir/staticobject.cpp.o: src/staticobject.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_216) "Building CXX object src/CMakeFiles/minetest.dir/staticobject.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_260) "Building CXX object src/CMakeFiles/minetest.dir/staticobject.cpp.o"
 	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/staticobject.cpp.o -c /opt/minetest/src/staticobject.cpp
 
 src/CMakeFiles/minetest.dir/staticobject.cpp.i: cmake_force
@@ -5241,33 +6297,9 @@ src/CMakeFiles/minetest.dir/staticobject.cpp.o.provides: src/CMakeFiles/minetest
 src/CMakeFiles/minetest.dir/staticobject.cpp.o.provides.build: src/CMakeFiles/minetest.dir/staticobject.cpp.o
 
 
-src/CMakeFiles/minetest.dir/subgame.cpp.o: src/CMakeFiles/minetest.dir/flags.make
-src/CMakeFiles/minetest.dir/subgame.cpp.o: src/subgame.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_217) "Building CXX object src/CMakeFiles/minetest.dir/subgame.cpp.o"
-	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/subgame.cpp.o -c /opt/minetest/src/subgame.cpp
-
-src/CMakeFiles/minetest.dir/subgame.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/minetest.dir/subgame.cpp.i"
-	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /opt/minetest/src/subgame.cpp > CMakeFiles/minetest.dir/subgame.cpp.i
-
-src/CMakeFiles/minetest.dir/subgame.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/minetest.dir/subgame.cpp.s"
-	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /opt/minetest/src/subgame.cpp -o CMakeFiles/minetest.dir/subgame.cpp.s
-
-src/CMakeFiles/minetest.dir/subgame.cpp.o.requires:
-
-.PHONY : src/CMakeFiles/minetest.dir/subgame.cpp.o.requires
-
-src/CMakeFiles/minetest.dir/subgame.cpp.o.provides: src/CMakeFiles/minetest.dir/subgame.cpp.o.requires
-	$(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/subgame.cpp.o.provides.build
-.PHONY : src/CMakeFiles/minetest.dir/subgame.cpp.o.provides
-
-src/CMakeFiles/minetest.dir/subgame.cpp.o.provides.build: src/CMakeFiles/minetest.dir/subgame.cpp.o
-
-
 src/CMakeFiles/minetest.dir/terminal_chat_console.cpp.o: src/CMakeFiles/minetest.dir/flags.make
 src/CMakeFiles/minetest.dir/terminal_chat_console.cpp.o: src/terminal_chat_console.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_218) "Building CXX object src/CMakeFiles/minetest.dir/terminal_chat_console.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_261) "Building CXX object src/CMakeFiles/minetest.dir/terminal_chat_console.cpp.o"
 	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/terminal_chat_console.cpp.o -c /opt/minetest/src/terminal_chat_console.cpp
 
 src/CMakeFiles/minetest.dir/terminal_chat_console.cpp.i: cmake_force
@@ -5291,7 +6323,7 @@ src/CMakeFiles/minetest.dir/terminal_chat_console.cpp.o.provides.build: src/CMak
 
 src/CMakeFiles/minetest.dir/tileanimation.cpp.o: src/CMakeFiles/minetest.dir/flags.make
 src/CMakeFiles/minetest.dir/tileanimation.cpp.o: src/tileanimation.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_219) "Building CXX object src/CMakeFiles/minetest.dir/tileanimation.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_262) "Building CXX object src/CMakeFiles/minetest.dir/tileanimation.cpp.o"
 	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/tileanimation.cpp.o -c /opt/minetest/src/tileanimation.cpp
 
 src/CMakeFiles/minetest.dir/tileanimation.cpp.i: cmake_force
@@ -5315,7 +6347,7 @@ src/CMakeFiles/minetest.dir/tileanimation.cpp.o.provides.build: src/CMakeFiles/m
 
 src/CMakeFiles/minetest.dir/tool.cpp.o: src/CMakeFiles/minetest.dir/flags.make
 src/CMakeFiles/minetest.dir/tool.cpp.o: src/tool.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_220) "Building CXX object src/CMakeFiles/minetest.dir/tool.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_263) "Building CXX object src/CMakeFiles/minetest.dir/tool.cpp.o"
 	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/tool.cpp.o -c /opt/minetest/src/tool.cpp
 
 src/CMakeFiles/minetest.dir/tool.cpp.i: cmake_force
@@ -5337,33 +6369,33 @@ src/CMakeFiles/minetest.dir/tool.cpp.o.provides: src/CMakeFiles/minetest.dir/too
 src/CMakeFiles/minetest.dir/tool.cpp.o.provides.build: src/CMakeFiles/minetest.dir/tool.cpp.o
 
 
-src/CMakeFiles/minetest.dir/treegen.cpp.o: src/CMakeFiles/minetest.dir/flags.make
-src/CMakeFiles/minetest.dir/treegen.cpp.o: src/treegen.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_221) "Building CXX object src/CMakeFiles/minetest.dir/treegen.cpp.o"
-	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/treegen.cpp.o -c /opt/minetest/src/treegen.cpp
+src/CMakeFiles/minetest.dir/translation.cpp.o: src/CMakeFiles/minetest.dir/flags.make
+src/CMakeFiles/minetest.dir/translation.cpp.o: src/translation.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_264) "Building CXX object src/CMakeFiles/minetest.dir/translation.cpp.o"
+	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/translation.cpp.o -c /opt/minetest/src/translation.cpp
 
-src/CMakeFiles/minetest.dir/treegen.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/minetest.dir/treegen.cpp.i"
-	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /opt/minetest/src/treegen.cpp > CMakeFiles/minetest.dir/treegen.cpp.i
+src/CMakeFiles/minetest.dir/translation.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/minetest.dir/translation.cpp.i"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /opt/minetest/src/translation.cpp > CMakeFiles/minetest.dir/translation.cpp.i
 
-src/CMakeFiles/minetest.dir/treegen.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/minetest.dir/treegen.cpp.s"
-	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /opt/minetest/src/treegen.cpp -o CMakeFiles/minetest.dir/treegen.cpp.s
+src/CMakeFiles/minetest.dir/translation.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/minetest.dir/translation.cpp.s"
+	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /opt/minetest/src/translation.cpp -o CMakeFiles/minetest.dir/translation.cpp.s
 
-src/CMakeFiles/minetest.dir/treegen.cpp.o.requires:
+src/CMakeFiles/minetest.dir/translation.cpp.o.requires:
 
-.PHONY : src/CMakeFiles/minetest.dir/treegen.cpp.o.requires
+.PHONY : src/CMakeFiles/minetest.dir/translation.cpp.o.requires
 
-src/CMakeFiles/minetest.dir/treegen.cpp.o.provides: src/CMakeFiles/minetest.dir/treegen.cpp.o.requires
-	$(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/treegen.cpp.o.provides.build
-.PHONY : src/CMakeFiles/minetest.dir/treegen.cpp.o.provides
+src/CMakeFiles/minetest.dir/translation.cpp.o.provides: src/CMakeFiles/minetest.dir/translation.cpp.o.requires
+	$(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/translation.cpp.o.provides.build
+.PHONY : src/CMakeFiles/minetest.dir/translation.cpp.o.provides
 
-src/CMakeFiles/minetest.dir/treegen.cpp.o.provides.build: src/CMakeFiles/minetest.dir/treegen.cpp.o
+src/CMakeFiles/minetest.dir/translation.cpp.o.provides.build: src/CMakeFiles/minetest.dir/translation.cpp.o
 
 
 src/CMakeFiles/minetest.dir/version.cpp.o: src/CMakeFiles/minetest.dir/flags.make
 src/CMakeFiles/minetest.dir/version.cpp.o: src/version.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_222) "Building CXX object src/CMakeFiles/minetest.dir/version.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_265) "Building CXX object src/CMakeFiles/minetest.dir/version.cpp.o"
 	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/version.cpp.o -c /opt/minetest/src/version.cpp
 
 src/CMakeFiles/minetest.dir/version.cpp.i: cmake_force
@@ -5387,7 +6419,7 @@ src/CMakeFiles/minetest.dir/version.cpp.o.provides.build: src/CMakeFiles/minetes
 
 src/CMakeFiles/minetest.dir/voxel.cpp.o: src/CMakeFiles/minetest.dir/flags.make
 src/CMakeFiles/minetest.dir/voxel.cpp.o: src/voxel.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_223) "Building CXX object src/CMakeFiles/minetest.dir/voxel.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_266) "Building CXX object src/CMakeFiles/minetest.dir/voxel.cpp.o"
 	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/voxel.cpp.o -c /opt/minetest/src/voxel.cpp
 
 src/CMakeFiles/minetest.dir/voxel.cpp.i: cmake_force
@@ -5411,7 +6443,7 @@ src/CMakeFiles/minetest.dir/voxel.cpp.o.provides.build: src/CMakeFiles/minetest.
 
 src/CMakeFiles/minetest.dir/voxelalgorithms.cpp.o: src/CMakeFiles/minetest.dir/flags.make
 src/CMakeFiles/minetest.dir/voxelalgorithms.cpp.o: src/voxelalgorithms.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_224) "Building CXX object src/CMakeFiles/minetest.dir/voxelalgorithms.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_267) "Building CXX object src/CMakeFiles/minetest.dir/voxelalgorithms.cpp.o"
 	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/voxelalgorithms.cpp.o -c /opt/minetest/src/voxelalgorithms.cpp
 
 src/CMakeFiles/minetest.dir/voxelalgorithms.cpp.i: cmake_force
@@ -5433,47 +6465,108 @@ src/CMakeFiles/minetest.dir/voxelalgorithms.cpp.o.provides: src/CMakeFiles/minet
 src/CMakeFiles/minetest.dir/voxelalgorithms.cpp.o.provides.build: src/CMakeFiles/minetest.dir/voxelalgorithms.cpp.o
 
 
-src/CMakeFiles/minetest.dir/wieldmesh.cpp.o: src/CMakeFiles/minetest.dir/flags.make
-src/CMakeFiles/minetest.dir/wieldmesh.cpp.o: src/wieldmesh.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_225) "Building CXX object src/CMakeFiles/minetest.dir/wieldmesh.cpp.o"
-	cd /opt/minetest/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/minetest.dir/wieldmesh.cpp.o -c /opt/minetest/src/wieldmesh.cpp
-
-src/CMakeFiles/minetest.dir/wieldmesh.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/minetest.dir/wieldmesh.cpp.i"
-	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /opt/minetest/src/wieldmesh.cpp > CMakeFiles/minetest.dir/wieldmesh.cpp.i
-
-src/CMakeFiles/minetest.dir/wieldmesh.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/minetest.dir/wieldmesh.cpp.s"
-	cd /opt/minetest/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /opt/minetest/src/wieldmesh.cpp -o CMakeFiles/minetest.dir/wieldmesh.cpp.s
-
-src/CMakeFiles/minetest.dir/wieldmesh.cpp.o.requires:
-
-.PHONY : src/CMakeFiles/minetest.dir/wieldmesh.cpp.o.requires
-
-src/CMakeFiles/minetest.dir/wieldmesh.cpp.o.provides: src/CMakeFiles/minetest.dir/wieldmesh.cpp.o.requires
-	$(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/wieldmesh.cpp.o.provides.build
-.PHONY : src/CMakeFiles/minetest.dir/wieldmesh.cpp.o.provides
-
-src/CMakeFiles/minetest.dir/wieldmesh.cpp.o.provides.build: src/CMakeFiles/minetest.dir/wieldmesh.cpp.o
-
-
 # Object files for target minetest
 minetest_OBJECTS = \
+"CMakeFiles/minetest.dir/client/activeobjectmgr.cpp.o" \
+"CMakeFiles/minetest.dir/client/camera.cpp.o" \
+"CMakeFiles/minetest.dir/client/client.cpp.o" \
+"CMakeFiles/minetest.dir/client/clientenvironment.cpp.o" \
 "CMakeFiles/minetest.dir/client/clientlauncher.cpp.o" \
+"CMakeFiles/minetest.dir/client/clientmap.cpp.o" \
+"CMakeFiles/minetest.dir/client/clientmedia.cpp.o" \
+"CMakeFiles/minetest.dir/client/clientobject.cpp.o" \
+"CMakeFiles/minetest.dir/client/clouds.cpp.o" \
+"CMakeFiles/minetest.dir/client/content_cao.cpp.o" \
+"CMakeFiles/minetest.dir/client/content_cso.cpp.o" \
+"CMakeFiles/minetest.dir/client/content_mapblock.cpp.o" \
+"CMakeFiles/minetest.dir/client/filecache.cpp.o" \
+"CMakeFiles/minetest.dir/client/fontengine.cpp.o" \
+"CMakeFiles/minetest.dir/client/game.cpp.o" \
+"CMakeFiles/minetest.dir/client/gameui.cpp.o" \
+"CMakeFiles/minetest.dir/client/guiscalingfilter.cpp.o" \
+"CMakeFiles/minetest.dir/client/hud.cpp.o" \
+"CMakeFiles/minetest.dir/client/imagefilters.cpp.o" \
 "CMakeFiles/minetest.dir/client/inputhandler.cpp.o" \
 "CMakeFiles/minetest.dir/client/joystick_controller.cpp.o" \
+"CMakeFiles/minetest.dir/client/keycode.cpp.o" \
+"CMakeFiles/minetest.dir/client/localplayer.cpp.o" \
+"CMakeFiles/minetest.dir/client/mapblock_mesh.cpp.o" \
+"CMakeFiles/minetest.dir/client/mesh.cpp.o" \
+"CMakeFiles/minetest.dir/client/mesh_generator_thread.cpp.o" \
+"CMakeFiles/minetest.dir/client/meshgen/collector.cpp.o" \
+"CMakeFiles/minetest.dir/client/minimap.cpp.o" \
+"CMakeFiles/minetest.dir/client/particles.cpp.o" \
+"CMakeFiles/minetest.dir/client/render/anaglyph.cpp.o" \
+"CMakeFiles/minetest.dir/client/render/core.cpp.o" \
+"CMakeFiles/minetest.dir/client/render/factory.cpp.o" \
+"CMakeFiles/minetest.dir/client/render/interlaced.cpp.o" \
+"CMakeFiles/minetest.dir/client/render/pageflip.cpp.o" \
+"CMakeFiles/minetest.dir/client/render/plain.cpp.o" \
+"CMakeFiles/minetest.dir/client/render/sidebyside.cpp.o" \
+"CMakeFiles/minetest.dir/client/render/stereo.cpp.o" \
+"CMakeFiles/minetest.dir/client/renderingengine.cpp.o" \
+"CMakeFiles/minetest.dir/client/shader.cpp.o" \
+"CMakeFiles/minetest.dir/client/sky.cpp.o" \
+"CMakeFiles/minetest.dir/client/sound.cpp.o" \
+"CMakeFiles/minetest.dir/client/sound_openal.cpp.o" \
 "CMakeFiles/minetest.dir/client/tile.cpp.o" \
+"CMakeFiles/minetest.dir/client/wieldmesh.cpp.o" \
+"CMakeFiles/minetest.dir/content/content.cpp.o" \
+"CMakeFiles/minetest.dir/content/mods.cpp.o" \
+"CMakeFiles/minetest.dir/content/packages.cpp.o" \
+"CMakeFiles/minetest.dir/content/subgames.cpp.o" \
+"CMakeFiles/minetest.dir/database/database-dummy.cpp.o" \
+"CMakeFiles/minetest.dir/database/database-files.cpp.o" \
+"CMakeFiles/minetest.dir/database/database-leveldb.cpp.o" \
+"CMakeFiles/minetest.dir/database/database-postgresql.cpp.o" \
+"CMakeFiles/minetest.dir/database/database-redis.cpp.o" \
+"CMakeFiles/minetest.dir/database/database-sqlite3.cpp.o" \
+"CMakeFiles/minetest.dir/database/database.cpp.o" \
+"CMakeFiles/minetest.dir/gui/guiChatConsole.cpp.o" \
+"CMakeFiles/minetest.dir/gui/guiConfirmRegistration.cpp.o" \
+"CMakeFiles/minetest.dir/gui/guiEditBoxWithScrollbar.cpp.o" \
+"CMakeFiles/minetest.dir/gui/guiEngine.cpp.o" \
+"CMakeFiles/minetest.dir/gui/guiFormSpecMenu.cpp.o" \
+"CMakeFiles/minetest.dir/gui/guiKeyChangeMenu.cpp.o" \
+"CMakeFiles/minetest.dir/gui/guiPasswordChange.cpp.o" \
+"CMakeFiles/minetest.dir/gui/guiPathSelectMenu.cpp.o" \
+"CMakeFiles/minetest.dir/gui/guiTable.cpp.o" \
+"CMakeFiles/minetest.dir/gui/guiVolumeChange.cpp.o" \
+"CMakeFiles/minetest.dir/gui/intlGUIEditBox.cpp.o" \
+"CMakeFiles/minetest.dir/gui/modalMenu.cpp.o" \
+"CMakeFiles/minetest.dir/gui/profilergraph.cpp.o" \
+"CMakeFiles/minetest.dir/irrlicht_changes/CGUITTFont.cpp.o" \
 "CMakeFiles/minetest.dir/irrlicht_changes/static_text.cpp.o" \
+"CMakeFiles/minetest.dir/mapgen/cavegen.cpp.o" \
+"CMakeFiles/minetest.dir/mapgen/dungeongen.cpp.o" \
+"CMakeFiles/minetest.dir/mapgen/mapgen.cpp.o" \
+"CMakeFiles/minetest.dir/mapgen/mapgen_carpathian.cpp.o" \
+"CMakeFiles/minetest.dir/mapgen/mapgen_flat.cpp.o" \
+"CMakeFiles/minetest.dir/mapgen/mapgen_fractal.cpp.o" \
+"CMakeFiles/minetest.dir/mapgen/mapgen_singlenode.cpp.o" \
+"CMakeFiles/minetest.dir/mapgen/mapgen_v5.cpp.o" \
+"CMakeFiles/minetest.dir/mapgen/mapgen_v6.cpp.o" \
+"CMakeFiles/minetest.dir/mapgen/mapgen_v7.cpp.o" \
+"CMakeFiles/minetest.dir/mapgen/mapgen_valleys.cpp.o" \
+"CMakeFiles/minetest.dir/mapgen/mg_biome.cpp.o" \
+"CMakeFiles/minetest.dir/mapgen/mg_decoration.cpp.o" \
+"CMakeFiles/minetest.dir/mapgen/mg_ore.cpp.o" \
+"CMakeFiles/minetest.dir/mapgen/mg_schematic.cpp.o" \
+"CMakeFiles/minetest.dir/mapgen/treegen.cpp.o" \
+"CMakeFiles/minetest.dir/network/address.cpp.o" \
 "CMakeFiles/minetest.dir/network/clientopcodes.cpp.o" \
 "CMakeFiles/minetest.dir/network/clientpackethandler.cpp.o" \
 "CMakeFiles/minetest.dir/network/connection.cpp.o" \
+"CMakeFiles/minetest.dir/network/connectionthreads.cpp.o" \
 "CMakeFiles/minetest.dir/network/networkpacket.cpp.o" \
 "CMakeFiles/minetest.dir/network/serveropcodes.cpp.o" \
 "CMakeFiles/minetest.dir/network/serverpackethandler.cpp.o" \
+"CMakeFiles/minetest.dir/network/socket.cpp.o" \
 "CMakeFiles/minetest.dir/script/common/c_content.cpp.o" \
 "CMakeFiles/minetest.dir/script/common/c_converter.cpp.o" \
 "CMakeFiles/minetest.dir/script/common/c_internal.cpp.o" \
 "CMakeFiles/minetest.dir/script/common/c_types.cpp.o" \
+"CMakeFiles/minetest.dir/script/common/helper.cpp.o" \
 "CMakeFiles/minetest.dir/script/cpp_api/s_async.cpp.o" \
 "CMakeFiles/minetest.dir/script/cpp_api/s_base.cpp.o" \
 "CMakeFiles/minetest.dir/script/cpp_api/s_client.cpp.o" \
@@ -5482,12 +6575,14 @@ minetest_OBJECTS = \
 "CMakeFiles/minetest.dir/script/cpp_api/s_inventory.cpp.o" \
 "CMakeFiles/minetest.dir/script/cpp_api/s_item.cpp.o" \
 "CMakeFiles/minetest.dir/script/cpp_api/s_mainmenu.cpp.o" \
+"CMakeFiles/minetest.dir/script/cpp_api/s_modchannels.cpp.o" \
 "CMakeFiles/minetest.dir/script/cpp_api/s_node.cpp.o" \
 "CMakeFiles/minetest.dir/script/cpp_api/s_nodemeta.cpp.o" \
 "CMakeFiles/minetest.dir/script/cpp_api/s_player.cpp.o" \
 "CMakeFiles/minetest.dir/script/cpp_api/s_security.cpp.o" \
 "CMakeFiles/minetest.dir/script/cpp_api/s_server.cpp.o" \
 "CMakeFiles/minetest.dir/script/lua_api/l_areastore.cpp.o" \
+"CMakeFiles/minetest.dir/script/lua_api/l_auth.cpp.o" \
 "CMakeFiles/minetest.dir/script/lua_api/l_base.cpp.o" \
 "CMakeFiles/minetest.dir/script/lua_api/l_camera.cpp.o" \
 "CMakeFiles/minetest.dir/script/lua_api/l_client.cpp.o" \
@@ -5502,11 +6597,14 @@ minetest_OBJECTS = \
 "CMakeFiles/minetest.dir/script/lua_api/l_mapgen.cpp.o" \
 "CMakeFiles/minetest.dir/script/lua_api/l_metadata.cpp.o" \
 "CMakeFiles/minetest.dir/script/lua_api/l_minimap.cpp.o" \
+"CMakeFiles/minetest.dir/script/lua_api/l_modchannels.cpp.o" \
 "CMakeFiles/minetest.dir/script/lua_api/l_nodemeta.cpp.o" \
 "CMakeFiles/minetest.dir/script/lua_api/l_nodetimer.cpp.o" \
 "CMakeFiles/minetest.dir/script/lua_api/l_noise.cpp.o" \
 "CMakeFiles/minetest.dir/script/lua_api/l_object.cpp.o" \
 "CMakeFiles/minetest.dir/script/lua_api/l_particles.cpp.o" \
+"CMakeFiles/minetest.dir/script/lua_api/l_particles_local.cpp.o" \
+"CMakeFiles/minetest.dir/script/lua_api/l_playermeta.cpp.o" \
 "CMakeFiles/minetest.dir/script/lua_api/l_rollback.cpp.o" \
 "CMakeFiles/minetest.dir/script/lua_api/l_server.cpp.o" \
 "CMakeFiles/minetest.dir/script/lua_api/l_settings.cpp.o" \
@@ -5517,20 +6615,28 @@ minetest_OBJECTS = \
 "CMakeFiles/minetest.dir/script/scripting_client.cpp.o" \
 "CMakeFiles/minetest.dir/script/scripting_mainmenu.cpp.o" \
 "CMakeFiles/minetest.dir/script/scripting_server.cpp.o" \
+"CMakeFiles/minetest.dir/server/activeobjectmgr.cpp.o" \
+"CMakeFiles/minetest.dir/server/mods.cpp.o" \
 "CMakeFiles/minetest.dir/threading/event.cpp.o" \
-"CMakeFiles/minetest.dir/threading/mutex.cpp.o" \
 "CMakeFiles/minetest.dir/threading/semaphore.cpp.o" \
 "CMakeFiles/minetest.dir/threading/thread.cpp.o" \
 "CMakeFiles/minetest.dir/unittest/test.cpp.o" \
+"CMakeFiles/minetest.dir/unittest/test_activeobject.cpp.o" \
 "CMakeFiles/minetest.dir/unittest/test_areastore.cpp.o" \
+"CMakeFiles/minetest.dir/unittest/test_authdatabase.cpp.o" \
+"CMakeFiles/minetest.dir/unittest/test_ban.cpp.o" \
+"CMakeFiles/minetest.dir/unittest/test_clientactiveobjectmgr.cpp.o" \
 "CMakeFiles/minetest.dir/unittest/test_collision.cpp.o" \
 "CMakeFiles/minetest.dir/unittest/test_compression.cpp.o" \
 "CMakeFiles/minetest.dir/unittest/test_connection.cpp.o" \
+"CMakeFiles/minetest.dir/unittest/test_eventmanager.cpp.o" \
 "CMakeFiles/minetest.dir/unittest/test_filepath.cpp.o" \
+"CMakeFiles/minetest.dir/unittest/test_gameui.cpp.o" \
 "CMakeFiles/minetest.dir/unittest/test_inventory.cpp.o" \
 "CMakeFiles/minetest.dir/unittest/test_keycode.cpp.o" \
 "CMakeFiles/minetest.dir/unittest/test_map_settings_manager.cpp.o" \
 "CMakeFiles/minetest.dir/unittest/test_mapnode.cpp.o" \
+"CMakeFiles/minetest.dir/unittest/test_modchannels.cpp.o" \
 "CMakeFiles/minetest.dir/unittest/test_nodedef.cpp.o" \
 "CMakeFiles/minetest.dir/unittest/test_noderesolver.cpp.o" \
 "CMakeFiles/minetest.dir/unittest/test_noise.cpp.o" \
@@ -5540,17 +6646,22 @@ minetest_OBJECTS = \
 "CMakeFiles/minetest.dir/unittest/test_random.cpp.o" \
 "CMakeFiles/minetest.dir/unittest/test_schematic.cpp.o" \
 "CMakeFiles/minetest.dir/unittest/test_serialization.cpp.o" \
+"CMakeFiles/minetest.dir/unittest/test_server_shutdown_state.cpp.o" \
+"CMakeFiles/minetest.dir/unittest/test_serveractiveobjectmgr.cpp.o" \
+"CMakeFiles/minetest.dir/unittest/test_servermodmanager.cpp.o" \
 "CMakeFiles/minetest.dir/unittest/test_settings.cpp.o" \
 "CMakeFiles/minetest.dir/unittest/test_socket.cpp.o" \
 "CMakeFiles/minetest.dir/unittest/test_threading.cpp.o" \
 "CMakeFiles/minetest.dir/unittest/test_utilities.cpp.o" \
 "CMakeFiles/minetest.dir/unittest/test_voxelalgorithms.cpp.o" \
+"CMakeFiles/minetest.dir/unittest/test_voxelarea.cpp.o" \
 "CMakeFiles/minetest.dir/unittest/test_voxelmanipulator.cpp.o" \
 "CMakeFiles/minetest.dir/util/areastore.cpp.o" \
 "CMakeFiles/minetest.dir/util/auth.cpp.o" \
 "CMakeFiles/minetest.dir/util/base64.cpp.o" \
 "CMakeFiles/minetest.dir/util/directiontables.cpp.o" \
 "CMakeFiles/minetest.dir/util/enriched_string.cpp.o" \
+"CMakeFiles/minetest.dir/util/ieee_float.cpp.o" \
 "CMakeFiles/minetest.dir/util/numeric.cpp.o" \
 "CMakeFiles/minetest.dir/util/pointedthing.cpp.o" \
 "CMakeFiles/minetest.dir/util/serialize.cpp.o" \
@@ -5560,91 +6671,38 @@ minetest_OBJECTS = \
 "CMakeFiles/minetest.dir/util/string.cpp.o" \
 "CMakeFiles/minetest.dir/util/timetaker.cpp.o" \
 "CMakeFiles/minetest.dir/ban.cpp.o" \
-"CMakeFiles/minetest.dir/camera.cpp.o" \
-"CMakeFiles/minetest.dir/cavegen.cpp.o" \
 "CMakeFiles/minetest.dir/chat.cpp.o" \
-"CMakeFiles/minetest.dir/client.cpp.o" \
-"CMakeFiles/minetest.dir/clientenvironment.cpp.o" \
 "CMakeFiles/minetest.dir/clientiface.cpp.o" \
-"CMakeFiles/minetest.dir/clientmap.cpp.o" \
-"CMakeFiles/minetest.dir/clientmedia.cpp.o" \
-"CMakeFiles/minetest.dir/clientobject.cpp.o" \
-"CMakeFiles/minetest.dir/clouds.cpp.o" \
 "CMakeFiles/minetest.dir/collision.cpp.o" \
-"CMakeFiles/minetest.dir/content_abm.cpp.o" \
-"CMakeFiles/minetest.dir/content_cao.cpp.o" \
-"CMakeFiles/minetest.dir/content_cso.cpp.o" \
-"CMakeFiles/minetest.dir/content_mapblock.cpp.o" \
 "CMakeFiles/minetest.dir/content_mapnode.cpp.o" \
 "CMakeFiles/minetest.dir/content_nodemeta.cpp.o" \
 "CMakeFiles/minetest.dir/content_sao.cpp.o" \
 "CMakeFiles/minetest.dir/convert_json.cpp.o" \
 "CMakeFiles/minetest.dir/craftdef.cpp.o" \
-"CMakeFiles/minetest.dir/database-dummy.cpp.o" \
-"CMakeFiles/minetest.dir/database-files.cpp.o" \
-"CMakeFiles/minetest.dir/database-leveldb.cpp.o" \
-"CMakeFiles/minetest.dir/database-postgresql.cpp.o" \
-"CMakeFiles/minetest.dir/database-redis.cpp.o" \
-"CMakeFiles/minetest.dir/database-sqlite3.cpp.o" \
-"CMakeFiles/minetest.dir/database.cpp.o" \
 "CMakeFiles/minetest.dir/debug.cpp.o" \
 "CMakeFiles/minetest.dir/defaultsettings.cpp.o" \
-"CMakeFiles/minetest.dir/drawscene.cpp.o" \
-"CMakeFiles/minetest.dir/dungeongen.cpp.o" \
 "CMakeFiles/minetest.dir/emerge.cpp.o" \
 "CMakeFiles/minetest.dir/environment.cpp.o" \
 "CMakeFiles/minetest.dir/face_position_cache.cpp.o" \
-"CMakeFiles/minetest.dir/filecache.cpp.o" \
 "CMakeFiles/minetest.dir/filesys.cpp.o" \
-"CMakeFiles/minetest.dir/fontengine.cpp.o" \
-"CMakeFiles/minetest.dir/game.cpp.o" \
 "CMakeFiles/minetest.dir/genericobject.cpp.o" \
 "CMakeFiles/minetest.dir/gettext.cpp.o" \
-"CMakeFiles/minetest.dir/guiChatConsole.cpp.o" \
-"CMakeFiles/minetest.dir/guiEngine.cpp.o" \
-"CMakeFiles/minetest.dir/guiFileSelectMenu.cpp.o" \
-"CMakeFiles/minetest.dir/guiFormSpecMenu.cpp.o" \
-"CMakeFiles/minetest.dir/guiKeyChangeMenu.cpp.o" \
-"CMakeFiles/minetest.dir/guiPasswordChange.cpp.o" \
-"CMakeFiles/minetest.dir/guiTable.cpp.o" \
-"CMakeFiles/minetest.dir/guiVolumeChange.cpp.o" \
-"CMakeFiles/minetest.dir/guiscalingfilter.cpp.o" \
 "CMakeFiles/minetest.dir/httpfetch.cpp.o" \
 "CMakeFiles/minetest.dir/hud.cpp.o" \
-"CMakeFiles/minetest.dir/imagefilters.cpp.o" \
-"CMakeFiles/minetest.dir/intlGUIEditBox.cpp.o" \
 "CMakeFiles/minetest.dir/inventory.cpp.o" \
 "CMakeFiles/minetest.dir/inventorymanager.cpp.o" \
 "CMakeFiles/minetest.dir/itemdef.cpp.o" \
 "CMakeFiles/minetest.dir/itemstackmetadata.cpp.o" \
-"CMakeFiles/minetest.dir/keycode.cpp.o" \
 "CMakeFiles/minetest.dir/light.cpp.o" \
-"CMakeFiles/minetest.dir/localplayer.cpp.o" \
 "CMakeFiles/minetest.dir/log.cpp.o" \
 "CMakeFiles/minetest.dir/main.cpp.o" \
 "CMakeFiles/minetest.dir/map.cpp.o" \
 "CMakeFiles/minetest.dir/map_settings_manager.cpp.o" \
 "CMakeFiles/minetest.dir/mapblock.cpp.o" \
-"CMakeFiles/minetest.dir/mapblock_mesh.cpp.o" \
-"CMakeFiles/minetest.dir/mapgen.cpp.o" \
-"CMakeFiles/minetest.dir/mapgen_flat.cpp.o" \
-"CMakeFiles/minetest.dir/mapgen_fractal.cpp.o" \
-"CMakeFiles/minetest.dir/mapgen_singlenode.cpp.o" \
-"CMakeFiles/minetest.dir/mapgen_v5.cpp.o" \
-"CMakeFiles/minetest.dir/mapgen_v6.cpp.o" \
-"CMakeFiles/minetest.dir/mapgen_v7.cpp.o" \
-"CMakeFiles/minetest.dir/mapgen_valleys.cpp.o" \
 "CMakeFiles/minetest.dir/mapnode.cpp.o" \
 "CMakeFiles/minetest.dir/mapsector.cpp.o" \
-"CMakeFiles/minetest.dir/mesh.cpp.o" \
-"CMakeFiles/minetest.dir/mesh_generator_thread.cpp.o" \
 "CMakeFiles/minetest.dir/metadata.cpp.o" \
-"CMakeFiles/minetest.dir/mg_biome.cpp.o" \
-"CMakeFiles/minetest.dir/mg_decoration.cpp.o" \
-"CMakeFiles/minetest.dir/mg_ore.cpp.o" \
-"CMakeFiles/minetest.dir/mg_schematic.cpp.o" \
-"CMakeFiles/minetest.dir/minimap.cpp.o" \
-"CMakeFiles/minetest.dir/mods.cpp.o" \
+"CMakeFiles/minetest.dir/modchannels.cpp.o" \
 "CMakeFiles/minetest.dir/nameidmapping.cpp.o" \
 "CMakeFiles/minetest.dir/nodedef.cpp.o" \
 "CMakeFiles/minetest.dir/nodemetadata.cpp.o" \
@@ -5652,7 +6710,6 @@ minetest_OBJECTS = \
 "CMakeFiles/minetest.dir/noise.cpp.o" \
 "CMakeFiles/minetest.dir/objdef.cpp.o" \
 "CMakeFiles/minetest.dir/object_properties.cpp.o" \
-"CMakeFiles/minetest.dir/particles.cpp.o" \
 "CMakeFiles/minetest.dir/pathfinder.cpp.o" \
 "CMakeFiles/minetest.dir/player.cpp.o" \
 "CMakeFiles/minetest.dir/porting.cpp.o" \
@@ -5669,40 +6726,118 @@ minetest_OBJECTS = \
 "CMakeFiles/minetest.dir/serverlist.cpp.o" \
 "CMakeFiles/minetest.dir/serverobject.cpp.o" \
 "CMakeFiles/minetest.dir/settings.cpp.o" \
-"CMakeFiles/minetest.dir/shader.cpp.o" \
-"CMakeFiles/minetest.dir/sky.cpp.o" \
-"CMakeFiles/minetest.dir/socket.cpp.o" \
-"CMakeFiles/minetest.dir/sound.cpp.o" \
-"CMakeFiles/minetest.dir/sound_openal.cpp.o" \
 "CMakeFiles/minetest.dir/staticobject.cpp.o" \
-"CMakeFiles/minetest.dir/subgame.cpp.o" \
 "CMakeFiles/minetest.dir/terminal_chat_console.cpp.o" \
 "CMakeFiles/minetest.dir/tileanimation.cpp.o" \
 "CMakeFiles/minetest.dir/tool.cpp.o" \
-"CMakeFiles/minetest.dir/treegen.cpp.o" \
+"CMakeFiles/minetest.dir/translation.cpp.o" \
 "CMakeFiles/minetest.dir/version.cpp.o" \
 "CMakeFiles/minetest.dir/voxel.cpp.o" \
-"CMakeFiles/minetest.dir/voxelalgorithms.cpp.o" \
-"CMakeFiles/minetest.dir/wieldmesh.cpp.o"
+"CMakeFiles/minetest.dir/voxelalgorithms.cpp.o"
 
 # External object files for target minetest
 minetest_EXTERNAL_OBJECTS =
 
+bin/minetest: src/CMakeFiles/minetest.dir/client/activeobjectmgr.cpp.o
+bin/minetest: src/CMakeFiles/minetest.dir/client/camera.cpp.o
+bin/minetest: src/CMakeFiles/minetest.dir/client/client.cpp.o
+bin/minetest: src/CMakeFiles/minetest.dir/client/clientenvironment.cpp.o
 bin/minetest: src/CMakeFiles/minetest.dir/client/clientlauncher.cpp.o
+bin/minetest: src/CMakeFiles/minetest.dir/client/clientmap.cpp.o
+bin/minetest: src/CMakeFiles/minetest.dir/client/clientmedia.cpp.o
+bin/minetest: src/CMakeFiles/minetest.dir/client/clientobject.cpp.o
+bin/minetest: src/CMakeFiles/minetest.dir/client/clouds.cpp.o
+bin/minetest: src/CMakeFiles/minetest.dir/client/content_cao.cpp.o
+bin/minetest: src/CMakeFiles/minetest.dir/client/content_cso.cpp.o
+bin/minetest: src/CMakeFiles/minetest.dir/client/content_mapblock.cpp.o
+bin/minetest: src/CMakeFiles/minetest.dir/client/filecache.cpp.o
+bin/minetest: src/CMakeFiles/minetest.dir/client/fontengine.cpp.o
+bin/minetest: src/CMakeFiles/minetest.dir/client/game.cpp.o
+bin/minetest: src/CMakeFiles/minetest.dir/client/gameui.cpp.o
+bin/minetest: src/CMakeFiles/minetest.dir/client/guiscalingfilter.cpp.o
+bin/minetest: src/CMakeFiles/minetest.dir/client/hud.cpp.o
+bin/minetest: src/CMakeFiles/minetest.dir/client/imagefilters.cpp.o
 bin/minetest: src/CMakeFiles/minetest.dir/client/inputhandler.cpp.o
 bin/minetest: src/CMakeFiles/minetest.dir/client/joystick_controller.cpp.o
+bin/minetest: src/CMakeFiles/minetest.dir/client/keycode.cpp.o
+bin/minetest: src/CMakeFiles/minetest.dir/client/localplayer.cpp.o
+bin/minetest: src/CMakeFiles/minetest.dir/client/mapblock_mesh.cpp.o
+bin/minetest: src/CMakeFiles/minetest.dir/client/mesh.cpp.o
+bin/minetest: src/CMakeFiles/minetest.dir/client/mesh_generator_thread.cpp.o
+bin/minetest: src/CMakeFiles/minetest.dir/client/meshgen/collector.cpp.o
+bin/minetest: src/CMakeFiles/minetest.dir/client/minimap.cpp.o
+bin/minetest: src/CMakeFiles/minetest.dir/client/particles.cpp.o
+bin/minetest: src/CMakeFiles/minetest.dir/client/render/anaglyph.cpp.o
+bin/minetest: src/CMakeFiles/minetest.dir/client/render/core.cpp.o
+bin/minetest: src/CMakeFiles/minetest.dir/client/render/factory.cpp.o
+bin/minetest: src/CMakeFiles/minetest.dir/client/render/interlaced.cpp.o
+bin/minetest: src/CMakeFiles/minetest.dir/client/render/pageflip.cpp.o
+bin/minetest: src/CMakeFiles/minetest.dir/client/render/plain.cpp.o
+bin/minetest: src/CMakeFiles/minetest.dir/client/render/sidebyside.cpp.o
+bin/minetest: src/CMakeFiles/minetest.dir/client/render/stereo.cpp.o
+bin/minetest: src/CMakeFiles/minetest.dir/client/renderingengine.cpp.o
+bin/minetest: src/CMakeFiles/minetest.dir/client/shader.cpp.o
+bin/minetest: src/CMakeFiles/minetest.dir/client/sky.cpp.o
+bin/minetest: src/CMakeFiles/minetest.dir/client/sound.cpp.o
+bin/minetest: src/CMakeFiles/minetest.dir/client/sound_openal.cpp.o
 bin/minetest: src/CMakeFiles/minetest.dir/client/tile.cpp.o
+bin/minetest: src/CMakeFiles/minetest.dir/client/wieldmesh.cpp.o
+bin/minetest: src/CMakeFiles/minetest.dir/content/content.cpp.o
+bin/minetest: src/CMakeFiles/minetest.dir/content/mods.cpp.o
+bin/minetest: src/CMakeFiles/minetest.dir/content/packages.cpp.o
+bin/minetest: src/CMakeFiles/minetest.dir/content/subgames.cpp.o
+bin/minetest: src/CMakeFiles/minetest.dir/database/database-dummy.cpp.o
+bin/minetest: src/CMakeFiles/minetest.dir/database/database-files.cpp.o
+bin/minetest: src/CMakeFiles/minetest.dir/database/database-leveldb.cpp.o
+bin/minetest: src/CMakeFiles/minetest.dir/database/database-postgresql.cpp.o
+bin/minetest: src/CMakeFiles/minetest.dir/database/database-redis.cpp.o
+bin/minetest: src/CMakeFiles/minetest.dir/database/database-sqlite3.cpp.o
+bin/minetest: src/CMakeFiles/minetest.dir/database/database.cpp.o
+bin/minetest: src/CMakeFiles/minetest.dir/gui/guiChatConsole.cpp.o
+bin/minetest: src/CMakeFiles/minetest.dir/gui/guiConfirmRegistration.cpp.o
+bin/minetest: src/CMakeFiles/minetest.dir/gui/guiEditBoxWithScrollbar.cpp.o
+bin/minetest: src/CMakeFiles/minetest.dir/gui/guiEngine.cpp.o
+bin/minetest: src/CMakeFiles/minetest.dir/gui/guiFormSpecMenu.cpp.o
+bin/minetest: src/CMakeFiles/minetest.dir/gui/guiKeyChangeMenu.cpp.o
+bin/minetest: src/CMakeFiles/minetest.dir/gui/guiPasswordChange.cpp.o
+bin/minetest: src/CMakeFiles/minetest.dir/gui/guiPathSelectMenu.cpp.o
+bin/minetest: src/CMakeFiles/minetest.dir/gui/guiTable.cpp.o
+bin/minetest: src/CMakeFiles/minetest.dir/gui/guiVolumeChange.cpp.o
+bin/minetest: src/CMakeFiles/minetest.dir/gui/intlGUIEditBox.cpp.o
+bin/minetest: src/CMakeFiles/minetest.dir/gui/modalMenu.cpp.o
+bin/minetest: src/CMakeFiles/minetest.dir/gui/profilergraph.cpp.o
+bin/minetest: src/CMakeFiles/minetest.dir/irrlicht_changes/CGUITTFont.cpp.o
 bin/minetest: src/CMakeFiles/minetest.dir/irrlicht_changes/static_text.cpp.o
+bin/minetest: src/CMakeFiles/minetest.dir/mapgen/cavegen.cpp.o
+bin/minetest: src/CMakeFiles/minetest.dir/mapgen/dungeongen.cpp.o
+bin/minetest: src/CMakeFiles/minetest.dir/mapgen/mapgen.cpp.o
+bin/minetest: src/CMakeFiles/minetest.dir/mapgen/mapgen_carpathian.cpp.o
+bin/minetest: src/CMakeFiles/minetest.dir/mapgen/mapgen_flat.cpp.o
+bin/minetest: src/CMakeFiles/minetest.dir/mapgen/mapgen_fractal.cpp.o
+bin/minetest: src/CMakeFiles/minetest.dir/mapgen/mapgen_singlenode.cpp.o
+bin/minetest: src/CMakeFiles/minetest.dir/mapgen/mapgen_v5.cpp.o
+bin/minetest: src/CMakeFiles/minetest.dir/mapgen/mapgen_v6.cpp.o
+bin/minetest: src/CMakeFiles/minetest.dir/mapgen/mapgen_v7.cpp.o
+bin/minetest: src/CMakeFiles/minetest.dir/mapgen/mapgen_valleys.cpp.o
+bin/minetest: src/CMakeFiles/minetest.dir/mapgen/mg_biome.cpp.o
+bin/minetest: src/CMakeFiles/minetest.dir/mapgen/mg_decoration.cpp.o
+bin/minetest: src/CMakeFiles/minetest.dir/mapgen/mg_ore.cpp.o
+bin/minetest: src/CMakeFiles/minetest.dir/mapgen/mg_schematic.cpp.o
+bin/minetest: src/CMakeFiles/minetest.dir/mapgen/treegen.cpp.o
+bin/minetest: src/CMakeFiles/minetest.dir/network/address.cpp.o
 bin/minetest: src/CMakeFiles/minetest.dir/network/clientopcodes.cpp.o
 bin/minetest: src/CMakeFiles/minetest.dir/network/clientpackethandler.cpp.o
 bin/minetest: src/CMakeFiles/minetest.dir/network/connection.cpp.o
+bin/minetest: src/CMakeFiles/minetest.dir/network/connectionthreads.cpp.o
 bin/minetest: src/CMakeFiles/minetest.dir/network/networkpacket.cpp.o
 bin/minetest: src/CMakeFiles/minetest.dir/network/serveropcodes.cpp.o
 bin/minetest: src/CMakeFiles/minetest.dir/network/serverpackethandler.cpp.o
+bin/minetest: src/CMakeFiles/minetest.dir/network/socket.cpp.o
 bin/minetest: src/CMakeFiles/minetest.dir/script/common/c_content.cpp.o
 bin/minetest: src/CMakeFiles/minetest.dir/script/common/c_converter.cpp.o
 bin/minetest: src/CMakeFiles/minetest.dir/script/common/c_internal.cpp.o
 bin/minetest: src/CMakeFiles/minetest.dir/script/common/c_types.cpp.o
+bin/minetest: src/CMakeFiles/minetest.dir/script/common/helper.cpp.o
 bin/minetest: src/CMakeFiles/minetest.dir/script/cpp_api/s_async.cpp.o
 bin/minetest: src/CMakeFiles/minetest.dir/script/cpp_api/s_base.cpp.o
 bin/minetest: src/CMakeFiles/minetest.dir/script/cpp_api/s_client.cpp.o
@@ -5711,12 +6846,14 @@ bin/minetest: src/CMakeFiles/minetest.dir/script/cpp_api/s_env.cpp.o
 bin/minetest: src/CMakeFiles/minetest.dir/script/cpp_api/s_inventory.cpp.o
 bin/minetest: src/CMakeFiles/minetest.dir/script/cpp_api/s_item.cpp.o
 bin/minetest: src/CMakeFiles/minetest.dir/script/cpp_api/s_mainmenu.cpp.o
+bin/minetest: src/CMakeFiles/minetest.dir/script/cpp_api/s_modchannels.cpp.o
 bin/minetest: src/CMakeFiles/minetest.dir/script/cpp_api/s_node.cpp.o
 bin/minetest: src/CMakeFiles/minetest.dir/script/cpp_api/s_nodemeta.cpp.o
 bin/minetest: src/CMakeFiles/minetest.dir/script/cpp_api/s_player.cpp.o
 bin/minetest: src/CMakeFiles/minetest.dir/script/cpp_api/s_security.cpp.o
 bin/minetest: src/CMakeFiles/minetest.dir/script/cpp_api/s_server.cpp.o
 bin/minetest: src/CMakeFiles/minetest.dir/script/lua_api/l_areastore.cpp.o
+bin/minetest: src/CMakeFiles/minetest.dir/script/lua_api/l_auth.cpp.o
 bin/minetest: src/CMakeFiles/minetest.dir/script/lua_api/l_base.cpp.o
 bin/minetest: src/CMakeFiles/minetest.dir/script/lua_api/l_camera.cpp.o
 bin/minetest: src/CMakeFiles/minetest.dir/script/lua_api/l_client.cpp.o
@@ -5731,11 +6868,14 @@ bin/minetest: src/CMakeFiles/minetest.dir/script/lua_api/l_mainmenu.cpp.o
 bin/minetest: src/CMakeFiles/minetest.dir/script/lua_api/l_mapgen.cpp.o
 bin/minetest: src/CMakeFiles/minetest.dir/script/lua_api/l_metadata.cpp.o
 bin/minetest: src/CMakeFiles/minetest.dir/script/lua_api/l_minimap.cpp.o
+bin/minetest: src/CMakeFiles/minetest.dir/script/lua_api/l_modchannels.cpp.o
 bin/minetest: src/CMakeFiles/minetest.dir/script/lua_api/l_nodemeta.cpp.o
 bin/minetest: src/CMakeFiles/minetest.dir/script/lua_api/l_nodetimer.cpp.o
 bin/minetest: src/CMakeFiles/minetest.dir/script/lua_api/l_noise.cpp.o
 bin/minetest: src/CMakeFiles/minetest.dir/script/lua_api/l_object.cpp.o
 bin/minetest: src/CMakeFiles/minetest.dir/script/lua_api/l_particles.cpp.o
+bin/minetest: src/CMakeFiles/minetest.dir/script/lua_api/l_particles_local.cpp.o
+bin/minetest: src/CMakeFiles/minetest.dir/script/lua_api/l_playermeta.cpp.o
 bin/minetest: src/CMakeFiles/minetest.dir/script/lua_api/l_rollback.cpp.o
 bin/minetest: src/CMakeFiles/minetest.dir/script/lua_api/l_server.cpp.o
 bin/minetest: src/CMakeFiles/minetest.dir/script/lua_api/l_settings.cpp.o
@@ -5746,20 +6886,28 @@ bin/minetest: src/CMakeFiles/minetest.dir/script/lua_api/l_vmanip.cpp.o
 bin/minetest: src/CMakeFiles/minetest.dir/script/scripting_client.cpp.o
 bin/minetest: src/CMakeFiles/minetest.dir/script/scripting_mainmenu.cpp.o
 bin/minetest: src/CMakeFiles/minetest.dir/script/scripting_server.cpp.o
+bin/minetest: src/CMakeFiles/minetest.dir/server/activeobjectmgr.cpp.o
+bin/minetest: src/CMakeFiles/minetest.dir/server/mods.cpp.o
 bin/minetest: src/CMakeFiles/minetest.dir/threading/event.cpp.o
-bin/minetest: src/CMakeFiles/minetest.dir/threading/mutex.cpp.o
 bin/minetest: src/CMakeFiles/minetest.dir/threading/semaphore.cpp.o
 bin/minetest: src/CMakeFiles/minetest.dir/threading/thread.cpp.o
 bin/minetest: src/CMakeFiles/minetest.dir/unittest/test.cpp.o
+bin/minetest: src/CMakeFiles/minetest.dir/unittest/test_activeobject.cpp.o
 bin/minetest: src/CMakeFiles/minetest.dir/unittest/test_areastore.cpp.o
+bin/minetest: src/CMakeFiles/minetest.dir/unittest/test_authdatabase.cpp.o
+bin/minetest: src/CMakeFiles/minetest.dir/unittest/test_ban.cpp.o
+bin/minetest: src/CMakeFiles/minetest.dir/unittest/test_clientactiveobjectmgr.cpp.o
 bin/minetest: src/CMakeFiles/minetest.dir/unittest/test_collision.cpp.o
 bin/minetest: src/CMakeFiles/minetest.dir/unittest/test_compression.cpp.o
 bin/minetest: src/CMakeFiles/minetest.dir/unittest/test_connection.cpp.o
+bin/minetest: src/CMakeFiles/minetest.dir/unittest/test_eventmanager.cpp.o
 bin/minetest: src/CMakeFiles/minetest.dir/unittest/test_filepath.cpp.o
+bin/minetest: src/CMakeFiles/minetest.dir/unittest/test_gameui.cpp.o
 bin/minetest: src/CMakeFiles/minetest.dir/unittest/test_inventory.cpp.o
 bin/minetest: src/CMakeFiles/minetest.dir/unittest/test_keycode.cpp.o
 bin/minetest: src/CMakeFiles/minetest.dir/unittest/test_map_settings_manager.cpp.o
 bin/minetest: src/CMakeFiles/minetest.dir/unittest/test_mapnode.cpp.o
+bin/minetest: src/CMakeFiles/minetest.dir/unittest/test_modchannels.cpp.o
 bin/minetest: src/CMakeFiles/minetest.dir/unittest/test_nodedef.cpp.o
 bin/minetest: src/CMakeFiles/minetest.dir/unittest/test_noderesolver.cpp.o
 bin/minetest: src/CMakeFiles/minetest.dir/unittest/test_noise.cpp.o
@@ -5769,17 +6917,22 @@ bin/minetest: src/CMakeFiles/minetest.dir/unittest/test_profiler.cpp.o
 bin/minetest: src/CMakeFiles/minetest.dir/unittest/test_random.cpp.o
 bin/minetest: src/CMakeFiles/minetest.dir/unittest/test_schematic.cpp.o
 bin/minetest: src/CMakeFiles/minetest.dir/unittest/test_serialization.cpp.o
+bin/minetest: src/CMakeFiles/minetest.dir/unittest/test_server_shutdown_state.cpp.o
+bin/minetest: src/CMakeFiles/minetest.dir/unittest/test_serveractiveobjectmgr.cpp.o
+bin/minetest: src/CMakeFiles/minetest.dir/unittest/test_servermodmanager.cpp.o
 bin/minetest: src/CMakeFiles/minetest.dir/unittest/test_settings.cpp.o
 bin/minetest: src/CMakeFiles/minetest.dir/unittest/test_socket.cpp.o
 bin/minetest: src/CMakeFiles/minetest.dir/unittest/test_threading.cpp.o
 bin/minetest: src/CMakeFiles/minetest.dir/unittest/test_utilities.cpp.o
 bin/minetest: src/CMakeFiles/minetest.dir/unittest/test_voxelalgorithms.cpp.o
+bin/minetest: src/CMakeFiles/minetest.dir/unittest/test_voxelarea.cpp.o
 bin/minetest: src/CMakeFiles/minetest.dir/unittest/test_voxelmanipulator.cpp.o
 bin/minetest: src/CMakeFiles/minetest.dir/util/areastore.cpp.o
 bin/minetest: src/CMakeFiles/minetest.dir/util/auth.cpp.o
 bin/minetest: src/CMakeFiles/minetest.dir/util/base64.cpp.o
 bin/minetest: src/CMakeFiles/minetest.dir/util/directiontables.cpp.o
 bin/minetest: src/CMakeFiles/minetest.dir/util/enriched_string.cpp.o
+bin/minetest: src/CMakeFiles/minetest.dir/util/ieee_float.cpp.o
 bin/minetest: src/CMakeFiles/minetest.dir/util/numeric.cpp.o
 bin/minetest: src/CMakeFiles/minetest.dir/util/pointedthing.cpp.o
 bin/minetest: src/CMakeFiles/minetest.dir/util/serialize.cpp.o
@@ -5789,91 +6942,38 @@ bin/minetest: src/CMakeFiles/minetest.dir/util/srp.cpp.o
 bin/minetest: src/CMakeFiles/minetest.dir/util/string.cpp.o
 bin/minetest: src/CMakeFiles/minetest.dir/util/timetaker.cpp.o
 bin/minetest: src/CMakeFiles/minetest.dir/ban.cpp.o
-bin/minetest: src/CMakeFiles/minetest.dir/camera.cpp.o
-bin/minetest: src/CMakeFiles/minetest.dir/cavegen.cpp.o
 bin/minetest: src/CMakeFiles/minetest.dir/chat.cpp.o
-bin/minetest: src/CMakeFiles/minetest.dir/client.cpp.o
-bin/minetest: src/CMakeFiles/minetest.dir/clientenvironment.cpp.o
 bin/minetest: src/CMakeFiles/minetest.dir/clientiface.cpp.o
-bin/minetest: src/CMakeFiles/minetest.dir/clientmap.cpp.o
-bin/minetest: src/CMakeFiles/minetest.dir/clientmedia.cpp.o
-bin/minetest: src/CMakeFiles/minetest.dir/clientobject.cpp.o
-bin/minetest: src/CMakeFiles/minetest.dir/clouds.cpp.o
 bin/minetest: src/CMakeFiles/minetest.dir/collision.cpp.o
-bin/minetest: src/CMakeFiles/minetest.dir/content_abm.cpp.o
-bin/minetest: src/CMakeFiles/minetest.dir/content_cao.cpp.o
-bin/minetest: src/CMakeFiles/minetest.dir/content_cso.cpp.o
-bin/minetest: src/CMakeFiles/minetest.dir/content_mapblock.cpp.o
 bin/minetest: src/CMakeFiles/minetest.dir/content_mapnode.cpp.o
 bin/minetest: src/CMakeFiles/minetest.dir/content_nodemeta.cpp.o
 bin/minetest: src/CMakeFiles/minetest.dir/content_sao.cpp.o
 bin/minetest: src/CMakeFiles/minetest.dir/convert_json.cpp.o
 bin/minetest: src/CMakeFiles/minetest.dir/craftdef.cpp.o
-bin/minetest: src/CMakeFiles/minetest.dir/database-dummy.cpp.o
-bin/minetest: src/CMakeFiles/minetest.dir/database-files.cpp.o
-bin/minetest: src/CMakeFiles/minetest.dir/database-leveldb.cpp.o
-bin/minetest: src/CMakeFiles/minetest.dir/database-postgresql.cpp.o
-bin/minetest: src/CMakeFiles/minetest.dir/database-redis.cpp.o
-bin/minetest: src/CMakeFiles/minetest.dir/database-sqlite3.cpp.o
-bin/minetest: src/CMakeFiles/minetest.dir/database.cpp.o
 bin/minetest: src/CMakeFiles/minetest.dir/debug.cpp.o
 bin/minetest: src/CMakeFiles/minetest.dir/defaultsettings.cpp.o
-bin/minetest: src/CMakeFiles/minetest.dir/drawscene.cpp.o
-bin/minetest: src/CMakeFiles/minetest.dir/dungeongen.cpp.o
 bin/minetest: src/CMakeFiles/minetest.dir/emerge.cpp.o
 bin/minetest: src/CMakeFiles/minetest.dir/environment.cpp.o
 bin/minetest: src/CMakeFiles/minetest.dir/face_position_cache.cpp.o
-bin/minetest: src/CMakeFiles/minetest.dir/filecache.cpp.o
 bin/minetest: src/CMakeFiles/minetest.dir/filesys.cpp.o
-bin/minetest: src/CMakeFiles/minetest.dir/fontengine.cpp.o
-bin/minetest: src/CMakeFiles/minetest.dir/game.cpp.o
 bin/minetest: src/CMakeFiles/minetest.dir/genericobject.cpp.o
 bin/minetest: src/CMakeFiles/minetest.dir/gettext.cpp.o
-bin/minetest: src/CMakeFiles/minetest.dir/guiChatConsole.cpp.o
-bin/minetest: src/CMakeFiles/minetest.dir/guiEngine.cpp.o
-bin/minetest: src/CMakeFiles/minetest.dir/guiFileSelectMenu.cpp.o
-bin/minetest: src/CMakeFiles/minetest.dir/guiFormSpecMenu.cpp.o
-bin/minetest: src/CMakeFiles/minetest.dir/guiKeyChangeMenu.cpp.o
-bin/minetest: src/CMakeFiles/minetest.dir/guiPasswordChange.cpp.o
-bin/minetest: src/CMakeFiles/minetest.dir/guiTable.cpp.o
-bin/minetest: src/CMakeFiles/minetest.dir/guiVolumeChange.cpp.o
-bin/minetest: src/CMakeFiles/minetest.dir/guiscalingfilter.cpp.o
 bin/minetest: src/CMakeFiles/minetest.dir/httpfetch.cpp.o
 bin/minetest: src/CMakeFiles/minetest.dir/hud.cpp.o
-bin/minetest: src/CMakeFiles/minetest.dir/imagefilters.cpp.o
-bin/minetest: src/CMakeFiles/minetest.dir/intlGUIEditBox.cpp.o
 bin/minetest: src/CMakeFiles/minetest.dir/inventory.cpp.o
 bin/minetest: src/CMakeFiles/minetest.dir/inventorymanager.cpp.o
 bin/minetest: src/CMakeFiles/minetest.dir/itemdef.cpp.o
 bin/minetest: src/CMakeFiles/minetest.dir/itemstackmetadata.cpp.o
-bin/minetest: src/CMakeFiles/minetest.dir/keycode.cpp.o
 bin/minetest: src/CMakeFiles/minetest.dir/light.cpp.o
-bin/minetest: src/CMakeFiles/minetest.dir/localplayer.cpp.o
 bin/minetest: src/CMakeFiles/minetest.dir/log.cpp.o
 bin/minetest: src/CMakeFiles/minetest.dir/main.cpp.o
 bin/minetest: src/CMakeFiles/minetest.dir/map.cpp.o
 bin/minetest: src/CMakeFiles/minetest.dir/map_settings_manager.cpp.o
 bin/minetest: src/CMakeFiles/minetest.dir/mapblock.cpp.o
-bin/minetest: src/CMakeFiles/minetest.dir/mapblock_mesh.cpp.o
-bin/minetest: src/CMakeFiles/minetest.dir/mapgen.cpp.o
-bin/minetest: src/CMakeFiles/minetest.dir/mapgen_flat.cpp.o
-bin/minetest: src/CMakeFiles/minetest.dir/mapgen_fractal.cpp.o
-bin/minetest: src/CMakeFiles/minetest.dir/mapgen_singlenode.cpp.o
-bin/minetest: src/CMakeFiles/minetest.dir/mapgen_v5.cpp.o
-bin/minetest: src/CMakeFiles/minetest.dir/mapgen_v6.cpp.o
-bin/minetest: src/CMakeFiles/minetest.dir/mapgen_v7.cpp.o
-bin/minetest: src/CMakeFiles/minetest.dir/mapgen_valleys.cpp.o
 bin/minetest: src/CMakeFiles/minetest.dir/mapnode.cpp.o
 bin/minetest: src/CMakeFiles/minetest.dir/mapsector.cpp.o
-bin/minetest: src/CMakeFiles/minetest.dir/mesh.cpp.o
-bin/minetest: src/CMakeFiles/minetest.dir/mesh_generator_thread.cpp.o
 bin/minetest: src/CMakeFiles/minetest.dir/metadata.cpp.o
-bin/minetest: src/CMakeFiles/minetest.dir/mg_biome.cpp.o
-bin/minetest: src/CMakeFiles/minetest.dir/mg_decoration.cpp.o
-bin/minetest: src/CMakeFiles/minetest.dir/mg_ore.cpp.o
-bin/minetest: src/CMakeFiles/minetest.dir/mg_schematic.cpp.o
-bin/minetest: src/CMakeFiles/minetest.dir/minimap.cpp.o
-bin/minetest: src/CMakeFiles/minetest.dir/mods.cpp.o
+bin/minetest: src/CMakeFiles/minetest.dir/modchannels.cpp.o
 bin/minetest: src/CMakeFiles/minetest.dir/nameidmapping.cpp.o
 bin/minetest: src/CMakeFiles/minetest.dir/nodedef.cpp.o
 bin/minetest: src/CMakeFiles/minetest.dir/nodemetadata.cpp.o
@@ -5881,7 +6981,6 @@ bin/minetest: src/CMakeFiles/minetest.dir/nodetimer.cpp.o
 bin/minetest: src/CMakeFiles/minetest.dir/noise.cpp.o
 bin/minetest: src/CMakeFiles/minetest.dir/objdef.cpp.o
 bin/minetest: src/CMakeFiles/minetest.dir/object_properties.cpp.o
-bin/minetest: src/CMakeFiles/minetest.dir/particles.cpp.o
 bin/minetest: src/CMakeFiles/minetest.dir/pathfinder.cpp.o
 bin/minetest: src/CMakeFiles/minetest.dir/player.cpp.o
 bin/minetest: src/CMakeFiles/minetest.dir/porting.cpp.o
@@ -5898,21 +6997,14 @@ bin/minetest: src/CMakeFiles/minetest.dir/serverenvironment.cpp.o
 bin/minetest: src/CMakeFiles/minetest.dir/serverlist.cpp.o
 bin/minetest: src/CMakeFiles/minetest.dir/serverobject.cpp.o
 bin/minetest: src/CMakeFiles/minetest.dir/settings.cpp.o
-bin/minetest: src/CMakeFiles/minetest.dir/shader.cpp.o
-bin/minetest: src/CMakeFiles/minetest.dir/sky.cpp.o
-bin/minetest: src/CMakeFiles/minetest.dir/socket.cpp.o
-bin/minetest: src/CMakeFiles/minetest.dir/sound.cpp.o
-bin/minetest: src/CMakeFiles/minetest.dir/sound_openal.cpp.o
 bin/minetest: src/CMakeFiles/minetest.dir/staticobject.cpp.o
-bin/minetest: src/CMakeFiles/minetest.dir/subgame.cpp.o
 bin/minetest: src/CMakeFiles/minetest.dir/terminal_chat_console.cpp.o
 bin/minetest: src/CMakeFiles/minetest.dir/tileanimation.cpp.o
 bin/minetest: src/CMakeFiles/minetest.dir/tool.cpp.o
-bin/minetest: src/CMakeFiles/minetest.dir/treegen.cpp.o
+bin/minetest: src/CMakeFiles/minetest.dir/translation.cpp.o
 bin/minetest: src/CMakeFiles/minetest.dir/version.cpp.o
 bin/minetest: src/CMakeFiles/minetest.dir/voxel.cpp.o
 bin/minetest: src/CMakeFiles/minetest.dir/voxelalgorithms.cpp.o
-bin/minetest: src/CMakeFiles/minetest.dir/wieldmesh.cpp.o
 bin/minetest: src/CMakeFiles/minetest.dir/build.make
 bin/minetest: /usr/lib/x86_64-linux-gnu/libz.so
 bin/minetest: /usr/lib/x86_64-linux-gnu/libIrrlicht.so
@@ -5937,13 +7029,30 @@ bin/minetest: lib/jsoncpp/libjsoncpp.a
 bin/minetest: /usr/lib/x86_64-linux-gnu/libXxf86vm.so
 bin/minetest: /usr/lib/x86_64-linux-gnu/libcurl.so
 bin/minetest: /usr/lib/x86_64-linux-gnu/libfreetype.so
-bin/minetest: src/cguittfont/libcguittfont.a
 bin/minetest: /usr/lib/x86_64-linux-gnu/libleveldb.so
 bin/minetest: /usr/lib/x86_64-linux-gnu/libIrrlicht.so
-bin/minetest: /usr/lib/x86_64-linux-gnu/libz.so
+bin/minetest: /usr/lib/x86_64-linux-gnu/libGLU.so
+bin/minetest: /usr/lib/x86_64-linux-gnu/libGL.so
+bin/minetest: /usr/lib/x86_64-linux-gnu/libjpeg.so
+bin/minetest: /usr/lib/x86_64-linux-gnu/libbz2.so
+bin/minetest: /usr/lib/x86_64-linux-gnu/libpng.so
+bin/minetest: /usr/lib/x86_64-linux-gnu/libSM.so
+bin/minetest: /usr/lib/x86_64-linux-gnu/libICE.so
+bin/minetest: /usr/lib/x86_64-linux-gnu/libX11.so
+bin/minetest: /usr/lib/x86_64-linux-gnu/libXext.so
+bin/minetest: /usr/lib/x86_64-linux-gnu/libopenal.so
+bin/minetest: /usr/lib/x86_64-linux-gnu/libvorbisfile.so
+bin/minetest: /usr/lib/x86_64-linux-gnu/libvorbis.so
+bin/minetest: /usr/lib/x86_64-linux-gnu/libogg.so
+bin/minetest: /usr/lib/x86_64-linux-gnu/libsqlite3.so
+bin/minetest: /usr/lib/x86_64-linux-gnu/libluajit-5.1.so
+bin/minetest: /usr/lib/x86_64-linux-gnu/libgmp.so
+bin/minetest: /usr/lib/x86_64-linux-gnu/libXxf86vm.so
+bin/minetest: /usr/lib/x86_64-linux-gnu/libcurl.so
 bin/minetest: /usr/lib/x86_64-linux-gnu/libfreetype.so
+bin/minetest: /usr/lib/x86_64-linux-gnu/libleveldb.so
 bin/minetest: src/CMakeFiles/minetest.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_226) "Linking CXX executable ../bin/minetest"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_268) "Linking CXX executable ../bin/minetest"
 	cd /opt/minetest/src && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/minetest.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -5951,21 +7060,106 @@ src/CMakeFiles/minetest.dir/build: bin/minetest
 
 .PHONY : src/CMakeFiles/minetest.dir/build
 
+src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/client/activeobjectmgr.cpp.o.requires
+src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/client/camera.cpp.o.requires
+src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/client/client.cpp.o.requires
+src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/client/clientenvironment.cpp.o.requires
 src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/client/clientlauncher.cpp.o.requires
+src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/client/clientmap.cpp.o.requires
+src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/client/clientmedia.cpp.o.requires
+src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/client/clientobject.cpp.o.requires
+src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/client/clouds.cpp.o.requires
+src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/client/content_cao.cpp.o.requires
+src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/client/content_cso.cpp.o.requires
+src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/client/content_mapblock.cpp.o.requires
+src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/client/filecache.cpp.o.requires
+src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/client/fontengine.cpp.o.requires
+src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/client/game.cpp.o.requires
+src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/client/gameui.cpp.o.requires
+src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/client/guiscalingfilter.cpp.o.requires
+src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/client/hud.cpp.o.requires
+src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/client/imagefilters.cpp.o.requires
 src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/client/inputhandler.cpp.o.requires
 src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/client/joystick_controller.cpp.o.requires
+src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/client/keycode.cpp.o.requires
+src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/client/localplayer.cpp.o.requires
+src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/client/mapblock_mesh.cpp.o.requires
+src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/client/mesh.cpp.o.requires
+src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/client/mesh_generator_thread.cpp.o.requires
+src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/client/meshgen/collector.cpp.o.requires
+src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/client/minimap.cpp.o.requires
+src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/client/particles.cpp.o.requires
+src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/client/render/anaglyph.cpp.o.requires
+src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/client/render/core.cpp.o.requires
+src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/client/render/factory.cpp.o.requires
+src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/client/render/interlaced.cpp.o.requires
+src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/client/render/pageflip.cpp.o.requires
+src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/client/render/plain.cpp.o.requires
+src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/client/render/sidebyside.cpp.o.requires
+src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/client/render/stereo.cpp.o.requires
+src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/client/renderingengine.cpp.o.requires
+src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/client/shader.cpp.o.requires
+src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/client/sky.cpp.o.requires
+src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/client/sound.cpp.o.requires
+src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/client/sound_openal.cpp.o.requires
 src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/client/tile.cpp.o.requires
+src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/client/wieldmesh.cpp.o.requires
+src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/content/content.cpp.o.requires
+src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/content/mods.cpp.o.requires
+src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/content/packages.cpp.o.requires
+src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/content/subgames.cpp.o.requires
+src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/database/database-dummy.cpp.o.requires
+src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/database/database-files.cpp.o.requires
+src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/database/database-leveldb.cpp.o.requires
+src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/database/database-postgresql.cpp.o.requires
+src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/database/database-redis.cpp.o.requires
+src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/database/database-sqlite3.cpp.o.requires
+src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/database/database.cpp.o.requires
+src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/gui/guiChatConsole.cpp.o.requires
+src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/gui/guiConfirmRegistration.cpp.o.requires
+src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/gui/guiEditBoxWithScrollbar.cpp.o.requires
+src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/gui/guiEngine.cpp.o.requires
+src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/gui/guiFormSpecMenu.cpp.o.requires
+src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/gui/guiKeyChangeMenu.cpp.o.requires
+src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/gui/guiPasswordChange.cpp.o.requires
+src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/gui/guiPathSelectMenu.cpp.o.requires
+src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/gui/guiTable.cpp.o.requires
+src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/gui/guiVolumeChange.cpp.o.requires
+src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/gui/intlGUIEditBox.cpp.o.requires
+src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/gui/modalMenu.cpp.o.requires
+src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/gui/profilergraph.cpp.o.requires
+src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/irrlicht_changes/CGUITTFont.cpp.o.requires
 src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/irrlicht_changes/static_text.cpp.o.requires
+src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/mapgen/cavegen.cpp.o.requires
+src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/mapgen/dungeongen.cpp.o.requires
+src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/mapgen/mapgen.cpp.o.requires
+src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/mapgen/mapgen_carpathian.cpp.o.requires
+src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/mapgen/mapgen_flat.cpp.o.requires
+src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/mapgen/mapgen_fractal.cpp.o.requires
+src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/mapgen/mapgen_singlenode.cpp.o.requires
+src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/mapgen/mapgen_v5.cpp.o.requires
+src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/mapgen/mapgen_v6.cpp.o.requires
+src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/mapgen/mapgen_v7.cpp.o.requires
+src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/mapgen/mapgen_valleys.cpp.o.requires
+src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/mapgen/mg_biome.cpp.o.requires
+src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/mapgen/mg_decoration.cpp.o.requires
+src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/mapgen/mg_ore.cpp.o.requires
+src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/mapgen/mg_schematic.cpp.o.requires
+src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/mapgen/treegen.cpp.o.requires
+src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/network/address.cpp.o.requires
 src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/network/clientopcodes.cpp.o.requires
 src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/network/clientpackethandler.cpp.o.requires
 src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/network/connection.cpp.o.requires
+src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/network/connectionthreads.cpp.o.requires
 src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/network/networkpacket.cpp.o.requires
 src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/network/serveropcodes.cpp.o.requires
 src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/network/serverpackethandler.cpp.o.requires
+src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/network/socket.cpp.o.requires
 src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/script/common/c_content.cpp.o.requires
 src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/script/common/c_converter.cpp.o.requires
 src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/script/common/c_internal.cpp.o.requires
 src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/script/common/c_types.cpp.o.requires
+src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/script/common/helper.cpp.o.requires
 src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/script/cpp_api/s_async.cpp.o.requires
 src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/script/cpp_api/s_base.cpp.o.requires
 src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/script/cpp_api/s_client.cpp.o.requires
@@ -5974,12 +7168,14 @@ src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/script/cpp_api
 src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/script/cpp_api/s_inventory.cpp.o.requires
 src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/script/cpp_api/s_item.cpp.o.requires
 src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/script/cpp_api/s_mainmenu.cpp.o.requires
+src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/script/cpp_api/s_modchannels.cpp.o.requires
 src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/script/cpp_api/s_node.cpp.o.requires
 src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/script/cpp_api/s_nodemeta.cpp.o.requires
 src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/script/cpp_api/s_player.cpp.o.requires
 src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/script/cpp_api/s_security.cpp.o.requires
 src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/script/cpp_api/s_server.cpp.o.requires
 src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/script/lua_api/l_areastore.cpp.o.requires
+src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/script/lua_api/l_auth.cpp.o.requires
 src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/script/lua_api/l_base.cpp.o.requires
 src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/script/lua_api/l_camera.cpp.o.requires
 src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/script/lua_api/l_client.cpp.o.requires
@@ -5994,11 +7190,14 @@ src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/script/lua_api
 src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/script/lua_api/l_mapgen.cpp.o.requires
 src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/script/lua_api/l_metadata.cpp.o.requires
 src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/script/lua_api/l_minimap.cpp.o.requires
+src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/script/lua_api/l_modchannels.cpp.o.requires
 src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/script/lua_api/l_nodemeta.cpp.o.requires
 src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/script/lua_api/l_nodetimer.cpp.o.requires
 src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/script/lua_api/l_noise.cpp.o.requires
 src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/script/lua_api/l_object.cpp.o.requires
 src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/script/lua_api/l_particles.cpp.o.requires
+src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/script/lua_api/l_particles_local.cpp.o.requires
+src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/script/lua_api/l_playermeta.cpp.o.requires
 src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/script/lua_api/l_rollback.cpp.o.requires
 src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/script/lua_api/l_server.cpp.o.requires
 src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/script/lua_api/l_settings.cpp.o.requires
@@ -6009,20 +7208,28 @@ src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/script/lua_api
 src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/script/scripting_client.cpp.o.requires
 src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/script/scripting_mainmenu.cpp.o.requires
 src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/script/scripting_server.cpp.o.requires
+src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/server/activeobjectmgr.cpp.o.requires
+src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/server/mods.cpp.o.requires
 src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/threading/event.cpp.o.requires
-src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/threading/mutex.cpp.o.requires
 src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/threading/semaphore.cpp.o.requires
 src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/threading/thread.cpp.o.requires
 src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/unittest/test.cpp.o.requires
+src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/unittest/test_activeobject.cpp.o.requires
 src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/unittest/test_areastore.cpp.o.requires
+src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/unittest/test_authdatabase.cpp.o.requires
+src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/unittest/test_ban.cpp.o.requires
+src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/unittest/test_clientactiveobjectmgr.cpp.o.requires
 src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/unittest/test_collision.cpp.o.requires
 src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/unittest/test_compression.cpp.o.requires
 src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/unittest/test_connection.cpp.o.requires
+src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/unittest/test_eventmanager.cpp.o.requires
 src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/unittest/test_filepath.cpp.o.requires
+src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/unittest/test_gameui.cpp.o.requires
 src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/unittest/test_inventory.cpp.o.requires
 src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/unittest/test_keycode.cpp.o.requires
 src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/unittest/test_map_settings_manager.cpp.o.requires
 src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/unittest/test_mapnode.cpp.o.requires
+src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/unittest/test_modchannels.cpp.o.requires
 src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/unittest/test_nodedef.cpp.o.requires
 src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/unittest/test_noderesolver.cpp.o.requires
 src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/unittest/test_noise.cpp.o.requires
@@ -6032,17 +7239,22 @@ src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/unittest/test_
 src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/unittest/test_random.cpp.o.requires
 src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/unittest/test_schematic.cpp.o.requires
 src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/unittest/test_serialization.cpp.o.requires
+src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/unittest/test_server_shutdown_state.cpp.o.requires
+src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/unittest/test_serveractiveobjectmgr.cpp.o.requires
+src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/unittest/test_servermodmanager.cpp.o.requires
 src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/unittest/test_settings.cpp.o.requires
 src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/unittest/test_socket.cpp.o.requires
 src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/unittest/test_threading.cpp.o.requires
 src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/unittest/test_utilities.cpp.o.requires
 src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/unittest/test_voxelalgorithms.cpp.o.requires
+src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/unittest/test_voxelarea.cpp.o.requires
 src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/unittest/test_voxelmanipulator.cpp.o.requires
 src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/util/areastore.cpp.o.requires
 src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/util/auth.cpp.o.requires
 src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/util/base64.cpp.o.requires
 src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/util/directiontables.cpp.o.requires
 src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/util/enriched_string.cpp.o.requires
+src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/util/ieee_float.cpp.o.requires
 src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/util/numeric.cpp.o.requires
 src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/util/pointedthing.cpp.o.requires
 src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/util/serialize.cpp.o.requires
@@ -6052,91 +7264,38 @@ src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/util/srp.cpp.o
 src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/util/string.cpp.o.requires
 src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/util/timetaker.cpp.o.requires
 src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/ban.cpp.o.requires
-src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/camera.cpp.o.requires
-src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/cavegen.cpp.o.requires
 src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/chat.cpp.o.requires
-src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/client.cpp.o.requires
-src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/clientenvironment.cpp.o.requires
 src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/clientiface.cpp.o.requires
-src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/clientmap.cpp.o.requires
-src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/clientmedia.cpp.o.requires
-src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/clientobject.cpp.o.requires
-src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/clouds.cpp.o.requires
 src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/collision.cpp.o.requires
-src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/content_abm.cpp.o.requires
-src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/content_cao.cpp.o.requires
-src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/content_cso.cpp.o.requires
-src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/content_mapblock.cpp.o.requires
 src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/content_mapnode.cpp.o.requires
 src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/content_nodemeta.cpp.o.requires
 src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/content_sao.cpp.o.requires
 src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/convert_json.cpp.o.requires
 src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/craftdef.cpp.o.requires
-src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/database-dummy.cpp.o.requires
-src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/database-files.cpp.o.requires
-src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/database-leveldb.cpp.o.requires
-src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/database-postgresql.cpp.o.requires
-src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/database-redis.cpp.o.requires
-src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/database-sqlite3.cpp.o.requires
-src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/database.cpp.o.requires
 src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/debug.cpp.o.requires
 src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/defaultsettings.cpp.o.requires
-src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/drawscene.cpp.o.requires
-src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/dungeongen.cpp.o.requires
 src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/emerge.cpp.o.requires
 src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/environment.cpp.o.requires
 src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/face_position_cache.cpp.o.requires
-src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/filecache.cpp.o.requires
 src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/filesys.cpp.o.requires
-src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/fontengine.cpp.o.requires
-src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/game.cpp.o.requires
 src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/genericobject.cpp.o.requires
 src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/gettext.cpp.o.requires
-src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/guiChatConsole.cpp.o.requires
-src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/guiEngine.cpp.o.requires
-src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/guiFileSelectMenu.cpp.o.requires
-src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/guiFormSpecMenu.cpp.o.requires
-src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/guiKeyChangeMenu.cpp.o.requires
-src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/guiPasswordChange.cpp.o.requires
-src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/guiTable.cpp.o.requires
-src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/guiVolumeChange.cpp.o.requires
-src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/guiscalingfilter.cpp.o.requires
 src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/httpfetch.cpp.o.requires
 src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/hud.cpp.o.requires
-src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/imagefilters.cpp.o.requires
-src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/intlGUIEditBox.cpp.o.requires
 src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/inventory.cpp.o.requires
 src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/inventorymanager.cpp.o.requires
 src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/itemdef.cpp.o.requires
 src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/itemstackmetadata.cpp.o.requires
-src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/keycode.cpp.o.requires
 src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/light.cpp.o.requires
-src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/localplayer.cpp.o.requires
 src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/log.cpp.o.requires
 src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/main.cpp.o.requires
 src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/map.cpp.o.requires
 src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/map_settings_manager.cpp.o.requires
 src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/mapblock.cpp.o.requires
-src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/mapblock_mesh.cpp.o.requires
-src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/mapgen.cpp.o.requires
-src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/mapgen_flat.cpp.o.requires
-src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/mapgen_fractal.cpp.o.requires
-src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/mapgen_singlenode.cpp.o.requires
-src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/mapgen_v5.cpp.o.requires
-src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/mapgen_v6.cpp.o.requires
-src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/mapgen_v7.cpp.o.requires
-src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/mapgen_valleys.cpp.o.requires
 src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/mapnode.cpp.o.requires
 src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/mapsector.cpp.o.requires
-src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/mesh.cpp.o.requires
-src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/mesh_generator_thread.cpp.o.requires
 src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/metadata.cpp.o.requires
-src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/mg_biome.cpp.o.requires
-src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/mg_decoration.cpp.o.requires
-src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/mg_ore.cpp.o.requires
-src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/mg_schematic.cpp.o.requires
-src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/minimap.cpp.o.requires
-src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/mods.cpp.o.requires
+src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/modchannels.cpp.o.requires
 src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/nameidmapping.cpp.o.requires
 src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/nodedef.cpp.o.requires
 src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/nodemetadata.cpp.o.requires
@@ -6144,7 +7303,6 @@ src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/nodetimer.cpp.
 src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/noise.cpp.o.requires
 src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/objdef.cpp.o.requires
 src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/object_properties.cpp.o.requires
-src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/particles.cpp.o.requires
 src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/pathfinder.cpp.o.requires
 src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/player.cpp.o.requires
 src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/porting.cpp.o.requires
@@ -6161,21 +7319,14 @@ src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/serverenvironm
 src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/serverlist.cpp.o.requires
 src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/serverobject.cpp.o.requires
 src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/settings.cpp.o.requires
-src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/shader.cpp.o.requires
-src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/sky.cpp.o.requires
-src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/socket.cpp.o.requires
-src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/sound.cpp.o.requires
-src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/sound_openal.cpp.o.requires
 src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/staticobject.cpp.o.requires
-src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/subgame.cpp.o.requires
 src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/terminal_chat_console.cpp.o.requires
 src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/tileanimation.cpp.o.requires
 src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/tool.cpp.o.requires
-src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/treegen.cpp.o.requires
+src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/translation.cpp.o.requires
 src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/version.cpp.o.requires
 src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/voxel.cpp.o.requires
 src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/voxelalgorithms.cpp.o.requires
-src/CMakeFiles/minetest.dir/requires: src/CMakeFiles/minetest.dir/wieldmesh.cpp.o.requires
 
 .PHONY : src/CMakeFiles/minetest.dir/requires
 

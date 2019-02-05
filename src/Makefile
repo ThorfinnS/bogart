@@ -56,28 +56,6 @@ CMAKE_BINARY_DIR = /opt/minetest
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target package
-package: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool..."
-	cd /opt/minetest && /usr/bin/cpack --config ./CPackConfig.cmake
-.PHONY : package
-
-# Special rule for the target package
-package/fast: package
-
-.PHONY : package/fast
-
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
-
 # Special rule for the target install/strip
 install/strip: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
@@ -89,15 +67,16 @@ install/strip/fast: install/strip
 
 .PHONY : install/strip/fast
 
-# Special rule for the target list_install_components
-list_install_components:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
-.PHONY : list_install_components
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
 
-# Special rule for the target list_install_components
-list_install_components/fast: list_install_components
+# Special rule for the target install/local
+install/local/fast: install/local
 
-.PHONY : list_install_components/fast
+.PHONY : install/local/fast
 
 # Special rule for the target install
 install: preinstall
@@ -110,6 +89,38 @@ install/fast: preinstall/fast
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
 	/usr/bin/cmake -P cmake_install.cmake
 .PHONY : install/fast
+
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Docs\" \"SUBGAME_MINETEST_GAME\" \"SUBGAME_MINIMAL\" \"Unspecified\""
+.PHONY : list_install_components
+
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
+
+.PHONY : list_install_components/fast
+
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
+
+# Special rule for the target package
+package: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool..."
+	cd /opt/minetest && /usr/bin/cpack --config ./CPackConfig.cmake
+.PHONY : package
+
+# Special rule for the target package
+package/fast: package
+
+.PHONY : package/fast
 
 # Special rule for the target package_source
 package_source:
@@ -132,17 +143,6 @@ edit_cache:
 edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
-
-# Special rule for the target install/local
-install/local: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local
-
-# Special rule for the target install/local
-install/local/fast: install/local
-
-.PHONY : install/local/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -177,6 +177,21 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
+src/CMakeFiles/minetest.dir/rule:
+	cd /opt/minetest && $(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/minetest.dir/rule
+.PHONY : src/CMakeFiles/minetest.dir/rule
+
+# Convenience name for target.
+minetest: src/CMakeFiles/minetest.dir/rule
+
+.PHONY : minetest
+
+# fast build rule for target.
+minetest/fast:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/build
+.PHONY : minetest/fast
+
+# Convenience name for target.
 src/CMakeFiles/translations.dir/rule:
 	cd /opt/minetest && $(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/translations.dir/rule
 .PHONY : src/CMakeFiles/translations.dir/rule
@@ -206,21 +221,6 @@ GenerateVersion/fast:
 	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/GenerateVersion.dir/build.make src/CMakeFiles/GenerateVersion.dir/build
 .PHONY : GenerateVersion/fast
 
-# Convenience name for target.
-src/CMakeFiles/minetest.dir/rule:
-	cd /opt/minetest && $(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/minetest.dir/rule
-.PHONY : src/CMakeFiles/minetest.dir/rule
-
-# Convenience name for target.
-minetest: src/CMakeFiles/minetest.dir/rule
-
-.PHONY : minetest
-
-# fast build rule for target.
-minetest/fast:
-	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/build
-.PHONY : minetest/fast
-
 ban.o: ban.cpp.o
 
 .PHONY : ban.o
@@ -247,60 +247,6 @@ ban.s: ban.cpp.s
 ban.cpp.s:
 	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/ban.cpp.s
 .PHONY : ban.cpp.s
-
-camera.o: camera.cpp.o
-
-.PHONY : camera.o
-
-# target to build an object file
-camera.cpp.o:
-	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/camera.cpp.o
-.PHONY : camera.cpp.o
-
-camera.i: camera.cpp.i
-
-.PHONY : camera.i
-
-# target to preprocess a source file
-camera.cpp.i:
-	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/camera.cpp.i
-.PHONY : camera.cpp.i
-
-camera.s: camera.cpp.s
-
-.PHONY : camera.s
-
-# target to generate assembly for a file
-camera.cpp.s:
-	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/camera.cpp.s
-.PHONY : camera.cpp.s
-
-cavegen.o: cavegen.cpp.o
-
-.PHONY : cavegen.o
-
-# target to build an object file
-cavegen.cpp.o:
-	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/cavegen.cpp.o
-.PHONY : cavegen.cpp.o
-
-cavegen.i: cavegen.cpp.i
-
-.PHONY : cavegen.i
-
-# target to preprocess a source file
-cavegen.cpp.i:
-	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/cavegen.cpp.i
-.PHONY : cavegen.cpp.i
-
-cavegen.s: cavegen.cpp.s
-
-.PHONY : cavegen.s
-
-# target to generate assembly for a file
-cavegen.cpp.s:
-	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/cavegen.cpp.s
-.PHONY : cavegen.cpp.s
 
 chat.o: chat.cpp.o
 
@@ -329,32 +275,113 @@ chat.cpp.s:
 	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/chat.cpp.s
 .PHONY : chat.cpp.s
 
-client.o: client.cpp.o
+client/activeobjectmgr.o: client/activeobjectmgr.cpp.o
 
-.PHONY : client.o
+.PHONY : client/activeobjectmgr.o
 
 # target to build an object file
-client.cpp.o:
-	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/client.cpp.o
-.PHONY : client.cpp.o
+client/activeobjectmgr.cpp.o:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/client/activeobjectmgr.cpp.o
+.PHONY : client/activeobjectmgr.cpp.o
 
-client.i: client.cpp.i
+client/activeobjectmgr.i: client/activeobjectmgr.cpp.i
 
-.PHONY : client.i
+.PHONY : client/activeobjectmgr.i
 
 # target to preprocess a source file
-client.cpp.i:
-	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/client.cpp.i
-.PHONY : client.cpp.i
+client/activeobjectmgr.cpp.i:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/client/activeobjectmgr.cpp.i
+.PHONY : client/activeobjectmgr.cpp.i
 
-client.s: client.cpp.s
+client/activeobjectmgr.s: client/activeobjectmgr.cpp.s
 
-.PHONY : client.s
+.PHONY : client/activeobjectmgr.s
 
 # target to generate assembly for a file
-client.cpp.s:
-	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/client.cpp.s
-.PHONY : client.cpp.s
+client/activeobjectmgr.cpp.s:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/client/activeobjectmgr.cpp.s
+.PHONY : client/activeobjectmgr.cpp.s
+
+client/camera.o: client/camera.cpp.o
+
+.PHONY : client/camera.o
+
+# target to build an object file
+client/camera.cpp.o:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/client/camera.cpp.o
+.PHONY : client/camera.cpp.o
+
+client/camera.i: client/camera.cpp.i
+
+.PHONY : client/camera.i
+
+# target to preprocess a source file
+client/camera.cpp.i:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/client/camera.cpp.i
+.PHONY : client/camera.cpp.i
+
+client/camera.s: client/camera.cpp.s
+
+.PHONY : client/camera.s
+
+# target to generate assembly for a file
+client/camera.cpp.s:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/client/camera.cpp.s
+.PHONY : client/camera.cpp.s
+
+client/client.o: client/client.cpp.o
+
+.PHONY : client/client.o
+
+# target to build an object file
+client/client.cpp.o:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/client/client.cpp.o
+.PHONY : client/client.cpp.o
+
+client/client.i: client/client.cpp.i
+
+.PHONY : client/client.i
+
+# target to preprocess a source file
+client/client.cpp.i:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/client/client.cpp.i
+.PHONY : client/client.cpp.i
+
+client/client.s: client/client.cpp.s
+
+.PHONY : client/client.s
+
+# target to generate assembly for a file
+client/client.cpp.s:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/client/client.cpp.s
+.PHONY : client/client.cpp.s
+
+client/clientenvironment.o: client/clientenvironment.cpp.o
+
+.PHONY : client/clientenvironment.o
+
+# target to build an object file
+client/clientenvironment.cpp.o:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/client/clientenvironment.cpp.o
+.PHONY : client/clientenvironment.cpp.o
+
+client/clientenvironment.i: client/clientenvironment.cpp.i
+
+.PHONY : client/clientenvironment.i
+
+# target to preprocess a source file
+client/clientenvironment.cpp.i:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/client/clientenvironment.cpp.i
+.PHONY : client/clientenvironment.cpp.i
+
+client/clientenvironment.s: client/clientenvironment.cpp.s
+
+.PHONY : client/clientenvironment.s
+
+# target to generate assembly for a file
+client/clientenvironment.cpp.s:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/client/clientenvironment.cpp.s
+.PHONY : client/clientenvironment.cpp.s
 
 client/clientlauncher.o: client/clientlauncher.cpp.o
 
@@ -382,6 +409,384 @@ client/clientlauncher.s: client/clientlauncher.cpp.s
 client/clientlauncher.cpp.s:
 	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/client/clientlauncher.cpp.s
 .PHONY : client/clientlauncher.cpp.s
+
+client/clientmap.o: client/clientmap.cpp.o
+
+.PHONY : client/clientmap.o
+
+# target to build an object file
+client/clientmap.cpp.o:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/client/clientmap.cpp.o
+.PHONY : client/clientmap.cpp.o
+
+client/clientmap.i: client/clientmap.cpp.i
+
+.PHONY : client/clientmap.i
+
+# target to preprocess a source file
+client/clientmap.cpp.i:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/client/clientmap.cpp.i
+.PHONY : client/clientmap.cpp.i
+
+client/clientmap.s: client/clientmap.cpp.s
+
+.PHONY : client/clientmap.s
+
+# target to generate assembly for a file
+client/clientmap.cpp.s:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/client/clientmap.cpp.s
+.PHONY : client/clientmap.cpp.s
+
+client/clientmedia.o: client/clientmedia.cpp.o
+
+.PHONY : client/clientmedia.o
+
+# target to build an object file
+client/clientmedia.cpp.o:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/client/clientmedia.cpp.o
+.PHONY : client/clientmedia.cpp.o
+
+client/clientmedia.i: client/clientmedia.cpp.i
+
+.PHONY : client/clientmedia.i
+
+# target to preprocess a source file
+client/clientmedia.cpp.i:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/client/clientmedia.cpp.i
+.PHONY : client/clientmedia.cpp.i
+
+client/clientmedia.s: client/clientmedia.cpp.s
+
+.PHONY : client/clientmedia.s
+
+# target to generate assembly for a file
+client/clientmedia.cpp.s:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/client/clientmedia.cpp.s
+.PHONY : client/clientmedia.cpp.s
+
+client/clientobject.o: client/clientobject.cpp.o
+
+.PHONY : client/clientobject.o
+
+# target to build an object file
+client/clientobject.cpp.o:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/client/clientobject.cpp.o
+.PHONY : client/clientobject.cpp.o
+
+client/clientobject.i: client/clientobject.cpp.i
+
+.PHONY : client/clientobject.i
+
+# target to preprocess a source file
+client/clientobject.cpp.i:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/client/clientobject.cpp.i
+.PHONY : client/clientobject.cpp.i
+
+client/clientobject.s: client/clientobject.cpp.s
+
+.PHONY : client/clientobject.s
+
+# target to generate assembly for a file
+client/clientobject.cpp.s:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/client/clientobject.cpp.s
+.PHONY : client/clientobject.cpp.s
+
+client/clouds.o: client/clouds.cpp.o
+
+.PHONY : client/clouds.o
+
+# target to build an object file
+client/clouds.cpp.o:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/client/clouds.cpp.o
+.PHONY : client/clouds.cpp.o
+
+client/clouds.i: client/clouds.cpp.i
+
+.PHONY : client/clouds.i
+
+# target to preprocess a source file
+client/clouds.cpp.i:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/client/clouds.cpp.i
+.PHONY : client/clouds.cpp.i
+
+client/clouds.s: client/clouds.cpp.s
+
+.PHONY : client/clouds.s
+
+# target to generate assembly for a file
+client/clouds.cpp.s:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/client/clouds.cpp.s
+.PHONY : client/clouds.cpp.s
+
+client/content_cao.o: client/content_cao.cpp.o
+
+.PHONY : client/content_cao.o
+
+# target to build an object file
+client/content_cao.cpp.o:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/client/content_cao.cpp.o
+.PHONY : client/content_cao.cpp.o
+
+client/content_cao.i: client/content_cao.cpp.i
+
+.PHONY : client/content_cao.i
+
+# target to preprocess a source file
+client/content_cao.cpp.i:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/client/content_cao.cpp.i
+.PHONY : client/content_cao.cpp.i
+
+client/content_cao.s: client/content_cao.cpp.s
+
+.PHONY : client/content_cao.s
+
+# target to generate assembly for a file
+client/content_cao.cpp.s:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/client/content_cao.cpp.s
+.PHONY : client/content_cao.cpp.s
+
+client/content_cso.o: client/content_cso.cpp.o
+
+.PHONY : client/content_cso.o
+
+# target to build an object file
+client/content_cso.cpp.o:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/client/content_cso.cpp.o
+.PHONY : client/content_cso.cpp.o
+
+client/content_cso.i: client/content_cso.cpp.i
+
+.PHONY : client/content_cso.i
+
+# target to preprocess a source file
+client/content_cso.cpp.i:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/client/content_cso.cpp.i
+.PHONY : client/content_cso.cpp.i
+
+client/content_cso.s: client/content_cso.cpp.s
+
+.PHONY : client/content_cso.s
+
+# target to generate assembly for a file
+client/content_cso.cpp.s:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/client/content_cso.cpp.s
+.PHONY : client/content_cso.cpp.s
+
+client/content_mapblock.o: client/content_mapblock.cpp.o
+
+.PHONY : client/content_mapblock.o
+
+# target to build an object file
+client/content_mapblock.cpp.o:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/client/content_mapblock.cpp.o
+.PHONY : client/content_mapblock.cpp.o
+
+client/content_mapblock.i: client/content_mapblock.cpp.i
+
+.PHONY : client/content_mapblock.i
+
+# target to preprocess a source file
+client/content_mapblock.cpp.i:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/client/content_mapblock.cpp.i
+.PHONY : client/content_mapblock.cpp.i
+
+client/content_mapblock.s: client/content_mapblock.cpp.s
+
+.PHONY : client/content_mapblock.s
+
+# target to generate assembly for a file
+client/content_mapblock.cpp.s:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/client/content_mapblock.cpp.s
+.PHONY : client/content_mapblock.cpp.s
+
+client/filecache.o: client/filecache.cpp.o
+
+.PHONY : client/filecache.o
+
+# target to build an object file
+client/filecache.cpp.o:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/client/filecache.cpp.o
+.PHONY : client/filecache.cpp.o
+
+client/filecache.i: client/filecache.cpp.i
+
+.PHONY : client/filecache.i
+
+# target to preprocess a source file
+client/filecache.cpp.i:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/client/filecache.cpp.i
+.PHONY : client/filecache.cpp.i
+
+client/filecache.s: client/filecache.cpp.s
+
+.PHONY : client/filecache.s
+
+# target to generate assembly for a file
+client/filecache.cpp.s:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/client/filecache.cpp.s
+.PHONY : client/filecache.cpp.s
+
+client/fontengine.o: client/fontengine.cpp.o
+
+.PHONY : client/fontengine.o
+
+# target to build an object file
+client/fontengine.cpp.o:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/client/fontengine.cpp.o
+.PHONY : client/fontengine.cpp.o
+
+client/fontengine.i: client/fontengine.cpp.i
+
+.PHONY : client/fontengine.i
+
+# target to preprocess a source file
+client/fontengine.cpp.i:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/client/fontengine.cpp.i
+.PHONY : client/fontengine.cpp.i
+
+client/fontengine.s: client/fontengine.cpp.s
+
+.PHONY : client/fontengine.s
+
+# target to generate assembly for a file
+client/fontengine.cpp.s:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/client/fontengine.cpp.s
+.PHONY : client/fontengine.cpp.s
+
+client/game.o: client/game.cpp.o
+
+.PHONY : client/game.o
+
+# target to build an object file
+client/game.cpp.o:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/client/game.cpp.o
+.PHONY : client/game.cpp.o
+
+client/game.i: client/game.cpp.i
+
+.PHONY : client/game.i
+
+# target to preprocess a source file
+client/game.cpp.i:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/client/game.cpp.i
+.PHONY : client/game.cpp.i
+
+client/game.s: client/game.cpp.s
+
+.PHONY : client/game.s
+
+# target to generate assembly for a file
+client/game.cpp.s:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/client/game.cpp.s
+.PHONY : client/game.cpp.s
+
+client/gameui.o: client/gameui.cpp.o
+
+.PHONY : client/gameui.o
+
+# target to build an object file
+client/gameui.cpp.o:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/client/gameui.cpp.o
+.PHONY : client/gameui.cpp.o
+
+client/gameui.i: client/gameui.cpp.i
+
+.PHONY : client/gameui.i
+
+# target to preprocess a source file
+client/gameui.cpp.i:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/client/gameui.cpp.i
+.PHONY : client/gameui.cpp.i
+
+client/gameui.s: client/gameui.cpp.s
+
+.PHONY : client/gameui.s
+
+# target to generate assembly for a file
+client/gameui.cpp.s:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/client/gameui.cpp.s
+.PHONY : client/gameui.cpp.s
+
+client/guiscalingfilter.o: client/guiscalingfilter.cpp.o
+
+.PHONY : client/guiscalingfilter.o
+
+# target to build an object file
+client/guiscalingfilter.cpp.o:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/client/guiscalingfilter.cpp.o
+.PHONY : client/guiscalingfilter.cpp.o
+
+client/guiscalingfilter.i: client/guiscalingfilter.cpp.i
+
+.PHONY : client/guiscalingfilter.i
+
+# target to preprocess a source file
+client/guiscalingfilter.cpp.i:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/client/guiscalingfilter.cpp.i
+.PHONY : client/guiscalingfilter.cpp.i
+
+client/guiscalingfilter.s: client/guiscalingfilter.cpp.s
+
+.PHONY : client/guiscalingfilter.s
+
+# target to generate assembly for a file
+client/guiscalingfilter.cpp.s:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/client/guiscalingfilter.cpp.s
+.PHONY : client/guiscalingfilter.cpp.s
+
+client/hud.o: client/hud.cpp.o
+
+.PHONY : client/hud.o
+
+# target to build an object file
+client/hud.cpp.o:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/client/hud.cpp.o
+.PHONY : client/hud.cpp.o
+
+client/hud.i: client/hud.cpp.i
+
+.PHONY : client/hud.i
+
+# target to preprocess a source file
+client/hud.cpp.i:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/client/hud.cpp.i
+.PHONY : client/hud.cpp.i
+
+client/hud.s: client/hud.cpp.s
+
+.PHONY : client/hud.s
+
+# target to generate assembly for a file
+client/hud.cpp.s:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/client/hud.cpp.s
+.PHONY : client/hud.cpp.s
+
+client/imagefilters.o: client/imagefilters.cpp.o
+
+.PHONY : client/imagefilters.o
+
+# target to build an object file
+client/imagefilters.cpp.o:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/client/imagefilters.cpp.o
+.PHONY : client/imagefilters.cpp.o
+
+client/imagefilters.i: client/imagefilters.cpp.i
+
+.PHONY : client/imagefilters.i
+
+# target to preprocess a source file
+client/imagefilters.cpp.i:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/client/imagefilters.cpp.i
+.PHONY : client/imagefilters.cpp.i
+
+client/imagefilters.s: client/imagefilters.cpp.s
+
+.PHONY : client/imagefilters.s
+
+# target to generate assembly for a file
+client/imagefilters.cpp.s:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/client/imagefilters.cpp.s
+.PHONY : client/imagefilters.cpp.s
 
 client/inputhandler.o: client/inputhandler.cpp.o
 
@@ -437,6 +842,573 @@ client/joystick_controller.cpp.s:
 	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/client/joystick_controller.cpp.s
 .PHONY : client/joystick_controller.cpp.s
 
+client/keycode.o: client/keycode.cpp.o
+
+.PHONY : client/keycode.o
+
+# target to build an object file
+client/keycode.cpp.o:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/client/keycode.cpp.o
+.PHONY : client/keycode.cpp.o
+
+client/keycode.i: client/keycode.cpp.i
+
+.PHONY : client/keycode.i
+
+# target to preprocess a source file
+client/keycode.cpp.i:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/client/keycode.cpp.i
+.PHONY : client/keycode.cpp.i
+
+client/keycode.s: client/keycode.cpp.s
+
+.PHONY : client/keycode.s
+
+# target to generate assembly for a file
+client/keycode.cpp.s:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/client/keycode.cpp.s
+.PHONY : client/keycode.cpp.s
+
+client/localplayer.o: client/localplayer.cpp.o
+
+.PHONY : client/localplayer.o
+
+# target to build an object file
+client/localplayer.cpp.o:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/client/localplayer.cpp.o
+.PHONY : client/localplayer.cpp.o
+
+client/localplayer.i: client/localplayer.cpp.i
+
+.PHONY : client/localplayer.i
+
+# target to preprocess a source file
+client/localplayer.cpp.i:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/client/localplayer.cpp.i
+.PHONY : client/localplayer.cpp.i
+
+client/localplayer.s: client/localplayer.cpp.s
+
+.PHONY : client/localplayer.s
+
+# target to generate assembly for a file
+client/localplayer.cpp.s:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/client/localplayer.cpp.s
+.PHONY : client/localplayer.cpp.s
+
+client/mapblock_mesh.o: client/mapblock_mesh.cpp.o
+
+.PHONY : client/mapblock_mesh.o
+
+# target to build an object file
+client/mapblock_mesh.cpp.o:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/client/mapblock_mesh.cpp.o
+.PHONY : client/mapblock_mesh.cpp.o
+
+client/mapblock_mesh.i: client/mapblock_mesh.cpp.i
+
+.PHONY : client/mapblock_mesh.i
+
+# target to preprocess a source file
+client/mapblock_mesh.cpp.i:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/client/mapblock_mesh.cpp.i
+.PHONY : client/mapblock_mesh.cpp.i
+
+client/mapblock_mesh.s: client/mapblock_mesh.cpp.s
+
+.PHONY : client/mapblock_mesh.s
+
+# target to generate assembly for a file
+client/mapblock_mesh.cpp.s:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/client/mapblock_mesh.cpp.s
+.PHONY : client/mapblock_mesh.cpp.s
+
+client/mesh.o: client/mesh.cpp.o
+
+.PHONY : client/mesh.o
+
+# target to build an object file
+client/mesh.cpp.o:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/client/mesh.cpp.o
+.PHONY : client/mesh.cpp.o
+
+client/mesh.i: client/mesh.cpp.i
+
+.PHONY : client/mesh.i
+
+# target to preprocess a source file
+client/mesh.cpp.i:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/client/mesh.cpp.i
+.PHONY : client/mesh.cpp.i
+
+client/mesh.s: client/mesh.cpp.s
+
+.PHONY : client/mesh.s
+
+# target to generate assembly for a file
+client/mesh.cpp.s:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/client/mesh.cpp.s
+.PHONY : client/mesh.cpp.s
+
+client/mesh_generator_thread.o: client/mesh_generator_thread.cpp.o
+
+.PHONY : client/mesh_generator_thread.o
+
+# target to build an object file
+client/mesh_generator_thread.cpp.o:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/client/mesh_generator_thread.cpp.o
+.PHONY : client/mesh_generator_thread.cpp.o
+
+client/mesh_generator_thread.i: client/mesh_generator_thread.cpp.i
+
+.PHONY : client/mesh_generator_thread.i
+
+# target to preprocess a source file
+client/mesh_generator_thread.cpp.i:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/client/mesh_generator_thread.cpp.i
+.PHONY : client/mesh_generator_thread.cpp.i
+
+client/mesh_generator_thread.s: client/mesh_generator_thread.cpp.s
+
+.PHONY : client/mesh_generator_thread.s
+
+# target to generate assembly for a file
+client/mesh_generator_thread.cpp.s:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/client/mesh_generator_thread.cpp.s
+.PHONY : client/mesh_generator_thread.cpp.s
+
+client/meshgen/collector.o: client/meshgen/collector.cpp.o
+
+.PHONY : client/meshgen/collector.o
+
+# target to build an object file
+client/meshgen/collector.cpp.o:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/client/meshgen/collector.cpp.o
+.PHONY : client/meshgen/collector.cpp.o
+
+client/meshgen/collector.i: client/meshgen/collector.cpp.i
+
+.PHONY : client/meshgen/collector.i
+
+# target to preprocess a source file
+client/meshgen/collector.cpp.i:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/client/meshgen/collector.cpp.i
+.PHONY : client/meshgen/collector.cpp.i
+
+client/meshgen/collector.s: client/meshgen/collector.cpp.s
+
+.PHONY : client/meshgen/collector.s
+
+# target to generate assembly for a file
+client/meshgen/collector.cpp.s:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/client/meshgen/collector.cpp.s
+.PHONY : client/meshgen/collector.cpp.s
+
+client/minimap.o: client/minimap.cpp.o
+
+.PHONY : client/minimap.o
+
+# target to build an object file
+client/minimap.cpp.o:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/client/minimap.cpp.o
+.PHONY : client/minimap.cpp.o
+
+client/minimap.i: client/minimap.cpp.i
+
+.PHONY : client/minimap.i
+
+# target to preprocess a source file
+client/minimap.cpp.i:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/client/minimap.cpp.i
+.PHONY : client/minimap.cpp.i
+
+client/minimap.s: client/minimap.cpp.s
+
+.PHONY : client/minimap.s
+
+# target to generate assembly for a file
+client/minimap.cpp.s:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/client/minimap.cpp.s
+.PHONY : client/minimap.cpp.s
+
+client/particles.o: client/particles.cpp.o
+
+.PHONY : client/particles.o
+
+# target to build an object file
+client/particles.cpp.o:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/client/particles.cpp.o
+.PHONY : client/particles.cpp.o
+
+client/particles.i: client/particles.cpp.i
+
+.PHONY : client/particles.i
+
+# target to preprocess a source file
+client/particles.cpp.i:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/client/particles.cpp.i
+.PHONY : client/particles.cpp.i
+
+client/particles.s: client/particles.cpp.s
+
+.PHONY : client/particles.s
+
+# target to generate assembly for a file
+client/particles.cpp.s:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/client/particles.cpp.s
+.PHONY : client/particles.cpp.s
+
+client/render/anaglyph.o: client/render/anaglyph.cpp.o
+
+.PHONY : client/render/anaglyph.o
+
+# target to build an object file
+client/render/anaglyph.cpp.o:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/client/render/anaglyph.cpp.o
+.PHONY : client/render/anaglyph.cpp.o
+
+client/render/anaglyph.i: client/render/anaglyph.cpp.i
+
+.PHONY : client/render/anaglyph.i
+
+# target to preprocess a source file
+client/render/anaglyph.cpp.i:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/client/render/anaglyph.cpp.i
+.PHONY : client/render/anaglyph.cpp.i
+
+client/render/anaglyph.s: client/render/anaglyph.cpp.s
+
+.PHONY : client/render/anaglyph.s
+
+# target to generate assembly for a file
+client/render/anaglyph.cpp.s:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/client/render/anaglyph.cpp.s
+.PHONY : client/render/anaglyph.cpp.s
+
+client/render/core.o: client/render/core.cpp.o
+
+.PHONY : client/render/core.o
+
+# target to build an object file
+client/render/core.cpp.o:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/client/render/core.cpp.o
+.PHONY : client/render/core.cpp.o
+
+client/render/core.i: client/render/core.cpp.i
+
+.PHONY : client/render/core.i
+
+# target to preprocess a source file
+client/render/core.cpp.i:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/client/render/core.cpp.i
+.PHONY : client/render/core.cpp.i
+
+client/render/core.s: client/render/core.cpp.s
+
+.PHONY : client/render/core.s
+
+# target to generate assembly for a file
+client/render/core.cpp.s:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/client/render/core.cpp.s
+.PHONY : client/render/core.cpp.s
+
+client/render/factory.o: client/render/factory.cpp.o
+
+.PHONY : client/render/factory.o
+
+# target to build an object file
+client/render/factory.cpp.o:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/client/render/factory.cpp.o
+.PHONY : client/render/factory.cpp.o
+
+client/render/factory.i: client/render/factory.cpp.i
+
+.PHONY : client/render/factory.i
+
+# target to preprocess a source file
+client/render/factory.cpp.i:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/client/render/factory.cpp.i
+.PHONY : client/render/factory.cpp.i
+
+client/render/factory.s: client/render/factory.cpp.s
+
+.PHONY : client/render/factory.s
+
+# target to generate assembly for a file
+client/render/factory.cpp.s:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/client/render/factory.cpp.s
+.PHONY : client/render/factory.cpp.s
+
+client/render/interlaced.o: client/render/interlaced.cpp.o
+
+.PHONY : client/render/interlaced.o
+
+# target to build an object file
+client/render/interlaced.cpp.o:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/client/render/interlaced.cpp.o
+.PHONY : client/render/interlaced.cpp.o
+
+client/render/interlaced.i: client/render/interlaced.cpp.i
+
+.PHONY : client/render/interlaced.i
+
+# target to preprocess a source file
+client/render/interlaced.cpp.i:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/client/render/interlaced.cpp.i
+.PHONY : client/render/interlaced.cpp.i
+
+client/render/interlaced.s: client/render/interlaced.cpp.s
+
+.PHONY : client/render/interlaced.s
+
+# target to generate assembly for a file
+client/render/interlaced.cpp.s:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/client/render/interlaced.cpp.s
+.PHONY : client/render/interlaced.cpp.s
+
+client/render/pageflip.o: client/render/pageflip.cpp.o
+
+.PHONY : client/render/pageflip.o
+
+# target to build an object file
+client/render/pageflip.cpp.o:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/client/render/pageflip.cpp.o
+.PHONY : client/render/pageflip.cpp.o
+
+client/render/pageflip.i: client/render/pageflip.cpp.i
+
+.PHONY : client/render/pageflip.i
+
+# target to preprocess a source file
+client/render/pageflip.cpp.i:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/client/render/pageflip.cpp.i
+.PHONY : client/render/pageflip.cpp.i
+
+client/render/pageflip.s: client/render/pageflip.cpp.s
+
+.PHONY : client/render/pageflip.s
+
+# target to generate assembly for a file
+client/render/pageflip.cpp.s:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/client/render/pageflip.cpp.s
+.PHONY : client/render/pageflip.cpp.s
+
+client/render/plain.o: client/render/plain.cpp.o
+
+.PHONY : client/render/plain.o
+
+# target to build an object file
+client/render/plain.cpp.o:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/client/render/plain.cpp.o
+.PHONY : client/render/plain.cpp.o
+
+client/render/plain.i: client/render/plain.cpp.i
+
+.PHONY : client/render/plain.i
+
+# target to preprocess a source file
+client/render/plain.cpp.i:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/client/render/plain.cpp.i
+.PHONY : client/render/plain.cpp.i
+
+client/render/plain.s: client/render/plain.cpp.s
+
+.PHONY : client/render/plain.s
+
+# target to generate assembly for a file
+client/render/plain.cpp.s:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/client/render/plain.cpp.s
+.PHONY : client/render/plain.cpp.s
+
+client/render/sidebyside.o: client/render/sidebyside.cpp.o
+
+.PHONY : client/render/sidebyside.o
+
+# target to build an object file
+client/render/sidebyside.cpp.o:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/client/render/sidebyside.cpp.o
+.PHONY : client/render/sidebyside.cpp.o
+
+client/render/sidebyside.i: client/render/sidebyside.cpp.i
+
+.PHONY : client/render/sidebyside.i
+
+# target to preprocess a source file
+client/render/sidebyside.cpp.i:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/client/render/sidebyside.cpp.i
+.PHONY : client/render/sidebyside.cpp.i
+
+client/render/sidebyside.s: client/render/sidebyside.cpp.s
+
+.PHONY : client/render/sidebyside.s
+
+# target to generate assembly for a file
+client/render/sidebyside.cpp.s:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/client/render/sidebyside.cpp.s
+.PHONY : client/render/sidebyside.cpp.s
+
+client/render/stereo.o: client/render/stereo.cpp.o
+
+.PHONY : client/render/stereo.o
+
+# target to build an object file
+client/render/stereo.cpp.o:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/client/render/stereo.cpp.o
+.PHONY : client/render/stereo.cpp.o
+
+client/render/stereo.i: client/render/stereo.cpp.i
+
+.PHONY : client/render/stereo.i
+
+# target to preprocess a source file
+client/render/stereo.cpp.i:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/client/render/stereo.cpp.i
+.PHONY : client/render/stereo.cpp.i
+
+client/render/stereo.s: client/render/stereo.cpp.s
+
+.PHONY : client/render/stereo.s
+
+# target to generate assembly for a file
+client/render/stereo.cpp.s:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/client/render/stereo.cpp.s
+.PHONY : client/render/stereo.cpp.s
+
+client/renderingengine.o: client/renderingengine.cpp.o
+
+.PHONY : client/renderingengine.o
+
+# target to build an object file
+client/renderingengine.cpp.o:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/client/renderingengine.cpp.o
+.PHONY : client/renderingengine.cpp.o
+
+client/renderingengine.i: client/renderingengine.cpp.i
+
+.PHONY : client/renderingengine.i
+
+# target to preprocess a source file
+client/renderingengine.cpp.i:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/client/renderingengine.cpp.i
+.PHONY : client/renderingengine.cpp.i
+
+client/renderingengine.s: client/renderingengine.cpp.s
+
+.PHONY : client/renderingengine.s
+
+# target to generate assembly for a file
+client/renderingengine.cpp.s:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/client/renderingengine.cpp.s
+.PHONY : client/renderingengine.cpp.s
+
+client/shader.o: client/shader.cpp.o
+
+.PHONY : client/shader.o
+
+# target to build an object file
+client/shader.cpp.o:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/client/shader.cpp.o
+.PHONY : client/shader.cpp.o
+
+client/shader.i: client/shader.cpp.i
+
+.PHONY : client/shader.i
+
+# target to preprocess a source file
+client/shader.cpp.i:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/client/shader.cpp.i
+.PHONY : client/shader.cpp.i
+
+client/shader.s: client/shader.cpp.s
+
+.PHONY : client/shader.s
+
+# target to generate assembly for a file
+client/shader.cpp.s:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/client/shader.cpp.s
+.PHONY : client/shader.cpp.s
+
+client/sky.o: client/sky.cpp.o
+
+.PHONY : client/sky.o
+
+# target to build an object file
+client/sky.cpp.o:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/client/sky.cpp.o
+.PHONY : client/sky.cpp.o
+
+client/sky.i: client/sky.cpp.i
+
+.PHONY : client/sky.i
+
+# target to preprocess a source file
+client/sky.cpp.i:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/client/sky.cpp.i
+.PHONY : client/sky.cpp.i
+
+client/sky.s: client/sky.cpp.s
+
+.PHONY : client/sky.s
+
+# target to generate assembly for a file
+client/sky.cpp.s:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/client/sky.cpp.s
+.PHONY : client/sky.cpp.s
+
+client/sound.o: client/sound.cpp.o
+
+.PHONY : client/sound.o
+
+# target to build an object file
+client/sound.cpp.o:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/client/sound.cpp.o
+.PHONY : client/sound.cpp.o
+
+client/sound.i: client/sound.cpp.i
+
+.PHONY : client/sound.i
+
+# target to preprocess a source file
+client/sound.cpp.i:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/client/sound.cpp.i
+.PHONY : client/sound.cpp.i
+
+client/sound.s: client/sound.cpp.s
+
+.PHONY : client/sound.s
+
+# target to generate assembly for a file
+client/sound.cpp.s:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/client/sound.cpp.s
+.PHONY : client/sound.cpp.s
+
+client/sound_openal.o: client/sound_openal.cpp.o
+
+.PHONY : client/sound_openal.o
+
+# target to build an object file
+client/sound_openal.cpp.o:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/client/sound_openal.cpp.o
+.PHONY : client/sound_openal.cpp.o
+
+client/sound_openal.i: client/sound_openal.cpp.i
+
+.PHONY : client/sound_openal.i
+
+# target to preprocess a source file
+client/sound_openal.cpp.i:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/client/sound_openal.cpp.i
+.PHONY : client/sound_openal.cpp.i
+
+client/sound_openal.s: client/sound_openal.cpp.s
+
+.PHONY : client/sound_openal.s
+
+# target to generate assembly for a file
+client/sound_openal.cpp.s:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/client/sound_openal.cpp.s
+.PHONY : client/sound_openal.cpp.s
+
 client/tile.o: client/tile.cpp.o
 
 .PHONY : client/tile.o
@@ -464,32 +1436,32 @@ client/tile.cpp.s:
 	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/client/tile.cpp.s
 .PHONY : client/tile.cpp.s
 
-clientenvironment.o: clientenvironment.cpp.o
+client/wieldmesh.o: client/wieldmesh.cpp.o
 
-.PHONY : clientenvironment.o
+.PHONY : client/wieldmesh.o
 
 # target to build an object file
-clientenvironment.cpp.o:
-	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/clientenvironment.cpp.o
-.PHONY : clientenvironment.cpp.o
+client/wieldmesh.cpp.o:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/client/wieldmesh.cpp.o
+.PHONY : client/wieldmesh.cpp.o
 
-clientenvironment.i: clientenvironment.cpp.i
+client/wieldmesh.i: client/wieldmesh.cpp.i
 
-.PHONY : clientenvironment.i
+.PHONY : client/wieldmesh.i
 
 # target to preprocess a source file
-clientenvironment.cpp.i:
-	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/clientenvironment.cpp.i
-.PHONY : clientenvironment.cpp.i
+client/wieldmesh.cpp.i:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/client/wieldmesh.cpp.i
+.PHONY : client/wieldmesh.cpp.i
 
-clientenvironment.s: clientenvironment.cpp.s
+client/wieldmesh.s: client/wieldmesh.cpp.s
 
-.PHONY : clientenvironment.s
+.PHONY : client/wieldmesh.s
 
 # target to generate assembly for a file
-clientenvironment.cpp.s:
-	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/clientenvironment.cpp.s
-.PHONY : clientenvironment.cpp.s
+client/wieldmesh.cpp.s:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/client/wieldmesh.cpp.s
+.PHONY : client/wieldmesh.cpp.s
 
 clientiface.o: clientiface.cpp.o
 
@@ -518,114 +1490,6 @@ clientiface.cpp.s:
 	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/clientiface.cpp.s
 .PHONY : clientiface.cpp.s
 
-clientmap.o: clientmap.cpp.o
-
-.PHONY : clientmap.o
-
-# target to build an object file
-clientmap.cpp.o:
-	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/clientmap.cpp.o
-.PHONY : clientmap.cpp.o
-
-clientmap.i: clientmap.cpp.i
-
-.PHONY : clientmap.i
-
-# target to preprocess a source file
-clientmap.cpp.i:
-	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/clientmap.cpp.i
-.PHONY : clientmap.cpp.i
-
-clientmap.s: clientmap.cpp.s
-
-.PHONY : clientmap.s
-
-# target to generate assembly for a file
-clientmap.cpp.s:
-	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/clientmap.cpp.s
-.PHONY : clientmap.cpp.s
-
-clientmedia.o: clientmedia.cpp.o
-
-.PHONY : clientmedia.o
-
-# target to build an object file
-clientmedia.cpp.o:
-	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/clientmedia.cpp.o
-.PHONY : clientmedia.cpp.o
-
-clientmedia.i: clientmedia.cpp.i
-
-.PHONY : clientmedia.i
-
-# target to preprocess a source file
-clientmedia.cpp.i:
-	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/clientmedia.cpp.i
-.PHONY : clientmedia.cpp.i
-
-clientmedia.s: clientmedia.cpp.s
-
-.PHONY : clientmedia.s
-
-# target to generate assembly for a file
-clientmedia.cpp.s:
-	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/clientmedia.cpp.s
-.PHONY : clientmedia.cpp.s
-
-clientobject.o: clientobject.cpp.o
-
-.PHONY : clientobject.o
-
-# target to build an object file
-clientobject.cpp.o:
-	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/clientobject.cpp.o
-.PHONY : clientobject.cpp.o
-
-clientobject.i: clientobject.cpp.i
-
-.PHONY : clientobject.i
-
-# target to preprocess a source file
-clientobject.cpp.i:
-	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/clientobject.cpp.i
-.PHONY : clientobject.cpp.i
-
-clientobject.s: clientobject.cpp.s
-
-.PHONY : clientobject.s
-
-# target to generate assembly for a file
-clientobject.cpp.s:
-	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/clientobject.cpp.s
-.PHONY : clientobject.cpp.s
-
-clouds.o: clouds.cpp.o
-
-.PHONY : clouds.o
-
-# target to build an object file
-clouds.cpp.o:
-	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/clouds.cpp.o
-.PHONY : clouds.cpp.o
-
-clouds.i: clouds.cpp.i
-
-.PHONY : clouds.i
-
-# target to preprocess a source file
-clouds.cpp.i:
-	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/clouds.cpp.i
-.PHONY : clouds.cpp.i
-
-clouds.s: clouds.cpp.s
-
-.PHONY : clouds.s
-
-# target to generate assembly for a file
-clouds.cpp.s:
-	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/clouds.cpp.s
-.PHONY : clouds.cpp.s
-
 collision.o: collision.cpp.o
 
 .PHONY : collision.o
@@ -653,113 +1517,113 @@ collision.cpp.s:
 	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/collision.cpp.s
 .PHONY : collision.cpp.s
 
-content_abm.o: content_abm.cpp.o
+content/content.o: content/content.cpp.o
 
-.PHONY : content_abm.o
-
-# target to build an object file
-content_abm.cpp.o:
-	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/content_abm.cpp.o
-.PHONY : content_abm.cpp.o
-
-content_abm.i: content_abm.cpp.i
-
-.PHONY : content_abm.i
-
-# target to preprocess a source file
-content_abm.cpp.i:
-	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/content_abm.cpp.i
-.PHONY : content_abm.cpp.i
-
-content_abm.s: content_abm.cpp.s
-
-.PHONY : content_abm.s
-
-# target to generate assembly for a file
-content_abm.cpp.s:
-	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/content_abm.cpp.s
-.PHONY : content_abm.cpp.s
-
-content_cao.o: content_cao.cpp.o
-
-.PHONY : content_cao.o
+.PHONY : content/content.o
 
 # target to build an object file
-content_cao.cpp.o:
-	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/content_cao.cpp.o
-.PHONY : content_cao.cpp.o
+content/content.cpp.o:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/content/content.cpp.o
+.PHONY : content/content.cpp.o
 
-content_cao.i: content_cao.cpp.i
+content/content.i: content/content.cpp.i
 
-.PHONY : content_cao.i
+.PHONY : content/content.i
 
 # target to preprocess a source file
-content_cao.cpp.i:
-	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/content_cao.cpp.i
-.PHONY : content_cao.cpp.i
+content/content.cpp.i:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/content/content.cpp.i
+.PHONY : content/content.cpp.i
 
-content_cao.s: content_cao.cpp.s
+content/content.s: content/content.cpp.s
 
-.PHONY : content_cao.s
+.PHONY : content/content.s
 
 # target to generate assembly for a file
-content_cao.cpp.s:
-	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/content_cao.cpp.s
-.PHONY : content_cao.cpp.s
+content/content.cpp.s:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/content/content.cpp.s
+.PHONY : content/content.cpp.s
 
-content_cso.o: content_cso.cpp.o
+content/mods.o: content/mods.cpp.o
 
-.PHONY : content_cso.o
+.PHONY : content/mods.o
 
 # target to build an object file
-content_cso.cpp.o:
-	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/content_cso.cpp.o
-.PHONY : content_cso.cpp.o
+content/mods.cpp.o:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/content/mods.cpp.o
+.PHONY : content/mods.cpp.o
 
-content_cso.i: content_cso.cpp.i
+content/mods.i: content/mods.cpp.i
 
-.PHONY : content_cso.i
+.PHONY : content/mods.i
 
 # target to preprocess a source file
-content_cso.cpp.i:
-	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/content_cso.cpp.i
-.PHONY : content_cso.cpp.i
+content/mods.cpp.i:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/content/mods.cpp.i
+.PHONY : content/mods.cpp.i
 
-content_cso.s: content_cso.cpp.s
+content/mods.s: content/mods.cpp.s
 
-.PHONY : content_cso.s
+.PHONY : content/mods.s
 
 # target to generate assembly for a file
-content_cso.cpp.s:
-	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/content_cso.cpp.s
-.PHONY : content_cso.cpp.s
+content/mods.cpp.s:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/content/mods.cpp.s
+.PHONY : content/mods.cpp.s
 
-content_mapblock.o: content_mapblock.cpp.o
+content/packages.o: content/packages.cpp.o
 
-.PHONY : content_mapblock.o
+.PHONY : content/packages.o
 
 # target to build an object file
-content_mapblock.cpp.o:
-	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/content_mapblock.cpp.o
-.PHONY : content_mapblock.cpp.o
+content/packages.cpp.o:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/content/packages.cpp.o
+.PHONY : content/packages.cpp.o
 
-content_mapblock.i: content_mapblock.cpp.i
+content/packages.i: content/packages.cpp.i
 
-.PHONY : content_mapblock.i
+.PHONY : content/packages.i
 
 # target to preprocess a source file
-content_mapblock.cpp.i:
-	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/content_mapblock.cpp.i
-.PHONY : content_mapblock.cpp.i
+content/packages.cpp.i:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/content/packages.cpp.i
+.PHONY : content/packages.cpp.i
 
-content_mapblock.s: content_mapblock.cpp.s
+content/packages.s: content/packages.cpp.s
 
-.PHONY : content_mapblock.s
+.PHONY : content/packages.s
 
 # target to generate assembly for a file
-content_mapblock.cpp.s:
-	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/content_mapblock.cpp.s
-.PHONY : content_mapblock.cpp.s
+content/packages.cpp.s:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/content/packages.cpp.s
+.PHONY : content/packages.cpp.s
+
+content/subgames.o: content/subgames.cpp.o
+
+.PHONY : content/subgames.o
+
+# target to build an object file
+content/subgames.cpp.o:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/content/subgames.cpp.o
+.PHONY : content/subgames.cpp.o
+
+content/subgames.i: content/subgames.cpp.i
+
+.PHONY : content/subgames.i
+
+# target to preprocess a source file
+content/subgames.cpp.i:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/content/subgames.cpp.i
+.PHONY : content/subgames.cpp.i
+
+content/subgames.s: content/subgames.cpp.s
+
+.PHONY : content/subgames.s
+
+# target to generate assembly for a file
+content/subgames.cpp.s:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/content/subgames.cpp.s
+.PHONY : content/subgames.cpp.s
 
 content_mapnode.o: content_mapnode.cpp.o
 
@@ -896,194 +1760,194 @@ craftdef.cpp.s:
 	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/craftdef.cpp.s
 .PHONY : craftdef.cpp.s
 
-database-dummy.o: database-dummy.cpp.o
+database/database-dummy.o: database/database-dummy.cpp.o
 
-.PHONY : database-dummy.o
-
-# target to build an object file
-database-dummy.cpp.o:
-	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/database-dummy.cpp.o
-.PHONY : database-dummy.cpp.o
-
-database-dummy.i: database-dummy.cpp.i
-
-.PHONY : database-dummy.i
-
-# target to preprocess a source file
-database-dummy.cpp.i:
-	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/database-dummy.cpp.i
-.PHONY : database-dummy.cpp.i
-
-database-dummy.s: database-dummy.cpp.s
-
-.PHONY : database-dummy.s
-
-# target to generate assembly for a file
-database-dummy.cpp.s:
-	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/database-dummy.cpp.s
-.PHONY : database-dummy.cpp.s
-
-database-files.o: database-files.cpp.o
-
-.PHONY : database-files.o
+.PHONY : database/database-dummy.o
 
 # target to build an object file
-database-files.cpp.o:
-	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/database-files.cpp.o
-.PHONY : database-files.cpp.o
+database/database-dummy.cpp.o:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/database/database-dummy.cpp.o
+.PHONY : database/database-dummy.cpp.o
 
-database-files.i: database-files.cpp.i
+database/database-dummy.i: database/database-dummy.cpp.i
 
-.PHONY : database-files.i
+.PHONY : database/database-dummy.i
 
 # target to preprocess a source file
-database-files.cpp.i:
-	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/database-files.cpp.i
-.PHONY : database-files.cpp.i
+database/database-dummy.cpp.i:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/database/database-dummy.cpp.i
+.PHONY : database/database-dummy.cpp.i
 
-database-files.s: database-files.cpp.s
+database/database-dummy.s: database/database-dummy.cpp.s
 
-.PHONY : database-files.s
+.PHONY : database/database-dummy.s
 
 # target to generate assembly for a file
-database-files.cpp.s:
-	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/database-files.cpp.s
-.PHONY : database-files.cpp.s
+database/database-dummy.cpp.s:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/database/database-dummy.cpp.s
+.PHONY : database/database-dummy.cpp.s
 
-database-leveldb.o: database-leveldb.cpp.o
+database/database-files.o: database/database-files.cpp.o
 
-.PHONY : database-leveldb.o
+.PHONY : database/database-files.o
 
 # target to build an object file
-database-leveldb.cpp.o:
-	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/database-leveldb.cpp.o
-.PHONY : database-leveldb.cpp.o
+database/database-files.cpp.o:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/database/database-files.cpp.o
+.PHONY : database/database-files.cpp.o
 
-database-leveldb.i: database-leveldb.cpp.i
+database/database-files.i: database/database-files.cpp.i
 
-.PHONY : database-leveldb.i
+.PHONY : database/database-files.i
 
 # target to preprocess a source file
-database-leveldb.cpp.i:
-	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/database-leveldb.cpp.i
-.PHONY : database-leveldb.cpp.i
+database/database-files.cpp.i:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/database/database-files.cpp.i
+.PHONY : database/database-files.cpp.i
 
-database-leveldb.s: database-leveldb.cpp.s
+database/database-files.s: database/database-files.cpp.s
 
-.PHONY : database-leveldb.s
+.PHONY : database/database-files.s
 
 # target to generate assembly for a file
-database-leveldb.cpp.s:
-	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/database-leveldb.cpp.s
-.PHONY : database-leveldb.cpp.s
+database/database-files.cpp.s:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/database/database-files.cpp.s
+.PHONY : database/database-files.cpp.s
 
-database-postgresql.o: database-postgresql.cpp.o
+database/database-leveldb.o: database/database-leveldb.cpp.o
 
-.PHONY : database-postgresql.o
+.PHONY : database/database-leveldb.o
 
 # target to build an object file
-database-postgresql.cpp.o:
-	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/database-postgresql.cpp.o
-.PHONY : database-postgresql.cpp.o
+database/database-leveldb.cpp.o:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/database/database-leveldb.cpp.o
+.PHONY : database/database-leveldb.cpp.o
 
-database-postgresql.i: database-postgresql.cpp.i
+database/database-leveldb.i: database/database-leveldb.cpp.i
 
-.PHONY : database-postgresql.i
+.PHONY : database/database-leveldb.i
 
 # target to preprocess a source file
-database-postgresql.cpp.i:
-	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/database-postgresql.cpp.i
-.PHONY : database-postgresql.cpp.i
+database/database-leveldb.cpp.i:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/database/database-leveldb.cpp.i
+.PHONY : database/database-leveldb.cpp.i
 
-database-postgresql.s: database-postgresql.cpp.s
+database/database-leveldb.s: database/database-leveldb.cpp.s
 
-.PHONY : database-postgresql.s
+.PHONY : database/database-leveldb.s
 
 # target to generate assembly for a file
-database-postgresql.cpp.s:
-	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/database-postgresql.cpp.s
-.PHONY : database-postgresql.cpp.s
+database/database-leveldb.cpp.s:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/database/database-leveldb.cpp.s
+.PHONY : database/database-leveldb.cpp.s
 
-database-redis.o: database-redis.cpp.o
+database/database-postgresql.o: database/database-postgresql.cpp.o
 
-.PHONY : database-redis.o
+.PHONY : database/database-postgresql.o
 
 # target to build an object file
-database-redis.cpp.o:
-	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/database-redis.cpp.o
-.PHONY : database-redis.cpp.o
+database/database-postgresql.cpp.o:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/database/database-postgresql.cpp.o
+.PHONY : database/database-postgresql.cpp.o
 
-database-redis.i: database-redis.cpp.i
+database/database-postgresql.i: database/database-postgresql.cpp.i
 
-.PHONY : database-redis.i
+.PHONY : database/database-postgresql.i
 
 # target to preprocess a source file
-database-redis.cpp.i:
-	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/database-redis.cpp.i
-.PHONY : database-redis.cpp.i
+database/database-postgresql.cpp.i:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/database/database-postgresql.cpp.i
+.PHONY : database/database-postgresql.cpp.i
 
-database-redis.s: database-redis.cpp.s
+database/database-postgresql.s: database/database-postgresql.cpp.s
 
-.PHONY : database-redis.s
+.PHONY : database/database-postgresql.s
 
 # target to generate assembly for a file
-database-redis.cpp.s:
-	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/database-redis.cpp.s
-.PHONY : database-redis.cpp.s
+database/database-postgresql.cpp.s:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/database/database-postgresql.cpp.s
+.PHONY : database/database-postgresql.cpp.s
 
-database-sqlite3.o: database-sqlite3.cpp.o
+database/database-redis.o: database/database-redis.cpp.o
 
-.PHONY : database-sqlite3.o
+.PHONY : database/database-redis.o
 
 # target to build an object file
-database-sqlite3.cpp.o:
-	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/database-sqlite3.cpp.o
-.PHONY : database-sqlite3.cpp.o
+database/database-redis.cpp.o:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/database/database-redis.cpp.o
+.PHONY : database/database-redis.cpp.o
 
-database-sqlite3.i: database-sqlite3.cpp.i
+database/database-redis.i: database/database-redis.cpp.i
 
-.PHONY : database-sqlite3.i
+.PHONY : database/database-redis.i
 
 # target to preprocess a source file
-database-sqlite3.cpp.i:
-	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/database-sqlite3.cpp.i
-.PHONY : database-sqlite3.cpp.i
+database/database-redis.cpp.i:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/database/database-redis.cpp.i
+.PHONY : database/database-redis.cpp.i
 
-database-sqlite3.s: database-sqlite3.cpp.s
+database/database-redis.s: database/database-redis.cpp.s
 
-.PHONY : database-sqlite3.s
+.PHONY : database/database-redis.s
 
 # target to generate assembly for a file
-database-sqlite3.cpp.s:
-	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/database-sqlite3.cpp.s
-.PHONY : database-sqlite3.cpp.s
+database/database-redis.cpp.s:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/database/database-redis.cpp.s
+.PHONY : database/database-redis.cpp.s
 
-database.o: database.cpp.o
+database/database-sqlite3.o: database/database-sqlite3.cpp.o
 
-.PHONY : database.o
+.PHONY : database/database-sqlite3.o
 
 # target to build an object file
-database.cpp.o:
-	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/database.cpp.o
-.PHONY : database.cpp.o
+database/database-sqlite3.cpp.o:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/database/database-sqlite3.cpp.o
+.PHONY : database/database-sqlite3.cpp.o
 
-database.i: database.cpp.i
+database/database-sqlite3.i: database/database-sqlite3.cpp.i
 
-.PHONY : database.i
+.PHONY : database/database-sqlite3.i
 
 # target to preprocess a source file
-database.cpp.i:
-	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/database.cpp.i
-.PHONY : database.cpp.i
+database/database-sqlite3.cpp.i:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/database/database-sqlite3.cpp.i
+.PHONY : database/database-sqlite3.cpp.i
 
-database.s: database.cpp.s
+database/database-sqlite3.s: database/database-sqlite3.cpp.s
 
-.PHONY : database.s
+.PHONY : database/database-sqlite3.s
 
 # target to generate assembly for a file
-database.cpp.s:
-	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/database.cpp.s
-.PHONY : database.cpp.s
+database/database-sqlite3.cpp.s:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/database/database-sqlite3.cpp.s
+.PHONY : database/database-sqlite3.cpp.s
+
+database/database.o: database/database.cpp.o
+
+.PHONY : database/database.o
+
+# target to build an object file
+database/database.cpp.o:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/database/database.cpp.o
+.PHONY : database/database.cpp.o
+
+database/database.i: database/database.cpp.i
+
+.PHONY : database/database.i
+
+# target to preprocess a source file
+database/database.cpp.i:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/database/database.cpp.i
+.PHONY : database/database.cpp.i
+
+database/database.s: database/database.cpp.s
+
+.PHONY : database/database.s
+
+# target to generate assembly for a file
+database/database.cpp.s:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/database/database.cpp.s
+.PHONY : database/database.cpp.s
 
 debug.o: debug.cpp.o
 
@@ -1138,60 +2002,6 @@ defaultsettings.s: defaultsettings.cpp.s
 defaultsettings.cpp.s:
 	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/defaultsettings.cpp.s
 .PHONY : defaultsettings.cpp.s
-
-drawscene.o: drawscene.cpp.o
-
-.PHONY : drawscene.o
-
-# target to build an object file
-drawscene.cpp.o:
-	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/drawscene.cpp.o
-.PHONY : drawscene.cpp.o
-
-drawscene.i: drawscene.cpp.i
-
-.PHONY : drawscene.i
-
-# target to preprocess a source file
-drawscene.cpp.i:
-	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/drawscene.cpp.i
-.PHONY : drawscene.cpp.i
-
-drawscene.s: drawscene.cpp.s
-
-.PHONY : drawscene.s
-
-# target to generate assembly for a file
-drawscene.cpp.s:
-	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/drawscene.cpp.s
-.PHONY : drawscene.cpp.s
-
-dungeongen.o: dungeongen.cpp.o
-
-.PHONY : dungeongen.o
-
-# target to build an object file
-dungeongen.cpp.o:
-	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/dungeongen.cpp.o
-.PHONY : dungeongen.cpp.o
-
-dungeongen.i: dungeongen.cpp.i
-
-.PHONY : dungeongen.i
-
-# target to preprocess a source file
-dungeongen.cpp.i:
-	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/dungeongen.cpp.i
-.PHONY : dungeongen.cpp.i
-
-dungeongen.s: dungeongen.cpp.s
-
-.PHONY : dungeongen.s
-
-# target to generate assembly for a file
-dungeongen.cpp.s:
-	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/dungeongen.cpp.s
-.PHONY : dungeongen.cpp.s
 
 emerge.o: emerge.cpp.o
 
@@ -1274,33 +2084,6 @@ face_position_cache.cpp.s:
 	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/face_position_cache.cpp.s
 .PHONY : face_position_cache.cpp.s
 
-filecache.o: filecache.cpp.o
-
-.PHONY : filecache.o
-
-# target to build an object file
-filecache.cpp.o:
-	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/filecache.cpp.o
-.PHONY : filecache.cpp.o
-
-filecache.i: filecache.cpp.i
-
-.PHONY : filecache.i
-
-# target to preprocess a source file
-filecache.cpp.i:
-	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/filecache.cpp.i
-.PHONY : filecache.cpp.i
-
-filecache.s: filecache.cpp.s
-
-.PHONY : filecache.s
-
-# target to generate assembly for a file
-filecache.cpp.s:
-	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/filecache.cpp.s
-.PHONY : filecache.cpp.s
-
 filesys.o: filesys.cpp.o
 
 .PHONY : filesys.o
@@ -1327,60 +2110,6 @@ filesys.s: filesys.cpp.s
 filesys.cpp.s:
 	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/filesys.cpp.s
 .PHONY : filesys.cpp.s
-
-fontengine.o: fontengine.cpp.o
-
-.PHONY : fontengine.o
-
-# target to build an object file
-fontengine.cpp.o:
-	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/fontengine.cpp.o
-.PHONY : fontengine.cpp.o
-
-fontengine.i: fontengine.cpp.i
-
-.PHONY : fontengine.i
-
-# target to preprocess a source file
-fontengine.cpp.i:
-	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/fontengine.cpp.i
-.PHONY : fontengine.cpp.i
-
-fontengine.s: fontengine.cpp.s
-
-.PHONY : fontengine.s
-
-# target to generate assembly for a file
-fontengine.cpp.s:
-	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/fontengine.cpp.s
-.PHONY : fontengine.cpp.s
-
-game.o: game.cpp.o
-
-.PHONY : game.o
-
-# target to build an object file
-game.cpp.o:
-	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/game.cpp.o
-.PHONY : game.cpp.o
-
-game.i: game.cpp.i
-
-.PHONY : game.i
-
-# target to preprocess a source file
-game.cpp.i:
-	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/game.cpp.i
-.PHONY : game.cpp.i
-
-game.s: game.cpp.s
-
-.PHONY : game.s
-
-# target to generate assembly for a file
-game.cpp.s:
-	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/game.cpp.s
-.PHONY : game.cpp.s
 
 genericobject.o: genericobject.cpp.o
 
@@ -1436,248 +2165,356 @@ gettext.cpp.s:
 	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/gettext.cpp.s
 .PHONY : gettext.cpp.s
 
-guiChatConsole.o: guiChatConsole.cpp.o
+gui/guiChatConsole.o: gui/guiChatConsole.cpp.o
 
-.PHONY : guiChatConsole.o
-
-# target to build an object file
-guiChatConsole.cpp.o:
-	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/guiChatConsole.cpp.o
-.PHONY : guiChatConsole.cpp.o
-
-guiChatConsole.i: guiChatConsole.cpp.i
-
-.PHONY : guiChatConsole.i
-
-# target to preprocess a source file
-guiChatConsole.cpp.i:
-	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/guiChatConsole.cpp.i
-.PHONY : guiChatConsole.cpp.i
-
-guiChatConsole.s: guiChatConsole.cpp.s
-
-.PHONY : guiChatConsole.s
-
-# target to generate assembly for a file
-guiChatConsole.cpp.s:
-	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/guiChatConsole.cpp.s
-.PHONY : guiChatConsole.cpp.s
-
-guiEngine.o: guiEngine.cpp.o
-
-.PHONY : guiEngine.o
+.PHONY : gui/guiChatConsole.o
 
 # target to build an object file
-guiEngine.cpp.o:
-	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/guiEngine.cpp.o
-.PHONY : guiEngine.cpp.o
+gui/guiChatConsole.cpp.o:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/gui/guiChatConsole.cpp.o
+.PHONY : gui/guiChatConsole.cpp.o
 
-guiEngine.i: guiEngine.cpp.i
+gui/guiChatConsole.i: gui/guiChatConsole.cpp.i
 
-.PHONY : guiEngine.i
+.PHONY : gui/guiChatConsole.i
 
 # target to preprocess a source file
-guiEngine.cpp.i:
-	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/guiEngine.cpp.i
-.PHONY : guiEngine.cpp.i
+gui/guiChatConsole.cpp.i:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/gui/guiChatConsole.cpp.i
+.PHONY : gui/guiChatConsole.cpp.i
 
-guiEngine.s: guiEngine.cpp.s
+gui/guiChatConsole.s: gui/guiChatConsole.cpp.s
 
-.PHONY : guiEngine.s
+.PHONY : gui/guiChatConsole.s
 
 # target to generate assembly for a file
-guiEngine.cpp.s:
-	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/guiEngine.cpp.s
-.PHONY : guiEngine.cpp.s
+gui/guiChatConsole.cpp.s:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/gui/guiChatConsole.cpp.s
+.PHONY : gui/guiChatConsole.cpp.s
 
-guiFileSelectMenu.o: guiFileSelectMenu.cpp.o
+gui/guiConfirmRegistration.o: gui/guiConfirmRegistration.cpp.o
 
-.PHONY : guiFileSelectMenu.o
+.PHONY : gui/guiConfirmRegistration.o
 
 # target to build an object file
-guiFileSelectMenu.cpp.o:
-	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/guiFileSelectMenu.cpp.o
-.PHONY : guiFileSelectMenu.cpp.o
+gui/guiConfirmRegistration.cpp.o:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/gui/guiConfirmRegistration.cpp.o
+.PHONY : gui/guiConfirmRegistration.cpp.o
 
-guiFileSelectMenu.i: guiFileSelectMenu.cpp.i
+gui/guiConfirmRegistration.i: gui/guiConfirmRegistration.cpp.i
 
-.PHONY : guiFileSelectMenu.i
+.PHONY : gui/guiConfirmRegistration.i
 
 # target to preprocess a source file
-guiFileSelectMenu.cpp.i:
-	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/guiFileSelectMenu.cpp.i
-.PHONY : guiFileSelectMenu.cpp.i
+gui/guiConfirmRegistration.cpp.i:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/gui/guiConfirmRegistration.cpp.i
+.PHONY : gui/guiConfirmRegistration.cpp.i
 
-guiFileSelectMenu.s: guiFileSelectMenu.cpp.s
+gui/guiConfirmRegistration.s: gui/guiConfirmRegistration.cpp.s
 
-.PHONY : guiFileSelectMenu.s
+.PHONY : gui/guiConfirmRegistration.s
 
 # target to generate assembly for a file
-guiFileSelectMenu.cpp.s:
-	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/guiFileSelectMenu.cpp.s
-.PHONY : guiFileSelectMenu.cpp.s
+gui/guiConfirmRegistration.cpp.s:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/gui/guiConfirmRegistration.cpp.s
+.PHONY : gui/guiConfirmRegistration.cpp.s
 
-guiFormSpecMenu.o: guiFormSpecMenu.cpp.o
+gui/guiEditBoxWithScrollbar.o: gui/guiEditBoxWithScrollbar.cpp.o
 
-.PHONY : guiFormSpecMenu.o
+.PHONY : gui/guiEditBoxWithScrollbar.o
 
 # target to build an object file
-guiFormSpecMenu.cpp.o:
-	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/guiFormSpecMenu.cpp.o
-.PHONY : guiFormSpecMenu.cpp.o
+gui/guiEditBoxWithScrollbar.cpp.o:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/gui/guiEditBoxWithScrollbar.cpp.o
+.PHONY : gui/guiEditBoxWithScrollbar.cpp.o
 
-guiFormSpecMenu.i: guiFormSpecMenu.cpp.i
+gui/guiEditBoxWithScrollbar.i: gui/guiEditBoxWithScrollbar.cpp.i
 
-.PHONY : guiFormSpecMenu.i
+.PHONY : gui/guiEditBoxWithScrollbar.i
 
 # target to preprocess a source file
-guiFormSpecMenu.cpp.i:
-	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/guiFormSpecMenu.cpp.i
-.PHONY : guiFormSpecMenu.cpp.i
+gui/guiEditBoxWithScrollbar.cpp.i:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/gui/guiEditBoxWithScrollbar.cpp.i
+.PHONY : gui/guiEditBoxWithScrollbar.cpp.i
 
-guiFormSpecMenu.s: guiFormSpecMenu.cpp.s
+gui/guiEditBoxWithScrollbar.s: gui/guiEditBoxWithScrollbar.cpp.s
 
-.PHONY : guiFormSpecMenu.s
+.PHONY : gui/guiEditBoxWithScrollbar.s
 
 # target to generate assembly for a file
-guiFormSpecMenu.cpp.s:
-	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/guiFormSpecMenu.cpp.s
-.PHONY : guiFormSpecMenu.cpp.s
+gui/guiEditBoxWithScrollbar.cpp.s:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/gui/guiEditBoxWithScrollbar.cpp.s
+.PHONY : gui/guiEditBoxWithScrollbar.cpp.s
 
-guiKeyChangeMenu.o: guiKeyChangeMenu.cpp.o
+gui/guiEngine.o: gui/guiEngine.cpp.o
 
-.PHONY : guiKeyChangeMenu.o
+.PHONY : gui/guiEngine.o
 
 # target to build an object file
-guiKeyChangeMenu.cpp.o:
-	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/guiKeyChangeMenu.cpp.o
-.PHONY : guiKeyChangeMenu.cpp.o
+gui/guiEngine.cpp.o:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/gui/guiEngine.cpp.o
+.PHONY : gui/guiEngine.cpp.o
 
-guiKeyChangeMenu.i: guiKeyChangeMenu.cpp.i
+gui/guiEngine.i: gui/guiEngine.cpp.i
 
-.PHONY : guiKeyChangeMenu.i
+.PHONY : gui/guiEngine.i
 
 # target to preprocess a source file
-guiKeyChangeMenu.cpp.i:
-	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/guiKeyChangeMenu.cpp.i
-.PHONY : guiKeyChangeMenu.cpp.i
+gui/guiEngine.cpp.i:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/gui/guiEngine.cpp.i
+.PHONY : gui/guiEngine.cpp.i
 
-guiKeyChangeMenu.s: guiKeyChangeMenu.cpp.s
+gui/guiEngine.s: gui/guiEngine.cpp.s
 
-.PHONY : guiKeyChangeMenu.s
+.PHONY : gui/guiEngine.s
 
 # target to generate assembly for a file
-guiKeyChangeMenu.cpp.s:
-	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/guiKeyChangeMenu.cpp.s
-.PHONY : guiKeyChangeMenu.cpp.s
+gui/guiEngine.cpp.s:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/gui/guiEngine.cpp.s
+.PHONY : gui/guiEngine.cpp.s
 
-guiPasswordChange.o: guiPasswordChange.cpp.o
+gui/guiFormSpecMenu.o: gui/guiFormSpecMenu.cpp.o
 
-.PHONY : guiPasswordChange.o
+.PHONY : gui/guiFormSpecMenu.o
 
 # target to build an object file
-guiPasswordChange.cpp.o:
-	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/guiPasswordChange.cpp.o
-.PHONY : guiPasswordChange.cpp.o
+gui/guiFormSpecMenu.cpp.o:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/gui/guiFormSpecMenu.cpp.o
+.PHONY : gui/guiFormSpecMenu.cpp.o
 
-guiPasswordChange.i: guiPasswordChange.cpp.i
+gui/guiFormSpecMenu.i: gui/guiFormSpecMenu.cpp.i
 
-.PHONY : guiPasswordChange.i
+.PHONY : gui/guiFormSpecMenu.i
 
 # target to preprocess a source file
-guiPasswordChange.cpp.i:
-	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/guiPasswordChange.cpp.i
-.PHONY : guiPasswordChange.cpp.i
+gui/guiFormSpecMenu.cpp.i:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/gui/guiFormSpecMenu.cpp.i
+.PHONY : gui/guiFormSpecMenu.cpp.i
 
-guiPasswordChange.s: guiPasswordChange.cpp.s
+gui/guiFormSpecMenu.s: gui/guiFormSpecMenu.cpp.s
 
-.PHONY : guiPasswordChange.s
+.PHONY : gui/guiFormSpecMenu.s
 
 # target to generate assembly for a file
-guiPasswordChange.cpp.s:
-	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/guiPasswordChange.cpp.s
-.PHONY : guiPasswordChange.cpp.s
+gui/guiFormSpecMenu.cpp.s:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/gui/guiFormSpecMenu.cpp.s
+.PHONY : gui/guiFormSpecMenu.cpp.s
 
-guiTable.o: guiTable.cpp.o
+gui/guiKeyChangeMenu.o: gui/guiKeyChangeMenu.cpp.o
 
-.PHONY : guiTable.o
+.PHONY : gui/guiKeyChangeMenu.o
 
 # target to build an object file
-guiTable.cpp.o:
-	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/guiTable.cpp.o
-.PHONY : guiTable.cpp.o
+gui/guiKeyChangeMenu.cpp.o:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/gui/guiKeyChangeMenu.cpp.o
+.PHONY : gui/guiKeyChangeMenu.cpp.o
 
-guiTable.i: guiTable.cpp.i
+gui/guiKeyChangeMenu.i: gui/guiKeyChangeMenu.cpp.i
 
-.PHONY : guiTable.i
+.PHONY : gui/guiKeyChangeMenu.i
 
 # target to preprocess a source file
-guiTable.cpp.i:
-	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/guiTable.cpp.i
-.PHONY : guiTable.cpp.i
+gui/guiKeyChangeMenu.cpp.i:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/gui/guiKeyChangeMenu.cpp.i
+.PHONY : gui/guiKeyChangeMenu.cpp.i
 
-guiTable.s: guiTable.cpp.s
+gui/guiKeyChangeMenu.s: gui/guiKeyChangeMenu.cpp.s
 
-.PHONY : guiTable.s
+.PHONY : gui/guiKeyChangeMenu.s
 
 # target to generate assembly for a file
-guiTable.cpp.s:
-	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/guiTable.cpp.s
-.PHONY : guiTable.cpp.s
+gui/guiKeyChangeMenu.cpp.s:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/gui/guiKeyChangeMenu.cpp.s
+.PHONY : gui/guiKeyChangeMenu.cpp.s
 
-guiVolumeChange.o: guiVolumeChange.cpp.o
+gui/guiPasswordChange.o: gui/guiPasswordChange.cpp.o
 
-.PHONY : guiVolumeChange.o
+.PHONY : gui/guiPasswordChange.o
 
 # target to build an object file
-guiVolumeChange.cpp.o:
-	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/guiVolumeChange.cpp.o
-.PHONY : guiVolumeChange.cpp.o
+gui/guiPasswordChange.cpp.o:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/gui/guiPasswordChange.cpp.o
+.PHONY : gui/guiPasswordChange.cpp.o
 
-guiVolumeChange.i: guiVolumeChange.cpp.i
+gui/guiPasswordChange.i: gui/guiPasswordChange.cpp.i
 
-.PHONY : guiVolumeChange.i
+.PHONY : gui/guiPasswordChange.i
 
 # target to preprocess a source file
-guiVolumeChange.cpp.i:
-	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/guiVolumeChange.cpp.i
-.PHONY : guiVolumeChange.cpp.i
+gui/guiPasswordChange.cpp.i:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/gui/guiPasswordChange.cpp.i
+.PHONY : gui/guiPasswordChange.cpp.i
 
-guiVolumeChange.s: guiVolumeChange.cpp.s
+gui/guiPasswordChange.s: gui/guiPasswordChange.cpp.s
 
-.PHONY : guiVolumeChange.s
+.PHONY : gui/guiPasswordChange.s
 
 # target to generate assembly for a file
-guiVolumeChange.cpp.s:
-	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/guiVolumeChange.cpp.s
-.PHONY : guiVolumeChange.cpp.s
+gui/guiPasswordChange.cpp.s:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/gui/guiPasswordChange.cpp.s
+.PHONY : gui/guiPasswordChange.cpp.s
 
-guiscalingfilter.o: guiscalingfilter.cpp.o
+gui/guiPathSelectMenu.o: gui/guiPathSelectMenu.cpp.o
 
-.PHONY : guiscalingfilter.o
+.PHONY : gui/guiPathSelectMenu.o
 
 # target to build an object file
-guiscalingfilter.cpp.o:
-	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/guiscalingfilter.cpp.o
-.PHONY : guiscalingfilter.cpp.o
+gui/guiPathSelectMenu.cpp.o:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/gui/guiPathSelectMenu.cpp.o
+.PHONY : gui/guiPathSelectMenu.cpp.o
 
-guiscalingfilter.i: guiscalingfilter.cpp.i
+gui/guiPathSelectMenu.i: gui/guiPathSelectMenu.cpp.i
 
-.PHONY : guiscalingfilter.i
+.PHONY : gui/guiPathSelectMenu.i
 
 # target to preprocess a source file
-guiscalingfilter.cpp.i:
-	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/guiscalingfilter.cpp.i
-.PHONY : guiscalingfilter.cpp.i
+gui/guiPathSelectMenu.cpp.i:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/gui/guiPathSelectMenu.cpp.i
+.PHONY : gui/guiPathSelectMenu.cpp.i
 
-guiscalingfilter.s: guiscalingfilter.cpp.s
+gui/guiPathSelectMenu.s: gui/guiPathSelectMenu.cpp.s
 
-.PHONY : guiscalingfilter.s
+.PHONY : gui/guiPathSelectMenu.s
 
 # target to generate assembly for a file
-guiscalingfilter.cpp.s:
-	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/guiscalingfilter.cpp.s
-.PHONY : guiscalingfilter.cpp.s
+gui/guiPathSelectMenu.cpp.s:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/gui/guiPathSelectMenu.cpp.s
+.PHONY : gui/guiPathSelectMenu.cpp.s
+
+gui/guiTable.o: gui/guiTable.cpp.o
+
+.PHONY : gui/guiTable.o
+
+# target to build an object file
+gui/guiTable.cpp.o:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/gui/guiTable.cpp.o
+.PHONY : gui/guiTable.cpp.o
+
+gui/guiTable.i: gui/guiTable.cpp.i
+
+.PHONY : gui/guiTable.i
+
+# target to preprocess a source file
+gui/guiTable.cpp.i:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/gui/guiTable.cpp.i
+.PHONY : gui/guiTable.cpp.i
+
+gui/guiTable.s: gui/guiTable.cpp.s
+
+.PHONY : gui/guiTable.s
+
+# target to generate assembly for a file
+gui/guiTable.cpp.s:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/gui/guiTable.cpp.s
+.PHONY : gui/guiTable.cpp.s
+
+gui/guiVolumeChange.o: gui/guiVolumeChange.cpp.o
+
+.PHONY : gui/guiVolumeChange.o
+
+# target to build an object file
+gui/guiVolumeChange.cpp.o:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/gui/guiVolumeChange.cpp.o
+.PHONY : gui/guiVolumeChange.cpp.o
+
+gui/guiVolumeChange.i: gui/guiVolumeChange.cpp.i
+
+.PHONY : gui/guiVolumeChange.i
+
+# target to preprocess a source file
+gui/guiVolumeChange.cpp.i:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/gui/guiVolumeChange.cpp.i
+.PHONY : gui/guiVolumeChange.cpp.i
+
+gui/guiVolumeChange.s: gui/guiVolumeChange.cpp.s
+
+.PHONY : gui/guiVolumeChange.s
+
+# target to generate assembly for a file
+gui/guiVolumeChange.cpp.s:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/gui/guiVolumeChange.cpp.s
+.PHONY : gui/guiVolumeChange.cpp.s
+
+gui/intlGUIEditBox.o: gui/intlGUIEditBox.cpp.o
+
+.PHONY : gui/intlGUIEditBox.o
+
+# target to build an object file
+gui/intlGUIEditBox.cpp.o:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/gui/intlGUIEditBox.cpp.o
+.PHONY : gui/intlGUIEditBox.cpp.o
+
+gui/intlGUIEditBox.i: gui/intlGUIEditBox.cpp.i
+
+.PHONY : gui/intlGUIEditBox.i
+
+# target to preprocess a source file
+gui/intlGUIEditBox.cpp.i:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/gui/intlGUIEditBox.cpp.i
+.PHONY : gui/intlGUIEditBox.cpp.i
+
+gui/intlGUIEditBox.s: gui/intlGUIEditBox.cpp.s
+
+.PHONY : gui/intlGUIEditBox.s
+
+# target to generate assembly for a file
+gui/intlGUIEditBox.cpp.s:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/gui/intlGUIEditBox.cpp.s
+.PHONY : gui/intlGUIEditBox.cpp.s
+
+gui/modalMenu.o: gui/modalMenu.cpp.o
+
+.PHONY : gui/modalMenu.o
+
+# target to build an object file
+gui/modalMenu.cpp.o:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/gui/modalMenu.cpp.o
+.PHONY : gui/modalMenu.cpp.o
+
+gui/modalMenu.i: gui/modalMenu.cpp.i
+
+.PHONY : gui/modalMenu.i
+
+# target to preprocess a source file
+gui/modalMenu.cpp.i:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/gui/modalMenu.cpp.i
+.PHONY : gui/modalMenu.cpp.i
+
+gui/modalMenu.s: gui/modalMenu.cpp.s
+
+.PHONY : gui/modalMenu.s
+
+# target to generate assembly for a file
+gui/modalMenu.cpp.s:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/gui/modalMenu.cpp.s
+.PHONY : gui/modalMenu.cpp.s
+
+gui/profilergraph.o: gui/profilergraph.cpp.o
+
+.PHONY : gui/profilergraph.o
+
+# target to build an object file
+gui/profilergraph.cpp.o:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/gui/profilergraph.cpp.o
+.PHONY : gui/profilergraph.cpp.o
+
+gui/profilergraph.i: gui/profilergraph.cpp.i
+
+.PHONY : gui/profilergraph.i
+
+# target to preprocess a source file
+gui/profilergraph.cpp.i:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/gui/profilergraph.cpp.i
+.PHONY : gui/profilergraph.cpp.i
+
+gui/profilergraph.s: gui/profilergraph.cpp.s
+
+.PHONY : gui/profilergraph.s
+
+# target to generate assembly for a file
+gui/profilergraph.cpp.s:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/gui/profilergraph.cpp.s
+.PHONY : gui/profilergraph.cpp.s
 
 httpfetch.o: httpfetch.cpp.o
 
@@ -1733,60 +2570,6 @@ hud.cpp.s:
 	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/hud.cpp.s
 .PHONY : hud.cpp.s
 
-imagefilters.o: imagefilters.cpp.o
-
-.PHONY : imagefilters.o
-
-# target to build an object file
-imagefilters.cpp.o:
-	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/imagefilters.cpp.o
-.PHONY : imagefilters.cpp.o
-
-imagefilters.i: imagefilters.cpp.i
-
-.PHONY : imagefilters.i
-
-# target to preprocess a source file
-imagefilters.cpp.i:
-	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/imagefilters.cpp.i
-.PHONY : imagefilters.cpp.i
-
-imagefilters.s: imagefilters.cpp.s
-
-.PHONY : imagefilters.s
-
-# target to generate assembly for a file
-imagefilters.cpp.s:
-	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/imagefilters.cpp.s
-.PHONY : imagefilters.cpp.s
-
-intlGUIEditBox.o: intlGUIEditBox.cpp.o
-
-.PHONY : intlGUIEditBox.o
-
-# target to build an object file
-intlGUIEditBox.cpp.o:
-	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/intlGUIEditBox.cpp.o
-.PHONY : intlGUIEditBox.cpp.o
-
-intlGUIEditBox.i: intlGUIEditBox.cpp.i
-
-.PHONY : intlGUIEditBox.i
-
-# target to preprocess a source file
-intlGUIEditBox.cpp.i:
-	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/intlGUIEditBox.cpp.i
-.PHONY : intlGUIEditBox.cpp.i
-
-intlGUIEditBox.s: intlGUIEditBox.cpp.s
-
-.PHONY : intlGUIEditBox.s
-
-# target to generate assembly for a file
-intlGUIEditBox.cpp.s:
-	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/intlGUIEditBox.cpp.s
-.PHONY : intlGUIEditBox.cpp.s
-
 inventory.o: inventory.cpp.o
 
 .PHONY : inventory.o
@@ -1840,6 +2623,33 @@ inventorymanager.s: inventorymanager.cpp.s
 inventorymanager.cpp.s:
 	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/inventorymanager.cpp.s
 .PHONY : inventorymanager.cpp.s
+
+irrlicht_changes/CGUITTFont.o: irrlicht_changes/CGUITTFont.cpp.o
+
+.PHONY : irrlicht_changes/CGUITTFont.o
+
+# target to build an object file
+irrlicht_changes/CGUITTFont.cpp.o:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/irrlicht_changes/CGUITTFont.cpp.o
+.PHONY : irrlicht_changes/CGUITTFont.cpp.o
+
+irrlicht_changes/CGUITTFont.i: irrlicht_changes/CGUITTFont.cpp.i
+
+.PHONY : irrlicht_changes/CGUITTFont.i
+
+# target to preprocess a source file
+irrlicht_changes/CGUITTFont.cpp.i:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/irrlicht_changes/CGUITTFont.cpp.i
+.PHONY : irrlicht_changes/CGUITTFont.cpp.i
+
+irrlicht_changes/CGUITTFont.s: irrlicht_changes/CGUITTFont.cpp.s
+
+.PHONY : irrlicht_changes/CGUITTFont.s
+
+# target to generate assembly for a file
+irrlicht_changes/CGUITTFont.cpp.s:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/irrlicht_changes/CGUITTFont.cpp.s
+.PHONY : irrlicht_changes/CGUITTFont.cpp.s
 
 irrlicht_changes/static_text.o: irrlicht_changes/static_text.cpp.o
 
@@ -1922,33 +2732,6 @@ itemstackmetadata.cpp.s:
 	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/itemstackmetadata.cpp.s
 .PHONY : itemstackmetadata.cpp.s
 
-keycode.o: keycode.cpp.o
-
-.PHONY : keycode.o
-
-# target to build an object file
-keycode.cpp.o:
-	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/keycode.cpp.o
-.PHONY : keycode.cpp.o
-
-keycode.i: keycode.cpp.i
-
-.PHONY : keycode.i
-
-# target to preprocess a source file
-keycode.cpp.i:
-	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/keycode.cpp.i
-.PHONY : keycode.cpp.i
-
-keycode.s: keycode.cpp.s
-
-.PHONY : keycode.s
-
-# target to generate assembly for a file
-keycode.cpp.s:
-	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/keycode.cpp.s
-.PHONY : keycode.cpp.s
-
 light.o: light.cpp.o
 
 .PHONY : light.o
@@ -1975,33 +2758,6 @@ light.s: light.cpp.s
 light.cpp.s:
 	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/light.cpp.s
 .PHONY : light.cpp.s
-
-localplayer.o: localplayer.cpp.o
-
-.PHONY : localplayer.o
-
-# target to build an object file
-localplayer.cpp.o:
-	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/localplayer.cpp.o
-.PHONY : localplayer.cpp.o
-
-localplayer.i: localplayer.cpp.i
-
-.PHONY : localplayer.i
-
-# target to preprocess a source file
-localplayer.cpp.i:
-	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/localplayer.cpp.i
-.PHONY : localplayer.cpp.i
-
-localplayer.s: localplayer.cpp.s
-
-.PHONY : localplayer.s
-
-# target to generate assembly for a file
-localplayer.cpp.s:
-	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/localplayer.cpp.s
-.PHONY : localplayer.cpp.s
 
 log.o: log.cpp.o
 
@@ -2138,248 +2894,437 @@ mapblock.cpp.s:
 	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/mapblock.cpp.s
 .PHONY : mapblock.cpp.s
 
-mapblock_mesh.o: mapblock_mesh.cpp.o
+mapgen/cavegen.o: mapgen/cavegen.cpp.o
 
-.PHONY : mapblock_mesh.o
-
-# target to build an object file
-mapblock_mesh.cpp.o:
-	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/mapblock_mesh.cpp.o
-.PHONY : mapblock_mesh.cpp.o
-
-mapblock_mesh.i: mapblock_mesh.cpp.i
-
-.PHONY : mapblock_mesh.i
-
-# target to preprocess a source file
-mapblock_mesh.cpp.i:
-	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/mapblock_mesh.cpp.i
-.PHONY : mapblock_mesh.cpp.i
-
-mapblock_mesh.s: mapblock_mesh.cpp.s
-
-.PHONY : mapblock_mesh.s
-
-# target to generate assembly for a file
-mapblock_mesh.cpp.s:
-	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/mapblock_mesh.cpp.s
-.PHONY : mapblock_mesh.cpp.s
-
-mapgen.o: mapgen.cpp.o
-
-.PHONY : mapgen.o
+.PHONY : mapgen/cavegen.o
 
 # target to build an object file
-mapgen.cpp.o:
-	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/mapgen.cpp.o
-.PHONY : mapgen.cpp.o
+mapgen/cavegen.cpp.o:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/mapgen/cavegen.cpp.o
+.PHONY : mapgen/cavegen.cpp.o
 
-mapgen.i: mapgen.cpp.i
+mapgen/cavegen.i: mapgen/cavegen.cpp.i
 
-.PHONY : mapgen.i
+.PHONY : mapgen/cavegen.i
 
 # target to preprocess a source file
-mapgen.cpp.i:
-	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/mapgen.cpp.i
-.PHONY : mapgen.cpp.i
+mapgen/cavegen.cpp.i:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/mapgen/cavegen.cpp.i
+.PHONY : mapgen/cavegen.cpp.i
 
-mapgen.s: mapgen.cpp.s
+mapgen/cavegen.s: mapgen/cavegen.cpp.s
 
-.PHONY : mapgen.s
+.PHONY : mapgen/cavegen.s
 
 # target to generate assembly for a file
-mapgen.cpp.s:
-	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/mapgen.cpp.s
-.PHONY : mapgen.cpp.s
+mapgen/cavegen.cpp.s:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/mapgen/cavegen.cpp.s
+.PHONY : mapgen/cavegen.cpp.s
 
-mapgen_flat.o: mapgen_flat.cpp.o
+mapgen/dungeongen.o: mapgen/dungeongen.cpp.o
 
-.PHONY : mapgen_flat.o
+.PHONY : mapgen/dungeongen.o
 
 # target to build an object file
-mapgen_flat.cpp.o:
-	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/mapgen_flat.cpp.o
-.PHONY : mapgen_flat.cpp.o
+mapgen/dungeongen.cpp.o:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/mapgen/dungeongen.cpp.o
+.PHONY : mapgen/dungeongen.cpp.o
 
-mapgen_flat.i: mapgen_flat.cpp.i
+mapgen/dungeongen.i: mapgen/dungeongen.cpp.i
 
-.PHONY : mapgen_flat.i
+.PHONY : mapgen/dungeongen.i
 
 # target to preprocess a source file
-mapgen_flat.cpp.i:
-	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/mapgen_flat.cpp.i
-.PHONY : mapgen_flat.cpp.i
+mapgen/dungeongen.cpp.i:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/mapgen/dungeongen.cpp.i
+.PHONY : mapgen/dungeongen.cpp.i
 
-mapgen_flat.s: mapgen_flat.cpp.s
+mapgen/dungeongen.s: mapgen/dungeongen.cpp.s
 
-.PHONY : mapgen_flat.s
+.PHONY : mapgen/dungeongen.s
 
 # target to generate assembly for a file
-mapgen_flat.cpp.s:
-	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/mapgen_flat.cpp.s
-.PHONY : mapgen_flat.cpp.s
+mapgen/dungeongen.cpp.s:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/mapgen/dungeongen.cpp.s
+.PHONY : mapgen/dungeongen.cpp.s
 
-mapgen_fractal.o: mapgen_fractal.cpp.o
+mapgen/mapgen.o: mapgen/mapgen.cpp.o
 
-.PHONY : mapgen_fractal.o
+.PHONY : mapgen/mapgen.o
 
 # target to build an object file
-mapgen_fractal.cpp.o:
-	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/mapgen_fractal.cpp.o
-.PHONY : mapgen_fractal.cpp.o
+mapgen/mapgen.cpp.o:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/mapgen/mapgen.cpp.o
+.PHONY : mapgen/mapgen.cpp.o
 
-mapgen_fractal.i: mapgen_fractal.cpp.i
+mapgen/mapgen.i: mapgen/mapgen.cpp.i
 
-.PHONY : mapgen_fractal.i
+.PHONY : mapgen/mapgen.i
 
 # target to preprocess a source file
-mapgen_fractal.cpp.i:
-	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/mapgen_fractal.cpp.i
-.PHONY : mapgen_fractal.cpp.i
+mapgen/mapgen.cpp.i:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/mapgen/mapgen.cpp.i
+.PHONY : mapgen/mapgen.cpp.i
 
-mapgen_fractal.s: mapgen_fractal.cpp.s
+mapgen/mapgen.s: mapgen/mapgen.cpp.s
 
-.PHONY : mapgen_fractal.s
+.PHONY : mapgen/mapgen.s
 
 # target to generate assembly for a file
-mapgen_fractal.cpp.s:
-	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/mapgen_fractal.cpp.s
-.PHONY : mapgen_fractal.cpp.s
+mapgen/mapgen.cpp.s:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/mapgen/mapgen.cpp.s
+.PHONY : mapgen/mapgen.cpp.s
 
-mapgen_singlenode.o: mapgen_singlenode.cpp.o
+mapgen/mapgen_carpathian.o: mapgen/mapgen_carpathian.cpp.o
 
-.PHONY : mapgen_singlenode.o
+.PHONY : mapgen/mapgen_carpathian.o
 
 # target to build an object file
-mapgen_singlenode.cpp.o:
-	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/mapgen_singlenode.cpp.o
-.PHONY : mapgen_singlenode.cpp.o
+mapgen/mapgen_carpathian.cpp.o:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/mapgen/mapgen_carpathian.cpp.o
+.PHONY : mapgen/mapgen_carpathian.cpp.o
 
-mapgen_singlenode.i: mapgen_singlenode.cpp.i
+mapgen/mapgen_carpathian.i: mapgen/mapgen_carpathian.cpp.i
 
-.PHONY : mapgen_singlenode.i
+.PHONY : mapgen/mapgen_carpathian.i
 
 # target to preprocess a source file
-mapgen_singlenode.cpp.i:
-	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/mapgen_singlenode.cpp.i
-.PHONY : mapgen_singlenode.cpp.i
+mapgen/mapgen_carpathian.cpp.i:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/mapgen/mapgen_carpathian.cpp.i
+.PHONY : mapgen/mapgen_carpathian.cpp.i
 
-mapgen_singlenode.s: mapgen_singlenode.cpp.s
+mapgen/mapgen_carpathian.s: mapgen/mapgen_carpathian.cpp.s
 
-.PHONY : mapgen_singlenode.s
+.PHONY : mapgen/mapgen_carpathian.s
 
 # target to generate assembly for a file
-mapgen_singlenode.cpp.s:
-	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/mapgen_singlenode.cpp.s
-.PHONY : mapgen_singlenode.cpp.s
+mapgen/mapgen_carpathian.cpp.s:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/mapgen/mapgen_carpathian.cpp.s
+.PHONY : mapgen/mapgen_carpathian.cpp.s
 
-mapgen_v5.o: mapgen_v5.cpp.o
+mapgen/mapgen_flat.o: mapgen/mapgen_flat.cpp.o
 
-.PHONY : mapgen_v5.o
+.PHONY : mapgen/mapgen_flat.o
 
 # target to build an object file
-mapgen_v5.cpp.o:
-	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/mapgen_v5.cpp.o
-.PHONY : mapgen_v5.cpp.o
+mapgen/mapgen_flat.cpp.o:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/mapgen/mapgen_flat.cpp.o
+.PHONY : mapgen/mapgen_flat.cpp.o
 
-mapgen_v5.i: mapgen_v5.cpp.i
+mapgen/mapgen_flat.i: mapgen/mapgen_flat.cpp.i
 
-.PHONY : mapgen_v5.i
+.PHONY : mapgen/mapgen_flat.i
 
 # target to preprocess a source file
-mapgen_v5.cpp.i:
-	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/mapgen_v5.cpp.i
-.PHONY : mapgen_v5.cpp.i
+mapgen/mapgen_flat.cpp.i:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/mapgen/mapgen_flat.cpp.i
+.PHONY : mapgen/mapgen_flat.cpp.i
 
-mapgen_v5.s: mapgen_v5.cpp.s
+mapgen/mapgen_flat.s: mapgen/mapgen_flat.cpp.s
 
-.PHONY : mapgen_v5.s
+.PHONY : mapgen/mapgen_flat.s
 
 # target to generate assembly for a file
-mapgen_v5.cpp.s:
-	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/mapgen_v5.cpp.s
-.PHONY : mapgen_v5.cpp.s
+mapgen/mapgen_flat.cpp.s:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/mapgen/mapgen_flat.cpp.s
+.PHONY : mapgen/mapgen_flat.cpp.s
 
-mapgen_v6.o: mapgen_v6.cpp.o
+mapgen/mapgen_fractal.o: mapgen/mapgen_fractal.cpp.o
 
-.PHONY : mapgen_v6.o
+.PHONY : mapgen/mapgen_fractal.o
 
 # target to build an object file
-mapgen_v6.cpp.o:
-	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/mapgen_v6.cpp.o
-.PHONY : mapgen_v6.cpp.o
+mapgen/mapgen_fractal.cpp.o:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/mapgen/mapgen_fractal.cpp.o
+.PHONY : mapgen/mapgen_fractal.cpp.o
 
-mapgen_v6.i: mapgen_v6.cpp.i
+mapgen/mapgen_fractal.i: mapgen/mapgen_fractal.cpp.i
 
-.PHONY : mapgen_v6.i
+.PHONY : mapgen/mapgen_fractal.i
 
 # target to preprocess a source file
-mapgen_v6.cpp.i:
-	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/mapgen_v6.cpp.i
-.PHONY : mapgen_v6.cpp.i
+mapgen/mapgen_fractal.cpp.i:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/mapgen/mapgen_fractal.cpp.i
+.PHONY : mapgen/mapgen_fractal.cpp.i
 
-mapgen_v6.s: mapgen_v6.cpp.s
+mapgen/mapgen_fractal.s: mapgen/mapgen_fractal.cpp.s
 
-.PHONY : mapgen_v6.s
+.PHONY : mapgen/mapgen_fractal.s
 
 # target to generate assembly for a file
-mapgen_v6.cpp.s:
-	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/mapgen_v6.cpp.s
-.PHONY : mapgen_v6.cpp.s
+mapgen/mapgen_fractal.cpp.s:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/mapgen/mapgen_fractal.cpp.s
+.PHONY : mapgen/mapgen_fractal.cpp.s
 
-mapgen_v7.o: mapgen_v7.cpp.o
+mapgen/mapgen_singlenode.o: mapgen/mapgen_singlenode.cpp.o
 
-.PHONY : mapgen_v7.o
+.PHONY : mapgen/mapgen_singlenode.o
 
 # target to build an object file
-mapgen_v7.cpp.o:
-	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/mapgen_v7.cpp.o
-.PHONY : mapgen_v7.cpp.o
+mapgen/mapgen_singlenode.cpp.o:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/mapgen/mapgen_singlenode.cpp.o
+.PHONY : mapgen/mapgen_singlenode.cpp.o
 
-mapgen_v7.i: mapgen_v7.cpp.i
+mapgen/mapgen_singlenode.i: mapgen/mapgen_singlenode.cpp.i
 
-.PHONY : mapgen_v7.i
+.PHONY : mapgen/mapgen_singlenode.i
 
 # target to preprocess a source file
-mapgen_v7.cpp.i:
-	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/mapgen_v7.cpp.i
-.PHONY : mapgen_v7.cpp.i
+mapgen/mapgen_singlenode.cpp.i:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/mapgen/mapgen_singlenode.cpp.i
+.PHONY : mapgen/mapgen_singlenode.cpp.i
 
-mapgen_v7.s: mapgen_v7.cpp.s
+mapgen/mapgen_singlenode.s: mapgen/mapgen_singlenode.cpp.s
 
-.PHONY : mapgen_v7.s
+.PHONY : mapgen/mapgen_singlenode.s
 
 # target to generate assembly for a file
-mapgen_v7.cpp.s:
-	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/mapgen_v7.cpp.s
-.PHONY : mapgen_v7.cpp.s
+mapgen/mapgen_singlenode.cpp.s:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/mapgen/mapgen_singlenode.cpp.s
+.PHONY : mapgen/mapgen_singlenode.cpp.s
 
-mapgen_valleys.o: mapgen_valleys.cpp.o
+mapgen/mapgen_v5.o: mapgen/mapgen_v5.cpp.o
 
-.PHONY : mapgen_valleys.o
+.PHONY : mapgen/mapgen_v5.o
 
 # target to build an object file
-mapgen_valleys.cpp.o:
-	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/mapgen_valleys.cpp.o
-.PHONY : mapgen_valleys.cpp.o
+mapgen/mapgen_v5.cpp.o:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/mapgen/mapgen_v5.cpp.o
+.PHONY : mapgen/mapgen_v5.cpp.o
 
-mapgen_valleys.i: mapgen_valleys.cpp.i
+mapgen/mapgen_v5.i: mapgen/mapgen_v5.cpp.i
 
-.PHONY : mapgen_valleys.i
+.PHONY : mapgen/mapgen_v5.i
 
 # target to preprocess a source file
-mapgen_valleys.cpp.i:
-	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/mapgen_valleys.cpp.i
-.PHONY : mapgen_valleys.cpp.i
+mapgen/mapgen_v5.cpp.i:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/mapgen/mapgen_v5.cpp.i
+.PHONY : mapgen/mapgen_v5.cpp.i
 
-mapgen_valleys.s: mapgen_valleys.cpp.s
+mapgen/mapgen_v5.s: mapgen/mapgen_v5.cpp.s
 
-.PHONY : mapgen_valleys.s
+.PHONY : mapgen/mapgen_v5.s
 
 # target to generate assembly for a file
-mapgen_valleys.cpp.s:
-	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/mapgen_valleys.cpp.s
-.PHONY : mapgen_valleys.cpp.s
+mapgen/mapgen_v5.cpp.s:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/mapgen/mapgen_v5.cpp.s
+.PHONY : mapgen/mapgen_v5.cpp.s
+
+mapgen/mapgen_v6.o: mapgen/mapgen_v6.cpp.o
+
+.PHONY : mapgen/mapgen_v6.o
+
+# target to build an object file
+mapgen/mapgen_v6.cpp.o:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/mapgen/mapgen_v6.cpp.o
+.PHONY : mapgen/mapgen_v6.cpp.o
+
+mapgen/mapgen_v6.i: mapgen/mapgen_v6.cpp.i
+
+.PHONY : mapgen/mapgen_v6.i
+
+# target to preprocess a source file
+mapgen/mapgen_v6.cpp.i:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/mapgen/mapgen_v6.cpp.i
+.PHONY : mapgen/mapgen_v6.cpp.i
+
+mapgen/mapgen_v6.s: mapgen/mapgen_v6.cpp.s
+
+.PHONY : mapgen/mapgen_v6.s
+
+# target to generate assembly for a file
+mapgen/mapgen_v6.cpp.s:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/mapgen/mapgen_v6.cpp.s
+.PHONY : mapgen/mapgen_v6.cpp.s
+
+mapgen/mapgen_v7.o: mapgen/mapgen_v7.cpp.o
+
+.PHONY : mapgen/mapgen_v7.o
+
+# target to build an object file
+mapgen/mapgen_v7.cpp.o:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/mapgen/mapgen_v7.cpp.o
+.PHONY : mapgen/mapgen_v7.cpp.o
+
+mapgen/mapgen_v7.i: mapgen/mapgen_v7.cpp.i
+
+.PHONY : mapgen/mapgen_v7.i
+
+# target to preprocess a source file
+mapgen/mapgen_v7.cpp.i:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/mapgen/mapgen_v7.cpp.i
+.PHONY : mapgen/mapgen_v7.cpp.i
+
+mapgen/mapgen_v7.s: mapgen/mapgen_v7.cpp.s
+
+.PHONY : mapgen/mapgen_v7.s
+
+# target to generate assembly for a file
+mapgen/mapgen_v7.cpp.s:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/mapgen/mapgen_v7.cpp.s
+.PHONY : mapgen/mapgen_v7.cpp.s
+
+mapgen/mapgen_valleys.o: mapgen/mapgen_valleys.cpp.o
+
+.PHONY : mapgen/mapgen_valleys.o
+
+# target to build an object file
+mapgen/mapgen_valleys.cpp.o:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/mapgen/mapgen_valleys.cpp.o
+.PHONY : mapgen/mapgen_valleys.cpp.o
+
+mapgen/mapgen_valleys.i: mapgen/mapgen_valleys.cpp.i
+
+.PHONY : mapgen/mapgen_valleys.i
+
+# target to preprocess a source file
+mapgen/mapgen_valleys.cpp.i:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/mapgen/mapgen_valleys.cpp.i
+.PHONY : mapgen/mapgen_valleys.cpp.i
+
+mapgen/mapgen_valleys.s: mapgen/mapgen_valleys.cpp.s
+
+.PHONY : mapgen/mapgen_valleys.s
+
+# target to generate assembly for a file
+mapgen/mapgen_valleys.cpp.s:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/mapgen/mapgen_valleys.cpp.s
+.PHONY : mapgen/mapgen_valleys.cpp.s
+
+mapgen/mg_biome.o: mapgen/mg_biome.cpp.o
+
+.PHONY : mapgen/mg_biome.o
+
+# target to build an object file
+mapgen/mg_biome.cpp.o:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/mapgen/mg_biome.cpp.o
+.PHONY : mapgen/mg_biome.cpp.o
+
+mapgen/mg_biome.i: mapgen/mg_biome.cpp.i
+
+.PHONY : mapgen/mg_biome.i
+
+# target to preprocess a source file
+mapgen/mg_biome.cpp.i:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/mapgen/mg_biome.cpp.i
+.PHONY : mapgen/mg_biome.cpp.i
+
+mapgen/mg_biome.s: mapgen/mg_biome.cpp.s
+
+.PHONY : mapgen/mg_biome.s
+
+# target to generate assembly for a file
+mapgen/mg_biome.cpp.s:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/mapgen/mg_biome.cpp.s
+.PHONY : mapgen/mg_biome.cpp.s
+
+mapgen/mg_decoration.o: mapgen/mg_decoration.cpp.o
+
+.PHONY : mapgen/mg_decoration.o
+
+# target to build an object file
+mapgen/mg_decoration.cpp.o:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/mapgen/mg_decoration.cpp.o
+.PHONY : mapgen/mg_decoration.cpp.o
+
+mapgen/mg_decoration.i: mapgen/mg_decoration.cpp.i
+
+.PHONY : mapgen/mg_decoration.i
+
+# target to preprocess a source file
+mapgen/mg_decoration.cpp.i:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/mapgen/mg_decoration.cpp.i
+.PHONY : mapgen/mg_decoration.cpp.i
+
+mapgen/mg_decoration.s: mapgen/mg_decoration.cpp.s
+
+.PHONY : mapgen/mg_decoration.s
+
+# target to generate assembly for a file
+mapgen/mg_decoration.cpp.s:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/mapgen/mg_decoration.cpp.s
+.PHONY : mapgen/mg_decoration.cpp.s
+
+mapgen/mg_ore.o: mapgen/mg_ore.cpp.o
+
+.PHONY : mapgen/mg_ore.o
+
+# target to build an object file
+mapgen/mg_ore.cpp.o:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/mapgen/mg_ore.cpp.o
+.PHONY : mapgen/mg_ore.cpp.o
+
+mapgen/mg_ore.i: mapgen/mg_ore.cpp.i
+
+.PHONY : mapgen/mg_ore.i
+
+# target to preprocess a source file
+mapgen/mg_ore.cpp.i:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/mapgen/mg_ore.cpp.i
+.PHONY : mapgen/mg_ore.cpp.i
+
+mapgen/mg_ore.s: mapgen/mg_ore.cpp.s
+
+.PHONY : mapgen/mg_ore.s
+
+# target to generate assembly for a file
+mapgen/mg_ore.cpp.s:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/mapgen/mg_ore.cpp.s
+.PHONY : mapgen/mg_ore.cpp.s
+
+mapgen/mg_schematic.o: mapgen/mg_schematic.cpp.o
+
+.PHONY : mapgen/mg_schematic.o
+
+# target to build an object file
+mapgen/mg_schematic.cpp.o:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/mapgen/mg_schematic.cpp.o
+.PHONY : mapgen/mg_schematic.cpp.o
+
+mapgen/mg_schematic.i: mapgen/mg_schematic.cpp.i
+
+.PHONY : mapgen/mg_schematic.i
+
+# target to preprocess a source file
+mapgen/mg_schematic.cpp.i:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/mapgen/mg_schematic.cpp.i
+.PHONY : mapgen/mg_schematic.cpp.i
+
+mapgen/mg_schematic.s: mapgen/mg_schematic.cpp.s
+
+.PHONY : mapgen/mg_schematic.s
+
+# target to generate assembly for a file
+mapgen/mg_schematic.cpp.s:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/mapgen/mg_schematic.cpp.s
+.PHONY : mapgen/mg_schematic.cpp.s
+
+mapgen/treegen.o: mapgen/treegen.cpp.o
+
+.PHONY : mapgen/treegen.o
+
+# target to build an object file
+mapgen/treegen.cpp.o:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/mapgen/treegen.cpp.o
+.PHONY : mapgen/treegen.cpp.o
+
+mapgen/treegen.i: mapgen/treegen.cpp.i
+
+.PHONY : mapgen/treegen.i
+
+# target to preprocess a source file
+mapgen/treegen.cpp.i:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/mapgen/treegen.cpp.i
+.PHONY : mapgen/treegen.cpp.i
+
+mapgen/treegen.s: mapgen/treegen.cpp.s
+
+.PHONY : mapgen/treegen.s
+
+# target to generate assembly for a file
+mapgen/treegen.cpp.s:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/mapgen/treegen.cpp.s
+.PHONY : mapgen/treegen.cpp.s
 
 mapnode.o: mapnode.cpp.o
 
@@ -2435,60 +3380,6 @@ mapsector.cpp.s:
 	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/mapsector.cpp.s
 .PHONY : mapsector.cpp.s
 
-mesh.o: mesh.cpp.o
-
-.PHONY : mesh.o
-
-# target to build an object file
-mesh.cpp.o:
-	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/mesh.cpp.o
-.PHONY : mesh.cpp.o
-
-mesh.i: mesh.cpp.i
-
-.PHONY : mesh.i
-
-# target to preprocess a source file
-mesh.cpp.i:
-	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/mesh.cpp.i
-.PHONY : mesh.cpp.i
-
-mesh.s: mesh.cpp.s
-
-.PHONY : mesh.s
-
-# target to generate assembly for a file
-mesh.cpp.s:
-	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/mesh.cpp.s
-.PHONY : mesh.cpp.s
-
-mesh_generator_thread.o: mesh_generator_thread.cpp.o
-
-.PHONY : mesh_generator_thread.o
-
-# target to build an object file
-mesh_generator_thread.cpp.o:
-	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/mesh_generator_thread.cpp.o
-.PHONY : mesh_generator_thread.cpp.o
-
-mesh_generator_thread.i: mesh_generator_thread.cpp.i
-
-.PHONY : mesh_generator_thread.i
-
-# target to preprocess a source file
-mesh_generator_thread.cpp.i:
-	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/mesh_generator_thread.cpp.i
-.PHONY : mesh_generator_thread.cpp.i
-
-mesh_generator_thread.s: mesh_generator_thread.cpp.s
-
-.PHONY : mesh_generator_thread.s
-
-# target to generate assembly for a file
-mesh_generator_thread.cpp.s:
-	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/mesh_generator_thread.cpp.s
-.PHONY : mesh_generator_thread.cpp.s
-
 metadata.o: metadata.cpp.o
 
 .PHONY : metadata.o
@@ -2516,167 +3407,32 @@ metadata.cpp.s:
 	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/metadata.cpp.s
 .PHONY : metadata.cpp.s
 
-mg_biome.o: mg_biome.cpp.o
+modchannels.o: modchannels.cpp.o
 
-.PHONY : mg_biome.o
-
-# target to build an object file
-mg_biome.cpp.o:
-	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/mg_biome.cpp.o
-.PHONY : mg_biome.cpp.o
-
-mg_biome.i: mg_biome.cpp.i
-
-.PHONY : mg_biome.i
-
-# target to preprocess a source file
-mg_biome.cpp.i:
-	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/mg_biome.cpp.i
-.PHONY : mg_biome.cpp.i
-
-mg_biome.s: mg_biome.cpp.s
-
-.PHONY : mg_biome.s
-
-# target to generate assembly for a file
-mg_biome.cpp.s:
-	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/mg_biome.cpp.s
-.PHONY : mg_biome.cpp.s
-
-mg_decoration.o: mg_decoration.cpp.o
-
-.PHONY : mg_decoration.o
+.PHONY : modchannels.o
 
 # target to build an object file
-mg_decoration.cpp.o:
-	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/mg_decoration.cpp.o
-.PHONY : mg_decoration.cpp.o
+modchannels.cpp.o:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/modchannels.cpp.o
+.PHONY : modchannels.cpp.o
 
-mg_decoration.i: mg_decoration.cpp.i
+modchannels.i: modchannels.cpp.i
 
-.PHONY : mg_decoration.i
-
-# target to preprocess a source file
-mg_decoration.cpp.i:
-	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/mg_decoration.cpp.i
-.PHONY : mg_decoration.cpp.i
-
-mg_decoration.s: mg_decoration.cpp.s
-
-.PHONY : mg_decoration.s
-
-# target to generate assembly for a file
-mg_decoration.cpp.s:
-	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/mg_decoration.cpp.s
-.PHONY : mg_decoration.cpp.s
-
-mg_ore.o: mg_ore.cpp.o
-
-.PHONY : mg_ore.o
-
-# target to build an object file
-mg_ore.cpp.o:
-	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/mg_ore.cpp.o
-.PHONY : mg_ore.cpp.o
-
-mg_ore.i: mg_ore.cpp.i
-
-.PHONY : mg_ore.i
+.PHONY : modchannels.i
 
 # target to preprocess a source file
-mg_ore.cpp.i:
-	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/mg_ore.cpp.i
-.PHONY : mg_ore.cpp.i
+modchannels.cpp.i:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/modchannels.cpp.i
+.PHONY : modchannels.cpp.i
 
-mg_ore.s: mg_ore.cpp.s
+modchannels.s: modchannels.cpp.s
 
-.PHONY : mg_ore.s
-
-# target to generate assembly for a file
-mg_ore.cpp.s:
-	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/mg_ore.cpp.s
-.PHONY : mg_ore.cpp.s
-
-mg_schematic.o: mg_schematic.cpp.o
-
-.PHONY : mg_schematic.o
-
-# target to build an object file
-mg_schematic.cpp.o:
-	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/mg_schematic.cpp.o
-.PHONY : mg_schematic.cpp.o
-
-mg_schematic.i: mg_schematic.cpp.i
-
-.PHONY : mg_schematic.i
-
-# target to preprocess a source file
-mg_schematic.cpp.i:
-	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/mg_schematic.cpp.i
-.PHONY : mg_schematic.cpp.i
-
-mg_schematic.s: mg_schematic.cpp.s
-
-.PHONY : mg_schematic.s
+.PHONY : modchannels.s
 
 # target to generate assembly for a file
-mg_schematic.cpp.s:
-	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/mg_schematic.cpp.s
-.PHONY : mg_schematic.cpp.s
-
-minimap.o: minimap.cpp.o
-
-.PHONY : minimap.o
-
-# target to build an object file
-minimap.cpp.o:
-	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/minimap.cpp.o
-.PHONY : minimap.cpp.o
-
-minimap.i: minimap.cpp.i
-
-.PHONY : minimap.i
-
-# target to preprocess a source file
-minimap.cpp.i:
-	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/minimap.cpp.i
-.PHONY : minimap.cpp.i
-
-minimap.s: minimap.cpp.s
-
-.PHONY : minimap.s
-
-# target to generate assembly for a file
-minimap.cpp.s:
-	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/minimap.cpp.s
-.PHONY : minimap.cpp.s
-
-mods.o: mods.cpp.o
-
-.PHONY : mods.o
-
-# target to build an object file
-mods.cpp.o:
-	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/mods.cpp.o
-.PHONY : mods.cpp.o
-
-mods.i: mods.cpp.i
-
-.PHONY : mods.i
-
-# target to preprocess a source file
-mods.cpp.i:
-	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/mods.cpp.i
-.PHONY : mods.cpp.i
-
-mods.s: mods.cpp.s
-
-.PHONY : mods.s
-
-# target to generate assembly for a file
-mods.cpp.s:
-	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/mods.cpp.s
-.PHONY : mods.cpp.s
+modchannels.cpp.s:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/modchannels.cpp.s
+.PHONY : modchannels.cpp.s
 
 nameidmapping.o: nameidmapping.cpp.o
 
@@ -2704,6 +3460,33 @@ nameidmapping.s: nameidmapping.cpp.s
 nameidmapping.cpp.s:
 	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/nameidmapping.cpp.s
 .PHONY : nameidmapping.cpp.s
+
+network/address.o: network/address.cpp.o
+
+.PHONY : network/address.o
+
+# target to build an object file
+network/address.cpp.o:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/network/address.cpp.o
+.PHONY : network/address.cpp.o
+
+network/address.i: network/address.cpp.i
+
+.PHONY : network/address.i
+
+# target to preprocess a source file
+network/address.cpp.i:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/network/address.cpp.i
+.PHONY : network/address.cpp.i
+
+network/address.s: network/address.cpp.s
+
+.PHONY : network/address.s
+
+# target to generate assembly for a file
+network/address.cpp.s:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/network/address.cpp.s
+.PHONY : network/address.cpp.s
 
 network/clientopcodes.o: network/clientopcodes.cpp.o
 
@@ -2786,6 +3569,33 @@ network/connection.cpp.s:
 	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/network/connection.cpp.s
 .PHONY : network/connection.cpp.s
 
+network/connectionthreads.o: network/connectionthreads.cpp.o
+
+.PHONY : network/connectionthreads.o
+
+# target to build an object file
+network/connectionthreads.cpp.o:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/network/connectionthreads.cpp.o
+.PHONY : network/connectionthreads.cpp.o
+
+network/connectionthreads.i: network/connectionthreads.cpp.i
+
+.PHONY : network/connectionthreads.i
+
+# target to preprocess a source file
+network/connectionthreads.cpp.i:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/network/connectionthreads.cpp.i
+.PHONY : network/connectionthreads.cpp.i
+
+network/connectionthreads.s: network/connectionthreads.cpp.s
+
+.PHONY : network/connectionthreads.s
+
+# target to generate assembly for a file
+network/connectionthreads.cpp.s:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/network/connectionthreads.cpp.s
+.PHONY : network/connectionthreads.cpp.s
+
 network/networkpacket.o: network/networkpacket.cpp.o
 
 .PHONY : network/networkpacket.o
@@ -2866,6 +3676,33 @@ network/serverpackethandler.s: network/serverpackethandler.cpp.s
 network/serverpackethandler.cpp.s:
 	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/network/serverpackethandler.cpp.s
 .PHONY : network/serverpackethandler.cpp.s
+
+network/socket.o: network/socket.cpp.o
+
+.PHONY : network/socket.o
+
+# target to build an object file
+network/socket.cpp.o:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/network/socket.cpp.o
+.PHONY : network/socket.cpp.o
+
+network/socket.i: network/socket.cpp.i
+
+.PHONY : network/socket.i
+
+# target to preprocess a source file
+network/socket.cpp.i:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/network/socket.cpp.i
+.PHONY : network/socket.cpp.i
+
+network/socket.s: network/socket.cpp.s
+
+.PHONY : network/socket.s
+
+# target to generate assembly for a file
+network/socket.cpp.s:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/network/socket.cpp.s
+.PHONY : network/socket.cpp.s
 
 nodedef.o: nodedef.cpp.o
 
@@ -3028,33 +3865,6 @@ object_properties.s: object_properties.cpp.s
 object_properties.cpp.s:
 	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/object_properties.cpp.s
 .PHONY : object_properties.cpp.s
-
-particles.o: particles.cpp.o
-
-.PHONY : particles.o
-
-# target to build an object file
-particles.cpp.o:
-	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/particles.cpp.o
-.PHONY : particles.cpp.o
-
-particles.i: particles.cpp.i
-
-.PHONY : particles.i
-
-# target to preprocess a source file
-particles.cpp.i:
-	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/particles.cpp.i
-.PHONY : particles.cpp.i
-
-particles.s: particles.cpp.s
-
-.PHONY : particles.s
-
-# target to generate assembly for a file
-particles.cpp.s:
-	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/particles.cpp.s
-.PHONY : particles.cpp.s
 
 pathfinder.o: pathfinder.cpp.o
 
@@ -3434,6 +4244,33 @@ script/common/c_types.cpp.s:
 	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/script/common/c_types.cpp.s
 .PHONY : script/common/c_types.cpp.s
 
+script/common/helper.o: script/common/helper.cpp.o
+
+.PHONY : script/common/helper.o
+
+# target to build an object file
+script/common/helper.cpp.o:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/script/common/helper.cpp.o
+.PHONY : script/common/helper.cpp.o
+
+script/common/helper.i: script/common/helper.cpp.i
+
+.PHONY : script/common/helper.i
+
+# target to preprocess a source file
+script/common/helper.cpp.i:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/script/common/helper.cpp.i
+.PHONY : script/common/helper.cpp.i
+
+script/common/helper.s: script/common/helper.cpp.s
+
+.PHONY : script/common/helper.s
+
+# target to generate assembly for a file
+script/common/helper.cpp.s:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/script/common/helper.cpp.s
+.PHONY : script/common/helper.cpp.s
+
 script/cpp_api/s_async.o: script/cpp_api/s_async.cpp.o
 
 .PHONY : script/cpp_api/s_async.o
@@ -3650,6 +4487,33 @@ script/cpp_api/s_mainmenu.cpp.s:
 	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/script/cpp_api/s_mainmenu.cpp.s
 .PHONY : script/cpp_api/s_mainmenu.cpp.s
 
+script/cpp_api/s_modchannels.o: script/cpp_api/s_modchannels.cpp.o
+
+.PHONY : script/cpp_api/s_modchannels.o
+
+# target to build an object file
+script/cpp_api/s_modchannels.cpp.o:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/script/cpp_api/s_modchannels.cpp.o
+.PHONY : script/cpp_api/s_modchannels.cpp.o
+
+script/cpp_api/s_modchannels.i: script/cpp_api/s_modchannels.cpp.i
+
+.PHONY : script/cpp_api/s_modchannels.i
+
+# target to preprocess a source file
+script/cpp_api/s_modchannels.cpp.i:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/script/cpp_api/s_modchannels.cpp.i
+.PHONY : script/cpp_api/s_modchannels.cpp.i
+
+script/cpp_api/s_modchannels.s: script/cpp_api/s_modchannels.cpp.s
+
+.PHONY : script/cpp_api/s_modchannels.s
+
+# target to generate assembly for a file
+script/cpp_api/s_modchannels.cpp.s:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/script/cpp_api/s_modchannels.cpp.s
+.PHONY : script/cpp_api/s_modchannels.cpp.s
+
 script/cpp_api/s_node.o: script/cpp_api/s_node.cpp.o
 
 .PHONY : script/cpp_api/s_node.o
@@ -3811,6 +4675,33 @@ script/lua_api/l_areastore.s: script/lua_api/l_areastore.cpp.s
 script/lua_api/l_areastore.cpp.s:
 	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/script/lua_api/l_areastore.cpp.s
 .PHONY : script/lua_api/l_areastore.cpp.s
+
+script/lua_api/l_auth.o: script/lua_api/l_auth.cpp.o
+
+.PHONY : script/lua_api/l_auth.o
+
+# target to build an object file
+script/lua_api/l_auth.cpp.o:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/script/lua_api/l_auth.cpp.o
+.PHONY : script/lua_api/l_auth.cpp.o
+
+script/lua_api/l_auth.i: script/lua_api/l_auth.cpp.i
+
+.PHONY : script/lua_api/l_auth.i
+
+# target to preprocess a source file
+script/lua_api/l_auth.cpp.i:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/script/lua_api/l_auth.cpp.i
+.PHONY : script/lua_api/l_auth.cpp.i
+
+script/lua_api/l_auth.s: script/lua_api/l_auth.cpp.s
+
+.PHONY : script/lua_api/l_auth.s
+
+# target to generate assembly for a file
+script/lua_api/l_auth.cpp.s:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/script/lua_api/l_auth.cpp.s
+.PHONY : script/lua_api/l_auth.cpp.s
 
 script/lua_api/l_base.o: script/lua_api/l_base.cpp.o
 
@@ -4190,6 +5081,33 @@ script/lua_api/l_minimap.cpp.s:
 	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/script/lua_api/l_minimap.cpp.s
 .PHONY : script/lua_api/l_minimap.cpp.s
 
+script/lua_api/l_modchannels.o: script/lua_api/l_modchannels.cpp.o
+
+.PHONY : script/lua_api/l_modchannels.o
+
+# target to build an object file
+script/lua_api/l_modchannels.cpp.o:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/script/lua_api/l_modchannels.cpp.o
+.PHONY : script/lua_api/l_modchannels.cpp.o
+
+script/lua_api/l_modchannels.i: script/lua_api/l_modchannels.cpp.i
+
+.PHONY : script/lua_api/l_modchannels.i
+
+# target to preprocess a source file
+script/lua_api/l_modchannels.cpp.i:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/script/lua_api/l_modchannels.cpp.i
+.PHONY : script/lua_api/l_modchannels.cpp.i
+
+script/lua_api/l_modchannels.s: script/lua_api/l_modchannels.cpp.s
+
+.PHONY : script/lua_api/l_modchannels.s
+
+# target to generate assembly for a file
+script/lua_api/l_modchannels.cpp.s:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/script/lua_api/l_modchannels.cpp.s
+.PHONY : script/lua_api/l_modchannels.cpp.s
+
 script/lua_api/l_nodemeta.o: script/lua_api/l_nodemeta.cpp.o
 
 .PHONY : script/lua_api/l_nodemeta.o
@@ -4324,6 +5242,60 @@ script/lua_api/l_particles.s: script/lua_api/l_particles.cpp.s
 script/lua_api/l_particles.cpp.s:
 	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/script/lua_api/l_particles.cpp.s
 .PHONY : script/lua_api/l_particles.cpp.s
+
+script/lua_api/l_particles_local.o: script/lua_api/l_particles_local.cpp.o
+
+.PHONY : script/lua_api/l_particles_local.o
+
+# target to build an object file
+script/lua_api/l_particles_local.cpp.o:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/script/lua_api/l_particles_local.cpp.o
+.PHONY : script/lua_api/l_particles_local.cpp.o
+
+script/lua_api/l_particles_local.i: script/lua_api/l_particles_local.cpp.i
+
+.PHONY : script/lua_api/l_particles_local.i
+
+# target to preprocess a source file
+script/lua_api/l_particles_local.cpp.i:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/script/lua_api/l_particles_local.cpp.i
+.PHONY : script/lua_api/l_particles_local.cpp.i
+
+script/lua_api/l_particles_local.s: script/lua_api/l_particles_local.cpp.s
+
+.PHONY : script/lua_api/l_particles_local.s
+
+# target to generate assembly for a file
+script/lua_api/l_particles_local.cpp.s:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/script/lua_api/l_particles_local.cpp.s
+.PHONY : script/lua_api/l_particles_local.cpp.s
+
+script/lua_api/l_playermeta.o: script/lua_api/l_playermeta.cpp.o
+
+.PHONY : script/lua_api/l_playermeta.o
+
+# target to build an object file
+script/lua_api/l_playermeta.cpp.o:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/script/lua_api/l_playermeta.cpp.o
+.PHONY : script/lua_api/l_playermeta.cpp.o
+
+script/lua_api/l_playermeta.i: script/lua_api/l_playermeta.cpp.i
+
+.PHONY : script/lua_api/l_playermeta.i
+
+# target to preprocess a source file
+script/lua_api/l_playermeta.cpp.i:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/script/lua_api/l_playermeta.cpp.i
+.PHONY : script/lua_api/l_playermeta.cpp.i
+
+script/lua_api/l_playermeta.s: script/lua_api/l_playermeta.cpp.s
+
+.PHONY : script/lua_api/l_playermeta.s
+
+# target to generate assembly for a file
+script/lua_api/l_playermeta.cpp.s:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/script/lua_api/l_playermeta.cpp.s
+.PHONY : script/lua_api/l_playermeta.cpp.s
 
 script/lua_api/l_rollback.o: script/lua_api/l_rollback.cpp.o
 
@@ -4649,6 +5621,60 @@ server.cpp.s:
 	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/server.cpp.s
 .PHONY : server.cpp.s
 
+server/activeobjectmgr.o: server/activeobjectmgr.cpp.o
+
+.PHONY : server/activeobjectmgr.o
+
+# target to build an object file
+server/activeobjectmgr.cpp.o:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/server/activeobjectmgr.cpp.o
+.PHONY : server/activeobjectmgr.cpp.o
+
+server/activeobjectmgr.i: server/activeobjectmgr.cpp.i
+
+.PHONY : server/activeobjectmgr.i
+
+# target to preprocess a source file
+server/activeobjectmgr.cpp.i:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/server/activeobjectmgr.cpp.i
+.PHONY : server/activeobjectmgr.cpp.i
+
+server/activeobjectmgr.s: server/activeobjectmgr.cpp.s
+
+.PHONY : server/activeobjectmgr.s
+
+# target to generate assembly for a file
+server/activeobjectmgr.cpp.s:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/server/activeobjectmgr.cpp.s
+.PHONY : server/activeobjectmgr.cpp.s
+
+server/mods.o: server/mods.cpp.o
+
+.PHONY : server/mods.o
+
+# target to build an object file
+server/mods.cpp.o:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/server/mods.cpp.o
+.PHONY : server/mods.cpp.o
+
+server/mods.i: server/mods.cpp.i
+
+.PHONY : server/mods.i
+
+# target to preprocess a source file
+server/mods.cpp.i:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/server/mods.cpp.i
+.PHONY : server/mods.cpp.i
+
+server/mods.s: server/mods.cpp.s
+
+.PHONY : server/mods.s
+
+# target to generate assembly for a file
+server/mods.cpp.s:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/server/mods.cpp.s
+.PHONY : server/mods.cpp.s
+
 serverenvironment.o: serverenvironment.cpp.o
 
 .PHONY : serverenvironment.o
@@ -4757,141 +5783,6 @@ settings.cpp.s:
 	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/settings.cpp.s
 .PHONY : settings.cpp.s
 
-shader.o: shader.cpp.o
-
-.PHONY : shader.o
-
-# target to build an object file
-shader.cpp.o:
-	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/shader.cpp.o
-.PHONY : shader.cpp.o
-
-shader.i: shader.cpp.i
-
-.PHONY : shader.i
-
-# target to preprocess a source file
-shader.cpp.i:
-	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/shader.cpp.i
-.PHONY : shader.cpp.i
-
-shader.s: shader.cpp.s
-
-.PHONY : shader.s
-
-# target to generate assembly for a file
-shader.cpp.s:
-	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/shader.cpp.s
-.PHONY : shader.cpp.s
-
-sky.o: sky.cpp.o
-
-.PHONY : sky.o
-
-# target to build an object file
-sky.cpp.o:
-	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/sky.cpp.o
-.PHONY : sky.cpp.o
-
-sky.i: sky.cpp.i
-
-.PHONY : sky.i
-
-# target to preprocess a source file
-sky.cpp.i:
-	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/sky.cpp.i
-.PHONY : sky.cpp.i
-
-sky.s: sky.cpp.s
-
-.PHONY : sky.s
-
-# target to generate assembly for a file
-sky.cpp.s:
-	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/sky.cpp.s
-.PHONY : sky.cpp.s
-
-socket.o: socket.cpp.o
-
-.PHONY : socket.o
-
-# target to build an object file
-socket.cpp.o:
-	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/socket.cpp.o
-.PHONY : socket.cpp.o
-
-socket.i: socket.cpp.i
-
-.PHONY : socket.i
-
-# target to preprocess a source file
-socket.cpp.i:
-	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/socket.cpp.i
-.PHONY : socket.cpp.i
-
-socket.s: socket.cpp.s
-
-.PHONY : socket.s
-
-# target to generate assembly for a file
-socket.cpp.s:
-	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/socket.cpp.s
-.PHONY : socket.cpp.s
-
-sound.o: sound.cpp.o
-
-.PHONY : sound.o
-
-# target to build an object file
-sound.cpp.o:
-	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/sound.cpp.o
-.PHONY : sound.cpp.o
-
-sound.i: sound.cpp.i
-
-.PHONY : sound.i
-
-# target to preprocess a source file
-sound.cpp.i:
-	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/sound.cpp.i
-.PHONY : sound.cpp.i
-
-sound.s: sound.cpp.s
-
-.PHONY : sound.s
-
-# target to generate assembly for a file
-sound.cpp.s:
-	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/sound.cpp.s
-.PHONY : sound.cpp.s
-
-sound_openal.o: sound_openal.cpp.o
-
-.PHONY : sound_openal.o
-
-# target to build an object file
-sound_openal.cpp.o:
-	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/sound_openal.cpp.o
-.PHONY : sound_openal.cpp.o
-
-sound_openal.i: sound_openal.cpp.i
-
-.PHONY : sound_openal.i
-
-# target to preprocess a source file
-sound_openal.cpp.i:
-	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/sound_openal.cpp.i
-.PHONY : sound_openal.cpp.i
-
-sound_openal.s: sound_openal.cpp.s
-
-.PHONY : sound_openal.s
-
-# target to generate assembly for a file
-sound_openal.cpp.s:
-	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/sound_openal.cpp.s
-.PHONY : sound_openal.cpp.s
-
 staticobject.o: staticobject.cpp.o
 
 .PHONY : staticobject.o
@@ -4918,33 +5809,6 @@ staticobject.s: staticobject.cpp.s
 staticobject.cpp.s:
 	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/staticobject.cpp.s
 .PHONY : staticobject.cpp.s
-
-subgame.o: subgame.cpp.o
-
-.PHONY : subgame.o
-
-# target to build an object file
-subgame.cpp.o:
-	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/subgame.cpp.o
-.PHONY : subgame.cpp.o
-
-subgame.i: subgame.cpp.i
-
-.PHONY : subgame.i
-
-# target to preprocess a source file
-subgame.cpp.i:
-	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/subgame.cpp.i
-.PHONY : subgame.cpp.i
-
-subgame.s: subgame.cpp.s
-
-.PHONY : subgame.s
-
-# target to generate assembly for a file
-subgame.cpp.s:
-	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/subgame.cpp.s
-.PHONY : subgame.cpp.s
 
 terminal_chat_console.o: terminal_chat_console.cpp.o
 
@@ -4999,33 +5863,6 @@ threading/event.s: threading/event.cpp.s
 threading/event.cpp.s:
 	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/threading/event.cpp.s
 .PHONY : threading/event.cpp.s
-
-threading/mutex.o: threading/mutex.cpp.o
-
-.PHONY : threading/mutex.o
-
-# target to build an object file
-threading/mutex.cpp.o:
-	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/threading/mutex.cpp.o
-.PHONY : threading/mutex.cpp.o
-
-threading/mutex.i: threading/mutex.cpp.i
-
-.PHONY : threading/mutex.i
-
-# target to preprocess a source file
-threading/mutex.cpp.i:
-	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/threading/mutex.cpp.i
-.PHONY : threading/mutex.cpp.i
-
-threading/mutex.s: threading/mutex.cpp.s
-
-.PHONY : threading/mutex.s
-
-# target to generate assembly for a file
-threading/mutex.cpp.s:
-	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/threading/mutex.cpp.s
-.PHONY : threading/mutex.cpp.s
 
 threading/semaphore.o: threading/semaphore.cpp.o
 
@@ -5135,32 +5972,32 @@ tool.cpp.s:
 	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/tool.cpp.s
 .PHONY : tool.cpp.s
 
-treegen.o: treegen.cpp.o
+translation.o: translation.cpp.o
 
-.PHONY : treegen.o
+.PHONY : translation.o
 
 # target to build an object file
-treegen.cpp.o:
-	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/treegen.cpp.o
-.PHONY : treegen.cpp.o
+translation.cpp.o:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/translation.cpp.o
+.PHONY : translation.cpp.o
 
-treegen.i: treegen.cpp.i
+translation.i: translation.cpp.i
 
-.PHONY : treegen.i
+.PHONY : translation.i
 
 # target to preprocess a source file
-treegen.cpp.i:
-	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/treegen.cpp.i
-.PHONY : treegen.cpp.i
+translation.cpp.i:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/translation.cpp.i
+.PHONY : translation.cpp.i
 
-treegen.s: treegen.cpp.s
+translation.s: translation.cpp.s
 
-.PHONY : treegen.s
+.PHONY : translation.s
 
 # target to generate assembly for a file
-treegen.cpp.s:
-	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/treegen.cpp.s
-.PHONY : treegen.cpp.s
+translation.cpp.s:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/translation.cpp.s
+.PHONY : translation.cpp.s
 
 unittest/test.o: unittest/test.cpp.o
 
@@ -5189,6 +6026,33 @@ unittest/test.cpp.s:
 	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/unittest/test.cpp.s
 .PHONY : unittest/test.cpp.s
 
+unittest/test_activeobject.o: unittest/test_activeobject.cpp.o
+
+.PHONY : unittest/test_activeobject.o
+
+# target to build an object file
+unittest/test_activeobject.cpp.o:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/unittest/test_activeobject.cpp.o
+.PHONY : unittest/test_activeobject.cpp.o
+
+unittest/test_activeobject.i: unittest/test_activeobject.cpp.i
+
+.PHONY : unittest/test_activeobject.i
+
+# target to preprocess a source file
+unittest/test_activeobject.cpp.i:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/unittest/test_activeobject.cpp.i
+.PHONY : unittest/test_activeobject.cpp.i
+
+unittest/test_activeobject.s: unittest/test_activeobject.cpp.s
+
+.PHONY : unittest/test_activeobject.s
+
+# target to generate assembly for a file
+unittest/test_activeobject.cpp.s:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/unittest/test_activeobject.cpp.s
+.PHONY : unittest/test_activeobject.cpp.s
+
 unittest/test_areastore.o: unittest/test_areastore.cpp.o
 
 .PHONY : unittest/test_areastore.o
@@ -5215,6 +6079,87 @@ unittest/test_areastore.s: unittest/test_areastore.cpp.s
 unittest/test_areastore.cpp.s:
 	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/unittest/test_areastore.cpp.s
 .PHONY : unittest/test_areastore.cpp.s
+
+unittest/test_authdatabase.o: unittest/test_authdatabase.cpp.o
+
+.PHONY : unittest/test_authdatabase.o
+
+# target to build an object file
+unittest/test_authdatabase.cpp.o:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/unittest/test_authdatabase.cpp.o
+.PHONY : unittest/test_authdatabase.cpp.o
+
+unittest/test_authdatabase.i: unittest/test_authdatabase.cpp.i
+
+.PHONY : unittest/test_authdatabase.i
+
+# target to preprocess a source file
+unittest/test_authdatabase.cpp.i:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/unittest/test_authdatabase.cpp.i
+.PHONY : unittest/test_authdatabase.cpp.i
+
+unittest/test_authdatabase.s: unittest/test_authdatabase.cpp.s
+
+.PHONY : unittest/test_authdatabase.s
+
+# target to generate assembly for a file
+unittest/test_authdatabase.cpp.s:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/unittest/test_authdatabase.cpp.s
+.PHONY : unittest/test_authdatabase.cpp.s
+
+unittest/test_ban.o: unittest/test_ban.cpp.o
+
+.PHONY : unittest/test_ban.o
+
+# target to build an object file
+unittest/test_ban.cpp.o:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/unittest/test_ban.cpp.o
+.PHONY : unittest/test_ban.cpp.o
+
+unittest/test_ban.i: unittest/test_ban.cpp.i
+
+.PHONY : unittest/test_ban.i
+
+# target to preprocess a source file
+unittest/test_ban.cpp.i:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/unittest/test_ban.cpp.i
+.PHONY : unittest/test_ban.cpp.i
+
+unittest/test_ban.s: unittest/test_ban.cpp.s
+
+.PHONY : unittest/test_ban.s
+
+# target to generate assembly for a file
+unittest/test_ban.cpp.s:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/unittest/test_ban.cpp.s
+.PHONY : unittest/test_ban.cpp.s
+
+unittest/test_clientactiveobjectmgr.o: unittest/test_clientactiveobjectmgr.cpp.o
+
+.PHONY : unittest/test_clientactiveobjectmgr.o
+
+# target to build an object file
+unittest/test_clientactiveobjectmgr.cpp.o:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/unittest/test_clientactiveobjectmgr.cpp.o
+.PHONY : unittest/test_clientactiveobjectmgr.cpp.o
+
+unittest/test_clientactiveobjectmgr.i: unittest/test_clientactiveobjectmgr.cpp.i
+
+.PHONY : unittest/test_clientactiveobjectmgr.i
+
+# target to preprocess a source file
+unittest/test_clientactiveobjectmgr.cpp.i:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/unittest/test_clientactiveobjectmgr.cpp.i
+.PHONY : unittest/test_clientactiveobjectmgr.cpp.i
+
+unittest/test_clientactiveobjectmgr.s: unittest/test_clientactiveobjectmgr.cpp.s
+
+.PHONY : unittest/test_clientactiveobjectmgr.s
+
+# target to generate assembly for a file
+unittest/test_clientactiveobjectmgr.cpp.s:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/unittest/test_clientactiveobjectmgr.cpp.s
+.PHONY : unittest/test_clientactiveobjectmgr.cpp.s
 
 unittest/test_collision.o: unittest/test_collision.cpp.o
 
@@ -5297,6 +6242,33 @@ unittest/test_connection.cpp.s:
 	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/unittest/test_connection.cpp.s
 .PHONY : unittest/test_connection.cpp.s
 
+unittest/test_eventmanager.o: unittest/test_eventmanager.cpp.o
+
+.PHONY : unittest/test_eventmanager.o
+
+# target to build an object file
+unittest/test_eventmanager.cpp.o:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/unittest/test_eventmanager.cpp.o
+.PHONY : unittest/test_eventmanager.cpp.o
+
+unittest/test_eventmanager.i: unittest/test_eventmanager.cpp.i
+
+.PHONY : unittest/test_eventmanager.i
+
+# target to preprocess a source file
+unittest/test_eventmanager.cpp.i:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/unittest/test_eventmanager.cpp.i
+.PHONY : unittest/test_eventmanager.cpp.i
+
+unittest/test_eventmanager.s: unittest/test_eventmanager.cpp.s
+
+.PHONY : unittest/test_eventmanager.s
+
+# target to generate assembly for a file
+unittest/test_eventmanager.cpp.s:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/unittest/test_eventmanager.cpp.s
+.PHONY : unittest/test_eventmanager.cpp.s
+
 unittest/test_filepath.o: unittest/test_filepath.cpp.o
 
 .PHONY : unittest/test_filepath.o
@@ -5323,6 +6295,33 @@ unittest/test_filepath.s: unittest/test_filepath.cpp.s
 unittest/test_filepath.cpp.s:
 	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/unittest/test_filepath.cpp.s
 .PHONY : unittest/test_filepath.cpp.s
+
+unittest/test_gameui.o: unittest/test_gameui.cpp.o
+
+.PHONY : unittest/test_gameui.o
+
+# target to build an object file
+unittest/test_gameui.cpp.o:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/unittest/test_gameui.cpp.o
+.PHONY : unittest/test_gameui.cpp.o
+
+unittest/test_gameui.i: unittest/test_gameui.cpp.i
+
+.PHONY : unittest/test_gameui.i
+
+# target to preprocess a source file
+unittest/test_gameui.cpp.i:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/unittest/test_gameui.cpp.i
+.PHONY : unittest/test_gameui.cpp.i
+
+unittest/test_gameui.s: unittest/test_gameui.cpp.s
+
+.PHONY : unittest/test_gameui.s
+
+# target to generate assembly for a file
+unittest/test_gameui.cpp.s:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/unittest/test_gameui.cpp.s
+.PHONY : unittest/test_gameui.cpp.s
 
 unittest/test_inventory.o: unittest/test_inventory.cpp.o
 
@@ -5431,6 +6430,33 @@ unittest/test_mapnode.s: unittest/test_mapnode.cpp.s
 unittest/test_mapnode.cpp.s:
 	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/unittest/test_mapnode.cpp.s
 .PHONY : unittest/test_mapnode.cpp.s
+
+unittest/test_modchannels.o: unittest/test_modchannels.cpp.o
+
+.PHONY : unittest/test_modchannels.o
+
+# target to build an object file
+unittest/test_modchannels.cpp.o:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/unittest/test_modchannels.cpp.o
+.PHONY : unittest/test_modchannels.cpp.o
+
+unittest/test_modchannels.i: unittest/test_modchannels.cpp.i
+
+.PHONY : unittest/test_modchannels.i
+
+# target to preprocess a source file
+unittest/test_modchannels.cpp.i:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/unittest/test_modchannels.cpp.i
+.PHONY : unittest/test_modchannels.cpp.i
+
+unittest/test_modchannels.s: unittest/test_modchannels.cpp.s
+
+.PHONY : unittest/test_modchannels.s
+
+# target to generate assembly for a file
+unittest/test_modchannels.cpp.s:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/unittest/test_modchannels.cpp.s
+.PHONY : unittest/test_modchannels.cpp.s
 
 unittest/test_nodedef.o: unittest/test_nodedef.cpp.o
 
@@ -5675,6 +6701,87 @@ unittest/test_serialization.cpp.s:
 	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/unittest/test_serialization.cpp.s
 .PHONY : unittest/test_serialization.cpp.s
 
+unittest/test_server_shutdown_state.o: unittest/test_server_shutdown_state.cpp.o
+
+.PHONY : unittest/test_server_shutdown_state.o
+
+# target to build an object file
+unittest/test_server_shutdown_state.cpp.o:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/unittest/test_server_shutdown_state.cpp.o
+.PHONY : unittest/test_server_shutdown_state.cpp.o
+
+unittest/test_server_shutdown_state.i: unittest/test_server_shutdown_state.cpp.i
+
+.PHONY : unittest/test_server_shutdown_state.i
+
+# target to preprocess a source file
+unittest/test_server_shutdown_state.cpp.i:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/unittest/test_server_shutdown_state.cpp.i
+.PHONY : unittest/test_server_shutdown_state.cpp.i
+
+unittest/test_server_shutdown_state.s: unittest/test_server_shutdown_state.cpp.s
+
+.PHONY : unittest/test_server_shutdown_state.s
+
+# target to generate assembly for a file
+unittest/test_server_shutdown_state.cpp.s:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/unittest/test_server_shutdown_state.cpp.s
+.PHONY : unittest/test_server_shutdown_state.cpp.s
+
+unittest/test_serveractiveobjectmgr.o: unittest/test_serveractiveobjectmgr.cpp.o
+
+.PHONY : unittest/test_serveractiveobjectmgr.o
+
+# target to build an object file
+unittest/test_serveractiveobjectmgr.cpp.o:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/unittest/test_serveractiveobjectmgr.cpp.o
+.PHONY : unittest/test_serveractiveobjectmgr.cpp.o
+
+unittest/test_serveractiveobjectmgr.i: unittest/test_serveractiveobjectmgr.cpp.i
+
+.PHONY : unittest/test_serveractiveobjectmgr.i
+
+# target to preprocess a source file
+unittest/test_serveractiveobjectmgr.cpp.i:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/unittest/test_serveractiveobjectmgr.cpp.i
+.PHONY : unittest/test_serveractiveobjectmgr.cpp.i
+
+unittest/test_serveractiveobjectmgr.s: unittest/test_serveractiveobjectmgr.cpp.s
+
+.PHONY : unittest/test_serveractiveobjectmgr.s
+
+# target to generate assembly for a file
+unittest/test_serveractiveobjectmgr.cpp.s:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/unittest/test_serveractiveobjectmgr.cpp.s
+.PHONY : unittest/test_serveractiveobjectmgr.cpp.s
+
+unittest/test_servermodmanager.o: unittest/test_servermodmanager.cpp.o
+
+.PHONY : unittest/test_servermodmanager.o
+
+# target to build an object file
+unittest/test_servermodmanager.cpp.o:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/unittest/test_servermodmanager.cpp.o
+.PHONY : unittest/test_servermodmanager.cpp.o
+
+unittest/test_servermodmanager.i: unittest/test_servermodmanager.cpp.i
+
+.PHONY : unittest/test_servermodmanager.i
+
+# target to preprocess a source file
+unittest/test_servermodmanager.cpp.i:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/unittest/test_servermodmanager.cpp.i
+.PHONY : unittest/test_servermodmanager.cpp.i
+
+unittest/test_servermodmanager.s: unittest/test_servermodmanager.cpp.s
+
+.PHONY : unittest/test_servermodmanager.s
+
+# target to generate assembly for a file
+unittest/test_servermodmanager.cpp.s:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/unittest/test_servermodmanager.cpp.s
+.PHONY : unittest/test_servermodmanager.cpp.s
+
 unittest/test_settings.o: unittest/test_settings.cpp.o
 
 .PHONY : unittest/test_settings.o
@@ -5809,6 +6916,33 @@ unittest/test_voxelalgorithms.s: unittest/test_voxelalgorithms.cpp.s
 unittest/test_voxelalgorithms.cpp.s:
 	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/unittest/test_voxelalgorithms.cpp.s
 .PHONY : unittest/test_voxelalgorithms.cpp.s
+
+unittest/test_voxelarea.o: unittest/test_voxelarea.cpp.o
+
+.PHONY : unittest/test_voxelarea.o
+
+# target to build an object file
+unittest/test_voxelarea.cpp.o:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/unittest/test_voxelarea.cpp.o
+.PHONY : unittest/test_voxelarea.cpp.o
+
+unittest/test_voxelarea.i: unittest/test_voxelarea.cpp.i
+
+.PHONY : unittest/test_voxelarea.i
+
+# target to preprocess a source file
+unittest/test_voxelarea.cpp.i:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/unittest/test_voxelarea.cpp.i
+.PHONY : unittest/test_voxelarea.cpp.i
+
+unittest/test_voxelarea.s: unittest/test_voxelarea.cpp.s
+
+.PHONY : unittest/test_voxelarea.s
+
+# target to generate assembly for a file
+unittest/test_voxelarea.cpp.s:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/unittest/test_voxelarea.cpp.s
+.PHONY : unittest/test_voxelarea.cpp.s
 
 unittest/test_voxelmanipulator.o: unittest/test_voxelmanipulator.cpp.o
 
@@ -5971,6 +7105,33 @@ util/enriched_string.s: util/enriched_string.cpp.s
 util/enriched_string.cpp.s:
 	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/util/enriched_string.cpp.s
 .PHONY : util/enriched_string.cpp.s
+
+util/ieee_float.o: util/ieee_float.cpp.o
+
+.PHONY : util/ieee_float.o
+
+# target to build an object file
+util/ieee_float.cpp.o:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/util/ieee_float.cpp.o
+.PHONY : util/ieee_float.cpp.o
+
+util/ieee_float.i: util/ieee_float.cpp.i
+
+.PHONY : util/ieee_float.i
+
+# target to preprocess a source file
+util/ieee_float.cpp.i:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/util/ieee_float.cpp.i
+.PHONY : util/ieee_float.cpp.i
+
+util/ieee_float.s: util/ieee_float.cpp.s
+
+.PHONY : util/ieee_float.s
+
+# target to generate assembly for a file
+util/ieee_float.cpp.s:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/util/ieee_float.cpp.s
+.PHONY : util/ieee_float.cpp.s
 
 util/numeric.o: util/numeric.cpp.o
 
@@ -6269,110 +7430,179 @@ voxelalgorithms.cpp.s:
 	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/voxelalgorithms.cpp.s
 .PHONY : voxelalgorithms.cpp.s
 
-wieldmesh.o: wieldmesh.cpp.o
-
-.PHONY : wieldmesh.o
-
-# target to build an object file
-wieldmesh.cpp.o:
-	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/wieldmesh.cpp.o
-.PHONY : wieldmesh.cpp.o
-
-wieldmesh.i: wieldmesh.cpp.i
-
-.PHONY : wieldmesh.i
-
-# target to preprocess a source file
-wieldmesh.cpp.i:
-	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/wieldmesh.cpp.i
-.PHONY : wieldmesh.cpp.i
-
-wieldmesh.s: wieldmesh.cpp.s
-
-.PHONY : wieldmesh.s
-
-# target to generate assembly for a file
-wieldmesh.cpp.s:
-	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/wieldmesh.cpp.s
-.PHONY : wieldmesh.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... package"
-	@echo "... rebuild_cache"
-	@echo "... translations"
-	@echo "... GenerateVersion"
 	@echo "... install/strip"
-	@echo "... list_install_components"
-	@echo "... install"
-	@echo "... minetest"
-	@echo "... package_source"
-	@echo "... edit_cache"
 	@echo "... install/local"
+	@echo "... install"
+	@echo "... list_install_components"
+	@echo "... rebuild_cache"
+	@echo "... minetest"
+	@echo "... translations"
+	@echo "... package"
+	@echo "... package_source"
+	@echo "... GenerateVersion"
+	@echo "... edit_cache"
 	@echo "... ban.o"
 	@echo "... ban.i"
 	@echo "... ban.s"
-	@echo "... camera.o"
-	@echo "... camera.i"
-	@echo "... camera.s"
-	@echo "... cavegen.o"
-	@echo "... cavegen.i"
-	@echo "... cavegen.s"
 	@echo "... chat.o"
 	@echo "... chat.i"
 	@echo "... chat.s"
-	@echo "... client.o"
-	@echo "... client.i"
-	@echo "... client.s"
+	@echo "... client/activeobjectmgr.o"
+	@echo "... client/activeobjectmgr.i"
+	@echo "... client/activeobjectmgr.s"
+	@echo "... client/camera.o"
+	@echo "... client/camera.i"
+	@echo "... client/camera.s"
+	@echo "... client/client.o"
+	@echo "... client/client.i"
+	@echo "... client/client.s"
+	@echo "... client/clientenvironment.o"
+	@echo "... client/clientenvironment.i"
+	@echo "... client/clientenvironment.s"
 	@echo "... client/clientlauncher.o"
 	@echo "... client/clientlauncher.i"
 	@echo "... client/clientlauncher.s"
+	@echo "... client/clientmap.o"
+	@echo "... client/clientmap.i"
+	@echo "... client/clientmap.s"
+	@echo "... client/clientmedia.o"
+	@echo "... client/clientmedia.i"
+	@echo "... client/clientmedia.s"
+	@echo "... client/clientobject.o"
+	@echo "... client/clientobject.i"
+	@echo "... client/clientobject.s"
+	@echo "... client/clouds.o"
+	@echo "... client/clouds.i"
+	@echo "... client/clouds.s"
+	@echo "... client/content_cao.o"
+	@echo "... client/content_cao.i"
+	@echo "... client/content_cao.s"
+	@echo "... client/content_cso.o"
+	@echo "... client/content_cso.i"
+	@echo "... client/content_cso.s"
+	@echo "... client/content_mapblock.o"
+	@echo "... client/content_mapblock.i"
+	@echo "... client/content_mapblock.s"
+	@echo "... client/filecache.o"
+	@echo "... client/filecache.i"
+	@echo "... client/filecache.s"
+	@echo "... client/fontengine.o"
+	@echo "... client/fontengine.i"
+	@echo "... client/fontengine.s"
+	@echo "... client/game.o"
+	@echo "... client/game.i"
+	@echo "... client/game.s"
+	@echo "... client/gameui.o"
+	@echo "... client/gameui.i"
+	@echo "... client/gameui.s"
+	@echo "... client/guiscalingfilter.o"
+	@echo "... client/guiscalingfilter.i"
+	@echo "... client/guiscalingfilter.s"
+	@echo "... client/hud.o"
+	@echo "... client/hud.i"
+	@echo "... client/hud.s"
+	@echo "... client/imagefilters.o"
+	@echo "... client/imagefilters.i"
+	@echo "... client/imagefilters.s"
 	@echo "... client/inputhandler.o"
 	@echo "... client/inputhandler.i"
 	@echo "... client/inputhandler.s"
 	@echo "... client/joystick_controller.o"
 	@echo "... client/joystick_controller.i"
 	@echo "... client/joystick_controller.s"
+	@echo "... client/keycode.o"
+	@echo "... client/keycode.i"
+	@echo "... client/keycode.s"
+	@echo "... client/localplayer.o"
+	@echo "... client/localplayer.i"
+	@echo "... client/localplayer.s"
+	@echo "... client/mapblock_mesh.o"
+	@echo "... client/mapblock_mesh.i"
+	@echo "... client/mapblock_mesh.s"
+	@echo "... client/mesh.o"
+	@echo "... client/mesh.i"
+	@echo "... client/mesh.s"
+	@echo "... client/mesh_generator_thread.o"
+	@echo "... client/mesh_generator_thread.i"
+	@echo "... client/mesh_generator_thread.s"
+	@echo "... client/meshgen/collector.o"
+	@echo "... client/meshgen/collector.i"
+	@echo "... client/meshgen/collector.s"
+	@echo "... client/minimap.o"
+	@echo "... client/minimap.i"
+	@echo "... client/minimap.s"
+	@echo "... client/particles.o"
+	@echo "... client/particles.i"
+	@echo "... client/particles.s"
+	@echo "... client/render/anaglyph.o"
+	@echo "... client/render/anaglyph.i"
+	@echo "... client/render/anaglyph.s"
+	@echo "... client/render/core.o"
+	@echo "... client/render/core.i"
+	@echo "... client/render/core.s"
+	@echo "... client/render/factory.o"
+	@echo "... client/render/factory.i"
+	@echo "... client/render/factory.s"
+	@echo "... client/render/interlaced.o"
+	@echo "... client/render/interlaced.i"
+	@echo "... client/render/interlaced.s"
+	@echo "... client/render/pageflip.o"
+	@echo "... client/render/pageflip.i"
+	@echo "... client/render/pageflip.s"
+	@echo "... client/render/plain.o"
+	@echo "... client/render/plain.i"
+	@echo "... client/render/plain.s"
+	@echo "... client/render/sidebyside.o"
+	@echo "... client/render/sidebyside.i"
+	@echo "... client/render/sidebyside.s"
+	@echo "... client/render/stereo.o"
+	@echo "... client/render/stereo.i"
+	@echo "... client/render/stereo.s"
+	@echo "... client/renderingengine.o"
+	@echo "... client/renderingengine.i"
+	@echo "... client/renderingengine.s"
+	@echo "... client/shader.o"
+	@echo "... client/shader.i"
+	@echo "... client/shader.s"
+	@echo "... client/sky.o"
+	@echo "... client/sky.i"
+	@echo "... client/sky.s"
+	@echo "... client/sound.o"
+	@echo "... client/sound.i"
+	@echo "... client/sound.s"
+	@echo "... client/sound_openal.o"
+	@echo "... client/sound_openal.i"
+	@echo "... client/sound_openal.s"
 	@echo "... client/tile.o"
 	@echo "... client/tile.i"
 	@echo "... client/tile.s"
-	@echo "... clientenvironment.o"
-	@echo "... clientenvironment.i"
-	@echo "... clientenvironment.s"
+	@echo "... client/wieldmesh.o"
+	@echo "... client/wieldmesh.i"
+	@echo "... client/wieldmesh.s"
 	@echo "... clientiface.o"
 	@echo "... clientiface.i"
 	@echo "... clientiface.s"
-	@echo "... clientmap.o"
-	@echo "... clientmap.i"
-	@echo "... clientmap.s"
-	@echo "... clientmedia.o"
-	@echo "... clientmedia.i"
-	@echo "... clientmedia.s"
-	@echo "... clientobject.o"
-	@echo "... clientobject.i"
-	@echo "... clientobject.s"
-	@echo "... clouds.o"
-	@echo "... clouds.i"
-	@echo "... clouds.s"
 	@echo "... collision.o"
 	@echo "... collision.i"
 	@echo "... collision.s"
-	@echo "... content_abm.o"
-	@echo "... content_abm.i"
-	@echo "... content_abm.s"
-	@echo "... content_cao.o"
-	@echo "... content_cao.i"
-	@echo "... content_cao.s"
-	@echo "... content_cso.o"
-	@echo "... content_cso.i"
-	@echo "... content_cso.s"
-	@echo "... content_mapblock.o"
-	@echo "... content_mapblock.i"
-	@echo "... content_mapblock.s"
+	@echo "... content/content.o"
+	@echo "... content/content.i"
+	@echo "... content/content.s"
+	@echo "... content/mods.o"
+	@echo "... content/mods.i"
+	@echo "... content/mods.s"
+	@echo "... content/packages.o"
+	@echo "... content/packages.i"
+	@echo "... content/packages.s"
+	@echo "... content/subgames.o"
+	@echo "... content/subgames.i"
+	@echo "... content/subgames.s"
 	@echo "... content_mapnode.o"
 	@echo "... content_mapnode.i"
 	@echo "... content_mapnode.s"
@@ -6388,39 +7618,33 @@ help:
 	@echo "... craftdef.o"
 	@echo "... craftdef.i"
 	@echo "... craftdef.s"
-	@echo "... database-dummy.o"
-	@echo "... database-dummy.i"
-	@echo "... database-dummy.s"
-	@echo "... database-files.o"
-	@echo "... database-files.i"
-	@echo "... database-files.s"
-	@echo "... database-leveldb.o"
-	@echo "... database-leveldb.i"
-	@echo "... database-leveldb.s"
-	@echo "... database-postgresql.o"
-	@echo "... database-postgresql.i"
-	@echo "... database-postgresql.s"
-	@echo "... database-redis.o"
-	@echo "... database-redis.i"
-	@echo "... database-redis.s"
-	@echo "... database-sqlite3.o"
-	@echo "... database-sqlite3.i"
-	@echo "... database-sqlite3.s"
-	@echo "... database.o"
-	@echo "... database.i"
-	@echo "... database.s"
+	@echo "... database/database-dummy.o"
+	@echo "... database/database-dummy.i"
+	@echo "... database/database-dummy.s"
+	@echo "... database/database-files.o"
+	@echo "... database/database-files.i"
+	@echo "... database/database-files.s"
+	@echo "... database/database-leveldb.o"
+	@echo "... database/database-leveldb.i"
+	@echo "... database/database-leveldb.s"
+	@echo "... database/database-postgresql.o"
+	@echo "... database/database-postgresql.i"
+	@echo "... database/database-postgresql.s"
+	@echo "... database/database-redis.o"
+	@echo "... database/database-redis.i"
+	@echo "... database/database-redis.s"
+	@echo "... database/database-sqlite3.o"
+	@echo "... database/database-sqlite3.i"
+	@echo "... database/database-sqlite3.s"
+	@echo "... database/database.o"
+	@echo "... database/database.i"
+	@echo "... database/database.s"
 	@echo "... debug.o"
 	@echo "... debug.i"
 	@echo "... debug.s"
 	@echo "... defaultsettings.o"
 	@echo "... defaultsettings.i"
 	@echo "... defaultsettings.s"
-	@echo "... drawscene.o"
-	@echo "... drawscene.i"
-	@echo "... drawscene.s"
-	@echo "... dungeongen.o"
-	@echo "... dungeongen.i"
-	@echo "... dungeongen.s"
 	@echo "... emerge.o"
 	@echo "... emerge.i"
 	@echo "... emerge.s"
@@ -6430,69 +7654,69 @@ help:
 	@echo "... face_position_cache.o"
 	@echo "... face_position_cache.i"
 	@echo "... face_position_cache.s"
-	@echo "... filecache.o"
-	@echo "... filecache.i"
-	@echo "... filecache.s"
 	@echo "... filesys.o"
 	@echo "... filesys.i"
 	@echo "... filesys.s"
-	@echo "... fontengine.o"
-	@echo "... fontengine.i"
-	@echo "... fontengine.s"
-	@echo "... game.o"
-	@echo "... game.i"
-	@echo "... game.s"
 	@echo "... genericobject.o"
 	@echo "... genericobject.i"
 	@echo "... genericobject.s"
 	@echo "... gettext.o"
 	@echo "... gettext.i"
 	@echo "... gettext.s"
-	@echo "... guiChatConsole.o"
-	@echo "... guiChatConsole.i"
-	@echo "... guiChatConsole.s"
-	@echo "... guiEngine.o"
-	@echo "... guiEngine.i"
-	@echo "... guiEngine.s"
-	@echo "... guiFileSelectMenu.o"
-	@echo "... guiFileSelectMenu.i"
-	@echo "... guiFileSelectMenu.s"
-	@echo "... guiFormSpecMenu.o"
-	@echo "... guiFormSpecMenu.i"
-	@echo "... guiFormSpecMenu.s"
-	@echo "... guiKeyChangeMenu.o"
-	@echo "... guiKeyChangeMenu.i"
-	@echo "... guiKeyChangeMenu.s"
-	@echo "... guiPasswordChange.o"
-	@echo "... guiPasswordChange.i"
-	@echo "... guiPasswordChange.s"
-	@echo "... guiTable.o"
-	@echo "... guiTable.i"
-	@echo "... guiTable.s"
-	@echo "... guiVolumeChange.o"
-	@echo "... guiVolumeChange.i"
-	@echo "... guiVolumeChange.s"
-	@echo "... guiscalingfilter.o"
-	@echo "... guiscalingfilter.i"
-	@echo "... guiscalingfilter.s"
+	@echo "... gui/guiChatConsole.o"
+	@echo "... gui/guiChatConsole.i"
+	@echo "... gui/guiChatConsole.s"
+	@echo "... gui/guiConfirmRegistration.o"
+	@echo "... gui/guiConfirmRegistration.i"
+	@echo "... gui/guiConfirmRegistration.s"
+	@echo "... gui/guiEditBoxWithScrollbar.o"
+	@echo "... gui/guiEditBoxWithScrollbar.i"
+	@echo "... gui/guiEditBoxWithScrollbar.s"
+	@echo "... gui/guiEngine.o"
+	@echo "... gui/guiEngine.i"
+	@echo "... gui/guiEngine.s"
+	@echo "... gui/guiFormSpecMenu.o"
+	@echo "... gui/guiFormSpecMenu.i"
+	@echo "... gui/guiFormSpecMenu.s"
+	@echo "... gui/guiKeyChangeMenu.o"
+	@echo "... gui/guiKeyChangeMenu.i"
+	@echo "... gui/guiKeyChangeMenu.s"
+	@echo "... gui/guiPasswordChange.o"
+	@echo "... gui/guiPasswordChange.i"
+	@echo "... gui/guiPasswordChange.s"
+	@echo "... gui/guiPathSelectMenu.o"
+	@echo "... gui/guiPathSelectMenu.i"
+	@echo "... gui/guiPathSelectMenu.s"
+	@echo "... gui/guiTable.o"
+	@echo "... gui/guiTable.i"
+	@echo "... gui/guiTable.s"
+	@echo "... gui/guiVolumeChange.o"
+	@echo "... gui/guiVolumeChange.i"
+	@echo "... gui/guiVolumeChange.s"
+	@echo "... gui/intlGUIEditBox.o"
+	@echo "... gui/intlGUIEditBox.i"
+	@echo "... gui/intlGUIEditBox.s"
+	@echo "... gui/modalMenu.o"
+	@echo "... gui/modalMenu.i"
+	@echo "... gui/modalMenu.s"
+	@echo "... gui/profilergraph.o"
+	@echo "... gui/profilergraph.i"
+	@echo "... gui/profilergraph.s"
 	@echo "... httpfetch.o"
 	@echo "... httpfetch.i"
 	@echo "... httpfetch.s"
 	@echo "... hud.o"
 	@echo "... hud.i"
 	@echo "... hud.s"
-	@echo "... imagefilters.o"
-	@echo "... imagefilters.i"
-	@echo "... imagefilters.s"
-	@echo "... intlGUIEditBox.o"
-	@echo "... intlGUIEditBox.i"
-	@echo "... intlGUIEditBox.s"
 	@echo "... inventory.o"
 	@echo "... inventory.i"
 	@echo "... inventory.s"
 	@echo "... inventorymanager.o"
 	@echo "... inventorymanager.i"
 	@echo "... inventorymanager.s"
+	@echo "... irrlicht_changes/CGUITTFont.o"
+	@echo "... irrlicht_changes/CGUITTFont.i"
+	@echo "... irrlicht_changes/CGUITTFont.s"
 	@echo "... irrlicht_changes/static_text.o"
 	@echo "... irrlicht_changes/static_text.i"
 	@echo "... irrlicht_changes/static_text.s"
@@ -6502,15 +7726,9 @@ help:
 	@echo "... itemstackmetadata.o"
 	@echo "... itemstackmetadata.i"
 	@echo "... itemstackmetadata.s"
-	@echo "... keycode.o"
-	@echo "... keycode.i"
-	@echo "... keycode.s"
 	@echo "... light.o"
 	@echo "... light.i"
 	@echo "... light.s"
-	@echo "... localplayer.o"
-	@echo "... localplayer.i"
-	@echo "... localplayer.s"
 	@echo "... log.o"
 	@echo "... log.i"
 	@echo "... log.s"
@@ -6526,69 +7744,72 @@ help:
 	@echo "... mapblock.o"
 	@echo "... mapblock.i"
 	@echo "... mapblock.s"
-	@echo "... mapblock_mesh.o"
-	@echo "... mapblock_mesh.i"
-	@echo "... mapblock_mesh.s"
-	@echo "... mapgen.o"
-	@echo "... mapgen.i"
-	@echo "... mapgen.s"
-	@echo "... mapgen_flat.o"
-	@echo "... mapgen_flat.i"
-	@echo "... mapgen_flat.s"
-	@echo "... mapgen_fractal.o"
-	@echo "... mapgen_fractal.i"
-	@echo "... mapgen_fractal.s"
-	@echo "... mapgen_singlenode.o"
-	@echo "... mapgen_singlenode.i"
-	@echo "... mapgen_singlenode.s"
-	@echo "... mapgen_v5.o"
-	@echo "... mapgen_v5.i"
-	@echo "... mapgen_v5.s"
-	@echo "... mapgen_v6.o"
-	@echo "... mapgen_v6.i"
-	@echo "... mapgen_v6.s"
-	@echo "... mapgen_v7.o"
-	@echo "... mapgen_v7.i"
-	@echo "... mapgen_v7.s"
-	@echo "... mapgen_valleys.o"
-	@echo "... mapgen_valleys.i"
-	@echo "... mapgen_valleys.s"
+	@echo "... mapgen/cavegen.o"
+	@echo "... mapgen/cavegen.i"
+	@echo "... mapgen/cavegen.s"
+	@echo "... mapgen/dungeongen.o"
+	@echo "... mapgen/dungeongen.i"
+	@echo "... mapgen/dungeongen.s"
+	@echo "... mapgen/mapgen.o"
+	@echo "... mapgen/mapgen.i"
+	@echo "... mapgen/mapgen.s"
+	@echo "... mapgen/mapgen_carpathian.o"
+	@echo "... mapgen/mapgen_carpathian.i"
+	@echo "... mapgen/mapgen_carpathian.s"
+	@echo "... mapgen/mapgen_flat.o"
+	@echo "... mapgen/mapgen_flat.i"
+	@echo "... mapgen/mapgen_flat.s"
+	@echo "... mapgen/mapgen_fractal.o"
+	@echo "... mapgen/mapgen_fractal.i"
+	@echo "... mapgen/mapgen_fractal.s"
+	@echo "... mapgen/mapgen_singlenode.o"
+	@echo "... mapgen/mapgen_singlenode.i"
+	@echo "... mapgen/mapgen_singlenode.s"
+	@echo "... mapgen/mapgen_v5.o"
+	@echo "... mapgen/mapgen_v5.i"
+	@echo "... mapgen/mapgen_v5.s"
+	@echo "... mapgen/mapgen_v6.o"
+	@echo "... mapgen/mapgen_v6.i"
+	@echo "... mapgen/mapgen_v6.s"
+	@echo "... mapgen/mapgen_v7.o"
+	@echo "... mapgen/mapgen_v7.i"
+	@echo "... mapgen/mapgen_v7.s"
+	@echo "... mapgen/mapgen_valleys.o"
+	@echo "... mapgen/mapgen_valleys.i"
+	@echo "... mapgen/mapgen_valleys.s"
+	@echo "... mapgen/mg_biome.o"
+	@echo "... mapgen/mg_biome.i"
+	@echo "... mapgen/mg_biome.s"
+	@echo "... mapgen/mg_decoration.o"
+	@echo "... mapgen/mg_decoration.i"
+	@echo "... mapgen/mg_decoration.s"
+	@echo "... mapgen/mg_ore.o"
+	@echo "... mapgen/mg_ore.i"
+	@echo "... mapgen/mg_ore.s"
+	@echo "... mapgen/mg_schematic.o"
+	@echo "... mapgen/mg_schematic.i"
+	@echo "... mapgen/mg_schematic.s"
+	@echo "... mapgen/treegen.o"
+	@echo "... mapgen/treegen.i"
+	@echo "... mapgen/treegen.s"
 	@echo "... mapnode.o"
 	@echo "... mapnode.i"
 	@echo "... mapnode.s"
 	@echo "... mapsector.o"
 	@echo "... mapsector.i"
 	@echo "... mapsector.s"
-	@echo "... mesh.o"
-	@echo "... mesh.i"
-	@echo "... mesh.s"
-	@echo "... mesh_generator_thread.o"
-	@echo "... mesh_generator_thread.i"
-	@echo "... mesh_generator_thread.s"
 	@echo "... metadata.o"
 	@echo "... metadata.i"
 	@echo "... metadata.s"
-	@echo "... mg_biome.o"
-	@echo "... mg_biome.i"
-	@echo "... mg_biome.s"
-	@echo "... mg_decoration.o"
-	@echo "... mg_decoration.i"
-	@echo "... mg_decoration.s"
-	@echo "... mg_ore.o"
-	@echo "... mg_ore.i"
-	@echo "... mg_ore.s"
-	@echo "... mg_schematic.o"
-	@echo "... mg_schematic.i"
-	@echo "... mg_schematic.s"
-	@echo "... minimap.o"
-	@echo "... minimap.i"
-	@echo "... minimap.s"
-	@echo "... mods.o"
-	@echo "... mods.i"
-	@echo "... mods.s"
+	@echo "... modchannels.o"
+	@echo "... modchannels.i"
+	@echo "... modchannels.s"
 	@echo "... nameidmapping.o"
 	@echo "... nameidmapping.i"
 	@echo "... nameidmapping.s"
+	@echo "... network/address.o"
+	@echo "... network/address.i"
+	@echo "... network/address.s"
 	@echo "... network/clientopcodes.o"
 	@echo "... network/clientopcodes.i"
 	@echo "... network/clientopcodes.s"
@@ -6598,6 +7819,9 @@ help:
 	@echo "... network/connection.o"
 	@echo "... network/connection.i"
 	@echo "... network/connection.s"
+	@echo "... network/connectionthreads.o"
+	@echo "... network/connectionthreads.i"
+	@echo "... network/connectionthreads.s"
 	@echo "... network/networkpacket.o"
 	@echo "... network/networkpacket.i"
 	@echo "... network/networkpacket.s"
@@ -6607,6 +7831,9 @@ help:
 	@echo "... network/serverpackethandler.o"
 	@echo "... network/serverpackethandler.i"
 	@echo "... network/serverpackethandler.s"
+	@echo "... network/socket.o"
+	@echo "... network/socket.i"
+	@echo "... network/socket.s"
 	@echo "... nodedef.o"
 	@echo "... nodedef.i"
 	@echo "... nodedef.s"
@@ -6625,9 +7852,6 @@ help:
 	@echo "... object_properties.o"
 	@echo "... object_properties.i"
 	@echo "... object_properties.s"
-	@echo "... particles.o"
-	@echo "... particles.i"
-	@echo "... particles.s"
 	@echo "... pathfinder.o"
 	@echo "... pathfinder.i"
 	@echo "... pathfinder.s"
@@ -6670,6 +7894,9 @@ help:
 	@echo "... script/common/c_types.o"
 	@echo "... script/common/c_types.i"
 	@echo "... script/common/c_types.s"
+	@echo "... script/common/helper.o"
+	@echo "... script/common/helper.i"
+	@echo "... script/common/helper.s"
 	@echo "... script/cpp_api/s_async.o"
 	@echo "... script/cpp_api/s_async.i"
 	@echo "... script/cpp_api/s_async.s"
@@ -6694,6 +7921,9 @@ help:
 	@echo "... script/cpp_api/s_mainmenu.o"
 	@echo "... script/cpp_api/s_mainmenu.i"
 	@echo "... script/cpp_api/s_mainmenu.s"
+	@echo "... script/cpp_api/s_modchannels.o"
+	@echo "... script/cpp_api/s_modchannels.i"
+	@echo "... script/cpp_api/s_modchannels.s"
 	@echo "... script/cpp_api/s_node.o"
 	@echo "... script/cpp_api/s_node.i"
 	@echo "... script/cpp_api/s_node.s"
@@ -6712,6 +7942,9 @@ help:
 	@echo "... script/lua_api/l_areastore.o"
 	@echo "... script/lua_api/l_areastore.i"
 	@echo "... script/lua_api/l_areastore.s"
+	@echo "... script/lua_api/l_auth.o"
+	@echo "... script/lua_api/l_auth.i"
+	@echo "... script/lua_api/l_auth.s"
 	@echo "... script/lua_api/l_base.o"
 	@echo "... script/lua_api/l_base.i"
 	@echo "... script/lua_api/l_base.s"
@@ -6754,6 +7987,9 @@ help:
 	@echo "... script/lua_api/l_minimap.o"
 	@echo "... script/lua_api/l_minimap.i"
 	@echo "... script/lua_api/l_minimap.s"
+	@echo "... script/lua_api/l_modchannels.o"
+	@echo "... script/lua_api/l_modchannels.i"
+	@echo "... script/lua_api/l_modchannels.s"
 	@echo "... script/lua_api/l_nodemeta.o"
 	@echo "... script/lua_api/l_nodemeta.i"
 	@echo "... script/lua_api/l_nodemeta.s"
@@ -6769,6 +8005,12 @@ help:
 	@echo "... script/lua_api/l_particles.o"
 	@echo "... script/lua_api/l_particles.i"
 	@echo "... script/lua_api/l_particles.s"
+	@echo "... script/lua_api/l_particles_local.o"
+	@echo "... script/lua_api/l_particles_local.i"
+	@echo "... script/lua_api/l_particles_local.s"
+	@echo "... script/lua_api/l_playermeta.o"
+	@echo "... script/lua_api/l_playermeta.i"
+	@echo "... script/lua_api/l_playermeta.s"
 	@echo "... script/lua_api/l_rollback.o"
 	@echo "... script/lua_api/l_rollback.i"
 	@echo "... script/lua_api/l_rollback.s"
@@ -6805,6 +8047,12 @@ help:
 	@echo "... server.o"
 	@echo "... server.i"
 	@echo "... server.s"
+	@echo "... server/activeobjectmgr.o"
+	@echo "... server/activeobjectmgr.i"
+	@echo "... server/activeobjectmgr.s"
+	@echo "... server/mods.o"
+	@echo "... server/mods.i"
+	@echo "... server/mods.s"
 	@echo "... serverenvironment.o"
 	@echo "... serverenvironment.i"
 	@echo "... serverenvironment.s"
@@ -6817,36 +8065,15 @@ help:
 	@echo "... settings.o"
 	@echo "... settings.i"
 	@echo "... settings.s"
-	@echo "... shader.o"
-	@echo "... shader.i"
-	@echo "... shader.s"
-	@echo "... sky.o"
-	@echo "... sky.i"
-	@echo "... sky.s"
-	@echo "... socket.o"
-	@echo "... socket.i"
-	@echo "... socket.s"
-	@echo "... sound.o"
-	@echo "... sound.i"
-	@echo "... sound.s"
-	@echo "... sound_openal.o"
-	@echo "... sound_openal.i"
-	@echo "... sound_openal.s"
 	@echo "... staticobject.o"
 	@echo "... staticobject.i"
 	@echo "... staticobject.s"
-	@echo "... subgame.o"
-	@echo "... subgame.i"
-	@echo "... subgame.s"
 	@echo "... terminal_chat_console.o"
 	@echo "... terminal_chat_console.i"
 	@echo "... terminal_chat_console.s"
 	@echo "... threading/event.o"
 	@echo "... threading/event.i"
 	@echo "... threading/event.s"
-	@echo "... threading/mutex.o"
-	@echo "... threading/mutex.i"
-	@echo "... threading/mutex.s"
 	@echo "... threading/semaphore.o"
 	@echo "... threading/semaphore.i"
 	@echo "... threading/semaphore.s"
@@ -6859,15 +8086,27 @@ help:
 	@echo "... tool.o"
 	@echo "... tool.i"
 	@echo "... tool.s"
-	@echo "... treegen.o"
-	@echo "... treegen.i"
-	@echo "... treegen.s"
+	@echo "... translation.o"
+	@echo "... translation.i"
+	@echo "... translation.s"
 	@echo "... unittest/test.o"
 	@echo "... unittest/test.i"
 	@echo "... unittest/test.s"
+	@echo "... unittest/test_activeobject.o"
+	@echo "... unittest/test_activeobject.i"
+	@echo "... unittest/test_activeobject.s"
 	@echo "... unittest/test_areastore.o"
 	@echo "... unittest/test_areastore.i"
 	@echo "... unittest/test_areastore.s"
+	@echo "... unittest/test_authdatabase.o"
+	@echo "... unittest/test_authdatabase.i"
+	@echo "... unittest/test_authdatabase.s"
+	@echo "... unittest/test_ban.o"
+	@echo "... unittest/test_ban.i"
+	@echo "... unittest/test_ban.s"
+	@echo "... unittest/test_clientactiveobjectmgr.o"
+	@echo "... unittest/test_clientactiveobjectmgr.i"
+	@echo "... unittest/test_clientactiveobjectmgr.s"
 	@echo "... unittest/test_collision.o"
 	@echo "... unittest/test_collision.i"
 	@echo "... unittest/test_collision.s"
@@ -6877,9 +8116,15 @@ help:
 	@echo "... unittest/test_connection.o"
 	@echo "... unittest/test_connection.i"
 	@echo "... unittest/test_connection.s"
+	@echo "... unittest/test_eventmanager.o"
+	@echo "... unittest/test_eventmanager.i"
+	@echo "... unittest/test_eventmanager.s"
 	@echo "... unittest/test_filepath.o"
 	@echo "... unittest/test_filepath.i"
 	@echo "... unittest/test_filepath.s"
+	@echo "... unittest/test_gameui.o"
+	@echo "... unittest/test_gameui.i"
+	@echo "... unittest/test_gameui.s"
 	@echo "... unittest/test_inventory.o"
 	@echo "... unittest/test_inventory.i"
 	@echo "... unittest/test_inventory.s"
@@ -6892,6 +8137,9 @@ help:
 	@echo "... unittest/test_mapnode.o"
 	@echo "... unittest/test_mapnode.i"
 	@echo "... unittest/test_mapnode.s"
+	@echo "... unittest/test_modchannels.o"
+	@echo "... unittest/test_modchannels.i"
+	@echo "... unittest/test_modchannels.s"
 	@echo "... unittest/test_nodedef.o"
 	@echo "... unittest/test_nodedef.i"
 	@echo "... unittest/test_nodedef.s"
@@ -6919,6 +8167,15 @@ help:
 	@echo "... unittest/test_serialization.o"
 	@echo "... unittest/test_serialization.i"
 	@echo "... unittest/test_serialization.s"
+	@echo "... unittest/test_server_shutdown_state.o"
+	@echo "... unittest/test_server_shutdown_state.i"
+	@echo "... unittest/test_server_shutdown_state.s"
+	@echo "... unittest/test_serveractiveobjectmgr.o"
+	@echo "... unittest/test_serveractiveobjectmgr.i"
+	@echo "... unittest/test_serveractiveobjectmgr.s"
+	@echo "... unittest/test_servermodmanager.o"
+	@echo "... unittest/test_servermodmanager.i"
+	@echo "... unittest/test_servermodmanager.s"
 	@echo "... unittest/test_settings.o"
 	@echo "... unittest/test_settings.i"
 	@echo "... unittest/test_settings.s"
@@ -6934,6 +8191,9 @@ help:
 	@echo "... unittest/test_voxelalgorithms.o"
 	@echo "... unittest/test_voxelalgorithms.i"
 	@echo "... unittest/test_voxelalgorithms.s"
+	@echo "... unittest/test_voxelarea.o"
+	@echo "... unittest/test_voxelarea.i"
+	@echo "... unittest/test_voxelarea.s"
 	@echo "... unittest/test_voxelmanipulator.o"
 	@echo "... unittest/test_voxelmanipulator.i"
 	@echo "... unittest/test_voxelmanipulator.s"
@@ -6952,6 +8212,9 @@ help:
 	@echo "... util/enriched_string.o"
 	@echo "... util/enriched_string.i"
 	@echo "... util/enriched_string.s"
+	@echo "... util/ieee_float.o"
+	@echo "... util/ieee_float.i"
+	@echo "... util/ieee_float.s"
 	@echo "... util/numeric.o"
 	@echo "... util/numeric.i"
 	@echo "... util/numeric.s"
@@ -6985,9 +8248,6 @@ help:
 	@echo "... voxelalgorithms.o"
 	@echo "... voxelalgorithms.i"
 	@echo "... voxelalgorithms.s"
-	@echo "... wieldmesh.o"
-	@echo "... wieldmesh.i"
-	@echo "... wieldmesh.s"
 .PHONY : help
 
 

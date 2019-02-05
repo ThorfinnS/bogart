@@ -57,7 +57,7 @@ if(NOT USE_CURL)
 endif()
 
 
-option(ENABLE_GETTEXT "Use GetText for internationalization" FALSE)
+option(ENABLE_GETTEXT "Use GetText for internationalization" TRUE)
 set(USE_GETTEXT FALSE)
 
 if(ENABLE_GETTEXT)
@@ -101,19 +101,6 @@ if(BUILD_CLIENT AND ENABLE_SOUND)
 	endif()
 endif()
 
-if(USE_SOUND)
-	set(sound_SRCS sound_openal.cpp)
-	set(SOUND_INCLUDE_DIRS
-		${OPENAL_INCLUDE_DIR}
-		${VORBIS_INCLUDE_DIR}
-		${OGG_INCLUDE_DIR}
-		)
-	set(SOUND_LIBRARIES
-		${OPENAL_LIBRARY}
-		${VORBIS_LIBRARIES}
-		)
-endif()
-
 
 option(ENABLE_GLES "Enable OpenGL ES support" FALSE)
 mark_as_advanced(ENABLE_GLES)
@@ -151,8 +138,6 @@ if(ENABLE_FREETYPE)
 	if(FREETYPE_FOUND)
 		message(STATUS "Freetype enabled.")
 		set(USE_FREETYPE TRUE)
-		set(CGUITTFONT_INCLUDE_DIR "${CMAKE_CURRENT_SOURCE_DIR}/cguittfont")
-		set(CGUITTFONT_LIBRARY cguittfont)
 	endif()
 endif(ENABLE_FREETYPE)
 
@@ -254,6 +239,12 @@ if(NOT MSVC)
 	set(USE_GPROF FALSE CACHE BOOL "Use -pg flag for g++")
 endif()
 
+# Haiku endian support
+if(HAIKU)
+	set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -D_BSD_SOURCE")
+	set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -D_BSD_SOURCE")
+endif()
+
 # Use cmake_config.h
 add_definitions(-DUSE_CMAKE_CONFIG_H)
 
@@ -265,6 +256,8 @@ if(WIN32)
 		add_definitions ( /D "_CRT_SECURE_NO_DEPRECATE" /W1 )
 		# Get M_PI to work
 		add_definitions(/D "_USE_MATH_DEFINES")
+		# Dont define min/max macros in minwindef.h
+		add_definitions(/D "NOMINMAX")
 	else() # Probably MinGW = GCC
 		set(PLATFORM_LIBS "")
 	endif()
@@ -294,10 +287,20 @@ if(WIN32)
 		set(VORBIS_DLL "" CACHE FILEPATH "Path to libvorbis.dll for installation (optional)")
 		set(VORBISFILE_DLL "" CACHE FILEPATH "Path to libvorbisfile.dll for installation (optional)")
 	endif()
+	if(USE_LUAJIT)
+		set(LUA_DLL "" CACHE FILEPATH "Path to lua51.dll for installation (optional)")
+	endif()
 else()
 	# Unix probably
 	if(BUILD_CLIENT)
-		find_package(X11 REQUIRED)
+		if(NOT HAIKU)
+			find_package(X11 REQUIRED)
+		endif(NOT HAIKU)
+
+		set(OPENGL_GL_PREFERENCE "LEGACY" CACHE STRING
+			"See CMake Policy CMP0072 for reference. GLVND is broken on some nvidia setups")
+		set(OpenGL_GL_PREFERENCE ${OPENGL_GL_PREFERENCE})
+
 		find_package(OpenGL REQUIRED)
 		find_package(JPEG REQUIRED)
 		find_package(BZip2 REQUIRED)
@@ -325,12 +328,12 @@ else()
 		endif(HAVE_LIBRT)
 	endif(APPLE)
 
-	if(NOT APPLE)
+	if(NOT HAIKU AND NOT APPLE)
 	# This way Xxf86vm is found on OpenBSD too
 		find_library(XXF86VM_LIBRARY Xxf86vm)
 		mark_as_advanced(XXF86VM_LIBRARY)
 		set(CLIENT_PLATFORM_LIBS ${CLIENT_PLATFORM_LIBS} ${XXF86VM_LIBRARY})
-	endif(NOT APPLE)
+	endif(NOT HAIKU AND NOT APPLE)
 
 	# Prefer local iconv if installed
 	find_library(ICONV_LIBRARY iconv)
@@ -360,34 +363,33 @@ add_custom_target(GenerateVersion
 
 
 add_subdirectory(threading)
+add_subdirectory(content)
+add_subdirectory(database)
+add_subdirectory(gui)
+add_subdirectory(mapgen)
 add_subdirectory(network)
 add_subdirectory(script)
 add_subdirectory(unittest)
 add_subdirectory(util)
 add_subdirectory(irrlicht_changes)
+add_subdirectory(server)
 
 set(common_SRCS
+	${database_SRCS}
+	${mapgen_SRCS}
+	${server_SRCS}
+	${content_SRCS}
 	ban.cpp
-	cavegen.cpp
 	chat.cpp
 	clientiface.cpp
 	collision.cpp
-	content_abm.cpp
 	content_mapnode.cpp
 	content_nodemeta.cpp
 	content_sao.cpp
 	convert_json.cpp
 	craftdef.cpp
-	database-dummy.cpp
-	database-files.cpp
-	database-leveldb.cpp
-	database-postgresql.cpp
-	database-redis.cpp
-	database-sqlite3.cpp
-	database.cpp
 	debug.cpp
 	defaultsettings.cpp
-	dungeongen.cpp
 	emerge.cpp
 	environment.cpp
 	face_position_cache.cpp
@@ -395,31 +397,21 @@ set(common_SRCS
 	genericobject.cpp
 	gettext.cpp
 	httpfetch.cpp
+	hud.cpp
 	inventory.cpp
 	inventorymanager.cpp
 	itemdef.cpp
 	itemstackmetadata.cpp
 	light.cpp
 	log.cpp
+	main.cpp
 	map.cpp
 	map_settings_manager.cpp
 	mapblock.cpp
-	mapgen.cpp
-	mapgen_flat.cpp
-	mapgen_fractal.cpp
-	mapgen_singlenode.cpp
-	mapgen_v5.cpp
-	mapgen_v6.cpp
-	mapgen_v7.cpp
-	mapgen_valleys.cpp
 	mapnode.cpp
 	mapsector.cpp
 	metadata.cpp
-	mg_biome.cpp
-	mg_decoration.cpp
-	mg_ore.cpp
-	mg_schematic.cpp
-	mods.cpp
+	modchannels.cpp
 	nameidmapping.cpp
 	nodedef.cpp
 	nodemetadata.cpp
@@ -432,9 +424,9 @@ set(common_SRCS
 	porting.cpp
 	profiler.cpp
 	quicktune.cpp
+	raycast.cpp
 	reflowscan.cpp
 	remoteplayer.cpp
-	raycast.cpp
 	rollback.cpp
 	rollback_interface.cpp
 	serialization.cpp
@@ -443,17 +435,15 @@ set(common_SRCS
 	serverlist.cpp
 	serverobject.cpp
 	settings.cpp
-	socket.cpp
-	sound.cpp
 	staticobject.cpp
-	subgame.cpp
 	terminal_chat_console.cpp
 	tileanimation.cpp
 	tool.cpp
-	treegen.cpp
+	translation.cpp
 	version.cpp
 	voxel.cpp
 	voxelalgorithms.cpp
+	hud.cpp
 	${common_network_SRCS}
 	${JTHREAD_SRCS}
 	${common_SCRIPT_SRCS}
@@ -476,9 +466,9 @@ if(WIN32)
 			-o ${CMAKE_CURRENT_BINARY_DIR}/winresource_rc.o
 			WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}
 			DEPENDS ${WINRESOURCE_FILE})
-		SET(common_SRCS ${common_SRCS} ${CMAKE_CURRENT_BINARY_DIR}/winresource_rc.o)
+		SET(extra_windows_SRCS ${CMAKE_CURRENT_BINARY_DIR}/winresource_rc.o)
 	else(MINGW) # Probably MSVC
-		set(common_SRCS ${common_SRCS} ${WINRESOURCE_FILE} ${MINETEST_EXE_MANIFEST_FILE})
+		set(extra_windows_SRCS ${WINRESOURCE_FILE} ${MINETEST_EXE_MANIFEST_FILE})
 	endif(MINGW)
 endif()
 
@@ -491,47 +481,9 @@ endif(BUILD_CLIENT)
 set(client_SRCS
 	${client_SRCS}
 	${common_SRCS}
-	${sound_SRCS}
+	${gui_SRCS}
 	${client_network_SRCS}
 	${client_irrlicht_changes_SRCS}
-	camera.cpp
-	client.cpp
-	clientenvironment.cpp
-	clientmap.cpp
-	clientmedia.cpp
-	clientobject.cpp
-	clouds.cpp
-	content_cao.cpp
-	content_cso.cpp
-	content_mapblock.cpp
-	convert_json.cpp
-	drawscene.cpp
-	filecache.cpp
-	fontengine.cpp
-	game.cpp
-	guiChatConsole.cpp
-	guiEngine.cpp
-	guiFileSelectMenu.cpp
-	guiFormSpecMenu.cpp
-	guiKeyChangeMenu.cpp
-	guiPasswordChange.cpp
-	guiscalingfilter.cpp
-	guiTable.cpp
-	guiVolumeChange.cpp
-	hud.cpp
-	imagefilters.cpp
-	intlGUIEditBox.cpp
-	keycode.cpp
-	localplayer.cpp
-	main.cpp
-	mapblock_mesh.cpp
-	mesh.cpp
-	mesh_generator_thread.cpp
-	minimap.cpp
-	particles.cpp
-	shader.cpp
-	sky.cpp
-	wieldmesh.cpp
 	${client_SCRIPT_SRCS}
 	${UNITTEST_CLIENT_SRCS}
 )
@@ -540,9 +492,15 @@ list(SORT client_SRCS)
 # Server sources
 set(server_SRCS
 	${common_SRCS}
-	main.cpp
 )
 list(SORT server_SRCS)
+
+# Avoid source_group on broken CMake version.
+# see issue #7074 #7075
+if (CMAKE_VERSION VERSION_GREATER 3.8.1)
+	source_group(TREE ${PROJECT_SOURCE_DIR} PREFIX "Source Files" FILES ${client_SRCS})
+	source_group(TREE ${PROJECT_SOURCE_DIR} PREFIX "Source Files" FILES ${server_SRCS})
+endif()
 
 include_directories(
 	${PROJECT_BINARY_DIR}
@@ -563,7 +521,7 @@ include_directories(
 
 
 if(USE_FREETYPE)
-	include_directories(${FREETYPE_INCLUDE_DIRS} ${CGUITTFONT_INCLUDE_DIR})
+	include_directories(${FREETYPE_INCLUDE_DIRS})
 endif()
 
 if(USE_CURL)
@@ -575,7 +533,7 @@ set(EXECUTABLE_OUTPUT_PATH "${CMAKE_SOURCE_DIR}/bin")
 
 
 if(BUILD_CLIENT)
-	add_executable(${PROJECT_NAME} ${client_SRCS})
+	add_executable(${PROJECT_NAME} ${client_SRCS} ${extra_windows_SRCS})
 	add_dependencies(${PROJECT_NAME} GenerateVersion)
 	set(client_LIBS
 		${PROJECT_NAME}
@@ -622,7 +580,6 @@ if(BUILD_CLIENT)
 		target_link_libraries(
 			${PROJECT_NAME}
 			${FREETYPE_LIBRARY}
-			${CGUITTFONT_LIBRARY}
 		)
 	endif()
 	if (USE_CURSES)
@@ -644,7 +601,7 @@ endif(BUILD_CLIENT)
 
 
 if(BUILD_SERVER)
-	add_executable(${PROJECT_NAME}server ${server_SRCS})
+	add_executable(${PROJECT_NAME}server ${server_SRCS} ${extra_windows_SRCS})
 	add_dependencies(${PROJECT_NAME}server GenerateVersion)
 	target_link_libraries(
 		${PROJECT_NAME}server
@@ -710,9 +667,12 @@ include(CheckCXXCompilerFlag)
 
 if(MSVC)
 	# Visual Studio
-
+	set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /D WIN32_LEAN_AND_MEAN /MP")
 	# EHa enables SEH exceptions (used for catching segfaults)
-	set(CMAKE_CXX_FLAGS_RELEASE "/EHa /Ox /GL /FD /MT /GS- /Zi /arch:SSE /fp:fast /D NDEBUG /D _HAS_ITERATOR_DEBUGGING=0 /TP")
+	set(CMAKE_CXX_FLAGS_RELEASE "/EHa /Ox /GL /FD /MD /GS- /Zi /fp:fast /D NDEBUG /D _HAS_ITERATOR_DEBUGGING=0 /TP")
+	if(CMAKE_SIZEOF_VOID_P EQUAL 4)
+		set(CMAKE_CXX_FLAGS_RELEASE "${CMAKE_CXX_FLAGS_RELEASE} /arch:SSE")
+	endif()
 	#set(CMAKE_EXE_LINKER_FLAGS_RELEASE "/LTCG /NODEFAULTLIB:\"libcmtd.lib\" /NODEFAULTLIB:\"libcmt.lib\"")
 	set(CMAKE_EXE_LINKER_FLAGS_RELEASE "/LTCG /INCREMENTAL:NO /DEBUG /OPT:REF /OPT:ICF")
 
@@ -727,12 +687,13 @@ if(MSVC)
 	set(CMAKE_CXX_FLAGS_DEBUG "/MDd /Zi /Ob0 /Od /RTC1")
 
 	# Flags for C files (sqlite)
-	# /MT = Link statically with standard library stuff
-	set(CMAKE_C_FLAGS_RELEASE "/O2 /Ob2 /MT")
+	# /MD = dynamically link to MSVCRxxx.dll
+	set(CMAKE_C_FLAGS_RELEASE "/O2 /Ob2 /MD")
 else()
+	set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
 	# Probably GCC
 	if(APPLE)
-		SET( CMAKE_EXE_LINKER_FLAGS  "${CMAKE_EXE_LINKER_FLAGS} -pagezero_size 10000 -image_base 100000000" )
+		SET(CMAKE_EXE_LINKER_FLAGS  "${CMAKE_EXE_LINKER_FLAGS} -pagezero_size 10000 -image_base 100000000" )
 	endif()
 	if(WARN_ALL)
 		set(RELEASE_WARNING_FLAGS "-Wall")
@@ -754,14 +715,15 @@ else()
 
 	if(MINGW)
 		set(OTHER_FLAGS "${OTHER_FLAGS} -mthreads -fexceptions")
+		set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -DWIN32_LEAN_AND_MEAN")
 	endif()
 
 	set(CMAKE_CXX_FLAGS_RELEASE "-DNDEBUG ${RELEASE_WARNING_FLAGS} ${WARNING_FLAGS} ${OTHER_FLAGS} -Wall -pipe -funroll-loops")
-	if(CMAKE_SYSTEM_NAME MATCHES "(Darwin|FreeBSD)")
+	if(CMAKE_SYSTEM_NAME MATCHES "(Darwin|BSD|DragonFly)")
 		set(CMAKE_CXX_FLAGS_RELEASE "${CMAKE_CXX_FLAGS_RELEASE} -Os")
 	else()
 		set(CMAKE_CXX_FLAGS_RELEASE "${CMAKE_CXX_FLAGS_RELEASE} -O3 -ffast-math -fomit-frame-pointer")
-	endif(CMAKE_SYSTEM_NAME MATCHES "(Darwin|FreeBSD)")
+	endif(CMAKE_SYSTEM_NAME MATCHES "(Darwin|BSD|DragonFly)")
 	set(CMAKE_CXX_FLAGS_SEMIDEBUG "-g -O1 -Wall -Wabi ${WARNING_FLAGS} ${OTHER_FLAGS}")
 	set(CMAKE_CXX_FLAGS_DEBUG "-g -O0 -Wall -Wabi ${WARNING_FLAGS} ${OTHER_FLAGS}")
 
@@ -810,6 +772,9 @@ if(WIN32)
 	if(LEVELDB_DLL)
 		install(FILES ${LEVELDB_DLL} DESTINATION ${BINDIR})
 	endif()
+	if(LUA_DLL)
+		install(FILES ${LUA_DLL} DESTINATION ${BINDIR})
+	endif()
 endif()
 
 if(BUILD_CLIENT)
@@ -834,6 +799,14 @@ if(BUILD_CLIENT)
 			set(MO_BUILD_PATH "${MO_BUILD_PATH}/${PROJECT_NAME}.mo")
 			install(FILES ${MO_BUILD_PATH} DESTINATION ${MO_DEST_PATH})
 		endforeach()
+	endif()
+
+	if(USE_FREETYPE)
+		install(DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/../fonts" DESTINATION "${SHAREDIR}"
+				FILES_MATCHING PATTERN "*.ttf" PATTERN "*.txt")
+	else()
+		install(DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/../fonts" DESTINATION "${SHAREDIR}"
+				FILES_MATCHING PATTERN "*.png" PATTERN "*.xml")
 	endif()
 
 	if(WIN32)
@@ -879,11 +852,4 @@ if (USE_GETTEXT)
 	endforeach()
 
 	add_custom_target(translations ALL COMMENT "mo update" DEPENDS ${MO_FILES})
-endif()
-
-
-# Subdirectories
-
-if (BUILD_CLIENT AND USE_FREETYPE)
-	add_subdirectory(cguittfont)
 endif()

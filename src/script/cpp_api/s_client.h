@@ -18,8 +18,7 @@ with this program; if not, write to the Free Software Foundation, Inc.,
 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 */
 
-#ifndef S_CLIENT_H_
-#define S_CLIENT_H_
+#pragma once
 
 #include "util/pointedthing.h"
 #include "cpp_api/s_base.h"
@@ -38,10 +37,11 @@ class ClientEnvironment;
 class ScriptApiClient : virtual public ScriptApiBase
 {
 public:
+	// Calls when mods are loaded
+	void on_mods_loaded();
+
 	// Calls on_shutdown handlers
 	void on_shutdown();
-
-	void on_connect();
 
 	// Chat message handlers
 	bool on_sending_message(const std::string &message);
@@ -58,6 +58,7 @@ public:
 	bool on_placenode(const PointedThing &pointed, const ItemDefinition &item);
 	bool on_item_use(const ItemStack &item, const PointedThing &pointed);
 
+	bool on_inventory_open(Inventory *inventory);
+
 	void setEnv(ClientEnvironment *env);
 };
-#endif

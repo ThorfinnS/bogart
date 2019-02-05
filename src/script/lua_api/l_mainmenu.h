@@ -17,8 +17,7 @@ with this program; if not, write to the Free Software Foundation, Inc.,
 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 */
 
-#ifndef L_MAINMENU_H_
-#define L_MAINMENU_H_
+#pragma once
 
 #include "lua_api/l_base.h"
 
@@ -54,11 +53,12 @@ private:
 	static int getBoolData(lua_State *L, std::string name,bool& valid);
 
 	/**
-	 * check if a path is within some of minetests folders
+	 * Checks if a path may be modified. Paths in the temp directory or the user
+	 * games, mods, textures, or worlds directories may be modified.
 	 * @param path path to check
-	 * @return true/false
+	 * @return true if the path may be modified
 	 */
-	static bool isMinetestPath(std::string path);
+	static bool mayModifyPath(const std::string &path);
 
 	//api calls
 
@@ -72,8 +72,6 @@ private:
 
 	static int l_get_worlds(lua_State *L);
 
-	static int l_get_games(lua_State *L);
-
 	static int l_get_mapgen_names(lua_State *L);
 
 	static int l_get_favorites(lua_State *L);
@@ -82,11 +80,17 @@ private:
 
 	static int l_gettext(lua_State *L);
 
+	//packages
+
+	static int l_get_games(lua_State *L);
+
+	static int l_get_content_info(lua_State *L);
+
 	//gui
 
 	static int l_show_keys_menu(lua_State *L);
 
-	static int l_show_file_open_dialog(lua_State *L);
+	static int l_show_path_select_dialog(lua_State *L);
 
 	static int l_set_topleft_text(lua_State *L);
 
@@ -108,11 +112,15 @@ private:
 
 	static int l_get_modpath(lua_State *L);
 
+	static int l_get_clientmodpath(lua_State *L);
+
 	static int l_get_gamepath(lua_State *L);
 
 	static int l_get_texturepath(lua_State *L);
 
 	static int l_get_texturepath_share(lua_State *L);
+
+	static int l_get_cache_path(lua_State *L);
 
 	static int l_create_dir(lua_State *L);
 
@@ -121,10 +129,6 @@ private:
 	static int l_copy_dir(lua_State *L);
 
 	static int l_extract_zip(lua_State *L);
-
-	static int l_get_modstore_details(lua_State *L);
-
-	static int l_get_modstore_list(lua_State *L);
 
 	static int l_download_file(lua_State *L);
 
@@ -153,5 +157,3 @@ public:
 	static void InitializeAsync(lua_State *L, int top);
 
 };
-
-#endif /* L_MAINMENU_H_ */

@@ -67,6 +67,7 @@ src/CMakeFiles/translations: locale/id/LC_MESSAGES/minetest.mo
 src/CMakeFiles/translations: locale/it/LC_MESSAGES/minetest.mo
 src/CMakeFiles/translations: locale/ja/LC_MESSAGES/minetest.mo
 src/CMakeFiles/translations: locale/jbo/LC_MESSAGES/minetest.mo
+src/CMakeFiles/translations: locale/kn/LC_MESSAGES/minetest.mo
 src/CMakeFiles/translations: locale/lt/LC_MESSAGES/minetest.mo
 src/CMakeFiles/translations: locale/ms/LC_MESSAGES/minetest.mo
 src/CMakeFiles/translations: locale/nb/LC_MESSAGES/minetest.mo
@@ -154,195 +155,204 @@ locale/jbo/LC_MESSAGES/minetest.mo: po/jbo/minetest.po
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "mo-update [jbo]: Creating mo file."
 	cd /opt/minetest/po/jbo && /usr/bin/msgfmt -o /opt/minetest/locale/jbo/LC_MESSAGES/minetest.mo /opt/minetest/po/jbo/minetest.po
 
+locale/kn/LC_MESSAGES/minetest.mo: locale/kn/LC_MESSAGES
+locale/kn/LC_MESSAGES/minetest.mo: po/kn/minetest.po
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "mo-update [kn]: Creating mo file."
+	cd /opt/minetest/po/kn && /usr/bin/msgfmt -o /opt/minetest/locale/kn/LC_MESSAGES/minetest.mo /opt/minetest/po/kn/minetest.po
+
 locale/lt/LC_MESSAGES/minetest.mo: locale/lt/LC_MESSAGES
 locale/lt/LC_MESSAGES/minetest.mo: po/lt/minetest.po
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "mo-update [lt]: Creating mo file."
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "mo-update [lt]: Creating mo file."
 	cd /opt/minetest/po/lt && /usr/bin/msgfmt -o /opt/minetest/locale/lt/LC_MESSAGES/minetest.mo /opt/minetest/po/lt/minetest.po
 
 locale/ms/LC_MESSAGES/minetest.mo: locale/ms/LC_MESSAGES
 locale/ms/LC_MESSAGES/minetest.mo: po/ms/minetest.po
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "mo-update [ms]: Creating mo file."
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "mo-update [ms]: Creating mo file."
 	cd /opt/minetest/po/ms && /usr/bin/msgfmt -o /opt/minetest/locale/ms/LC_MESSAGES/minetest.mo /opt/minetest/po/ms/minetest.po
 
 locale/nb/LC_MESSAGES/minetest.mo: locale/nb/LC_MESSAGES
 locale/nb/LC_MESSAGES/minetest.mo: po/nb/minetest.po
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "mo-update [nb]: Creating mo file."
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "mo-update [nb]: Creating mo file."
 	cd /opt/minetest/po/nb && /usr/bin/msgfmt -o /opt/minetest/locale/nb/LC_MESSAGES/minetest.mo /opt/minetest/po/nb/minetest.po
 
 locale/nl/LC_MESSAGES/minetest.mo: locale/nl/LC_MESSAGES
 locale/nl/LC_MESSAGES/minetest.mo: po/nl/minetest.po
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "mo-update [nl]: Creating mo file."
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "mo-update [nl]: Creating mo file."
 	cd /opt/minetest/po/nl && /usr/bin/msgfmt -o /opt/minetest/locale/nl/LC_MESSAGES/minetest.mo /opt/minetest/po/nl/minetest.po
 
 locale/pl/LC_MESSAGES/minetest.mo: locale/pl/LC_MESSAGES
 locale/pl/LC_MESSAGES/minetest.mo: po/pl/minetest.po
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "mo-update [pl]: Creating mo file."
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "mo-update [pl]: Creating mo file."
 	cd /opt/minetest/po/pl && /usr/bin/msgfmt -o /opt/minetest/locale/pl/LC_MESSAGES/minetest.mo /opt/minetest/po/pl/minetest.po
 
 locale/pt/LC_MESSAGES/minetest.mo: locale/pt/LC_MESSAGES
 locale/pt/LC_MESSAGES/minetest.mo: po/pt/minetest.po
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "mo-update [pt]: Creating mo file."
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "mo-update [pt]: Creating mo file."
 	cd /opt/minetest/po/pt && /usr/bin/msgfmt -o /opt/minetest/locale/pt/LC_MESSAGES/minetest.mo /opt/minetest/po/pt/minetest.po
 
 locale/pt_BR/LC_MESSAGES/minetest.mo: locale/pt_BR/LC_MESSAGES
 locale/pt_BR/LC_MESSAGES/minetest.mo: po/pt_BR/minetest.po
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "mo-update [pt_BR]: Creating mo file."
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "mo-update [pt_BR]: Creating mo file."
 	cd /opt/minetest/po/pt_BR && /usr/bin/msgfmt -o /opt/minetest/locale/pt_BR/LC_MESSAGES/minetest.mo /opt/minetest/po/pt_BR/minetest.po
 
 locale/ro/LC_MESSAGES/minetest.mo: locale/ro/LC_MESSAGES
 locale/ro/LC_MESSAGES/minetest.mo: po/ro/minetest.po
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "mo-update [ro]: Creating mo file."
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "mo-update [ro]: Creating mo file."
 	cd /opt/minetest/po/ro && /usr/bin/msgfmt -o /opt/minetest/locale/ro/LC_MESSAGES/minetest.mo /opt/minetest/po/ro/minetest.po
 
 locale/ru/LC_MESSAGES/minetest.mo: locale/ru/LC_MESSAGES
 locale/ru/LC_MESSAGES/minetest.mo: po/ru/minetest.po
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "mo-update [ru]: Creating mo file."
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "mo-update [ru]: Creating mo file."
 	cd /opt/minetest/po/ru && /usr/bin/msgfmt -o /opt/minetest/locale/ru/LC_MESSAGES/minetest.mo /opt/minetest/po/ru/minetest.po
 
 locale/sl/LC_MESSAGES/minetest.mo: locale/sl/LC_MESSAGES
 locale/sl/LC_MESSAGES/minetest.mo: po/sl/minetest.po
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "mo-update [sl]: Creating mo file."
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "mo-update [sl]: Creating mo file."
 	cd /opt/minetest/po/sl && /usr/bin/msgfmt -o /opt/minetest/locale/sl/LC_MESSAGES/minetest.mo /opt/minetest/po/sl/minetest.po
 
 locale/sr_Cyrl/LC_MESSAGES/minetest.mo: locale/sr_Cyrl/LC_MESSAGES
 locale/sr_Cyrl/LC_MESSAGES/minetest.mo: po/sr_Cyrl/minetest.po
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "mo-update [sr_Cyrl]: Creating mo file."
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "mo-update [sr_Cyrl]: Creating mo file."
 	cd /opt/minetest/po/sr_Cyrl && /usr/bin/msgfmt -o /opt/minetest/locale/sr_Cyrl/LC_MESSAGES/minetest.mo /opt/minetest/po/sr_Cyrl/minetest.po
 
 locale/sv/LC_MESSAGES/minetest.mo: locale/sv/LC_MESSAGES
 locale/sv/LC_MESSAGES/minetest.mo: po/sv/minetest.po
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "mo-update [sv]: Creating mo file."
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "mo-update [sv]: Creating mo file."
 	cd /opt/minetest/po/sv && /usr/bin/msgfmt -o /opt/minetest/locale/sv/LC_MESSAGES/minetest.mo /opt/minetest/po/sv/minetest.po
 
 locale/sw/LC_MESSAGES/minetest.mo: locale/sw/LC_MESSAGES
 locale/sw/LC_MESSAGES/minetest.mo: po/sw/minetest.po
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "mo-update [sw]: Creating mo file."
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "mo-update [sw]: Creating mo file."
 	cd /opt/minetest/po/sw && /usr/bin/msgfmt -o /opt/minetest/locale/sw/LC_MESSAGES/minetest.mo /opt/minetest/po/sw/minetest.po
 
 locale/tr/LC_MESSAGES/minetest.mo: locale/tr/LC_MESSAGES
 locale/tr/LC_MESSAGES/minetest.mo: po/tr/minetest.po
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "mo-update [tr]: Creating mo file."
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "mo-update [tr]: Creating mo file."
 	cd /opt/minetest/po/tr && /usr/bin/msgfmt -o /opt/minetest/locale/tr/LC_MESSAGES/minetest.mo /opt/minetest/po/tr/minetest.po
 
 locale/uk/LC_MESSAGES/minetest.mo: locale/uk/LC_MESSAGES
 locale/uk/LC_MESSAGES/minetest.mo: po/uk/minetest.po
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "mo-update [uk]: Creating mo file."
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "mo-update [uk]: Creating mo file."
 	cd /opt/minetest/po/uk && /usr/bin/msgfmt -o /opt/minetest/locale/uk/LC_MESSAGES/minetest.mo /opt/minetest/po/uk/minetest.po
 
 locale/ca/LC_MESSAGES:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "mo-update [ca]: Creating locale directory."
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "mo-update [ca]: Creating locale directory."
 	cd /opt/minetest/src && /usr/bin/cmake -E make_directory /opt/minetest/locale/ca/LC_MESSAGES
 
 locale/cs/LC_MESSAGES:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "mo-update [cs]: Creating locale directory."
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "mo-update [cs]: Creating locale directory."
 	cd /opt/minetest/src && /usr/bin/cmake -E make_directory /opt/minetest/locale/cs/LC_MESSAGES
 
 locale/da/LC_MESSAGES:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "mo-update [da]: Creating locale directory."
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_34) "mo-update [da]: Creating locale directory."
 	cd /opt/minetest/src && /usr/bin/cmake -E make_directory /opt/minetest/locale/da/LC_MESSAGES
 
 locale/de/LC_MESSAGES:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_34) "mo-update [de]: Creating locale directory."
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_35) "mo-update [de]: Creating locale directory."
 	cd /opt/minetest/src && /usr/bin/cmake -E make_directory /opt/minetest/locale/de/LC_MESSAGES
 
 locale/dv/LC_MESSAGES:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_35) "mo-update [dv]: Creating locale directory."
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_36) "mo-update [dv]: Creating locale directory."
 	cd /opt/minetest/src && /usr/bin/cmake -E make_directory /opt/minetest/locale/dv/LC_MESSAGES
 
 locale/eo/LC_MESSAGES:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_36) "mo-update [eo]: Creating locale directory."
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_37) "mo-update [eo]: Creating locale directory."
 	cd /opt/minetest/src && /usr/bin/cmake -E make_directory /opt/minetest/locale/eo/LC_MESSAGES
 
 locale/es/LC_MESSAGES:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_37) "mo-update [es]: Creating locale directory."
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_38) "mo-update [es]: Creating locale directory."
 	cd /opt/minetest/src && /usr/bin/cmake -E make_directory /opt/minetest/locale/es/LC_MESSAGES
 
 locale/et/LC_MESSAGES:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_38) "mo-update [et]: Creating locale directory."
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_39) "mo-update [et]: Creating locale directory."
 	cd /opt/minetest/src && /usr/bin/cmake -E make_directory /opt/minetest/locale/et/LC_MESSAGES
 
 locale/fr/LC_MESSAGES:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_39) "mo-update [fr]: Creating locale directory."
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_40) "mo-update [fr]: Creating locale directory."
 	cd /opt/minetest/src && /usr/bin/cmake -E make_directory /opt/minetest/locale/fr/LC_MESSAGES
 
 locale/hu/LC_MESSAGES:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_40) "mo-update [hu]: Creating locale directory."
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_41) "mo-update [hu]: Creating locale directory."
 	cd /opt/minetest/src && /usr/bin/cmake -E make_directory /opt/minetest/locale/hu/LC_MESSAGES
 
 locale/id/LC_MESSAGES:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_41) "mo-update [id]: Creating locale directory."
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_42) "mo-update [id]: Creating locale directory."
 	cd /opt/minetest/src && /usr/bin/cmake -E make_directory /opt/minetest/locale/id/LC_MESSAGES
 
 locale/it/LC_MESSAGES:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_42) "mo-update [it]: Creating locale directory."
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_43) "mo-update [it]: Creating locale directory."
 	cd /opt/minetest/src && /usr/bin/cmake -E make_directory /opt/minetest/locale/it/LC_MESSAGES
 
 locale/ja/LC_MESSAGES:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_43) "mo-update [ja]: Creating locale directory."
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_44) "mo-update [ja]: Creating locale directory."
 	cd /opt/minetest/src && /usr/bin/cmake -E make_directory /opt/minetest/locale/ja/LC_MESSAGES
 
 locale/jbo/LC_MESSAGES:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_44) "mo-update [jbo]: Creating locale directory."
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_45) "mo-update [jbo]: Creating locale directory."
 	cd /opt/minetest/src && /usr/bin/cmake -E make_directory /opt/minetest/locale/jbo/LC_MESSAGES
 
+locale/kn/LC_MESSAGES:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_46) "mo-update [kn]: Creating locale directory."
+	cd /opt/minetest/src && /usr/bin/cmake -E make_directory /opt/minetest/locale/kn/LC_MESSAGES
+
 locale/lt/LC_MESSAGES:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_45) "mo-update [lt]: Creating locale directory."
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_47) "mo-update [lt]: Creating locale directory."
 	cd /opt/minetest/src && /usr/bin/cmake -E make_directory /opt/minetest/locale/lt/LC_MESSAGES
 
 locale/ms/LC_MESSAGES:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_46) "mo-update [ms]: Creating locale directory."
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_48) "mo-update [ms]: Creating locale directory."
 	cd /opt/minetest/src && /usr/bin/cmake -E make_directory /opt/minetest/locale/ms/LC_MESSAGES
 
 locale/nb/LC_MESSAGES:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_47) "mo-update [nb]: Creating locale directory."
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_49) "mo-update [nb]: Creating locale directory."
 	cd /opt/minetest/src && /usr/bin/cmake -E make_directory /opt/minetest/locale/nb/LC_MESSAGES
 
 locale/nl/LC_MESSAGES:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_48) "mo-update [nl]: Creating locale directory."
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_50) "mo-update [nl]: Creating locale directory."
 	cd /opt/minetest/src && /usr/bin/cmake -E make_directory /opt/minetest/locale/nl/LC_MESSAGES
 
 locale/pl/LC_MESSAGES:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_49) "mo-update [pl]: Creating locale directory."
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_51) "mo-update [pl]: Creating locale directory."
 	cd /opt/minetest/src && /usr/bin/cmake -E make_directory /opt/minetest/locale/pl/LC_MESSAGES
 
 locale/pt/LC_MESSAGES:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_50) "mo-update [pt]: Creating locale directory."
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_52) "mo-update [pt]: Creating locale directory."
 	cd /opt/minetest/src && /usr/bin/cmake -E make_directory /opt/minetest/locale/pt/LC_MESSAGES
 
 locale/pt_BR/LC_MESSAGES:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_51) "mo-update [pt_BR]: Creating locale directory."
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_53) "mo-update [pt_BR]: Creating locale directory."
 	cd /opt/minetest/src && /usr/bin/cmake -E make_directory /opt/minetest/locale/pt_BR/LC_MESSAGES
 
 locale/ro/LC_MESSAGES:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_52) "mo-update [ro]: Creating locale directory."
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_54) "mo-update [ro]: Creating locale directory."
 	cd /opt/minetest/src && /usr/bin/cmake -E make_directory /opt/minetest/locale/ro/LC_MESSAGES
 
 locale/ru/LC_MESSAGES:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_53) "mo-update [ru]: Creating locale directory."
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_55) "mo-update [ru]: Creating locale directory."
 	cd /opt/minetest/src && /usr/bin/cmake -E make_directory /opt/minetest/locale/ru/LC_MESSAGES
 
 locale/sl/LC_MESSAGES:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_54) "mo-update [sl]: Creating locale directory."
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_56) "mo-update [sl]: Creating locale directory."
 	cd /opt/minetest/src && /usr/bin/cmake -E make_directory /opt/minetest/locale/sl/LC_MESSAGES
 
 locale/sr_Cyrl/LC_MESSAGES:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_55) "mo-update [sr_Cyrl]: Creating locale directory."
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_57) "mo-update [sr_Cyrl]: Creating locale directory."
 	cd /opt/minetest/src && /usr/bin/cmake -E make_directory /opt/minetest/locale/sr_Cyrl/LC_MESSAGES
 
 locale/sv/LC_MESSAGES:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_56) "mo-update [sv]: Creating locale directory."
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_58) "mo-update [sv]: Creating locale directory."
 	cd /opt/minetest/src && /usr/bin/cmake -E make_directory /opt/minetest/locale/sv/LC_MESSAGES
 
 locale/sw/LC_MESSAGES:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_57) "mo-update [sw]: Creating locale directory."
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_59) "mo-update [sw]: Creating locale directory."
 	cd /opt/minetest/src && /usr/bin/cmake -E make_directory /opt/minetest/locale/sw/LC_MESSAGES
 
 locale/tr/LC_MESSAGES:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_58) "mo-update [tr]: Creating locale directory."
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_60) "mo-update [tr]: Creating locale directory."
 	cd /opt/minetest/src && /usr/bin/cmake -E make_directory /opt/minetest/locale/tr/LC_MESSAGES
 
 locale/uk/LC_MESSAGES:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_59) "mo-update [uk]: Creating locale directory."
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/opt/minetest/CMakeFiles --progress-num=$(CMAKE_PROGRESS_61) "mo-update [uk]: Creating locale directory."
 	cd /opt/minetest/src && /usr/bin/cmake -E make_directory /opt/minetest/locale/uk/LC_MESSAGES
 
 translations: src/CMakeFiles/translations
@@ -360,6 +370,7 @@ translations: locale/id/LC_MESSAGES/minetest.mo
 translations: locale/it/LC_MESSAGES/minetest.mo
 translations: locale/ja/LC_MESSAGES/minetest.mo
 translations: locale/jbo/LC_MESSAGES/minetest.mo
+translations: locale/kn/LC_MESSAGES/minetest.mo
 translations: locale/lt/LC_MESSAGES/minetest.mo
 translations: locale/ms/LC_MESSAGES/minetest.mo
 translations: locale/nb/LC_MESSAGES/minetest.mo
@@ -389,6 +400,7 @@ translations: locale/id/LC_MESSAGES
 translations: locale/it/LC_MESSAGES
 translations: locale/ja/LC_MESSAGES
 translations: locale/jbo/LC_MESSAGES
+translations: locale/kn/LC_MESSAGES
 translations: locale/lt/LC_MESSAGES
 translations: locale/ms/LC_MESSAGES
 translations: locale/nb/LC_MESSAGES

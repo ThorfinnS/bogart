@@ -7,22 +7,13 @@
 #include "static_text.h"
 #ifdef _IRR_COMPILE_WITH_GUI_
 
-#include <vector>
-#include <string>
-#include <iostream>
-#include <IGUISkin.h>
-#include <IGUIEnvironment.h>
 #include <IGUIFont.h>
 #include <IVideoDriver.h>
 #include <rect.h>
 #include <SColor.h>
 
 #if USE_FREETYPE
-	#include "cguittfont/xCGUITTFont.h"
-#endif
-#ifndef _IRR_IMPLEMENT_MANAGED_MARSHALLING_BUGFIX
-	// newer Irrlicht versions no longer have this
-	#define _IRR_IMPLEMENT_MANAGED_MARSHALLING_BUGFIX
+	#include "CGUITTFont.h"
 #endif
 
 #include "util/string.h"
@@ -241,7 +232,6 @@ video::SColor StaticText::getBackgroundColor() const
 //! Checks if background drawing is enabled
 bool StaticText::isDrawBackgroundEnabled() const
 {
-	_IRR_IMPLEMENT_MANAGED_MARSHALLING_BUGFIX;
 	return Background;
 }
 
@@ -256,7 +246,6 @@ void StaticText::setDrawBorder(bool draw)
 //! Checks if border drawing is enabled
 bool StaticText::isDrawBorderEnabled() const
 {
-	_IRR_IMPLEMENT_MANAGED_MARSHALLING_BUGFIX;
 	return Border;
 }
 
@@ -300,7 +289,6 @@ void StaticText::enableOverrideColor(bool enable)
 
 bool StaticText::isOverrideColorEnabled() const
 {
-	_IRR_IMPLEMENT_MANAGED_MARSHALLING_BUGFIX;
 	return OverrideColorEnabled;
 }
 
@@ -316,7 +304,6 @@ void StaticText::setWordWrap(bool enable)
 
 bool StaticText::isWordWrapEnabled() const
 {
-	_IRR_IMPLEMENT_MANAGED_MARSHALLING_BUGFIX;
 	return WordWrap;
 }
 

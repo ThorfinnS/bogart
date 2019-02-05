@@ -3,9 +3,6 @@
 
 local vessels_shelf_formspec =
 	"size[8,7;]" ..
-	default.gui_bg ..
-	default.gui_bg_img ..
-	default.gui_slots ..
 	"list[context;vessels;0,0.3;8,2;]" ..
 	"list[current_player;main;0,2.85;8,1;]" ..
 	"list[current_player;main;0,4.08;8,3;8]" ..
@@ -175,7 +172,7 @@ minetest.register_craft( {
 -- Glass and steel recycling
 
 minetest.register_craftitem("vessels:glass_fragments", {
-	description = "Pile of Glass Fragments",
+	description = "Glass Fragments",
 	inventory_image = "vessels_glass_fragments.png",
 })
 

@@ -9,8 +9,8 @@
 local modname = "bamboo"
 local modpath = minetest.get_modpath(modname)
 
--- Load support for intllib.
-local S = dofile(modpath .. "/intllib.lua")
+-- internationalization boilerplate
+local S = minetest.get_translator(minetest.get_current_modname())
 
 bamboo = {}
 

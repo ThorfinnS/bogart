@@ -23,7 +23,7 @@ with this program; if not, write to the Free Software Foundation, Inc.,
 #include "common/c_converter.h"
 #include "common/c_content.h"
 #include "server.h"
-#include "player.h"
+#include "remoteplayer.h"
 
 /*
 	InvRef
@@ -336,7 +336,7 @@ int InvRef::l_contains_item(lua_State *L)
 	InventoryList *list = getlist(L, ref, listname);
 	bool match_meta = false;
 	if (lua_isboolean(L, 4))
-		match_meta = lua_toboolean(L, 4);
+		match_meta = readParam<bool>(L, 4);
 	if (list) {
 		lua_pushboolean(L, list->containsItem(item, match_meta));
 	} else {
@@ -406,10 +406,6 @@ int InvRef::l_get_location(lua_State *L)
 
 InvRef::InvRef(const InventoryLocation &loc):
 	m_loc(loc)
-{
-}
-
-InvRef::~InvRef()
 {
 }
 
@@ -499,28 +495,29 @@ int ModApiInventory::l_get_inventory(lua_State *L)
 		v3s16 pos = check_v3s16(L, -1);
 		loc.setNodeMeta(pos);
 
-		if(getServer(L)->getInventory(loc) != NULL)
+		if (getServer(L)->getInventory(loc) != NULL)
 			InvRef::create(L, loc);
 		else
 			lua_pushnil(L);
 		return 1;
-	} else {
-		NO_MAP_LOCK_REQUIRED;
-		if(type == "player"){
-			std::string name = checkstringfield(L, 1, "name");
-			loc.setPlayer(name);
-		} else if(type == "detached"){
-			std::string name = checkstringfield(L, 1, "name");
-			loc.setDetached(name);
-		}
-
-		if(getServer(L)->getInventory(loc) != NULL)
-			InvRef::create(L, loc);
-		else
-			lua_pushnil(L);
-		return 1;
-		// END NO_MAP_LOCK_REQUIRED;
 	}
+
+	NO_MAP_LOCK_REQUIRED;
+	if (type == "player") {
+		std::string name = checkstringfield(L, 1, "name");
+		loc.setPlayer(name);
+	} else if (type == "detached") {
+		std::string name = checkstringfield(L, 1, "name");
+		loc.setDetached(name);
+	}
+
+	if (getServer(L)->getInventory(loc) != NULL)
+		InvRef::create(L, loc);
+	else
+		lua_pushnil(L);
+	return 1;
+	// END NO_MAP_LOCK_REQUIRED;
+
 }
 
 // create_detached_inventory_raw(name, [player_name])
@@ -528,7 +525,7 @@ int ModApiInventory::l_create_detached_inventory_raw(lua_State *L)
 {
 	NO_MAP_LOCK_REQUIRED;
 	const char *name = luaL_checkstring(L, 1);
-	const char *player = lua_isstring(L, 2) ? lua_tostring(L, 2) : "";
+	std::string player = readParam<std::string>(L, 2, "");
 	if (getServer(L)->createDetachedInventory(name, player) != NULL) {
 		InventoryLocation loc;
 		loc.setDetached(name);
@@ -539,8 +536,18 @@ int ModApiInventory::l_create_detached_inventory_raw(lua_State *L)
 	return 1;
 }
 
+// remove_detached_inventory_raw(name)
+int ModApiInventory::l_remove_detached_inventory_raw(lua_State *L)
+{
+	NO_MAP_LOCK_REQUIRED;
+	const std::string &name = luaL_checkstring(L, 1);
+	lua_pushboolean(L, getServer(L)->removeDetachedInventory(name));
+	return 1;
+}
+
 void ModApiInventory::Initialize(lua_State *L, int top)
 {
 	API_FCT(create_detached_inventory_raw);
+	API_FCT(remove_detached_inventory_raw);
 	API_FCT(get_inventory);
 }

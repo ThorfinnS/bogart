@@ -17,15 +17,13 @@ with this program; if not, write to the Free Software Foundation, Inc.,
 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 */
 
-#ifndef UTIL_NUMERIC_HEADER
-#define UTIL_NUMERIC_HEADER
+#pragma once
 
 #include "basic_macros.h"
-#include "../irrlichttypes.h"
-#include "../irr_v2d.h"
-#include "../irr_v3d.h"
-#include "../irr_aabb3d.h"
-#include "../threading/mutex.h"
+#include "irrlichttypes.h"
+#include "irr_v2d.h"
+#include "irr_v3d.h"
+#include "irr_aabb3d.h"
 
 #define rangelim(d, min, max) ((d) < (min) ? (min) : ((d) > (max) ? (max) : (d)))
 #define myfloor(x) ((x) < 0.0 ? (int)(x) - 1 : (int)(x))
@@ -184,6 +182,23 @@ inline float wrapDegrees_0_360(float f)
 }
 
 
+/** Returns \p v3f wrapped to the range [0, 360]
+  */
+inline v3f wrapDegrees_0_360_v3f(v3f v)
+{
+	v3f value_v3f;
+	value_v3f.X = modulo360f(v.X);
+	value_v3f.Y = modulo360f(v.Y);
+	value_v3f.Z = modulo360f(v.Z);
+
+	// Now that values are wrapped, use to get values for certain ranges
+	value_v3f.X = value_v3f.X < 0 ? value_v3f.X + 360 : value_v3f.X;
+	value_v3f.Y = value_v3f.Y < 0 ? value_v3f.Y + 360 : value_v3f.Y;
+	value_v3f.Z = value_v3f.Z < 0 ? value_v3f.Z + 360 : value_v3f.Z;
+	return value_v3f;
+}
+
+
 /** Returns \p f wrapped to the range [-180, 180]
   */
 inline float wrapDegrees_180(float f)
@@ -234,6 +249,8 @@ u64 murmur_hash_64_ua(const void *key, int len, unsigned int seed);
 bool isBlockInSight(v3s16 blockpos_b, v3f camera_pos, v3f camera_dir,
 		f32 camera_fov, f32 range, f32 *distance_ptr=NULL);
 
+s16 adjustDist(s16 dist, float zoom_fov);
+
 /*
 	Returns nearest 32-bit integer for given floating point number.
 	<cmath> and <math.h> in VC++ don't provide round().
@@ -241,6 +258,11 @@ bool isBlockInSight(v3s16 blockpos_b, v3f camera_pos, v3f camera_dir,
 inline s32 myround(f32 f)
 {
 	return (s32)(f < 0.f ? (f - 0.5f) : (f + 0.5f));
+}
+
+inline constexpr f32 sqr(f32 f)
+{
+	return f * f;
 }
 
 /*
@@ -281,12 +303,12 @@ inline v3f intToFloat(v3s16 p, f32 d)
 inline aabb3f getNodeBox(v3s16 p, float d)
 {
 	return aabb3f(
-		(float)p.X * d - 0.5 * d,
-		(float)p.Y * d - 0.5 * d,
-		(float)p.Z * d - 0.5 * d,
-		(float)p.X * d + 0.5 * d,
-		(float)p.Y * d + 0.5 * d,
-		(float)p.Z * d + 0.5 * d
+		(float)p.X * d - 0.5f * d,
+		(float)p.Y * d - 0.5f * d,
+		(float)p.Z * d - 0.5f * d,
+		(float)p.X * d + 0.5f * d,
+		(float)p.Y * d + 0.5f * d,
+		(float)p.Z * d + 0.5f * d
 	);
 }
 
@@ -294,7 +316,8 @@ inline aabb3f getNodeBox(v3s16 p, float d)
 class IntervalLimiter
 {
 public:
-	IntervalLimiter() : m_accumulator(0) {}
+	IntervalLimiter() = default;
+
 	/*
 		dtime: time from last call to this method
 		wanted_interval: interval wanted
@@ -312,7 +335,7 @@ public:
 	}
 
 private:
-	float m_accumulator;
+	float m_accumulator = 0.0f;
 };
 
 
@@ -376,4 +399,21 @@ inline u32 npot2(u32 orig) {
 	return orig + 1;
 }
 
-#endif
+// Gradual steps towards the target value in a wrapped (circular) system
+// using the shorter of both ways
+template<typename T>
+inline void wrappedApproachShortest(T &current, const T target, const T stepsize,
+	const T maximum)
+{
+	T delta = target - current;
+	if (delta < 0)
+		delta += maximum;
+
+	if (delta > stepsize && maximum - delta > stepsize) {
+		current += (delta < maximum / 2) ? stepsize : -stepsize;
+		if (current >= maximum)
+			current -= maximum;
+	} else {
+		current = target;
+	}
+}

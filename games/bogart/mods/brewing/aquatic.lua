@@ -19,12 +19,6 @@ minetest.register_craftitem("brewing:turtle_shell", {
 	groups = {flammable = 1, food = 1},
 })
 
- -- BELOW THIS LINE, THIS SCRIPT IS FOR DEV OR 5.0 ONLY
-
-if not (minetest.has_feature(minetest.get_biome_name)) then
-	return
-end
-
 -- Pearl Oyster
 
 if mg_name ~= "v6" and mg_name ~= "singlenode" and brewing.settings.generate_pearl_oyster == true then

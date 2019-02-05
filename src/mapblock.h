@@ -17,11 +17,9 @@ with this program; if not, write to the Free Software Foundation, Inc.,
 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 */
 
-#ifndef MAPBLOCK_HEADER
-#define MAPBLOCK_HEADER
+#pragma once
 
 #include <set>
-#include "debug.h"
 #include "irr_v3d.h"
 #include "mapnode.h"
 #include "exceptions.h"
@@ -32,7 +30,7 @@ with this program; if not, write to the Free Software Foundation, Inc.,
 #include "modifiedstate.h"
 #include "util/numeric.h" // getContainerPos
 #include "settings.h"
-#include "mapgen.h"
+#include "mapgen/mapgen.h"
 
 class Map;
 class NodeMetadataList;
@@ -41,63 +39,6 @@ class MapBlockMesh;
 class VoxelManipulator;
 
 #define BLOCK_TIMESTAMP_UNDEFINED 0xffffffff
-
-/*// Named by looking towards z+
-enum{
-	FACE_BACK=0,
-	FACE_TOP,
-	FACE_RIGHT,
-	FACE_FRONT,
-	FACE_BOTTOM,
-	FACE_LEFT
-};*/
-
-// NOTE: If this is enabled, set MapBlock to be initialized with
-//       CONTENT_IGNORE.
-/*enum BlockGenerationStatus
-{
-	// Completely non-generated (filled with CONTENT_IGNORE).
-	BLOCKGEN_UNTOUCHED=0,
-	// Trees or similar might have been blitted from other blocks to here.
-	// Otherwise, the block contains CONTENT_IGNORE
-	BLOCKGEN_FROM_NEIGHBORS=2,
-	// Has been generated, but some neighbors might put some stuff in here
-	// when they are generated.
-	// Does not contain any CONTENT_IGNORE
-	BLOCKGEN_SELF_GENERATED=4,
-	// The block and all its neighbors have been generated
-	BLOCKGEN_FULLY_GENERATED=6
-};*/
-
-#if 0
-enum
-{
-	NODECONTAINER_ID_MAPBLOCK,
-	NODECONTAINER_ID_MAPSECTOR,
-	NODECONTAINER_ID_MAP,
-	NODECONTAINER_ID_MAPBLOCKCACHE,
-	NODECONTAINER_ID_VOXELMANIPULATOR,
-};
-
-class NodeContainer
-{
-public:
-	virtual bool isValidPosition(v3s16 p) = 0;
-	virtual MapNode getNode(v3s16 p) = 0;
-	virtual void setNode(v3s16 p, MapNode & n) = 0;
-	virtual u16 nodeContainerId() const = 0;
-
-	MapNode getNodeNoEx(v3s16 p)
-	{
-		try{
-			return getNode(p);
-		}
-		catch(InvalidPositionException &e){
-			return MapNode(CONTENT_IGNORE);
-		}
-	}
-};
-#endif
 
 ////
 //// MapBlock modified reason flags
@@ -129,7 +70,7 @@ public:
 //// MapBlock itself
 ////
 
-class MapBlock /*: public NodeContainer*/
+class MapBlock
 {
 public:
 	MapBlock(Map *parent, v3s16 pos, IGameDef *gamedef, bool dummy=false);
@@ -173,6 +114,8 @@ public:
 		} else if (mod == m_modified) {
 			m_modified_reason |= reason;
 		}
+		if (mod == MOD_STATE_WRITE_NEEDED)
+			contents_cached = false;
 	}
 
 	inline u32 getModified()
@@ -199,7 +142,7 @@ public:
 
 	inline bool isDummy()
 	{
-		return (data == NULL);
+		return !data;
 	}
 
 	inline void unDummify()
@@ -299,7 +242,7 @@ public:
 
 	inline bool isValidPosition(s16 x, s16 y, s16 z)
 	{
-		return data != NULL
+		return data
 			&& x >= 0 && x < MAP_BLOCKSIZE
 			&& y >= 0 && y < MAP_BLOCKSIZE
 			&& z >= 0 && z < MAP_BLOCKSIZE;
@@ -315,7 +258,7 @@ public:
 		*valid_position = isValidPosition(x, y, z);
 
 		if (!*valid_position)
-			return MapNode(CONTENT_IGNORE);
+			return {CONTENT_IGNORE};
 
 		return data[z * zstride + y * ystride + x];
 	}
@@ -351,9 +294,9 @@ public:
 
 	inline MapNode getNodeNoCheck(s16 x, s16 y, s16 z, bool *valid_position)
 	{
-		*valid_position = data != NULL;
-		if (!valid_position)
-			return MapNode(CONTENT_IGNORE);
+		*valid_position = data != nullptr;
+		if (!*valid_position)
+			return {CONTENT_IGNORE};
 
 		return data[z * zstride + y * ystride + x];
 	}
@@ -381,7 +324,7 @@ public:
 
 	inline void setNodeNoCheck(s16 x, s16 y, s16 z, MapNode & n)
 	{
-		if (data == NULL)
+		if (!data)
 			throw InvalidPositionException();
 
 		data[z * zstride + y * ystride + x] = n;
@@ -406,10 +349,6 @@ public:
 		for (u16 x = 0; x < w; x++)
 			setNode(x0 + x, y0 + y, z0 + z, node);
 	}
-
-	// See comments in mapblock.cpp
-	bool propagateSunlight(std::set<v3s16> &light_sources,
-		bool remove_light=false, bool *black_air_left=NULL);
 
 	// Copies data to VoxelManipulator to getPosRelative()
 	void copyTo(VoxelManipulator &dst);
@@ -516,12 +455,12 @@ public:
 	//// Node Timers
 	////
 
-	inline NodeTimer getNodeTimer(v3s16 p)
+	inline NodeTimer getNodeTimer(const v3s16 &p)
 	{
 		return m_node_timers.get(p);
 	}
 
-	inline void removeNodeTimer(v3s16 p)
+	inline void removeNodeTimer(const v3s16 &p)
 	{
 		m_node_timers.remove(p);
 	}
@@ -580,7 +519,7 @@ public:
 	*/
 
 #ifndef SERVER // Only on client
-	MapBlockMesh *mesh;
+	MapBlockMesh *mesh = nullptr;
 #endif
 
 	NodeMetadataList m_node_metadata;
@@ -591,6 +530,14 @@ public:
 	static const u32 zstride = MAP_BLOCKSIZE * MAP_BLOCKSIZE;
 
 	static const u32 nodecount = MAP_BLOCKSIZE * MAP_BLOCKSIZE * MAP_BLOCKSIZE;
+
+	//// ABM optimizations ////
+	// Cache of content types
+	std::unordered_set<content_t> contents;
+	// True if content types are cached
+	bool contents_cached = false;
+	// True if we never want to cache content types for this block
+	bool do_not_cache_contents = false;
 
 private:
 	/*
@@ -616,15 +563,15 @@ private:
 		If NULL, block is a dummy block.
 		Dummy blocks are used for caching not-found-on-disk blocks.
 	*/
-	MapNode *data;
+	MapNode *data = nullptr;
 
 	/*
 		- On the server, this is used for telling whether the
 		  block has been modified from the one on disk.
 		- On the client, this is used for nothing.
 	*/
-	u32 m_modified;
-	u32 m_modified_reason;
+	u32 m_modified = MOD_STATE_WRITE_NEEDED;
+	u32 m_modified_reason = MOD_REASON_INITIAL;
 
 	/*
 		When propagating sunlight and the above block doesn't exist,
@@ -634,7 +581,7 @@ private:
 		undeground with nothing visible above the ground except
 		caves.
 	*/
-	bool is_underground;
+	bool is_underground = false;
 
 	/*!
 	 * Each bit indicates if light spreading was finished
@@ -644,33 +591,33 @@ private:
 	 * night X-, night Y-, night Z-, night Z+, night Y+, night X+,
 	 * day X-,   day Y-,   day Z-,   day Z+,   day Y+,   day X+.
 	*/
-	u16 m_lighting_complete;
+	u16 m_lighting_complete = 0xFFFF;
 
 	// Whether day and night lighting differs
-	bool m_day_night_differs;
-	bool m_day_night_differs_expired;
+	bool m_day_night_differs = false;
+	bool m_day_night_differs_expired = true;
 
-	bool m_generated;
+	bool m_generated = false;
 
 	/*
 		When block is removed from active blocks, this is set to gametime.
 		Value BLOCK_TIMESTAMP_UNDEFINED=0xffffffff means there is no timestamp.
 	*/
-	u32 m_timestamp;
+	u32 m_timestamp = BLOCK_TIMESTAMP_UNDEFINED;
 	// The on-disk (or to-be on-disk) timestamp value
-	u32 m_disk_timestamp;
+	u32 m_disk_timestamp = BLOCK_TIMESTAMP_UNDEFINED;
 
 	/*
 		When the block is accessed, this is set to 0.
 		Map will unload the block when this reaches a timeout.
 	*/
-	float m_usage_timer;
+	float m_usage_timer = 0;
 
 	/*
 		Reference count; currently used for determining if this block is in
 		the list of blocks to be drawn.
 	*/
-	int m_refcount;
+	int m_refcount = 0;
 };
 
 typedef std::vector<MapBlock*> MapBlockVect;
@@ -700,27 +647,12 @@ inline bool blockpos_over_max_limit(v3s16 p)
 /*
 	Returns the position of the block where the node is located
 */
-inline v3s16 getNodeBlockPos(v3s16 p)
+inline v3s16 getNodeBlockPos(const v3s16 &p)
 {
 	return getContainerPos(p, MAP_BLOCKSIZE);
-}
-
-inline v2s16 getNodeSectorPos(v2s16 p)
-{
-	return getContainerPos(p, MAP_BLOCKSIZE);
-}
-
-inline s16 getNodeBlockY(s16 y)
-{
-	return getContainerPos(y, MAP_BLOCKSIZE);
 }
 
 inline void getNodeBlockPosWithOffset(const v3s16 &p, v3s16 &block, v3s16 &offset)
-{
-	getContainerPosWithOffset(p, MAP_BLOCKSIZE, block, offset);
-}
-
-inline void getNodeSectorPosWithOffset(const v2s16 &p, v2s16 &block, v2s16 &offset)
 {
 	getContainerPosWithOffset(p, MAP_BLOCKSIZE, block, offset);
 }
@@ -729,5 +661,3 @@ inline void getNodeSectorPosWithOffset(const v2s16 &p, v2s16 &block, v2s16 &offs
 	Get a quick string to describe what a block actually contains
 */
 std::string analyze_block(MapBlock *block);
-
-#endif

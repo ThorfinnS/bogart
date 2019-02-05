@@ -7,8 +7,18 @@
 #IncludeRegexTransform: 
 
 /opt/minetest/lib/jsoncpp/json/json.h
+stddef.h
+-
+string
+-
+stdint.h
+-
 cpptl/config.h
 -
+version.h
+/opt/minetest/lib/jsoncpp/json/version.h
+allocator.h
+/opt/minetest/lib/jsoncpp/json/allocator.h
 config.h
 /opt/minetest/lib/jsoncpp/json/config.h
 forwards.h
@@ -59,6 +69,8 @@ config.h
 /opt/minetest/lib/jsoncpp/jsoncpp.cpp
 json/json.h
 /opt/minetest/lib/jsoncpp/json/json.h
+clocale
+-
 json/assertions.h
 -
 json/reader.h
@@ -132,6 +144,10 @@ cstdio
 float.h
 -
 ieeefp.h
+-
+math.h
+-
+math.h
 -
 cmath
 -

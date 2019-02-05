@@ -54,7 +54,7 @@ CMAKE_BINARY_DIR = /opt/minetest
 include src/CMakeFiles/GenerateVersion.dir/progress.make
 
 src/CMakeFiles/GenerateVersion:
-	cd /opt/minetest/src && /usr/bin/cmake -D GENERATE_VERSION_SOURCE_DIR=/opt/minetest/src -D GENERATE_VERSION_BINARY_DIR=/opt/minetest/src -D VERSION_STRING=0.4.17.1 -D DEVELOPMENT_BUILD=FALSE -P /opt/minetest/cmake/Modules/GenerateVersion.cmake
+	cd /opt/minetest/src && /usr/bin/cmake -D GENERATE_VERSION_SOURCE_DIR=/opt/minetest/src -D GENERATE_VERSION_BINARY_DIR=/opt/minetest/src -D VERSION_STRING=5.0.0-dev -D DEVELOPMENT_BUILD=TRUE -P /opt/minetest/cmake/Modules/GenerateVersion.cmake
 
 GenerateVersion: src/CMakeFiles/GenerateVersion
 GenerateVersion: src/CMakeFiles/GenerateVersion.dir/build.make

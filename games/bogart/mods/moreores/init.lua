@@ -15,12 +15,8 @@ if minetest.registered_items["default:tin_ingot"] then
 	default_tin = true
 end
 
-local S
-if minetest.get_modpath("intllib") then
-	S = intllib.Getter()
-else
-	S = function(s) return s end
-end
+-- internationalization boilerplate
+local S = minetest.get_translator(minetest.get_current_modname())
 
 local modpath = minetest.get_modpath("moreores")
 

@@ -17,8 +17,7 @@ with this program; if not, write to the Free Software Foundation, Inc.,
 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 */
 
-#ifndef L_OBJECT_H_
-#define L_OBJECT_H_
+#pragma once
 
 #include "lua_api/l_base.h"
 #include "irrlichttypes.h"
@@ -33,16 +32,28 @@ class RemotePlayer;
 */
 
 class ObjectRef : public ModApiBase {
-private:
-	ServerActiveObject *m_object;
-
-	static const char className[];
-	static const luaL_Reg methods[];
 public:
+	ObjectRef(ServerActiveObject *object);
+
+	~ObjectRef() = default;
+
+	// Creates an ObjectRef and leaves it on top of stack
+	// Not callable from Lua; all references are created on the C side.
+	static void create(lua_State *L, ServerActiveObject *object);
+
+	static void set_null(lua_State *L);
+
+	static void Register(lua_State *L);
+
 	static ObjectRef *checkobject(lua_State *L, int narg);
 
 	static ServerActiveObject* getobject(ObjectRef *ref);
 private:
+	ServerActiveObject *m_object = nullptr;
+	static const char className[];
+	static luaL_Reg methods[];
+
+
 	static LuaEntitySAO* getluaobject(ObjectRef *ref);
 
 	static PlayerSAO* getplayersao(ObjectRef *ref);
@@ -114,6 +125,9 @@ private:
 	// set_animation(self, frame_range, frame_speed, frame_blend, frame_loop)
 	static int l_set_animation(lua_State *L);
 
+	// set_animation_frame_speed(self, frame_speed)
+	static int l_set_animation_frame_speed(lua_State *L);
+
 	// get_animation(self)
 	static int l_get_animation(lua_State *L);
 
@@ -146,6 +160,9 @@ private:
 	// set_velocity(self, {x=num, y=num, z=num})
 	static int l_set_velocity(lua_State *L);
 
+	// add_velocity(self, {x=num, y=num, z=num})
+	static int l_add_velocity(lua_State *L);
+
 	// get_velocity(self)
 	static int l_get_velocity(lua_State *L);
 
@@ -154,6 +171,12 @@ private:
 
 	// get_acceleration(self)
 	static int l_get_acceleration(lua_State *L);
+
+	// set_rotation(self, {x=num, y=num, z=num})
+	static int l_set_rotation(lua_State *L);
+
+	// get_rotation(self)
+	static int l_get_rotation(lua_State *L);
 
 	// set_yaw(self, radians)
 	static int l_set_yaw(lua_State *L);
@@ -232,11 +255,20 @@ private:
 	// get_attribute(self, attribute)
 	static int l_get_attribute(lua_State *L);
 
+	// get_meta(self)
+	static int l_get_meta(lua_State *L);
+
 	// set_inventory_formspec(self, formspec)
 	static int l_set_inventory_formspec(lua_State *L);
 
 	// get_inventory_formspec(self) -> formspec
 	static int l_get_inventory_formspec(lua_State *L);
+
+	// set_formspec_prepend(self, formspec)
+	static int l_set_formspec_prepend(lua_State *L);
+
+	// get_formspec_prepend(self) -> formspec
+	static int l_get_formspec_prepend(lua_State *L);
 
 	// get_player_control(self)
 	static int l_get_player_control(lua_State *L);
@@ -319,18 +351,4 @@ private:
 	// get_nametag_attributes(self)
 	static int l_get_nametag_attributes(lua_State *L);
 
-public:
-	ObjectRef(ServerActiveObject *object);
-
-	~ObjectRef();
-
-	// Creates an ObjectRef and leaves it on top of stack
-	// Not callable from Lua; all references are created on the C side.
-	static void create(lua_State *L, ServerActiveObject *object);
-
-	static void set_null(lua_State *L);
-
-	static void Register(lua_State *L);
 };
-
-#endif /* L_OBJECT_H_ */

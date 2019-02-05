@@ -17,17 +17,20 @@ with this program; if not, write to the Free Software Foundation, Inc.,
 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 */
 
-#ifndef TILE_HEADER
-#define TILE_HEADER
+#pragma once
 
 #include "irrlichttypes.h"
 #include "irr_v3d.h"
 #include <ITexture.h>
-#include <IrrlichtDevice.h>
-#include "threads.h"
 #include <string>
 #include <vector>
+#include <SMaterial.h>
+#include <memory>
 #include "util/numeric.h"
+
+#if __ANDROID__
+#include <IVideoDriver.h>
+#endif
 
 class IGameDef;
 struct TileSpec;
@@ -65,49 +68,34 @@ std::string getTexturePath(const std::string &filename);
 void clearTextureNameCache();
 
 /*
-	ITextureSource::generateTextureFromMesh parameters
-*/
-namespace irr {namespace scene {class IMesh;}}
-struct TextureFromMeshParams
-{
-	scene::IMesh *mesh;
-	core::dimension2d<u32> dim;
-	std::string rtt_texture_name;
-	bool delete_texture_on_shutdown;
-	v3f camera_position;
-	v3f camera_lookat;
-	core::CMatrix4<f32> camera_projection_matrix;
-	video::SColorf ambient_light;
-	v3f light_position;
-	video::SColorf light_color;
-	f32 light_radius;
-};
-
-/*
 	TextureSource creates and caches textures.
 */
 
 class ISimpleTextureSource
 {
 public:
-	ISimpleTextureSource(){}
-	virtual ~ISimpleTextureSource(){}
+	ISimpleTextureSource() = default;
+
+	virtual ~ISimpleTextureSource() = default;
+
 	virtual video::ITexture* getTexture(
-			const std::string &name, u32 *id = NULL) = 0;
+			const std::string &name, u32 *id = nullptr) = 0;
 };
 
 class ITextureSource : public ISimpleTextureSource
 {
 public:
-	ITextureSource(){}
-	virtual ~ITextureSource(){}
+	ITextureSource() = default;
+
+	virtual ~ITextureSource() = default;
+
 	virtual u32 getTextureId(const std::string &name)=0;
 	virtual std::string getTextureName(u32 id)=0;
 	virtual video::ITexture* getTexture(u32 id)=0;
 	virtual video::ITexture* getTexture(
-			const std::string &name, u32 *id = NULL)=0;
+			const std::string &name, u32 *id = nullptr)=0;
 	virtual video::ITexture* getTextureForMesh(
-			const std::string &name, u32 *id = NULL) = 0;
+			const std::string &name, u32 *id = nullptr) = 0;
 	/*!
 	 * Returns a palette from the given texture name.
 	 * The pointer is valid until the texture source is
@@ -115,10 +103,7 @@ public:
 	 * Should be called from the main thread.
 	 */
 	virtual Palette* getPalette(const std::string &name) = 0;
-	virtual IrrlichtDevice* getDevice()=0;
 	virtual bool isKnownSourceImage(const std::string &name)=0;
-	virtual video::ITexture* generateTextureFromMesh(
-			const TextureFromMeshParams &params)=0;
 	virtual video::ITexture* getNormalTexture(const std::string &name)=0;
 	virtual video::SColor getTextureAverageColor(const std::string &name)=0;
 	virtual video::ITexture *getShaderFlagsTexture(bool normalmap_present)=0;
@@ -127,17 +112,16 @@ public:
 class IWritableTextureSource : public ITextureSource
 {
 public:
-	IWritableTextureSource(){}
-	virtual ~IWritableTextureSource(){}
+	IWritableTextureSource() = default;
+
+	virtual ~IWritableTextureSource() = default;
+
 	virtual u32 getTextureId(const std::string &name)=0;
 	virtual std::string getTextureName(u32 id)=0;
 	virtual video::ITexture* getTexture(u32 id)=0;
 	virtual video::ITexture* getTexture(
-			const std::string &name, u32 *id = NULL)=0;
-	virtual IrrlichtDevice* getDevice()=0;
+			const std::string &name, u32 *id = nullptr)=0;
 	virtual bool isKnownSourceImage(const std::string &name)=0;
-	virtual video::ITexture* generateTextureFromMesh(
-			const TextureFromMeshParams &params)=0;
 
 	virtual void processQueue()=0;
 	virtual void insertSourceImage(const std::string &name, video::IImage *img)=0;
@@ -147,10 +131,10 @@ public:
 	virtual video::ITexture *getShaderFlagsTexture(bool normalmap_present)=0;
 };
 
-IWritableTextureSource* createTextureSource(IrrlichtDevice *device);
+IWritableTextureSource *createTextureSource();
 
 #ifdef __ANDROID__
-video::IImage * Align2Npot2(video::IImage * image, video::IVideoDriver* driver);
+video::IImage * Align2Npot2(video::IImage * image, irr::video::IVideoDriver* driver);
 #endif
 
 enum MaterialType{
@@ -172,7 +156,7 @@ enum MaterialType{
 // Ignored if MATERIAL_FLAG_CRACK is not set.
 #define MATERIAL_FLAG_CRACK_OVERLAY 0x04
 #define MATERIAL_FLAG_ANIMATION 0x08
-#define MATERIAL_FLAG_HIGHLIGHTED 0x10
+//#define MATERIAL_FLAG_HIGHLIGHTED 0x10
 #define MATERIAL_FLAG_TILEABLE_HORIZONTAL 0x20
 #define MATERIAL_FLAG_TILEABLE_VERTICAL 0x40
 
@@ -182,17 +166,12 @@ enum MaterialType{
 */
 struct FrameSpec
 {
-	FrameSpec():
-		texture_id(0),
-		texture(NULL),
-		normal_texture(NULL),
-		flags_texture(NULL)
-	{
-	}
-	u32 texture_id;
-	video::ITexture *texture;
-	video::ITexture *normal_texture;
-	video::ITexture *flags_texture;
+	FrameSpec() = default;
+
+	u32 texture_id = 0;
+	video::ITexture *texture = nullptr;
+	video::ITexture *normal_texture = nullptr;
+	video::ITexture *flags_texture = nullptr;
 };
 
 #define MAX_TILE_LAYERS 2
@@ -200,25 +179,7 @@ struct FrameSpec
 //! Defines a layer of a tile.
 struct TileLayer
 {
-	TileLayer():
-		texture(NULL),
-		normal_texture(NULL),
-		flags_texture(NULL),
-		shader_id(0),
-		texture_id(0),
-		animation_frame_length_ms(0),
-		animation_frame_count(1),
-		material_type(TILE_MATERIAL_BASIC),
-		material_flags(
-			//0 // <- DEBUG, Use the one below
-			MATERIAL_FLAG_BACKFACE_CULLING |
-			MATERIAL_FLAG_TILEABLE_HORIZONTAL|
-			MATERIAL_FLAG_TILEABLE_VERTICAL
-		),
-		has_color(false),
-		color()
-	{
-	}
+	TileLayer() = default;
 
 	/*!
 	 * Two layers are equal if they can be merged.
@@ -229,7 +190,8 @@ struct TileLayer
 			texture_id == other.texture_id &&
 			material_type == other.material_type &&
 			material_flags == other.material_flags &&
-			color == other.color;
+			color == other.color &&
+			scale == other.scale;
 	}
 
 	/*!
@@ -258,9 +220,10 @@ struct TileLayer
 		case TILE_MATERIAL_LIQUID_TRANSPARENT:
 			material.MaterialType = video::EMT_TRANSPARENT_ALPHA_CHANNEL;
 			break;
+		default:
+			break;
 		}
-		material.BackfaceCulling = (material_flags & MATERIAL_FLAG_BACKFACE_CULLING)
-			? true : false;
+		material.BackfaceCulling = (material_flags & MATERIAL_FLAG_BACKFACE_CULLING) != 0;
 		if (!(material_flags & MATERIAL_FLAG_TILEABLE_HORIZONTAL)) {
 			material.TextureLayer[0].TextureWrapU = video::ETC_CLAMP_TO_EDGE;
 		}
@@ -271,8 +234,7 @@ struct TileLayer
 
 	void applyMaterialOptionsWithShaders(video::SMaterial &material) const
 	{
-		material.BackfaceCulling = (material_flags & MATERIAL_FLAG_BACKFACE_CULLING)
-			? true : false;
+		material.BackfaceCulling = (material_flags & MATERIAL_FLAG_BACKFACE_CULLING) != 0;
 		if (!(material_flags & MATERIAL_FLAG_TILEABLE_HORIZONTAL)) {
 			material.TextureLayer[0].TextureWrapU = video::ETC_CLAMP_TO_EDGE;
 			material.TextureLayer[1].TextureWrapU = video::ETC_CLAMP_TO_EDGE;
@@ -291,30 +253,36 @@ struct TileLayer
 
 	// Ordered for size, please do not reorder
 
-	video::ITexture *texture;
-	video::ITexture *normal_texture;
-	video::ITexture *flags_texture;
+	video::ITexture *texture = nullptr;
+	video::ITexture *normal_texture = nullptr;
+	video::ITexture *flags_texture = nullptr;
 
-	u32 shader_id;
+	u32 shader_id = 0;
 
-	u32 texture_id;
+	u32 texture_id = 0;
 
-	u16 animation_frame_length_ms;
-	u8 animation_frame_count;
+	u16 animation_frame_length_ms = 0;
+	u8 animation_frame_count = 1;
 
-	u8 material_type;
-	u8 material_flags;
+	u8 material_type = TILE_MATERIAL_BASIC;
+	u8 material_flags =
+		//0 // <- DEBUG, Use the one below
+		MATERIAL_FLAG_BACKFACE_CULLING |
+		MATERIAL_FLAG_TILEABLE_HORIZONTAL|
+		MATERIAL_FLAG_TILEABLE_VERTICAL;
 
 	//! If true, the tile has its own color.
-	bool has_color;
+	bool has_color = false;
 
-	std::vector<FrameSpec> frames;
+	std::shared_ptr<std::vector<FrameSpec>> frames = nullptr;
 
 	/*!
 	 * The color of the tile, or if the tile does not own
 	 * a color then the color of the node owning this tile.
 	 */
 	video::SColor color;
+
+	u8 scale;
 };
 
 /*!
@@ -322,14 +290,8 @@ struct TileLayer
  */
 struct TileSpec
 {
-	TileSpec():
-		rotation(0),
-		emissive_light(0)
-	{
-		for (int layer = 0; layer < MAX_TILE_LAYERS; layer++)
-			layers[layer] = TileLayer();
-	}
-	
+	TileSpec() = default;
+
 	/*!
 	 * Returns true if this tile can be merged with the other tile.
 	 */
@@ -345,10 +307,14 @@ struct TileSpec
 			&& emissive_light == other.emissive_light;
 	}
 
-	u8 rotation;
+	//! If true, the tile rotation is ignored.
+	bool world_aligned = false;
+	//! Tile rotation.
+	u8 rotation = 0;
 	//! This much light does the tile emit.
-	u8 emissive_light;
+	u8 emissive_light = 0;
 	//! The first is base texture, the second is overlay.
 	TileLayer layers[MAX_TILE_LAYERS];
 };
-#endif
+
+std::vector<std::string> getTextureDirs();

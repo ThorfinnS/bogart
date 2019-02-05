@@ -105,6 +105,10 @@ if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMP
 endif()
 
 if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/locale/kn/LC_MESSAGES" TYPE FILE FILES "/opt/minetest/locale/kn/LC_MESSAGES/minetest.mo")
+endif()
+
+if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/locale/lt/LC_MESSAGES" TYPE FILE FILES "/opt/minetest/locale/lt/LC_MESSAGES/minetest.mo")
 endif()
 
@@ -164,16 +168,24 @@ if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMP
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/locale/uk/LC_MESSAGES" TYPE FILE FILES "/opt/minetest/locale/uk/LC_MESSAGES/minetest.mo")
 endif()
 
+if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/." TYPE DIRECTORY FILES "/opt/minetest/src/../fonts" FILES_MATCHING REGEX "/[^/]*\\.ttf$" REGEX "/[^/]*\\.txt$")
+endif()
+
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("/opt/minetest/src/threading/cmake_install.cmake")
+  include("/opt/minetest/src/content/cmake_install.cmake")
+  include("/opt/minetest/src/database/cmake_install.cmake")
+  include("/opt/minetest/src/gui/cmake_install.cmake")
+  include("/opt/minetest/src/mapgen/cmake_install.cmake")
   include("/opt/minetest/src/network/cmake_install.cmake")
   include("/opt/minetest/src/script/cmake_install.cmake")
   include("/opt/minetest/src/unittest/cmake_install.cmake")
   include("/opt/minetest/src/util/cmake_install.cmake")
   include("/opt/minetest/src/irrlicht_changes/cmake_install.cmake")
+  include("/opt/minetest/src/server/cmake_install.cmake")
   include("/opt/minetest/src/client/cmake_install.cmake")
-  include("/opt/minetest/src/cguittfont/cmake_install.cmake")
 
 endif()
 

@@ -27,22 +27,26 @@
  */
 
 // clang-format off
+
+#include <cstddef>
+
 #ifdef WIN32
 	#include <windows.h>
 	#include <wincrypt.h>
 #else
-	#include <time.h>
+	#include <ctime>
+
 #endif
 // clang-format on
 
-#include <stdlib.h>
-#include <string.h>
-#include <stdio.h>
-#include <stdint.h>
+#include <cstdlib>
+#include <cstring>
+#include <cstdio>
+#include <cstdint>
 
 #include <config.h>
 
-#if USE_SYSTEM_GMP || defined (__ANDROID__) || defined (ANDROID)
+#if USE_SYSTEM_GMP
 	#include <gmp.h>
 #else
 	#include <mini-gmp.h>
@@ -697,7 +701,7 @@ struct SRPVerifier *srp_verifier_new(SRP_HashAlgorithm alg,
 		goto cleanup_and_exit;
 	}
 
-	memcpy((char *)ver->username, username, ulen);
+	memcpy(ver->username, username, ulen);
 
 	ver->authenticated = 0;
 
@@ -862,7 +866,7 @@ err_exit:
 		mpz_clear(usr->a);
 		mpz_clear(usr->A);
 		mpz_clear(usr->S);
-		if (usr->ng) delete_ng(usr->ng);
+		delete_ng(usr->ng);
 		srp_free(usr->username);
 		srp_free(usr->username_verifier);
 		if (usr->password) {

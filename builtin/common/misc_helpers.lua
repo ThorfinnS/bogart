@@ -166,9 +166,9 @@ end
 --------------------------------------------------------------------------------
 function string.split(str, delim, include_empty, max_splits, sep_is_pattern)
 	delim = delim or ","
-	max_splits = max_splits or -1
+	max_splits = max_splits or -2
 	local items = {}
-	local pos, len, seplen = 1, #str, #delim
+	local pos, len = 1, #str
 	local plain = not sep_is_pattern
 	max_splits = max_splits + 1
 	repeat
@@ -382,7 +382,7 @@ if INIT == "game" then
 			param2 = dirs1[fdir + 1]
 		elseif isceiling then
 			if orient_flags.force_facedir then
-				cparam2 = 20
+				param2 = 20
 			else
 				param2 = dirs2[fdir + 1]
 			end
@@ -463,6 +463,12 @@ function core.explode_scrollbar_event(evt)
 end
 
 --------------------------------------------------------------------------------
+function core.rgba(r, g, b, a)
+	return a and string.format("#%02X%02X%02X%02X", r, g, b, a) or
+			string.format("#%02X%02X%02X", r, g, b)
+end
+
+--------------------------------------------------------------------------------
 function core.pos_to_string(pos, decimal_places)
 	local x = pos.x
 	local y = pos.y
@@ -489,7 +495,7 @@ function core.string_to_pos(value)
 		p.z = tonumber(p.z)
 		return p
 	end
-	local p = {}
+	p = {}
 	p.x, p.y, p.z = string.match(value, "^%( *([%d.-]+)[, ] *([%d.-]+)[, ] *([%d.-]+) *%)$")
 	if p.x and p.y and p.z then
 		p.x = tonumber(p.x)
@@ -545,12 +551,22 @@ function table.copy(t, seen)
 	end
 	return n
 end
+
+
+function table.insert_all(t, other)
+	for i=1, #other do
+		t[#t + 1] = other[i]
+	end
+	return t
+end
+
+
 --------------------------------------------------------------------------------
 -- mainmenu only functions
 --------------------------------------------------------------------------------
 if INIT == "mainmenu" then
 	function core.get_game(index)
-		local games = game.get_games()
+		local games = core.get_games()
 
 		if index > 0 and index <= #games then
 			return games[index]
@@ -625,10 +641,57 @@ function core.strip_colors(str)
 	return (str:gsub(ESCAPE_CHAR .. "%([bc]@[^)]+%)", ""))
 end
 
+function core.translate(textdomain, str, ...)
+	local start_seq
+	if textdomain == "" then
+		start_seq = ESCAPE_CHAR .. "T"
+	else
+		start_seq = ESCAPE_CHAR .. "(T@" .. textdomain .. ")"
+	end
+	local arg = {n=select('#', ...), ...}
+	local end_seq = ESCAPE_CHAR .. "E"
+	local arg_index = 1
+	local translated = str:gsub("@(.)", function(matched)
+		local c = string.byte(matched)
+		if string.byte("1") <= c and c <= string.byte("9") then
+			local a = c - string.byte("0")
+			if a ~= arg_index then
+				error("Escape sequences in string given to core.translate " ..
+					"are not in the correct order: got @" .. matched ..
+					"but expected @" .. tostring(arg_index))
+			end
+			if a > arg.n then
+				error("Not enough arguments provided to core.translate")
+			end
+			arg_index = arg_index + 1
+			return ESCAPE_CHAR .. "F" .. arg[a] .. ESCAPE_CHAR .. "E"
+		elseif matched == "n" then
+			return "\n"
+		else
+			return matched
+		end
+	end)
+	if arg_index < arg.n + 1 then
+		error("Too many arguments provided to core.translate")
+	end
+	return start_seq .. translated .. end_seq
+end
+
+function core.get_translator(textdomain)
+	return function(str, ...) return core.translate(textdomain or "", str, ...) end
+end
+
 --------------------------------------------------------------------------------
 -- Returns the exact coordinate of a pointed surface
 --------------------------------------------------------------------------------
 function core.pointed_thing_to_face_pos(placer, pointed_thing)
+	-- Avoid crash in some situations when player is inside a node, causing
+	-- 'above' to equal 'under'.
+	if vector.equals(pointed_thing.above, pointed_thing.under) then
+		return pointed_thing.under
+	end
+
+	local eye_height = placer:get_properties().eye_height
 	local eye_offset_first = placer:get_eye_offset()
 	local node_pos = pointed_thing.under
 	local camera_pos = placer:get_pos()
@@ -648,7 +711,7 @@ function core.pointed_thing_to_face_pos(placer, pointed_thing)
 	end
 
 	local fine_pos = {[nc] = node_pos[nc] + offset}
-	camera_pos.y = camera_pos.y + 1.625 + eye_offset_first.y / 10
+	camera_pos.y = camera_pos.y + eye_height + eye_offset_first.y / 10
 	local f = (node_pos[nc] + offset - camera_pos[nc]) / look_dir[nc]
 
 	for i = 1, #oc do
@@ -656,3 +719,28 @@ function core.pointed_thing_to_face_pos(placer, pointed_thing)
 	end
 	return fine_pos
 end
+
+function core.string_to_privs(str, delim)
+	assert(type(str) == "string")
+	delim = delim or ','
+	local privs = {}
+	for _, priv in pairs(string.split(str, delim)) do
+		privs[priv:trim()] = true
+	end
+	return privs
+end
+
+function core.privs_to_string(privs, delim)
+	assert(type(privs) == "table")
+	delim = delim or ','
+	local list = {}
+	for priv, bool in pairs(privs) do
+		if bool then
+			list[#list + 1] = priv
+		end
+	end
+	return table.concat(list, delim)
+end
+
+assert(core.string_to_privs("a,b").b == true)
+assert(core.privs_to_string({a=true,b=true}) == "a,b")

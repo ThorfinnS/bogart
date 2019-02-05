@@ -1,6 +1,5 @@
--- Load support for intllib.
-local MP = minetest.get_modpath(minetest.get_current_modname())
-local S, NS = dofile(MP .. "/intllib.lua")
+-- internationalization boilerplate
+local S = minetest.get_translator(minetest.get_current_modname())
 
 minetest.register_node("flower_pot:flower_pot", {
 	description = S("Flower Pot"),
