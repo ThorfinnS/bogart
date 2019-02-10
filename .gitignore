@@ -35,9 +35,11 @@ gtags.files
 /bin/
 /games/*
 !/games/minimal/
+!/games/bogart/
 /cache
 /textures/*
 !/textures/base/
+!/textures/johnsmith/
 /screenshots
 /sounds
 /mods/*
