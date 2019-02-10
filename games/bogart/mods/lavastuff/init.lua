@@ -1,15 +1,28 @@
-local modname = "lavastuff"
-local modpath = minetest.get_modpath(modname)
-
-local S = minetest.get_translator(minetest.get_current_modname())
-
 lavastuff = {}
 
-lavastuff.enable_lightup = minetest.settings:get_bool("lavastuff_enable_lightup") or true
--- Lights up the area around the player that rightclicks the air with a lava tool
+local S
 
-lavastuff.cook_limit = minetest.settings:get("lavastuff_cook_limit") or 15
--- Tools will not smelt items if their cooking time is too long
+if minetest.get_translator ~= nil then
+    S = minetest.get_translator(minetest.get_current_modname())
+else
+    S = function(str)
+        return(str)
+    end
+end
+
+lavastuff.enable_tool_fire = minetest.settings:get_bool("lavastuff_enable_tool_fire")
+-- Places fire where the player rightclicks with a lava tool
+
+lavastuff.cook_limit = minetest.settings:get("lavastuff_cook_limit")
+-- Tools will not smelt dug items if their cooking time is too long
+
+if lavastuff.cook_limit ~= false then
+    lavastuff.cook_limit = 15
+end
+
+if lavastuff.enable_tool_fire ~= false then
+    lavastuff.enable_tool_fire = true
+end
 
 lavastuff.blacklisted_items = { -- Items lava tools will not smelt
     "default:mese_crystal",
@@ -56,19 +69,6 @@ function lavastuff.burn_drops(tool)
         end
 
         return old_handle_node_drops(pos, hot_drops, digger)
-    end
-end
-
-function lavastuff.lightup(user)
-    if lavastuff.enable_lightup == true then
-        local pos = user:get_pos()
-
-        pos.y = pos.y + 1
-
-        if minetest.get_node(pos).name == "air" then
-            minetest.set_node(pos, {name = "lavastuff:light"})
-            minetest.after(0.4, minetest.remove_node, pos)
-        end
     end
 end
 
@@ -135,8 +135,24 @@ minetest.register_tool("lavastuff:sword", {
 		},
 		damage_groups = {fleshy = 10, burns = 1},
 	},
-    on_secondary_use = function(itemstack, user, pointed_thing)
-        lavastuff.lightup(user)
+    on_place = function(itemstack, user, pointed_thing)
+        if not minetest.registered_items["fire:basic_flame"] or
+        lavastuff.enable_tool_fire == false then
+            return
+        end
+
+        local node = minetest.get_node(pointed_thing.above)
+        local pointed = {type = "node", under = pointed_thing.above, above = pointed_thing.above}
+        local _, can_place = minetest.item_place_node(ItemStack("fire:basic_flame"), user, pointed)
+
+        if node.name == "air" and can_place == true then
+            minetest.set_node(pointed_thing.above, {name = "fire:permanent_flame"})
+            minetest.after(7, function()
+                if minetest.get_node(pointed_thing.above).name == "fire:permanent_flame" then
+                    minetest.remove_node(pointed_thing.above)
+                end
+            end)
+        end
     end,
     sound = {breaks = "default_tool_breaks"},
 })
@@ -160,8 +176,24 @@ if not minetest.get_modpath("mobs_monster") then
             },
             damage_groups = {fleshy = 6, burns = 1},
         },
-        on_secondary_use = function(itemstack, user, pointed_thing)
-            lavastuff.lightup(user)
+        on_place = function(itemstack, user, pointed_thing)
+            if not minetest.registered_items["fire:basic_flame"] or
+            lavastuff.enable_tool_fire == false then
+                return
+            end
+
+            local node = minetest.get_node(pointed_thing.above)
+            local pointed = {type = "node", under = pointed_thing.above, above = pointed_thing.above}
+            local _, can_place = minetest.item_place_node(ItemStack("fire:basic_flame"), user, pointed)
+
+            if node.name == "air" and can_place == true then
+                minetest.set_node(pointed_thing.above, {name = "fire:permanent_flame"})
+                minetest.after(7, function()
+                    if minetest.get_node(pointed_thing.above).name == "fire:permanent_flame" then
+                        minetest.remove_node(pointed_thing.above)
+                    end
+                end)
+            end
         end,
     })
 
@@ -187,6 +219,25 @@ else
             },
             damage_groups = {fleshy = 6, burns = 1},
         },
+        on_place = function(itemstack, user, pointed_thing)
+            if not minetest.registered_items["fire:basic_flame"] or
+            lavastuff.enable_tool_fire == false then
+                return
+            end
+
+            local node = minetest.get_node(pointed_thing.above)
+            local pointed = {type = "node", under = pointed_thing.above, above = pointed_thing.above}
+            local _, can_place = minetest.item_place_node(ItemStack("fire:basic_flame"), user, pointed)
+
+            if node.name == "air" and can_place == true then
+                minetest.set_node(pointed_thing.above, {name = "fire:permanent_flame"})
+                minetest.after(7, function()
+                    if minetest.get_node(pointed_thing.above).name == "fire:permanent_flame" then
+                        minetest.remove_node(pointed_thing.above)
+                    end
+                end)
+            end
+        end,
     })
 end
 
@@ -202,6 +253,25 @@ minetest.register_tool("lavastuff:shovel", {
 		},
 		damage_groups = {fleshy=4},
 	},
+    on_place = function(itemstack, user, pointed_thing)
+        if not minetest.registered_items["fire:basic_flame"] or
+        lavastuff.enable_tool_fire == false then
+            return
+        end
+
+        local node = minetest.get_node(pointed_thing.above)
+        local pointed = {type = "node", under = pointed_thing.above, above = pointed_thing.above}
+        local _, can_place = minetest.item_place_node(ItemStack("fire:basic_flame"), user, pointed)
+
+        if node.name == "air" and can_place == true then
+            minetest.set_node(pointed_thing.above, {name = "fire:permanent_flame"})
+            minetest.after(7, function()
+                if minetest.get_node(pointed_thing.above).name == "fire:permanent_flame" then
+                    minetest.remove_node(pointed_thing.above)
+                end
+            end)
+        end
+    end,
     sound = {breaks = "default_tool_breaks"},
 })
 
@@ -220,6 +290,25 @@ minetest.register_tool("lavastuff:axe", {
 		},
 		damage_groups = {fleshy = 7, burns = 1},
 	},
+    on_place = function(itemstack, user, pointed_thing)
+        if not minetest.registered_items["fire:basic_flame"] or
+        lavastuff.enable_tool_fire == false then
+            return
+        end
+
+        local node = minetest.get_node(pointed_thing.above)
+        local pointed = {type = "node", under = pointed_thing.above, above = pointed_thing.above}
+        local _, can_place = minetest.item_place_node(ItemStack("fire:basic_flame"), user, pointed)
+
+        if node.name == "air" and can_place == true then
+            minetest.set_node(pointed_thing.above, {name = "fire:permanent_flame"})
+            minetest.after(7, function()
+                if minetest.get_node(pointed_thing.above).name == "fire:permanent_flame" then
+                    minetest.remove_node(pointed_thing.above)
+                end
+            end)
+        end
+    end,
     sound = {breaks = "default_tool_breaks"},
 })
 
@@ -408,14 +497,14 @@ if not minetest.get_modpath("moreblocks") then
         "lavastuff:block",
         {cracky = 2, level = 2},
         {"lavastuff_block.png"},
-        "Lava Stair",
-        "Lava Slab",
+        S("Lava Stair"),
+        S("Lava Slab"),
         default.node_sound_stone_defaults(),
         true
     )
 else
     stairsplus:register_all("lavastuff", "lava", "lavastuff:ingot", {
-        description = S("Lava"),
+        description = "Lava",
         tiles = {"lavastuff_block.png"},
         groups = {cracky = 2, level = 2},
         light_source = default.LIGHT_MAX,

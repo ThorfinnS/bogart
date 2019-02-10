@@ -60,10 +60,11 @@ if mg_name ~= "v6" and mg_name ~= "singlenode" and brewing.settings.generate_lem
 			persist = 0.66
 		},
 		biomes = {"deciduous_forest"},
-		y_min = 10,
+		y_min = 1,
 		y_max = 80,
 		schematic = modpath.."/schematics/lemmontree.mts",
 		flags = "place_center_x, place_center_z",
+		rotation = "random",
 	})
 end
 
@@ -77,7 +78,7 @@ minetest.register_node("brewing:lemmontree_sapling", {
 	visual_scale = 1.0,
 	tiles = {"brewing_lemmontree_sapling.png"},
 	inventory_image = "brewing_lemmontree_sapling.png",
-	wield_image = "moretrees_birch_sapling.png",
+	wield_image = "brewing_lemmontree_sapling.png",
 	paramtype = "light",
 	sunlight_propagates = true,
 	walkable = false,
@@ -118,9 +119,11 @@ minetest.register_node("brewing:lemmontree_trunk", {
 	groups = {tree = 1, choppy = 2, oddly_breakable_by_hand = 1, flammable = 2},
 	sounds = default.node_sound_wood_defaults(),
 	paramtype2 = "facedir",
+	is_ground_content = false,
 	on_place = minetest.rotate_node,
 	on_rightclick = function(pos, node, player, itemstack, pointed_thing)
 		brewing.get_cork(pos, node, player)
+		minetest.item_place_node(itemstack, player, pointed_thing, nil)
 	end
 })
 
@@ -134,6 +137,7 @@ minetest.register_node("brewing:lemmontree_trunk_nobark", {
 	groups = {tree = 1, choppy = 2, oddly_breakable_by_hand = 1, flammable = 2},
 	sounds = default.node_sound_wood_defaults(),
 	paramtype2 = "facedir",
+	is_ground_content = false,
 	on_place = minetest.rotate_node,
 })
 
@@ -141,6 +145,8 @@ minetest.register_node("brewing:lemmontree_trunk_nobark", {
 minetest.register_node("brewing:lemmontree_wood", {
 	description = S("Lemmon Tree Wood"),
 	tiles = {"brewing_lemmontree_wood.png"},
+	paramtype2 = "facedir",
+	place_param2 = 0,
 	is_ground_content = false,
 	groups = {wood = 1, choppy = 2, oddly_breakable_by_hand = 1, flammable = 3},
 	sounds = default.node_sound_wood_defaults(),
@@ -225,7 +231,8 @@ default.register_leafdecay({
 minetest.register_craftitem("brewing:lemonade", {
 	description = S("Lemonade"),
 	inventory_image = "brewing_lemonade.png",
-	on_use = minetest.item_eat(4, "vessels:drinking_glass")
+	on_use = minetest.item_eat(4, "vessels:drinking_glass"),
+	groups = {flammable = 2, food = 3},
 })
 
 minetest.register_craft({

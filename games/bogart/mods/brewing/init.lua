@@ -38,8 +38,10 @@ if minetest.get_modpath("3d_armor") ~= nil then --Armor (optional)
 	assert(loadfile(modpath .. "/armor.lua"))(modpath, S)
 end
 assert(loadfile(modpath .. "/farming.lua"))(modpath, S, mg_name) --Definition of the farming stuff
+assert(loadfile(modpath .. "/vessels.lua"))(modpath, S) --Definition of the vessels stuff
 assert(loadfile(modpath .. "/herbalism.lua"))(modpath, S, mg_name) --Definition of the herbalism stuff
 assert(loadfile(modpath .. "/lemmontree.lua"))(modpath, S, mg_name) --Definition of the farming stuff
+assert(loadfile(modpath .. "/clementinetree.lua"))(modpath, S, mg_name) --Definition of the farming stuff
 assert(loadfile(modpath .. "/food.lua"))(modpath, S) --Definition of the food stuff
 assert(loadfile(modpath .. "/stairs.lua"))(modpath, S) --Definition of the stairs
 assert(loadfile(modpath .. "/crystal_ball.lua"))(modpath, S) --Definition of the crystal ball that invokes Lily

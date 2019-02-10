@@ -29,6 +29,9 @@ brewing = {
 		generate_lavender = true,
 		generate_creosote_bush = true,
 		generate_meteor = true,
+		generate_gliophorus_viridis = true,
+		generate_azalea = true,
+		generate_clementinetree = true,
 		-- end herbalism
 		-- Aquatic
 		generate_pearl_oyster = true,

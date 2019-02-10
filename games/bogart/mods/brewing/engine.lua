@@ -322,7 +322,7 @@ brewing.engine = {
 			for i=1, #def.types do
 				local sdata = def.types[i]
 				local item_def = {
-					description = name.." "..S("Potion (type:").." "..tps[t]..sdata.type..")",
+					description = name.." "..S("Potion").." ("..S("type")..":".." "..tps[t]..sdata.type..")",
 					inventory_image = "potions_bottle.png^potions_"..(def.texture or sname)..".png^potions_"..tps[t]..sdata.type..".png",
 					drawtype = "plantlike",
 					paramtype = "light",
@@ -358,7 +358,7 @@ brewing.engine = {
 	end,
 	register_liquid = function(name, hname, funct)
 		minetest.register_node("brewing:"..name.."_flowing", {
-			description = S("Potion (")..hname..") (flowing)",
+			description = S("Potion").."("..hname..") (".."flowing"..")",
 			inventory_image = minetest.inventorycube("oil_oil.png"),
 			drawtype = "flowingliquid",
 			tile_images = {"oil_oil.png"},
@@ -380,7 +380,7 @@ brewing.engine = {
 		})
 
 		minetest.register_node("brewing:"..name.."_source", {
-			description = S("Potion (")..hname..")",
+			description = S("Potion").."("..hname..")",
 			inventory_image = minetest.inventorycube("oil_oil.png"),
 			drawtype = "liquid",
 			tile_images = {"oil_oil.png"},

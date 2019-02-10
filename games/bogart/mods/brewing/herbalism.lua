@@ -63,6 +63,12 @@ brewing_flowers.datas = {
 		{-2 / 16, -0.5, -2 / 16, 2 / 16, 2 / 16, 2 / 16},
 		{flammable = 1}
 	},
+	{
+		"azalea",
+		S("Azalea"),
+		{-2 / 16, -0.5, -2 / 16, 2 / 16, 2 / 16, 2 / 16},
+		{flammable = 1}
+	},
 }
 
 local function add_simple_flower(name, desc, box, f_groups)
@@ -330,6 +336,20 @@ if mg_name ~= "v6" and mg_name ~= "singlenode" and brewing.settings.generate_cal
 		})
 end
 
+-- Azalea
+
+if mg_name ~= "v6" and mg_name ~= "singlenode" and brewing.settings.generate_azalea== true then
+	minetest.register_decoration({
+			deco_type = "simple",
+			place_on = "default:dirt_with_grass",
+			sidelen = 16,
+			fill_ratio = 0.0001,
+			biomes = {"deciduous_forest"},
+			decoration = "brewing:azalea",
+			height = 1,
+		})
+end
+
 -- Orange Mycena
 
 if mg_name ~= "v6" and mg_name ~= "singlenode" and brewing.settings.generate_orange_mycena == true then
@@ -398,46 +418,48 @@ minetest.register_node("brewing:cortinarius_violaceus", {
 	}
 })
 
+-- Gliophorus viridis
+
+if mg_name ~= "v6" and mg_name ~= "singlenode" and brewing.settings.generate_gliophorus_viridis == true then
+	minetest.register_decoration({
+			deco_type = "simple",
+			place_on = "default:dirt_with_grass",
+			sidelen = 16,
+			fill_ratio = 0.0001,
+			biomes = {"coniferous_forest", "deciduous_forest"},
+			decoration = "brewing:gliophorus_viridis",
+			height = 1,
+		})
+end
+
+minetest.register_node("brewing:gliophorus_viridis", {
+	description = S("Gliophorus Viridis"),
+	tiles = {"brewing_gliophorus_viridis.png"},
+	inventory_image = "brewing_gliophorus_viridis.png",
+	wield_image = "brewing_gliophorus_viridis.png",
+	drawtype = "plantlike",
+	paramtype = "light",
+	sunlight_propagates = true,
+	walkable = false,
+	buildable_to = true,
+	stack_max = 99,
+	groups = {snappy = 3, attached_node = 1, flammable = 1},
+	sounds = default.node_sound_leaves_defaults(),
+	on_use = minetest.item_eat(-3),
+	selection_box = {
+		type = "fixed",
+		fixed = {-4 / 16, -0.5, -4 / 16, 4 / 16, -1 / 16, 4 / 16},
+	}
+})
+
 minetest.register_abm({
 	label = "Brewing Mushroom spread",
-	nodenames = {"brewing:orange_mycena", "brewing:cortinarius_violaceus"},
+	nodenames = {"brewing:orange_mycena", "brewing:cortinarius_violaceus", "brewing:gliophorus_viridis"},
 	interval = 11,
 	chance = 150,
 	action = function(...)
 		flowers.mushroom_spread(...)
 	end,
-})
-
--- Vial
-
-minetest.register_craftitem("brewing:vial", {
-	description = S("Vial (empty)"),
-	inventory_image = "brewing_vial.png",
-})
-
-minetest.register_craft( {
-	output = "brewing:vial 10",
-	recipe = {
-		{"", "brewing:cork", ""},
-		{"", "default:glass", ""},
-		{"", "default:glass", ""}
-	}
-})
-
--- Jar
-
-minetest.register_craftitem("brewing:jar", {
-	description = S("Crystal Jar (empty)"),
-	inventory_image = "brewing_jar.png",
-})
-
-minetest.register_craft( {
-	output = "brewing:jar 10",
-	recipe = {
-		{"", "brewing:cork", ""},
-		{"default:glass", "", "default:glass"},
-		{"default:glass", "default:glass", "default:glass"}
-	}
 })
 
 -- Gerbera Oil
