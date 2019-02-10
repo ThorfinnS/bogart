@@ -1696,7 +1696,7 @@ function default.register_decorations()
 		deco_type = "schematic",
 		place_on = {"default:dirt_with_rainforest_litter", "default:dirt"},
 		sidelen = 80,
-		fill_ratio = 0.1,
+		fill_ratio = 0.08,
 		biomes = {"rainforest", "rainforest_swamp"},
 		y_max = 31000,
 		y_min = -1,

@@ -63,7 +63,7 @@ if mg_name ~= "v6" and mg_name ~= "singlenode" and brewing.settings.generate_cle
 		y_min = 1,
 		y_max = 80,
 		schematic = modpath.."/schematics/clementinetree.mts",
-		flags = "place_center_x, place_center_z",
+		flags = "place_center_x, place_center_z,  force_placement",
 		rotation = "random",
 	})
 end

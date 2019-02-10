@@ -6,7 +6,7 @@ local modpath = minetest.get_modpath(modname)
 
 -- internationalization boilerplate
 local S = minetest.get_translator(minetest.get_current_modname())
- 
+
 -- Mahogany
 
 local function grow_new_mahogany_tree(pos)
