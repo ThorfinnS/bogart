@@ -1,4 +1,4 @@
-schematic = {
+local schematic = {
 	size = {x=7, y=17, z=7},
 	yslice_prob = {
 		{ypos=0, prob=254},
