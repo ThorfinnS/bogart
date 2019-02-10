@@ -1,0 +1,100 @@
+﻿# Traducido por Carlos Barraza
+
+### crafts.lua ###
+Coconut Milk = Leche de coco
+Raw Coconut = Coco crudo
+Acorn Muffin batter = Masa de bellotas
+Acorn Muffin = Magdalena de bellotas
+Roasted Spruce Cone Nuts = Piñones de pícea tostados
+Roasted Pine Cone Nuts = Piñones de pino tostados
+Roasted Fir Cone Nuts = Piñones de abeto tostados
+Roasted Cedar Cone Nuts = Piñones de álamo tostados
+Date = Dátil
+Date & nut snack = Snack de dátiles
+Date-nut cake batter = Pasta de torta de dátiles
+Date-nut cake = Pastel de dátiles
+Date-nut energy bar = Barra energética de dátiles
+
+### date_palm.lua ###
+Dates = Datilera
+Date Stem = Tallo de datilera
+Date Flowers = Flores de datilera
+
+### node_defs.lua ###
+Beech Tree Trunk = Madera de haya
+Apple Tree Trunk = Madera de manzano
+Oak Tree Trunk = Madera de roble
+Giant Sequoia Trunk = Madera de sequoia
+Birch Tree Trunk = Madera de abedul
+Palm Tree Trunk = Madera de palmera
+Spruce Tree Trunk = Madera de abeto
+Willow Tree Trunk = Madera de sauce
+Rubber Tree Trunk = Madera de árbol de caucho
+Jungle Tree = Madera de árbol tropical
+Douglas Fir Trunk = Madera de abeto de Douglas
+Cedar Tree Trunk = Madera de cedro
+Date Palm Tree Trunk = Madera de palmera datilera
+Acacia Tree Trunk = Madera de acacia
+Poplar Tree Trunk = Madera de álamo
+
+Beech Tree Planks = Tablas de haya
+Apple Tree Planks = Tablas de manzano
+Oak Tree Planks = Tablas de roble
+Giant Sequoia Planks = Tablas de sequoia
+Birch Tree Planks = Tablas de abedul
+Palm Tree Planks = Tablas de palmera
+Spruce Tree Planks = Tablas de abeto
+Willow Tree Planks = Tablas de sauce
+Rubber Tree Planks = Tablas de árbol de caucho
+Jungle Planks = Tablas de madera tropical
+Douglas Fir Planks = Tablas de abeto de Douglas
+Cedar Tree Planks = Tablas de cedro
+Date Palm Tree Planks = Tablas de Palmera Datilera
+Acacia Tree Planks = Tablas de acacia
+Poplar Tree Planks = Tablas de álamo
+
+Beech Tree Sapling = Retoño de haya
+Apple Tree Sapling = Retoño de manzano
+Oak Tree Sapling = Retoño de roble
+Giant Sequoia Sapling = Retoño de sequoia
+Birch Tree Sapling = Retoño de abedul
+Palm Tree Sapling = Retoño de palmera
+Spruce Tree Sapling = Retoño de abeto
+Willow Tree Sapling = Retoño de sauce
+Rubber Tree Sapling = Retoño de árbol de caucho
+Jungle Sapling = Retoño de árbol tropical
+Douglas Fir Sapling = Retoño de abeto de Douglas
+Cedar Tree Sapling = Retoño de cedro
+Date Palm Tree Tree Sapling = Retoño de palmera datilera
+Acacia Tree Sapling = Retoño de acacia
+Poplar Tree Sapling = Retoño de álamo
+
+Beech Tree Leaves = Hojas de haya
+Apple Tree Leaves = Hojas de manzano
+Oak Tree Leaves = Hojas de roble
+Giant Sequoia Leaves = Hojas de sequoia
+Birch Tree Leaves = Hojas de abedul
+Palm Tree Leaves = Hojas de palmera
+Spruce Tree Leaves = Hojas de abeto
+Willow Tree Leaves = Hojas de sauce
+Rubber Tree Leaves = Hojas de árbol de caucho
+Jungle Leaves = Hojas de árbol tropical
+Douglas Fir Leaves = Hojas de abeto de Douglas
+Cedar Tree Leaves = Hojas de cedro
+Date Palm Tree Tree Leaves = Hojas de palmera datilera
+Acacia Tree Leaves = Hojas de acacia
+Poplar Tree Leaves = Hojas de álamo
+
+Acorn = Bellota
+Coconut = Coco
+Spruce Cone = Piña de pícea
+Pine Cone = Piña de pino
+Fir Cone = Piña de abeto
+Cedar Cone = Piña de álamo
+Jungle Sapling = Retoño árbol tropical
+Jungle Tree Leaves (Yellow) = Hojas tropicales (amarilla)
+Jungle Tree Leaves (Red) = Hojas tropicales (roja)
+Douglas Fir Leaves (Bright) = Hojas de abeto de Douglas (brillante)
+Rubber Tree Trunk (Empty) = Madera de árbol de caucho (vacío)
+
+[Moretrees] Loaded (2013-02-11) = [Moretrees] Cargado
