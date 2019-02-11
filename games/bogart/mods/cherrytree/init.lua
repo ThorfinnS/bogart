@@ -7,6 +7,40 @@ local modpath = minetest.get_modpath(modname)
 -- internationalization boilerplate
 local S = minetest.get_translator(minetest.get_current_modname())
 
+--mts to lua
+local tree = minetest.serialize_schematic(modpath .. "/schematics/cherrytree.mts", "lua", {})
+local file = io.open(modpath .. "/schematics/cherrytree.lua", "w")
+if file then
+	file:write(tree)
+	file:close()
+end
+
+-- Cherry Fruit
+
+minetest.register_node("cherrytree:cherries", {
+	description = S("Cherries"),
+	drawtype = "plantlike",
+	tiles = {"cherrytree_cherries.png"},
+	inventory_image = "cherrytree_cherries.png",
+	paramtype = "light",
+	sunlight_propagates = true,
+	walkable = false,
+	is_ground_content = false,
+	selection_box = {
+		type = "fixed",
+		fixed = {-3 / 16, -7 / 16, -3 / 16, 3 / 16, 4 / 16, 3 / 16}
+	},
+	groups = {fleshy = 3, dig_immediate = 3, flammable = 2,
+		leafdecay = 3, leafdecay_drop = 1},
+	on_use = minetest.item_eat(2),
+	sounds = default.node_sound_leaves_defaults(),
+
+	after_place_node = function(pos, placer, itemstack)
+		minetest.set_node(pos, {name = "cherrytree:cherries", param2 = 1})
+	end,
+})
+
+
 -- Cherrytree
 
 local function grow_new_cherrytree_tree(pos)
@@ -26,22 +60,23 @@ end
 if mg_name ~= "v6" and mg_name ~= "singlenode" then
 	minetest.register_decoration({
 		deco_type = "schematic",
-		place_on = {"default:dirt_with_rainforest_litter"},
+		place_on = {"default:dirt_with_grass"},
 		sidelen = 16,
 		noise_params = {
-			offset = 0.05,
-			scale = 0.005,
+			offset = 0.0005,
+			scale = 0.00005,
 			spread = {x = 250, y = 250, z = 250},
 			seed = 2,
 			octaves = 3,
 			persist = 0.66
 		},
-		biomes = {"rainforest"},
+		biomes = {"deciduous"},
 		y_min = 1,
 		y_max = 32,
-		--schematic = modpath.."/schematics/cherrytree.mts",
+		schematic = modpath.."/schematics/cherrytree.mts",
 		flags = "place_center_x, place_center_z, force_placement",
 		rotation = "random",
+		place_offset_y = 1,
 	})
 end
 
@@ -112,6 +147,29 @@ minetest.register_node("cherrytree:wood", {
 	is_ground_content = false,
 	groups = {wood = 1, choppy = 2, oddly_breakable_by_hand = 1, flammable = 3},
 	sounds = default.node_sound_wood_defaults(),
+})
+
+-- cherrytree tree leaves
+minetest.register_node("cherrytree:blossom_leaves", {
+	description = S("Cherrytree Blossom Leaves"),
+	drawtype = "allfaces_optional",
+	visual_scale = 1.2,
+	tiles = {"cherrytree_blossom_leaves.png"},
+	inventory_image = "cherrytree_blossom_leaves.png",
+	wield_image = "cherrytree_blossom_leaves.png",
+	paramtype = "light",
+	walkable = true,
+	waving = 1,
+	groups = {snappy = 3, leafdecay = 3, leaves = 1, flammable = 2},
+	drop = {
+		max_items = 1,
+		items = {
+			{items = {"cherrytree:sapling"}, rarity = 20},
+			{items = {"cherrytree:leaves"}}
+		}
+	},
+	sounds = default.node_sound_leaves_defaults(),
+	after_place_node = default.after_place_leaves,
 })
 
 -- cherrytree tree leaves
@@ -191,3 +249,20 @@ if minetest.get_modpath("stairs") ~= nil then
 		default.node_sound_wood_defaults()
 	)
 end
+
+-- Chance to convert to normal leaves and cherry fruits
+minetest.register_abm({
+    nodenames = {"cherrytree:blossom_leaves"},
+    neighbors = {},
+    interval = 600.0, -- Run every 10 minuts
+    chance = 50, -- Select every 1 in 50 nodes
+    action = function(pos, node, active_object_count, active_object_count_wider)
+    	math.randomseed(os.time())
+		local is_fruit = math.random(10)
+		if is_fruit == 10  then
+			minetest.set_node(pos, {name = "cherrytree:cherries"})
+		else
+        	minetest.set_node(pos, {name = "cherrytree:leaves"})
+        end
+    end
+})

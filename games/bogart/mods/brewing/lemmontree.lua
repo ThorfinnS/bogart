@@ -4,6 +4,8 @@ local modpath, S, mg_name = ...
 -- Lemmontree
 --
 
+-- Lemmon Fruit
+
 minetest.register_node("brewing:lemmon", {
 	description = S("Lemmon"),
 	drawtype = "plantlike",
