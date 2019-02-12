@@ -230,7 +230,7 @@ minetest.register_craft({
 	output = "brewing:clementine_cotton_candy",
 	recipe = {
 		{"clementinetree:clementine", "clementinetree:clementine", "clementinetree:clementine"},
-		{"clementinetree:clementine", "brewing:sugar", "brewing:clementine"},
+		{"clementinetree:clementine", "brewing:sugar", "clementinetree:clementine"},
 		{"", "default:stick", ""},
 	}
 })
@@ -248,8 +248,8 @@ minetest.register_craft({
 	type = "shaped",
 	output = "brewing:clementine_chupachups 4",
 	recipe = {
-		{"", "brewing:clementine", ""},
-		{"brewing:clementine", "brewing:sugar", "brewing:clementine"},
+		{"", "clementinetree:clementine", ""},
+		{"clementinetree:clementine", "brewing:sugar", "clementinetree:clementine"},
 		{"", "default:stick", ""},
 	}
 })
