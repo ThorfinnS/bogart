@@ -27,7 +27,6 @@ brewing = {
 		generate_calla = true,
 		generate_lavender = true,
 		generate_creosote_bush = true,
-		generate_meteor = true,
 		generate_gliophorus_viridis = true,
 		generate_azalea = true,
 		-- end herbalism

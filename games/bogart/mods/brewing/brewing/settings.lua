@@ -25,7 +25,6 @@ brewing.settings.generate_gliophorus_viridis  = settings:get_bool("generate_glio
 brewing.settings.generate_calla  = settings:get_bool("generate_calla", true)
 brewing.settings.generate_lavender  = settings:get_bool("generate_lavender", true)
 brewing.settings.generate_azalea  = settings:get_bool("generate_azalea", true)
-brewing.settings.generate_meteor  = settings:get_bool("generate_meteor", true)
 brewing.settings.ignitor["image"]= settings:get("ignitor_image")
 brewing.settings.ignitor["name"]= settings:get("ignitor_name")
 brewing.settings.lily_hp = settings:get("lily_hp", true)

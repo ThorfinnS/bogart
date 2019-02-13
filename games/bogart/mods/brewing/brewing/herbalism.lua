@@ -355,7 +355,7 @@ end
 if mg_name ~= "v6" and mg_name ~= "singlenode" and brewing.settings.generate_orange_mycena == true then
 	minetest.register_decoration({
 			deco_type = "simple",
-			place_on = "default:dirt_with_grass",
+			place_on = "default:dirt_with_coniferous_litter",
 			sidelen = 16,
 			fill_ratio = 0.0001,
 			biomes = {"coniferous_forest"},
@@ -389,7 +389,7 @@ minetest.register_node("brewing:orange_mycena", {
 if mg_name ~= "v6" and mg_name ~= "singlenode" and brewing.settings.generate_cortinarius_violaceus == true then
 	minetest.register_decoration({
 			deco_type = "simple",
-			place_on = "default:dirt_with_grass",
+			place_on = "default:dirt_with_coniferous_litter",
 			sidelen = 16,
 			fill_ratio = 0.0001,
 			biomes = {"coniferous_forest"},
@@ -423,10 +423,10 @@ minetest.register_node("brewing:cortinarius_violaceus", {
 if mg_name ~= "v6" and mg_name ~= "singlenode" and brewing.settings.generate_gliophorus_viridis == true then
 	minetest.register_decoration({
 			deco_type = "simple",
-			place_on = "default:dirt_with_grass",
+			place_on = "default:dirt_with_coniferous_litter",
 			sidelen = 16,
 			fill_ratio = 0.0001,
-			biomes = {"coniferous_forest", "deciduous_forest"},
+			biomes = {"coniferous_forest"},
 			decoration = "brewing:gliophorus_viridis",
 			height = 1,
 		})

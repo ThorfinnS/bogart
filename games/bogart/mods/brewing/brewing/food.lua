@@ -51,38 +51,38 @@ minetest.register_craft({
 	type = "shaped",
 	output = "brewing:lemonade",
 	recipe = {
-		{"", "lemmontree:lemmon", ""},
+		{"", "lemontree:lemon", ""},
 		{"", "brewing:sugar", ""},
 		{"", "vessels:drinking_glass", ""},
 	}
 })
 
---Lemmon Pie
+--Lemon Pie
 
-minetest.register_craftitem("brewing:lemmon_pie", {
-	description = S("Lemmon Pie"),
-	inventory_image = "brewing_lemmon_pie.png",
+minetest.register_craftitem("brewing:lemon_pie", {
+	description = S("Lemon Pie"),
+	inventory_image = "brewing_lemon_pie.png",
 	on_use = minetest.item_eat(5),
 	groups = {flammable = 2, food = 3},
 })
 
-minetest.register_craftitem("brewing:lemmon_pie_dough", {
-	description = S("Lemmon Pie Dough"),
-	inventory_image = "brewing_lemmon_pie_dough.png",
+minetest.register_craftitem("brewing:lemon_pie_dough", {
+	description = S("Lemon Pie Dough"),
+	inventory_image = "brewing_lemon_pie_dough.png",
 	on_use = minetest.item_eat(5),
 	groups = {flammable = 2, food = 3},
 })
 
 minetest.register_craft({
 	type = "cooking",
-	output = "brewing:lemmon_pie",
-	recipe = "brewing:lemmon_pie_dough",
+	output = "brewing:lemon_pie",
+	recipe = "brewing:lemon_pie_dough",
 	cooktime = 3,
 })
 
 minetest.register_craft({
 	type = "shaped",
-	output = "brewing:lemmon_pie_dough",
+	output = "brewing:lemon_pie_dough",
 	recipe = {
 		{"", "brewing:sugar", ""},
 		{"", "farming:flour", ""},
@@ -109,7 +109,7 @@ minetest.register_craft({
 	output = "brewing:fay_cake",
 	recipe = {
 		{"", "", ""},
-		{"brewing:lemmon", "brewing:artic_carrot", "brewing:sugar"},
+		{"brewing:lemon", "brewing:artic_carrot", "brewing:sugar"},
 		{"", "farming:flour", ""},
 	}
 })
@@ -133,7 +133,7 @@ minetest.register_craft({
 	output = "brewing:nymph_salad",
 	recipe = {
 		{"", "", ""},
-		{"flowers:mushroom_brown", "brewing:lemmon", "brewing:mint"},
+		{"flowers:mushroom_brown", "brewing:lemon", "brewing:mint"},
 		{"", "brewing:clay_bowl", ""},
 	}
 })
@@ -157,7 +157,7 @@ minetest.register_craft({
 	output = "brewing:siren_soup",
 	recipe = {
 		{"", "brewing:mint", ""},
-		{"brewing:anemon", "brewing:lemmon", "brewing:turtle_shell"},
+		{"brewing:anemon", "brewing:lemon", "brewing:turtle_shell"},
 		{"", "brewing:clay_bowl", ""},
 	}
 })
