@@ -40,7 +40,7 @@ mobs:register_mob("kmobs:kitty", {
     hp_min = 4,
     hp_max = 8,
     armor = 200,
-	collisionbox = {-0.125, -0.5, -0.1875, -0.125, -0.375, -0.1875},
+	collisionbox = {-0.125, -0.5, -0.1875, 0.0625, 0.5, 0.125},
 	visual = "wielditem",
 	visual_size = {x=1.0, y=1.0},
 	textures = {"kmobs:kitty_block"},

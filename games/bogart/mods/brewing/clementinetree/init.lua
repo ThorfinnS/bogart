@@ -149,7 +149,7 @@ minetest.register_node("clementinetree:leaves", {
 		max_items = 1,
 		items = {
 			{items = {"clementinetree:sapling"}, rarity = 20},
-			{items = {"clementinetree:_leaves"}}
+			{items = {"clementinetree:leaves"}}
 		}
 	},
 	sounds = default.node_sound_leaves_defaults(),

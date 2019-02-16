@@ -107,7 +107,6 @@ minetest.register_node("lemontree:sapling", {
 			{x = 2, y = 6, z = 2},
 			-- maximum interval of interior volume check
 			4)
-
 		return itemstack
 	end,
 })
