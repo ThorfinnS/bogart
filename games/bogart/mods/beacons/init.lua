@@ -114,8 +114,9 @@ for color, color_desc in pairs(color_descs) do
     
     minetest.register_node("beacons:light_" .. color, {
         description = color_desc .. " Beacon Light",
-        drawtype = "plantlike",
-        tiles = {"beacons_light.png"},
+        drawtype = "liquid",
+        tiles = {"default_cloud.png"},
+        alpha= 4,
         color = color:gsub("_", ""),
         paramtype = "light",
         sunlight_propagates = true,
