@@ -2,8 +2,6 @@
 --KITTY
 --
 
-pets = {}
-
 minetest.register_node("pets:kitty_block", {
 	drawtype = "nodebox",
 	node_box = {
@@ -40,10 +38,10 @@ mobs:register_mob("pets:kitty", {
     hp_min = 4,
     hp_max = 8,
     armor = 200,
-	collisionbox = {-0.25, -0.75, -0.25, 0.25, -0.25, 0.25},
+	collisionbox = {-0.5, -0.5, -0.5, 0.5, 0.5, 0.5},
 	--selectionbox = {-0.125, -0.5, -0.1875, 0.0625, 0.5, 0.125},
 	visual = "wielditem",
-	--visual_size = {x=1.0, y=1.0},
+	visual_size = {x=1.0, y=1.0},
 	textures = {"pets:kitty_block"},
 	makes_footstep_sound = false,
 	walk_velocity = 0.75,

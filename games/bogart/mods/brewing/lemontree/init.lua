@@ -124,7 +124,9 @@ minetest.register_node("lemontree:trunk", {
 	is_ground_content = false,
 	on_place = minetest.rotate_node,
 	on_rightclick = function(pos, node, player, itemstack, pointed_thing)
-		cork.get_cork(pos, node, player, itemstack, pointed_thing)
+		if minetest.get_modpath("cork") ~= nil then	
+			cork.get_cork(pos, node, player, itemstack, pointed_thing)
+		end
 	end,
 })
 
