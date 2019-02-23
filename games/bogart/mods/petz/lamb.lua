@@ -1,5 +1,5 @@
 --
---SHEEP
+--LAMB
 --
 
 minetest.register_node("petz:lamb_block", {
