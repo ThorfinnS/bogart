@@ -74,6 +74,7 @@ minetest.register_node("pineapple:pineapple", {
 	groups = {snappy = 3, leafdecay = 3, leaves = 1, flammable = 2},
 	sounds = default.node_sound_leaves_defaults(),
 	after_place_node = default.after_place_leaves,
+	on_use = minetest.item_eat(3, "pineapple:sapling"),
 })
 
 
