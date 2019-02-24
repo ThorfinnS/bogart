@@ -50,7 +50,7 @@ minetest.register_entity("petz:kitty", {
     hp_min = 4,
     hp_max = 8,
     armor = 200,
-    stepheight = 1,
+    --stepheight = 1,
 	collide_with_objects = true,
 	collisionbox = CollisionBox,
 	visual = Visual,
@@ -60,7 +60,7 @@ minetest.register_entity("petz:kitty", {
 	on_step = mobkit.stepfunc, -- required
 	on_activate = mobkit.actfunc, -- required
 	-- api props
-	springiness=0.5,
+	springiness=0,
 	walk_speed = 1,
 	jump_height = 5,
 	brainfunc = function(self)	-- dumbest brain possible

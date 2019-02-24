@@ -32,6 +32,37 @@ minetest.register_node("petz:ducky_block", {
 	}
 })
 
+minetest.register_node("petz:ducky_block2", {
+	tiles = {
+		"petz_ducky2_top.png",
+		"petz_ducky2_bottom.png",
+		"petz_ducky2_right.png",
+		"petz_ducky2_left.png",
+		"petz_ducky2_back.png",
+		"petz_ducky2_front.png"
+	},
+	drawtype = "nodebox",
+	paramtype = "light",
+	paramtype2 = "facedir",
+    groups = {not_in_creative_inventory = 1},
+	node_box = {
+		type = "fixed",
+		fixed = {
+			{-0.125, -0.5, -0.0625, -0.0625, -0.4375, 7.45058e-09}, -- right_leg
+			{0, -0.5, -0.0625, 0.0625, -0.4375, 1.86265e-08}, -- left_leg
+			{-0.125, -0.4375, -0.125, 0.0625, -0.25, 0.0625}, -- body
+			{-0.125, -0.3125, 0.0625, 0.0625, -0.25, 0.125}, -- tail_top
+			{-0.125, -0.25, -0.1875, 0.0625, -0.1875, -0.125}, -- beak
+			{-0.125, -0.25, -0.125, 0.0625, -0.0625, 9.68575e-08}, -- head
+			{0.0625, -0.3125, -0.0625, 0.125, -0.25, 0.0625}, -- left_wing_top
+			{0.0625, -0.375, -0.0625, 0.125, -0.3125, 0}, -- left_wing_bottom
+			{-0.1875, -0.3125, -0.0625, -0.125, -0.25, 0.0625}, -- right_wing_top
+			{-0.1875, -0.375, -0.0625, -0.125, -0.3125, 0}, -- right_wing_bottom
+			{-0.0625, -0.375, 0.0625, -3.35276e-08, -0.3125, 0.125}, -- tail_bottom
+		}
+	}
+})
+
 mobs:register_mob("petz:ducky", {
 	type = "animal",
 	rotate = 180,
@@ -41,7 +72,7 @@ mobs:register_mob("petz:ducky", {
     armor = 200,
 	visual = "wielditem",
 	visual_size = {x=1.0, y=1.0},
-	textures = {"petz:ducky_block"},
+	textures = {{"petz:ducky_block2"}, {"petz:ducky_block"}},
 	collisionbox = {-0.2, -0.75, -0.2, 0.2, -0.125, 0.2},
 	makes_footstep_sound = false,
 	walk_velocity = 0.75,
