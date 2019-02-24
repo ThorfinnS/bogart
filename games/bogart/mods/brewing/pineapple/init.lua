@@ -1,5 +1,5 @@
 --
--- Pineappletree
+-- Pineapple
 --
 
 local modname = "pineapple"
@@ -28,7 +28,7 @@ end
 if mg_name ~= "v6" and mg_name ~= "singlenode" then
 	minetest.register_decoration({
 		deco_type = "schematic",
-		place_on = {"default:dirt_with_grass"},
+		place_on = {"default:dirt_with_rainforest_litter"},
 		sidelen = 16,
 		noise_params = {
 			offset = 0.0005,
