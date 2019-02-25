@@ -36,6 +36,10 @@ function mobkit.pos_shift(pos,vec)
 			z=pos.z+vec.z}
 end
 
+function mobkit.get_stand_pos(self)	-- call this instead if you want feet position.
+	return mobkit.pos_shift(self.object:get_pos(),{y=self.collisionbox[2]})
+end
+
 function mobkit.nodeatpos(pos)
 	return minetest.registered_nodes[minetest.get_node(pos).name]
 end
@@ -138,11 +142,12 @@ end
 
 function mobkit.is_neighbor_node_reachable(self,neighbor)	-- todo: take either number or pos
 	local offset = neighbors[neighbor]
-	local pos=self.object:get_pos()
+	local pos=mobkit.get_stand_pos(self)
 	local tpos = mobkit.get_node_pos(mobkit.pos_shift(pos,offset))
 	local height = mobkit.get_terrain_height(tpos) - pos.y
+
 	if abs(height) <= self.jump_height then
-	
+		
 		-- don't cut corners
 		if neighbor % 2 == 0 then				-- diagonal neighbors are even
 			local n2 = neighbor-1				-- left neighbor never < 0
@@ -156,11 +161,11 @@ function mobkit.is_neighbor_node_reachable(self,neighbor)	-- todo: take either n
 		end
 		
 		-- check headroom, dumb for now
-		if mobkit.nodeatpos(mobkit.pos_shift(pos,{y=self.height+1})).walkable or
-		mobkit.nodeatpos(mobkit.pos_shift(tpos,{y=self.height})).walkable then
+		if self.height > 1 and (mobkit.nodeatpos(mobkit.pos_shift(pos,{y=self.height+1})).walkable or
+		mobkit.nodeatpos(mobkit.pos_shift(tpos,{y=self.height})).walkable) then
 			return 
 		end
-		
+	
 	return height, tpos
 	else
 		return
@@ -231,7 +236,7 @@ function mobkit.lq_dumbwalk(self,dest)
 		timer = timer - self.dtime
 		if timer < 0 then return true end
 		
-		local pos = self.object:get_pos()
+		local pos = mobkit.get_stand_pos(self)
 		local y = self.object:get_velocity().y
 		if mobkit.isnear2d(pos,dest,0.1) then
 			self.object:set_velocity({x=0,y=y,z=0})
@@ -284,13 +289,13 @@ end
 function mobkit.hq_roam(self)
 	local func=function(self)
 		if #self.lqueue == 0 and self.isonground then
-			local pos = self.object:get_pos()
+			local pos = mobkit.get_stand_pos(self)
 			local neighbor = random(8)
 
 			local height, tpos = mobkit.is_neighbor_node_reachable(self,neighbor)
 			if not height then return end
 			 
-			if height <= 0 then
+			if height <= 0.001 then
 				mobkit.lq_turn2pos(self,tpos) 
 				mobkit.lq_dumbwalk(self,tpos)
 			else
@@ -356,7 +361,7 @@ function mobkit.stepfunc(self,dtime)	-- not intended to be modified
 			end
 			self.collided = false
 		end
-	
+		
 		self.object:set_velocity(vnew)
 	end
 
