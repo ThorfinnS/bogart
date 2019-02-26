@@ -39,7 +39,7 @@ gtags.files
 /cache
 /textures/*
 !/textures/base/
-!/textures/johnsmith/
+!/textures/bogart/
 /screenshots
 /sounds
 /mods/*
