@@ -65,7 +65,7 @@ mobs:register_mob("petz:"..pet_name, {
 	lava_damage = 6,
 	light_damage = 0,
     sounds = {
-		random = "petz_kitty_meow.ogg",
+		random = "petz_kitty_meow",
 	},
     animation = {
     	speed_normal = 15, walk_start = 1, walk_end = 12,
