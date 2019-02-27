@@ -32,7 +32,7 @@ if type_model == "cubic" then
 	collisionbox = {-0.35, -0.75, -0.28, 0.35, -0.125, 0.28}
 else
 	mesh = 'petz_kitty.b3d'	
-	textures= {{"petz_kitty.png"},{"petz_kitty2.png"}}
+	textures= {{"petz_kitty.png"}, {"petz_kitty2.png"}, {"petz_kitty3.png"}}
 	collisionbox = {-0.35, -0.5, -0.28, 0.35, -0.125, 0.28}
 end
 
