@@ -1,8 +1,0 @@
---------------------------------------------
-file name:  ccmobs2_sheep.ogg / ccmobs2_sheep_hurt.ogg
-original file name: sheepHit.flac / sheepBleet.flac
-Author: Blender Foundation
-http://opengameart.org/content/sheep-sound-bleats-yo-frankie
-License:CC-BY-3.0
-https://creativecommons.org/licenses/by/3.0/
---------------------------------------------

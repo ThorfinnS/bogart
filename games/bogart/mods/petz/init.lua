@@ -1,6 +1,6 @@
 --
 -- petz 
--- License:MIT
+-- License:GPL3
 --
 
 local modname = "petz"
@@ -11,164 +11,80 @@ local S = minetest.get_translator(minetest.get_current_modname())
 
 petz = {}
 
---TYPE_MODEL: [mesh --or--  cubic]
-local TYPE_MODEL = "mesh"
+petz.settings = {}
 
-local Mesh = nil
-local VisualSize = {}
-local Rotate = 0
-local Textures = {}
-local CollisionBox = {}
-
-if TYPE_MODEL == "mesh" then
-    Visual = "mesh"
-    VisualSize = {x=10.0, y=10.0}
-    Rotate = 0
-else -- is 'cubic'
-    Visual = "wielditem"
-    VisualSize = {x=1.0, y=1.0}
-    Rotate = 180
+petz.register_cubic = function(node_name, fixed, tiles)
+		minetest.register_node("petz:kitty_block", {
+		drawtype = "nodebox",
+		node_box = {
+			type = "fixed",
+			fixed = {fixed},
+		},
+		tiles = {tiles},
+		paramtype = "light",
+		paramtype2 = "facedir",
+    	groups = {not_in_creative_inventory = 1},
+	})		
 end
 
---SPAWNING: [true --or-- false]
-local KITTY_SPAWN = true
-local PIGGY_SPAWN = true
-local PANDA_SPAWN = true
-local LAMB_SPAWN = true
-local CALF_SPAWN = true
-local CHICKEN_SPAWN = true
-local DUCKY_SPAWN = true
+--Load the settings
+assert(loadfile(modpath .. "/settings.lua"))(modpath, S)
 
+petz.settings.mesh = nil
+petz.settings.visual_size = {}
+petz.settings.rotate = 0
+petz.settings.textures = {}
+petz.settings.collisionbox = {}
 
-if KITTY_SPAWN then
+if petz.settings.type_model == "mesh" then
+    petz.settings.visual = "mesh"
+    petz.settings.visual_size = {x=10.0, y=10.0}
+    petz.settings.rotate = 0
+else -- is 'cubic'
+    petz.settings.visual = "wielditem"
+    petz.settings.visual_size = {x=1.0, y=1.0}
+    petz.settings.rotate = 180
+end
 
-    assert(loadfile(modpath .. "/kitty.lua"))(TYPE_MODEL, Visual, VisualSize, Mesh, Rotate, Textures, CollisionBox) 
+--Form Dialog
 
-    mobs:register_egg("petz:kitty", S("Kitty"), "petz_spawnegg_treemonster.png", 0)
+petz.pet = nil
+
+local form_pet_orders =
+	"size[3,5;]"..
+	"image[1,0;1,1;petz_spawnegg_kitty.png]"..
+	"button_exit[0,1;3,1;btn_followme;"..S("Follow me").."]"..
+	"button_exit[0,2;3,1;btn_standhere;"..S("Stand here").."]"..
+	"button_exit[0,3;3,1;btn_ownthing;"..S("Do your own thing").."]"..	
+	"button_exit[1,4;1,1;btn_close;"..S("Close").."]"
+
+minetest.register_on_player_receive_fields(function(player, formname, fields)
+	if (formname ~= "petz:form_orders") then
+		return false
+	end
+	if petz.pet == nil then -- if pet dies after her formspec opened
+		return true
+	end
+	--brewing.magic_sound("to_player", player, "brewing_select")
+	if fields.btn_followme then
+		petz.pet.order = "follow"
+	elseif fields.btn_standhere then
+		petz.pet.order = "stand"
+	elseif fields.btn_ownthing then
+		petz.pet.order = ""
+		petz.pet.state = "walk"
+	end
+	return true
+end)
+
+if petz.settings.kitty_spawn then
+
+    assert(loadfile(modpath .. "/kitty_"..petz.settings.type_api..".lua"))(S, form_pet_orders, petz.settings.type_model, petz.settings.visual, petz.settings.visual_size, petz.settings.mesh, petz.settings.rotate, petz.settings.textures, petz.settings.collisionbox, petz.settings.kitty_follow, petz.settings.kitty_food) 
+
+    mobs:register_egg("petz:kitty", S("Kitty"), "petz_spawnegg_kitty.png", 0)
 
     mobs:spawn({
         name = "petz:kitty",
-        nodes = {"default:dirt_with_grass"},
-        neighbors = {"group:leaves"},
-        min_light = 3,
-        max_light = 5,
-        interval = 90,
-        chance = 900, 
-        min_height = 1,
-        max_height = 300,
-        day_toggle = false,
-    })
-end
-
-if PIGGY_SPAWN then
-
-    dofile(modpath.."/piggy.lua")
-
-    mobs:register_egg("petz:piggy", S("Piggy"), "petz_spawnegg_treemonster.png", 0)
-
-    mobs:spawn({
-        name = "petz:piggy",
-        nodes = {"default:dirt_with_grass"},
-        neighbors = {"group:leaves"},
-        min_light = 3,
-        max_light = 5,
-        interval = 90,
-        chance = 900, 
-        min_height = 1,
-        max_height = 300,
-        day_toggle = false,
-    })
-end
-
-if PANDA_SPAWN then
-
-    dofile(modpath.."/panda.lua")
-
-    mobs:register_egg("petz:panda", S("Panda"), "petz_spawnegg_treemonster.png", 0)
-
-    mobs:spawn({
-        name = "petz:panda",
-        nodes = {"default:dirt_with_grass"},
-        neighbors = {"group:leaves"},
-        min_light = 3,
-        max_light = 5,
-        interval = 90,
-        chance = 900, 
-        min_height = 1,
-        max_height = 300,
-        day_toggle = false,
-    })
-end
-
-if LAMB_SPAWN then
-
-    dofile(modpath.."/lamb.lua")
-
-    mobs:register_egg("petz:lamb", S("Lamb"), "petz_spawnegg_treemonster.png", 0)
-
-    mobs:spawn({
-        name = "petz:lamb",
-        nodes = {"default:dirt_with_grass"},
-        neighbors = {"group:leaves"},
-        min_light = 3,
-        max_light = 5,
-        interval = 90,
-        chance = 900, 
-        min_height = 1,
-        max_height = 300,
-        day_toggle = false,
-    })
-end
-
-if CALF_SPAWN then
-
-    dofile(modpath.."/calf.lua")
-
-    mobs:register_egg("petz:calf", S("Calf"), "petz_spawnegg_treemonster.png", 0)
-
-    mobs:spawn({
-        name = "petz:calf",
-        nodes = {"default:dirt_with_grass"},
-        neighbors = {"group:leaves"},
-        min_light = 3,
-        max_light = 5,
-        interval = 90,
-        chance = 900, 
-        min_height = 1,
-        max_height = 300,
-        day_toggle = false,
-    })
-end
-
-if CHICKEN_SPAWN then
-
-    dofile(modpath.."/chicken.lua")
-
-    mobs:register_egg("petz:chicken", S("Chicken"), "petz_spawnegg_treemonster.png", 0)
-
-    mobs:spawn({
-        name = "petz:chicken",
-        nodes = {"default:dirt_with_grass"},
-        neighbors = {"group:leaves"},
-        min_light = 3,
-        max_light = 5,
-        interval = 90,
-        chance = 900, 
-        min_height = 1,
-        max_height = 300,
-        day_toggle = false,
-    })
-end
-
-
-if DUCKY_SPAWN then
-
-    dofile(modpath.."/ducky.lua")
-
-    mobs:register_egg("petz:ducky", S("Ducky"), "petz_spawnegg_treemonster.png", 0)
-
-    mobs:spawn({
-        name = "petz:ducky",
         nodes = {"default:dirt_with_grass"},
         neighbors = {"group:leaves"},
         min_light = 3,
