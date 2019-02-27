@@ -1,6 +1,6 @@
 # Petz [petz]
 
-Cute kawaii mods.
+Cute kawaii mobs.
 
 
 
