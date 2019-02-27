@@ -2,5 +2,5 @@
 file name: petz_kitty_meow.ogg
 Author: Alexander
 http://www.orangefreesounds.com/cat-meow-audio-clip/
-License:“Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)”
+License: "Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)"
 --------------------------------------------
