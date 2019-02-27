@@ -38,7 +38,7 @@ petz.settings.collisionbox = {}
 
 if petz.settings.type_model == "mesh" then
     petz.settings.visual = "mesh"
-    petz.settings.visual_size = {x=10.0, y=10.0}
+    petz.settings.visual_size = {x=15.0, y=15.0}
     petz.settings.rotate = 0
 else -- is 'cubic'
     petz.settings.visual = "wielditem"
