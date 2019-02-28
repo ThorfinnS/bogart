@@ -50,13 +50,17 @@ end
 
 petz.pet = nil
 
-local form_pet_orders =
-	"size[3,5;]"..
-	"image[1,0;1,1;petz_spawnegg_kitty.png]"..
-	"button_exit[0,1;3,1;btn_followme;"..S("Follow me").."]"..
-	"button_exit[0,2;3,1;btn_standhere;"..S("Stand here").."]"..
-	"button_exit[0,3;3,1;btn_ownthing;"..S("Do your own thing").."]"..	
-	"button_exit[1,4;1,1;btn_close;"..S("Close").."]"
+petz.create_form = function(pet_name)
+	local form_pet_orders =
+		"size[3,5;]"..
+		"image[1,0;1,1;petz_spawnegg_"..pet_name..".png]"..
+		"button_exit[0,1;3,1;btn_followme;"..S("Follow me").."]"..
+		"button_exit[0,2;3,1;btn_standhere;"..S("Stand here").."]"..
+		"button_exit[0,3;3,1;btn_ownthing;"..S("Do your own thing").."]"..	
+		"button_exit[1,4;1,1;btn_close;"..S("Close").."]"
+	return form_pet_orders
+end
+
 
 minetest.register_on_player_receive_fields(function(player, formname, fields)
 	if (formname ~= "petz:form_orders") then
@@ -79,12 +83,32 @@ end)
 
 if petz.settings.kitty_spawn then
 
-    assert(loadfile(modpath .. "/kitty_"..petz.settings.type_api..".lua"))(S, form_pet_orders, petz.settings.type_model, petz.settings.visual, petz.settings.visual_size, petz.settings.mesh, petz.settings.rotate, petz.settings.textures, petz.settings.collisionbox, petz.settings.kitty_follow, petz.settings.kitty_food) 
+    assert(loadfile(modpath .. "/kitty_"..petz.settings.type_api..".lua"))(S, petz.settings.type_model, petz.settings.visual, petz.settings.visual_size, petz.settings.mesh, petz.settings.rotate, petz.settings.textures, petz.settings.collisionbox, petz.settings.kitty_follow, petz.settings.kitty_food) 
 
     mobs:register_egg("petz:kitty", S("Kitty"), "petz_spawnegg_kitty.png", 0)
 
     mobs:spawn({
         name = "petz:kitty",
+        nodes = {"default:dirt_with_grass"},
+        neighbors = {"group:leaves"},
+        min_light = 3,
+        max_light = 5,
+        interval = 90,
+        chance = 900, 
+        min_height = 1,
+        max_height = 300,
+        day_toggle = false,
+    })
+end
+
+if petz.settings.puppy_spawn then
+
+    assert(loadfile(modpath .. "/puppy_"..petz.settings.type_api..".lua"))(S, petz.settings.type_model, petz.settings.visual, petz.settings.visual_size, petz.settings.mesh, petz.settings.rotate, petz.settings.textures, petz.settings.collisionbox, petz.settings.kitty_follow, petz.settings.kitty_food) 
+
+    mobs:register_egg("petz:puppy", S("Puppy"), "petz_spawnegg_puppy.png", 0)
+
+    mobs:spawn({
+        name = "petz:puppy",
         nodes = {"default:dirt_with_grass"},
         neighbors = {"group:leaves"},
         min_light = 3,

@@ -1,7 +1,7 @@
 --
 --KITTY
 --
-local S, form_pet_orders, type_model, visual, visual_size, mesh, rotate, textures, collisionbox, follow, food = ...
+local S, type_model, visual, visual_size, mesh, rotate, textures, collisionbox, follow, food = ...
 
 local pet_name= "kitty"
 
@@ -70,9 +70,9 @@ mobs:register_mob("petz:"..pet_name, {
     animation = {
     	speed_normal = 15, walk_start = 1, walk_end = 12,
     	speed_run = 25, run_start = 13, run_end = 25,
-    	stand_start = 26, stand_end = 41,		
-    	stand2_start = 42, stand2_end = 54,	
-    	stand3_start = 55, stand3_end = 76,	
+    	stand_start = 26, stand_end = 45,		
+    	stand2_start = 46, stand2_end = 58,	
+    	stand3_start = 59, stand3_end = 80,	
 		},
     view_range = 4,
     fear_height = 3,
@@ -103,8 +103,8 @@ mobs:register_mob("petz:"..pet_name, {
 				--brewing.magic_sound("to_player", clicker, "brewing_magic_failure")
 			end
 		else
-			petz.pet = self
-			minetest.show_formspec(player_name, "petz:form_orders", form_pet_orders)
+			petz.pet = self			
+			minetest.show_formspec(player_name, "petz:form_orders", petz.create_form(pet_name))
 		end
 	end,
 })
