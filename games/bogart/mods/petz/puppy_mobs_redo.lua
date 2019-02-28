@@ -64,7 +64,7 @@ mobs:register_mob("petz:"..pet_name, {
 		min = 1,
 		max = 1,},
 		},
-	water_damage = 2,
+	water_damage = 0,
 	lava_damage = 6,
 	light_damage = 0,
     sounds = {
