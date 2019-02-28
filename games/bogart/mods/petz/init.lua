@@ -14,13 +14,13 @@ petz = {}
 petz.settings = {}
 
 petz.register_cubic = function(node_name, fixed, tiles)
-		minetest.register_node("petz:kitty_block", {
+		minetest.register_node(node_name, {
 		drawtype = "nodebox",
 		node_box = {
 			type = "fixed",
-			fixed = {fixed},
+			fixed = fixed,
 		},
-		tiles = {tiles},
+		tiles = tiles,
 		paramtype = "light",
 		paramtype2 = "facedir",
     	groups = {not_in_creative_inventory = 1},
