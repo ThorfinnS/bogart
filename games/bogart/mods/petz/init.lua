@@ -103,7 +103,7 @@ end
 
 if petz.settings.puppy_spawn then
 
-    assert(loadfile(modpath .. "/puppy_"..petz.settings.type_api..".lua"))(S, petz.settings.type_model, petz.settings.visual, petz.settings.visual_size, petz.settings.mesh, petz.settings.rotate, petz.settings.textures, petz.settings.collisionbox, petz.settings.kitty_follow, petz.settings.kitty_food) 
+    assert(loadfile(modpath .. "/puppy_"..petz.settings.type_api..".lua"))(S, petz.settings.type_model, petz.settings.visual, petz.settings.visual_size, petz.settings.mesh, petz.settings.rotate, petz.settings.textures, petz.settings.collisionbox, petz.settings.puppy_follow, petz.settings.puppy_food) 
 
     mobs:register_egg("petz:puppy", S("Puppy"), "petz_spawnegg_puppy.png", 0)
 
