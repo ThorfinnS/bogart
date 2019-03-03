@@ -154,6 +154,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/minetest.dir/threading/thread.cpp.o"
   "CMakeFiles/minetest.dir/unittest/test.cpp.o"
   "CMakeFiles/minetest.dir/unittest/test_activeobject.cpp.o"
+  "CMakeFiles/minetest.dir/unittest/test_address.cpp.o"
   "CMakeFiles/minetest.dir/unittest/test_areastore.cpp.o"
   "CMakeFiles/minetest.dir/unittest/test_authdatabase.cpp.o"
   "CMakeFiles/minetest.dir/unittest/test_ban.cpp.o"

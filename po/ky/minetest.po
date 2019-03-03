@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-01-24 01:05+0200\n"
+"POT-Creation-Date: 2019-02-14 19:14+0100\n"
 "PO-Revision-Date: 2019-01-24 00:05+0000\n"
 "Last-Translator: Nore <nore@mesecons.net>\n"
 "Language-Team: Kyrgyz <https://hosted.weblate.org/projects/minetest/minetest/"
@@ -24,11 +24,11 @@ msgid "You died"
 msgstr "Сиз өлдүңүз."
 
 #: builtin/fstk/ui.lua
-msgid "An error occured in a Lua script, such as a mod:"
+msgid "An error occurred in a Lua script, such as a mod:"
 msgstr ""
 
 #: builtin/fstk/ui.lua
-msgid "An error occured:"
+msgid "An error occurred:"
 msgstr ""
 
 #: builtin/fstk/ui.lua
@@ -115,7 +115,7 @@ msgstr "Баарын күйгүзүү"
 #: builtin/mainmenu/dlg_config_world.lua
 msgid ""
 "Failed to enable mod \"$1\" as it contains disallowed characters. Only "
-"chararacters [a-z0-9_] are allowed."
+"characters [a-z0-9_] are allowed."
 msgstr ""
 
 #: builtin/mainmenu/dlg_config_world.lua
@@ -186,6 +186,10 @@ msgid "Mods"
 msgstr ""
 
 #: builtin/mainmenu/dlg_contentstore.lua
+msgid "No packages could be retrieved"
+msgstr ""
+
+#: builtin/mainmenu/dlg_contentstore.lua
 msgid "No results"
 msgstr ""
 
@@ -206,10 +210,6 @@ msgstr ""
 msgid "Update"
 msgstr ""
 
-#: builtin/mainmenu/dlg_contentstore.lua
-msgid "View"
-msgstr ""
-
 #: builtin/mainmenu/dlg_create_world.lua
 msgid "A world named \"$1\" already exists"
 msgstr ""
@@ -219,7 +219,7 @@ msgid "Create"
 msgstr "Жаратуу"
 
 #: builtin/mainmenu/dlg_create_world.lua
-msgid "Download a game, such as minetest_game, from minetest.net"
+msgid "Download a game, such as Minetest Game, from minetest.net"
 msgstr ""
 
 #: builtin/mainmenu/dlg_create_world.lua
@@ -239,6 +239,7 @@ msgid "No game selected"
 msgstr ""
 
 #: builtin/mainmenu/dlg_create_world.lua
+#: builtin/mainmenu/dlg_settings_advanced.lua
 msgid "Seed"
 msgstr ""
 
@@ -285,8 +286,18 @@ msgstr "Кабыл алуу"
 msgid "Rename Modpack:"
 msgstr ""
 
+#: builtin/mainmenu/dlg_rename_modpack.lua
+msgid ""
+"This modpack has an explicit name given in its modpack.conf which will "
+"override any renaming here."
+msgstr ""
+
 #: builtin/mainmenu/dlg_settings_advanced.lua
 msgid "(No description of setting given)"
+msgstr ""
+
+#: builtin/mainmenu/dlg_settings_advanced.lua
+msgid "2D Noise"
 msgstr ""
 
 #: builtin/mainmenu/dlg_settings_advanced.lua
@@ -312,6 +323,22 @@ msgid "Enabled"
 msgstr "күйгүзүлгөн"
 
 #: builtin/mainmenu/dlg_settings_advanced.lua
+msgid "Lacunarity"
+msgstr ""
+
+#: builtin/mainmenu/dlg_settings_advanced.lua
+msgid "Octaves"
+msgstr ""
+
+#: builtin/mainmenu/dlg_settings_advanced.lua src/settings_translation_file.cpp
+msgid "Offset"
+msgstr ""
+
+#: builtin/mainmenu/dlg_settings_advanced.lua
+msgid "Persistance"
+msgstr ""
+
+#: builtin/mainmenu/dlg_settings_advanced.lua
 msgid "Please enter a valid integer."
 msgstr ""
 
@@ -321,6 +348,10 @@ msgstr ""
 
 #: builtin/mainmenu/dlg_settings_advanced.lua
 msgid "Restore Default"
+msgstr ""
+
+#: builtin/mainmenu/dlg_settings_advanced.lua src/settings_translation_file.cpp
+msgid "Scale"
 msgstr ""
 
 #: builtin/mainmenu/dlg_settings_advanced.lua
@@ -345,15 +376,51 @@ msgstr ""
 msgid "The value must not be larger than $1."
 msgstr ""
 
-#: builtin/mainmenu/pkgmgr.lua
-#, fuzzy
-msgid " mods"
-msgstr "Ырастоо"
+#: builtin/mainmenu/dlg_settings_advanced.lua
+msgid "X"
+msgstr ""
+
+#: builtin/mainmenu/dlg_settings_advanced.lua
+msgid "X spread"
+msgstr ""
+
+#: builtin/mainmenu/dlg_settings_advanced.lua
+msgid "Y"
+msgstr ""
+
+#: builtin/mainmenu/dlg_settings_advanced.lua
+msgid "Y spread"
+msgstr ""
+
+#: builtin/mainmenu/dlg_settings_advanced.lua
+msgid "Z"
+msgstr ""
+
+#: builtin/mainmenu/dlg_settings_advanced.lua
+msgid "Z spread"
+msgstr ""
+
+#: builtin/mainmenu/dlg_settings_advanced.lua
+msgid "absvalue"
+msgstr ""
+
+#: builtin/mainmenu/dlg_settings_advanced.lua
+msgid "defaults"
+msgstr ""
+
+#: builtin/mainmenu/dlg_settings_advanced.lua
+msgid "eased"
+msgstr ""
 
 #: builtin/mainmenu/pkgmgr.lua
 #, fuzzy
 msgid "$1 (Enabled)"
 msgstr "күйгүзүлгөн"
+
+#: builtin/mainmenu/pkgmgr.lua
+#, fuzzy
+msgid "$1 mods"
+msgstr "Ырастоо"
 
 #: builtin/mainmenu/pkgmgr.lua
 #, fuzzy
@@ -597,7 +664,7 @@ msgstr ""
 
 #: builtin/mainmenu/tab_settings.lua
 #, fuzzy
-msgid "Advanced Settings"
+msgid "All Settings"
 msgstr "Ырастоолор"
 
 #: builtin/mainmenu/tab_settings.lua
@@ -1784,15 +1851,15 @@ msgid "2D noise that controls the shape/size of step mountains."
 msgstr ""
 
 #: src/settings_translation_file.cpp
-msgid "2D noise that controls the size/occurance of ridged mountain ranges."
+msgid "2D noise that controls the size/occurrence of ridged mountain ranges."
 msgstr ""
 
 #: src/settings_translation_file.cpp
-msgid "2D noise that controls the size/occurance of rolling hills."
+msgid "2D noise that controls the size/occurrence of rolling hills."
 msgstr ""
 
 #: src/settings_translation_file.cpp
-msgid "2D noise that controls the size/occurance of step mountain ranges."
+msgid "2D noise that controls the size/occurrence of step mountain ranges."
 msgstr ""
 
 #: src/settings_translation_file.cpp
@@ -1994,9 +2061,7 @@ msgid "Automatic forwards key"
 msgstr "Алга"
 
 #: src/settings_translation_file.cpp
-msgid ""
-"Automatically jump up single-node obstacles.\n"
-"type: bool"
+msgid "Automatically jump up single-node obstacles."
 msgstr ""
 
 #: src/settings_translation_file.cpp
@@ -2151,12 +2216,11 @@ msgstr ""
 #: src/settings_translation_file.cpp
 msgid ""
 "Changes the main menu UI:\n"
-"-   Full:  Multple singleplayer worlds, game choice, texture pack chooser, "
+"-   Full:  Multiple singleplayer worlds, game choice, texture pack chooser, "
 "etc.\n"
 "-   Simple: One singleplayer world, no game or texture pack choosers. May "
 "be\n"
-"necessary for smaller screens.\n"
-"-   Auto: Simple on Android, full on everything else."
+"necessary for smaller screens."
 msgstr ""
 
 #: src/settings_translation_file.cpp
@@ -2252,6 +2316,17 @@ msgstr ""
 
 #: src/settings_translation_file.cpp
 msgid ""
+"Comma-separated list of flags to hide in the content repository.\n"
+"\"nonfree\" can be used to hide packages which do not qualify as 'free "
+"software',\n"
+"as defined by the Free Software Foundation.\n"
+"You can also specify content ratings.\n"
+"These flags are independent from Minetest versions,\n"
+"so see a full list at https://content.minetest.net/help/content_flags/"
+msgstr ""
+
+#: src/settings_translation_file.cpp
+msgid ""
 "Comma-separated list of mods that are allowed to access HTTP APIs, which\n"
 "allow them to upload and download data to/from the internet."
 msgstr ""
@@ -2297,8 +2372,13 @@ msgid "Console height"
 msgstr "Консоль"
 
 #: src/settings_translation_file.cpp
-msgid "Content Store"
+msgid "ContentDB Flag Blacklist"
 msgstr ""
+
+#: src/settings_translation_file.cpp
+#, fuzzy
+msgid "ContentDB URL"
+msgstr "Улантуу"
 
 #: src/settings_translation_file.cpp
 msgid "Continuous forward"
@@ -2604,6 +2684,16 @@ msgstr ""
 
 #: src/settings_translation_file.cpp
 msgid "Enable random user input (only used for testing)."
+msgstr ""
+
+#: src/settings_translation_file.cpp
+msgid "Enable register confirmation"
+msgstr ""
+
+#: src/settings_translation_file.cpp
+msgid ""
+"Enable register confirmation when connecting to server.\n"
+"If disabled, new account will be registered automatically."
 msgstr ""
 
 #: src/settings_translation_file.cpp
@@ -3297,12 +3387,6 @@ msgstr ""
 
 #: src/settings_translation_file.cpp
 msgid ""
-"If enabled together with fly mode, makes move directions relative to the "
-"player's pitch."
-msgstr ""
-
-#: src/settings_translation_file.cpp
-msgid ""
 "If enabled together with fly mode, player is able to fly through solid "
 "nodes.\n"
 "This requires the \"noclip\" privilege on the server."
@@ -3329,6 +3413,12 @@ msgstr ""
 msgid ""
 "If enabled, invalid world data won't cause the server to shut down.\n"
 "Only enable this if you know what you are doing."
+msgstr ""
+
+#: src/settings_translation_file.cpp
+msgid ""
+"If enabled, makes move directions relative to the player's pitch when flying "
+"or swimming."
 msgstr ""
 
 #: src/settings_translation_file.cpp
@@ -3946,7 +4036,7 @@ msgstr ""
 
 #: src/settings_translation_file.cpp
 msgid ""
-"Key for toggling pitch fly mode.\n"
+"Key for toggling pitch move mode.\n"
 "See http://irrlicht.sourceforge.net/docu/namespaceirr."
 "html#a54da2a0e231901735e3da1b0edf72eb3"
 msgstr ""
@@ -4216,7 +4306,7 @@ msgstr ""
 msgid ""
 "Map generation attributes specific to Mapgen Valleys.\n"
 "'altitude_chill': Reduces heat with altitude.\n"
-"'humid_rivers': Increases humidity around rivers and where water pools.\n"
+"'humid_rivers': Increases humidity around rivers.\n"
 "'vary_river_depth': If enabled, low humidity and high heat causes rivers\n"
 "to become shallower and occasionally dry.\n"
 "'altitude_dry': Reduces humidity with altitude."
@@ -4639,11 +4729,16 @@ msgstr ""
 #: src/settings_translation_file.cpp
 msgid ""
 "Number of emerge threads to use.\n"
-"Make this field blank or 0, or increase this number to use multiple "
-"threads.\n"
-"On multiprocessor systems, this will improve mapgen speed greatly at the "
-"cost\n"
-"of slightly buggy caves."
+"Empty or 0 value:\n"
+"-    Automatic selection. The number of emerge threads will be\n"
+"-    'number of processors - 2', with a lower limit of 1.\n"
+"Any other value:\n"
+"-    Specifies the number of emerge threads, with a lower limit of 1.\n"
+"Warning: Increasing the number of emerge threads increases engine mapgen\n"
+"speed, but this may harm game performance by interfering with other\n"
+"processes, especially in singleplayer and/or when running Lua code in\n"
+"'on_generated'.\n"
+"For many users the optimum setting may be '1'."
 msgstr ""
 
 #: src/settings_translation_file.cpp
@@ -4658,7 +4753,7 @@ msgid "Number of parallax occlusion iterations."
 msgstr ""
 
 #: src/settings_translation_file.cpp
-msgid "Offset"
+msgid "Online Content Repository"
 msgstr ""
 
 #: src/settings_translation_file.cpp
@@ -4731,11 +4826,12 @@ msgid "Physics"
 msgstr ""
 
 #: src/settings_translation_file.cpp
-msgid "Pitch fly key"
-msgstr ""
+#, fuzzy
+msgid "Pitch move key"
+msgstr "Жаратуу режими"
 
 #: src/settings_translation_file.cpp
-msgid "Pitch fly mode"
+msgid "Pitch move mode"
 msgstr ""
 
 #: src/settings_translation_file.cpp
@@ -4846,14 +4942,16 @@ msgstr "Тандоо"
 
 #: src/settings_translation_file.cpp
 msgid ""
-"Restricts the access of certain client-side functions on servers\n"
-"Combine these byteflags below to restrict client-side features:\n"
-"LOAD_CLIENT_MODS: 1 (disable client mods loading)\n"
+"Restricts the access of certain client-side functions on servers.\n"
+"Combine the byteflags below to restrict client-side features, or set to 0\n"
+"for no restrictions:\n"
+"LOAD_CLIENT_MODS: 1 (disable loading client-provided mods)\n"
 "CHAT_MESSAGES: 2 (disable send_chat_message call client-side)\n"
 "READ_ITEMDEFS: 4 (disable get_item_def call client-side)\n"
 "READ_NODEDEFS: 8 (disable get_node_def call client-side)\n"
 "LOOKUP_NODES_LIMIT: 16 (limits get_node call client-side to\n"
-"csm_restriction_noderange)"
+"csm_restriction_noderange)\n"
+"READ_PLAYERINFO: 32 (disable get_player_names call client-side)"
 msgstr ""
 
 #: src/settings_translation_file.cpp
@@ -4928,10 +5026,6 @@ msgstr ""
 
 #: src/settings_translation_file.cpp
 msgid "Saving map received from server"
-msgstr ""
-
-#: src/settings_translation_file.cpp
-msgid "Scale"
 msgstr ""
 
 #: src/settings_translation_file.cpp
@@ -5124,16 +5218,6 @@ msgid "Show entity selection boxes"
 msgstr ""
 
 #: src/settings_translation_file.cpp
-msgid "Show non-free packages"
-msgstr ""
-
-#: src/settings_translation_file.cpp
-msgid ""
-"Show packages in the content store that do not qualify as 'free software'\n"
-"as defined by the Free Software Foundation."
-msgstr ""
-
-#: src/settings_translation_file.cpp
 msgid "Shutdown message"
 msgstr ""
 
@@ -5320,6 +5404,10 @@ msgid ""
 "However, as this possibility is new, thus may not be used by older servers,\n"
 "this option allows enforcing it for certain node types. Note though that\n"
 "that is considered EXPERIMENTAL and may not work properly."
+msgstr ""
+
+#: src/settings_translation_file.cpp
+msgid "The URL for the content repository"
 msgstr ""
 
 #: src/settings_translation_file.cpp
@@ -5869,6 +5957,10 @@ msgstr ""
 #: src/settings_translation_file.cpp
 msgid "cURL timeout"
 msgstr ""
+
+#, fuzzy
+#~ msgid "Advanced Settings"
+#~ msgstr "Ырастоолор"
 
 #, fuzzy
 #~ msgid "Preload inventory textures"

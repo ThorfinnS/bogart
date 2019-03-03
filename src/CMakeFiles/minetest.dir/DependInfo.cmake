@@ -244,6 +244,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/opt/minetest/src/translation.cpp" "/opt/minetest/src/CMakeFiles/minetest.dir/translation.cpp.o"
   "/opt/minetest/src/unittest/test.cpp" "/opt/minetest/src/CMakeFiles/minetest.dir/unittest/test.cpp.o"
   "/opt/minetest/src/unittest/test_activeobject.cpp" "/opt/minetest/src/CMakeFiles/minetest.dir/unittest/test_activeobject.cpp.o"
+  "/opt/minetest/src/unittest/test_address.cpp" "/opt/minetest/src/CMakeFiles/minetest.dir/unittest/test_address.cpp.o"
   "/opt/minetest/src/unittest/test_areastore.cpp" "/opt/minetest/src/CMakeFiles/minetest.dir/unittest/test_areastore.cpp.o"
   "/opt/minetest/src/unittest/test_authdatabase.cpp" "/opt/minetest/src/CMakeFiles/minetest.dir/unittest/test_authdatabase.cpp.o"
   "/opt/minetest/src/unittest/test_ban.cpp" "/opt/minetest/src/CMakeFiles/minetest.dir/unittest/test_ban.cpp.o"

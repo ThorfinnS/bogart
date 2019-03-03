@@ -2,9 +2,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-01-24 01:05+0200\n"
-"PO-Revision-Date: 2019-01-24 00:05+0000\n"
-"Last-Translator: Nore <nore@mesecons.net>\n"
+"POT-Creation-Date: 2019-02-14 19:14+0100\n"
+"PO-Revision-Date: 2019-02-13 13:11+0000\n"
+"Last-Translator: tyler71 <sagsdf_github_tyler71@xyzz.work>\n"
 "Language-Team: Swahili <https://hosted.weblate.org/projects/minetest/"
 "minetest/sw/>\n"
 "Language: sw\n"
@@ -12,23 +12,24 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.4\n"
+"X-Generator: Weblate 3.5-dev\n"
 
 #: builtin/client/death_formspec.lua src/client/game.cpp
 msgid "Respawn"
 msgstr "Respawn"
 
 #: builtin/client/death_formspec.lua src/client/game.cpp
-#, fuzzy
 msgid "You died"
-msgstr "Alikufa."
+msgstr "Umekufa."
 
 #: builtin/fstk/ui.lua
-msgid "An error occured in a Lua script, such as a mod:"
+#, fuzzy
+msgid "An error occurred in a Lua script, such as a mod:"
 msgstr "Kosa limetokea katika hati Lua, kama vile Moduli na:"
 
 #: builtin/fstk/ui.lua
-msgid "An error occured:"
+#, fuzzy
+msgid "An error occurred:"
 msgstr "Kosa limetokea:"
 
 #: builtin/fstk/ui.lua
@@ -86,19 +87,16 @@ msgid "Cancel"
 msgstr "Katisha"
 
 #: builtin/mainmenu/dlg_config_world.lua builtin/mainmenu/tab_content.lua
-#, fuzzy
 msgid "Dependencies:"
-msgstr "Inategemea:"
+msgstr "Mategemezi:"
 
 #: builtin/mainmenu/dlg_config_world.lua
-#, fuzzy
 msgid "Disable all"
-msgstr "Lemaza MP"
+msgstr "Lemeza yote"
 
 #: builtin/mainmenu/dlg_config_world.lua
-#, fuzzy
 msgid "Disable modpack"
-msgstr "Walemavu"
+msgstr "lemeza modpack"
 
 #: builtin/mainmenu/dlg_config_world.lua
 msgid "Enable all"
@@ -110,12 +108,13 @@ msgid "Enable modpack"
 msgstr "Ita jina jipya Modpack:"
 
 #: builtin/mainmenu/dlg_config_world.lua
+#, fuzzy
 msgid ""
 "Failed to enable mod \"$1\" as it contains disallowed characters. Only "
-"chararacters [a-z0-9_] are allowed."
+"characters [a-z0-9_] are allowed."
 msgstr ""
-"Ilishindwa kuwezesha Moduli \"$1\" kama lina vibambo ilipopiga. Tu "
-"chararacters [a-z0-9_] wanaruhusiwa."
+"Minetest imeshindwa kuwezesha moduli \"$1\" ila kuna vibambo zilizo "
+"kataliwa. Tu vibambo [a-z0-9_] wanaruhusiwa."
 
 #: builtin/mainmenu/dlg_config_world.lua
 msgid "Mod:"
@@ -186,6 +185,10 @@ msgid "Mods"
 msgstr "Mods"
 
 #: builtin/mainmenu/dlg_contentstore.lua
+msgid "No packages could be retrieved"
+msgstr ""
+
+#: builtin/mainmenu/dlg_contentstore.lua
 msgid "No results"
 msgstr ""
 
@@ -208,10 +211,6 @@ msgstr "Sakinisha"
 msgid "Update"
 msgstr ""
 
-#: builtin/mainmenu/dlg_contentstore.lua
-msgid "View"
-msgstr ""
-
 #: builtin/mainmenu/dlg_create_world.lua
 msgid "A world named \"$1\" already exists"
 msgstr "Ulimwengu inayoitwa \"$1\" tayari ipo"
@@ -222,7 +221,7 @@ msgstr "Kuunda"
 
 #: builtin/mainmenu/dlg_create_world.lua
 #, fuzzy
-msgid "Download a game, such as minetest_game, from minetest.net"
+msgid "Download a game, such as Minetest Game, from minetest.net"
 msgstr "Pakua subgame, kama vile minetest_game, kutoka minetest.net"
 
 #: builtin/mainmenu/dlg_create_world.lua
@@ -243,6 +242,7 @@ msgid "No game selected"
 msgstr "Teua masafa"
 
 #: builtin/mainmenu/dlg_create_world.lua
+#: builtin/mainmenu/dlg_settings_advanced.lua
 msgid "Seed"
 msgstr "Mbegu"
 
@@ -291,9 +291,20 @@ msgstr "Kukubali"
 msgid "Rename Modpack:"
 msgstr "Ita jina jipya Modpack:"
 
+#: builtin/mainmenu/dlg_rename_modpack.lua
+msgid ""
+"This modpack has an explicit name given in its modpack.conf which will "
+"override any renaming here."
+msgstr ""
+
 #: builtin/mainmenu/dlg_settings_advanced.lua
 msgid "(No description of setting given)"
 msgstr "(Hakuna maelezo ya kuweka kupewa)"
+
+#: builtin/mainmenu/dlg_settings_advanced.lua
+#, fuzzy
+msgid "2D Noise"
+msgstr "Kila"
 
 #: builtin/mainmenu/dlg_settings_advanced.lua
 msgid "< Back to Settings page"
@@ -316,6 +327,24 @@ msgid "Enabled"
 msgstr "Kuwezeshwa"
 
 #: builtin/mainmenu/dlg_settings_advanced.lua
+#, fuzzy
+msgid "Lacunarity"
+msgstr "Usalama"
+
+#: builtin/mainmenu/dlg_settings_advanced.lua
+msgid "Octaves"
+msgstr ""
+
+#: builtin/mainmenu/dlg_settings_advanced.lua src/settings_translation_file.cpp
+msgid "Offset"
+msgstr ""
+
+#: builtin/mainmenu/dlg_settings_advanced.lua
+#, fuzzy
+msgid "Persistance"
+msgstr "Umbali wa uhamisho wa mchezaji"
+
+#: builtin/mainmenu/dlg_settings_advanced.lua
 msgid "Please enter a valid integer."
 msgstr "Tafadhali ingiza namba kamili halali."
 
@@ -326,6 +355,10 @@ msgstr "Tafadhali ingiza namba halali."
 #: builtin/mainmenu/dlg_settings_advanced.lua
 msgid "Restore Default"
 msgstr "Rejesha chaguo-msingi"
+
+#: builtin/mainmenu/dlg_settings_advanced.lua src/settings_translation_file.cpp
+msgid "Scale"
+msgstr ""
 
 #: builtin/mainmenu/dlg_settings_advanced.lua
 #, fuzzy
@@ -351,15 +384,52 @@ msgstr "Thamani lazima iwe kubwa kuliko $1."
 msgid "The value must not be larger than $1."
 msgstr "Thamani lazima iwe chini kuliko $1."
 
-#: builtin/mainmenu/pkgmgr.lua
+#: builtin/mainmenu/dlg_settings_advanced.lua
+msgid "X"
+msgstr ""
+
+#: builtin/mainmenu/dlg_settings_advanced.lua
+msgid "X spread"
+msgstr ""
+
+#: builtin/mainmenu/dlg_settings_advanced.lua
+msgid "Y"
+msgstr ""
+
+#: builtin/mainmenu/dlg_settings_advanced.lua
+msgid "Y spread"
+msgstr ""
+
+#: builtin/mainmenu/dlg_settings_advanced.lua
+msgid "Z"
+msgstr ""
+
+#: builtin/mainmenu/dlg_settings_advanced.lua
+msgid "Z spread"
+msgstr ""
+
+#: builtin/mainmenu/dlg_settings_advanced.lua
+msgid "absvalue"
+msgstr ""
+
+#: builtin/mainmenu/dlg_settings_advanced.lua
 #, fuzzy
-msgid " mods"
-msgstr "Hali ya 3D"
+msgid "defaults"
+msgstr "Chaguo-msingi mchezo"
+
+#: builtin/mainmenu/dlg_settings_advanced.lua
+msgid "eased"
+msgstr ""
 
 #: builtin/mainmenu/pkgmgr.lua
 #, fuzzy
 msgid "$1 (Enabled)"
 msgstr "Kuwezeshwa"
+
+#: builtin/mainmenu/pkgmgr.lua
+#, fuzzy
+msgid "$1 mods"
+msgstr "Hali ya 3D"
 
 #: builtin/mainmenu/pkgmgr.lua
 msgid "Failed to install $1 to $2"
@@ -609,8 +679,9 @@ msgid "8x"
 msgstr "8 x"
 
 #: builtin/mainmenu/tab_settings.lua
-msgid "Advanced Settings"
-msgstr "Vipimo pevu"
+#, fuzzy
+msgid "All Settings"
+msgstr "Vipimo vya"
 
 #: builtin/mainmenu/tab_settings.lua
 msgid "Antialiasing:"
@@ -1799,15 +1870,15 @@ msgid "2D noise that controls the shape/size of step mountains."
 msgstr ""
 
 #: src/settings_translation_file.cpp
-msgid "2D noise that controls the size/occurance of ridged mountain ranges."
+msgid "2D noise that controls the size/occurrence of ridged mountain ranges."
 msgstr ""
 
 #: src/settings_translation_file.cpp
-msgid "2D noise that controls the size/occurance of rolling hills."
+msgid "2D noise that controls the size/occurrence of rolling hills."
 msgstr ""
 
 #: src/settings_translation_file.cpp
-msgid "2D noise that controls the size/occurance of step mountain ranges."
+msgid "2D noise that controls the size/occurrence of step mountain ranges."
 msgstr ""
 
 #: src/settings_translation_file.cpp
@@ -2031,9 +2102,7 @@ msgid "Automatic forwards key"
 msgstr "Ufunguo wa mbele"
 
 #: src/settings_translation_file.cpp
-msgid ""
-"Automatically jump up single-node obstacles.\n"
-"type: bool"
+msgid "Automatically jump up single-node obstacles."
 msgstr ""
 
 #: src/settings_translation_file.cpp
@@ -2198,12 +2267,11 @@ msgstr ""
 #: src/settings_translation_file.cpp
 msgid ""
 "Changes the main menu UI:\n"
-"-   Full:  Multple singleplayer worlds, game choice, texture pack chooser, "
+"-   Full:  Multiple singleplayer worlds, game choice, texture pack chooser, "
 "etc.\n"
 "-   Simple: One singleplayer world, no game or texture pack choosers. May "
 "be\n"
-"necessary for smaller screens.\n"
-"-   Auto: Simple on Android, full on everything else."
+"necessary for smaller screens."
 msgstr ""
 
 #: src/settings_translation_file.cpp
@@ -2295,6 +2363,17 @@ msgstr "Ukungu wa rangi"
 
 #: src/settings_translation_file.cpp
 msgid ""
+"Comma-separated list of flags to hide in the content repository.\n"
+"\"nonfree\" can be used to hide packages which do not qualify as 'free "
+"software',\n"
+"as defined by the Free Software Foundation.\n"
+"You can also specify content ratings.\n"
+"These flags are independent from Minetest versions,\n"
+"so see a full list at https://content.minetest.net/help/content_flags/"
+msgstr ""
+
+#: src/settings_translation_file.cpp
+msgid ""
 "Comma-separated list of mods that are allowed to access HTTP APIs, which\n"
 "allow them to upload and download data to/from the internet."
 msgstr ""
@@ -2340,9 +2419,13 @@ msgid "Console height"
 msgstr "Muhimu ya Kiweko"
 
 #: src/settings_translation_file.cpp
+msgid "ContentDB Flag Blacklist"
+msgstr ""
+
+#: src/settings_translation_file.cpp
 #, fuzzy
-msgid "Content Store"
-msgstr "Duka la karibu"
+msgid "ContentDB URL"
+msgstr "Kuendelea"
 
 #: src/settings_translation_file.cpp
 msgid "Continuous forward"
@@ -2664,6 +2747,16 @@ msgstr "Wezesha wachezaji kupata uharibifu na kufa."
 #: src/settings_translation_file.cpp
 msgid "Enable random user input (only used for testing)."
 msgstr "Wezesha ingizo la mtumiaji nasibu (kutumika tu kwa ajili ya kupima)."
+
+#: src/settings_translation_file.cpp
+msgid "Enable register confirmation"
+msgstr ""
+
+#: src/settings_translation_file.cpp
+msgid ""
+"Enable register confirmation when connecting to server.\n"
+"If disabled, new account will be registered automatically."
+msgstr ""
 
 #: src/settings_translation_file.cpp
 msgid ""
@@ -3444,12 +3537,6 @@ msgstr ""
 
 #: src/settings_translation_file.cpp
 msgid ""
-"If enabled together with fly mode, makes move directions relative to the "
-"player's pitch."
-msgstr ""
-
-#: src/settings_translation_file.cpp
-msgid ""
 "If enabled together with fly mode, player is able to fly through solid "
 "nodes.\n"
 "This requires the \"noclip\" privilege on the server."
@@ -3487,6 +3574,12 @@ msgid ""
 msgstr ""
 "Ikiwa imewezeshwa, data ya dunia batili si kusababisha seva kuzima.\n"
 "Tu kuwezesha hii kama unajua nini unafanya."
+
+#: src/settings_translation_file.cpp
+msgid ""
+"If enabled, makes move directions relative to the player's pitch when flying "
+"or swimming."
+msgstr ""
 
 #: src/settings_translation_file.cpp
 msgid "If enabled, new players cannot join with an empty password."
@@ -4347,7 +4440,7 @@ msgstr ""
 #: src/settings_translation_file.cpp
 #, fuzzy
 msgid ""
-"Key for toggling pitch fly mode.\n"
+"Key for toggling pitch move mode.\n"
 "See http://irrlicht.sourceforge.net/docu/namespaceirr."
 "html#a54da2a0e231901735e3da1b0edf72eb3"
 msgstr ""
@@ -4680,7 +4773,7 @@ msgstr ""
 msgid ""
 "Map generation attributes specific to Mapgen Valleys.\n"
 "'altitude_chill': Reduces heat with altitude.\n"
-"'humid_rivers': Increases humidity around rivers and where water pools.\n"
+"'humid_rivers': Increases humidity around rivers.\n"
 "'vary_river_depth': If enabled, low humidity and high heat causes rivers\n"
 "to become shallower and occasionally dry.\n"
 "'altitude_dry': Reduces humidity with altitude."
@@ -5168,18 +5261,19 @@ msgid "Number of emerge threads"
 msgstr "Idadi ya nyuzi emerge"
 
 #: src/settings_translation_file.cpp
-#, fuzzy
 msgid ""
 "Number of emerge threads to use.\n"
-"Make this field blank or 0, or increase this number to use multiple "
-"threads.\n"
-"On multiprocessor systems, this will improve mapgen speed greatly at the "
-"cost\n"
-"of slightly buggy caves."
+"Empty or 0 value:\n"
+"-    Automatic selection. The number of emerge threads will be\n"
+"-    'number of processors - 2', with a lower limit of 1.\n"
+"Any other value:\n"
+"-    Specifies the number of emerge threads, with a lower limit of 1.\n"
+"Warning: Increasing the number of emerge threads increases engine mapgen\n"
+"speed, but this may harm game performance by interfering with other\n"
+"processes, especially in singleplayer and/or when running Lua code in\n"
+"'on_generated'.\n"
+"For many users the optimum setting may be '1'."
 msgstr ""
-"Idadi ya nyuzi emerge kutumia. Kufanya hii shamba tupu, au kuongeza idadi "
-"hii kutumia nyuzi nyingi. Kwenye mifumo ya multiprocessor, hii itasaidia "
-"kuongeza kasi ya mwandishi ramani sana wanatengeneza mapango buggy kidogo."
 
 #: src/settings_translation_file.cpp
 msgid ""
@@ -5196,7 +5290,7 @@ msgid "Number of parallax occlusion iterations."
 msgstr "Idadi ya parallax occlusion Marudiorudio."
 
 #: src/settings_translation_file.cpp
-msgid "Offset"
+msgid "Online Content Repository"
 msgstr ""
 
 #: src/settings_translation_file.cpp
@@ -5271,11 +5365,11 @@ msgstr "Fizikia"
 
 #: src/settings_translation_file.cpp
 #, fuzzy
-msgid "Pitch fly key"
+msgid "Pitch move key"
 msgstr "Kuruka ufunguo"
 
 #: src/settings_translation_file.cpp
-msgid "Pitch fly mode"
+msgid "Pitch move mode"
 msgstr ""
 
 #: src/settings_translation_file.cpp
@@ -5397,14 +5491,16 @@ msgstr "Njia ya ripoti"
 
 #: src/settings_translation_file.cpp
 msgid ""
-"Restricts the access of certain client-side functions on servers\n"
-"Combine these byteflags below to restrict client-side features:\n"
-"LOAD_CLIENT_MODS: 1 (disable client mods loading)\n"
+"Restricts the access of certain client-side functions on servers.\n"
+"Combine the byteflags below to restrict client-side features, or set to 0\n"
+"for no restrictions:\n"
+"LOAD_CLIENT_MODS: 1 (disable loading client-provided mods)\n"
 "CHAT_MESSAGES: 2 (disable send_chat_message call client-side)\n"
 "READ_ITEMDEFS: 4 (disable get_item_def call client-side)\n"
 "READ_NODEDEFS: 8 (disable get_node_def call client-side)\n"
 "LOOKUP_NODES_LIMIT: 16 (limits get_node call client-side to\n"
-"csm_restriction_noderange)"
+"csm_restriction_noderange)\n"
+"READ_PLAYERINFO: 32 (disable get_player_names call client-side)"
 msgstr ""
 
 #: src/settings_translation_file.cpp
@@ -5484,10 +5580,6 @@ msgstr ""
 #: src/settings_translation_file.cpp
 msgid "Saving map received from server"
 msgstr "Ramani kuokoa kupokea kutoka seva"
-
-#: src/settings_translation_file.cpp
-msgid "Scale"
-msgstr ""
 
 #: src/settings_translation_file.cpp
 #, fuzzy
@@ -5718,16 +5810,6 @@ msgid "Show entity selection boxes"
 msgstr "Onyesha chombo masanduku ya uteuzi"
 
 #: src/settings_translation_file.cpp
-msgid "Show non-free packages"
-msgstr ""
-
-#: src/settings_translation_file.cpp
-msgid ""
-"Show packages in the content store that do not qualify as 'free software'\n"
-"as defined by the Free Software Foundation."
-msgstr ""
-
-#: src/settings_translation_file.cpp
 msgid "Shutdown message"
 msgstr "Uzimaji ujumbe"
 
@@ -5935,6 +6017,10 @@ msgid ""
 "However, as this possibility is new, thus may not be used by older servers,\n"
 "this option allows enforcing it for certain node types. Note though that\n"
 "that is considered EXPERIMENTAL and may not work properly."
+msgstr ""
+
+#: src/settings_translation_file.cpp
+msgid "The URL for the content repository"
 msgstr ""
 
 #: src/settings_translation_file.cpp
@@ -6556,6 +6642,9 @@ msgstr "cURL kikomo sambamba"
 msgid "cURL timeout"
 msgstr "muda wa kuisha wa cURL"
 
+#~ msgid "Advanced Settings"
+#~ msgstr "Vipimo pevu"
+
 #~ msgid ""
 #~ "Where the map generator stops.\n"
 #~ "Please note:\n"
@@ -7119,3 +7208,20 @@ msgstr "muda wa kuisha wa cURL"
 
 #~ msgid "Disable MP"
 #~ msgstr "Lemaza MP"
+
+#, fuzzy
+#~ msgid ""
+#~ "Number of emerge threads to use.\n"
+#~ "Make this field blank or 0, or increase this number to use multiple "
+#~ "threads.\n"
+#~ "On multiprocessor systems, this will improve mapgen speed greatly at the "
+#~ "cost\n"
+#~ "of slightly buggy caves."
+#~ msgstr ""
+#~ "Idadi ya nyuzi emerge kutumia. Kufanya hii shamba tupu, au kuongeza idadi "
+#~ "hii kutumia nyuzi nyingi. Kwenye mifumo ya multiprocessor, hii itasaidia "
+#~ "kuongeza kasi ya mwandishi ramani sana wanatengeneza mapango buggy kidogo."
+
+#, fuzzy
+#~ msgid "Content Store"
+#~ msgstr "Duka la karibu"

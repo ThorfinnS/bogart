@@ -595,6 +595,8 @@ itemgroup.h
 /opt/minetest/src/client/itemgroup.h
 constants.h
 /opt/minetest/src/client/constants.h
+cassert
+-
 
 /opt/minetest/src/client/content_cso.cpp
 content_cso.h
@@ -3302,6 +3304,8 @@ IImage.h
 IrrlichtDevice.h
 -
 IMeshSceneNode.h
+-
+IDummyTransformationSceneNode.h
 -
 SMesh.h
 -
@@ -7428,6 +7432,16 @@ test.h
 activeobject.h
 /opt/minetest/src/unittest/activeobject.h
 
+/opt/minetest/src/unittest/test_address.cpp
+test.h
+/opt/minetest/src/unittest/test.h
+log.h
+/opt/minetest/src/unittest/log.h
+settings.h
+/opt/minetest/src/unittest/settings.h
+network/socket.h
+/opt/minetest/src/unittest/network/socket.h
+
 /opt/minetest/src/unittest/test_areastore.cpp
 test.h
 /opt/minetest/src/unittest/test.h
@@ -7917,6 +7931,8 @@ irr_v3d.h
 /opt/minetest/src/util/irr_v3d.h
 irr_aabb3d.h
 /opt/minetest/src/util/irr_aabb3d.h
+matrix4.h
+-
 
 /opt/minetest/src/util/pointedthing.cpp
 pointedthing.h
@@ -10431,6 +10447,8 @@ itemgroup.h
 src/client/itemgroup.h
 constants.h
 src/client/constants.h
+cassert
+-
 
 src/client/event_manager.h
 event.h
@@ -11272,6 +11290,8 @@ IImage.h
 IrrlichtDevice.h
 -
 IMeshSceneNode.h
+-
+IDummyTransformationSceneNode.h
 -
 SMesh.h
 -
@@ -12537,6 +12557,8 @@ irr_v3d.h
 src/util/irr_v3d.h
 irr_aabb3d.h
 src/util/irr_aabb3d.h
+matrix4.h
+-
 
 src/util/pointedthing.h
 irrlichttypes.h

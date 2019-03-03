@@ -2,9 +2,10 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-01-08 17:12+0200\n"
-"PO-Revision-Date: 2019-01-24 00:05+0000\n"
-"Last-Translator: Nore <nore@mesecons.net>\n"
+"POT-Creation-Date: 2019-02-14 19:14+0100\n"
+"PO-Revision-Date: 2019-02-13 13:11+0000\n"
+"Last-Translator: Muhammad Rifqi Priyo Susanto "
+"<muhammadrifqipriyosusanto@gmail.com>\n"
 "Language-Team: Hungarian <https://hosted.weblate.org/projects/minetest/"
 "minetest/hu/>\n"
 "Language: hu\n"
@@ -12,7 +13,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.4\n"
+"X-Generator: Weblate 3.5-dev\n"
 
 #: builtin/client/death_formspec.lua src/client/game.cpp
 msgid "Respawn"
@@ -23,11 +24,13 @@ msgid "You died"
 msgstr "Meghaltál"
 
 #: builtin/fstk/ui.lua
-msgid "An error occured in a Lua script, such as a mod:"
+#, fuzzy
+msgid "An error occurred in a Lua script, such as a mod:"
 msgstr "Hiba történt egy Lua parancsfájlban (egy modban):"
 
 #: builtin/fstk/ui.lua
-msgid "An error occured:"
+#, fuzzy
+msgid "An error occurred:"
 msgstr "Hiba történt:"
 
 #: builtin/fstk/ui.lua
@@ -107,9 +110,10 @@ msgid "Enable modpack"
 msgstr "Modok engedélyezése"
 
 #: builtin/mainmenu/dlg_config_world.lua
+#, fuzzy
 msgid ""
 "Failed to enable mod \"$1\" as it contains disallowed characters. Only "
-"chararacters [a-z0-9_] are allowed."
+"characters [a-z0-9_] are allowed."
 msgstr ""
 "A(z) „$1” mod engedélyezése sikertelen, mert meg nem engedett karaktereket "
 "tartalmaz. Csak az [a-z0-9_] karakterek engedélyezettek."
@@ -178,6 +182,10 @@ msgid "Mods"
 msgstr "Modok"
 
 #: builtin/mainmenu/dlg_contentstore.lua
+msgid "No packages could be retrieved"
+msgstr ""
+
+#: builtin/mainmenu/dlg_contentstore.lua
 msgid "No results"
 msgstr "Nincs eredmény"
 
@@ -198,10 +206,6 @@ msgstr "Törlés"
 msgid "Update"
 msgstr "Frissítés"
 
-#: builtin/mainmenu/dlg_contentstore.lua
-msgid "View"
-msgstr "Nézet"
-
 #: builtin/mainmenu/dlg_create_world.lua
 msgid "A world named \"$1\" already exists"
 msgstr "Már létezik egy „$1” nevű világ"
@@ -211,7 +215,8 @@ msgid "Create"
 msgstr "Létrehozás"
 
 #: builtin/mainmenu/dlg_create_world.lua
-msgid "Download a game, such as minetest_game, from minetest.net"
+#, fuzzy
+msgid "Download a game, such as Minetest Game, from minetest.net"
 msgstr "Aljáték (mint a minetest_game) letöltése a minetest.net címről"
 
 #: builtin/mainmenu/dlg_create_world.lua
@@ -231,6 +236,7 @@ msgid "No game selected"
 msgstr "Nincs játékmód kiválasztva"
 
 #: builtin/mainmenu/dlg_create_world.lua
+#: builtin/mainmenu/dlg_settings_advanced.lua
 msgid "Seed"
 msgstr "Seed"
 
@@ -277,9 +283,20 @@ msgstr "Elfogadás"
 msgid "Rename Modpack:"
 msgstr "Modpakk átnevezése:"
 
+#: builtin/mainmenu/dlg_rename_modpack.lua
+msgid ""
+"This modpack has an explicit name given in its modpack.conf which will "
+"override any renaming here."
+msgstr ""
+
 #: builtin/mainmenu/dlg_settings_advanced.lua
 msgid "(No description of setting given)"
 msgstr "(Nincs megadva leírás a beállításhoz)"
+
+#: builtin/mainmenu/dlg_settings_advanced.lua
+#, fuzzy
+msgid "2D Noise"
+msgstr "2. Barlang zaj"
 
 #: builtin/mainmenu/dlg_settings_advanced.lua
 msgid "< Back to Settings page"
@@ -302,6 +319,23 @@ msgid "Enabled"
 msgstr "Engedélyezve"
 
 #: builtin/mainmenu/dlg_settings_advanced.lua
+#, fuzzy
+msgid "Lacunarity"
+msgstr "Biztonság"
+
+#: builtin/mainmenu/dlg_settings_advanced.lua
+msgid "Octaves"
+msgstr ""
+
+#: builtin/mainmenu/dlg_settings_advanced.lua src/settings_translation_file.cpp
+msgid "Offset"
+msgstr "offszet"
+
+#: builtin/mainmenu/dlg_settings_advanced.lua
+msgid "Persistance"
+msgstr ""
+
+#: builtin/mainmenu/dlg_settings_advanced.lua
 msgid "Please enter a valid integer."
 msgstr "Írj be egy érvényes egész számot."
 
@@ -312,6 +346,10 @@ msgstr "Írj be egy érvényes számot."
 #: builtin/mainmenu/dlg_settings_advanced.lua
 msgid "Restore Default"
 msgstr "Alapértelmezés visszaállítása"
+
+#: builtin/mainmenu/dlg_settings_advanced.lua src/settings_translation_file.cpp
+msgid "Scale"
+msgstr ""
 
 #: builtin/mainmenu/dlg_settings_advanced.lua
 msgid "Select directory"
@@ -333,13 +371,51 @@ msgstr "Az érték nem lehet kisebb mint $1."
 msgid "The value must not be larger than $1."
 msgstr "Az érték nem lehet nagyobb mint $1."
 
-#: builtin/mainmenu/pkgmgr.lua
-msgid " mods"
-msgstr " módok"
+#: builtin/mainmenu/dlg_settings_advanced.lua
+msgid "X"
+msgstr ""
+
+#: builtin/mainmenu/dlg_settings_advanced.lua
+msgid "X spread"
+msgstr ""
+
+#: builtin/mainmenu/dlg_settings_advanced.lua
+msgid "Y"
+msgstr ""
+
+#: builtin/mainmenu/dlg_settings_advanced.lua
+msgid "Y spread"
+msgstr ""
+
+#: builtin/mainmenu/dlg_settings_advanced.lua
+msgid "Z"
+msgstr ""
+
+#: builtin/mainmenu/dlg_settings_advanced.lua
+msgid "Z spread"
+msgstr ""
+
+#: builtin/mainmenu/dlg_settings_advanced.lua
+msgid "absvalue"
+msgstr ""
+
+#: builtin/mainmenu/dlg_settings_advanced.lua
+#, fuzzy
+msgid "defaults"
+msgstr "Alapértelmezett játék"
+
+#: builtin/mainmenu/dlg_settings_advanced.lua
+msgid "eased"
+msgstr ""
 
 #: builtin/mainmenu/pkgmgr.lua
 msgid "$1 (Enabled)"
 msgstr "$1 (Engedélyezve)"
+
+#: builtin/mainmenu/pkgmgr.lua
+#, fuzzy
+msgid "$1 mods"
+msgstr " módok"
 
 #: builtin/mainmenu/pkgmgr.lua
 msgid "Failed to install $1 to $2"
@@ -563,8 +639,9 @@ msgid "8x"
 msgstr "8x"
 
 #: builtin/mainmenu/tab_settings.lua
-msgid "Advanced Settings"
-msgstr "Speciális beállítások"
+#, fuzzy
+msgid "All Settings"
+msgstr "Beállítások"
 
 #: builtin/mainmenu/tab_settings.lua
 msgid "Antialiasing:"
@@ -788,7 +865,7 @@ msgstr "A megadott útvonalon nem létezik világ: "
 
 #: src/client/fontengine.cpp
 msgid "needs_fallback_font"
-msgstr "needs_fallback_font"
+msgstr ""
 
 #: src/client/game.cpp
 msgid ""
@@ -1722,15 +1799,15 @@ msgid "2D noise that controls the shape/size of step mountains."
 msgstr ""
 
 #: src/settings_translation_file.cpp
-msgid "2D noise that controls the size/occurance of ridged mountain ranges."
+msgid "2D noise that controls the size/occurrence of ridged mountain ranges."
 msgstr ""
 
 #: src/settings_translation_file.cpp
-msgid "2D noise that controls the size/occurance of rolling hills."
+msgid "2D noise that controls the size/occurrence of rolling hills."
 msgstr ""
 
 #: src/settings_translation_file.cpp
-msgid "2D noise that controls the size/occurance of step mountain ranges."
+msgid "2D noise that controls the size/occurrence of step mountain ranges."
 msgstr ""
 
 #: src/settings_translation_file.cpp
@@ -1962,9 +2039,7 @@ msgid "Automatic forwards key"
 msgstr "automata Előre gomb"
 
 #: src/settings_translation_file.cpp
-msgid ""
-"Automatically jump up single-node obstacles.\n"
-"type: bool"
+msgid "Automatically jump up single-node obstacles."
 msgstr ""
 
 #: src/settings_translation_file.cpp
@@ -2115,12 +2190,11 @@ msgstr ""
 #: src/settings_translation_file.cpp
 msgid ""
 "Changes the main menu UI:\n"
-"-   Full:  Multple singleplayer worlds, game choice, texture pack chooser, "
+"-   Full:  Multiple singleplayer worlds, game choice, texture pack chooser, "
 "etc.\n"
 "-   Simple: One singleplayer world, no game or texture pack choosers. May "
 "be\n"
-"necessary for smaller screens.\n"
-"-   Auto: Simple on Android, full on everything else."
+"necessary for smaller screens."
 msgstr ""
 
 #: src/settings_translation_file.cpp
@@ -2210,6 +2284,17 @@ msgstr "Színezett köd"
 
 #: src/settings_translation_file.cpp
 msgid ""
+"Comma-separated list of flags to hide in the content repository.\n"
+"\"nonfree\" can be used to hide packages which do not qualify as 'free "
+"software',\n"
+"as defined by the Free Software Foundation.\n"
+"You can also specify content ratings.\n"
+"These flags are independent from Minetest versions,\n"
+"so see a full list at https://content.minetest.net/help/content_flags/"
+msgstr ""
+
+#: src/settings_translation_file.cpp
+msgid ""
 "Comma-separated list of mods that are allowed to access HTTP APIs, which\n"
 "allow them to upload and download data to/from the internet."
 msgstr ""
@@ -2256,8 +2341,13 @@ msgid "Console height"
 msgstr "Konzol magasság"
 
 #: src/settings_translation_file.cpp
-msgid "Content Store"
-msgstr "tartalom raktár"
+msgid "ContentDB Flag Blacklist"
+msgstr ""
+
+#: src/settings_translation_file.cpp
+#, fuzzy
+msgid "ContentDB URL"
+msgstr "tartalom"
 
 #: src/settings_translation_file.cpp
 msgid "Continuous forward"
@@ -2596,6 +2686,16 @@ msgid "Enable random user input (only used for testing)."
 msgstr ""
 "Véletlenszerű felhasználói bemenet engedélyezése (csak teszteléshez "
 "használható)."
+
+#: src/settings_translation_file.cpp
+msgid "Enable register confirmation"
+msgstr ""
+
+#: src/settings_translation_file.cpp
+msgid ""
+"Enable register confirmation when connecting to server.\n"
+"If disabled, new account will be registered automatically."
+msgstr ""
 
 #: src/settings_translation_file.cpp
 msgid ""
@@ -3347,12 +3447,6 @@ msgstr ""
 
 #: src/settings_translation_file.cpp
 msgid ""
-"If enabled together with fly mode, makes move directions relative to the "
-"player's pitch."
-msgstr ""
-
-#: src/settings_translation_file.cpp
-msgid ""
 "If enabled together with fly mode, player is able to fly through solid "
 "nodes.\n"
 "This requires the \"noclip\" privilege on the server."
@@ -3389,6 +3483,12 @@ msgid ""
 msgstr ""
 "Ha engedélyezve van, érvénytelen világ adat nem okozza a szerver leállását.\n"
 "Csak akkor engedélyezd, ha tudod, hogy mit csinálsz."
+
+#: src/settings_translation_file.cpp
+msgid ""
+"If enabled, makes move directions relative to the player's pitch when flying "
+"or swimming."
+msgstr ""
 
 #: src/settings_translation_file.cpp
 msgid "If enabled, new players cannot join with an empty password."
@@ -4229,7 +4329,7 @@ msgstr ""
 #: src/settings_translation_file.cpp
 #, fuzzy
 msgid ""
-"Key for toggling pitch fly mode.\n"
+"Key for toggling pitch move mode.\n"
 "See http://irrlicht.sourceforge.net/docu/namespaceirr."
 "html#a54da2a0e231901735e3da1b0edf72eb3"
 msgstr ""
@@ -4550,7 +4650,7 @@ msgstr ""
 msgid ""
 "Map generation attributes specific to Mapgen Valleys.\n"
 "'altitude_chill': Reduces heat with altitude.\n"
-"'humid_rivers': Increases humidity around rivers and where water pools.\n"
+"'humid_rivers': Increases humidity around rivers.\n"
 "'vary_river_depth': If enabled, low humidity and high heat causes rivers\n"
 "to become shallower and occasionally dry.\n"
 "'altitude_dry': Reduces humidity with altitude."
@@ -5040,11 +5140,16 @@ msgstr ""
 #: src/settings_translation_file.cpp
 msgid ""
 "Number of emerge threads to use.\n"
-"Make this field blank or 0, or increase this number to use multiple "
-"threads.\n"
-"On multiprocessor systems, this will improve mapgen speed greatly at the "
-"cost\n"
-"of slightly buggy caves."
+"Empty or 0 value:\n"
+"-    Automatic selection. The number of emerge threads will be\n"
+"-    'number of processors - 2', with a lower limit of 1.\n"
+"Any other value:\n"
+"-    Specifies the number of emerge threads, with a lower limit of 1.\n"
+"Warning: Increasing the number of emerge threads increases engine mapgen\n"
+"speed, but this may harm game performance by interfering with other\n"
+"processes, especially in singleplayer and/or when running Lua code in\n"
+"'on_generated'.\n"
+"For many users the optimum setting may be '1'."
 msgstr ""
 
 #: src/settings_translation_file.cpp
@@ -5059,8 +5164,8 @@ msgid "Number of parallax occlusion iterations."
 msgstr ""
 
 #: src/settings_translation_file.cpp
-msgid "Offset"
-msgstr "offszet"
+msgid "Online Content Repository"
+msgstr ""
 
 #: src/settings_translation_file.cpp
 msgid "Opaque liquids"
@@ -5133,12 +5238,13 @@ msgstr "Fizika"
 
 #: src/settings_translation_file.cpp
 #, fuzzy
-msgid "Pitch fly key"
+msgid "Pitch move key"
 msgstr "Repülés gomb"
 
 #: src/settings_translation_file.cpp
-msgid "Pitch fly mode"
-msgstr ""
+#, fuzzy
+msgid "Pitch move mode"
+msgstr "Pályamozgás mód bekapcsolva"
 
 #: src/settings_translation_file.cpp
 msgid ""
@@ -5255,14 +5361,16 @@ msgstr "Betűtípus helye"
 
 #: src/settings_translation_file.cpp
 msgid ""
-"Restricts the access of certain client-side functions on servers\n"
-"Combine these byteflags below to restrict client-side features:\n"
-"LOAD_CLIENT_MODS: 1 (disable client mods loading)\n"
+"Restricts the access of certain client-side functions on servers.\n"
+"Combine the byteflags below to restrict client-side features, or set to 0\n"
+"for no restrictions:\n"
+"LOAD_CLIENT_MODS: 1 (disable loading client-provided mods)\n"
 "CHAT_MESSAGES: 2 (disable send_chat_message call client-side)\n"
 "READ_ITEMDEFS: 4 (disable get_item_def call client-side)\n"
 "READ_NODEDEFS: 8 (disable get_node_def call client-side)\n"
 "LOOKUP_NODES_LIMIT: 16 (limits get_node call client-side to\n"
-"csm_restriction_noderange)"
+"csm_restriction_noderange)\n"
+"READ_PLAYERINFO: 32 (disable get_player_names call client-side)"
 msgstr ""
 
 #: src/settings_translation_file.cpp
@@ -5339,10 +5447,6 @@ msgstr ""
 #: src/settings_translation_file.cpp
 msgid "Saving map received from server"
 msgstr "A szerverről fogadott térkép mentése"
-
-#: src/settings_translation_file.cpp
-msgid "Scale"
-msgstr ""
 
 #: src/settings_translation_file.cpp
 #, fuzzy
@@ -5575,16 +5679,6 @@ msgid "Show entity selection boxes"
 msgstr "Entitások kijelölő dobozának mutatása"
 
 #: src/settings_translation_file.cpp
-msgid "Show non-free packages"
-msgstr ""
-
-#: src/settings_translation_file.cpp
-msgid ""
-"Show packages in the content store that do not qualify as 'free software'\n"
-"as defined by the Free Software Foundation."
-msgstr ""
-
-#: src/settings_translation_file.cpp
 msgid "Shutdown message"
 msgstr "Leállítási üzenet"
 
@@ -5780,6 +5874,10 @@ msgid ""
 "However, as this possibility is new, thus may not be used by older servers,\n"
 "this option allows enforcing it for certain node types. Note though that\n"
 "that is considered EXPERIMENTAL and may not work properly."
+msgstr ""
+
+#: src/settings_translation_file.cpp
+msgid "The URL for the content repository"
 msgstr ""
 
 #: src/settings_translation_file.cpp
@@ -6363,6 +6461,12 @@ msgstr "cURL párhuzamossági korlát"
 #: src/settings_translation_file.cpp
 msgid "cURL timeout"
 msgstr "cURL időkorlátja"
+
+#~ msgid "View"
+#~ msgstr "Nézet"
+
+#~ msgid "Advanced Settings"
+#~ msgstr "Speciális beállítások"
 
 #~ msgid "Item textures..."
 #~ msgstr "Elem textúrák..."
@@ -6968,3 +7072,6 @@ msgstr "cURL időkorlátja"
 
 #~ msgid "Disable MP"
 #~ msgstr "MP letiltása"
+
+#~ msgid "Content Store"
+#~ msgstr "tartalom raktár"

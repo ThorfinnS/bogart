@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-01-12 13:07+0200\n"
-"PO-Revision-Date: 2019-01-24 00:05+0000\n"
+"POT-Creation-Date: 2019-02-14 19:14+0100\n"
+"PO-Revision-Date: 2019-02-13 13:11+0000\n"
 "Last-Translator: monolifed <monolifed@gmail.com>\n"
 "Language-Team: Turkish <https://hosted.weblate.org/projects/minetest/"
 "minetest/tr/>\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.4\n"
+"X-Generator: Weblate 3.5-dev\n"
 
 #: builtin/client/death_formspec.lua src/client/game.cpp
 msgid "Respawn"
@@ -23,11 +23,13 @@ msgid "You died"
 msgstr "Öldün"
 
 #: builtin/fstk/ui.lua
-msgid "An error occured in a Lua script, such as a mod:"
+#, fuzzy
+msgid "An error occurred in a Lua script, such as a mod:"
 msgstr "Lua betiğinde, mod gibi, bir hata meydana geldi:"
 
 #: builtin/fstk/ui.lua
-msgid "An error occured:"
+#, fuzzy
+msgid "An error occurred:"
 msgstr "Bir hata oluştu:"
 
 #: builtin/fstk/ui.lua
@@ -107,9 +109,10 @@ msgid "Enable modpack"
 msgstr "Mod paketini etkinleştir"
 
 #: builtin/mainmenu/dlg_config_world.lua
+#, fuzzy
 msgid ""
 "Failed to enable mod \"$1\" as it contains disallowed characters. Only "
-"chararacters [a-z0-9_] are allowed."
+"characters [a-z0-9_] are allowed."
 msgstr ""
 "Geçersiz karakterler içerdiği için \"$1\" modu etkinleştirilemedi. Yalnızca "
 "[a-z0-9_] karakterlerine izin verilir."
@@ -178,6 +181,10 @@ msgid "Mods"
 msgstr "Modlar"
 
 #: builtin/mainmenu/dlg_contentstore.lua
+msgid "No packages could be retrieved"
+msgstr ""
+
+#: builtin/mainmenu/dlg_contentstore.lua
 msgid "No results"
 msgstr "Sonuç yok"
 
@@ -198,10 +205,6 @@ msgstr "Kaldır"
 msgid "Update"
 msgstr "Güncelle"
 
-#: builtin/mainmenu/dlg_contentstore.lua
-msgid "View"
-msgstr "Göster"
-
 #: builtin/mainmenu/dlg_create_world.lua
 msgid "A world named \"$1\" already exists"
 msgstr "\"$1\" adlı dünya zaten var"
@@ -211,7 +214,8 @@ msgid "Create"
 msgstr "Yarat"
 
 #: builtin/mainmenu/dlg_create_world.lua
-msgid "Download a game, such as minetest_game, from minetest.net"
+#, fuzzy
+msgid "Download a game, such as Minetest Game, from minetest.net"
 msgstr "minetest.net adresinden , minetest_game gibi, bir oyun indirin"
 
 #: builtin/mainmenu/dlg_create_world.lua
@@ -231,6 +235,7 @@ msgid "No game selected"
 msgstr "Seçilen oyun yok"
 
 #: builtin/mainmenu/dlg_create_world.lua
+#: builtin/mainmenu/dlg_settings_advanced.lua
 msgid "Seed"
 msgstr "Tohum"
 
@@ -276,9 +281,20 @@ msgstr "Kabul et"
 msgid "Rename Modpack:"
 msgstr "Mod paketini yeniden adlandır:"
 
+#: builtin/mainmenu/dlg_rename_modpack.lua
+msgid ""
+"This modpack has an explicit name given in its modpack.conf which will "
+"override any renaming here."
+msgstr ""
+
 #: builtin/mainmenu/dlg_settings_advanced.lua
 msgid "(No description of setting given)"
 msgstr "(Ayarın verilen açıklaması yok)"
+
+#: builtin/mainmenu/dlg_settings_advanced.lua
+#, fuzzy
+msgid "2D Noise"
+msgstr "Gürültüler"
 
 #: builtin/mainmenu/dlg_settings_advanced.lua
 msgid "< Back to Settings page"
@@ -301,6 +317,24 @@ msgid "Enabled"
 msgstr "Etkin"
 
 #: builtin/mainmenu/dlg_settings_advanced.lua
+#, fuzzy
+msgid "Lacunarity"
+msgstr "Güvenlik"
+
+#: builtin/mainmenu/dlg_settings_advanced.lua
+msgid "Octaves"
+msgstr ""
+
+#: builtin/mainmenu/dlg_settings_advanced.lua src/settings_translation_file.cpp
+msgid "Offset"
+msgstr "Kaydırma"
+
+#: builtin/mainmenu/dlg_settings_advanced.lua
+#, fuzzy
+msgid "Persistance"
+msgstr "Oyuncu transfer uzaklığı"
+
+#: builtin/mainmenu/dlg_settings_advanced.lua
 msgid "Please enter a valid integer."
 msgstr "Lütfen geçerli bir tamsayı girin."
 
@@ -311,6 +345,10 @@ msgstr "Lütfen geçerli bir sayı girin."
 #: builtin/mainmenu/dlg_settings_advanced.lua
 msgid "Restore Default"
 msgstr "Öntanımlıyı Geri Yükle"
+
+#: builtin/mainmenu/dlg_settings_advanced.lua src/settings_translation_file.cpp
+msgid "Scale"
+msgstr "Boyut"
 
 #: builtin/mainmenu/dlg_settings_advanced.lua
 msgid "Select directory"
@@ -332,13 +370,51 @@ msgstr "Değer en az $1 olmalı."
 msgid "The value must not be larger than $1."
 msgstr "Değer $1'den büyük olmamalı."
 
-#: builtin/mainmenu/pkgmgr.lua
-msgid " mods"
-msgstr " modları"
+#: builtin/mainmenu/dlg_settings_advanced.lua
+msgid "X"
+msgstr ""
+
+#: builtin/mainmenu/dlg_settings_advanced.lua
+msgid "X spread"
+msgstr ""
+
+#: builtin/mainmenu/dlg_settings_advanced.lua
+msgid "Y"
+msgstr ""
+
+#: builtin/mainmenu/dlg_settings_advanced.lua
+msgid "Y spread"
+msgstr ""
+
+#: builtin/mainmenu/dlg_settings_advanced.lua
+msgid "Z"
+msgstr ""
+
+#: builtin/mainmenu/dlg_settings_advanced.lua
+msgid "Z spread"
+msgstr ""
+
+#: builtin/mainmenu/dlg_settings_advanced.lua
+msgid "absvalue"
+msgstr ""
+
+#: builtin/mainmenu/dlg_settings_advanced.lua
+#, fuzzy
+msgid "defaults"
+msgstr "Öntanımlı oyun"
+
+#: builtin/mainmenu/dlg_settings_advanced.lua
+msgid "eased"
+msgstr ""
 
 #: builtin/mainmenu/pkgmgr.lua
 msgid "$1 (Enabled)"
 msgstr "$1 (Etkin)"
+
+#: builtin/mainmenu/pkgmgr.lua
+#, fuzzy
+msgid "$1 mods"
+msgstr " modları"
 
 #: builtin/mainmenu/pkgmgr.lua
 msgid "Failed to install $1 to $2"
@@ -561,8 +637,9 @@ msgid "8x"
 msgstr "8x"
 
 #: builtin/mainmenu/tab_settings.lua
-msgid "Advanced Settings"
-msgstr "Gelişmiş Ayarlar"
+#, fuzzy
+msgid "All Settings"
+msgstr "Ayarlar"
 
 #: builtin/mainmenu/tab_settings.lua
 msgid "Antialiasing:"
@@ -598,7 +675,7 @@ msgstr "Şık Yapraklar"
 
 #: builtin/mainmenu/tab_settings.lua
 msgid "Generate Normal Maps"
-msgstr "Normal Haritalarını Oluştur"
+msgstr "Normal Eşlemeleri Üret"
 
 #: builtin/mainmenu/tab_settings.lua
 msgid "Mipmap"
@@ -786,7 +863,7 @@ msgstr "Belirtilen dünya konumu yok: "
 
 #: src/client/fontengine.cpp
 msgid "needs_fallback_font"
-msgstr "needs_fallback_font"
+msgstr "no"
 
 #: src/client/game.cpp
 msgid ""
@@ -1457,7 +1534,7 @@ msgid ""
 msgstr ""
 "\"%2$s\" adıyla %1$s adresindeki sunucuya ilk kez bağlanmak üzeresiniz. "
 "Devam ederseniz, bu sunucuda, bilgileriniz kullanılarak yeni bir hesap "
-"oluşturulacak.\n"
+"yaratılacak.\n"
 "Lütfen hesap yaratmayı onaylamak için parolanızı tekrar girin ve Kaydol ve "
 "Katıl'a tıklayın veya vaz geçmek İptal'e tıklayın."
 
@@ -1722,15 +1799,18 @@ msgid "2D noise that controls the shape/size of step mountains."
 msgstr "Step dağların şeklini/boyutunu denetleyen 2D gürültü."
 
 #: src/settings_translation_file.cpp
-msgid "2D noise that controls the size/occurance of ridged mountain ranges."
+#, fuzzy
+msgid "2D noise that controls the size/occurrence of ridged mountain ranges."
 msgstr "Sırt dağ aralıklarının boyutunu/ortaya çıkışını denetleyen 2D gürültü."
 
 #: src/settings_translation_file.cpp
-msgid "2D noise that controls the size/occurance of rolling hills."
+#, fuzzy
+msgid "2D noise that controls the size/occurrence of rolling hills."
 msgstr "Yuvarlanan tepelerin boyutunu/ortaya çıkışını denetleyen 2D gürültü."
 
 #: src/settings_translation_file.cpp
-msgid "2D noise that controls the size/occurance of step mountain ranges."
+#, fuzzy
+msgid "2D noise that controls the size/occurrence of step mountain ranges."
 msgstr "Step dağ aralıklarının boyutunu/ortaya çıkışını denetleyen 2D gürültü."
 
 #: src/settings_translation_file.cpp
@@ -1953,8 +2033,8 @@ msgid ""
 msgstr ""
 "Bu uzaklıkta sunucu istemcilere gönderilecek blokları agresifçe\n"
 "iyileştirecektir.\n"
-"Küçük değerler potansiyel olarak görülebilir işleyici hataları pahasına ("
-"bazı bloklar\n"
+"Küçük değerler potansiyel olarak görülebilir işleyici hataları pahasına "
+"(bazı bloklar\n"
 "su altında, mağaralarda ve de bazen karada işlenmeyecek) performansı "
 "oldukça\n"
 "iyileştirecektir. \n"
@@ -1967,9 +2047,8 @@ msgid "Automatic forwards key"
 msgstr "Kendiliğinden ileri tuşu"
 
 #: src/settings_translation_file.cpp
-msgid ""
-"Automatically jump up single-node obstacles.\n"
-"type: bool"
+#, fuzzy
+msgid "Automatically jump up single-node obstacles."
 msgstr ""
 "Tek-nod engellere kendiliğinden zıpla.\n"
 "tür: bool"
@@ -2123,18 +2202,18 @@ msgid "Center of light curve mid-boost."
 msgstr "Işık eğrisi orta-artırmanın merkezi."
 
 #: src/settings_translation_file.cpp
+#, fuzzy
 msgid ""
 "Changes the main menu UI:\n"
-"-   Full:  Multple singleplayer worlds, game choice, texture pack chooser, "
+"-   Full:  Multiple singleplayer worlds, game choice, texture pack chooser, "
 "etc.\n"
 "-   Simple: One singleplayer world, no game or texture pack choosers. May "
 "be\n"
-"necessary for smaller screens.\n"
-"-   Auto: Simple on Android, full on everything else."
+"necessary for smaller screens."
 msgstr ""
 "Ana Menü arayüzünü değiştirir:\n"
-"-   Full:  Çoklu tek oyunculu dünyalar, oyun seçimi, doku paketi seçici, vb."
-"\n"
+"-   Full:  Çoklu tek oyunculu dünyalar, oyun seçimi, doku paketi seçici, "
+"vb.\n"
 "-   Simple: Bir tek oyunculu dünya, oyun ve doku paketi seçiciler yok.\n"
 "Küçük ekranlar için gerekli olabilir\n"
 "-   Auto: Android'de Simple, diğer hepsinde Full."
@@ -2225,6 +2304,17 @@ msgstr "Renkli sis"
 
 #: src/settings_translation_file.cpp
 msgid ""
+"Comma-separated list of flags to hide in the content repository.\n"
+"\"nonfree\" can be used to hide packages which do not qualify as 'free "
+"software',\n"
+"as defined by the Free Software Foundation.\n"
+"You can also specify content ratings.\n"
+"These flags are independent from Minetest versions,\n"
+"so see a full list at https://content.minetest.net/help/content_flags/"
+msgstr ""
+
+#: src/settings_translation_file.cpp
+msgid ""
 "Comma-separated list of mods that are allowed to access HTTP APIs, which\n"
 "allow them to upload and download data to/from the internet."
 msgstr ""
@@ -2270,8 +2360,13 @@ msgid "Console height"
 msgstr "Konsol yüksekliği"
 
 #: src/settings_translation_file.cpp
-msgid "Content Store"
-msgstr "İçerik Mağazası"
+msgid "ContentDB Flag Blacklist"
+msgstr ""
+
+#: src/settings_translation_file.cpp
+#, fuzzy
+msgid "ContentDB URL"
+msgstr "İçerik"
 
 #: src/settings_translation_file.cpp
 msgid "Continuous forward"
@@ -2453,7 +2548,7 @@ msgid ""
 "A higher value results in smoother normal maps."
 msgstr ""
 "Dokuların örnekleme adımını tanımlar.\n"
-"Daha yüksek değer daha yumuşak dikey eşleme verir."
+"Yüksek bir değer daha yumuşak normal eşlemeler verir."
 
 #: src/settings_translation_file.cpp
 msgid "Defines the base ground level."
@@ -2604,6 +2699,16 @@ msgid "Enable random user input (only used for testing)."
 msgstr "Rastgele kullanıcı girişini etkinleştir (yalnızca test için)."
 
 #: src/settings_translation_file.cpp
+msgid "Enable register confirmation"
+msgstr ""
+
+#: src/settings_translation_file.cpp
+msgid ""
+"Enable register confirmation when connecting to server.\n"
+"If disabled, new account will be registered automatically."
+msgstr ""
+
+#: src/settings_translation_file.cpp
 msgid ""
 "Enable smooth lighting with simple ambient occlusion.\n"
 "Disable for speed or for different looks."
@@ -2661,7 +2766,7 @@ msgid ""
 "or need to be auto-generated.\n"
 "Requires shaders to be enabled."
 msgstr ""
-"Tümsek eşlemeyi dokular için etkinleştirir. Dikey eşlemelerin doku paketi "
+"Tümsek eşlemeyi dokular için etkinleştirir. Normal eşlemelerin doku paketi "
 "tarafından sağlanması\n"
 "veya kendiliğinden üretilmesi gerekir\n"
 "Gölgelemelerin etkin olmasını gerektirir."
@@ -3014,7 +3119,7 @@ msgstr "Gama"
 
 #: src/settings_translation_file.cpp
 msgid "Generate normalmaps"
-msgstr "Normal eşlemeler üret"
+msgstr "Normal eşlemeleri üret"
 
 #: src/settings_translation_file.cpp
 msgid "Global callbacks"
@@ -3028,7 +3133,7 @@ msgid ""
 "Flags that are not enabled are not modified from the default.\n"
 "Flags starting with 'no' are used to explicitly disable them."
 msgstr ""
-"Global harita üretme özellikleri.\n"
+"Genel harita üretim özellikleri.\n"
 "Mapgen v6'da 'decorations' bayrağı ağaçlar ve cangıl çimi hariç tüm "
 "dekorasyonları\n"
 "denetler, diğer mapgenlerde bu bayrak tüm dekorasyonları denetler.\n"
@@ -3359,14 +3464,6 @@ msgstr ""
 
 #: src/settings_translation_file.cpp
 msgid ""
-"If enabled together with fly mode, makes move directions relative to the "
-"player's pitch."
-msgstr ""
-"Uçma kipi ile birlikte etkinleştirilirse, hareket yönünü oyuncunun eğimine "
-"göre değiştirir."
-
-#: src/settings_translation_file.cpp
-msgid ""
 "If enabled together with fly mode, player is able to fly through solid "
 "nodes.\n"
 "This requires the \"noclip\" privilege on the server."
@@ -3404,6 +3501,15 @@ msgid ""
 msgstr ""
 "Etkinleştirilirse, geçersiz dünya verisi sunucunun kapanmasına neden olmaz.\n"
 "Yalnızca ne yaptığınızı biliyorsanız bunu etkinleştirin."
+
+#: src/settings_translation_file.cpp
+#, fuzzy
+msgid ""
+"If enabled, makes move directions relative to the player's pitch when flying "
+"or swimming."
+msgstr ""
+"Uçma kipi ile birlikte etkinleştirilirse, hareket yönünü oyuncunun eğimine "
+"göre değiştirir."
 
 #: src/settings_translation_file.cpp
 msgid "If enabled, new players cannot join with an empty password."
@@ -3639,8 +3745,8 @@ msgid ""
 "html#a54da2a0e231901735e3da1b0edf72eb3"
 msgstr ""
 "Görüntüleme uzaklığını azaltma tuşu.\n"
-"Bakın: http://irrlicht.sourceforge.net/docu/"
-"namespaceirr.html#a54da2a0e231901735e3da1b0edf72eb3"
+"Bakın: http://irrlicht.sourceforge.net/docu/namespaceirr."
+"html#a54da2a0e231901735e3da1b0edf72eb3"
 
 #: src/settings_translation_file.cpp
 msgid ""
@@ -3669,8 +3775,8 @@ msgid ""
 "html#a54da2a0e231901735e3da1b0edf72eb3"
 msgstr ""
 "Görüntüleme uzaklığını artırma tuşu.\n"
-"Bakın: http://irrlicht.sourceforge.net/docu/"
-"namespaceirr.html#a54da2a0e231901735e3da1b0edf72eb3"
+"Bakın: http://irrlicht.sourceforge.net/docu/namespaceirr."
+"html#a54da2a0e231901735e3da1b0edf72eb3"
 
 #: src/settings_translation_file.cpp
 msgid ""
@@ -3711,8 +3817,8 @@ msgid ""
 msgstr ""
 "Oyuncuyu geriye hareket ettirme tuşu.\n"
 "Etkinken, kendiliğinden ileriyi de devre dışı kılar\n"
-"Bakın: http://irrlicht.sourceforge.net/docu/"
-"namespaceirr.html#a54da2a0e231901735e3da1b0edf72eb3"
+"Bakın: http://irrlicht.sourceforge.net/docu/namespaceirr."
+"html#a54da2a0e231901735e3da1b0edf72eb3"
 
 #: src/settings_translation_file.cpp
 msgid ""
@@ -3801,8 +3907,8 @@ msgid ""
 "html#a54da2a0e231901735e3da1b0edf72eb3"
 msgstr ""
 "11. hotbar bölmesini seçme tuşu.\n"
-"Bakın: http://irrlicht.sourceforge.net/docu/"
-"namespaceirr.html#a54da2a0e231901735e3da1b0edf72eb3"
+"Bakın: http://irrlicht.sourceforge.net/docu/namespaceirr."
+"html#a54da2a0e231901735e3da1b0edf72eb3"
 
 #: src/settings_translation_file.cpp
 msgid ""
@@ -3811,8 +3917,8 @@ msgid ""
 "html#a54da2a0e231901735e3da1b0edf72eb3"
 msgstr ""
 "12. hotbar bölmesini seçme tuşu.\n"
-"Bakın: http://irrlicht.sourceforge.net/docu/"
-"namespaceirr.html#a54da2a0e231901735e3da1b0edf72eb3"
+"Bakın: http://irrlicht.sourceforge.net/docu/namespaceirr."
+"html#a54da2a0e231901735e3da1b0edf72eb3"
 
 #: src/settings_translation_file.cpp
 msgid ""
@@ -3821,8 +3927,8 @@ msgid ""
 "html#a54da2a0e231901735e3da1b0edf72eb3"
 msgstr ""
 "13. hotbar bölmesini seçme tuşu.\n"
-"Bakın: http://irrlicht.sourceforge.net/docu/"
-"namespaceirr.html#a54da2a0e231901735e3da1b0edf72eb3"
+"Bakın: http://irrlicht.sourceforge.net/docu/namespaceirr."
+"html#a54da2a0e231901735e3da1b0edf72eb3"
 
 #: src/settings_translation_file.cpp
 msgid ""
@@ -3831,8 +3937,8 @@ msgid ""
 "html#a54da2a0e231901735e3da1b0edf72eb3"
 msgstr ""
 "14. hotbar bölmesini seçme tuşu.\n"
-"Bakın: http://irrlicht.sourceforge.net/docu/"
-"namespaceirr.html#a54da2a0e231901735e3da1b0edf72eb3"
+"Bakın: http://irrlicht.sourceforge.net/docu/namespaceirr."
+"html#a54da2a0e231901735e3da1b0edf72eb3"
 
 #: src/settings_translation_file.cpp
 msgid ""
@@ -3841,8 +3947,8 @@ msgid ""
 "html#a54da2a0e231901735e3da1b0edf72eb3"
 msgstr ""
 "15. hotbar bölmesini seçme tuşu.\n"
-"Bakın: http://irrlicht.sourceforge.net/docu/"
-"namespaceirr.html#a54da2a0e231901735e3da1b0edf72eb3"
+"Bakın: http://irrlicht.sourceforge.net/docu/namespaceirr."
+"html#a54da2a0e231901735e3da1b0edf72eb3"
 
 #: src/settings_translation_file.cpp
 msgid ""
@@ -3851,8 +3957,8 @@ msgid ""
 "html#a54da2a0e231901735e3da1b0edf72eb3"
 msgstr ""
 "16. hotbar bölmesini seçme tuşu.\n"
-"Bakın: http://irrlicht.sourceforge.net/docu/"
-"namespaceirr.html#a54da2a0e231901735e3da1b0edf72eb3"
+"Bakın: http://irrlicht.sourceforge.net/docu/namespaceirr."
+"html#a54da2a0e231901735e3da1b0edf72eb3"
 
 #: src/settings_translation_file.cpp
 msgid ""
@@ -3861,8 +3967,8 @@ msgid ""
 "html#a54da2a0e231901735e3da1b0edf72eb3"
 msgstr ""
 "17. hotbar bölmesini seçme tuşu.\n"
-"Bakın: http://irrlicht.sourceforge.net/docu/"
-"namespaceirr.html#a54da2a0e231901735e3da1b0edf72eb3"
+"Bakın: http://irrlicht.sourceforge.net/docu/namespaceirr."
+"html#a54da2a0e231901735e3da1b0edf72eb3"
 
 #: src/settings_translation_file.cpp
 msgid ""
@@ -3871,8 +3977,8 @@ msgid ""
 "html#a54da2a0e231901735e3da1b0edf72eb3"
 msgstr ""
 "18. hotbar bölmesini seçme tuşu.\n"
-"Bakın: http://irrlicht.sourceforge.net/docu/"
-"namespaceirr.html#a54da2a0e231901735e3da1b0edf72eb3"
+"Bakın: http://irrlicht.sourceforge.net/docu/namespaceirr."
+"html#a54da2a0e231901735e3da1b0edf72eb3"
 
 #: src/settings_translation_file.cpp
 msgid ""
@@ -3881,8 +3987,8 @@ msgid ""
 "html#a54da2a0e231901735e3da1b0edf72eb3"
 msgstr ""
 "19. hotbar bölmesini seçme tuşu.\n"
-"Bakın: http://irrlicht.sourceforge.net/docu/"
-"namespaceirr.html#a54da2a0e231901735e3da1b0edf72eb3"
+"Bakın: http://irrlicht.sourceforge.net/docu/namespaceirr."
+"html#a54da2a0e231901735e3da1b0edf72eb3"
 
 #: src/settings_translation_file.cpp
 msgid ""
@@ -3891,8 +3997,8 @@ msgid ""
 "html#a54da2a0e231901735e3da1b0edf72eb3"
 msgstr ""
 "20. hotbar bölmesini seçme tuşu.\n"
-"Bakın: http://irrlicht.sourceforge.net/docu/"
-"namespaceirr.html#a54da2a0e231901735e3da1b0edf72eb3"
+"Bakın: http://irrlicht.sourceforge.net/docu/namespaceirr."
+"html#a54da2a0e231901735e3da1b0edf72eb3"
 
 #: src/settings_translation_file.cpp
 msgid ""
@@ -3901,8 +4007,8 @@ msgid ""
 "html#a54da2a0e231901735e3da1b0edf72eb3"
 msgstr ""
 "21. hotbar bölmesini seçme tuşu.\n"
-"Bakın: http://irrlicht.sourceforge.net/docu/"
-"namespaceirr.html#a54da2a0e231901735e3da1b0edf72eb3"
+"Bakın: http://irrlicht.sourceforge.net/docu/namespaceirr."
+"html#a54da2a0e231901735e3da1b0edf72eb3"
 
 #: src/settings_translation_file.cpp
 msgid ""
@@ -3911,8 +4017,8 @@ msgid ""
 "html#a54da2a0e231901735e3da1b0edf72eb3"
 msgstr ""
 "22. hotbar bölmesini seçme tuşu.\n"
-"Bakın: http://irrlicht.sourceforge.net/docu/"
-"namespaceirr.html#a54da2a0e231901735e3da1b0edf72eb3"
+"Bakın: http://irrlicht.sourceforge.net/docu/namespaceirr."
+"html#a54da2a0e231901735e3da1b0edf72eb3"
 
 #: src/settings_translation_file.cpp
 msgid ""
@@ -3921,8 +4027,8 @@ msgid ""
 "html#a54da2a0e231901735e3da1b0edf72eb3"
 msgstr ""
 "23. hotbar bölmesini seçme tuşu.\n"
-"Bakın: http://irrlicht.sourceforge.net/docu/"
-"namespaceirr.html#a54da2a0e231901735e3da1b0edf72eb3"
+"Bakın: http://irrlicht.sourceforge.net/docu/namespaceirr."
+"html#a54da2a0e231901735e3da1b0edf72eb3"
 
 #: src/settings_translation_file.cpp
 msgid ""
@@ -3931,8 +4037,8 @@ msgid ""
 "html#a54da2a0e231901735e3da1b0edf72eb3"
 msgstr ""
 "24. hotbar bölmesini seçme tuşu.\n"
-"Bakın: http://irrlicht.sourceforge.net/docu/"
-"namespaceirr.html#a54da2a0e231901735e3da1b0edf72eb3"
+"Bakın: http://irrlicht.sourceforge.net/docu/namespaceirr."
+"html#a54da2a0e231901735e3da1b0edf72eb3"
 
 #: src/settings_translation_file.cpp
 msgid ""
@@ -3941,8 +4047,8 @@ msgid ""
 "html#a54da2a0e231901735e3da1b0edf72eb3"
 msgstr ""
 "25. hotbar bölmesini seçme tuşu.\n"
-"Bakın: http://irrlicht.sourceforge.net/docu/"
-"namespaceirr.html#a54da2a0e231901735e3da1b0edf72eb3"
+"Bakın: http://irrlicht.sourceforge.net/docu/namespaceirr."
+"html#a54da2a0e231901735e3da1b0edf72eb3"
 
 #: src/settings_translation_file.cpp
 msgid ""
@@ -3951,8 +4057,8 @@ msgid ""
 "html#a54da2a0e231901735e3da1b0edf72eb3"
 msgstr ""
 "26. hotbar bölmesini seçme tuşu.\n"
-"Bakın: http://irrlicht.sourceforge.net/docu/"
-"namespaceirr.html#a54da2a0e231901735e3da1b0edf72eb3"
+"Bakın: http://irrlicht.sourceforge.net/docu/namespaceirr."
+"html#a54da2a0e231901735e3da1b0edf72eb3"
 
 #: src/settings_translation_file.cpp
 msgid ""
@@ -3961,8 +4067,8 @@ msgid ""
 "html#a54da2a0e231901735e3da1b0edf72eb3"
 msgstr ""
 "27. hotbar bölmesini seçme tuşu.\n"
-"Bakın: http://irrlicht.sourceforge.net/docu/"
-"namespaceirr.html#a54da2a0e231901735e3da1b0edf72eb3"
+"Bakın: http://irrlicht.sourceforge.net/docu/namespaceirr."
+"html#a54da2a0e231901735e3da1b0edf72eb3"
 
 #: src/settings_translation_file.cpp
 msgid ""
@@ -3971,8 +4077,8 @@ msgid ""
 "html#a54da2a0e231901735e3da1b0edf72eb3"
 msgstr ""
 "28. hotbar bölmesini seçme tuşu.\n"
-"Bakın: http://irrlicht.sourceforge.net/docu/"
-"namespaceirr.html#a54da2a0e231901735e3da1b0edf72eb3"
+"Bakın: http://irrlicht.sourceforge.net/docu/namespaceirr."
+"html#a54da2a0e231901735e3da1b0edf72eb3"
 
 #: src/settings_translation_file.cpp
 msgid ""
@@ -3981,8 +4087,8 @@ msgid ""
 "html#a54da2a0e231901735e3da1b0edf72eb3"
 msgstr ""
 "29. hotbar bölmesini seçme tuşu.\n"
-"Bakın: http://irrlicht.sourceforge.net/docu/"
-"namespaceirr.html#a54da2a0e231901735e3da1b0edf72eb3"
+"Bakın: http://irrlicht.sourceforge.net/docu/namespaceirr."
+"html#a54da2a0e231901735e3da1b0edf72eb3"
 
 #: src/settings_translation_file.cpp
 msgid ""
@@ -3991,8 +4097,8 @@ msgid ""
 "html#a54da2a0e231901735e3da1b0edf72eb3"
 msgstr ""
 "30. hotbar bölmesini seçme tuşu.\n"
-"Bakın: http://irrlicht.sourceforge.net/docu/"
-"namespaceirr.html#a54da2a0e231901735e3da1b0edf72eb3"
+"Bakın: http://irrlicht.sourceforge.net/docu/namespaceirr."
+"html#a54da2a0e231901735e3da1b0edf72eb3"
 
 #: src/settings_translation_file.cpp
 msgid ""
@@ -4001,8 +4107,8 @@ msgid ""
 "html#a54da2a0e231901735e3da1b0edf72eb3"
 msgstr ""
 "31. hotbar bölmesini seçme tuşu.\n"
-"Bakın: http://irrlicht.sourceforge.net/docu/"
-"namespaceirr.html#a54da2a0e231901735e3da1b0edf72eb3"
+"Bakın: http://irrlicht.sourceforge.net/docu/namespaceirr."
+"html#a54da2a0e231901735e3da1b0edf72eb3"
 
 #: src/settings_translation_file.cpp
 msgid ""
@@ -4011,8 +4117,8 @@ msgid ""
 "html#a54da2a0e231901735e3da1b0edf72eb3"
 msgstr ""
 "32. hotbar bölmesini seçme tuşu.\n"
-"Bakın: http://irrlicht.sourceforge.net/docu/"
-"namespaceirr.html#a54da2a0e231901735e3da1b0edf72eb3"
+"Bakın: http://irrlicht.sourceforge.net/docu/namespaceirr."
+"html#a54da2a0e231901735e3da1b0edf72eb3"
 
 #: src/settings_translation_file.cpp
 msgid ""
@@ -4021,8 +4127,8 @@ msgid ""
 "html#a54da2a0e231901735e3da1b0edf72eb3"
 msgstr ""
 "8. hotbar bölmesini seçme tuşu.\n"
-"Bakın: http://irrlicht.sourceforge.net/docu/"
-"namespaceirr.html#a54da2a0e231901735e3da1b0edf72eb3"
+"Bakın: http://irrlicht.sourceforge.net/docu/namespaceirr."
+"html#a54da2a0e231901735e3da1b0edf72eb3"
 
 #: src/settings_translation_file.cpp
 msgid ""
@@ -4031,8 +4137,8 @@ msgid ""
 "html#a54da2a0e231901735e3da1b0edf72eb3"
 msgstr ""
 "5. hotbar bölmesini seçme tuşu.\n"
-"Bakın: http://irrlicht.sourceforge.net/docu/"
-"namespaceirr.html#a54da2a0e231901735e3da1b0edf72eb3"
+"Bakın: http://irrlicht.sourceforge.net/docu/namespaceirr."
+"html#a54da2a0e231901735e3da1b0edf72eb3"
 
 #: src/settings_translation_file.cpp
 msgid ""
@@ -4041,8 +4147,8 @@ msgid ""
 "html#a54da2a0e231901735e3da1b0edf72eb3"
 msgstr ""
 "1. hotbar bölmesini seçme tuşu.\n"
-"Bakın: http://irrlicht.sourceforge.net/docu/"
-"namespaceirr.html#a54da2a0e231901735e3da1b0edf72eb3"
+"Bakın: http://irrlicht.sourceforge.net/docu/namespaceirr."
+"html#a54da2a0e231901735e3da1b0edf72eb3"
 
 #: src/settings_translation_file.cpp
 msgid ""
@@ -4051,8 +4157,8 @@ msgid ""
 "html#a54da2a0e231901735e3da1b0edf72eb3"
 msgstr ""
 "4. hotbar bölmesini seçme tuşu.\n"
-"Bakın: http://irrlicht.sourceforge.net/docu/"
-"namespaceirr.html#a54da2a0e231901735e3da1b0edf72eb3"
+"Bakın: http://irrlicht.sourceforge.net/docu/namespaceirr."
+"html#a54da2a0e231901735e3da1b0edf72eb3"
 
 #: src/settings_translation_file.cpp
 msgid ""
@@ -4071,8 +4177,8 @@ msgid ""
 "html#a54da2a0e231901735e3da1b0edf72eb3"
 msgstr ""
 "9. hotbar bölmesini seçme tuşu.\n"
-"Bakın: http://irrlicht.sourceforge.net/docu/"
-"namespaceirr.html#a54da2a0e231901735e3da1b0edf72eb3"
+"Bakın: http://irrlicht.sourceforge.net/docu/namespaceirr."
+"html#a54da2a0e231901735e3da1b0edf72eb3"
 
 #: src/settings_translation_file.cpp
 msgid ""
@@ -4091,8 +4197,8 @@ msgid ""
 "html#a54da2a0e231901735e3da1b0edf72eb3"
 msgstr ""
 "2. hotbar bölmesini seçme tuşu.\n"
-"Bakın: http://irrlicht.sourceforge.net/docu/"
-"namespaceirr.html#a54da2a0e231901735e3da1b0edf72eb3"
+"Bakın: http://irrlicht.sourceforge.net/docu/namespaceirr."
+"html#a54da2a0e231901735e3da1b0edf72eb3"
 
 #: src/settings_translation_file.cpp
 msgid ""
@@ -4101,8 +4207,8 @@ msgid ""
 "html#a54da2a0e231901735e3da1b0edf72eb3"
 msgstr ""
 "7. hotbar bölmesini seçme tuşu.\n"
-"Bakın: http://irrlicht.sourceforge.net/docu/"
-"namespaceirr.html#a54da2a0e231901735e3da1b0edf72eb3"
+"Bakın: http://irrlicht.sourceforge.net/docu/namespaceirr."
+"html#a54da2a0e231901735e3da1b0edf72eb3"
 
 #: src/settings_translation_file.cpp
 msgid ""
@@ -4111,8 +4217,8 @@ msgid ""
 "html#a54da2a0e231901735e3da1b0edf72eb3"
 msgstr ""
 "6. hotbar bölmesini seçme tuşu.\n"
-"Bakın: http://irrlicht.sourceforge.net/docu/"
-"namespaceirr.html#a54da2a0e231901735e3da1b0edf72eb3"
+"Bakın: http://irrlicht.sourceforge.net/docu/namespaceirr."
+"html#a54da2a0e231901735e3da1b0edf72eb3"
 
 #: src/settings_translation_file.cpp
 msgid ""
@@ -4121,8 +4227,8 @@ msgid ""
 "html#a54da2a0e231901735e3da1b0edf72eb3"
 msgstr ""
 "10. hotbar bölmesini seçme tuşu.\n"
-"Bakın: http://irrlicht.sourceforge.net/docu/"
-"namespaceirr.html#a54da2a0e231901735e3da1b0edf72eb3"
+"Bakın: http://irrlicht.sourceforge.net/docu/namespaceirr."
+"html#a54da2a0e231901735e3da1b0edf72eb3"
 
 #: src/settings_translation_file.cpp
 msgid ""
@@ -4131,8 +4237,8 @@ msgid ""
 "html#a54da2a0e231901735e3da1b0edf72eb3"
 msgstr ""
 "3. hotbar bölmesini seçme tuşu.\n"
-"Bakın: http://irrlicht.sourceforge.net/docu/"
-"namespaceirr.html#a54da2a0e231901735e3da1b0edf72eb3"
+"Bakın: http://irrlicht.sourceforge.net/docu/namespaceirr."
+"html#a54da2a0e231901735e3da1b0edf72eb3"
 
 #: src/settings_translation_file.cpp
 msgid ""
@@ -4175,8 +4281,8 @@ msgid ""
 "html#a54da2a0e231901735e3da1b0edf72eb3"
 msgstr ""
 "Kendiliğinden ileri açma/kapama tuşu.\n"
-"Bakın: http://irrlicht.sourceforge.net/docu/"
-"namespaceirr.html#a54da2a0e231901735e3da1b0edf72eb3"
+"Bakın: http://irrlicht.sourceforge.net/docu/namespaceirr."
+"html#a54da2a0e231901735e3da1b0edf72eb3"
 
 #: src/settings_translation_file.cpp
 msgid ""
@@ -4185,8 +4291,8 @@ msgid ""
 "html#a54da2a0e231901735e3da1b0edf72eb3"
 msgstr ""
 "Sinematik kipi açma/kapama tuşu.\n"
-"Bakın: http://irrlicht.sourceforge.net/docu/"
-"namespaceirr.html#a54da2a0e231901735e3da1b0edf72eb3"
+"Bakın: http://irrlicht.sourceforge.net/docu/namespaceirr."
+"html#a54da2a0e231901735e3da1b0edf72eb3"
 
 #: src/settings_translation_file.cpp
 msgid ""
@@ -4205,8 +4311,8 @@ msgid ""
 "html#a54da2a0e231901735e3da1b0edf72eb3"
 msgstr ""
 "Hızlı kipi açma/kapama tuşu.\n"
-"Bakın: http://irrlicht.sourceforge.net/docu/"
-"namespaceirr.html#a54da2a0e231901735e3da1b0edf72eb3"
+"Bakın: http://irrlicht.sourceforge.net/docu/namespaceirr."
+"html#a54da2a0e231901735e3da1b0edf72eb3"
 
 #: src/settings_translation_file.cpp
 msgid ""
@@ -4225,18 +4331,19 @@ msgid ""
 "html#a54da2a0e231901735e3da1b0edf72eb3"
 msgstr ""
 "Hayalet kipi açma/kapama tuşu.\n"
-"Bakın: http://irrlicht.sourceforge.net/docu/"
-"namespaceirr.html#a54da2a0e231901735e3da1b0edf72eb3"
+"Bakın: http://irrlicht.sourceforge.net/docu/namespaceirr."
+"html#a54da2a0e231901735e3da1b0edf72eb3"
 
 #: src/settings_translation_file.cpp
+#, fuzzy
 msgid ""
-"Key for toggling pitch fly mode.\n"
+"Key for toggling pitch move mode.\n"
 "See http://irrlicht.sourceforge.net/docu/namespaceirr."
 "html#a54da2a0e231901735e3da1b0edf72eb3"
 msgstr ""
 "Eğim uçma kipi açma/kapama tuşu.\n"
-"Bakın: http://irrlicht.sourceforge.net/docu/"
-"namespaceirr.html#a54da2a0e231901735e3da1b0edf72eb3"
+"Bakın: http://irrlicht.sourceforge.net/docu/namespaceirr."
+"html#a54da2a0e231901735e3da1b0edf72eb3"
 
 #: src/settings_translation_file.cpp
 msgid ""
@@ -4245,8 +4352,8 @@ msgid ""
 "html#a54da2a0e231901735e3da1b0edf72eb3"
 msgstr ""
 "Kamera güncelleme açma/kapama tuşu. Yalnızca geliştirme için kullanılır.\n"
-"Bakın: http://irrlicht.sourceforge.net/docu/"
-"namespaceirr.html#a54da2a0e231901735e3da1b0edf72eb3"
+"Bakın: http://irrlicht.sourceforge.net/docu/namespaceirr."
+"html#a54da2a0e231901735e3da1b0edf72eb3"
 
 #: src/settings_translation_file.cpp
 msgid ""
@@ -4255,8 +4362,8 @@ msgid ""
 "html#a54da2a0e231901735e3da1b0edf72eb3"
 msgstr ""
 "Sohbet gösterme/gizleme tuşu.\n"
-"Bakın: http://irrlicht.sourceforge.net/docu/"
-"namespaceirr.html#a54da2a0e231901735e3da1b0edf72eb3"
+"Bakın: http://irrlicht.sourceforge.net/docu/namespaceirr."
+"html#a54da2a0e231901735e3da1b0edf72eb3"
 
 #: src/settings_translation_file.cpp
 msgid ""
@@ -4275,8 +4382,8 @@ msgid ""
 "html#a54da2a0e231901735e3da1b0edf72eb3"
 msgstr ""
 "Sis gösterme/gizleme tuşu.\n"
-"Bakın: http://irrlicht.sourceforge.net/docu/"
-"namespaceirr.html#a54da2a0e231901735e3da1b0edf72eb3"
+"Bakın: http://irrlicht.sourceforge.net/docu/namespaceirr."
+"html#a54da2a0e231901735e3da1b0edf72eb3"
 
 #: src/settings_translation_file.cpp
 msgid ""
@@ -4305,8 +4412,8 @@ msgid ""
 "html#a54da2a0e231901735e3da1b0edf72eb3"
 msgstr ""
 "Profilciyi gösterme/gizleme tuşu. Geliştirme için kullanılır.\n"
-"Bakın: http://irrlicht.sourceforge.net/docu/"
-"namespaceirr.html#a54da2a0e231901735e3da1b0edf72eb3"
+"Bakın: http://irrlicht.sourceforge.net/docu/namespaceirr."
+"html#a54da2a0e231901735e3da1b0edf72eb3"
 
 #: src/settings_translation_file.cpp
 msgid ""
@@ -4447,7 +4554,7 @@ msgid ""
 "Only mapchunks completely within the mapgen limit are generated.\n"
 "Value is stored per-world."
 msgstr ""
-"Harita üretme sınırı, nodlar cinsinden, (0, 0, 0)'dan tüm 6 doğrultuda.\n"
+"Harita üretim sınırı, nodlar cinsinden, (0, 0, 0)'dan tüm 6 doğrultuda.\n"
 "Yalnızca tamamen mapgen sınırı içindeki harita yığınları üretilir.\n"
 "Değer dünya-başına saklanır."
 
@@ -4550,20 +4657,21 @@ msgid ""
 "Flags that are not enabled are not modified from the default.\n"
 "Flags starting with 'no' are used to explicitly disable them."
 msgstr ""
-"Mapgen Carpathian'a özgü harita üretme değerleri.\n"
+"Mapgen Karpat'a özgü harita üretim değerleri.\n"
 "Etkinleştirilmemiş bayraklar öntanımlıdan değiştirilmez.\n"
 "'no' ile başlayan bayraklar onları devre dışı bırakır."
 
 #: src/settings_translation_file.cpp
+#, fuzzy
 msgid ""
 "Map generation attributes specific to Mapgen Valleys.\n"
 "'altitude_chill': Reduces heat with altitude.\n"
-"'humid_rivers': Increases humidity around rivers and where water pools.\n"
+"'humid_rivers': Increases humidity around rivers.\n"
 "'vary_river_depth': If enabled, low humidity and high heat causes rivers\n"
 "to become shallower and occasionally dry.\n"
 "'altitude_dry': Reduces humidity with altitude."
 msgstr ""
-"Mapgen Valleys'e özgü harita üretme değerleri. \n"
+"Mapgen Vadiler'e özgü harita üretim değerleri. \n"
 "'altitude_chill': Isıyı yükseklikle azaltır.\n"
 "'humid_rivers': Nehirlerin ve su birikintilerinin etrafında nemi artırır.\n"
 "'vary_river_depth': Etkinse, düşük nem ve yüksek ısı nehirlerin sığ ve\n"
@@ -4577,7 +4685,7 @@ msgid ""
 "Flags that are not enabled are not modified from the default.\n"
 "Flags starting with 'no' are used to explicitly disable them."
 msgstr ""
-"Mapgen flat'e özgü harita üretme değerleri.\n"
+"Mapgen düz'e özgü harita üretim değerleri.\n"
 "Ara sıra göller ve tepeler düz dünyaya eklenebilir.\n"
 "Etkinleştirilmemiş bayraklar öntanımlıdan değiştirilmez.\n"
 "'no' ile başlayan bayraklar onları devre dışı bırakır."
@@ -4588,7 +4696,7 @@ msgid ""
 "Flags that are not enabled are not modified from the default.\n"
 "Flags starting with 'no' are used to explicitly disable them."
 msgstr ""
-"Mapgen v5'e özgü harita üretme değerleri.\n"
+"Mapgen v5'e özgü harita üretim değerleri.\n"
 "Etkinleştirilmemiş bayraklar öntanımlıdan değiştirilmez.\n"
 "'no' ile başlayan bayraklar onları devre dışı bırakır."
 
@@ -4601,7 +4709,7 @@ msgid ""
 "Flags that are not enabled are not modified from the default.\n"
 "Flags starting with 'no' are used to explicitly disable them."
 msgstr ""
-"Mapgen v6'ya özgü harita üretme değerleri.\n"
+"Mapgen v6'ya özgü harita üretim değerleri.\n"
 "'snowbiomes' bayrağı yeni 5 biyom sistemini etkinleştir.\n"
 "Yeni biyom sistemi etkinken cangıllar kendiliğinden etkinleştirilir ve\n"
 "'jungles' bayrağı yok sayılır.\n"
@@ -4615,14 +4723,14 @@ msgid ""
 "Flags that are not enabled are not modified from the default.\n"
 "Flags starting with 'no' are used to explicitly disable them."
 msgstr ""
-"Mapgen v7'ye özgü harita üretme değerleri.\n"
+"Mapgen v7'ye özgü harita üretim değerleri.\n"
 "'ridges' nehirleri etkinleştirir.\n"
 "Etkinleştirilmemiş bayraklar öntanımlıdan değiştirilmez.\n"
 "'no' ile başlayan bayraklar onları devre dışı bırakır."
 
 #: src/settings_translation_file.cpp
 msgid "Map generation limit"
-msgstr "Harita üretme sınırı"
+msgstr "Harita üretim sınırı"
 
 #: src/settings_translation_file.cpp
 msgid "Map save interval"
@@ -4634,7 +4742,7 @@ msgstr "Harita bloğu sınırı"
 
 #: src/settings_translation_file.cpp
 msgid "Mapblock mesh generation delay"
-msgstr "Harita bloğu ızgara üretme gecikmesi"
+msgstr "Harita bloğu ızgara üretim gecikmesi"
 
 #: src/settings_translation_file.cpp
 msgid "Mapblock mesh generator's MapBlock cache size in MB"
@@ -4646,19 +4754,19 @@ msgstr "Harita bloğu boşaltma zaman aşımı"
 
 #: src/settings_translation_file.cpp
 msgid "Mapgen Carpathian"
-msgstr "Mapgen Carpathian"
+msgstr "Mapgen Karpat"
 
 #: src/settings_translation_file.cpp
 msgid "Mapgen Carpathian specific flags"
-msgstr "Mapgen Carpathian'a özgü bayraklar"
+msgstr "Mapgen Karpat'a özgü bayraklar"
 
 #: src/settings_translation_file.cpp
 msgid "Mapgen Flat"
-msgstr "Mapgen Flat"
+msgstr "Mapgen Düz"
 
 #: src/settings_translation_file.cpp
 msgid "Mapgen Flat specific flags"
-msgstr "Mapgen Flat'e özgü bayraklar"
+msgstr "Mapgen Düz'e özgü bayraklar"
 
 #: src/settings_translation_file.cpp
 msgid "Mapgen Fractal"
@@ -4694,7 +4802,7 @@ msgstr "Mapgen Vadiler"
 
 #: src/settings_translation_file.cpp
 msgid "Mapgen Valleys specific flags"
-msgstr "Mapgen Valleys'e özgü bayraklar"
+msgstr "Mapgen Vadiler'e özgü bayraklar"
 
 #: src/settings_translation_file.cpp
 msgid "Mapgen debug"
@@ -4948,7 +5056,6 @@ msgid "Mute sound"
 msgstr "Sesi kapat"
 
 #: src/settings_translation_file.cpp
-#, fuzzy
 msgid ""
 "Name of map generator to be used when creating a new world.\n"
 "Creating a world in the main menu will override this.\n"
@@ -4957,9 +5064,13 @@ msgid ""
 "'stable' means the terrain shape in an existing world will not be changed\n"
 "in the future. Note that biomes are defined by games and may still change."
 msgstr ""
-"Yeni bir dünya yaratırken kullanılacak harita üreticinin adı.\n"
+"Yeni bir dünya yaratırken kullanılacak harita üretecinin adı.\n"
 "Ana menüde bir dünya yaratmak bunu etkisiz kılar.\n"
-"Şu anki stabil mapgenler:"
+"Şu anki kararlı harita üreteçleri:\n"
+"v5, v6, v7 (yüzenkaralar hariç), düz, tek-nod.\n"
+"'kararlı', var olan bir dünyada arazi şekli gelecekte değişmeyecek "
+"demektir.\n"
+"Biyomların oyun tarafından belirlendiğini ve değişebileceğini unutmayın."
 
 #: src/settings_translation_file.cpp
 msgid ""
@@ -5019,11 +5130,11 @@ msgstr "Gürültüler"
 
 #: src/settings_translation_file.cpp
 msgid "Normalmaps sampling"
-msgstr "Dikey eşleme örnekleme"
+msgstr "Normal eşleme örnekleme"
 
 #: src/settings_translation_file.cpp
 msgid "Normalmaps strength"
-msgstr "Dikey eşleme gücü"
+msgstr "Normal eşleme gücü"
 
 #: src/settings_translation_file.cpp
 msgid "Number of emerge threads"
@@ -5032,16 +5143,17 @@ msgstr "Emerge iş sayısı"
 #: src/settings_translation_file.cpp
 msgid ""
 "Number of emerge threads to use.\n"
-"Make this field blank or 0, or increase this number to use multiple "
-"threads.\n"
-"On multiprocessor systems, this will improve mapgen speed greatly at the "
-"cost\n"
-"of slightly buggy caves."
+"Empty or 0 value:\n"
+"-    Automatic selection. The number of emerge threads will be\n"
+"-    'number of processors - 2', with a lower limit of 1.\n"
+"Any other value:\n"
+"-    Specifies the number of emerge threads, with a lower limit of 1.\n"
+"Warning: Increasing the number of emerge threads increases engine mapgen\n"
+"speed, but this may harm game performance by interfering with other\n"
+"processes, especially in singleplayer and/or when running Lua code in\n"
+"'on_generated'.\n"
+"For many users the optimum setting may be '1'."
 msgstr ""
-"Kullanılacak emerge iş sayısı.\n"
-"Bu alanı boş veya  0 yapın ya da çoklu iş kullanmak için bu sayıyı artırın.\n"
-"Çok işlemcili sistemlerde, bu mapgen hızını, biraz hatalı mağaralar\n"
-"pahasına, büyük ölçüde artıracaktır."
 
 #: src/settings_translation_file.cpp
 msgid ""
@@ -5058,8 +5170,8 @@ msgid "Number of parallax occlusion iterations."
 msgstr "Paralaks oklüzyon yineleme sayısı."
 
 #: src/settings_translation_file.cpp
-msgid "Offset"
-msgstr "Kaydırma"
+msgid "Online Content Repository"
+msgstr ""
 
 #: src/settings_translation_file.cpp
 msgid "Opaque liquids"
@@ -5135,12 +5247,14 @@ msgid "Physics"
 msgstr "Fizik"
 
 #: src/settings_translation_file.cpp
-msgid "Pitch fly key"
+#, fuzzy
+msgid "Pitch move key"
 msgstr "Eğim uçma tuşu"
 
 #: src/settings_translation_file.cpp
-msgid "Pitch fly mode"
-msgstr "Eğim uçma kipi"
+#, fuzzy
+msgid "Pitch move mode"
+msgstr "Eğim hareket kipi etkin"
 
 #: src/settings_translation_file.cpp
 msgid ""
@@ -5188,8 +5302,8 @@ msgid ""
 "Print the engine's profiling data in regular intervals (in seconds).\n"
 "0 = disable. Useful for developers."
 msgstr ""
-"Motorun profilleme verilerini düzenli aralıklarla (saniye cinsinden) yazdır."
-"\n"
+"Motorun profilleme verilerini düzenli aralıklarla (saniye cinsinden) "
+"yazdır.\n"
 "0 = devre dışı. Geliştiriciler için yararlıdır."
 
 #: src/settings_translation_file.cpp
@@ -5263,15 +5377,18 @@ msgid "Report path"
 msgstr "Rapor konumu"
 
 #: src/settings_translation_file.cpp
+#, fuzzy
 msgid ""
-"Restricts the access of certain client-side functions on servers\n"
-"Combine these byteflags below to restrict client-side features:\n"
-"LOAD_CLIENT_MODS: 1 (disable client mods loading)\n"
+"Restricts the access of certain client-side functions on servers.\n"
+"Combine the byteflags below to restrict client-side features, or set to 0\n"
+"for no restrictions:\n"
+"LOAD_CLIENT_MODS: 1 (disable loading client-provided mods)\n"
 "CHAT_MESSAGES: 2 (disable send_chat_message call client-side)\n"
 "READ_ITEMDEFS: 4 (disable get_item_def call client-side)\n"
 "READ_NODEDEFS: 8 (disable get_node_def call client-side)\n"
 "LOOKUP_NODES_LIMIT: 16 (limits get_node call client-side to\n"
-"csm_restriction_noderange)"
+"csm_restriction_noderange)\n"
+"READ_PLAYERINFO: 32 (disable get_player_names call client-side)"
 msgstr ""
 "Sunucularda belirli istemci tarafı fonksiyonların erişimini sınırlar\n"
 "Bu byte bayraklarını birleştirerek istemci tarafı özellikleri sınırlayın:\n"
@@ -5353,10 +5470,6 @@ msgstr "Değiştiğinde pencere boyutunu kendiliğinden kaydet."
 #: src/settings_translation_file.cpp
 msgid "Saving map received from server"
 msgstr "Sunucudan alınan harita kaydediliyor"
-
-#: src/settings_translation_file.cpp
-msgid "Scale"
-msgstr "Boyut"
 
 #: src/settings_translation_file.cpp
 msgid ""
@@ -5585,18 +5698,6 @@ msgid "Show entity selection boxes"
 msgstr "Varlık seçim kutularını göster"
 
 #: src/settings_translation_file.cpp
-msgid "Show non-free packages"
-msgstr "Özgür olmayan paketleri göster"
-
-#: src/settings_translation_file.cpp
-msgid ""
-"Show packages in the content store that do not qualify as 'free software'\n"
-"as defined by the Free Software Foundation."
-msgstr ""
-"İçerik mağazasında, Özgür Yazılım Vakfının tanımına göre 'özgür yazılım'\n"
-"olarak nitelenemeyecek paketleri göster."
-
-#: src/settings_translation_file.cpp
 msgid "Shutdown message"
 msgstr "Kapatma iletisi"
 
@@ -5609,6 +5710,12 @@ msgid ""
 "Altering this value is for special usage, leaving it unchanged is\n"
 "recommended."
 msgstr ""
+"Mapgen tarafından üretilen harita yığınlarının boyutu, harita bloğu\n"
+"(16 nod) cinsinden.\n"
+"UYARI! Bu değeri 5'in üstüne çıkarmanın faydası yoktur ve birçok\n"
+"tehlikesi vardır\n"
+"Bu değeri düşürmek mağara ve zindan yoğunluğunu azaltır.\n"
+"Bu değerin, değiştirilmesi özel kullanım içindir, değiştirilmemesi önerilir."
 
 #: src/settings_translation_file.cpp
 msgid ""
@@ -5715,7 +5822,7 @@ msgstr "Step dağ yayılma gürültüsü"
 
 #: src/settings_translation_file.cpp
 msgid "Strength of generated normalmaps."
-msgstr "Üretilen dikey eşlemelerin gücü."
+msgstr "Üretilen normal eşlemelerin gücü."
 
 #: src/settings_translation_file.cpp
 msgid "Strength of light curve mid-boost."
@@ -5798,6 +5905,16 @@ msgid ""
 "this option allows enforcing it for certain node types. Note though that\n"
 "that is considered EXPERIMENTAL and may not work properly."
 msgstr ""
+"Bir nod üstündeki dokular nod'a ya da dünyaya göre hizalanabilir.\n"
+"İlk kip, makineler, mobilyalar v.b. için uygunken ikinci kip medivenlerin\n"
+"ve mikro blokların çevreye daha iyi uymasını sağlar.\n"
+"Ancak, bu seçenek yeni olduğundan, eski sunucularda kullanılamayabilir,\n"
+"bu seçenek onu belirli nod türleri için zorunlu kılmaya izin verir. Bunun\n"
+"DENEYSEL olduğunu ve düzgün çalışmayabileceğini unutmayın."
+
+#: src/settings_translation_file.cpp
+msgid "The URL for the content repository"
+msgstr ""
 
 #: src/settings_translation_file.cpp
 msgid ""
@@ -5849,6 +5966,12 @@ msgid ""
 "maintained.\n"
 "This should be configured together with active_object_range."
 msgstr ""
+"Her oyuncu çevresinde, etkin blok işlemleri uygulanacak, bloklarının "
+"hacminin\n"
+"yarıçapı, harita blokları (16 nod) cinsinden.\n"
+"Etkin bloklarda neseneler yüklenir ve ABMler çalışır.\n"
+"Bu ayrıca etkin nesnelerin (moblar) korunacağı minimum uzaklıktır.\n"
+"Bu active_object_range ile birlikte ayarlanmalıdır."
 
 #: src/settings_translation_file.cpp
 msgid ""
@@ -5859,6 +5982,11 @@ msgid ""
 "On other platforms, OpenGL is recommended, and it’s the only driver with\n"
 "shader support currently."
 msgstr ""
+"Irrlicht için işleme arka ucu.\n"
+"Bunu değiştirdikten sonra tekrar başlatma gerekir.\n"
+"Not: Android'de, emin değilseniz OGLES1 kullanın! Başka türlü, uygulama\n"
+"başlayamayabilir. Diğer platformlarda, OpenGL önerilir ve şu anda gölgeleme\n"
+"desteği olan tek sürücüdür."
 
 #: src/settings_translation_file.cpp
 msgid ""
@@ -5920,6 +6048,8 @@ msgid ""
 "enabled. Also the vertical distance over which humidity drops by 10 if\n"
 "'altitude_dry' is enabled."
 msgstr ""
+"'altitude_chill' etkinse, ısının 20 azalacağı dikey uzaklık.\n"
+"Ayrıca, 'altitude_dry' etkinse, nemin 10 azalacağı dikey uzaklık."
 
 #: src/settings_translation_file.cpp
 msgid "Third of 4 2D noises that together define hill/mountain range height."
@@ -6064,6 +6194,9 @@ msgid ""
 "especially when using a high resolution texture pack.\n"
 "Gamma correct downscaling is not supported."
 msgstr ""
+"Dokuları boyutlandırmak için  mip haritalama kullan. Özellikle yüksek\n"
+"çözünürlüklü bir doku paketi kullanırken, performans biraz artabilir.\n"
+"Gamma doğruluklu küçültme desteklenmez."
 
 #: src/settings_translation_file.cpp
 msgid "Use trilinear filtering when scaling textures."
@@ -6269,8 +6402,8 @@ msgstr ""
 "büyütülmüş dokular için ayarlar; daha yüksek değerler daha net görünür,\n"
 "ama daha fazla bellek gerektirir. 2'nin kuvvetleri tavsiye edilir. 1'den "
 "daha\n"
-"yükseğe ayarlamanın, bilineer/trilineer/anisotropik filtreler etkin değilse,"
-"\n"
+"yükseğe ayarlamanın, bilineer/trilineer/anisotropik filtreler etkin "
+"değilse,\n"
 "görünür bit etkisi olmayabilir.\n"
 "Bu, dünya hizalı doku kendilinden boyutlandırmada taban nod doku boyutu\n"
 "olarak da kullanılır."
@@ -6367,6 +6500,11 @@ msgid ""
 "See also texture_min_size.\n"
 "Warning: This option is EXPERIMENTAL!"
 msgstr ""
+"Dünya hizalı dokular birçok noda kapsaması için boyutlandırılabilir.\n"
+"Ancak sunucu istediğiniz boyutu göndermeyebilir, özellikle de özel\n"
+"tasarlanmış bir doku paketi kullanıyorsanız; bu seçenekle, istemci\n"
+"doku boyutunu temel alarak boyutu kendiliğinden belirlemeye çalışır.\n"
+"Uyarı: Bu seçenek DENEYSELdir!"
 
 #: src/settings_translation_file.cpp
 msgid "World-aligned textures mode"
@@ -6435,6 +6573,12 @@ msgstr "cURL paralel sınırı"
 #: src/settings_translation_file.cpp
 msgid "cURL timeout"
 msgstr "cURL zaman aşımı"
+
+#~ msgid "View"
+#~ msgstr "Göster"
+
+#~ msgid "Advanced Settings"
+#~ msgstr "Gelişmiş Ayarlar"
 
 #, fuzzy
 #~ msgid "Preload inventory textures"
@@ -7070,3 +7214,34 @@ msgstr "cURL zaman aşımı"
 
 #~ msgid "Disable MP"
 #~ msgstr "Mod paketini kapa"
+
+#~ msgid ""
+#~ "Show packages in the content store that do not qualify as 'free "
+#~ "software'\n"
+#~ "as defined by the Free Software Foundation."
+#~ msgstr ""
+#~ "İçerik mağazasında, Özgür Yazılım Vakfının tanımına göre 'özgür yazılım'\n"
+#~ "olarak nitelenemeyecek paketleri göster."
+
+#~ msgid "Show non-free packages"
+#~ msgstr "Özgür olmayan paketleri göster"
+
+#~ msgid "Pitch fly mode"
+#~ msgstr "Eğim uçma kipi"
+
+#~ msgid ""
+#~ "Number of emerge threads to use.\n"
+#~ "Make this field blank or 0, or increase this number to use multiple "
+#~ "threads.\n"
+#~ "On multiprocessor systems, this will improve mapgen speed greatly at the "
+#~ "cost\n"
+#~ "of slightly buggy caves."
+#~ msgstr ""
+#~ "Kullanılacak emerge iş sayısı.\n"
+#~ "Bu alanı boş veya  0 yapın ya da çoklu iş kullanmak için bu sayıyı "
+#~ "artırın.\n"
+#~ "Çok işlemcili sistemlerde, bu mapgen hızını, biraz hatalı mağaralar\n"
+#~ "pahasına, büyük ölçüde artıracaktır."
+
+#~ msgid "Content Store"
+#~ msgstr "İçerik Mağazası"

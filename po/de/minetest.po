@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-01-06 18:12+0200\n"
-"PO-Revision-Date: 2019-02-01 06:10+0000\n"
+"POT-Creation-Date: 2019-02-14 19:14+0100\n"
+"PO-Revision-Date: 2019-02-06 14:18+0000\n"
 "Last-Translator: Wuzzy <almikes@aol.com>\n"
 "Language-Team: German <https://hosted.weblate.org/projects/minetest/minetest/"
 "de/>\n"
@@ -23,11 +23,13 @@ msgid "You died"
 msgstr "Sie sind gestorben"
 
 #: builtin/fstk/ui.lua
-msgid "An error occured in a Lua script, such as a mod:"
+#, fuzzy
+msgid "An error occurred in a Lua script, such as a mod:"
 msgstr "Es ist ein Fehler in einem Lua-Skript aufgetreten, z.B. in einer Mod:"
 
 #: builtin/fstk/ui.lua
-msgid "An error occured:"
+#, fuzzy
+msgid "An error occurred:"
 msgstr "Es ist ein Fehler aufgetreten:"
 
 #: builtin/fstk/ui.lua
@@ -107,9 +109,10 @@ msgid "Enable modpack"
 msgstr "Modpack aktivieren"
 
 #: builtin/mainmenu/dlg_config_world.lua
+#, fuzzy
 msgid ""
 "Failed to enable mod \"$1\" as it contains disallowed characters. Only "
-"chararacters [a-z0-9_] are allowed."
+"characters [a-z0-9_] are allowed."
 msgstr ""
 "Fehler beim Aktivieren der Mod „$1“: Ungültiger Name. Nur folgende Zeichen "
 "sind erlaubt: [a-z0-9_]."
@@ -178,6 +181,10 @@ msgid "Mods"
 msgstr "Mods"
 
 #: builtin/mainmenu/dlg_contentstore.lua
+msgid "No packages could be retrieved"
+msgstr ""
+
+#: builtin/mainmenu/dlg_contentstore.lua
 msgid "No results"
 msgstr "Keine Treffer"
 
@@ -198,10 +205,6 @@ msgstr "Deinstallieren"
 msgid "Update"
 msgstr "Aktualisieren"
 
-#: builtin/mainmenu/dlg_contentstore.lua
-msgid "View"
-msgstr "Anzeigen"
-
 #: builtin/mainmenu/dlg_create_world.lua
 msgid "A world named \"$1\" already exists"
 msgstr "Eine Welt Namens „$1“ existiert bereits"
@@ -211,7 +214,8 @@ msgid "Create"
 msgstr "Erstellen"
 
 #: builtin/mainmenu/dlg_create_world.lua
-msgid "Download a game, such as minetest_game, from minetest.net"
+#, fuzzy
+msgid "Download a game, such as Minetest Game, from minetest.net"
 msgstr "Laden Sie sich ein Spiel (wie minetest_game) von minetest.net herunter"
 
 #: builtin/mainmenu/dlg_create_world.lua
@@ -231,6 +235,7 @@ msgid "No game selected"
 msgstr "Kein Spiel ausgewählt"
 
 #: builtin/mainmenu/dlg_create_world.lua
+#: builtin/mainmenu/dlg_settings_advanced.lua
 msgid "Seed"
 msgstr "Seed"
 
@@ -276,9 +281,20 @@ msgstr "Annehmen"
 msgid "Rename Modpack:"
 msgstr "Modpack umbenennen:"
 
+#: builtin/mainmenu/dlg_rename_modpack.lua
+msgid ""
+"This modpack has an explicit name given in its modpack.conf which will "
+"override any renaming here."
+msgstr ""
+
 #: builtin/mainmenu/dlg_settings_advanced.lua
 msgid "(No description of setting given)"
 msgstr "(Keine Beschreibung vorhanden)"
+
+#: builtin/mainmenu/dlg_settings_advanced.lua
+#, fuzzy
+msgid "2D Noise"
+msgstr "Rauschen"
 
 #: builtin/mainmenu/dlg_settings_advanced.lua
 msgid "< Back to Settings page"
@@ -301,6 +317,24 @@ msgid "Enabled"
 msgstr "Aktiviert"
 
 #: builtin/mainmenu/dlg_settings_advanced.lua
+#, fuzzy
+msgid "Lacunarity"
+msgstr "Sicherheit"
+
+#: builtin/mainmenu/dlg_settings_advanced.lua
+msgid "Octaves"
+msgstr ""
+
+#: builtin/mainmenu/dlg_settings_advanced.lua src/settings_translation_file.cpp
+msgid "Offset"
+msgstr "Versatz"
+
+#: builtin/mainmenu/dlg_settings_advanced.lua
+#, fuzzy
+msgid "Persistance"
+msgstr "Spieler-Übertragungsdistanz"
+
+#: builtin/mainmenu/dlg_settings_advanced.lua
 msgid "Please enter a valid integer."
 msgstr "Bitte geben Sie eine gültige ganze Zahl ein."
 
@@ -311,6 +345,10 @@ msgstr "Bitte geben Sie eine gültige Zahl ein."
 #: builtin/mainmenu/dlg_settings_advanced.lua
 msgid "Restore Default"
 msgstr "Standardwert"
+
+#: builtin/mainmenu/dlg_settings_advanced.lua src/settings_translation_file.cpp
+msgid "Scale"
+msgstr "Skalierung"
 
 #: builtin/mainmenu/dlg_settings_advanced.lua
 msgid "Select directory"
@@ -332,13 +370,51 @@ msgstr "Der Wert muss mindestens $1 sein."
 msgid "The value must not be larger than $1."
 msgstr "Der Wert darf nicht größer als $1 sein."
 
-#: builtin/mainmenu/pkgmgr.lua
-msgid " mods"
-msgstr " -Mods"
+#: builtin/mainmenu/dlg_settings_advanced.lua
+msgid "X"
+msgstr ""
+
+#: builtin/mainmenu/dlg_settings_advanced.lua
+msgid "X spread"
+msgstr ""
+
+#: builtin/mainmenu/dlg_settings_advanced.lua
+msgid "Y"
+msgstr ""
+
+#: builtin/mainmenu/dlg_settings_advanced.lua
+msgid "Y spread"
+msgstr ""
+
+#: builtin/mainmenu/dlg_settings_advanced.lua
+msgid "Z"
+msgstr ""
+
+#: builtin/mainmenu/dlg_settings_advanced.lua
+msgid "Z spread"
+msgstr ""
+
+#: builtin/mainmenu/dlg_settings_advanced.lua
+msgid "absvalue"
+msgstr ""
+
+#: builtin/mainmenu/dlg_settings_advanced.lua
+#, fuzzy
+msgid "defaults"
+msgstr "Standardspiel"
+
+#: builtin/mainmenu/dlg_settings_advanced.lua
+msgid "eased"
+msgstr ""
 
 #: builtin/mainmenu/pkgmgr.lua
 msgid "$1 (Enabled)"
 msgstr "$1 (Aktiviert)"
+
+#: builtin/mainmenu/pkgmgr.lua
+#, fuzzy
+msgid "$1 mods"
+msgstr " -Mods"
 
 #: builtin/mainmenu/pkgmgr.lua
 msgid "Failed to install $1 to $2"
@@ -564,8 +640,9 @@ msgid "8x"
 msgstr "8x"
 
 #: builtin/mainmenu/tab_settings.lua
-msgid "Advanced Settings"
-msgstr "Erweiterte Einstellungen"
+#, fuzzy
+msgid "All Settings"
+msgstr "Einstellungen"
 
 #: builtin/mainmenu/tab_settings.lua
 msgid "Antialiasing:"
@@ -1195,7 +1272,7 @@ msgstr "Feststellt."
 
 #: src/client/keycode.cpp
 msgid "Clear"
-msgstr "sauber"
+msgstr "Clear"
 
 #: src/client/keycode.cpp
 msgid "Control"
@@ -1544,8 +1621,8 @@ msgstr "Taste bereits in Benutzung"
 #: src/gui/guiKeyChangeMenu.cpp
 msgid "Keybindings. (If this menu screws up, remove stuff from minetest.conf)"
 msgstr ""
-"Steuerung (Falls dieses Menü defekt ist, entfernen Sie Zeugs aus "
-"minetest.conf)"
+"Steuerung (Falls dieses Menü defekt ist, entfernen Sie Zeugs aus minetest."
+"conf)"
 
 #: src/gui/guiKeyChangeMenu.cpp
 msgid "Local command"
@@ -1645,7 +1722,7 @@ msgstr "Tonlautstärke: "
 
 #: src/gui/modalMenu.cpp
 msgid "Enter "
-msgstr "Enter "
+msgstr "Eingabe "
 
 #: src/network/clientpackethandler.cpp
 msgid "LANG_CODE"
@@ -1666,8 +1743,8 @@ msgid ""
 "If enabled, virtual joystick will also tap \"aux\" button when out of main "
 "circle."
 msgstr ""
-"(Android) Den virtuellen Joystick benutzen, um die „Aux“-Taste zu betätigen."
-"\n"
+"(Android) Den virtuellen Joystick benutzen, um die „Aux“-Taste zu "
+"betätigen.\n"
 "Falls aktiviert, wird der virtuelle Joystick außerdem die „Aux“-Taste "
 "drücken, wenn er sich außerhalb des Hauptkreises befindet."
 
@@ -1733,17 +1810,21 @@ msgid "2D noise that controls the shape/size of step mountains."
 msgstr "2-D-Rauschen, welches die Form/Größe von Stufenbergen steuert."
 
 #: src/settings_translation_file.cpp
-msgid "2D noise that controls the size/occurance of ridged mountain ranges."
+#, fuzzy
+msgid "2D noise that controls the size/occurrence of ridged mountain ranges."
 msgstr ""
 "2-D-Rauschen, welches die Größe/Vorkommen von gezahnten Bergketten steuert."
 
 #: src/settings_translation_file.cpp
-msgid "2D noise that controls the size/occurance of rolling hills."
+#, fuzzy
+msgid "2D noise that controls the size/occurrence of rolling hills."
 msgstr "2-D-Rauschen, welches die Größe/Vorkommen von sanften Hügeln steuert."
 
 #: src/settings_translation_file.cpp
-msgid "2D noise that controls the size/occurance of step mountain ranges."
-msgstr "2-D-Rauschen, welches die Größe/Vorkommen von Stufenbergketten steuert."
+#, fuzzy
+msgid "2D noise that controls the size/occurrence of step mountain ranges."
+msgstr ""
+"2-D-Rauschen, welches die Größe/Vorkommen von Stufenbergketten steuert."
 
 #: src/settings_translation_file.cpp
 msgid "3D clouds"
@@ -1987,9 +2068,8 @@ msgid "Automatic forwards key"
 msgstr "Vorwärtsautomatiktaste"
 
 #: src/settings_translation_file.cpp
-msgid ""
-"Automatically jump up single-node obstacles.\n"
-"type: bool"
+#, fuzzy
+msgid "Automatically jump up single-node obstacles."
 msgstr ""
 "Automatisch bei 1 Block hohen Hindernissen springen.\n"
 "Typ: bool"
@@ -2145,18 +2225,18 @@ msgid "Center of light curve mid-boost."
 msgstr "Mitte der Lichtkurven-Mittenverstärkung."
 
 #: src/settings_translation_file.cpp
+#, fuzzy
 msgid ""
 "Changes the main menu UI:\n"
-"-   Full:  Multple singleplayer worlds, game choice, texture pack chooser, "
+"-   Full:  Multiple singleplayer worlds, game choice, texture pack chooser, "
 "etc.\n"
 "-   Simple: One singleplayer world, no game or texture pack choosers. May "
 "be\n"
-"necessary for smaller screens.\n"
-"-   Auto: Simple on Android, full on everything else."
+"necessary for smaller screens."
 msgstr ""
 "Ändert die Hauptmenü-UI:\n"
-"-   Full:  Mehrere Einzelspielerwelten, Spiel- und Texturenpaketauswahl, usw."
-"\n"
+"-   Full:  Mehrere Einzelspielerwelten, Spiel- und Texturenpaketauswahl, "
+"usw.\n"
 "-   Simple: Eine Einzelspielerwelt, keine Spiel- oder Texturenpaketauswahl. "
 "Könnte\n"
 "für kleinere Bildschirme nötig sein.\n"
@@ -2248,6 +2328,17 @@ msgstr "Gefärbter Nebel"
 
 #: src/settings_translation_file.cpp
 msgid ""
+"Comma-separated list of flags to hide in the content repository.\n"
+"\"nonfree\" can be used to hide packages which do not qualify as 'free "
+"software',\n"
+"as defined by the Free Software Foundation.\n"
+"You can also specify content ratings.\n"
+"These flags are independent from Minetest versions,\n"
+"so see a full list at https://content.minetest.net/help/content_flags/"
+msgstr ""
+
+#: src/settings_translation_file.cpp
+msgid ""
 "Comma-separated list of mods that are allowed to access HTTP APIs, which\n"
 "allow them to upload and download data to/from the internet."
 msgstr ""
@@ -2294,8 +2385,13 @@ msgid "Console height"
 msgstr "Konsolenhöhe"
 
 #: src/settings_translation_file.cpp
-msgid "Content Store"
-msgstr "Inhaltespeicher"
+msgid "ContentDB Flag Blacklist"
+msgstr ""
+
+#: src/settings_translation_file.cpp
+#, fuzzy
+msgid "ContentDB URL"
+msgstr "Inhalt"
 
 #: src/settings_translation_file.cpp
 msgid "Continuous forward"
@@ -2631,6 +2727,16 @@ msgstr "Spielerschaden und -tod aktivieren."
 #: src/settings_translation_file.cpp
 msgid "Enable random user input (only used for testing)."
 msgstr "Schaltet zufällige Steuerung ein (nur zum Testen verwendet)."
+
+#: src/settings_translation_file.cpp
+msgid "Enable register confirmation"
+msgstr ""
+
+#: src/settings_translation_file.cpp
+msgid ""
+"Enable register confirmation when connecting to server.\n"
+"If disabled, new account will be registered automatically."
+msgstr ""
 
 #: src/settings_translation_file.cpp
 msgid ""
@@ -3421,14 +3527,6 @@ msgstr ""
 
 #: src/settings_translation_file.cpp
 msgid ""
-"If enabled together with fly mode, makes move directions relative to the "
-"player's pitch."
-msgstr ""
-"Wenn dies zusammen mit dem Flugmodus aktiviert wird, werden "
-"Bewegungsrichtungen relativ zum Nick des Spielers sein."
-
-#: src/settings_translation_file.cpp
-msgid ""
 "If enabled together with fly mode, player is able to fly through solid "
 "nodes.\n"
 "This requires the \"noclip\" privilege on the server."
@@ -3468,6 +3566,15 @@ msgstr ""
 "Falls aktiviert, werden ungültige Weltdaten den Server nicht dazu\n"
 "veranlassen, sich zu beenden.\n"
 "Aktivieren Sie dies nur, wenn Sie wissen, was sie tun."
+
+#: src/settings_translation_file.cpp
+#, fuzzy
+msgid ""
+"If enabled, makes move directions relative to the player's pitch when flying "
+"or swimming."
+msgstr ""
+"Wenn dies zusammen mit dem Flugmodus aktiviert wird, werden "
+"Bewegungsrichtungen relativ zum Nick des Spielers sein."
 
 #: src/settings_translation_file.cpp
 msgid "If enabled, new players cannot join with an empty password."
@@ -3787,8 +3894,8 @@ msgid ""
 msgstr ""
 "Taste, um den Spieler rückwärts zu bewegen.\n"
 "Wird, wenn aktiviert, auch die Vorwärtsautomatik deaktivieren.\n"
-"Siehe http://irrlicht.sourceforge.net/docu/"
-"namespaceirr.html#a54da2a0e231901735e3da1b0edf72eb3"
+"Siehe http://irrlicht.sourceforge.net/docu/namespaceirr."
+"html#a54da2a0e231901735e3da1b0edf72eb3"
 
 #: src/settings_translation_file.cpp
 msgid ""
@@ -3877,8 +3984,8 @@ msgid ""
 "html#a54da2a0e231901735e3da1b0edf72eb3"
 msgstr ""
 "Taste zum Auswählen des 11. Gegenstands in der Schnellleiste.\n"
-"Siehe http://irrlicht.sourceforge.net/docu/"
-"namespaceirr.html#a54da2a0e231901735e3da1b0edf72eb3"
+"Siehe http://irrlicht.sourceforge.net/docu/namespaceirr."
+"html#a54da2a0e231901735e3da1b0edf72eb3"
 
 #: src/settings_translation_file.cpp
 msgid ""
@@ -3887,8 +3994,8 @@ msgid ""
 "html#a54da2a0e231901735e3da1b0edf72eb3"
 msgstr ""
 "Taste zum Auswählen des 12. Gegenstands in der Schnellleiste.\n"
-"Siehe http://irrlicht.sourceforge.net/docu/"
-"namespaceirr.html#a54da2a0e231901735e3da1b0edf72eb3"
+"Siehe http://irrlicht.sourceforge.net/docu/namespaceirr."
+"html#a54da2a0e231901735e3da1b0edf72eb3"
 
 #: src/settings_translation_file.cpp
 msgid ""
@@ -3897,8 +4004,8 @@ msgid ""
 "html#a54da2a0e231901735e3da1b0edf72eb3"
 msgstr ""
 "Taste zum Auswählen des 13. Gegenstands in der Schnellleiste.\n"
-"Siehe http://irrlicht.sourceforge.net/docu/"
-"namespaceirr.html#a54da2a0e231901735e3da1b0edf72eb3"
+"Siehe http://irrlicht.sourceforge.net/docu/namespaceirr."
+"html#a54da2a0e231901735e3da1b0edf72eb3"
 
 #: src/settings_translation_file.cpp
 msgid ""
@@ -3907,8 +4014,8 @@ msgid ""
 "html#a54da2a0e231901735e3da1b0edf72eb3"
 msgstr ""
 "Taste zum Auswählen des 14. Gegenstands in der Schnellleiste.\n"
-"Siehe http://irrlicht.sourceforge.net/docu/"
-"namespaceirr.html#a54da2a0e231901735e3da1b0edf72eb3"
+"Siehe http://irrlicht.sourceforge.net/docu/namespaceirr."
+"html#a54da2a0e231901735e3da1b0edf72eb3"
 
 #: src/settings_translation_file.cpp
 msgid ""
@@ -3917,8 +4024,8 @@ msgid ""
 "html#a54da2a0e231901735e3da1b0edf72eb3"
 msgstr ""
 "Taste zum Auswählen des 15. Gegenstands in der Schnellleiste.\n"
-"Siehe http://irrlicht.sourceforge.net/docu/"
-"namespaceirr.html#a54da2a0e231901735e3da1b0edf72eb3"
+"Siehe http://irrlicht.sourceforge.net/docu/namespaceirr."
+"html#a54da2a0e231901735e3da1b0edf72eb3"
 
 #: src/settings_translation_file.cpp
 msgid ""
@@ -3927,8 +4034,8 @@ msgid ""
 "html#a54da2a0e231901735e3da1b0edf72eb3"
 msgstr ""
 "Taste zum Auswählen des 16. Gegenstands in der Schnellleiste.\n"
-"Siehe http://irrlicht.sourceforge.net/docu/"
-"namespaceirr.html#a54da2a0e231901735e3da1b0edf72eb3"
+"Siehe http://irrlicht.sourceforge.net/docu/namespaceirr."
+"html#a54da2a0e231901735e3da1b0edf72eb3"
 
 #: src/settings_translation_file.cpp
 msgid ""
@@ -3937,8 +4044,8 @@ msgid ""
 "html#a54da2a0e231901735e3da1b0edf72eb3"
 msgstr ""
 "Taste zum Auswählen des 16. Gegenstands in der Schnellleiste.\n"
-"Siehe http://irrlicht.sourceforge.net/docu/"
-"namespaceirr.html#a54da2a0e231901735e3da1b0edf72eb3"
+"Siehe http://irrlicht.sourceforge.net/docu/namespaceirr."
+"html#a54da2a0e231901735e3da1b0edf72eb3"
 
 #: src/settings_translation_file.cpp
 msgid ""
@@ -3947,8 +4054,8 @@ msgid ""
 "html#a54da2a0e231901735e3da1b0edf72eb3"
 msgstr ""
 "Taste zum Auswählen des 18. Gegenstands in der Schnellleiste.\n"
-"Siehe http://irrlicht.sourceforge.net/docu/"
-"namespaceirr.html#a54da2a0e231901735e3da1b0edf72eb3"
+"Siehe http://irrlicht.sourceforge.net/docu/namespaceirr."
+"html#a54da2a0e231901735e3da1b0edf72eb3"
 
 #: src/settings_translation_file.cpp
 msgid ""
@@ -3957,8 +4064,8 @@ msgid ""
 "html#a54da2a0e231901735e3da1b0edf72eb3"
 msgstr ""
 "Taste zum Auswählen des 19. Gegenstands in der Schnellleiste.\n"
-"Siehe http://irrlicht.sourceforge.net/docu/"
-"namespaceirr.html#a54da2a0e231901735e3da1b0edf72eb3"
+"Siehe http://irrlicht.sourceforge.net/docu/namespaceirr."
+"html#a54da2a0e231901735e3da1b0edf72eb3"
 
 #: src/settings_translation_file.cpp
 msgid ""
@@ -3967,8 +4074,8 @@ msgid ""
 "html#a54da2a0e231901735e3da1b0edf72eb3"
 msgstr ""
 "Taste zum Auswählen des 20. Gegenstands in der Schnellleiste.\n"
-"Siehe http://irrlicht.sourceforge.net/docu/"
-"namespaceirr.html#a54da2a0e231901735e3da1b0edf72eb3"
+"Siehe http://irrlicht.sourceforge.net/docu/namespaceirr."
+"html#a54da2a0e231901735e3da1b0edf72eb3"
 
 #: src/settings_translation_file.cpp
 msgid ""
@@ -3977,8 +4084,8 @@ msgid ""
 "html#a54da2a0e231901735e3da1b0edf72eb3"
 msgstr ""
 "Taste zum Auswählen des 21. Gegenstands in der Schnellleiste.\n"
-"Siehe http://irrlicht.sourceforge.net/docu/"
-"namespaceirr.html#a54da2a0e231901735e3da1b0edf72eb3"
+"Siehe http://irrlicht.sourceforge.net/docu/namespaceirr."
+"html#a54da2a0e231901735e3da1b0edf72eb3"
 
 #: src/settings_translation_file.cpp
 msgid ""
@@ -3987,8 +4094,8 @@ msgid ""
 "html#a54da2a0e231901735e3da1b0edf72eb3"
 msgstr ""
 "Taste zum Auswählen des 22. Gegenstands in der Schnellleiste.\n"
-"Siehe http://irrlicht.sourceforge.net/docu/"
-"namespaceirr.html#a54da2a0e231901735e3da1b0edf72eb3"
+"Siehe http://irrlicht.sourceforge.net/docu/namespaceirr."
+"html#a54da2a0e231901735e3da1b0edf72eb3"
 
 #: src/settings_translation_file.cpp
 msgid ""
@@ -3997,8 +4104,8 @@ msgid ""
 "html#a54da2a0e231901735e3da1b0edf72eb3"
 msgstr ""
 "Taste zum Auswählen des 23. Gegenstands in der Schnellleiste.\n"
-"Siehe http://irrlicht.sourceforge.net/docu/"
-"namespaceirr.html#a54da2a0e231901735e3da1b0edf72eb3"
+"Siehe http://irrlicht.sourceforge.net/docu/namespaceirr."
+"html#a54da2a0e231901735e3da1b0edf72eb3"
 
 #: src/settings_translation_file.cpp
 msgid ""
@@ -4007,8 +4114,8 @@ msgid ""
 "html#a54da2a0e231901735e3da1b0edf72eb3"
 msgstr ""
 "Taste zum Auswählen des 24. Gegenstands in der Schnellleiste.\n"
-"Siehe http://irrlicht.sourceforge.net/docu/"
-"namespaceirr.html#a54da2a0e231901735e3da1b0edf72eb3"
+"Siehe http://irrlicht.sourceforge.net/docu/namespaceirr."
+"html#a54da2a0e231901735e3da1b0edf72eb3"
 
 #: src/settings_translation_file.cpp
 msgid ""
@@ -4017,8 +4124,8 @@ msgid ""
 "html#a54da2a0e231901735e3da1b0edf72eb3"
 msgstr ""
 "Taste zum Auswählen des 25. Gegenstands in der Schnellleiste.\n"
-"Siehe http://irrlicht.sourceforge.net/docu/"
-"namespaceirr.html#a54da2a0e231901735e3da1b0edf72eb3"
+"Siehe http://irrlicht.sourceforge.net/docu/namespaceirr."
+"html#a54da2a0e231901735e3da1b0edf72eb3"
 
 #: src/settings_translation_file.cpp
 msgid ""
@@ -4027,8 +4134,8 @@ msgid ""
 "html#a54da2a0e231901735e3da1b0edf72eb3"
 msgstr ""
 "Taste zum Auswählen des 26. Gegenstands in der Schnellleiste.\n"
-"Siehe http://irrlicht.sourceforge.net/docu/"
-"namespaceirr.html#a54da2a0e231901735e3da1b0edf72eb3"
+"Siehe http://irrlicht.sourceforge.net/docu/namespaceirr."
+"html#a54da2a0e231901735e3da1b0edf72eb3"
 
 #: src/settings_translation_file.cpp
 msgid ""
@@ -4037,8 +4144,8 @@ msgid ""
 "html#a54da2a0e231901735e3da1b0edf72eb3"
 msgstr ""
 "Taste zum Auswählen des 27. Gegenstands in der Schnellleiste.\n"
-"Siehe http://irrlicht.sourceforge.net/docu/"
-"namespaceirr.html#a54da2a0e231901735e3da1b0edf72eb3"
+"Siehe http://irrlicht.sourceforge.net/docu/namespaceirr."
+"html#a54da2a0e231901735e3da1b0edf72eb3"
 
 #: src/settings_translation_file.cpp
 msgid ""
@@ -4047,8 +4154,8 @@ msgid ""
 "html#a54da2a0e231901735e3da1b0edf72eb3"
 msgstr ""
 "Taste zum Auswählen des 28. Gegenstands in der Schnellleiste.\n"
-"Siehe http://irrlicht.sourceforge.net/docu/"
-"namespaceirr.html#a54da2a0e231901735e3da1b0edf72eb3"
+"Siehe http://irrlicht.sourceforge.net/docu/namespaceirr."
+"html#a54da2a0e231901735e3da1b0edf72eb3"
 
 #: src/settings_translation_file.cpp
 msgid ""
@@ -4057,8 +4164,8 @@ msgid ""
 "html#a54da2a0e231901735e3da1b0edf72eb3"
 msgstr ""
 "Taste zum Auswählen des 29. Gegenstands in der Schnellleiste.\n"
-"Siehe http://irrlicht.sourceforge.net/docu/"
-"namespaceirr.html#a54da2a0e231901735e3da1b0edf72eb3"
+"Siehe http://irrlicht.sourceforge.net/docu/namespaceirr."
+"html#a54da2a0e231901735e3da1b0edf72eb3"
 
 #: src/settings_translation_file.cpp
 msgid ""
@@ -4067,8 +4174,8 @@ msgid ""
 "html#a54da2a0e231901735e3da1b0edf72eb3"
 msgstr ""
 "Taste zum Auswählen des 30. Gegenstands in der Schnellleiste.\n"
-"Siehe http://irrlicht.sourceforge.net/docu/"
-"namespaceirr.html#a54da2a0e231901735e3da1b0edf72eb3"
+"Siehe http://irrlicht.sourceforge.net/docu/namespaceirr."
+"html#a54da2a0e231901735e3da1b0edf72eb3"
 
 #: src/settings_translation_file.cpp
 msgid ""
@@ -4077,8 +4184,8 @@ msgid ""
 "html#a54da2a0e231901735e3da1b0edf72eb3"
 msgstr ""
 "Taste zum Auswählen des 31. Gegenstands in der Schnellleiste.\n"
-"Siehe http://irrlicht.sourceforge.net/docu/"
-"namespaceirr.html#a54da2a0e231901735e3da1b0edf72eb3"
+"Siehe http://irrlicht.sourceforge.net/docu/namespaceirr."
+"html#a54da2a0e231901735e3da1b0edf72eb3"
 
 #: src/settings_translation_file.cpp
 msgid ""
@@ -4087,8 +4194,8 @@ msgid ""
 "html#a54da2a0e231901735e3da1b0edf72eb3"
 msgstr ""
 "Taste zum Auswählen des 32. Gegenstands in der Schnellleiste.\n"
-"Siehe http://irrlicht.sourceforge.net/docu/"
-"namespaceirr.html#a54da2a0e231901735e3da1b0edf72eb3"
+"Siehe http://irrlicht.sourceforge.net/docu/namespaceirr."
+"html#a54da2a0e231901735e3da1b0edf72eb3"
 
 #: src/settings_translation_file.cpp
 msgid ""
@@ -4097,8 +4204,8 @@ msgid ""
 "html#a54da2a0e231901735e3da1b0edf72eb3"
 msgstr ""
 "Taste zum Auswählen des achten Gegenstands in der Schnellleiste.\n"
-"Siehe http://irrlicht.sourceforge.net/docu/"
-"namespaceirr.html#a54da2a0e231901735e3da1b0edf72eb3"
+"Siehe http://irrlicht.sourceforge.net/docu/namespaceirr."
+"html#a54da2a0e231901735e3da1b0edf72eb3"
 
 #: src/settings_translation_file.cpp
 msgid ""
@@ -4107,8 +4214,8 @@ msgid ""
 "html#a54da2a0e231901735e3da1b0edf72eb3"
 msgstr ""
 "Taste zum Auswählen des fünften Gegenstands in der Schnellleiste.\n"
-"Siehe http://irrlicht.sourceforge.net/docu/"
-"namespaceirr.html#a54da2a0e231901735e3da1b0edf72eb3"
+"Siehe http://irrlicht.sourceforge.net/docu/namespaceirr."
+"html#a54da2a0e231901735e3da1b0edf72eb3"
 
 #: src/settings_translation_file.cpp
 msgid ""
@@ -4117,8 +4224,8 @@ msgid ""
 "html#a54da2a0e231901735e3da1b0edf72eb3"
 msgstr ""
 "Taste zum Auswählen des ersten Gegenstands in der Schnellleiste.\n"
-"Siehe http://irrlicht.sourceforge.net/docu/"
-"namespaceirr.html#a54da2a0e231901735e3da1b0edf72eb3"
+"Siehe http://irrlicht.sourceforge.net/docu/namespaceirr."
+"html#a54da2a0e231901735e3da1b0edf72eb3"
 
 #: src/settings_translation_file.cpp
 msgid ""
@@ -4127,8 +4234,8 @@ msgid ""
 "html#a54da2a0e231901735e3da1b0edf72eb3"
 msgstr ""
 "Taste zum Auswählen des vierten Gegenstands in der Schnellleiste.\n"
-"Siehe http://irrlicht.sourceforge.net/docu/"
-"namespaceirr.html#a54da2a0e231901735e3da1b0edf72eb3"
+"Siehe http://irrlicht.sourceforge.net/docu/namespaceirr."
+"html#a54da2a0e231901735e3da1b0edf72eb3"
 
 #: src/settings_translation_file.cpp
 msgid ""
@@ -4147,8 +4254,8 @@ msgid ""
 "html#a54da2a0e231901735e3da1b0edf72eb3"
 msgstr ""
 "Taste zum Auswählen des neunten Gegenstands in der Schnellleiste.\n"
-"Siehe http://irrlicht.sourceforge.net/docu/"
-"namespaceirr.html#a54da2a0e231901735e3da1b0edf72eb3"
+"Siehe http://irrlicht.sourceforge.net/docu/namespaceirr."
+"html#a54da2a0e231901735e3da1b0edf72eb3"
 
 #: src/settings_translation_file.cpp
 msgid ""
@@ -4167,8 +4274,8 @@ msgid ""
 "html#a54da2a0e231901735e3da1b0edf72eb3"
 msgstr ""
 "Taste zum Auswählen des zweiten Gegenstands in der Schnellleiste.\n"
-"Siehe http://irrlicht.sourceforge.net/docu/"
-"namespaceirr.html#a54da2a0e231901735e3da1b0edf72eb3"
+"Siehe http://irrlicht.sourceforge.net/docu/namespaceirr."
+"html#a54da2a0e231901735e3da1b0edf72eb3"
 
 #: src/settings_translation_file.cpp
 msgid ""
@@ -4177,8 +4284,8 @@ msgid ""
 "html#a54da2a0e231901735e3da1b0edf72eb3"
 msgstr ""
 "Taste zum Auswählen des siebten Gegenstands in der Schnellleiste.\n"
-"Siehe http://irrlicht.sourceforge.net/docu/"
-"namespaceirr.html#a54da2a0e231901735e3da1b0edf72eb3"
+"Siehe http://irrlicht.sourceforge.net/docu/namespaceirr."
+"html#a54da2a0e231901735e3da1b0edf72eb3"
 
 #: src/settings_translation_file.cpp
 msgid ""
@@ -4187,8 +4294,8 @@ msgid ""
 "html#a54da2a0e231901735e3da1b0edf72eb3"
 msgstr ""
 "Taste zum Auswählen des sechsten Gegenstands in der Schnellleiste.\n"
-"Siehe http://irrlicht.sourceforge.net/docu/"
-"namespaceirr.html#a54da2a0e231901735e3da1b0edf72eb3"
+"Siehe http://irrlicht.sourceforge.net/docu/namespaceirr."
+"html#a54da2a0e231901735e3da1b0edf72eb3"
 
 #: src/settings_translation_file.cpp
 msgid ""
@@ -4197,8 +4304,8 @@ msgid ""
 "html#a54da2a0e231901735e3da1b0edf72eb3"
 msgstr ""
 "Taste zum Auswählen des zehnten Gegenstands in der Schnellleiste.\n"
-"Siehe http://irrlicht.sourceforge.net/docu/"
-"namespaceirr.html#a54da2a0e231901735e3da1b0edf72eb3"
+"Siehe http://irrlicht.sourceforge.net/docu/namespaceirr."
+"html#a54da2a0e231901735e3da1b0edf72eb3"
 
 #: src/settings_translation_file.cpp
 msgid ""
@@ -4207,8 +4314,8 @@ msgid ""
 "html#a54da2a0e231901735e3da1b0edf72eb3"
 msgstr ""
 "Taste zum Auswählen des dritten Gegenstands in der Schnellleiste.\n"
-"Siehe http://irrlicht.sourceforge.net/docu/"
-"namespaceirr.html#a54da2a0e231901735e3da1b0edf72eb3"
+"Siehe http://irrlicht.sourceforge.net/docu/namespaceirr."
+"html#a54da2a0e231901735e3da1b0edf72eb3"
 
 #: src/settings_translation_file.cpp
 msgid ""
@@ -4251,8 +4358,8 @@ msgid ""
 "html#a54da2a0e231901735e3da1b0edf72eb3"
 msgstr ""
 "Taste zum Umschalten der automatischen Vorwärtsbewegung.\n"
-"Siehe http://irrlicht.sourceforge.net/docu/"
-"namespaceirr.html#a54da2a0e231901735e3da1b0edf72eb3"
+"Siehe http://irrlicht.sourceforge.net/docu/namespaceirr."
+"html#a54da2a0e231901735e3da1b0edf72eb3"
 
 #: src/settings_translation_file.cpp
 msgid ""
@@ -4305,14 +4412,15 @@ msgstr ""
 "html#a54da2a0e231901735e3da1b0edf72eb3"
 
 #: src/settings_translation_file.cpp
+#, fuzzy
 msgid ""
-"Key for toggling pitch fly mode.\n"
+"Key for toggling pitch move mode.\n"
 "See http://irrlicht.sourceforge.net/docu/namespaceirr."
 "html#a54da2a0e231901735e3da1b0edf72eb3"
 msgstr ""
 "Taste zum Umschalten des Nick-Flugmodus.\n"
-"Siehe http://irrlicht.sourceforge.net/docu/"
-"namespaceirr.html#a54da2a0e231901735e3da1b0edf72eb3"
+"Siehe http://irrlicht.sourceforge.net/docu/namespaceirr."
+"html#a54da2a0e231901735e3da1b0edf72eb3"
 
 #: src/settings_translation_file.cpp
 msgid ""
@@ -4332,8 +4440,8 @@ msgid ""
 "html#a54da2a0e231901735e3da1b0edf72eb3"
 msgstr ""
 "Taste, um die Anzeige des Chats umzuschalten.\n"
-"Siehe http://irrlicht.sourceforge.net/docu/"
-"namespaceirr.html#a54da2a0e231901735e3da1b0edf72eb3"
+"Siehe http://irrlicht.sourceforge.net/docu/namespaceirr."
+"html#a54da2a0e231901735e3da1b0edf72eb3"
 
 #: src/settings_translation_file.cpp
 msgid ""
@@ -4352,8 +4460,8 @@ msgid ""
 "html#a54da2a0e231901735e3da1b0edf72eb3"
 msgstr ""
 "Taste zum Umschalten der Anzeige des Nebels.\n"
-"Siehe http://irrlicht.sourceforge.net/docu/"
-"namespaceirr.html#a54da2a0e231901735e3da1b0edf72eb3"
+"Siehe http://irrlicht.sourceforge.net/docu/namespaceirr."
+"html#a54da2a0e231901735e3da1b0edf72eb3"
 
 #: src/settings_translation_file.cpp
 msgid ""
@@ -4641,10 +4749,11 @@ msgstr ""
 "zu deaktivieren."
 
 #: src/settings_translation_file.cpp
+#, fuzzy
 msgid ""
 "Map generation attributes specific to Mapgen Valleys.\n"
 "'altitude_chill': Reduces heat with altitude.\n"
-"'humid_rivers': Increases humidity around rivers and where water pools.\n"
+"'humid_rivers': Increases humidity around rivers.\n"
 "'vary_river_depth': If enabled, low humidity and high heat causes rivers\n"
 "to become shallower and occasionally dry.\n"
 "'altitude_dry': Reduces humidity with altitude."
@@ -4665,8 +4774,8 @@ msgid ""
 "Flags starting with 'no' are used to explicitly disable them."
 msgstr ""
 "Kartengenerierungsattribute speziell für den flachen Kartengenerator.\n"
-"Zu einer flachen Welt können gelegentliche Seen und Hügel hinzugefügt werden."
-"\n"
+"Zu einer flachen Welt können gelegentliche Seen und Hügel hinzugefügt "
+"werden.\n"
 "Flags, welche in der Flags-Zeichenkette nicht angegeben sind,\n"
 "werden von der Standardeinstellung unverändert gelassen.\n"
 "Flags, welche mit „no“ beginnen, werden benutzt, um sie explizit\n"
@@ -5148,18 +5257,17 @@ msgstr "Anzahl der Erzeugerthreads"
 #: src/settings_translation_file.cpp
 msgid ""
 "Number of emerge threads to use.\n"
-"Make this field blank or 0, or increase this number to use multiple "
-"threads.\n"
-"On multiprocessor systems, this will improve mapgen speed greatly at the "
-"cost\n"
-"of slightly buggy caves."
+"Empty or 0 value:\n"
+"-    Automatic selection. The number of emerge threads will be\n"
+"-    'number of processors - 2', with a lower limit of 1.\n"
+"Any other value:\n"
+"-    Specifies the number of emerge threads, with a lower limit of 1.\n"
+"Warning: Increasing the number of emerge threads increases engine mapgen\n"
+"speed, but this may harm game performance by interfering with other\n"
+"processes, especially in singleplayer and/or when running Lua code in\n"
+"'on_generated'.\n"
+"For many users the optimum setting may be '1'."
 msgstr ""
-"Anzahl der zu benutzenden Erzeugerthreads.\n"
-"Lassen Sie dieses Feld frei oder setzen Sie es auf 0, oder erhöhen Sie "
-"diese\n"
-"Zahl, um mehrere Threads zu verwenden.\n"
-"Auf Mehrprozessorsystemen wird dies die Geschwindigkeit der\n"
-"Kartengenerierung auf Kosten von leicht fehlerhaften Höhlen stark erhöhen."
 
 #: src/settings_translation_file.cpp
 msgid ""
@@ -5176,8 +5284,8 @@ msgid "Number of parallax occlusion iterations."
 msgstr "Anzahl der Parallax-Occlusion-Iterationen."
 
 #: src/settings_translation_file.cpp
-msgid "Offset"
-msgstr "Versatz"
+msgid "Online Content Repository"
+msgstr ""
 
 #: src/settings_translation_file.cpp
 msgid "Opaque liquids"
@@ -5257,12 +5365,14 @@ msgid "Physics"
 msgstr "Physik"
 
 #: src/settings_translation_file.cpp
-msgid "Pitch fly key"
+#, fuzzy
+msgid "Pitch move key"
 msgstr "Nick-Flugtaste"
 
 #: src/settings_translation_file.cpp
-msgid "Pitch fly mode"
-msgstr "Nick-Flugmodus"
+#, fuzzy
+msgid "Pitch move mode"
+msgstr "Nick-Bewegungsmodus aktiviert"
 
 #: src/settings_translation_file.cpp
 msgid ""
@@ -5389,15 +5499,18 @@ msgid "Report path"
 msgstr "Berichtspfad"
 
 #: src/settings_translation_file.cpp
+#, fuzzy
 msgid ""
-"Restricts the access of certain client-side functions on servers\n"
-"Combine these byteflags below to restrict client-side features:\n"
-"LOAD_CLIENT_MODS: 1 (disable client mods loading)\n"
+"Restricts the access of certain client-side functions on servers.\n"
+"Combine the byteflags below to restrict client-side features, or set to 0\n"
+"for no restrictions:\n"
+"LOAD_CLIENT_MODS: 1 (disable loading client-provided mods)\n"
 "CHAT_MESSAGES: 2 (disable send_chat_message call client-side)\n"
 "READ_ITEMDEFS: 4 (disable get_item_def call client-side)\n"
 "READ_NODEDEFS: 8 (disable get_node_def call client-side)\n"
 "LOOKUP_NODES_LIMIT: 16 (limits get_node call client-side to\n"
-"csm_restriction_noderange)"
+"csm_restriction_noderange)\n"
+"READ_PLAYERINFO: 32 (disable get_player_names call client-side)"
 msgstr ""
 "Schränkt den Zugriff auf bestimmte clientseitige Funktionen auf\n"
 "Servern ein. Kombinieren Sie diese Byteflags unten, um client-\n"
@@ -5480,10 +5593,6 @@ msgstr "Fenstergröße automatisch speichern, wenn sie geändert wird."
 #: src/settings_translation_file.cpp
 msgid "Saving map received from server"
 msgstr "Karte vom Server speichern"
-
-#: src/settings_translation_file.cpp
-msgid "Scale"
-msgstr "Skalierung"
 
 #: src/settings_translation_file.cpp
 msgid ""
@@ -5713,18 +5822,6 @@ msgid "Show entity selection boxes"
 msgstr "Entity-Auswahlboxen zeigen"
 
 #: src/settings_translation_file.cpp
-msgid "Show non-free packages"
-msgstr "Unfreie Pakete anzeigen"
-
-#: src/settings_translation_file.cpp
-msgid ""
-"Show packages in the content store that do not qualify as 'free software'\n"
-"as defined by the Free Software Foundation."
-msgstr ""
-"Pakete im Inhaltespeicher anzeigen, die nicht als freie Software nach der\n"
-"Definition der Free Software Foundation gelten."
-
-#: src/settings_translation_file.cpp
 msgid "Shutdown message"
 msgstr "Herunterfahrnachricht"
 
@@ -5741,8 +5838,8 @@ msgstr ""
 "blöcken (16 Blöcke) angegeben.\n"
 "ACHTUNG! Es bringt nichts und es birgt viele Gefahren, diesen Wert über\n"
 "5 zu erhöhen.\n"
-"Die Höhlen- und Verliesdichte wird erhöht, wenn dieser Wert verringert wird."
-"\n"
+"Die Höhlen- und Verliesdichte wird erhöht, wenn dieser Wert verringert "
+"wird.\n"
 "Die Änderung dieses Wertes ist für besondere Verwendungszwecke, es\n"
 "wird empfohlen, ihn unverändert zu lassen."
 
@@ -5947,6 +6044,10 @@ msgstr ""
 "bestimmte\n"
 "Blocktypen zu erzwingen. Bitte beachten Sie, dass diese Option als\n"
 "EXPERIMENTELL eingestuft wird und nicht richtig funktionieren könnte."
+
+#: src/settings_translation_file.cpp
+msgid "The URL for the content repository"
+msgstr ""
 
 #: src/settings_translation_file.cpp
 msgid ""
@@ -6629,6 +6730,12 @@ msgstr "cURL-Parallel-Begrenzung"
 #: src/settings_translation_file.cpp
 msgid "cURL timeout"
 msgstr "cURL-Zeitüberschreitung"
+
+#~ msgid "View"
+#~ msgstr "Anzeigen"
+
+#~ msgid "Advanced Settings"
+#~ msgstr "Erweiterte Einstellungen"
 
 #~ msgid ""
 #~ "Map generation attributes specific to Mapgen flat.\n"
@@ -7673,3 +7780,36 @@ msgstr "cURL-Zeitüberschreitung"
 
 #~ msgid "Disable MP"
 #~ msgstr "MP deaktivieren"
+
+#~ msgid ""
+#~ "Show packages in the content store that do not qualify as 'free "
+#~ "software'\n"
+#~ "as defined by the Free Software Foundation."
+#~ msgstr ""
+#~ "Pakete im Inhaltespeicher anzeigen, die nicht als freie Software nach "
+#~ "der\n"
+#~ "Definition der Free Software Foundation gelten."
+
+#~ msgid "Show non-free packages"
+#~ msgstr "Unfreie Pakete anzeigen"
+
+#~ msgid "Pitch fly mode"
+#~ msgstr "Nick-Flugmodus"
+
+#~ msgid ""
+#~ "Number of emerge threads to use.\n"
+#~ "Make this field blank or 0, or increase this number to use multiple "
+#~ "threads.\n"
+#~ "On multiprocessor systems, this will improve mapgen speed greatly at the "
+#~ "cost\n"
+#~ "of slightly buggy caves."
+#~ msgstr ""
+#~ "Anzahl der zu benutzenden Erzeugerthreads.\n"
+#~ "Lassen Sie dieses Feld frei oder setzen Sie es auf 0, oder erhöhen Sie "
+#~ "diese\n"
+#~ "Zahl, um mehrere Threads zu verwenden.\n"
+#~ "Auf Mehrprozessorsystemen wird dies die Geschwindigkeit der\n"
+#~ "Kartengenerierung auf Kosten von leicht fehlerhaften Höhlen stark erhöhen."
+
+#~ msgid "Content Store"
+#~ msgstr "Inhaltespeicher"

@@ -2,17 +2,18 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-01-24 01:05+0200\n"
-"PO-Revision-Date: 2019-02-01 06:10+0000\n"
-"Last-Translator: narrnika <narr13niki@gmail.com>\n"
+"POT-Creation-Date: 2019-02-14 19:14+0100\n"
+"PO-Revision-Date: 2019-02-09 11:42+0000\n"
+"Last-Translator: Muhammad Rifqi Priyo Susanto "
+"<muhammadrifqipriyosusanto@gmail.com>\n"
 "Language-Team: Russian <https://hosted.weblate.org/projects/minetest/"
 "minetest/ru/>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<="
-"4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: Weblate 3.5-dev\n"
 
 #: builtin/client/death_formspec.lua src/client/game.cpp
@@ -24,11 +25,13 @@ msgid "You died"
 msgstr "Вы умерли"
 
 #: builtin/fstk/ui.lua
-msgid "An error occured in a Lua script, such as a mod:"
+#, fuzzy
+msgid "An error occurred in a Lua script, such as a mod:"
 msgstr "Ошибка в скрипте Lua (например, в моде):"
 
 #: builtin/fstk/ui.lua
-msgid "An error occured:"
+#, fuzzy
+msgid "An error occurred:"
 msgstr "Произошла ошибка:"
 
 #: builtin/fstk/ui.lua
@@ -107,9 +110,10 @@ msgid "Enable modpack"
 msgstr "Включить пакет"
 
 #: builtin/mainmenu/dlg_config_world.lua
+#, fuzzy
 msgid ""
 "Failed to enable mod \"$1\" as it contains disallowed characters. Only "
-"chararacters [a-z0-9_] are allowed."
+"characters [a-z0-9_] are allowed."
 msgstr ""
 "Не удалось включить мод \"$1\", так как он содержит недопустимые символы. "
 "Разрешены только следующие символы: [a-z0-9_]."
@@ -179,6 +183,10 @@ msgid "Mods"
 msgstr "Моды"
 
 #: builtin/mainmenu/dlg_contentstore.lua
+msgid "No packages could be retrieved"
+msgstr ""
+
+#: builtin/mainmenu/dlg_contentstore.lua
 msgid "No results"
 msgstr "Ничего не найдено"
 
@@ -199,11 +207,6 @@ msgstr "Удалить"
 msgid "Update"
 msgstr "Обновить"
 
-#: builtin/mainmenu/dlg_contentstore.lua
-#, fuzzy
-msgid "View"
-msgstr "Просмотр"
-
 #: builtin/mainmenu/dlg_create_world.lua
 msgid "A world named \"$1\" already exists"
 msgstr "Мир «$1» уже существует"
@@ -214,7 +217,7 @@ msgstr "Создать"
 
 #: builtin/mainmenu/dlg_create_world.lua
 #, fuzzy
-msgid "Download a game, such as minetest_game, from minetest.net"
+msgid "Download a game, such as Minetest Game, from minetest.net"
 msgstr "Скачивайте игры, такие как minetest_game, на minetest.net"
 
 #: builtin/mainmenu/dlg_create_world.lua
@@ -234,6 +237,7 @@ msgid "No game selected"
 msgstr "Игра не выбрана"
 
 #: builtin/mainmenu/dlg_create_world.lua
+#: builtin/mainmenu/dlg_settings_advanced.lua
 msgid "Seed"
 msgstr "Зерно"
 
@@ -281,9 +285,20 @@ msgstr "Принять"
 msgid "Rename Modpack:"
 msgstr "Переименовать пакет модов:"
 
+#: builtin/mainmenu/dlg_rename_modpack.lua
+msgid ""
+"This modpack has an explicit name given in its modpack.conf which will "
+"override any renaming here."
+msgstr ""
+
 #: builtin/mainmenu/dlg_settings_advanced.lua
 msgid "(No description of setting given)"
 msgstr "(Нет описания)"
+
+#: builtin/mainmenu/dlg_settings_advanced.lua
+#, fuzzy
+msgid "2D Noise"
+msgstr "Шумы"
 
 #: builtin/mainmenu/dlg_settings_advanced.lua
 msgid "< Back to Settings page"
@@ -306,6 +321,24 @@ msgid "Enabled"
 msgstr "Включено"
 
 #: builtin/mainmenu/dlg_settings_advanced.lua
+#, fuzzy
+msgid "Lacunarity"
+msgstr "Безопасность"
+
+#: builtin/mainmenu/dlg_settings_advanced.lua
+msgid "Octaves"
+msgstr ""
+
+#: builtin/mainmenu/dlg_settings_advanced.lua src/settings_translation_file.cpp
+msgid "Offset"
+msgstr "Смещение"
+
+#: builtin/mainmenu/dlg_settings_advanced.lua
+#, fuzzy
+msgid "Persistance"
+msgstr "Расстояние передачи игрока"
+
+#: builtin/mainmenu/dlg_settings_advanced.lua
 msgid "Please enter a valid integer."
 msgstr "Введите целое число."
 
@@ -318,6 +351,10 @@ msgid "Restore Default"
 msgstr ""
 "Восстановить\n"
 "значение по умолчанию"
+
+#: builtin/mainmenu/dlg_settings_advanced.lua src/settings_translation_file.cpp
+msgid "Scale"
+msgstr "Масштаб"
 
 #: builtin/mainmenu/dlg_settings_advanced.lua
 #, fuzzy
@@ -341,14 +378,51 @@ msgstr "Значение должно быть больше или равно $1
 msgid "The value must not be larger than $1."
 msgstr "Значение не должно быть больше, чем $1."
 
-#: builtin/mainmenu/pkgmgr.lua
+#: builtin/mainmenu/dlg_settings_advanced.lua
+msgid "X"
+msgstr ""
+
+#: builtin/mainmenu/dlg_settings_advanced.lua
+msgid "X spread"
+msgstr ""
+
+#: builtin/mainmenu/dlg_settings_advanced.lua
+msgid "Y"
+msgstr ""
+
+#: builtin/mainmenu/dlg_settings_advanced.lua
+msgid "Y spread"
+msgstr ""
+
+#: builtin/mainmenu/dlg_settings_advanced.lua
+msgid "Z"
+msgstr ""
+
+#: builtin/mainmenu/dlg_settings_advanced.lua
+msgid "Z spread"
+msgstr ""
+
+#: builtin/mainmenu/dlg_settings_advanced.lua
+msgid "absvalue"
+msgstr ""
+
+#: builtin/mainmenu/dlg_settings_advanced.lua
 #, fuzzy
-msgid " mods"
-msgstr "3D режим"
+msgid "defaults"
+msgstr "Стандартная игра"
+
+#: builtin/mainmenu/dlg_settings_advanced.lua
+msgid "eased"
+msgstr ""
 
 #: builtin/mainmenu/pkgmgr.lua
 msgid "$1 (Enabled)"
 msgstr "$1 (включено)"
+
+#: builtin/mainmenu/pkgmgr.lua
+#, fuzzy
+msgid "$1 mods"
+msgstr "3D режим"
 
 #: builtin/mainmenu/pkgmgr.lua
 msgid "Failed to install $1 to $2"
@@ -589,8 +663,9 @@ msgid "8x"
 msgstr "8x"
 
 #: builtin/mainmenu/tab_settings.lua
-msgid "Advanced Settings"
-msgstr "Расширенные настройки"
+#, fuzzy
+msgid "All Settings"
+msgstr "Настройки"
 
 #: builtin/mainmenu/tab_settings.lua
 msgid "Antialiasing:"
@@ -815,7 +890,7 @@ msgstr "По этому пути мира нет: "
 
 #: src/client/fontengine.cpp
 msgid "needs_fallback_font"
-msgstr "needs_fallback_font"
+msgstr ""
 
 #: src/client/game.cpp
 msgid ""
@@ -1573,8 +1648,8 @@ msgstr "Клавиша уже используется"
 #: src/gui/guiKeyChangeMenu.cpp
 msgid "Keybindings. (If this menu screws up, remove stuff from minetest.conf)"
 msgstr ""
-"Сочетания клавиш (если это меню сломалось, удалите настройки из "
-"minetest.conf)"
+"Сочетания клавиш (если это меню сломалось, удалите настройки из minetest."
+"conf)"
 
 #: src/gui/guiKeyChangeMenu.cpp
 msgid "Local command"
@@ -1747,15 +1822,15 @@ msgid "2D noise that controls the shape/size of step mountains."
 msgstr ""
 
 #: src/settings_translation_file.cpp
-msgid "2D noise that controls the size/occurance of ridged mountain ranges."
+msgid "2D noise that controls the size/occurrence of ridged mountain ranges."
 msgstr ""
 
 #: src/settings_translation_file.cpp
-msgid "2D noise that controls the size/occurance of rolling hills."
+msgid "2D noise that controls the size/occurrence of rolling hills."
 msgstr ""
 
 #: src/settings_translation_file.cpp
-msgid "2D noise that controls the size/occurance of step mountain ranges."
+msgid "2D noise that controls the size/occurrence of step mountain ranges."
 msgstr ""
 
 #: src/settings_translation_file.cpp
@@ -1994,9 +2069,7 @@ msgid "Automatic forwards key"
 msgstr "Клавиша  вперёд"
 
 #: src/settings_translation_file.cpp
-msgid ""
-"Automatically jump up single-node obstacles.\n"
-"type: bool"
+msgid "Automatically jump up single-node obstacles."
 msgstr ""
 
 #: src/settings_translation_file.cpp
@@ -2153,14 +2226,14 @@ msgid "Center of light curve mid-boost."
 msgstr ""
 
 #: src/settings_translation_file.cpp
+#, fuzzy
 msgid ""
 "Changes the main menu UI:\n"
-"-   Full:  Multple singleplayer worlds, game choice, texture pack chooser, "
+"-   Full:  Multiple singleplayer worlds, game choice, texture pack chooser, "
 "etc.\n"
 "-   Simple: One singleplayer world, no game or texture pack choosers. May "
 "be\n"
-"necessary for smaller screens.\n"
-"-   Auto: Simple on Android, full on everything else."
+"necessary for smaller screens."
 msgstr ""
 "Изменение интерфейса в главном меню:\n"
 "-   full: выбор миров для одиночной или сетевой игры, список чужих серверов "
@@ -2256,6 +2329,17 @@ msgstr "Цветной туман"
 
 #: src/settings_translation_file.cpp
 msgid ""
+"Comma-separated list of flags to hide in the content repository.\n"
+"\"nonfree\" can be used to hide packages which do not qualify as 'free "
+"software',\n"
+"as defined by the Free Software Foundation.\n"
+"You can also specify content ratings.\n"
+"These flags are independent from Minetest versions,\n"
+"so see a full list at https://content.minetest.net/help/content_flags/"
+msgstr ""
+
+#: src/settings_translation_file.cpp
+msgid ""
 "Comma-separated list of mods that are allowed to access HTTP APIs, which\n"
 "allow them to upload and download data to/from the internet."
 msgstr ""
@@ -2300,8 +2384,13 @@ msgid "Console height"
 msgstr "Высота консоли"
 
 #: src/settings_translation_file.cpp
-msgid "Content Store"
-msgstr "Хранилище дополнений"
+msgid "ContentDB Flag Blacklist"
+msgstr ""
+
+#: src/settings_translation_file.cpp
+#, fuzzy
+msgid "ContentDB URL"
+msgstr "Дополнения"
 
 #: src/settings_translation_file.cpp
 msgid "Continuous forward"
@@ -2638,6 +2727,16 @@ msgstr "Включить получение игроками урона и их 
 #: src/settings_translation_file.cpp
 msgid "Enable random user input (only used for testing)."
 msgstr "Включить случайный ввод (используется только для тестирования)."
+
+#: src/settings_translation_file.cpp
+msgid "Enable register confirmation"
+msgstr ""
+
+#: src/settings_translation_file.cpp
+msgid ""
+"Enable register confirmation when connecting to server.\n"
+"If disabled, new account will be registered automatically."
+msgstr ""
 
 #: src/settings_translation_file.cpp
 msgid ""
@@ -3441,12 +3540,6 @@ msgstr ""
 
 #: src/settings_translation_file.cpp
 msgid ""
-"If enabled together with fly mode, makes move directions relative to the "
-"player's pitch."
-msgstr ""
-
-#: src/settings_translation_file.cpp
-msgid ""
 "If enabled together with fly mode, player is able to fly through solid "
 "nodes.\n"
 "This requires the \"noclip\" privilege on the server."
@@ -3483,6 +3576,12 @@ msgid ""
 msgstr ""
 "Если включено, то сервер не выключится из-за повреждённых данных о мире.\n"
 "Включайте только в том случае, если знаете, что делаете."
+
+#: src/settings_translation_file.cpp
+msgid ""
+"If enabled, makes move directions relative to the player's pitch when flying "
+"or swimming."
+msgstr ""
 
 #: src/settings_translation_file.cpp
 msgid "If enabled, new players cannot join with an empty password."
@@ -4334,7 +4433,7 @@ msgstr ""
 #: src/settings_translation_file.cpp
 #, fuzzy
 msgid ""
-"Key for toggling pitch fly mode.\n"
+"Key for toggling pitch move mode.\n"
 "See http://irrlicht.sourceforge.net/docu/namespaceirr."
 "html#a54da2a0e231901735e3da1b0edf72eb3"
 msgstr ""
@@ -4671,7 +4770,7 @@ msgstr ""
 msgid ""
 "Map generation attributes specific to Mapgen Valleys.\n"
 "'altitude_chill': Reduces heat with altitude.\n"
-"'humid_rivers': Increases humidity around rivers and where water pools.\n"
+"'humid_rivers': Increases humidity around rivers.\n"
 "'vary_river_depth': If enabled, low humidity and high heat causes rivers\n"
 "to become shallower and occasionally dry.\n"
 "'altitude_dry': Reduces humidity with altitude."
@@ -5158,20 +5257,19 @@ msgid "Number of emerge threads"
 msgstr "Количество emerge-потоков"
 
 #: src/settings_translation_file.cpp
-#, fuzzy
 msgid ""
 "Number of emerge threads to use.\n"
-"Make this field blank or 0, or increase this number to use multiple "
-"threads.\n"
-"On multiprocessor systems, this will improve mapgen speed greatly at the "
-"cost\n"
-"of slightly buggy caves."
+"Empty or 0 value:\n"
+"-    Automatic selection. The number of emerge threads will be\n"
+"-    'number of processors - 2', with a lower limit of 1.\n"
+"Any other value:\n"
+"-    Specifies the number of emerge threads, with a lower limit of 1.\n"
+"Warning: Increasing the number of emerge threads increases engine mapgen\n"
+"speed, but this may harm game performance by interfering with other\n"
+"processes, especially in singleplayer and/or when running Lua code in\n"
+"'on_generated'.\n"
+"For many users the optimum setting may be '1'."
 msgstr ""
-"Количество используемых emerge-потоков. Оставьте это поле пустым, или "
-"увеличьте число,\n"
-"чтобы использовать множество потоков. На многопроцессорных системах это "
-"значительно увеличит скорость генерации карты\n"
-"за счёт немного худшей генерации шахт."
 
 #: src/settings_translation_file.cpp
 msgid ""
@@ -5190,8 +5288,8 @@ msgid "Number of parallax occlusion iterations."
 msgstr "Количество итераций Parallax Occlusion."
 
 #: src/settings_translation_file.cpp
-msgid "Offset"
-msgstr "Смещение"
+msgid "Online Content Repository"
+msgstr ""
 
 #: src/settings_translation_file.cpp
 msgid "Opaque liquids"
@@ -5270,12 +5368,13 @@ msgstr "Физика"
 
 #: src/settings_translation_file.cpp
 #, fuzzy
-msgid "Pitch fly key"
+msgid "Pitch move key"
 msgstr "Кнопка полёта"
 
 #: src/settings_translation_file.cpp
-msgid "Pitch fly mode"
-msgstr ""
+#, fuzzy
+msgid "Pitch move mode"
+msgstr "Режим движения вниз/вверх по направлению взгляда включён"
 
 #: src/settings_translation_file.cpp
 msgid ""
@@ -5400,14 +5499,16 @@ msgstr "Путь для сохранения отчётов"
 
 #: src/settings_translation_file.cpp
 msgid ""
-"Restricts the access of certain client-side functions on servers\n"
-"Combine these byteflags below to restrict client-side features:\n"
-"LOAD_CLIENT_MODS: 1 (disable client mods loading)\n"
+"Restricts the access of certain client-side functions on servers.\n"
+"Combine the byteflags below to restrict client-side features, or set to 0\n"
+"for no restrictions:\n"
+"LOAD_CLIENT_MODS: 1 (disable loading client-provided mods)\n"
 "CHAT_MESSAGES: 2 (disable send_chat_message call client-side)\n"
 "READ_ITEMDEFS: 4 (disable get_item_def call client-side)\n"
 "READ_NODEDEFS: 8 (disable get_node_def call client-side)\n"
 "LOOKUP_NODES_LIMIT: 16 (limits get_node call client-side to\n"
-"csm_restriction_noderange)"
+"csm_restriction_noderange)\n"
+"READ_PLAYERINFO: 32 (disable get_player_names call client-side)"
 msgstr ""
 
 #: src/settings_translation_file.cpp
@@ -5486,10 +5587,6 @@ msgstr ""
 #: src/settings_translation_file.cpp
 msgid "Saving map received from server"
 msgstr "Сохранение карты, полученной с сервера"
-
-#: src/settings_translation_file.cpp
-msgid "Scale"
-msgstr "Масштаб"
 
 #: src/settings_translation_file.cpp
 #, fuzzy
@@ -5722,18 +5819,6 @@ msgid "Show entity selection boxes"
 msgstr "Показывать выделение энтити"
 
 #: src/settings_translation_file.cpp
-msgid "Show non-free packages"
-msgstr "Отображать несвободные дополнения"
-
-#: src/settings_translation_file.cpp
-msgid ""
-"Show packages in the content store that do not qualify as 'free software'\n"
-"as defined by the Free Software Foundation."
-msgstr ""
-"Отображать в хранилище дополнения, которые не являются свободным программным "
-"обеспечением по определению Free Software Foundation."
-
-#: src/settings_translation_file.cpp
 msgid "Shutdown message"
 msgstr "Сообщение о выключении"
 
@@ -5940,6 +6025,10 @@ msgid ""
 "However, as this possibility is new, thus may not be used by older servers,\n"
 "this option allows enforcing it for certain node types. Note though that\n"
 "that is considered EXPERIMENTAL and may not work properly."
+msgstr ""
+
+#: src/settings_translation_file.cpp
+msgid "The URL for the content repository"
 msgstr ""
 
 #: src/settings_translation_file.cpp
@@ -6580,6 +6669,13 @@ msgstr "Лимит одновременных соединений cURL"
 #: src/settings_translation_file.cpp
 msgid "cURL timeout"
 msgstr "cURL тайм-аут"
+
+#, fuzzy
+#~ msgid "View"
+#~ msgstr "Просмотр"
+
+#~ msgid "Advanced Settings"
+#~ msgstr "Расширенные настройки"
 
 #~ msgid ""
 #~ "Enable a bit lower water surface, so it doesn't \"fill\" the node "
@@ -7243,3 +7339,32 @@ msgstr "cURL тайм-аут"
 
 #~ msgid "Disable MP"
 #~ msgstr "Отключить набор"
+
+#~ msgid ""
+#~ "Show packages in the content store that do not qualify as 'free "
+#~ "software'\n"
+#~ "as defined by the Free Software Foundation."
+#~ msgstr ""
+#~ "Отображать в хранилище дополнения, которые не являются свободным "
+#~ "программным обеспечением по определению Free Software Foundation."
+
+#~ msgid "Show non-free packages"
+#~ msgstr "Отображать несвободные дополнения"
+
+#, fuzzy
+#~ msgid ""
+#~ "Number of emerge threads to use.\n"
+#~ "Make this field blank or 0, or increase this number to use multiple "
+#~ "threads.\n"
+#~ "On multiprocessor systems, this will improve mapgen speed greatly at the "
+#~ "cost\n"
+#~ "of slightly buggy caves."
+#~ msgstr ""
+#~ "Количество используемых emerge-потоков. Оставьте это поле пустым, или "
+#~ "увеличьте число,\n"
+#~ "чтобы использовать множество потоков. На многопроцессорных системах это "
+#~ "значительно увеличит скорость генерации карты\n"
+#~ "за счёт немного худшей генерации шахт."
+
+#~ msgid "Content Store"
+#~ msgstr "Хранилище дополнений"

@@ -44,6 +44,7 @@ mobs:register_mob("petz:"..pet_name, {
 	damage = 8,
     hp_min = 4,
     hp_max = 8,
+    affinity = 100,
     armor = 200,
 	visual = visual,
 	visual_size = {x=visual_size.x*scale_puppy, y=visual_size.y*scale_puppy},
@@ -82,35 +83,13 @@ mobs:register_mob("petz:"..pet_name, {
 		},
     view_range = 4,
     fear_height = 3,
+    do_punch = function (self, hitter, time_from_last_punch, tool_capabilities, direction)
+    	petz.do_punch(self, hitter, time_from_last_punch, tool_capabilities, direction)
+	end,
+    on_die = function(self, pos)
+    	petz.on_die(self, pos)
+    end,
 	on_rightclick = function(self, clicker)
-		if not(clicker:is_player()) then
-			return false
-		end
-		local player_name = clicker:get_player_name()
-		if (self.owner ~= player_name) then
-			return
-		end
-		local wielded_item = clicker:get_wielded_item()
-		if wielded_item:get_name() == food then
-			if self.health < self.hp_max then
-				self.health = self.health + 2
-				-- Decrease eat
-				local inv = clicker:get_inventory()
-				local count = wielded_item:get_count()
-				count = count - 1
-				if count >= 0 then
-					wielded_item:set_count(count)
-					local wielded_index = clicker:get_wield_index()
-					local wielded_list_name = clicker:get_wield_list()
-					inv:set_stack(wielded_list_name, wielded_index, wielded_item)
-					--brewing.magic_sound("to_player", clicker, "brewing_eat")
-				end
-			else
-				--brewing.magic_sound("to_player", clicker, "brewing_magic_failure")
-			end
-		else
-			petz.pet = self			
-			minetest.show_formspec(player_name, "petz:form_orders", petz.create_form(pet_name))
-		end
+		petz.on_rightclick(self, clicker, pet_name)
 	end,
 })

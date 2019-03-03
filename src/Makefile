@@ -6053,6 +6053,33 @@ unittest/test_activeobject.cpp.s:
 	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/unittest/test_activeobject.cpp.s
 .PHONY : unittest/test_activeobject.cpp.s
 
+unittest/test_address.o: unittest/test_address.cpp.o
+
+.PHONY : unittest/test_address.o
+
+# target to build an object file
+unittest/test_address.cpp.o:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/unittest/test_address.cpp.o
+.PHONY : unittest/test_address.cpp.o
+
+unittest/test_address.i: unittest/test_address.cpp.i
+
+.PHONY : unittest/test_address.i
+
+# target to preprocess a source file
+unittest/test_address.cpp.i:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/unittest/test_address.cpp.i
+.PHONY : unittest/test_address.cpp.i
+
+unittest/test_address.s: unittest/test_address.cpp.s
+
+.PHONY : unittest/test_address.s
+
+# target to generate assembly for a file
+unittest/test_address.cpp.s:
+	cd /opt/minetest && $(MAKE) -f src/CMakeFiles/minetest.dir/build.make src/CMakeFiles/minetest.dir/unittest/test_address.cpp.s
+.PHONY : unittest/test_address.cpp.s
+
 unittest/test_areastore.o: unittest/test_areastore.cpp.o
 
 .PHONY : unittest/test_areastore.o
@@ -8095,6 +8122,9 @@ help:
 	@echo "... unittest/test_activeobject.o"
 	@echo "... unittest/test_activeobject.i"
 	@echo "... unittest/test_activeobject.s"
+	@echo "... unittest/test_address.o"
+	@echo "... unittest/test_address.i"
+	@echo "... unittest/test_address.s"
 	@echo "... unittest/test_areastore.o"
 	@echo "... unittest/test_areastore.i"
 	@echo "... unittest/test_areastore.s"

@@ -11,8 +11,6 @@ local S = minetest.get_translator(minetest.get_current_modname())
 
 petz = {}
 
-petz.settings = {}
-
 petz.register_cubic = function(node_name, fixed, tiles)
 		minetest.register_node(node_name, {
 		drawtype = "nodebox",
@@ -26,6 +24,8 @@ petz.register_cubic = function(node_name, fixed, tiles)
     	groups = {not_in_creative_inventory = 1},
 	})		
 end
+
+petz.settings = {}
 
 --Load the settings
 assert(loadfile(modpath .. "/settings.lua"))(modpath, S)
@@ -48,12 +48,22 @@ end
 
 --Form Dialog
 
-petz.pet = nil
+petz.pet = {}
 
-petz.create_form = function(pet_name)
-	local form_pet_orders =
-		"size[3,5;]"..
-		"image[1,0;1,1;petz_spawnegg_"..pet_name..".png]"..
+petz.create_form = function(player_name, pet_name)
+    local pet = petz.pet[player_name] 
+    if pet.affinity == nil then
+        pet.affinity = 0
+    end
+	local form_pet_orders = "size[3,5;]"
+    if petz.settings.type_api == "mobkit" then        
+		form_pet_orders = form_pet_orders.."image[0,0;1,1;petz_spawnegg_"..pet_name..".png]"..
+                "image[1,0;1,1;petz_affinity_heart.png]"..
+                "label[2,0;".. tostring(pet.affinity).."%]"
+    else
+        form_pet_orders = form_pet_orders.."image[1,0;1,1;petz_spawnegg_"..pet_name..".png]"
+    end
+    form_pet_orders = form_pet_orders..
 		"button_exit[0,1;3,1;btn_followme;"..S("Follow me").."]"..
 		"button_exit[0,2;3,1;btn_standhere;"..S("Stand here").."]"..
 		"button_exit[0,3;3,1;btn_ownthing;"..S("Do your own thing").."]"..	
@@ -61,25 +71,69 @@ petz.create_form = function(pet_name)
 	return form_pet_orders
 end
 
-
 minetest.register_on_player_receive_fields(function(player, formname, fields)
 	if (formname ~= "petz:form_orders") then
 		return false
 	end
-	if petz.pet == nil then -- if pet dies after her formspec opened
-		return true
+    local pet = petz.pet[player:get_player_name()] 
+	if pet == nil then -- if pet dies after her formspec opened
+		return false
 	end
 	--brewing.magic_sound("to_player", player, "brewing_select")
 	if fields.btn_followme then
-		petz.pet.order = "follow"
+		pet.order = "follow"
 	elseif fields.btn_standhere then
-		petz.pet.order = "stand"
+		pet.order = "stand"
 	elseif fields.btn_ownthing then
-		petz.pet.order = ""
-		petz.pet.state = "walk"
+		pet.order = ""
+		pet.state = "walk"
 	end
 	return true
 end)
+
+petz.on_rightclick = function(self, clicker, pet_name)
+        if not(clicker:is_player()) then
+            return false
+        end
+        local player_name = clicker:get_player_name()
+        if (self.owner ~= player_name) then
+            return
+        end
+        local wielded_item = clicker:get_wielded_item()
+        if wielded_item:get_name() == food then
+            if self.health < self.hp_max then
+                self.health = self.health + 2
+                -- Decrease eat
+                local inv = clicker:get_inventory()
+                local count = wielded_item:get_count()
+                count = count - 1
+                if count >= 0 then
+                    wielded_item:set_count(count)
+                    local wielded_index = clicker:get_wield_index()
+                    local wielded_list_name = clicker:get_wield_list()
+                    inv:set_stack(wielded_list_name, wielded_index, wielded_item)
+                    --brewing.magic_sound("to_player", clicker, "brewing_eat")
+                end
+            else
+                --brewing.magic_sound("to_player", clicker, "brewing_magic_failure")
+            end
+        else
+            petz.pet[player_name]= self 
+            minetest.show_formspec(player_name, "petz:form_orders", petz.create_form(player_name, pet_name))
+        end
+end
+
+petz.on_die = function(self, pos)
+    petz.pet[self.owner]= nil
+end
+
+petz.do_punch = function (self, hitter, time_from_last_punch, tool_capabilities, direction)
+    if petz.settings.type_api == "mobkit" then 
+        if self.owner == hitter:get_player_name() then
+            self.affinity = self.affinity - 20
+        end
+    end
+end
 
 if petz.settings.kitty_spawn then
 

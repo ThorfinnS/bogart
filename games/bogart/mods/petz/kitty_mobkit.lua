@@ -50,6 +50,7 @@ minetest.register_entity("petz:kitty", {
     hp_min = 4,
     hp_max = 8,
     armor = 200,
+    affinitty = 100,
     --stepheight = 1,
 	collide_with_objects = true,
 	collisionbox = CollisionBox,

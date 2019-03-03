@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-01-12 13:07+0200\n"
-"PO-Revision-Date: 2019-01-26 00:08+0000\n"
+"POT-Creation-Date: 2019-02-14 19:14+0100\n"
+"PO-Revision-Date: 2019-02-12 20:07+0000\n"
 "Last-Translator: Mateusz Mendel <mendelm9@gmail.com>\n"
 "Language-Team: Polish <https://hosted.weblate.org/projects/minetest/minetest/"
 "pl/>\n"
@@ -24,11 +24,13 @@ msgid "You died"
 msgstr "Umarłeś"
 
 #: builtin/fstk/ui.lua
-msgid "An error occured in a Lua script, such as a mod:"
+#, fuzzy
+msgid "An error occurred in a Lua script, such as a mod:"
 msgstr "Wystąpił błąd w skrypcie Lua modyfikacji:"
 
 #: builtin/fstk/ui.lua
-msgid "An error occured:"
+#, fuzzy
+msgid "An error occurred:"
 msgstr "Wystąpił błąd:"
 
 #: builtin/fstk/ui.lua
@@ -108,9 +110,10 @@ msgid "Enable modpack"
 msgstr "Aktywuj moda"
 
 #: builtin/mainmenu/dlg_config_world.lua
+#, fuzzy
 msgid ""
 "Failed to enable mod \"$1\" as it contains disallowed characters. Only "
-"chararacters [a-z0-9_] are allowed."
+"characters [a-z0-9_] are allowed."
 msgstr ""
 "Nie udało się aktywować moda \"$1\", ponieważ zawiera niedozwolone znaki. "
 "Tylko znaki [a-z0-9_] są dozwolone."
@@ -179,6 +182,10 @@ msgid "Mods"
 msgstr "Mody"
 
 #: builtin/mainmenu/dlg_contentstore.lua
+msgid "No packages could be retrieved"
+msgstr ""
+
+#: builtin/mainmenu/dlg_contentstore.lua
 msgid "No results"
 msgstr "Brak Wyników"
 
@@ -199,10 +206,6 @@ msgstr "Odinstaluj"
 msgid "Update"
 msgstr "Aktualizacja"
 
-#: builtin/mainmenu/dlg_contentstore.lua
-msgid "View"
-msgstr "Widok"
-
 #: builtin/mainmenu/dlg_create_world.lua
 msgid "A world named \"$1\" already exists"
 msgstr "Istnieje już świat o nazwie \"$1\""
@@ -212,7 +215,8 @@ msgid "Create"
 msgstr "Utwórz"
 
 #: builtin/mainmenu/dlg_create_world.lua
-msgid "Download a game, such as minetest_game, from minetest.net"
+#, fuzzy
+msgid "Download a game, such as Minetest Game, from minetest.net"
 msgstr "Pobierz tryb gry (np. minetest_game), z minetest.net"
 
 #: builtin/mainmenu/dlg_create_world.lua
@@ -232,6 +236,7 @@ msgid "No game selected"
 msgstr "Nie wybrano gry"
 
 #: builtin/mainmenu/dlg_create_world.lua
+#: builtin/mainmenu/dlg_settings_advanced.lua
 msgid "Seed"
 msgstr "Ziarno losowości"
 
@@ -278,9 +283,20 @@ msgstr "Zaakceptuj"
 msgid "Rename Modpack:"
 msgstr "Zmień nazwe Paczki Modów:"
 
+#: builtin/mainmenu/dlg_rename_modpack.lua
+msgid ""
+"This modpack has an explicit name given in its modpack.conf which will "
+"override any renaming here."
+msgstr ""
+
 #: builtin/mainmenu/dlg_settings_advanced.lua
 msgid "(No description of setting given)"
 msgstr "(brak opisu)"
+
+#: builtin/mainmenu/dlg_settings_advanced.lua
+#, fuzzy
+msgid "2D Noise"
+msgstr "Szumy"
 
 #: builtin/mainmenu/dlg_settings_advanced.lua
 msgid "< Back to Settings page"
@@ -303,6 +319,25 @@ msgid "Enabled"
 msgstr "Włączone"
 
 #: builtin/mainmenu/dlg_settings_advanced.lua
+#, fuzzy
+msgid "Lacunarity"
+msgstr "Bezpieczeństwo"
+
+#: builtin/mainmenu/dlg_settings_advanced.lua
+msgid "Octaves"
+msgstr ""
+
+#: builtin/mainmenu/dlg_settings_advanced.lua src/settings_translation_file.cpp
+#, fuzzy
+msgid "Offset"
+msgstr "Margines"
+
+#: builtin/mainmenu/dlg_settings_advanced.lua
+#, fuzzy
+msgid "Persistance"
+msgstr "Odległość przesyłania graczy"
+
+#: builtin/mainmenu/dlg_settings_advanced.lua
 msgid "Please enter a valid integer."
 msgstr "Proszę wpisać prawidłową liczbę."
 
@@ -313,6 +348,10 @@ msgstr "Proszę wpisać prawidłowy numer."
 #: builtin/mainmenu/dlg_settings_advanced.lua
 msgid "Restore Default"
 msgstr "Przywróć domyślne"
+
+#: builtin/mainmenu/dlg_settings_advanced.lua src/settings_translation_file.cpp
+msgid "Scale"
+msgstr "Skaluj"
 
 #: builtin/mainmenu/dlg_settings_advanced.lua
 msgid "Select directory"
@@ -334,13 +373,51 @@ msgstr "Wartość musi wynosić co najmniej $1."
 msgid "The value must not be larger than $1."
 msgstr "Wartość nie może być większa niż $1."
 
-#: builtin/mainmenu/pkgmgr.lua
-msgid " mods"
-msgstr " Modyfikacje"
+#: builtin/mainmenu/dlg_settings_advanced.lua
+msgid "X"
+msgstr ""
+
+#: builtin/mainmenu/dlg_settings_advanced.lua
+msgid "X spread"
+msgstr ""
+
+#: builtin/mainmenu/dlg_settings_advanced.lua
+msgid "Y"
+msgstr ""
+
+#: builtin/mainmenu/dlg_settings_advanced.lua
+msgid "Y spread"
+msgstr ""
+
+#: builtin/mainmenu/dlg_settings_advanced.lua
+msgid "Z"
+msgstr ""
+
+#: builtin/mainmenu/dlg_settings_advanced.lua
+msgid "Z spread"
+msgstr ""
+
+#: builtin/mainmenu/dlg_settings_advanced.lua
+msgid "absvalue"
+msgstr ""
+
+#: builtin/mainmenu/dlg_settings_advanced.lua
+#, fuzzy
+msgid "defaults"
+msgstr "Domyślna gra"
+
+#: builtin/mainmenu/dlg_settings_advanced.lua
+msgid "eased"
+msgstr ""
 
 #: builtin/mainmenu/pkgmgr.lua
 msgid "$1 (Enabled)"
 msgstr "$1 (Aktywny)"
+
+#: builtin/mainmenu/pkgmgr.lua
+#, fuzzy
+msgid "$1 mods"
+msgstr " Modyfikacje"
 
 #: builtin/mainmenu/pkgmgr.lua
 msgid "Failed to install $1 to $2"
@@ -566,8 +643,9 @@ msgid "8x"
 msgstr "8x"
 
 #: builtin/mainmenu/tab_settings.lua
-msgid "Advanced Settings"
-msgstr "Ustawienia zaawansowane"
+#, fuzzy
+msgid "All Settings"
+msgstr "Ustawienia"
 
 #: builtin/mainmenu/tab_settings.lua
 msgid "Antialiasing:"
@@ -1164,12 +1242,12 @@ msgid "Viewing range changed to %d"
 msgstr "Zmieniono zasięg widoczności na %d%%"
 
 #: src/client/game.cpp
-#, c-format, fuzzy
+#, fuzzy, c-format
 msgid "Viewing range is at maximum: %d"
 msgstr "Zasięg widoczności na maksimum:%d1"
 
 #: src/client/game.cpp
-#, c-format, fuzzy
+#, fuzzy, c-format
 msgid "Viewing range is at minimum: %d"
 msgstr "Zasięg widoczności na minimum: %d1"
 
@@ -1773,17 +1851,18 @@ msgstr "Szum 2D, który wpływa na kształt/ rozmiar górskich stepów."
 
 #: src/settings_translation_file.cpp
 #, fuzzy
-msgid "2D noise that controls the size/occurance of ridged mountain ranges."
+msgid "2D noise that controls the size/occurrence of ridged mountain ranges."
 msgstr "Szum 2D, który wpływa na rozmiar/występowanie łańcuchów górskich."
 
 #: src/settings_translation_file.cpp
 #, fuzzy
-msgid "2D noise that controls the size/occurance of rolling hills."
+msgid "2D noise that controls the size/occurrence of rolling hills."
 msgstr "Szum 2D, który wpływa na rozmiar/występowanie zaokrąglonych wzgórz."
 
 #: src/settings_translation_file.cpp
-msgid "2D noise that controls the size/occurance of step mountain ranges."
-msgstr ""
+#, fuzzy
+msgid "2D noise that controls the size/occurrence of step mountain ranges."
+msgstr "Szum 2D, który wpływa na rozmiar/występowanie łańcuchów górskich."
 
 #: src/settings_translation_file.cpp
 msgid "3D clouds"
@@ -2032,9 +2111,7 @@ msgstr "Klawisz automatycznego poruszania się do przodu"
 
 #: src/settings_translation_file.cpp
 #, fuzzy
-msgid ""
-"Automatically jump up single-node obstacles.\n"
-"type: bool"
+msgid "Automatically jump up single-node obstacles."
 msgstr ""
 "Automatycznie przeskakuj jedno-blokowe przeszkody.\n"
 "type: bool"
@@ -2188,12 +2265,11 @@ msgstr ""
 #: src/settings_translation_file.cpp
 msgid ""
 "Changes the main menu UI:\n"
-"-   Full:  Multple singleplayer worlds, game choice, texture pack chooser, "
+"-   Full:  Multiple singleplayer worlds, game choice, texture pack chooser, "
 "etc.\n"
 "-   Simple: One singleplayer world, no game or texture pack choosers. May "
 "be\n"
-"necessary for smaller screens.\n"
-"-   Auto: Simple on Android, full on everything else."
+"necessary for smaller screens."
 msgstr ""
 
 #: src/settings_translation_file.cpp
@@ -2286,6 +2362,17 @@ msgstr "Kolorowa mgła"
 
 #: src/settings_translation_file.cpp
 msgid ""
+"Comma-separated list of flags to hide in the content repository.\n"
+"\"nonfree\" can be used to hide packages which do not qualify as 'free "
+"software',\n"
+"as defined by the Free Software Foundation.\n"
+"You can also specify content ratings.\n"
+"These flags are independent from Minetest versions,\n"
+"so see a full list at https://content.minetest.net/help/content_flags/"
+msgstr ""
+
+#: src/settings_translation_file.cpp
+msgid ""
 "Comma-separated list of mods that are allowed to access HTTP APIs, which\n"
 "allow them to upload and download data to/from the internet."
 msgstr ""
@@ -2329,9 +2416,13 @@ msgid "Console height"
 msgstr "Wysokość konsoli"
 
 #: src/settings_translation_file.cpp
+msgid "ContentDB Flag Blacklist"
+msgstr ""
+
+#: src/settings_translation_file.cpp
 #, fuzzy
-msgid "Content Store"
-msgstr "Zawartość sklepu"
+msgid "ContentDB URL"
+msgstr "Zawartość"
 
 #: src/settings_translation_file.cpp
 msgid "Continuous forward"
@@ -2343,8 +2434,8 @@ msgid ""
 "Continuous forward movement, toggled by autoforward key.\n"
 "Press the autoforward key again or the backwards movement to disable."
 msgstr ""
-"Ciągły ruch naprzód, włączany przez klawisz automatycznego chodzenia w przód."
-"\n"
+"Ciągły ruch naprzód, włączany przez klawisz automatycznego chodzenia w "
+"przód.\n"
 "Aby go wyłączyć wciśnij klawisz jeszcze raz, albo klawisz w tył."
 
 #: src/settings_translation_file.cpp
@@ -2667,6 +2758,16 @@ msgstr "Włącz obrażenia i umieranie graczy."
 #: src/settings_translation_file.cpp
 msgid "Enable random user input (only used for testing)."
 msgstr "Włącz losowe wejście użytkownika (tylko dla testowania)."
+
+#: src/settings_translation_file.cpp
+msgid "Enable register confirmation"
+msgstr ""
+
+#: src/settings_translation_file.cpp
+msgid ""
+"Enable register confirmation when connecting to server.\n"
+"If disabled, new account will be registered automatically."
+msgstr ""
 
 #: src/settings_translation_file.cpp
 msgid ""
@@ -3490,15 +3591,6 @@ msgstr ""
 "ograniczona przydatność trybu noclip."
 
 #: src/settings_translation_file.cpp
-#, fuzzy
-msgid ""
-"If enabled together with fly mode, makes move directions relative to the "
-"player's pitch."
-msgstr ""
-"Jeśli włączona razem z trybem latania, powoduje, że kierunek poruszania jest "
-"zależy do nachylenia gracza."
-
-#: src/settings_translation_file.cpp
 msgid ""
 "If enabled together with fly mode, player is able to fly through solid "
 "nodes.\n"
@@ -3538,6 +3630,15 @@ msgstr ""
 "Jeżeli włączone, nieprawidłowe dane świata nie będą powodować wyłączenia "
 "serwera.\n"
 "Włącz tylko jeżeli wiesz co robisz."
+
+#: src/settings_translation_file.cpp
+#, fuzzy
+msgid ""
+"If enabled, makes move directions relative to the player's pitch when flying "
+"or swimming."
+msgstr ""
+"Jeśli włączona razem z trybem latania, powoduje, że kierunek poruszania jest "
+"zależy do nachylenia gracza."
 
 #: src/settings_translation_file.cpp
 msgid "If enabled, new players cannot join with an empty password."
@@ -4412,7 +4513,7 @@ msgstr ""
 #: src/settings_translation_file.cpp
 #, fuzzy
 msgid ""
-"Key for toggling pitch fly mode.\n"
+"Key for toggling pitch move mode.\n"
 "See http://irrlicht.sourceforge.net/docu/namespaceirr."
 "html#a54da2a0e231901735e3da1b0edf72eb3"
 msgstr ""
@@ -4769,7 +4870,7 @@ msgstr ""
 msgid ""
 "Map generation attributes specific to Mapgen Valleys.\n"
 "'altitude_chill': Reduces heat with altitude.\n"
-"'humid_rivers': Increases humidity around rivers and where water pools.\n"
+"'humid_rivers': Increases humidity around rivers.\n"
 "'vary_river_depth': If enabled, low humidity and high heat causes rivers\n"
 "to become shallower and occasionally dry.\n"
 "'altitude_dry': Reduces humidity with altitude."
@@ -5306,19 +5407,19 @@ msgid "Number of emerge threads"
 msgstr "Numer powstających wątków"
 
 #: src/settings_translation_file.cpp
-#, fuzzy
 msgid ""
 "Number of emerge threads to use.\n"
-"Make this field blank or 0, or increase this number to use multiple "
-"threads.\n"
-"On multiprocessor systems, this will improve mapgen speed greatly at the "
-"cost\n"
-"of slightly buggy caves."
+"Empty or 0 value:\n"
+"-    Automatic selection. The number of emerge threads will be\n"
+"-    'number of processors - 2', with a lower limit of 1.\n"
+"Any other value:\n"
+"-    Specifies the number of emerge threads, with a lower limit of 1.\n"
+"Warning: Increasing the number of emerge threads increases engine mapgen\n"
+"speed, but this may harm game performance by interfering with other\n"
+"processes, especially in singleplayer and/or when running Lua code in\n"
+"'on_generated'.\n"
+"For many users the optimum setting may be '1'."
 msgstr ""
-"Liczba powstających wątków.Usuń to pole, lub zwiększ wartość\n"
-"by używać wielu wątków. W systemach multiprocesorowych, przyśpieszy to "
-"generowanie mapy\n"
-"kosztem lekko zbugowanych jaskiń."
 
 #: src/settings_translation_file.cpp
 #, fuzzy
@@ -5337,9 +5438,8 @@ msgid "Number of parallax occlusion iterations."
 msgstr "Liczba iteracji dla parallax occlusion."
 
 #: src/settings_translation_file.cpp
-#, fuzzy
-msgid "Offset"
-msgstr "Margines"
+msgid "Online Content Repository"
+msgstr ""
 
 #: src/settings_translation_file.cpp
 #, fuzzy
@@ -5433,12 +5533,13 @@ msgstr "Fizyka"
 
 #: src/settings_translation_file.cpp
 #, fuzzy
-msgid "Pitch fly key"
+msgid "Pitch move key"
 msgstr "Klawisz latania"
 
 #: src/settings_translation_file.cpp
-msgid "Pitch fly mode"
-msgstr ""
+#, fuzzy
+msgid "Pitch move mode"
+msgstr "Tryb nachylenia ruchu włączony"
 
 #: src/settings_translation_file.cpp
 #, fuzzy
@@ -5579,14 +5680,16 @@ msgstr "Ścieżka raportu"
 
 #: src/settings_translation_file.cpp
 msgid ""
-"Restricts the access of certain client-side functions on servers\n"
-"Combine these byteflags below to restrict client-side features:\n"
-"LOAD_CLIENT_MODS: 1 (disable client mods loading)\n"
+"Restricts the access of certain client-side functions on servers.\n"
+"Combine the byteflags below to restrict client-side features, or set to 0\n"
+"for no restrictions:\n"
+"LOAD_CLIENT_MODS: 1 (disable loading client-provided mods)\n"
 "CHAT_MESSAGES: 2 (disable send_chat_message call client-side)\n"
 "READ_ITEMDEFS: 4 (disable get_item_def call client-side)\n"
 "READ_NODEDEFS: 8 (disable get_node_def call client-side)\n"
 "LOOKUP_NODES_LIMIT: 16 (limits get_node call client-side to\n"
-"csm_restriction_noderange)"
+"csm_restriction_noderange)\n"
+"READ_PLAYERINFO: 32 (disable get_player_names call client-side)"
 msgstr ""
 
 #: src/settings_translation_file.cpp
@@ -5656,7 +5759,8 @@ msgstr "Bezpieczne kopanie i stawianie"
 
 #: src/settings_translation_file.cpp
 msgid "Sandy beaches occur when np_beach exceeds this value."
-msgstr "Piaszczyste pustynie pojawiają się, gdy np_beach przekroczy tą wartość."
+msgstr ""
+"Piaszczyste pustynie pojawiają się, gdy np_beach przekroczy tą wartość."
 
 #: src/settings_translation_file.cpp
 msgid "Save the map received by the client on disk."
@@ -5670,10 +5774,6 @@ msgstr "Automatycznie zapisuj okno, gdy zostało zmodyfikowane."
 #: src/settings_translation_file.cpp
 msgid "Saving map received from server"
 msgstr "Zapisz mapę otrzymaną z serwera"
-
-#: src/settings_translation_file.cpp
-msgid "Scale"
-msgstr "Skaluj"
 
 #: src/settings_translation_file.cpp
 msgid ""
@@ -5905,21 +6005,6 @@ msgid "Show entity selection boxes"
 msgstr "Pokazuj zaznaczenie wybranych obiektów"
 
 #: src/settings_translation_file.cpp
-#, fuzzy
-msgid "Show non-free packages"
-msgstr "Pokazuj płatne paczki"
-
-#: src/settings_translation_file.cpp
-#, fuzzy
-msgid ""
-"Show packages in the content store that do not qualify as 'free software'\n"
-"as defined by the Free Software Foundation."
-msgstr ""
-"Pokazuj paczki w zawartości sklepu, które nie klasyfikują się jako \"darmowe "
-"oprogramowanie\"\n"
-"określone przez Fundację Darmowego Oprogramowania."
-
-#: src/settings_translation_file.cpp
 msgid "Shutdown message"
 msgstr "Komunikat zamknięcia serwera"
 
@@ -6128,6 +6213,10 @@ msgid ""
 "However, as this possibility is new, thus may not be used by older servers,\n"
 "this option allows enforcing it for certain node types. Note though that\n"
 "that is considered EXPERIMENTAL and may not work properly."
+msgstr ""
+
+#: src/settings_translation_file.cpp
+msgid "The URL for the content repository"
 msgstr ""
 
 #: src/settings_translation_file.cpp
@@ -6616,8 +6705,8 @@ msgstr ""
 "do przeskalowania; wyższe wartości wyglądają lepiej, ale wymagają\n"
 "więcej pamięci. Zalecane użycie potęg liczby 2. Ustawienie wartości wyższej "
 "niż 1\n"
-"może nie dawać widocznych rezultatów chyba, że filtrowanie bilinearne/ "
-"tri-linearne/ anizotropowe jest włączone.\n"
+"może nie dawać widocznych rezultatów chyba, że filtrowanie bilinearne/ tri-"
+"linearne/ anizotropowe jest włączone.\n"
 "Używa się tego również jako rozmiaru tekstur podstawowych bloków "
 "przypisanych dla świata przy autoskalowaniu tekstur."
 
@@ -6785,6 +6874,12 @@ msgstr "Limit równoległy cURL"
 #: src/settings_translation_file.cpp
 msgid "cURL timeout"
 msgstr "Limit czasu cURL"
+
+#~ msgid "View"
+#~ msgstr "Widok"
+
+#~ msgid "Advanced Settings"
+#~ msgstr "Ustawienia zaawansowane"
 
 #, fuzzy
 #~ msgid "Preload inventory textures"
@@ -7444,3 +7539,39 @@ msgstr "Limit czasu cURL"
 
 #~ msgid "Disable MP"
 #~ msgstr "Wyłącz paczkę modów"
+
+#, fuzzy
+#~ msgid ""
+#~ "Show packages in the content store that do not qualify as 'free "
+#~ "software'\n"
+#~ "as defined by the Free Software Foundation."
+#~ msgstr ""
+#~ "Pokazuj paczki w zawartości sklepu, które nie klasyfikują się jako "
+#~ "\"darmowe oprogramowanie\"\n"
+#~ "określone przez Fundację Darmowego Oprogramowania."
+
+#, fuzzy
+#~ msgid "Show non-free packages"
+#~ msgstr "Pokazuj płatne paczki"
+
+#, fuzzy
+#~ msgid "Pitch fly mode"
+#~ msgstr "Tryb pitch fly"
+
+#, fuzzy
+#~ msgid ""
+#~ "Number of emerge threads to use.\n"
+#~ "Make this field blank or 0, or increase this number to use multiple "
+#~ "threads.\n"
+#~ "On multiprocessor systems, this will improve mapgen speed greatly at the "
+#~ "cost\n"
+#~ "of slightly buggy caves."
+#~ msgstr ""
+#~ "Liczba powstających wątków.Usuń to pole, lub zwiększ wartość\n"
+#~ "by używać wielu wątków. W systemach multiprocesorowych, przyśpieszy to "
+#~ "generowanie mapy\n"
+#~ "kosztem lekko zbugowanych jaskiń."
+
+#, fuzzy
+#~ msgid "Content Store"
+#~ msgstr "Zawartość sklepu"
