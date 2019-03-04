@@ -113,6 +113,9 @@ petz.timer = function(self, pet_name)
                     self.health = 0
                 end
             end
+            if self.cleaned == false then
+                petz.set_affinity(self, false, 20)
+            end
             self.fed = false
             self.cleaned = false
             if self.health == 0 then
@@ -135,29 +138,23 @@ petz.on_rightclick = function(self, clicker, pet_name)
             return false
         end
         local player_name = clicker:get_player_name()
-        --if (self.owner ~= player_name) then
-            --return
-        --end
-        --local wielded_item = clicker:get_wielded_item()
-        local food
-        local favorite_food
-        if pet_name == "kitty" then
-            food = petz.settings.kitty_food
-            favorite_food = petz.settings.kitty_favorite_food
-        else
-            food = petz.settings.puppy_food
-            favorite_food = petz.settings.puppy_favorite_food            
-        end 
-        --local wielded_item_name= wielded_item:get_name()
-        local is_favorite_food = false
-        --if wielded_item_name == favorite_food then
-            --is_favorite_food = true
-        --end
-        if mobs:feed_tame(self, clicker, 5, false, true) then
+        local wielded_item = clicker:get_wielded_item()
+        local wielded_item_name= wielded_item:get_name()
+        if wielded_item_name == "petz:hairbrush" then
+            if (self.owner ~= player_name) then
+                return
+            end
+            if petz.settings.tamagochi_mode == true and self.brushed == false then
+                petz.set_affinity(self, true, 5)                
+                self.brushed = true                      
+            end
+        elseif mobs:feed_tame(self, clicker, 5, false, true) then
             --if self.health < self.hp_max then
                 --self.health = self.health + 2
-                petz.set_affinity(self, true, 5)
-                self.fed = true               
+                if petz.settings.tamagochi_mode == true and self.fed == false then
+                    petz.set_affinity(self, true, 5)                
+                    self.fed = true               
+                end
                 -- Decrease food
                 --local inv = clicker:get_inventory()
                 --local count = wielded_item:get_count()

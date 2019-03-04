@@ -32,6 +32,26 @@ if petz.settings.kitty_spawn then
     })
 end
 
+--Pet Hairbrush
+if petz.settings.tamagochi_mode then
+    
+    minetest.register_craftitem("petz:hairbrush", {
+        description = S("Hairbrush"),
+        inventory_image = "petz_hairbrush.png",
+        wield_image = "petz_hairbrush.png"
+    })
+
+    minetest.register_craft({
+        type = "shaped",
+        output = "petz:hairbrush",
+        recipe = {
+            {"", "", ""},
+            {"", "default:stick", "default:string"},
+            {"default:stick", "", ""},
+        }
+    })
+end
+
 if petz.settings.puppy_spawn then
 
     assert(loadfile(modpath .. "/puppy_"..petz.settings.type_api..".lua"))(S) 
