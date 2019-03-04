@@ -9,3 +9,8 @@ Author: Partners In Rhyme
 https://www.freesoundeffects.com/free-track/dogbrk-89468/
 License: Free
 --------------------------------------------
+file name: petz_brushing.ogg
+Author: Zapsplat
+https://www.zapsplat.com/music/person-brushing-hair/
+License: https://www.zapsplat.com/license-type/standard-license/
+--------------------------------------------

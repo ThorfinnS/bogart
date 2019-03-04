@@ -21,11 +21,12 @@ petz.settings.mesh = nil
 petz.settings.visual_size = {}
 petz.settings.rotate = 0
 
+--
 --Form Dialog
+--
 
+--Context
 petz.pet = {} -- A table of pet["owner_name"]="owner_name"
-
---Functions
 
 petz.create_form = function(player_name, pet_name)
     local pet = petz.pet[player_name]
@@ -81,6 +82,10 @@ minetest.register_on_player_receive_fields(function(player, formname, fields)
 	return true
 end)
 
+--
+-- Increase/Descrease the pet affinity
+--
+
 petz.set_affinity = function(self, increase, amount)
     local new_affinitty
     if increase == true then
@@ -95,6 +100,9 @@ petz.set_affinity = function(self, increase, amount)
     end
     self.affinity = new_affinitty
 end
+
+--
+--The Timer for the Tamagochi Mode
 
 petz.timer = function(self, pet_name)
     minetest.after(petz.settings.tamagochi_check_time, function(self, pet_name) 
@@ -113,16 +121,16 @@ petz.timer = function(self, pet_name)
                     self.health = 0
                 end
             end
-            if self.cleaned == false then
+            if self.brushed == false then
                 petz.set_affinity(self, false, 20)
             end
             self.fed = false
-            self.cleaned = false
+            self.brushed = false
             if self.health == 0 then
-                minetest.chat_send_player(self.owner, "Your "..pet_name.." was starved!!!")
+                minetest.chat_send_player(self.owner, S("Your").. " "..pet_name.." "..S("was starved!!!"))
                 self.init_timer  = false
             elseif self.affinity == 0 then
-                minetest.chat_send_player(self.owner, "Your "..pet_name.." abandoned you!!!")
+                minetest.chat_send_player(self.owner, S("Your").." "..pet_name.." "..S("abandoned you!!!"))
                 self.owner = ""
                 self.init_timer  = false
             else
@@ -133,6 +141,10 @@ petz.timer = function(self, pet_name)
     self.init_timer  = false
 end
 
+--
+--Mobs Redo Events
+--
+
 petz.on_rightclick = function(self, clicker, pet_name)
         if not(clicker:is_player()) then
             return false
@@ -140,35 +152,23 @@ petz.on_rightclick = function(self, clicker, pet_name)
         local player_name = clicker:get_player_name()
         local wielded_item = clicker:get_wielded_item()
         local wielded_item_name= wielded_item:get_name()
-        if wielded_item_name == "petz:hairbrush" then
+        if wielded_item_name == "petz:hairbrush" then            
             if (self.owner ~= player_name) then
                 return
-            end
-            if petz.settings.tamagochi_mode == true and self.brushed == false then
+            end           
+            if petz.settings.tamagochi_mode == true and self.brushed == false then                
                 petz.set_affinity(self, true, 5)                
-                self.brushed = true                      
+                self.brushed = true               
+            elseif petz.settings.tamagochi_mode == true and self.brushed == true then  
+                minetest.chat_send_player(self.owner, S("Your").." "..pet_name.." "..S("was brushed already."))
             end
+            petz.do_sound_effect("to_player", player_name, "petz_brushing")
+            petz.do_particles_effect(self.object, self.object:get_pos(), "star")            
         elseif mobs:feed_tame(self, clicker, 5, false, true) then
-            --if self.health < self.hp_max then
-                --self.health = self.health + 2
-                if petz.settings.tamagochi_mode == true and self.fed == false then
-                    petz.set_affinity(self, true, 5)                
-                    self.fed = true               
-                end
-                -- Decrease food
-                --local inv = clicker:get_inventory()
-                --local count = wielded_item:get_count()
-                --count = count - 1
-                --if count >= 0 then
-                  --  wielded_item:set_count(count)
-                    --local wielded_index = clicker:get_wield_index()
-                    --local wielded_list_name = clicker:get_wield_list()
-                    --inv:set_stack(wielded_list_name, wielded_index, wielded_item)
-                    --brewing.magic_sound("to_player", clicker, "brewing_eat")
-                --end
-            --else
-                --brewing.magic_sound("to_player", clicker, "brewing_magic_failure")
-            --end
+            if petz.settings.tamagochi_mode == true and self.fed == false then
+                petz.set_affinity(self, true, 5)                
+                self.fed = true               
+            end
         else            
             petz.pet[player_name]= self
             minetest.show_formspec(player_name, "petz:form_orders", petz.create_form(player_name, pet_name))
@@ -188,4 +188,50 @@ petz.do_punch = function (self, hitter, time_from_last_punch, tool_capabilities,
             self.affinity = self.affinity - 20
         end
     end
+end
+
+--
+--Effects
+--
+
+petz.do_particles_effect = function(obj, pos, particle_type)
+    local minpos
+    minpos = {
+        x = pos.x,
+        y = pos.y,
+        z = pos.z
+    }        
+    local maxpos
+    maxpos = {
+        x = minpos.x+0.4,
+        y = minpos.y-0.5,
+        z = minpos.z+0.4
+    }    
+    local texture_name
+    if particle_type == "star" then
+        texture_name = "petz_star_particle.png"
+    end
+    minetest.add_particlespawner({
+        --attached = obj,
+        amount = 20,
+        time = 1.5,
+        minpos = minpos,
+        maxpos = maxpos,
+        --minvel = {x=1, y=0, z=1},
+        --maxvel = {x=1, y=0, z=1},
+        --minacc = {x=1, y=0, z=1},
+        --maxacc = {x=1, y=0, z=1},
+        minexptime = 1,
+        maxexptime = 1,
+        minsize = 1.5,
+        maxsize = 2.5,
+        collisiondetection = false,
+        vertical = false,
+        texture = texture_name,        
+        glow = 14
+    })
+end
+
+petz.do_sound_effect = function(dest, dest_name, soundfile)
+    minetest.sound_play(soundfile, {dest = dest_name, gain = 0.4})
 end
