@@ -34,7 +34,7 @@ end
 
 --Pet Hairbrush
 if petz.settings.tamagochi_mode then
-    
+
     minetest.register_craftitem("petz:hairbrush", {
         description = S("Hairbrush"),
         inventory_image = "petz_hairbrush.png",
@@ -46,7 +46,7 @@ if petz.settings.tamagochi_mode then
         output = "petz:hairbrush",
         recipe = {
             {"", "", ""},
-            {"", "default:stick", "default:string"},
+            {"", "default:stick", "farming:string"},
             {"default:stick", "", ""},
         }
     })
