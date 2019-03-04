@@ -135,10 +135,10 @@ petz.on_rightclick = function(self, clicker, pet_name)
             return false
         end
         local player_name = clicker:get_player_name()
-        if (self.owner ~= player_name) then
-            return
-        end
-        local wielded_item = clicker:get_wielded_item()
+        --if (self.owner ~= player_name) then
+            --return
+        --end
+        --local wielded_item = clicker:get_wielded_item()
         local food
         local favorite_food
         if pet_name == "kitty" then
@@ -148,30 +148,30 @@ petz.on_rightclick = function(self, clicker, pet_name)
             food = petz.settings.puppy_food
             favorite_food = petz.settings.puppy_favorite_food            
         end 
-        local wielded_item_name= wielded_item:get_name()
+        --local wielded_item_name= wielded_item:get_name()
         local is_favorite_food = false
-        if wielded_item_name == favorite_food then
-            is_favorite_food = true
-        end
-        if wielded_item_name == food or is_favorite_food then
-            if self.health < self.hp_max then
-                self.health = self.health + 2
+        --if wielded_item_name == favorite_food then
+            --is_favorite_food = true
+        --end
+        if mobs:feed_tame(self, clicker, 5, false, true) then
+            --if self.health < self.hp_max then
+                --self.health = self.health + 2
                 petz.set_affinity(self, true, 5)
                 self.fed = true               
                 -- Decrease food
-                local inv = clicker:get_inventory()
-                local count = wielded_item:get_count()
-                count = count - 1
-                if count >= 0 then
-                    wielded_item:set_count(count)
-                    local wielded_index = clicker:get_wield_index()
-                    local wielded_list_name = clicker:get_wield_list()
-                    inv:set_stack(wielded_list_name, wielded_index, wielded_item)
+                --local inv = clicker:get_inventory()
+                --local count = wielded_item:get_count()
+                --count = count - 1
+                --if count >= 0 then
+                  --  wielded_item:set_count(count)
+                    --local wielded_index = clicker:get_wield_index()
+                    --local wielded_list_name = clicker:get_wield_list()
+                    --inv:set_stack(wielded_list_name, wielded_index, wielded_item)
                     --brewing.magic_sound("to_player", clicker, "brewing_eat")
-                end
-            else
+                --end
+            --else
                 --brewing.magic_sound("to_player", clicker, "brewing_magic_failure")
-            end
+            --end
         else            
             petz.pet[player_name]= self
             minetest.show_formspec(player_name, "petz:form_orders", petz.create_form(player_name, pet_name))

@@ -16783,3 +16783,1125 @@
 2019-03-04 16:54:30: ACTION[Main]: Server: Shutting down
 2019-03-04 16:54:30: ACTION[Main]: [mana] Server shuts down. Rescuing data into mana.mt
 2019-03-04 16:54:30: ACTION[Main]: [mana] Wrote mana data into /opt/minetest/bin/../worlds/wqeqwe/mana.mt.
+2019-03-04 17:14:54: WARNING[Main]: Field "noise_threshhold": Deprecated: new name is "noise_threshold".
+2019-03-04 17:14:54: WARNING[Main]: Undeclared global variable "mg_name" accessed at ...inetest/bin/../games/bogart/mods/brewing/meteor/init.lua:15
+2019-03-04 17:14:54: WARNING[Main]: Node 'light_source' value exceeds maximum, limiting to maximum: meteorite:lunar_meteor_hot
+2019-03-04 17:14:54: ACTION[Main]: hb.register_hudbar: health
+2019-03-04 17:14:54: ACTION[Main]: hb.register_hudbar: breath
+2019-03-04 17:14:54: ACTION[Main]: hb.register_hudbar: sprint
+2019-03-04 17:14:54: ACTION[Main]: [mana] mana.mt opened.
+2019-03-04 17:14:54: [Main]: [mana] mana.mt successfully read.
+2019-03-04 17:14:54: ACTION[Main]: hb.register_hudbar: mana
+2019-03-04 17:14:54: ACTION[Main]: [crops] ¡Cargado!
+2019-03-04 17:14:54: WARNING[Main]: Field "tile_images": Deprecated; new name is "tiles".
+2019-03-04 17:14:54: WARNING[Main]: Field "height_min": Deprecated: new name is "y_min".
+2019-03-04 17:14:54: WARNING[Main]: Field "height_max": Deprecated: new name is "y_max".
+2019-03-04 17:14:54: WARNING[Main]: Node 'light_source' value exceeds maximum, limiting to maximum: lavastuff:light
+2019-03-04 17:14:54: ACTION[Main]: hb.register_hudbar: armor
+2019-03-04 17:14:54: ACTION[Main]: [MOD] Mobs Redo loaded
+2019-03-04 17:14:54: ERROR[Main]: ModError: Failed to load and run script from /opt/minetest/bin/../games/bogart/mods/petz/init.lua:
+2019-03-04 17:14:54: ERROR[Main]: /opt/minetest/bin/../games/bogart/mods/petz/init.lua:12: /opt/minetest/bin/../games/bogart/mods/petz/api.lua:175: 'end' expected (to close 'function' at line 133) near 'else'
+2019-03-04 17:14:54: ERROR[Main]: stack traceback:
+2019-03-04 17:14:54: ERROR[Main]: 	[C]: in function 'assert'
+2019-03-04 17:14:54: ERROR[Main]: 	/opt/minetest/bin/../games/bogart/mods/petz/init.lua:12: in main chunk
+2019-03-04 17:14:54: ERROR[Main]: Revisa debug.txt para más detalles.
+2019-03-04 17:14:54: ACTION[Main]: Server: Shutting down
+2019-03-04 17:15:28: WARNING[Main]: Field "noise_threshhold": Deprecated: new name is "noise_threshold".
+2019-03-04 17:15:28: WARNING[Main]: Undeclared global variable "mg_name" accessed at ...inetest/bin/../games/bogart/mods/brewing/meteor/init.lua:15
+2019-03-04 17:15:28: WARNING[Main]: Node 'light_source' value exceeds maximum, limiting to maximum: meteorite:lunar_meteor_hot
+2019-03-04 17:15:28: ACTION[Main]: hb.register_hudbar: health
+2019-03-04 17:15:28: ACTION[Main]: hb.register_hudbar: breath
+2019-03-04 17:15:28: ACTION[Main]: hb.register_hudbar: sprint
+2019-03-04 17:15:28: ACTION[Main]: [mana] mana.mt opened.
+2019-03-04 17:15:28: [Main]: [mana] mana.mt successfully read.
+2019-03-04 17:15:28: ACTION[Main]: hb.register_hudbar: mana
+2019-03-04 17:15:28: ACTION[Main]: [crops] ¡Cargado!
+2019-03-04 17:15:28: WARNING[Main]: Field "tile_images": Deprecated; new name is "tiles".
+2019-03-04 17:15:28: WARNING[Main]: Field "height_min": Deprecated: new name is "y_min".
+2019-03-04 17:15:28: WARNING[Main]: Field "height_max": Deprecated: new name is "y_max".
+2019-03-04 17:15:28: WARNING[Main]: Node 'light_source' value exceeds maximum, limiting to maximum: lavastuff:light
+2019-03-04 17:15:28: ACTION[Main]: hb.register_hudbar: armor
+2019-03-04 17:15:29: ACTION[Main]: [MOD] Mobs Redo loaded
+2019-03-04 17:15:29: ACTION[Main]: [Mod] Mobs Ghost Redo [v0.5.1] loaded.
+2019-03-04 17:15:29: ACTION[Main]: hb.register_hudbar: satiation
+2019-03-04 17:15:29: [Main]: [advanced_npc] INFO: Successfully registered program '"advanced_npc:follow"'
+2019-03-04 17:15:29: [Main]: [advanced_npc] INFO: Successfully registered program '"advanced_npc:idle"'
+2019-03-04 17:15:29: [Main]: [advanced_npc] INFO: Successfully registered program '"advanced_npc:wander"'
+2019-03-04 17:15:29: [Main]: [advanced_npc] INFO: Successfully registered program '"advanced_npc:walk_to_pos"'
+2019-03-04 17:15:29: [Main]: [advanced_npc] INFO: Successfully registered program '"advanced_npc:use_bed"'
+2019-03-04 17:15:29: [Main]: [advanced_npc] INFO: Successfully registered program '"advanced_npc:use_sittable"'
+2019-03-04 17:15:29: [Main]: [advanced_npc] INFO: Successfully registered program '"advanced_npc:internal_property_change"'
+2019-03-04 17:15:29: [Main]: [advanced_npc] INFO: Successfully registered program '"advanced_npc:node_query"'
+2019-03-04 17:15:29: WARNING[Main]: Not registering alias, item with same name is already defined: brewing:sugar -> farming:sugar
+2019-03-04 17:15:29: WARNING[Main]: Not registering alias, item with same name is already defined: brewing:clay_bowl -> food:bowl
+2019-03-04 17:15:29: ACTION[Main]: World at [/opt/minetest/bin/../worlds/wqeqwe]
+2019-03-04 17:15:29: ACTION[Main]: Server for gameid="bogart" listening on 0.0.0.0:49647.
+2019-03-04 17:15:29: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:15:29: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:15:29: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:15:29: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:15:29: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:15:29: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:15:29: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:15:29: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:15:29: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:15:29: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:15:29: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:15:29: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:15:29: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:15:29: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:15:29: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:15:29: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:15:29: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:15:29: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:15:29: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:15:29: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:15:29: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:15:31: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:15:31: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:15:31: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:15:31: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:15:31: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:15:31: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:15:31: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:15:31: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:15:31: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:15:31: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:15:31: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:15:31: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:15:31: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:15:31: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:15:31: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:15:31: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:15:31: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:15:31: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:15:31: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:15:31: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:15:31: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:15:31: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:15:31: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:15:31: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:15:31: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:15:31: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:15:31: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:15:31: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:15:31: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:15:31: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:15:31: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:15:31: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:15:31: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:15:31: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:15:31: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:15:31: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:15:31: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:15:31: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:15:31: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:15:31: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:15:31: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:15:31: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:15:31: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:15:31: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:15:31: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:15:32: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:15:32: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:15:32: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:15:32: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:15:32: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:15:32: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:15:36: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:15:36: ACTION[Server]: singleplayer [127.0.0.1] joins game. 
+2019-03-04 17:15:36: ACTION[Server]: singleplayer joins game. List of players: singleplayer
+2019-03-04 17:15:36: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:15:36: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:15:36: WARNING[Main]: Client side scripting is disabled by client.
+2019-03-04 17:15:36: WARNING[Server]: Undeclared global variable "minetestd" accessed at /opt/minetest/bin/../games/bogart/mods/wield_redo/init.lua:86
+2019-03-04 17:15:46: ACTION[Server]: singleplayer right-clicks object 21: LuaEntitySAO at (-40.9903,3.25,289.324)
+2019-03-04 17:15:48: ACTION[Server]: singleplayer right-clicks object 21: LuaEntitySAO at (-40.7077,3.25,290.593)
+2019-03-04 17:15:51: ACTION[Server]: singleplayer right-clicks object 21: LuaEntitySAO at (-40.0698,3.37444,292.089)
+2019-03-04 17:15:53: ACTION[Main]: Server: Shutting down
+2019-03-04 17:15:53: ACTION[Main]: [mana] Server shuts down. Rescuing data into mana.mt
+2019-03-04 17:15:53: ACTION[Main]: [mana] Wrote mana data into /opt/minetest/bin/../worlds/wqeqwe/mana.mt.
+
+
+-------------
+  Separator
+-------------
+
+2019-03-04 17:16:01: WARNING[Main]: Field "noise_threshhold": Deprecated: new name is "noise_threshold".
+2019-03-04 17:16:01: WARNING[Main]: Undeclared global variable "mg_name" accessed at ...inetest/bin/../games/bogart/mods/brewing/meteor/init.lua:15
+2019-03-04 17:16:01: WARNING[Main]: Node 'light_source' value exceeds maximum, limiting to maximum: meteorite:lunar_meteor_hot
+2019-03-04 17:16:01: ACTION[Main]: hb.register_hudbar: health
+2019-03-04 17:16:01: ACTION[Main]: hb.register_hudbar: breath
+2019-03-04 17:16:01: ACTION[Main]: hb.register_hudbar: sprint
+2019-03-04 17:16:01: ACTION[Main]: [mana] mana.mt opened.
+2019-03-04 17:16:01: [Main]: [mana] mana.mt successfully read.
+2019-03-04 17:16:01: ACTION[Main]: hb.register_hudbar: mana
+2019-03-04 17:16:01: ACTION[Main]: [crops] ¡Cargado!
+2019-03-04 17:16:01: WARNING[Main]: Field "tile_images": Deprecated; new name is "tiles".
+2019-03-04 17:16:01: WARNING[Main]: Field "height_min": Deprecated: new name is "y_min".
+2019-03-04 17:16:01: WARNING[Main]: Field "height_max": Deprecated: new name is "y_max".
+2019-03-04 17:16:01: WARNING[Main]: Node 'light_source' value exceeds maximum, limiting to maximum: lavastuff:light
+2019-03-04 17:16:01: ACTION[Main]: hb.register_hudbar: armor
+2019-03-04 17:16:01: ACTION[Main]: [MOD] Mobs Redo loaded
+2019-03-04 17:16:01: ACTION[Main]: [Mod] Mobs Ghost Redo [v0.5.1] loaded.
+2019-03-04 17:16:01: ACTION[Main]: hb.register_hudbar: satiation
+2019-03-04 17:16:01: [Main]: [advanced_npc] INFO: Successfully registered program '"advanced_npc:follow"'
+2019-03-04 17:16:01: [Main]: [advanced_npc] INFO: Successfully registered program '"advanced_npc:idle"'
+2019-03-04 17:16:01: [Main]: [advanced_npc] INFO: Successfully registered program '"advanced_npc:wander"'
+2019-03-04 17:16:01: [Main]: [advanced_npc] INFO: Successfully registered program '"advanced_npc:walk_to_pos"'
+2019-03-04 17:16:01: [Main]: [advanced_npc] INFO: Successfully registered program '"advanced_npc:use_bed"'
+2019-03-04 17:16:01: [Main]: [advanced_npc] INFO: Successfully registered program '"advanced_npc:use_sittable"'
+2019-03-04 17:16:01: [Main]: [advanced_npc] INFO: Successfully registered program '"advanced_npc:internal_property_change"'
+2019-03-04 17:16:01: [Main]: [advanced_npc] INFO: Successfully registered program '"advanced_npc:node_query"'
+2019-03-04 17:16:01: WARNING[Main]: Not registering alias, item with same name is already defined: brewing:sugar -> farming:sugar
+2019-03-04 17:16:01: WARNING[Main]: Not registering alias, item with same name is already defined: brewing:clay_bowl -> food:bowl
+2019-03-04 17:16:02: ACTION[Main]: World at [/opt/minetest/bin/../worlds/wqeqwe]
+2019-03-04 17:16:02: ACTION[Main]: Server for gameid="bogart" listening on 0.0.0.0:51807.
+2019-03-04 17:16:02: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:16:02: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:16:02: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:16:02: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:16:02: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:16:02: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:16:02: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:16:02: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:16:02: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:16:02: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:16:02: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:16:02: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:16:02: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:16:02: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:16:02: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:16:02: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:16:02: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:16:02: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:16:02: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:16:02: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:16:02: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:16:03: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:16:03: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:16:04: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:16:04: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:16:04: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:16:04: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:16:04: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:16:04: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:16:04: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:16:04: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:16:04: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:16:04: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:16:04: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:16:04: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:16:04: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:16:04: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:16:04: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:16:04: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:16:04: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:16:04: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:16:04: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:16:04: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:16:04: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:16:04: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:16:04: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:16:04: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:16:04: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:16:04: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:16:04: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:16:04: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:16:04: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:16:04: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:16:04: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:16:04: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:16:04: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:16:04: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:16:04: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:16:04: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:16:04: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:16:04: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:16:04: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:16:04: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:16:04: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:16:04: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:16:04: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:16:04: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:16:04: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:16:04: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:16:04: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:16:05: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:16:05: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:16:08: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:16:09: ACTION[Server]: singleplayer [127.0.0.1] joins game. 
+2019-03-04 17:16:09: ACTION[Server]: singleplayer joins game. List of players: singleplayer
+2019-03-04 17:16:09: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:16:09: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:16:09: WARNING[Main]: Client side scripting is disabled by client.
+2019-03-04 17:16:09: WARNING[Server]: Undeclared global variable "minetestd" accessed at /opt/minetest/bin/../games/bogart/mods/wield_redo/init.lua:86
+2019-03-04 17:16:11: ACTION[Server]: singleplayer right-clicks object 3: LuaEntitySAO at (-39,3.25,292)
+2019-03-04 17:16:22: ACTION[Server]: singleplayer right-clicks object 23: LuaEntitySAO at (-38,3.25,290)
+2019-03-04 17:16:24: ACTION[Server]: singleplayer right-clicks object 23: LuaEntitySAO at (-39.3774,3.25,289.021)
+2019-03-04 17:16:26: ACTION[Server]: singleplayer right-clicks object 23: LuaEntitySAO at (-39.5194,3.25,287.101)
+2019-03-04 17:16:29: ACTION[Server]: singleplayer right-clicks object 23: LuaEntitySAO at (-40.3017,3.25,286.104)
+2019-03-04 17:16:33: ACTION[Server]: singleplayer punches object 23: LuaEntitySAO at (-40.8359,3.25,286.166)
+2019-03-04 17:16:36: ACTION[Server]: singleplayer digs default:acacia_bush_leaves at (-41,3,284)
+2019-03-04 17:16:38: ACTION[Server]: singleplayer right-clicks object 23: LuaEntitySAO at (-41.15,2.77883,283.78)
+2019-03-04 17:16:40: ACTION[Server]: singleplayer punches object 23: LuaEntitySAO at (-40.9416,2.96666,283.78)
+2019-03-04 17:16:43: ACTION[Server]: singleplayer right-clicks object 23: LuaEntitySAO at (-40.8488,2.58531,283.78)
+2019-03-04 17:16:45: ACTION[Server]: singleplayer punches object 23: LuaEntitySAO at (-39.011,2.25,283.78)
+2019-03-04 17:16:48: ACTION[Server]: singleplayer right-clicks object 23: LuaEntitySAO at (-36.5911,2.25,281.661)
+2019-03-04 17:17:09: ACTION[Main]: Server: Shutting down
+2019-03-04 17:17:09: ACTION[Main]: [mana] Server shuts down. Rescuing data into mana.mt
+2019-03-04 17:17:09: ACTION[Main]: [mana] Wrote mana data into /opt/minetest/bin/../worlds/wqeqwe/mana.mt.
+2019-03-04 17:17:10: WARNING[Main]: Field "noise_threshhold": Deprecated: new name is "noise_threshold".
+2019-03-04 17:17:10: WARNING[Main]: Undeclared global variable "mg_name" accessed at ...inetest/bin/../games/bogart/mods/brewing/meteor/init.lua:15
+2019-03-04 17:17:10: WARNING[Main]: Node 'light_source' value exceeds maximum, limiting to maximum: meteorite:lunar_meteor_hot
+2019-03-04 17:17:10: ACTION[Main]: hb.register_hudbar: health
+2019-03-04 17:17:10: ACTION[Main]: hb.register_hudbar: breath
+2019-03-04 17:17:10: ACTION[Main]: hb.register_hudbar: sprint
+2019-03-04 17:17:10: ACTION[Main]: [mana] mana.mt opened.
+2019-03-04 17:17:10: [Main]: [mana] mana.mt successfully read.
+2019-03-04 17:17:10: ACTION[Main]: hb.register_hudbar: mana
+2019-03-04 17:17:10: ACTION[Main]: [crops] ¡Cargado!
+2019-03-04 17:17:10: WARNING[Main]: Field "tile_images": Deprecated; new name is "tiles".
+2019-03-04 17:17:10: WARNING[Main]: Field "height_min": Deprecated: new name is "y_min".
+2019-03-04 17:17:10: WARNING[Main]: Field "height_max": Deprecated: new name is "y_max".
+2019-03-04 17:17:10: WARNING[Main]: Node 'light_source' value exceeds maximum, limiting to maximum: lavastuff:light
+2019-03-04 17:17:10: ACTION[Main]: hb.register_hudbar: armor
+2019-03-04 17:17:10: ACTION[Main]: [MOD] Mobs Redo loaded
+2019-03-04 17:17:10: ACTION[Main]: [Mod] Mobs Ghost Redo [v0.5.1] loaded.
+2019-03-04 17:17:10: ACTION[Main]: hb.register_hudbar: satiation
+2019-03-04 17:17:10: [Main]: [advanced_npc] INFO: Successfully registered program '"advanced_npc:follow"'
+2019-03-04 17:17:10: [Main]: [advanced_npc] INFO: Successfully registered program '"advanced_npc:idle"'
+2019-03-04 17:17:10: [Main]: [advanced_npc] INFO: Successfully registered program '"advanced_npc:wander"'
+2019-03-04 17:17:10: [Main]: [advanced_npc] INFO: Successfully registered program '"advanced_npc:walk_to_pos"'
+2019-03-04 17:17:10: [Main]: [advanced_npc] INFO: Successfully registered program '"advanced_npc:use_bed"'
+2019-03-04 17:17:10: [Main]: [advanced_npc] INFO: Successfully registered program '"advanced_npc:use_sittable"'
+2019-03-04 17:17:10: [Main]: [advanced_npc] INFO: Successfully registered program '"advanced_npc:internal_property_change"'
+2019-03-04 17:17:10: [Main]: [advanced_npc] INFO: Successfully registered program '"advanced_npc:node_query"'
+2019-03-04 17:17:10: WARNING[Main]: Not registering alias, item with same name is already defined: brewing:sugar -> farming:sugar
+2019-03-04 17:17:10: WARNING[Main]: Not registering alias, item with same name is already defined: brewing:clay_bowl -> food:bowl
+2019-03-04 17:17:10: ACTION[Main]: World at [/opt/minetest/bin/../worlds/wqeqwe]
+2019-03-04 17:17:10: ACTION[Main]: Server for gameid="bogart" listening on 0.0.0.0:51079.
+2019-03-04 17:17:11: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:17:11: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:17:11: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:17:11: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:17:11: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:17:11: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:17:11: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:17:11: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:17:11: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:17:11: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:17:11: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:17:11: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:17:11: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:17:11: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:17:11: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:17:11: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:17:11: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:17:11: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:17:11: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:17:11: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:17:11: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:17:12: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:17:12: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:17:12: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:17:12: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:17:12: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:17:12: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:17:12: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:17:12: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:17:12: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:17:12: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:17:12: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:17:12: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:17:12: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:17:12: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:17:12: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:17:12: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:17:12: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:17:12: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:17:12: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:17:12: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:17:12: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:17:12: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:17:12: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:17:13: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:17:13: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:17:13: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:17:13: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:17:13: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:17:13: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:17:13: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:17:13: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:17:13: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:17:13: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:17:13: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:17:13: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:17:13: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:17:13: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:17:13: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:17:13: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:17:13: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:17:13: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:17:13: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:17:13: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:17:13: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:17:13: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:17:13: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:17:13: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:17:13: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:17:13: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:17:14: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:17:14: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:17:17: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:17:18: ACTION[Server]: singleplayer [127.0.0.1] joins game. 
+2019-03-04 17:17:18: ACTION[Server]: singleplayer joins game. List of players: singleplayer
+2019-03-04 17:17:18: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:17:18: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:17:18: WARNING[Main]: Client side scripting is disabled by client.
+2019-03-04 17:17:18: WARNING[Server]: Undeclared global variable "minetestd" accessed at /opt/minetest/bin/../games/bogart/mods/wield_redo/init.lua:86
+2019-03-04 17:17:21: ACTION[Server]: singleplayer right-clicks object 3: LuaEntitySAO at (-37,2.25,282)
+2019-03-04 17:17:22: ACTION[Server]: singleplayer right-clicks object 3: LuaEntitySAO at (-37,2.25,282)
+2019-03-04 17:17:24: ACTION[Server]: singleplayer right-clicks object 3: LuaEntitySAO at (-37.5649,2.25,282.493)
+2019-03-04 17:17:27: ACTION[Server]: singleplayer right-clicks object 3: LuaEntitySAO at (-37.5649,2.25,282.493)
+2019-03-04 17:17:29: ACTION[Server]: singleplayer right-clicks object 3: LuaEntitySAO at (-37.6028,2.25,282.527)
+2019-03-04 17:17:33: ACTION[Server]: singleplayer right-clicks object 3: LuaEntitySAO at (-38.0662,2.25,282.707)
+2019-03-04 17:17:35: ACTION[Server]: singleplayer right-clicks object 3: LuaEntitySAO at (-38.7376,2.25,282.856)
+2019-03-04 17:17:37: ACTION[Server]: singleplayer right-clicks object 3: LuaEntitySAO at (-39.15,2.75627,282.821)
+2019-03-04 17:17:41: ACTION[Server]: singleplayer punches object 3: LuaEntitySAO at (-39.1325,2.25,283.326)
+2019-03-04 17:17:42: ACTION[Server]: singleplayer right-clicks object 3: LuaEntitySAO at (-39.0849,2.25,281.607)
+2019-03-04 17:17:44: ACTION[Server]: singleplayer right-clicks object 3: LuaEntitySAO at (-39.0343,2.25,279.775)
+2019-03-04 17:17:53: ACTION[Server]: singleplayer right-clicks object 27: LuaEntitySAO at (-42,2.625,279)
+2019-03-04 17:17:55: ACTION[Server]: singleplayer punches object 27: LuaEntitySAO at (-42.7277,2.625,279.181)
+2019-03-04 17:17:56: ACTION[Server]: singleplayer right-clicks object 27: LuaEntitySAO at (-43.9175,2.625,278.641)
+2019-03-04 17:17:59: ACTION[Server]: singleplayer right-clicks object 27: LuaEntitySAO at (-46.5878,2.625,277.428)
+2019-03-04 17:18:03: ACTION[Server]: singleplayer right-clicks object 27: LuaEntitySAO at (-48.9249,2.625,276.366)
+2019-03-04 17:18:05: ACTION[Server]: singleplayer right-clicks object 27: LuaEntitySAO at (-49.084,2.625,276.294)
+2019-03-04 17:18:10: ACTION[Server]: singleplayer right-clicks object 27: LuaEntitySAO at (-50.4675,3.625,275.617)
+2019-03-04 17:18:14: ACTION[Server]: singleplayer right-clicks object 27: LuaEntitySAO at (-52.8582,3.625,274.531)
+2019-03-04 17:18:16: ACTION[Server]: singleplayer right-clicks object 27: LuaEntitySAO at (-54.1609,3.625,273.466)
+2019-03-04 17:18:18: ACTION[Server]: singleplayer punches object 27: LuaEntitySAO at (-55.2235,3.625,272.661)
+2019-03-04 17:18:20: [Server]: Music playback try rejected	0.65340477683814	>	0.2
+2019-03-04 17:18:25: ACTION[Server]: singleplayer right-clicks object 30: LuaEntitySAO at (-53.9659,3.25,273.037)
+2019-03-04 17:18:27: ACTION[Server]: singleplayer punches object 30: LuaEntitySAO at (-52.7507,3.25,274.415)
+2019-03-04 17:18:28: ACTION[Server]: singleplayer punches object 30: LuaEntitySAO at (-53.78,3.25,273.293)
+2019-03-04 17:18:30: ACTION[Server]: singleplayer punches object 30: LuaEntitySAO at (-55.8838,3.25,270.999)
+2019-03-04 17:18:31: ACTION[Server]: singleplayer punches object 30: LuaEntitySAO at (-56.1103,3.42516,270.749)
+2019-03-04 17:18:31: ACTION[Server]: singleplayer punches object 30: LuaEntitySAO at (-56.708,3.25,270.09)
+2019-03-04 17:18:35: ACTION[Server]: singleplayer uses mobs:meat_raw, pointing at [object 32]
+2019-03-04 17:18:36: ACTION[Server]: singleplayer uses mobs:meat_raw, pointing at [object 32]
+2019-03-04 17:18:38: ACTION[Server]: singleplayer punches object 32: LuaEntitySAO at (-54.4878,3.25,269.003)
+2019-03-04 17:18:40: ACTION[Server]: singleplayer right-clicks object 32: LuaEntitySAO at (-53.9012,2.25,266.553)
+2019-03-04 17:18:47: ACTION[Server]: singleplayer right-clicks object 32: LuaEntitySAO at (-52.2826,2.25,261.468)
+2019-03-04 17:18:51: ACTION[Server]: singleplayer right-clicks object 32: LuaEntitySAO at (-52.4749,2.25,261.343)
+2019-03-04 17:18:55: ACTION[Server]: singleplayer right-clicks object 33: LuaEntitySAO at (-55,2.625,264)
+2019-03-04 17:18:58: ACTION[Server]: singleplayer punches object 33: LuaEntitySAO at (-54.9733,2.625,264.762)
+2019-03-04 17:19:00: ACTION[Server]: singleplayer right-clicks object 33: LuaEntitySAO at (-56.9917,3.625,266.268)
+2019-03-04 17:19:08: ACTION[Server]: singleplayer punches object 33: LuaEntitySAO at (-60.2994,4.625,269.708)
+2019-03-04 17:19:14: ACTION[Server]: singleplayer right-clicks object 33: LuaEntitySAO at (-63.8385,5.625,274.748)
+2019-03-04 17:19:17: ACTION[Server]: singleplayer right-clicks object 33: LuaEntitySAO at (-63.8624,5.625,274.771)
+2019-03-04 17:19:19: ACTION[Server]: singleplayer right-clicks object 33: LuaEntitySAO at (-63.8624,5.625,274.771)
+2019-03-04 17:19:20: [Server]: Music playback try rejected	0.33651326288571	>	0.2
+2019-03-04 17:19:22: ACTION[Server]: singleplayer right-clicks object 33: LuaEntitySAO at (-63.7201,5.625,275.507)
+2019-03-04 17:19:25: ACTION[Server]: singleplayer right-clicks object 33: LuaEntitySAO at (-62.6994,5.625,273.963)
+2019-03-04 17:19:27: ACTION[Server]: singleplayer right-clicks object 33: LuaEntitySAO at (-62.3854,5.625,272.739)
+2019-03-04 17:19:29: ACTION[Server]: singleplayer punches object 33: LuaEntitySAO at (-62.3087,5.625,271.265)
+2019-03-04 17:19:31: ACTION[Server]: singleplayer right-clicks object 33: LuaEntitySAO at (-63.0503,5.625,269.025)
+2019-03-04 17:19:34: ACTION[Server]: singleplayer right-clicks object 33: LuaEntitySAO at (-65.1884,5.625,267.141)
+2019-03-04 17:19:40: ACTION[Server]: singleplayer uses mobs:meat_raw, pointing at [object 33]
+2019-03-04 17:19:41: ACTION[Server]: singleplayer right-clicks object 33: LuaEntitySAO at (-68.3395,5.625,264.364)
+2019-03-04 17:19:43: ACTION[Server]: singleplayer right-clicks object 33: LuaEntitySAO at (-68.7333,5.625,264.017)
+2019-03-04 17:19:46: ACTION[Server]: singleplayer uses mobs:meat_raw, pointing at [node under=-69,5,264 above=-68,5,264]
+2019-03-04 17:19:48: ACTION[Server]: singleplayer uses mobs:meat_raw, pointing at [object 33]
+2019-03-04 17:19:50: ACTION[Server]: singleplayer punches object 33: LuaEntitySAO at (-69.5112,5.625,263.355)
+2019-03-04 17:19:54: ACTION[Server]: singleplayer punches object 37: LuaEntitySAO at (-70,5.625,267)
+2019-03-04 17:19:54: ACTION[Server]: singleplayer right-clicks object 37: LuaEntitySAO at (-69.5901,5.625,268.23)
+2019-03-04 17:20:00: ACTION[Server]: singleplayer right-clicks object 37: LuaEntitySAO at (-68.0991,6.625,272.705)
+2019-03-04 17:20:07: ACTION[Server]: singleplayer right-clicks object 37: LuaEntitySAO at (-68.0081,6.625,271.56)
+2019-03-04 17:20:09: ACTION[Server]: singleplayer right-clicks object 37: LuaEntitySAO at (-67.9473,6.625,270.959)
+2019-03-04 17:20:11: ACTION[Server]: singleplayer right-clicks object 37: LuaEntitySAO at (-68.0065,6.625,270.562)
+2019-03-04 17:20:13: ACTION[Server]: singleplayer right-clicks object 37: LuaEntitySAO at (-68.0304,6.625,270.439)
+2019-03-04 17:20:16: ACTION[Server]: singleplayer right-clicks object 37: LuaEntitySAO at (-68.2782,5.625,269.164)
+2019-03-04 17:20:18: ACTION[Server]: singleplayer right-clicks object 37: LuaEntitySAO at (-69.4928,5.625,268.083)
+2019-03-04 17:20:21: ACTION[Main]: Server: Shutting down
+2019-03-04 17:20:21: ACTION[Main]: [mana] Server shuts down. Rescuing data into mana.mt
+2019-03-04 17:20:21: ACTION[Main]: [mana] Wrote mana data into /opt/minetest/bin/../worlds/wqeqwe/mana.mt.
+2019-03-04 17:22:52: WARNING[Main]: Field "noise_threshhold": Deprecated: new name is "noise_threshold".
+2019-03-04 17:22:53: WARNING[Main]: Undeclared global variable "mg_name" accessed at ...inetest/bin/../games/bogart/mods/brewing/meteor/init.lua:15
+2019-03-04 17:22:53: WARNING[Main]: Node 'light_source' value exceeds maximum, limiting to maximum: meteorite:lunar_meteor_hot
+2019-03-04 17:22:53: ACTION[Main]: hb.register_hudbar: health
+2019-03-04 17:22:53: ACTION[Main]: hb.register_hudbar: breath
+2019-03-04 17:22:53: ACTION[Main]: hb.register_hudbar: sprint
+2019-03-04 17:22:53: ACTION[Main]: [mana] mana.mt opened.
+2019-03-04 17:22:53: [Main]: [mana] mana.mt successfully read.
+2019-03-04 17:22:53: ACTION[Main]: hb.register_hudbar: mana
+2019-03-04 17:22:53: ACTION[Main]: [crops] ¡Cargado!
+2019-03-04 17:22:53: WARNING[Main]: Field "tile_images": Deprecated; new name is "tiles".
+2019-03-04 17:22:53: WARNING[Main]: Field "height_min": Deprecated: new name is "y_min".
+2019-03-04 17:22:53: WARNING[Main]: Field "height_max": Deprecated: new name is "y_max".
+2019-03-04 17:22:53: WARNING[Main]: Node 'light_source' value exceeds maximum, limiting to maximum: lavastuff:light
+2019-03-04 17:22:53: ACTION[Main]: hb.register_hudbar: armor
+2019-03-04 17:22:53: ACTION[Main]: [MOD] Mobs Redo loaded
+2019-03-04 17:22:53: ACTION[Main]: [Mod] Mobs Ghost Redo [v0.5.1] loaded.
+2019-03-04 17:22:53: ACTION[Main]: hb.register_hudbar: satiation
+2019-03-04 17:22:53: [Main]: [advanced_npc] INFO: Successfully registered program '"advanced_npc:follow"'
+2019-03-04 17:22:53: [Main]: [advanced_npc] INFO: Successfully registered program '"advanced_npc:idle"'
+2019-03-04 17:22:53: [Main]: [advanced_npc] INFO: Successfully registered program '"advanced_npc:wander"'
+2019-03-04 17:22:53: [Main]: [advanced_npc] INFO: Successfully registered program '"advanced_npc:walk_to_pos"'
+2019-03-04 17:22:53: [Main]: [advanced_npc] INFO: Successfully registered program '"advanced_npc:use_bed"'
+2019-03-04 17:22:53: [Main]: [advanced_npc] INFO: Successfully registered program '"advanced_npc:use_sittable"'
+2019-03-04 17:22:53: [Main]: [advanced_npc] INFO: Successfully registered program '"advanced_npc:internal_property_change"'
+2019-03-04 17:22:53: [Main]: [advanced_npc] INFO: Successfully registered program '"advanced_npc:node_query"'
+2019-03-04 17:22:53: WARNING[Main]: Not registering alias, item with same name is already defined: brewing:sugar -> farming:sugar
+2019-03-04 17:22:53: WARNING[Main]: Not registering alias, item with same name is already defined: brewing:clay_bowl -> food:bowl
+2019-03-04 17:22:53: ACTION[Main]: World at [/opt/minetest/bin/../worlds/wqeqwe]
+2019-03-04 17:22:53: ACTION[Main]: Server for gameid="bogart" listening on 0.0.0.0:50343.
+2019-03-04 17:22:58: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:22:58: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:22:58: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:22:58: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:22:58: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:22:58: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:22:58: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:22:58: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:22:58: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:22:58: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:22:58: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:22:58: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:22:58: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:22:58: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:22:58: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:22:58: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:22:58: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:22:58: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:22:58: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:22:58: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:22:58: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:23:00: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:23:00: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:23:00: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:23:00: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:23:00: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:23:00: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:23:00: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:23:00: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:23:00: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:23:00: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:23:00: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:23:00: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:23:00: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:23:00: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:23:00: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:23:00: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:23:00: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:23:00: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:23:00: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:23:00: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:23:00: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:23:00: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:23:00: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:23:00: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:23:00: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:23:00: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:23:00: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:23:00: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:23:00: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:23:00: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:23:00: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:23:00: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:23:00: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:23:00: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:23:00: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:23:00: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:23:00: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:23:00: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:23:00: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:23:00: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:23:00: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:23:00: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:23:00: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:23:00: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:23:00: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:23:00: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:23:00: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:23:00: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:23:00: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:23:01: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:23:01: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:23:04: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:23:05: ACTION[Server]: singleplayer [127.0.0.1] joins game. 
+2019-03-04 17:23:05: ACTION[Server]: singleplayer joins game. List of players: singleplayer
+2019-03-04 17:23:05: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:23:05: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:23:05: WARNING[Main]: Client side scripting is disabled by client.
+2019-03-04 17:23:05: WARNING[Server]: Undeclared global variable "minetestd" accessed at /opt/minetest/bin/../games/bogart/mods/wield_redo/init.lua:86
+2019-03-04 17:23:06: ACTION[Server]: singleplayer right-clicks object 2: LuaEntitySAO at (-70.2229,6.625,268.178)
+2019-03-04 17:23:06: WARNING[Server]: Undeclared global variable "wielded_item" accessed at /opt/minetest/bin/../games/bogart/mods/petz/api.lua:151
+2019-03-04 17:23:06: ERROR[Main]: ServerError: AsyncErr: ServerThread::run Lua: Runtime error from mod 'petz' in callback luaentity_run_simple_callback(): /opt/minetest/bin/../games/bogart/mods/petz/api.lua:151: attempt to index global 'wielded_item' (a nil value)
+2019-03-04 17:23:06: ERROR[Main]: stack traceback:
+2019-03-04 17:23:06: ERROR[Main]: 	/opt/minetest/bin/../games/bogart/mods/petz/api.lua:151: in function 'on_rightclick'
+2019-03-04 17:23:06: ERROR[Main]: 	...netest/bin/../games/bogart/mods/petz/puppy_mobs_redo.lua:96: in function <...netest/bin/../games/bogart/mods/petz/puppy_mobs_redo.lua:95>
+2019-03-04 17:23:06: ACTION[Server]: [mana] Wrote mana data into /opt/minetest/bin/../worlds/wqeqwe/mana.mt.
+2019-03-04 17:23:06: ACTION[Server]: singleplayer leaves game. List of players: 
+2019-03-04 17:23:06: ACTION[Main]: Server: Shutting down
+2019-03-04 17:23:06: ACTION[Main]: [mana] Server shuts down. Rescuing data into mana.mt
+2019-03-04 17:23:06: ACTION[Main]: [mana] Wrote mana data into /opt/minetest/bin/../worlds/wqeqwe/mana.mt.
+2019-03-04 17:23:25: WARNING[Main]: Field "noise_threshhold": Deprecated: new name is "noise_threshold".
+2019-03-04 17:23:25: WARNING[Main]: Undeclared global variable "mg_name" accessed at ...inetest/bin/../games/bogart/mods/brewing/meteor/init.lua:15
+2019-03-04 17:23:25: WARNING[Main]: Node 'light_source' value exceeds maximum, limiting to maximum: meteorite:lunar_meteor_hot
+2019-03-04 17:23:25: ACTION[Main]: hb.register_hudbar: health
+2019-03-04 17:23:25: ACTION[Main]: hb.register_hudbar: breath
+2019-03-04 17:23:25: ACTION[Main]: hb.register_hudbar: sprint
+2019-03-04 17:23:25: ACTION[Main]: [mana] mana.mt opened.
+2019-03-04 17:23:25: [Main]: [mana] mana.mt successfully read.
+2019-03-04 17:23:25: ACTION[Main]: hb.register_hudbar: mana
+2019-03-04 17:23:25: ACTION[Main]: [crops] ¡Cargado!
+2019-03-04 17:23:25: WARNING[Main]: Field "tile_images": Deprecated; new name is "tiles".
+2019-03-04 17:23:25: WARNING[Main]: Field "height_min": Deprecated: new name is "y_min".
+2019-03-04 17:23:25: WARNING[Main]: Field "height_max": Deprecated: new name is "y_max".
+2019-03-04 17:23:25: WARNING[Main]: Node 'light_source' value exceeds maximum, limiting to maximum: lavastuff:light
+2019-03-04 17:23:25: ACTION[Main]: hb.register_hudbar: armor
+2019-03-04 17:23:25: ACTION[Main]: [MOD] Mobs Redo loaded
+2019-03-04 17:23:25: ACTION[Main]: [Mod] Mobs Ghost Redo [v0.5.1] loaded.
+2019-03-04 17:23:25: ACTION[Main]: hb.register_hudbar: satiation
+2019-03-04 17:23:25: [Main]: [advanced_npc] INFO: Successfully registered program '"advanced_npc:follow"'
+2019-03-04 17:23:25: [Main]: [advanced_npc] INFO: Successfully registered program '"advanced_npc:idle"'
+2019-03-04 17:23:25: [Main]: [advanced_npc] INFO: Successfully registered program '"advanced_npc:wander"'
+2019-03-04 17:23:25: [Main]: [advanced_npc] INFO: Successfully registered program '"advanced_npc:walk_to_pos"'
+2019-03-04 17:23:25: [Main]: [advanced_npc] INFO: Successfully registered program '"advanced_npc:use_bed"'
+2019-03-04 17:23:25: [Main]: [advanced_npc] INFO: Successfully registered program '"advanced_npc:use_sittable"'
+2019-03-04 17:23:25: [Main]: [advanced_npc] INFO: Successfully registered program '"advanced_npc:internal_property_change"'
+2019-03-04 17:23:25: [Main]: [advanced_npc] INFO: Successfully registered program '"advanced_npc:node_query"'
+2019-03-04 17:23:25: WARNING[Main]: Not registering alias, item with same name is already defined: brewing:sugar -> farming:sugar
+2019-03-04 17:23:25: WARNING[Main]: Not registering alias, item with same name is already defined: brewing:clay_bowl -> food:bowl
+2019-03-04 17:23:26: ACTION[Main]: World at [/opt/minetest/bin/../worlds/wqeqwe]
+2019-03-04 17:23:26: ACTION[Main]: Server for gameid="bogart" listening on 0.0.0.0:52978.
+2019-03-04 17:23:31: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:23:31: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:23:31: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:23:31: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:23:31: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:23:31: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:23:31: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:23:31: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:23:31: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:23:31: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:23:31: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:23:31: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:23:31: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:23:31: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:23:31: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:23:31: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:23:31: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:23:31: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:23:31: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:23:31: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:23:31: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:23:32: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:23:32: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:23:32: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:23:32: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:23:32: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:23:32: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:23:32: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:23:32: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:23:32: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:23:32: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:23:32: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:23:32: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:23:32: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:23:32: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:23:32: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:23:32: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:23:32: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:23:32: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:23:32: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:23:32: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:23:32: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:23:32: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:23:32: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:23:32: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:23:32: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:23:32: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:23:32: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:23:32: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:23:32: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:23:32: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:23:32: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:23:32: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:23:32: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:23:32: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:23:32: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:23:33: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:23:33: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:23:33: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:23:33: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:23:33: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:23:33: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:23:33: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:23:33: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:23:33: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:23:33: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:23:33: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:23:33: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:23:33: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:23:33: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:23:34: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:23:34: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:23:37: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:23:38: ACTION[Server]: singleplayer [127.0.0.1] joins game. 
+2019-03-04 17:23:38: ACTION[Server]: singleplayer joins game. List of players: singleplayer
+2019-03-04 17:23:38: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:23:38: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:23:38: WARNING[Main]: Client side scripting is disabled by client.
+2019-03-04 17:23:38: WARNING[Server]: Undeclared global variable "minetestd" accessed at /opt/minetest/bin/../games/bogart/mods/wield_redo/init.lua:86
+2019-03-04 17:23:42: ACTION[Server]: singleplayer right-clicks object 32: LuaEntitySAO at (-68.9391,5.25,267.283)
+2019-03-04 17:23:44: ACTION[Server]: singleplayer punches object 32: LuaEntitySAO at (-66.9115,5.25,267.416)
+2019-03-04 17:23:45: ACTION[Server]: singleplayer right-clicks object 32: LuaEntitySAO at (-65.8397,5.25,267.596)
+2019-03-04 17:23:49: ACTION[Server]: singleplayer right-clicks object 32: LuaEntitySAO at (-62.7749,5.25,269.484)
+2019-03-04 17:23:51: ACTION[Server]: singleplayer punches object 32: LuaEntitySAO at (-62.1643,5.25,269.86)
+2019-03-04 17:23:51: ACTION[Server]: singleplayer activates farming:wheat
+2019-03-04 17:23:52: ACTION[Server]: singleplayer activates farming:wheat
+2019-03-04 17:23:53: ACTION[Server]: singleplayer right-clicks object 32: LuaEntitySAO at (-58.8692,4.25,271.797)
+2019-03-04 17:23:55: ACTION[Server]: singleplayer punches object 32: LuaEntitySAO at (-57.016,4.25,272.887)
+2019-03-04 17:23:56: ACTION[Server]: singleplayer punches object 13: LuaEntitySAO at (-56.6512,3.66621,273.198)
+2019-03-04 17:24:00: ACTION[Server]: singleplayer punches object 34: LuaEntitySAO at (-58.5684,4.25,272.417)
+2019-03-04 17:24:01: ACTION[Server]: singleplayer punches object 34: LuaEntitySAO at (-57.8988,4.25,272.659)
+2019-03-04 17:24:04: ACTION[Server]: singleplayer right-clicks object 34: LuaEntitySAO at (-55.569,4.25,274.496)
+2019-03-04 17:24:08: ACTION[Server]: singleplayer right-clicks object 34: LuaEntitySAO at (-53.7773,3.25,276.814)
+2019-03-04 17:24:10: ACTION[Server]: singleplayer punches object 34: LuaEntitySAO at (-52.6306,3.25,278.297)
+2019-03-04 17:24:12: ACTION[Main]: Server: Shutting down
+2019-03-04 17:24:12: ACTION[Main]: [mana] Server shuts down. Rescuing data into mana.mt
+2019-03-04 17:24:12: ACTION[Main]: [mana] Wrote mana data into /opt/minetest/bin/../worlds/wqeqwe/mana.mt.
+2019-03-04 17:24:55: WARNING[Main]: Field "noise_threshhold": Deprecated: new name is "noise_threshold".
+2019-03-04 17:24:55: WARNING[Main]: Undeclared global variable "mg_name" accessed at ...inetest/bin/../games/bogart/mods/brewing/meteor/init.lua:15
+2019-03-04 17:24:55: WARNING[Main]: Node 'light_source' value exceeds maximum, limiting to maximum: meteorite:lunar_meteor_hot
+2019-03-04 17:24:55: ACTION[Main]: hb.register_hudbar: health
+2019-03-04 17:24:55: ACTION[Main]: hb.register_hudbar: breath
+2019-03-04 17:24:55: ACTION[Main]: hb.register_hudbar: sprint
+2019-03-04 17:24:55: ACTION[Main]: [mana] mana.mt opened.
+2019-03-04 17:24:55: [Main]: [mana] mana.mt successfully read.
+2019-03-04 17:24:55: ACTION[Main]: hb.register_hudbar: mana
+2019-03-04 17:24:55: ACTION[Main]: [crops] ¡Cargado!
+2019-03-04 17:24:55: WARNING[Main]: Field "tile_images": Deprecated; new name is "tiles".
+2019-03-04 17:24:55: WARNING[Main]: Field "height_min": Deprecated: new name is "y_min".
+2019-03-04 17:24:55: WARNING[Main]: Field "height_max": Deprecated: new name is "y_max".
+2019-03-04 17:24:55: WARNING[Main]: Node 'light_source' value exceeds maximum, limiting to maximum: lavastuff:light
+2019-03-04 17:24:55: ACTION[Main]: hb.register_hudbar: armor
+2019-03-04 17:24:55: ACTION[Main]: [MOD] Mobs Redo loaded
+2019-03-04 17:24:55: ACTION[Main]: [Mod] Mobs Ghost Redo [v0.5.1] loaded.
+2019-03-04 17:24:55: ACTION[Main]: hb.register_hudbar: satiation
+2019-03-04 17:24:55: [Main]: [advanced_npc] INFO: Successfully registered program '"advanced_npc:follow"'
+2019-03-04 17:24:55: [Main]: [advanced_npc] INFO: Successfully registered program '"advanced_npc:idle"'
+2019-03-04 17:24:55: [Main]: [advanced_npc] INFO: Successfully registered program '"advanced_npc:wander"'
+2019-03-04 17:24:55: [Main]: [advanced_npc] INFO: Successfully registered program '"advanced_npc:walk_to_pos"'
+2019-03-04 17:24:55: [Main]: [advanced_npc] INFO: Successfully registered program '"advanced_npc:use_bed"'
+2019-03-04 17:24:55: [Main]: [advanced_npc] INFO: Successfully registered program '"advanced_npc:use_sittable"'
+2019-03-04 17:24:55: [Main]: [advanced_npc] INFO: Successfully registered program '"advanced_npc:internal_property_change"'
+2019-03-04 17:24:55: [Main]: [advanced_npc] INFO: Successfully registered program '"advanced_npc:node_query"'
+2019-03-04 17:24:55: WARNING[Main]: Not registering alias, item with same name is already defined: brewing:sugar -> farming:sugar
+2019-03-04 17:24:55: WARNING[Main]: Not registering alias, item with same name is already defined: brewing:clay_bowl -> food:bowl
+2019-03-04 17:24:56: ACTION[Main]: World at [/opt/minetest/bin/../worlds/wqeqwe]
+2019-03-04 17:24:56: ACTION[Main]: Server for gameid="bogart" listening on 0.0.0.0:61586.
+2019-03-04 17:24:56: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:24:56: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:24:56: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:24:56: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:24:56: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:24:56: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:24:56: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:24:56: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:24:56: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:24:56: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:24:56: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:24:56: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:24:56: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:24:56: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:24:56: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:24:56: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:24:56: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:24:56: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:24:56: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:24:56: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:24:56: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:24:58: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:24:58: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:24:58: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:24:58: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:24:58: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:24:58: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:24:58: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:24:58: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:24:58: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:24:58: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:24:58: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:24:58: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:24:58: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:24:58: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:24:58: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:24:58: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:24:58: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:24:58: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:24:58: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:24:58: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:24:58: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:24:58: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:24:58: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:24:58: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:24:58: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:24:58: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:24:58: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:24:58: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:24:58: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:24:58: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:24:58: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:24:58: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:24:58: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:24:58: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:24:58: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:24:58: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:24:58: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:24:58: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:24:58: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:24:58: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:24:58: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:24:58: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:24:58: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:24:58: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:24:58: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:24:59: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:24:59: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:24:59: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:24:59: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:24:59: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:24:59: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:25:03: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:25:03: ACTION[Server]: singleplayer [127.0.0.1] joins game. 
+2019-03-04 17:25:03: ACTION[Server]: singleplayer joins game. List of players: singleplayer
+2019-03-04 17:25:03: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:25:03: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:25:03: WARNING[Main]: Client side scripting is disabled by client.
+2019-03-04 17:25:03: WARNING[Server]: Undeclared global variable "minetestd" accessed at /opt/minetest/bin/../games/bogart/mods/wield_redo/init.lua:86
+2019-03-04 17:25:04: ACTION[Server]: singleplayer activates petz:kitty
+2019-03-04 17:25:06: ACTION[Server]: singleplayer right-clicks object 10: LuaEntitySAO at (-52.3545,3.25,279.126)
+2019-03-04 17:25:13: ACTION[Server]: singleplayer right-clicks object 10: LuaEntitySAO at (-53.6431,4.25,278.39)
+2019-03-04 17:25:15: ACTION[Server]: singleplayer uses mobs:meat_raw, pointing at [object 10]
+2019-03-04 17:25:20: ACTION[Server]: singleplayer punches object 10: LuaEntitySAO at (-52.8962,3.25,276.387)
+2019-03-04 17:25:27: ACTION[Server]: singleplayer sets time to 6000
+2019-03-04 17:25:32: ACTION[Server]: singleplayer right-clicks object 31: LuaEntitySAO at (-50.0924,3.25,278.497)
+2019-03-04 17:25:38: ACTION[Server]: singleplayer right-clicks object 31: LuaEntitySAO at (-47.4925,3.25,279.338)
+2019-03-04 17:25:42: ACTION[Server]: singleplayer right-clicks object 31: LuaEntitySAO at (-46.9151,3.25,280.614)
+2019-03-04 17:25:45: ACTION[Server]: singleplayer right-clicks object 31: LuaEntitySAO at (-46.9151,3.25,280.614)
+2019-03-04 17:25:47: ACTION[Server]: singleplayer right-clicks object 31: LuaEntitySAO at (-46.9151,3.25,280.614)
+2019-03-04 17:25:50: ACTION[Server]: singleplayer right-clicks object 31: LuaEntitySAO at (-46.9151,3.25,280.614)
+2019-03-04 17:25:54: ACTION[Server]: singleplayer right-clicks object 31: LuaEntitySAO at (-46.9722,3.25,281.375)
+2019-03-04 17:25:58: ACTION[Server]: singleplayer punches object 31: LuaEntitySAO at (-46.9722,3.25,281.375)
+2019-03-04 17:26:00: ACTION[Server]: singleplayer punches object 31: LuaEntitySAO at (-45.8037,3.25,281.22)
+2019-03-04 17:26:03: ACTION[Server]: singleplayer punches object 31: LuaEntitySAO at (-45.85,3.25,280.931)
+2019-03-04 17:26:05: ACTION[Server]: singleplayer punches object 31: LuaEntitySAO at (-45.8382,2.25,278.746)
+2019-03-04 17:26:06: [Server]: Music playback try rejected	0.61059996644783	>	0.2
+2019-03-04 17:26:08: ACTION[Server]: singleplayer right-clicks object 34: LuaEntitySAO at (-48.9693,3.25,279.978)
+2019-03-04 17:26:10: ACTION[Server]: singleplayer right-clicks object 34: LuaEntitySAO at (-48.3856,3.25,279.57)
+2019-03-04 17:26:12: ACTION[Server]: singleplayer punches object 34: LuaEntitySAO at (-48.3856,3.25,279.57)
+2019-03-04 17:26:16: ACTION[Server]: singleplayer right-clicks object 34: LuaEntitySAO at (-48.15,3.25,279.78)
+2019-03-04 17:26:19: ACTION[Server]: singleplayer right-clicks object 34: LuaEntitySAO at (-48.15,3.25,279.78)
+2019-03-04 17:26:21: ACTION[Server]: singleplayer uses mobs:meat_raw, pointing at [object 34]
+2019-03-04 17:26:24: ACTION[Server]: singleplayer punches object 34: LuaEntitySAO at (-48.15,3.25,279.78)
+2019-03-04 17:26:28: ACTION[Server]: singleplayer uses mobs:meat_raw, pointing at [object 34]
+2019-03-04 17:26:29: ACTION[Server]: singleplayer uses mobs:meat_raw, pointing at [object 34]
+2019-03-04 17:26:31: ACTION[Server]: singleplayer punches object 34: LuaEntitySAO at (-48.6524,3.25,278.652)
+2019-03-04 17:26:37: ACTION[Server]: singleplayer punches object 35: LuaEntitySAO at (-48.7216,2.66621,278.213)
+2019-03-04 17:26:38: ACTION[Server]: singleplayer punches object 36: LuaEntitySAO at (-49.3156,3.25,280.634)
+2019-03-04 17:26:39: ACTION[Server]: singleplayer right-clicks object 36: LuaEntitySAO at (-49.15,3.25,281.547)
+2019-03-04 17:26:44: ACTION[Server]: singleplayer right-clicks object 36: LuaEntitySAO at (-52.9302,4.25,282.417)
+2019-03-04 17:26:46: ACTION[Server]: singleplayer punches object 36: LuaEntitySAO at (-53.4963,4.25,282.77)
+2019-03-04 17:26:50: ACTION[Server]: singleplayer right-clicks object 36: LuaEntitySAO at (-54.6702,4.25,283.082)
+2019-03-04 17:26:53: ACTION[Server]: singleplayer right-clicks object 36: LuaEntitySAO at (-54.6702,4.25,283.082)
+2019-03-04 17:26:56: ACTION[Server]: singleplayer right-clicks object 36: LuaEntitySAO at (-54.6702,4.25,283.082)
+2019-03-04 17:26:59: ACTION[Server]: singleplayer punches object 36: LuaEntitySAO at (-54.6702,4.25,283.082)
+2019-03-04 17:27:00: ACTION[Server]: singleplayer right-clicks object 36: LuaEntitySAO at (-55.741,4.25,283.31)
+2019-03-04 17:27:05: ACTION[Main]: Server: Shutting down
+2019-03-04 17:27:05: ACTION[Main]: [mana] Server shuts down. Rescuing data into mana.mt
+2019-03-04 17:27:05: ACTION[Main]: [mana] Wrote mana data into /opt/minetest/bin/../worlds/wqeqwe/mana.mt.
+
+
+-------------
+  Separator
+-------------
+
+2019-03-04 17:28:49: WARNING[Main]: Field "noise_threshhold": Deprecated: new name is "noise_threshold".
+2019-03-04 17:28:49: WARNING[Main]: Undeclared global variable "mg_name" accessed at ...inetest/bin/../games/bogart/mods/brewing/meteor/init.lua:15
+2019-03-04 17:28:49: WARNING[Main]: Node 'light_source' value exceeds maximum, limiting to maximum: meteorite:lunar_meteor_hot
+2019-03-04 17:28:49: ACTION[Main]: hb.register_hudbar: health
+2019-03-04 17:28:49: ACTION[Main]: hb.register_hudbar: breath
+2019-03-04 17:28:49: ACTION[Main]: hb.register_hudbar: sprint
+2019-03-04 17:28:49: ACTION[Main]: [mana] mana.mt opened.
+2019-03-04 17:28:49: [Main]: [mana] mana.mt successfully read.
+2019-03-04 17:28:49: ACTION[Main]: hb.register_hudbar: mana
+2019-03-04 17:28:49: ACTION[Main]: [crops] ¡Cargado!
+2019-03-04 17:28:49: WARNING[Main]: Field "tile_images": Deprecated; new name is "tiles".
+2019-03-04 17:28:49: WARNING[Main]: Field "height_min": Deprecated: new name is "y_min".
+2019-03-04 17:28:49: WARNING[Main]: Field "height_max": Deprecated: new name is "y_max".
+2019-03-04 17:28:49: WARNING[Main]: Node 'light_source' value exceeds maximum, limiting to maximum: lavastuff:light
+2019-03-04 17:28:49: ACTION[Main]: hb.register_hudbar: armor
+2019-03-04 17:28:49: ACTION[Main]: [MOD] Mobs Redo loaded
+2019-03-04 17:28:49: ACTION[Main]: [Mod] Mobs Ghost Redo [v0.5.1] loaded.
+2019-03-04 17:28:49: ACTION[Main]: hb.register_hudbar: satiation
+2019-03-04 17:28:49: [Main]: [advanced_npc] INFO: Successfully registered program '"advanced_npc:follow"'
+2019-03-04 17:28:49: [Main]: [advanced_npc] INFO: Successfully registered program '"advanced_npc:idle"'
+2019-03-04 17:28:49: [Main]: [advanced_npc] INFO: Successfully registered program '"advanced_npc:wander"'
+2019-03-04 17:28:49: [Main]: [advanced_npc] INFO: Successfully registered program '"advanced_npc:walk_to_pos"'
+2019-03-04 17:28:49: [Main]: [advanced_npc] INFO: Successfully registered program '"advanced_npc:use_bed"'
+2019-03-04 17:28:49: [Main]: [advanced_npc] INFO: Successfully registered program '"advanced_npc:use_sittable"'
+2019-03-04 17:28:49: [Main]: [advanced_npc] INFO: Successfully registered program '"advanced_npc:internal_property_change"'
+2019-03-04 17:28:49: [Main]: [advanced_npc] INFO: Successfully registered program '"advanced_npc:node_query"'
+2019-03-04 17:28:49: WARNING[Main]: Not registering alias, item with same name is already defined: brewing:sugar -> farming:sugar
+2019-03-04 17:28:49: WARNING[Main]: Not registering alias, item with same name is already defined: brewing:clay_bowl -> food:bowl
+2019-03-04 17:28:49: ACTION[Main]: World at [/opt/minetest/bin/../worlds/wqeqwe]
+2019-03-04 17:28:49: ACTION[Main]: Server for gameid="bogart" listening on 0.0.0.0:52191.
+2019-03-04 17:28:50: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:28:50: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:28:50: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:28:50: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:28:50: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:28:50: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:28:50: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:28:50: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:28:50: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:28:50: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:28:50: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:28:50: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:28:50: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:28:50: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:28:50: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:28:50: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:28:50: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:28:50: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:28:50: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:28:50: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:28:50: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:28:51: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:28:51: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:28:51: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:28:51: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:28:51: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:28:51: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:28:51: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:28:51: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:28:51: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:28:51: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:28:51: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:28:51: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:28:51: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:28:51: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:28:51: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:28:51: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:28:51: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:28:51: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:28:51: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:28:51: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:28:51: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:28:51: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:28:51: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:28:51: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:28:51: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:28:51: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:28:51: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:28:51: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:28:51: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:28:51: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:28:51: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:28:51: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:28:51: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:28:51: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:28:51: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:28:51: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:28:51: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:28:51: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:28:51: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:28:51: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:28:51: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:28:51: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:28:51: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:28:51: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:28:51: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:28:52: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:28:52: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:28:52: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:28:52: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:28:53: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:28:53: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:28:56: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:28:57: ACTION[Server]: singleplayer [127.0.0.1] joins game. 
+2019-03-04 17:28:57: ACTION[Server]: singleplayer joins game. List of players: singleplayer
+2019-03-04 17:28:57: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:28:57: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:28:57: WARNING[Main]: Client side scripting is disabled by client.
+2019-03-04 17:28:57: WARNING[Server]: Undeclared global variable "minetestd" accessed at /opt/minetest/bin/../games/bogart/mods/wield_redo/init.lua:86
+2019-03-04 17:28:59: ACTION[Server]: singleplayer punches object 3: LuaEntitySAO at (-55,4.25,281)
+2019-03-04 17:29:00: ACTION[Server]: singleplayer punches object 3: LuaEntitySAO at (-55.4381,4.25,279.976)
+2019-03-04 17:29:00: ACTION[Server]: singleplayer punches object 3: LuaEntitySAO at (-55.6347,4.25,279.516)
+2019-03-04 17:29:01: ACTION[Server]: singleplayer punches object 3: LuaEntitySAO at (-55.9113,4.25,278.854)
+2019-03-04 17:29:02: ACTION[Server]: singleplayer punches object 3: LuaEntitySAO at (-56.1271,4.25,278.331)
+2019-03-04 17:29:02: ACTION[Server]: singleplayer right-clicks object 3: LuaEntitySAO at (-56.4089,4.25,277.636)
+2019-03-04 17:29:06: ACTION[Server]: singleplayer right-clicks object 3: LuaEntitySAO at (-57.15,4.25,276.78)
+2019-03-04 17:29:07: ACTION[Server]: singleplayer right-clicks object 3: LuaEntitySAO at (-57.15,4.25,276.78)
+2019-03-04 17:29:09: ACTION[Server]: singleplayer right-clicks object 3: LuaEntitySAO at (-56.9548,4.25,276.78)
+2019-03-04 17:29:10: ACTION[Server]: singleplayer punches object 3: LuaEntitySAO at (-56.1357,4.25,277.465)
+2019-03-04 17:29:18: ACTION[Server]: singleplayer right-clicks object 3: LuaEntitySAO at (-56.5132,4.25,273.799)
+2019-03-04 17:29:19: ACTION[Server]: singleplayer right-clicks object 3: LuaEntitySAO at (-56.9218,4.25,273.754)
+2019-03-04 17:29:19: ACTION[Server]: singleplayer right-clicks object 3: LuaEntitySAO at (-57.0589,4.25,273.739)
+2019-03-04 17:29:20: ACTION[Server]: singleplayer right-clicks object 3: LuaEntitySAO at (-57.0589,4.25,273.739)
+2019-03-04 17:29:21: ACTION[Server]: singleplayer right-clicks object 3: LuaEntitySAO at (-57.0589,4.25,273.739)
+2019-03-04 17:29:21: ACTION[Server]: singleplayer right-clicks object 3: LuaEntitySAO at (-57.0589,4.25,273.739)
+2019-03-04 17:29:21: ACTION[Server]: singleplayer right-clicks object 3: LuaEntitySAO at (-57.0589,4.25,273.739)
+2019-03-04 17:29:22: ACTION[Server]: singleplayer right-clicks object 3: LuaEntitySAO at (-57.0589,4.25,273.739)
+2019-03-04 17:29:22: ACTION[Server]: singleplayer right-clicks object 3: LuaEntitySAO at (-56.8852,4.25,273.758)
+2019-03-04 17:29:22: ACTION[Server]: singleplayer right-clicks object 3: LuaEntitySAO at (-56.5244,4.25,273.798)
+2019-03-04 17:29:23: ACTION[Server]: singleplayer right-clicks object 3: LuaEntitySAO at (-55.8907,4.25,273.867)
+2019-03-04 17:29:24: ACTION[Server]: singleplayer right-clicks object 3: LuaEntitySAO at (-55.6424,4.25,273.895)
+2019-03-04 17:29:24: ACTION[Server]: singleplayer right-clicks object 3: LuaEntitySAO at (-55.4438,4.25,273.92)
+2019-03-04 17:29:24: ACTION[Server]: singleplayer right-clicks object 3: LuaEntitySAO at (-55.1347,4.24744,273.962)
+2019-03-04 17:29:26: ACTION[Server]: singleplayer right-clicks object 3: LuaEntitySAO at (-54.0633,3.25,274.146)
+2019-03-04 17:29:26: ACTION[Server]: singleplayer right-clicks object 3: LuaEntitySAO at (-54.0633,3.25,274.146)
+2019-03-04 17:29:26: ACTION[Server]: singleplayer right-clicks object 3: LuaEntitySAO at (-54.0633,3.25,274.146)
+2019-03-04 17:29:26: ACTION[Server]: singleplayer right-clicks object 3: LuaEntitySAO at (-54.0633,3.25,274.146)
+2019-03-04 17:29:27: ACTION[Server]: singleplayer right-clicks object 3: LuaEntitySAO at (-54.0633,3.25,274.146)
+2019-03-04 17:29:27: ACTION[Server]: singleplayer right-clicks object 3: LuaEntitySAO at (-53.992,3.25,274.17)
+2019-03-04 17:29:27: ACTION[Server]: singleplayer right-clicks object 3: LuaEntitySAO at (-53.8494,3.25,274.216)
+2019-03-04 17:29:27: ACTION[Server]: singleplayer right-clicks object 3: LuaEntitySAO at (-53.719,3.25,274.259)
+2019-03-04 17:29:29: ACTION[Server]: singleplayer right-clicks object 3: LuaEntitySAO at (-53.3504,3.25,274.379)
+2019-03-04 17:29:29: ACTION[Server]: singleplayer right-clicks object 3: LuaEntitySAO at (-53.3504,3.25,274.379)
+2019-03-04 17:29:29: ACTION[Server]: singleplayer right-clicks object 3: LuaEntitySAO at (-53.3504,3.25,274.379)
+2019-03-04 17:29:29: ACTION[Server]: singleplayer right-clicks object 3: LuaEntitySAO at (-53.3504,3.25,274.379)
+2019-03-04 17:29:30: ACTION[Server]: singleplayer right-clicks object 3: LuaEntitySAO at (-53.3504,3.25,274.379)
+2019-03-04 17:29:30: ACTION[Server]: singleplayer right-clicks object 3: LuaEntitySAO at (-53.3504,3.25,274.379)
+2019-03-04 17:29:30: ACTION[Server]: singleplayer right-clicks object 3: LuaEntitySAO at (-53.3504,3.25,274.379)
+2019-03-04 17:29:31: ACTION[Server]: singleplayer punches object 3: LuaEntitySAO at (-53.3504,3.25,274.379)
+2019-03-04 17:29:31: ACTION[Server]: singleplayer punches object 3: LuaEntitySAO at (-53.6035,3.25,273.931)
+2019-03-04 17:29:33: ACTION[Server]: singleplayer right-clicks object 3: LuaEntitySAO at (-55.7307,3.25,272.913)
+2019-03-04 17:29:36: ACTION[Server]: singleplayer right-clicks object 3: LuaEntitySAO at (-58.7208,4.25,271.481)
+2019-03-04 17:29:38: ACTION[Server]: singleplayer right-clicks object 3: LuaEntitySAO at (-59.5023,4.25,271.107)
+2019-03-04 17:29:40: ACTION[Server]: singleplayer punches object 3: LuaEntitySAO at (-59.9393,4.25,270.85)
+2019-03-04 17:29:43: ACTION[Server]: singleplayer right-clicks object 3: LuaEntitySAO at (-63.7295,5.25,269.714)
+2019-03-04 17:29:43: ACTION[Server]: singleplayer punches object 3: LuaEntitySAO at (-64.1922,5.25,269.576)
+2019-03-04 17:29:44: ACTION[Server]: singleplayer right-clicks object 3: LuaEntitySAO at (-64.5692,5.25,269.672)
+2019-03-04 17:29:46: ACTION[Main]: Server: Shutting down
+2019-03-04 17:29:46: ACTION[Main]: [mana] Server shuts down. Rescuing data into mana.mt
+2019-03-04 17:29:46: ACTION[Main]: [mana] Wrote mana data into /opt/minetest/bin/../worlds/wqeqwe/mana.mt.
+2019-03-04 17:31:10: WARNING[Main]: Field "noise_threshhold": Deprecated: new name is "noise_threshold".
+2019-03-04 17:31:10: WARNING[Main]: Undeclared global variable "mg_name" accessed at ...inetest/bin/../games/bogart/mods/brewing/meteor/init.lua:15
+2019-03-04 17:31:10: WARNING[Main]: Node 'light_source' value exceeds maximum, limiting to maximum: meteorite:lunar_meteor_hot
+2019-03-04 17:31:10: ACTION[Main]: hb.register_hudbar: health
+2019-03-04 17:31:10: ACTION[Main]: hb.register_hudbar: breath
+2019-03-04 17:31:10: ACTION[Main]: hb.register_hudbar: sprint
+2019-03-04 17:31:10: ACTION[Main]: [mana] mana.mt opened.
+2019-03-04 17:31:10: [Main]: [mana] mana.mt successfully read.
+2019-03-04 17:31:10: ACTION[Main]: hb.register_hudbar: mana
+2019-03-04 17:31:10: ACTION[Main]: [crops] ¡Cargado!
+2019-03-04 17:31:10: WARNING[Main]: Field "tile_images": Deprecated; new name is "tiles".
+2019-03-04 17:31:10: WARNING[Main]: Field "height_min": Deprecated: new name is "y_min".
+2019-03-04 17:31:10: WARNING[Main]: Field "height_max": Deprecated: new name is "y_max".
+2019-03-04 17:31:10: WARNING[Main]: Node 'light_source' value exceeds maximum, limiting to maximum: lavastuff:light
+2019-03-04 17:31:10: ACTION[Main]: hb.register_hudbar: armor
+2019-03-04 17:31:10: ACTION[Main]: [MOD] Mobs Redo loaded
+2019-03-04 17:31:10: ACTION[Main]: [Mod] Mobs Ghost Redo [v0.5.1] loaded.
+2019-03-04 17:31:10: ACTION[Main]: hb.register_hudbar: satiation
+2019-03-04 17:31:10: [Main]: [advanced_npc] INFO: Successfully registered program '"advanced_npc:follow"'
+2019-03-04 17:31:10: [Main]: [advanced_npc] INFO: Successfully registered program '"advanced_npc:idle"'
+2019-03-04 17:31:10: [Main]: [advanced_npc] INFO: Successfully registered program '"advanced_npc:wander"'
+2019-03-04 17:31:10: [Main]: [advanced_npc] INFO: Successfully registered program '"advanced_npc:walk_to_pos"'
+2019-03-04 17:31:10: [Main]: [advanced_npc] INFO: Successfully registered program '"advanced_npc:use_bed"'
+2019-03-04 17:31:10: [Main]: [advanced_npc] INFO: Successfully registered program '"advanced_npc:use_sittable"'
+2019-03-04 17:31:10: [Main]: [advanced_npc] INFO: Successfully registered program '"advanced_npc:internal_property_change"'
+2019-03-04 17:31:10: [Main]: [advanced_npc] INFO: Successfully registered program '"advanced_npc:node_query"'
+2019-03-04 17:31:10: WARNING[Main]: Not registering alias, item with same name is already defined: brewing:sugar -> farming:sugar
+2019-03-04 17:31:10: WARNING[Main]: Not registering alias, item with same name is already defined: brewing:clay_bowl -> food:bowl
+2019-03-04 17:31:10: ACTION[Main]: World at [/opt/minetest/bin/../worlds/wqeqwe]
+2019-03-04 17:31:10: ACTION[Main]: Server for gameid="bogart" listening on 0.0.0.0:60469.
+2019-03-04 17:31:11: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:31:11: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:31:11: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:31:11: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:31:11: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:31:11: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:31:11: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:31:11: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:31:11: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:31:11: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:31:11: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:31:11: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:31:11: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:31:11: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:31:11: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:31:11: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:31:11: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:31:11: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:31:11: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:31:11: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:31:11: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:31:12: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:31:12: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:31:12: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:31:12: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:31:12: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:31:12: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:31:12: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:31:12: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:31:12: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:31:12: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:31:12: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:31:12: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:31:12: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:31:12: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:31:12: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:31:12: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:31:12: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:31:12: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:31:12: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:31:12: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:31:12: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:31:12: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:31:12: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:31:12: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:31:12: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:31:12: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:31:12: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:31:12: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:31:12: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:31:12: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:31:12: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:31:12: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:31:12: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:31:12: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:31:12: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:31:12: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:31:12: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:31:12: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:31:12: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:31:12: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:31:12: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:31:12: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:31:12: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:31:12: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:31:13: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:31:13: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:31:13: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:31:13: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:31:13: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:31:14: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:31:14: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:31:17: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:31:18: ACTION[Server]: singleplayer [127.0.0.1] joins game. 
+2019-03-04 17:31:18: ACTION[Server]: singleplayer joins game. List of players: singleplayer
+2019-03-04 17:31:18: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:31:18: WARNING[Main]: Irrlicht: PNG warning: iCCP: known incorrect sRGB profile
+2019-03-04 17:31:18: WARNING[Main]: Client side scripting is disabled by client.
+2019-03-04 17:31:18: WARNING[Server]: Undeclared global variable "minetestd" accessed at /opt/minetest/bin/../games/bogart/mods/wield_redo/init.lua:86
+2019-03-04 17:31:20: ACTION[Server]: singleplayer right-clicks object 33: LuaEntitySAO at (-63.2754,5.25,269.916)
+2019-03-04 17:31:24: ACTION[Server]: singleplayer right-clicks object 33: LuaEntitySAO at (-64.1476,5.25,269.649)
+2019-03-04 17:31:24: ACTION[Server]: singleplayer right-clicks object 33: LuaEntitySAO at (-64.4467,5.25,269.558)
+2019-03-04 17:31:25: ACTION[Server]: singleplayer right-clicks object 33: LuaEntitySAO at (-64.4907,5.25,269.513)
+2019-03-04 17:31:29: ACTION[Main]: Server: Shutting down
+2019-03-04 17:31:29: ACTION[Main]: [mana] Server shuts down. Rescuing data into mana.mt
+2019-03-04 17:31:29: ACTION[Main]: [mana] Wrote mana data into /opt/minetest/bin/../worlds/wqeqwe/mana.mt.

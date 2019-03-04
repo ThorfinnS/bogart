@@ -58,7 +58,7 @@ mobs:register_mob("petz:"..pet_name, {
     runaway = true,
     pushable = true,
 	jump = true,
-	follow = petz.settings.follow,	
+	follow = petz.settings.kitty_follow,	
 	drops = {
 		{name = "mobs:meat_raw",
 		chance = 1,

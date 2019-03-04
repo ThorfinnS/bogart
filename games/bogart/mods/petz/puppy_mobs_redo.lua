@@ -63,7 +63,7 @@ mobs:register_mob("petz:"..pet_name, {
 	floats = true,
 	--fly = true,
 	--fly_in = "default:water_source",
-	follow = petz.settings.follow,	
+	follow = petz.settings.puppy_follow,	
 	drops = {
 		{name = "mobs:meat_raw",
 		chance = 1,
