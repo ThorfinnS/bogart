@@ -1,11 +1,14 @@
 --
 --KITTY
 --
-local S, type_model, visual, visual_size, mesh, rotate, textures, collisionbox, follow, food = ...
+local S = ...
 
-local pet_name= "kitty"
+local pet_name = "kitty"
+local mesh = nil
+local textures = {}
+local collisionbox = {}
 
-if type_model == "cubic" then
+if petz.settings.type_model == "cubic" then
 	local node_name = "petz:"..pet_name.."_block"
 	fixed = {
 				{-0.125, -0.5, 0.0625, -0.0625, -0.375, 0.125}, -- back_right_leg
@@ -38,14 +41,14 @@ end
 
 mobs:register_mob("petz:"..pet_name, {
 	type = "animal",
-	rotate = rotate,
+	rotate = petz.settings.rotate,
 	damage = 8,
     hp_min = 4,
     hp_max = 8,
-    affinity = 100,
+    init_timer = true,
     armor = 200,
-	visual = visual,
-	visual_size = visual_size,
+	visual = petz.settings.visual,
+	visual_size = petz.settings.visual_size,
 	mesh = mesh,
 	textures = textures,
 	collisionbox = collisionbox,
@@ -55,7 +58,7 @@ mobs:register_mob("petz:"..pet_name, {
     runaway = true,
     pushable = true,
 	jump = true,
-	follow = follow,	
+	follow = petz.settings.follow,	
 	drops = {
 		{name = "mobs:meat_raw",
 		chance = 1,
@@ -77,9 +80,6 @@ mobs:register_mob("petz:"..pet_name, {
 		},
     view_range = 4,
     fear_height = 3,
-    after_activate = function (self, staticdata, def, dtime)
-    	self.affinity = 100
-	end,
     do_punch = function (self, hitter, time_from_last_punch, tool_capabilities, direction)
     	petz.do_punch(self, hitter, time_from_last_punch, tool_capabilities, direction)
 	end,
@@ -88,6 +88,24 @@ mobs:register_mob("petz:"..pet_name, {
     end,
 	on_rightclick = function(self, clicker)
 		petz.on_rightclick(self, clicker, pet_name)
+	end,
+	on_step = function(self, dtime)
+		petz.on_step(self, dtime)
+	end,
+	after_activate = function(self, staticdata, def, dtime)
+		self.init_timer = true
+	end,
+	do_custom = function(self, dtime)
+		if not self.custom_vars_set then
+			self.custom_vars_set = 0
+			self.affinity = 100
+			self.init_timer = true
+			self.fed= false
+			self.brushed = false
+		end
+		if petz.settings.tamagochi_mode == true and self.init_timer == true then
+        	petz.timer(self, pet_name)        
+    	end
 	end,
 })
 
