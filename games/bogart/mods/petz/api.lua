@@ -174,10 +174,14 @@ petz.on_rightclick = function(self, clicker, pet_name)
         elseif mobs:feed_tame(self, clicker, 5, false, true) then
             if petz.settings.tamagochi_mode == true and self.fed == false then
                 petz.set_affinity(self, true, 5)                
-                self.fed = true               
+                self.fed = true             
             end
             petz.do_sound_effect("object", self.object, "petz_"..pet_name.."_moaning")
             petz.do_particles_effect(self.object, self.object:get_pos(), "heart")   
+        elseif (wielded_item_name == "mobs:lasso") or (wielded_item_name == "mobs:net") then        
+            if mobs:capture_mob(self, clicker, 0, 100, 100, true, nil) then
+                minetest.chat_send_player(self.owner, S("Your").." "..pet_name.." "..S("has been captured."))
+            end                
         --Else open the Form
         else            
             petz.pet[player_name]= self

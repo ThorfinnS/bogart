@@ -11,6 +11,7 @@ local S = minetest.get_translator(minetest.get_current_modname())
 
 assert(loadfile(modpath .. "/api.lua"))(S)
 assert(loadfile(modpath .. "/settings.lua"))(modpath, S) --Load the settings
+assert(loadfile(modpath .. "/nodes.lua"))(modpath, S) --Load the nodes
 
 if petz.settings.kitty_spawn then
 
@@ -51,38 +52,6 @@ if petz.settings.tamagochi_mode then
         }
     })
 end
-
---Pet Bowl
-minetest.register_node("petz:pet_bowl", {
-    description = S("Pet Bowl"),
-    inventory_image = "petz_pet_bowl_inv.png",
-    wield_image = "petz_pet_bowl_inv.png",
-    tiles = {"petz_pet_bowl.png"},
-    groups = {snappy=1, bendy=2, cracky=1},
-    sounds = default_stone_sounds,
-    paramtype = "light",
-    drawtype = "nodebox",
-    node_box = {
-        type = "fixed",
-        fixed = {
-            {-0.1875, -0.5, -0.1875, 0.1875, -0.4375, 0.1875}, -- bottom
-            {-0.1875, -0.4375, -0.1875, 0.1875, -0.375, -0.125}, -- front
-            {-0.1875, -0.4375, 0.125, 0.1875, -0.375, 0.1875}, -- back
-            {-0.1875, -0.4375, -0.125, -0.125, -0.375, 0.125}, -- left
-            {0.125, -0.4375, -0.125, 0.1875, -0.375, 0.125}, -- right
-            },
-        },
-})
- 
-minetest.register_craft({
-    type = "shaped",
-    output = 'petz:pet_bowl',
-    recipe = {        
-        {'group:wood', '', 'group:wood'},
-        {'group:wood', 'group:wood', 'group:wood'},
-        {'', 'dye:red', ''},
-    }
-})
 
 if petz.settings.puppy_spawn then
 
