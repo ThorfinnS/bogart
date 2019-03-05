@@ -41,7 +41,7 @@ petz.create_form = function(player_name, pet_name)
             "label[1,0;".. S("Orders").."]"..
             "image[3,1;1,1;petz_affinity_heart.png]"..
             "label[4,1;".. tostring(pet.affinity).."%]"..
-            "image[3,2;1,1;petz_pet_bowl.png]"
+            "image[3,2;1,1;petz_pet_bowl_inv.png]"
         local hungry_label = ""
         if pet.fed == false then
             hungry_label = "Hungry"

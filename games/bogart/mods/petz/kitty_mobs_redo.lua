@@ -65,6 +65,10 @@ mobs:register_mob("petz:"..pet_name, {
 		min = 1,
 		max = 1,},
 		},
+	stay_near= {
+    	nodes = "petz:pet_bowl",
+    	chance = 1,
+    },
 	water_damage = 2,
 	lava_damage = 6,
 	light_damage = 0,
