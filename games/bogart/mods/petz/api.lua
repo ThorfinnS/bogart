@@ -108,9 +108,9 @@ petz.timer = function(self, pet_name)
     minetest.after(petz.settings.tamagochi_check_time, function(self, pet_name) 
         --decrease affinity
         if not(self.object== nil) then
-            --Decrease affinitty
+            --Decrease affinitty always a bit amount because the pet lost some affinitty
             petz.set_affinity(self, false, 10)
-            --Decrease health if pet was not fed
+            --Decrease health if pet has not fed
             if self.fed == false then
                 local current_health = self.health
                 new_health = current_health - petz.settings.tamagochi_hunger_damage
@@ -121,24 +121,29 @@ petz.timer = function(self, pet_name)
                     self.health = 0
                 end
             end
+            --If the pet has not brushed
             if self.brushed == false then
                 petz.set_affinity(self, false, 20)
             end
+            --Reset the variables
             self.fed = false
             self.brushed = false
+            --If the pet starves to death
             if self.health == 0 then
-                minetest.chat_send_player(self.owner, S("Your").. " "..pet_name.." "..S("was starved!!!"))
-                self.init_timer  = false
+                minetest.chat_send_player(self.owner, S("Your").. " "..pet_name.." "..S("has starved to death!!!"))
+                self.init_timer  = false -- no more timing
+            --I the pet get bored of you
             elseif self.affinity == 0 then
-                minetest.chat_send_player(self.owner, S("Your").." "..pet_name.." "..S("abandoned you!!!"))
-                self.owner = ""
-                self.init_timer  = false
+                minetest.chat_send_player(self.owner, S("Your").." "..pet_name.." "..S("has abandoned you!!!"))
+                self.owner = "" --the pet abandon you
+                self.init_timer  = false -- no more timing
+            --Else reinit the timer, to check again in the future
             else
                 self.init_timer  = true
             end
         end
     end, self, pet_name)
-    self.init_timer  = false
+    self.init_timer = false --the timer is reinited in the minetest.after function
 end
 
 --
@@ -152,7 +157,8 @@ petz.on_rightclick = function(self, clicker, pet_name)
         local player_name = clicker:get_player_name()
         local wielded_item = clicker:get_wielded_item()
         local wielded_item_name= wielded_item:get_name()
-        if wielded_item_name == "petz:hairbrush" then            
+        --If brushing
+        if wielded_item_name == "petz:hairbrush" then
             if (self.owner ~= player_name) then
                 return
             end           
@@ -160,21 +166,19 @@ petz.on_rightclick = function(self, clicker, pet_name)
                 petz.set_affinity(self, true, 5)                
                 self.brushed = true               
             elseif petz.settings.tamagochi_mode == true and self.brushed == true then  
-                minetest.chat_send_player(self.owner, S("Your").." "..pet_name.." "..S("was brushed already."))
+                minetest.chat_send_player(self.owner, S("Your").." "..pet_name.." "..S("had already been brushed."))
             end
             petz.do_sound_effect("object", self.object, "petz_brushing")
             petz.do_particles_effect(self.object, self.object:get_pos(), "star")            
+        --If feeded
         elseif mobs:feed_tame(self, clicker, 5, false, true) then
             if petz.settings.tamagochi_mode == true and self.fed == false then
                 petz.set_affinity(self, true, 5)                
                 self.fed = true               
             end
-            if pet_name == "kitty" then
-                petz.do_sound_effect("object", self.object, "petz_kitty_moaning")
-            elseif pet_name == "puppy" then
-                petz.do_sound_effect("object", self.object, "petz_puppy_bark2")
-            end
+            petz.do_sound_effect("object", self.object, "petz_"..pet_name.."_moaning")
             petz.do_particles_effect(self.object, self.object:get_pos(), "heart")   
+        --Else open the Form
         else            
             petz.pet[player_name]= self
             minetest.show_formspec(player_name, "petz:form_orders", petz.create_form(player_name, pet_name))
