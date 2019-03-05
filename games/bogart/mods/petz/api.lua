@@ -174,6 +174,7 @@ petz.on_rightclick = function(self, clicker, pet_name)
             elseif pet_name == "puppy" then
                 petz.do_sound_effect("object", self.object, "petz_puppy_bark2")
             end
+            petz.do_particles_effect(self.object, self.object:get_pos(), "heart")   
         else            
             petz.pet[player_name]= self
             minetest.show_formspec(player_name, "petz:form_orders", petz.create_form(player_name, pet_name))
@@ -213,12 +214,17 @@ petz.do_particles_effect = function(obj, pos, particle_type)
         z = minpos.z+0.4
     }    
     local texture_name
+    local particles_amount
     if particle_type == "star" then
         texture_name = "petz_star_particle.png"
+        particles_amount = 20
+    elseif particle_type == "heart" then
+        texture_name = "petz_affinity_heart.png"
+        particles_amount = 10
     end
     minetest.add_particlespawner({
         --attached = obj,
-        amount = 20,
+        amount = particles_amount,
         time = 1.5,
         minpos = minpos,
         maxpos = maxpos,
