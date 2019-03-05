@@ -105,9 +105,21 @@ end
 --The Timer for the Tamagochi Mode
 
 petz.timer = function(self, pet_name)
-    minetest.after(petz.settings.tamagochi_check_time, function(self, pet_name) 
-        --decrease affinity
+    minetest.after(petz.settings.tamagochi_check_time, function(self, pet_name)         
         if not(self.object== nil) then
+            local pos = self.object:get_pos()
+            if not(pos == nil) then --important for if the pet dies
+                local pos_below = {
+                    x = pos.x,
+                    y = pos.y - 1,
+                    z = pos.z,
+                }
+                local node = minetest.get_node_or_nil(pos_below)
+                if node and node.name == "petz:yellow_paving" then
+                    self.init_timer = true    
+                    return
+                end
+            end
             --Decrease affinitty always a bit amount because the pet lost some affinitty
             petz.set_affinity(self, false, 10)
             --Decrease health if pet has not fed
