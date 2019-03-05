@@ -111,11 +111,12 @@ petz.timer = function(self, pet_name)
             if not(pos == nil) then --important for if the pet dies
                 local pos_below = {
                     x = pos.x,
-                    y = pos.y - 1,
+                    y = pos.y - 1.5,
                     z = pos.z,
                 }
                 local node = minetest.get_node_or_nil(pos_below)
-                if node and node.name == "petz:yellow_paving" then
+                --minetest.chat_send_player(self.owner, petz.settings.tamagochi_safe_node)
+                if node and (node.name == petz.settings.tamagochi_safe_node) then
                     self.init_timer = true    
                     return
                 end
