@@ -1,3 +1,3 @@
-Model and textures by runs.
-License: GPL3
+Models, icons and textures by runs.
+License: GPLv3
 
