@@ -162,12 +162,17 @@ petz.on_rightclick = function(self, clicker, pet_name)
             elseif petz.settings.tamagochi_mode == true and self.brushed == true then  
                 minetest.chat_send_player(self.owner, S("Your").." "..pet_name.." "..S("was brushed already."))
             end
-            petz.do_sound_effect("to_player", player_name, "petz_brushing")
+            petz.do_sound_effect("object", self.object, "petz_brushing")
             petz.do_particles_effect(self.object, self.object:get_pos(), "star")            
         elseif mobs:feed_tame(self, clicker, 5, false, true) then
             if petz.settings.tamagochi_mode == true and self.fed == false then
                 petz.set_affinity(self, true, 5)                
                 self.fed = true               
+            end
+            if pet_name == "kitty" then
+                petz.do_sound_effect("object", self.object, "petz_kitty_moaning")
+            elseif pet_name == "puppy" then
+                petz.do_sound_effect("object", self.object, "petz_puppy_bark2")
             end
         else            
             petz.pet[player_name]= self
@@ -223,8 +228,8 @@ petz.do_particles_effect = function(obj, pos, particle_type)
         --maxacc = {x=1, y=0, z=1},
         minexptime = 1,
         maxexptime = 1,
-        minsize = 1.5,
-        maxsize = 2.5,
+        minsize = 1.0,
+        maxsize = 1.5,
         collisiondetection = false,
         vertical = false,
         texture = texture_name,        
