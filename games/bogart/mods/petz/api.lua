@@ -120,6 +120,9 @@ petz.timer = function(self, pet_name)
                     self.init_timer = true    
                     return
                 end
+            else  --if the pos is nil, it means that the pet died before 'minetest.after_effect'
+                self.init_timer = false --so no more timer
+                return
             end
             --Decrease affinitty always a bit amount because the pet lost some affinitty
             petz.set_affinity(self, false, 10)
