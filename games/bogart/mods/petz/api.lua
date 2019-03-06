@@ -72,10 +72,13 @@ minetest.register_on_player_receive_fields(function(player, formname, fields)
 	end
 	--brewing.magic_sound("to_player", player, "brewing_select")
 	if fields.btn_followme then
+        pet.type = "npc"
 		pet.order = "follow"
 	elseif fields.btn_standhere then
+        pet.type = "animal"
 		pet.order = "stand"
 	elseif fields.btn_ownthing then
+        pet.type = "animal"
 		pet.order = ""
 		pet.state = "walk"
 	end

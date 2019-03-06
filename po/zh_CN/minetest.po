@@ -2,9 +2,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-02-14 19:14+0100\n"
-"PO-Revision-Date: 2019-02-10 20:38+0000\n"
-"Last-Translator: dumaosen <dumaosen_main01@outlook.com>\n"
+"POT-Creation-Date: 2019-02-24 18:43+0100\n"
+"PO-Revision-Date: 2019-02-23 11:18+0000\n"
+"Last-Translator: Cool-Pan <ivlioioilvi@gmail.com>\n"
 "Language-Team: Chinese (Simplified) <https://hosted.weblate.org/projects/"
 "minetest/minetest/zh_Hans/>\n"
 "Language: zh_CN\n"
@@ -19,19 +19,16 @@ msgid "Respawn"
 msgstr "重生"
 
 #: builtin/client/death_formspec.lua src/client/game.cpp
-#, fuzzy
 msgid "You died"
-msgstr "你死了。"
+msgstr "您已死亡"
 
 #: builtin/fstk/ui.lua
-#, fuzzy
 msgid "An error occurred in a Lua script, such as a mod:"
-msgstr "Lua 脚本发生错误，如一个模组："
+msgstr "Lua 脚本发生错误，如一个 mod："
 
 #: builtin/fstk/ui.lua
-#, fuzzy
 msgid "An error occurred:"
-msgstr "发生了一个错误："
+msgstr "发生了错误："
 
 #: builtin/fstk/ui.lua
 msgid "Main menu"
@@ -47,7 +44,7 @@ msgstr "重新连接"
 
 #: builtin/fstk/ui.lua
 msgid "The server has requested a reconnect:"
-msgstr "服务器已要求重新连接："
+msgstr "服务器已请求重新连接："
 
 #: builtin/mainmenu/common.lua src/client/game.cpp
 msgid "Loading..."
@@ -96,39 +93,34 @@ msgid "Disable all"
 msgstr "全部禁用"
 
 #: builtin/mainmenu/dlg_config_world.lua
-#, fuzzy
 msgid "Disable modpack"
-msgstr "已禁用"
+msgstr "禁用 mod 包"
 
 #: builtin/mainmenu/dlg_config_world.lua
 msgid "Enable all"
 msgstr "全部启用"
 
 #: builtin/mainmenu/dlg_config_world.lua
-#, fuzzy
 msgid "Enable modpack"
-msgstr "重命名MOD包："
+msgstr "启用 mod 包"
 
 #: builtin/mainmenu/dlg_config_world.lua
-#, fuzzy
 msgid ""
 "Failed to enable mod \"$1\" as it contains disallowed characters. Only "
 "characters [a-z0-9_] are allowed."
-msgstr "无法启用 MOD \"$1\"：含有不支持的字符。允许的字符为 [a-z0-9_]。"
+msgstr "无法启用 mod \"$1\"：因为包含有不支持的字符。只允许 [a-z0-9_] 字符。"
 
 #: builtin/mainmenu/dlg_config_world.lua
 msgid "Mod:"
 msgstr "Mod："
 
 #: builtin/mainmenu/dlg_config_world.lua
-#, fuzzy
 msgid "No game description provided."
-msgstr "无MOD资料可得"
+msgstr "未提供游戏描述。"
 
 #: builtin/mainmenu/dlg_config_world.lua
-#, fuzzy
 msgid "No modpack description provided."
-msgstr "无MOD资料可得"
+msgstr "未提供mod 包描述。"
 
 #: builtin/mainmenu/dlg_config_world.lua builtin/mainmenu/tab_content.lua
 msgid "Optional dependencies:"
@@ -149,26 +141,23 @@ msgstr "启用"
 
 #: builtin/mainmenu/dlg_contentstore.lua
 msgid "All packages"
-msgstr "全部软件包"
+msgstr "全部包"
 
 #: builtin/mainmenu/dlg_contentstore.lua
 msgid "Back"
-msgstr "退格"
+msgstr "后退"
 
 #: builtin/mainmenu/dlg_contentstore.lua
-#, fuzzy
 msgid "Back to Main Menu"
-msgstr "主菜单"
+msgstr "返回主菜单"
 
 #: builtin/mainmenu/dlg_contentstore.lua
-#, fuzzy
 msgid "Downloading and installing $1, please wait..."
-msgstr "正在下载 $1, 请稍候..."
+msgstr "正在下载和安装 $1，请稍等..."
 
 #: builtin/mainmenu/dlg_contentstore.lua
-#, fuzzy
 msgid "Failed to download $1"
-msgstr "无法安装$1到$2"
+msgstr "下载 $1 失败"
 
 #: builtin/mainmenu/dlg_contentstore.lua
 #: builtin/mainmenu/dlg_settings_advanced.lua
@@ -186,7 +175,7 @@ msgstr "Mod"
 
 #: builtin/mainmenu/dlg_contentstore.lua
 msgid "No packages could be retrieved"
-msgstr ""
+msgstr "无法检索任何包"
 
 #: builtin/mainmenu/dlg_contentstore.lua
 msgid "No results"
@@ -203,9 +192,8 @@ msgid "Texture packs"
 msgstr "材质包"
 
 #: builtin/mainmenu/dlg_contentstore.lua
-#, fuzzy
 msgid "Uninstall"
-msgstr "安装"
+msgstr "卸载"
 
 #: builtin/mainmenu/dlg_contentstore.lua
 msgid "Update"
@@ -376,7 +364,7 @@ msgstr "显示高级设置"
 
 #: builtin/mainmenu/dlg_settings_advanced.lua
 msgid "The value must be at least $1."
-msgstr "这个值必须大于$1."
+msgstr "这个值必须至少为 $1。"
 
 #: builtin/mainmenu/dlg_settings_advanced.lua
 msgid "The value must not be larger than $1."
@@ -411,9 +399,8 @@ msgid "absvalue"
 msgstr "绝对值"
 
 #: builtin/mainmenu/dlg_settings_advanced.lua
-#, fuzzy
 msgid "defaults"
-msgstr "默认游戏"
+msgstr "默认值"
 
 #: builtin/mainmenu/dlg_settings_advanced.lua
 msgid "eased"
@@ -431,7 +418,7 @@ msgstr "3D 模式"
 
 #: builtin/mainmenu/pkgmgr.lua
 msgid "Failed to install $1 to $2"
-msgstr "无法安装$1到$2"
+msgstr "安装 $1 到 $2 失败"
 
 #: builtin/mainmenu/pkgmgr.lua
 #, fuzzy
@@ -867,7 +854,7 @@ msgstr "连接出错（超时？）"
 
 #: src/client/clientlauncher.cpp
 msgid "Could not find or load game \""
-msgstr "无法找到或载入游戏模式"
+msgstr "无法找到或者载入游戏 \""
 
 #: src/client/clientlauncher.cpp
 msgid "Invalid gamespec."
@@ -899,7 +886,7 @@ msgstr "提供的世界路径不存在: "
 
 #: src/client/fontengine.cpp
 msgid "needs_fallback_font"
-msgstr "yes"
+msgstr "需要_fallback_字体"
 
 #: src/client/game.cpp
 msgid ""
@@ -942,11 +929,13 @@ msgid "- Server Name: "
 msgstr "- 服务器名称: "
 
 #: src/client/game.cpp
-msgid "Automatic forwards disabled"
+#, fuzzy
+msgid "Automatic forward disabled"
 msgstr "自动转发已禁用"
 
 #: src/client/game.cpp
-msgid "Automatic forwards enabled"
+#, fuzzy
+msgid "Automatic forward enabled"
 msgstr "自动转发已启用"
 
 #: src/client/game.cpp
@@ -1028,7 +1017,7 @@ msgstr "建立服务器...."
 
 #: src/client/game.cpp
 msgid "Debug info and profiler graph hidden"
-msgstr ""
+msgstr "隐藏的调试信息和 Profiler 图"
 
 #: src/client/game.cpp
 #, fuzzy
@@ -1037,7 +1026,7 @@ msgstr "调试信息切换键"
 
 #: src/client/game.cpp
 msgid "Debug info, profiler graph, and wireframe hidden"
-msgstr ""
+msgstr "隐藏调试信息，Profiler 图，和线框"
 
 #: src/client/game.cpp
 msgid ""
@@ -1069,11 +1058,11 @@ msgstr ""
 
 #: src/client/game.cpp
 msgid "Disabled unlimited viewing range"
-msgstr ""
+msgstr "禁用无限视野"
 
 #: src/client/game.cpp
 msgid "Enabled unlimited viewing range"
-msgstr ""
+msgstr "启用无限视野"
 
 #: src/client/game.cpp
 msgid "Exit to Menu"
@@ -1095,7 +1084,7 @@ msgstr "快速移动模式速度"
 
 #: src/client/game.cpp
 msgid "Fast mode enabled (note: no 'fast' privilege)"
-msgstr ""
+msgstr "快速模式已启用（注：无 'fast' 特权）"
 
 #: src/client/game.cpp
 #, fuzzy
@@ -1151,7 +1140,7 @@ msgstr "MiB/s"
 
 #: src/client/game.cpp
 msgid "Minimap currently disabled by game or mod"
-msgstr ""
+msgstr "小地图被当前游戏或者 mod 禁用"
 
 #: src/client/game.cpp
 #, fuzzy
@@ -1184,7 +1173,7 @@ msgstr ""
 
 #: src/client/game.cpp
 msgid "Noclip mode disabled"
-msgstr ""
+msgstr "Noclip 模式已禁用"
 
 #: src/client/game.cpp
 #, fuzzy
@@ -1271,11 +1260,11 @@ msgstr "音量改到%d1%%2"
 
 #: src/client/game.cpp
 msgid "Wireframe shown"
-msgstr ""
+msgstr "显示线框"
 
 #: src/client/game.cpp
 msgid "Zoom currently disabled by game or mod"
-msgstr ""
+msgstr "缩放被当前游戏或 mod 禁用"
 
 #: src/client/game.cpp src/gui/modalMenu.cpp
 msgid "ok"
@@ -1288,15 +1277,15 @@ msgstr "聊天键"
 
 #: src/client/gameui.cpp
 msgid "Chat shown"
-msgstr ""
+msgstr "显示聊天"
 
 #: src/client/gameui.cpp
 msgid "HUD hidden"
-msgstr ""
+msgstr "隐藏 HUD"
 
 #: src/client/gameui.cpp
 msgid "HUD shown"
-msgstr ""
+msgstr "显示 HUD"
 
 #: src/client/gameui.cpp
 #, fuzzy
@@ -1479,11 +1468,11 @@ msgstr "OEM Clear键"
 
 #: src/client/keycode.cpp
 msgid "Page down"
-msgstr ""
+msgstr "下一页"
 
 #: src/client/keycode.cpp
 msgid "Page up"
-msgstr ""
+msgstr "上一页"
 
 #: src/client/keycode.cpp
 msgid "Pause"
@@ -1495,7 +1484,7 @@ msgstr "开始游戏"
 
 #: src/client/keycode.cpp
 msgid "Print"
-msgstr "Print键"
+msgstr "打印"
 
 #: src/client/keycode.cpp
 msgid "Return"
@@ -1575,7 +1564,7 @@ msgstr "密码不匹配！"
 
 #: src/gui/guiConfirmRegistration.cpp
 msgid "Register and Join"
-msgstr ""
+msgstr "注册并加入"
 
 #: src/gui/guiConfirmRegistration.cpp
 #, c-format
@@ -1603,7 +1592,7 @@ msgstr "向前"
 
 #: src/gui/guiKeyChangeMenu.cpp src/settings_translation_file.cpp
 msgid "Automatic jumping"
-msgstr ""
+msgstr "自动跳 Ping"
 
 #: src/gui/guiKeyChangeMenu.cpp
 msgid "Backward"
@@ -2075,7 +2064,7 @@ msgstr ""
 
 #: src/settings_translation_file.cpp
 #, fuzzy
-msgid "Automatic forwards key"
+msgid "Automatic forward key"
 msgstr "前进键"
 
 #: src/settings_translation_file.cpp
@@ -2561,7 +2550,7 @@ msgstr "定义大尺寸的河道结构。"
 
 #: src/settings_translation_file.cpp
 msgid "Defines location and terrain of optional hills and lakes."
-msgstr "定义所选的山和湖的位置与地形"
+msgstr "定义所选的山和湖的位置与地形。"
 
 #: src/settings_translation_file.cpp
 msgid ""
@@ -3144,9 +3133,7 @@ msgstr "全局回调"
 msgid ""
 "Global map generation attributes.\n"
 "In Mapgen v6 the 'decorations' flag controls all decorations except trees\n"
-"and junglegrass, in all other mapgens this flag controls all decorations.\n"
-"Flags that are not enabled are not modified from the default.\n"
-"Flags starting with 'no' are used to explicitly disable them."
+"and junglegrass, in all other mapgens this flag controls all decorations."
 msgstr ""
 
 #: src/settings_translation_file.cpp
@@ -4369,17 +4356,14 @@ msgstr ""
 
 #: src/settings_translation_file.cpp
 msgid "Makes all liquids opaque"
-msgstr ""
+msgstr "使所有液体不透明"
 
 #: src/settings_translation_file.cpp
 msgid "Map directory"
 msgstr "地图目录"
 
 #: src/settings_translation_file.cpp
-msgid ""
-"Map generation attributes specific to Mapgen Carpathian.\n"
-"Flags that are not enabled are not modified from the default.\n"
-"Flags starting with 'no' are used to explicitly disable them."
+msgid "Map generation attributes specific to Mapgen Carpathian."
 msgstr ""
 
 #: src/settings_translation_file.cpp
@@ -4395,16 +4379,11 @@ msgstr ""
 #: src/settings_translation_file.cpp
 msgid ""
 "Map generation attributes specific to Mapgen flat.\n"
-"Occasional lakes and hills can be added to the flat world.\n"
-"Flags that are not enabled are not modified from the default.\n"
-"Flags starting with 'no' are used to explicitly disable them."
+"Occasional lakes and hills can be added to the flat world."
 msgstr ""
 
 #: src/settings_translation_file.cpp
-msgid ""
-"Map generation attributes specific to Mapgen v5.\n"
-"Flags that are not enabled are not modified from the default.\n"
-"Flags starting with 'no' are used to explicitly disable them."
+msgid "Map generation attributes specific to Mapgen v5."
 msgstr ""
 
 #: src/settings_translation_file.cpp
@@ -4412,17 +4391,13 @@ msgid ""
 "Map generation attributes specific to Mapgen v6.\n"
 "The 'snowbiomes' flag enables the new 5 biome system.\n"
 "When the new biome system is enabled jungles are automatically enabled and\n"
-"the 'jungles' flag is ignored.\n"
-"Flags that are not enabled are not modified from the default.\n"
-"Flags starting with 'no' are used to explicitly disable them."
+"the 'jungles' flag is ignored."
 msgstr ""
 
 #: src/settings_translation_file.cpp
 msgid ""
 "Map generation attributes specific to Mapgen v7.\n"
-"'ridges' enables the rivers.\n"
-"Flags that are not enabled are not modified from the default.\n"
-"Flags starting with 'no' are used to explicitly disable them."
+"'ridges' enables the rivers."
 msgstr ""
 
 #: src/settings_translation_file.cpp
@@ -4755,7 +4730,7 @@ msgid ""
 "Name of map generator to be used when creating a new world.\n"
 "Creating a world in the main menu will override this.\n"
 "Current stable mapgens:\n"
-"v5, v6, v7 (except floatlands), flat, singlenode.\n"
+"v5, v6, v7 (except floatlands), singlenode.\n"
 "'stable' means the terrain shape in an existing world will not be changed\n"
 "in the future. Note that biomes are defined by games and may still change."
 msgstr ""
@@ -6028,9 +6003,8 @@ msgstr ""
 "如果从主菜单开始游戏就不需要。"
 
 #: src/settings_translation_file.cpp
-#, fuzzy
 msgid "World start time"
-msgstr "世界名称"
+msgstr "世界开始时间"
 
 #: src/settings_translation_file.cpp
 msgid ""
@@ -6110,431 +6084,77 @@ msgstr "cURL 并发限制"
 msgid "cURL timeout"
 msgstr "cURL 超时"
 
-#~ msgid "Disable MP"
-#~ msgstr "禁用MOD包"
+#, fuzzy
+#~ msgid "Content Store"
+#~ msgstr "关闭商店"
 
-#~ msgid "Enable MP"
-#~ msgstr "启用MOD包"
-
-#~ msgid "No worldname given or no game selected"
-#~ msgstr "未指定世界名或未选择游戏"
-
-#~ msgid "\"$1\" is not a valid flag."
-#~ msgstr "\"$1\" 不是合法的 flag."
-
-#~ msgid "Format is 3 numbers separated by commas and inside brackets."
-#~ msgstr "格式: (X, Y, Z)."
-
-#~ msgid ""
-#~ "Format: <offset>, <scale>, (<spreadX>, <spreadY>, <spreadZ>), <seed>, "
-#~ "<octaves>, <persistence>"
-#~ msgstr ""
-#~ "格式: <offset>, <scale>, (<spreadX>, <spreadY>, <spreadZ>), <seed>, "
-#~ "<octaves>, <persistence>"
-
-#~ msgid "Optionally the lacunarity can be appended with a leading comma."
-#~ msgstr "可选附加一逗号起始的孔隙度参数。"
-
-#~ msgid "Please enter a comma seperated list of flags."
-#~ msgstr "请输入 flag, 多个 flag 以半角逗号分隔."
-
-#~ msgid "Possible values are: "
-#~ msgstr "可设置的 flag: "
-
-#~ msgid "Select path"
-#~ msgstr "选择路径"
-
-#~ msgid "Subgame Mods"
-#~ msgstr "子游戏模组"
-
-#~ msgid "Page $1 of $2"
-#~ msgstr "第$1页,共$2页"
-
-#~ msgid "Rating"
-#~ msgstr "评级"
-
-#~ msgid "Shortname:"
-#~ msgstr "短名称:"
-
-#~ msgid "Successfully installed:"
-#~ msgstr "成功的安装："
-
-#~ msgid "Unsorted"
-#~ msgstr "未分类"
-
-#~ msgid "re-Install"
-#~ msgstr "重新安装"
-
-#~ msgid "Local Game"
-#~ msgstr "本地游戏"
-
-#~ msgid "Uninstall selected modpack"
-#~ msgstr "删除选中的MOD包"
-
-#~ msgid "Play Online"
-#~ msgstr "联网游戏"
-
-#~ msgid "Normal Mapping"
-#~ msgstr "法线贴图"
-
-#~ msgid "No information available"
-#~ msgstr "无信息可用"
-
-#~ msgid "Volume changed to 0%"
-#~ msgstr "音量改到0%"
-
-#~ msgid "Volume changed to 100%"
-#~ msgstr "音量改到100%"
-
-#~ msgid "Print stacks"
-#~ msgstr "打印栈"
-
-#~ msgid "Use"
-#~ msgstr "使用"
-
-#~ msgid "Next"
-#~ msgstr "下一个"
-
-#~ msgid "Prior"
-#~ msgstr "Prior键"
-
-#~ msgid "Active Block Modifier interval"
-#~ msgstr "活动区块修改间隔"
-
-#~ msgid ""
-#~ "Android systems only: Tries to create inventory textures from meshes\n"
-#~ "when no supported render was found."
-#~ msgstr "只有 Android 系统: 在未找到支持的渲染时, 尝试从网格创建库存纹理。"
-
-#~ msgid ""
-#~ "Announce to this serverlist.\n"
-#~ "If you want to announce your ipv6 address, use  serverlist_url = v6."
-#~ "servers.minetest.net."
-#~ msgstr ""
-#~ "发布到此服务器列表。\n"
-#~ "如果你想发布你的 IPv6 地址，使用 serverlist_url = v6.servers.minetest."
-#~ "net 。"
-
-#~ msgid "Approximate (X,Y,Z) scale of fractal in nodes."
-#~ msgstr "大约 (X,Y,Z) 的节点分形规模。"
-
-#~ msgid "Autorun key"
-#~ msgstr "自动奔跑键"
-
-#~ msgid "Caves and tunnels form at the intersection of the two noises"
-#~ msgstr "洞穴与隧道由两种噪音的交集形成"
-
-#~ msgid "Cloud height"
-#~ msgstr "云高度"
-
-#~ msgid "Console key"
-#~ msgstr "控制台键"
-
-#~ msgid "Continuous forward movement (only used for testing)."
-#~ msgstr "连续向前移动（仅用于测试）。"
-
-#~ msgid ""
-#~ "Creates unpredictable lava features in caves.\n"
-#~ "These can make mining difficult. Zero disables them. (0-10)"
-#~ msgstr ""
-#~ "在山洞中创建不可预知的熔岩特性。\n"
-#~ "这可以使挖掘更加困难。0 表示禁用。 (0-10)"
-
-#~ msgid ""
-#~ "Creates unpredictable water features in caves.\n"
-#~ "These can make mining difficult. Zero disables them. (0-10)"
-#~ msgstr ""
-#~ "在洞穴中创建随机的水域。\n"
-#~ "水域会使挖矿变得困难。值为0则禁用。（0-10）"
-
-#~ msgid "Crouch speed"
-#~ msgstr "蹲伏速度"
-
-#~ msgid "Depth below which you'll find massive caves."
-#~ msgstr "巨型洞穴的最浅深度。"
-
-#~ msgid "Descending speed"
-#~ msgstr "下降速度"
-
-#~ msgid "Disable escape sequences"
-#~ msgstr "禁用转义序列"
-
-#~ msgid ""
-#~ "Disable escape sequences, e.g. chat coloring.\n"
-#~ "Use this if you want to run a server with pre-0.4.14 clients and you want "
-#~ "to disable\n"
-#~ "the escape sequences generated by mods."
-#~ msgstr ""
-#~ "停用脱离序列,比如聊天颜色。\n"
-#~ "使用该项，如果你想使用 0.4.14 版本之前的客户端运行服务器并且禁止\n"
-#~ "模组生成的转义序列。"
-
-#~ msgid "Enable view bobbing"
-#~ msgstr "启用视角摇动"
-
-#~ msgid "Enables view bobbing when walking."
-#~ msgstr "启用走动时视角摇动。"
-
-#~ msgid "Field of view for zoom"
-#~ msgstr "放大时的视界"
-
-#~ msgid ""
-#~ "Field of view while zooming in degrees.\n"
-#~ "This requires the \"zoom\" privilege on the server."
-#~ msgstr ""
-#~ "快速移动（通过“使用”键）。\n"
-#~ "这需要服务器允许“快速移动”权限。"
-
-#~ msgid "General"
-#~ msgstr "常规"
-
-#~ msgid "Height on which clouds are appearing."
-#~ msgstr "云在多高的高度出现。"
+#~ msgid "Advanced Settings"
+#~ msgstr "高级设置"
 
 #, fuzzy
-#~ msgid "Inventory image hack"
-#~ msgstr "库存键"
+#~ msgid "Preload inventory textures"
+#~ msgstr "载入中..."
 
-#~ msgid "Lava Features"
-#~ msgstr "熔岩特性"
+#~ msgid "Scaling factor applied to menu elements: "
+#~ msgstr "菜单元素应用缩放因子"
 
-#~ msgid "Main menu game manager"
-#~ msgstr "主菜单游戏管理器"
-
-#~ msgid "Main menu mod manager"
-#~ msgstr "主菜单 mode 管理器"
-
-#~ msgid "Massive cave depth"
-#~ msgstr "巨大洞穴深度"
-
-#~ msgid "Massive cave noise"
-#~ msgstr "巨大洞穴噪音"
-
-#~ msgid "Modstore details URL"
-#~ msgstr "Mod 存储详情 URL"
-
-#~ msgid "Modstore download URL"
-#~ msgstr "Mod 存储下载 URL"
-
-#~ msgid "Modstore mods list URL"
-#~ msgstr "Mod 存储的 Mod 列表 URL"
-
-#~ msgid "The rendering back-end for Irrlicht."
-#~ msgstr "Irrlicht 的渲染后端。"
-
-#~ msgid "Use key"
-#~ msgstr "使用按键"
-
-#~ msgid "Valleys C Flags"
-#~ msgstr "山谷 C 标志"
-
-#~ msgid "Water Features"
-#~ msgstr "水特性"
-
-#~ msgid ""
-#~ "Whether to support older servers before protocol version 25.\n"
-#~ "Enable if you want to connect to 0.4.12 servers and before.\n"
-#~ "Servers starting with 0.4.13 will work, 0.4.12-dev servers may work.\n"
-#~ "Disabling this option will protect your password better."
-#~ msgstr ""
-#~ "是否支持协议版本在25之前的旧版服务器。\n"
-#~ "启用如果你想连接到0.4.12及之前版本的服务器。\n"
-#~ "0.4.13开始的服务器会工作，0.4.12-dev服务器可能会工作。\n"
-#~ "禁用该项可以更好地保护你的密码。"
-
-#~ msgid "Hide mp content"
-#~ msgstr "隐藏MOD包内容"
-
-#~ msgid "Attn"
-#~ msgstr "Attn键"
-
-#~ msgid "Capital"
-#~ msgstr "大写锁定键"
-
-#~ msgid "Comma"
-#~ msgstr "逗号"
-
-#~ msgid "CrSel"
-#~ msgstr "CrSel键"
-
-#~ msgid "ExSel"
-#~ msgstr "ExSel键"
-
-#~ msgid "Final"
-#~ msgstr "Final键"
-
-#~ msgid "Junja"
-#~ msgstr "Junja键"
-
-#~ msgid "Kana"
-#~ msgstr "Kana键"
-
-#~ msgid "Kanji"
-#~ msgstr "Kanji键"
-
-#~ msgid "Minus"
-#~ msgstr "减号"
-
-#~ msgid "PA1"
-#~ msgstr "PA1键"
-
-#~ msgid "Period"
-#~ msgstr "句号"
-
-#~ msgid "Plus"
-#~ msgstr "加号"
-
-#~ msgid ""
-#~ "Controls size of deserts and beaches in Mapgen v6.\n"
-#~ "When snowbiomes are enabled 'mgv6_freq_desert' is ignored."
-#~ msgstr ""
-#~ "控制在 Mapgen v6 中的沙漠与沙滩大小。\n"
-#~ "当 snowbiomes 启用时「mgv6_freq_desert」会被忽略。"
-
-#~ msgid ""
-#~ "Determines terrain shape.\n"
-#~ "The 3 numbers in brackets control the scale of the\n"
-#~ "terrain, the 3 numbers should be identical."
-#~ msgstr "决定地形尺寸。"
+#~ msgid "Touch free target"
+#~ msgstr "自由触摸目标"
 
 #, fuzzy
-#~ msgid "Mapgen flat cave width"
-#~ msgstr "地图生成器平面阈值"
+#~ msgid "Downloading"
+#~ msgstr "下载中"
 
-#, fuzzy
-#~ msgid "Mapgen fractal cave width"
-#~ msgstr "地图生成器分形片 w"
+#~ msgid " KB/s"
+#~ msgstr "千字节/秒"
 
-#~ msgid "Mapgen fractal fractal"
-#~ msgstr "地图生成器分形分形"
+#~ msgid " MB/s"
+#~ msgstr "兆字节/秒"
 
-#~ msgid "Mapgen fractal iterations"
-#~ msgstr "地图生成器分形迭代"
+#~ msgid "Left click: Move all items, Right click: Move single item"
+#~ msgstr "左键：移动所有物品，右键：移动单个物品"
 
-#~ msgid "Mapgen fractal julia w"
-#~ msgstr "地图生成器分形 julia w"
+#~ msgid "is required by:"
+#~ msgstr "被需要："
 
-#~ msgid "Mapgen fractal julia x"
-#~ msgstr "地图生成器分形 julia x"
+#~ msgid "Configuration saved.  "
+#~ msgstr "配置已保存。  "
 
-#~ msgid "Mapgen fractal julia y"
-#~ msgstr "地图生成器分形 julia y"
+#~ msgid "Warning: Configuration not consistent.  "
+#~ msgstr "警告：配置不一致。  "
 
-#~ msgid "Mapgen fractal julia z"
-#~ msgstr "地图生成器分形 julia z"
+#~ msgid "Cannot create world: Name contains invalid characters"
+#~ msgstr "无法创建世界：名字包含非法字符"
 
-#~ msgid "Mapgen fractal offset"
-#~ msgstr "地图生成器分形偏移"
+#~ msgid "Show Public"
+#~ msgstr "显示公共"
 
-#~ msgid "Mapgen fractal scale"
-#~ msgstr "地图生成器分形规模"
+#~ msgid "Show Favorites"
+#~ msgstr "显示最爱"
 
-#~ msgid "Mapgen fractal slice w"
-#~ msgstr "地图生成器分形片 w"
+#~ msgid "Leave address blank to start a local server."
+#~ msgstr "地址栏留空可启动本地服务器。"
 
-#, fuzzy
-#~ msgid "Mapgen v5 cave width"
-#~ msgstr "巨大洞穴深度"
+#~ msgid "Create world"
+#~ msgstr "创造世界"
 
-#~ msgid "Mapgen v6 beach frequency"
-#~ msgstr "地图生成器 v6 沙滩频率"
+#~ msgid "Address required."
+#~ msgstr "需要地址。"
 
-#~ msgid "Mapgen v6 desert frequency"
-#~ msgstr "地图生成器 v6 沙漠频率"
+#~ msgid "Cannot delete world: Nothing selected"
+#~ msgstr "无法删除世界：没有选择世界"
 
-#, fuzzy
-#~ msgid "Mapgen v7 cave width"
-#~ msgstr "巨大洞穴深度"
+#~ msgid "Files to be deleted"
+#~ msgstr "将被删除的文件"
 
-#~ msgid "Detailed mod profiling"
-#~ msgstr "详细 mod 剖析"
+#~ msgid "Cannot create world: No games found"
+#~ msgstr "无法创造世界：未找到游戏模式"
 
-#~ msgid "Useful for mod developers."
-#~ msgstr "适用 MOD 开发者。"
+#~ msgid "Cannot configure world: Nothing selected"
+#~ msgstr "无法配置世界：没有选择世界"
 
-#~ msgid "No of course not!"
-#~ msgstr "当然不！"
-
-#~ msgid "Public Serverlist"
-#~ msgstr "公共服务器列表"
-
-#~ msgid "No!!!"
-#~ msgstr "不!!!"
-
-#, fuzzy
-#~ msgid "If enabled, "
-#~ msgstr "启用"
-
-#~ msgid "Restart minetest for driver change to take effect"
-#~ msgstr "重启minetest让驱动变化生效"
-
-#~ msgid "Gamemgr: Unable to copy mod \"$1\" to game \"$2\""
-#~ msgstr "游戏管理: 无法复制MOD“$1”到游戏“$2”"
-
-#~ msgid "GAMES"
-#~ msgstr "游戏"
-
-#~ msgid "Mods:"
-#~ msgstr "MODS："
-
-#~ msgid "new game"
-#~ msgstr "新建游戏"
-
-#~ msgid "EDIT GAME"
-#~ msgstr "编辑游戏"
-
-#~ msgid "Remove selected mod"
-#~ msgstr "删除选中MOD"
-
-#~ msgid "<<-- Add mod"
-#~ msgstr "<<-- 添加MOD"
-
-#~ msgid "CLIENT"
-#~ msgstr "客户端"
-
-#~ msgid "START SERVER"
-#~ msgstr "启动服务器"
-
-#~ msgid "Name"
-#~ msgstr "名字"
-
-#~ msgid "Password"
-#~ msgstr "密码"
-
-#~ msgid "SETTINGS"
-#~ msgstr "设置"
-
-#~ msgid "Preload item visuals"
-#~ msgstr "预先加载物品图像"
-
-#~ msgid "Finite Liquid"
-#~ msgstr "液体有限延伸"
-
-#~ msgid "SINGLE PLAYER"
-#~ msgstr "单人游戏"
-
-#~ msgid "TEXTURE PACKS"
-#~ msgstr "材质包"
-
-#~ msgid "MODS"
-#~ msgstr "MODS"
-
-#~ msgid "Add mod:"
-#~ msgstr "添加MOD："
-
-#~ msgid ""
-#~ "Warning: Some mods are not configured yet.\n"
-#~ "They will be enabled by default when you save the configuration.  "
-#~ msgstr ""
-#~ "警告：一些MOD仍未设定。\n"
-#~ "它们会在你保存配置的时候自动启用。  "
-
-#~ msgid ""
-#~ "Warning: Some configured mods are missing.\n"
-#~ "Their setting will be removed when you save the configuration.  "
-#~ msgstr ""
-#~ "警告：缺少一些设定了的MOD。\n"
-#~ "它们的设置会在你保存配置的时候被移除。  "
+#~ msgid "Failed to delete all world files"
+#~ msgstr "无法删除所有该世界的文件"
 
 #~ msgid ""
 #~ "Default Controls:\n"
@@ -6562,74 +6182,428 @@ msgstr "cURL 超时"
 #~ "ESC：菜单\n"
 #~ "T：聊天\n"
 
-#~ msgid "Failed to delete all world files"
-#~ msgstr "无法删除所有该世界的文件"
+#~ msgid ""
+#~ "Warning: Some configured mods are missing.\n"
+#~ "Their setting will be removed when you save the configuration.  "
+#~ msgstr ""
+#~ "警告：缺少一些设定了的MOD。\n"
+#~ "它们的设置会在你保存配置的时候被移除。  "
 
-#~ msgid "Cannot configure world: Nothing selected"
-#~ msgstr "无法配置世界：没有选择世界"
+#~ msgid ""
+#~ "Warning: Some mods are not configured yet.\n"
+#~ "They will be enabled by default when you save the configuration.  "
+#~ msgstr ""
+#~ "警告：一些MOD仍未设定。\n"
+#~ "它们会在你保存配置的时候自动启用。  "
 
-#~ msgid "Cannot create world: No games found"
-#~ msgstr "无法创造世界：未找到游戏模式"
+#~ msgid "Add mod:"
+#~ msgstr "添加MOD："
 
-#~ msgid "Files to be deleted"
-#~ msgstr "将被删除的文件"
+#~ msgid "MODS"
+#~ msgstr "MODS"
 
-#~ msgid "Cannot delete world: Nothing selected"
-#~ msgstr "无法删除世界：没有选择世界"
+#~ msgid "TEXTURE PACKS"
+#~ msgstr "材质包"
 
-#~ msgid "Address required."
-#~ msgstr "需要地址。"
+#~ msgid "SINGLE PLAYER"
+#~ msgstr "单人游戏"
 
-#~ msgid "Create world"
-#~ msgstr "创造世界"
+#~ msgid "Finite Liquid"
+#~ msgstr "液体有限延伸"
 
-#~ msgid "Leave address blank to start a local server."
-#~ msgstr "地址栏留空可启动本地服务器。"
+#~ msgid "Preload item visuals"
+#~ msgstr "预先加载物品图像"
 
-#~ msgid "Show Favorites"
-#~ msgstr "显示最爱"
+#~ msgid "SETTINGS"
+#~ msgstr "设置"
 
-#~ msgid "Show Public"
-#~ msgstr "显示公共"
+#~ msgid "Password"
+#~ msgstr "密码"
 
-#~ msgid "Cannot create world: Name contains invalid characters"
-#~ msgstr "无法创建世界：名字包含非法字符"
+#~ msgid "Name"
+#~ msgstr "名字"
 
-#~ msgid "Warning: Configuration not consistent.  "
-#~ msgstr "警告：配置不一致。  "
+#~ msgid "START SERVER"
+#~ msgstr "启动服务器"
 
-#~ msgid "Configuration saved.  "
-#~ msgstr "配置已保存。  "
+#~ msgid "CLIENT"
+#~ msgstr "客户端"
 
-#~ msgid "is required by:"
-#~ msgstr "被需要："
+#~ msgid "<<-- Add mod"
+#~ msgstr "<<-- 添加MOD"
 
-#~ msgid "Left click: Move all items, Right click: Move single item"
-#~ msgstr "左键：移动所有物品，右键：移动单个物品"
+#~ msgid "Remove selected mod"
+#~ msgstr "删除选中MOD"
 
-#~ msgid " MB/s"
-#~ msgstr "兆字节/秒"
+#~ msgid "EDIT GAME"
+#~ msgstr "编辑游戏"
 
-#~ msgid " KB/s"
-#~ msgstr "千字节/秒"
+#~ msgid "new game"
+#~ msgstr "新建游戏"
+
+#~ msgid "Mods:"
+#~ msgstr "MODS："
+
+#~ msgid "GAMES"
+#~ msgstr "游戏"
+
+#~ msgid "Gamemgr: Unable to copy mod \"$1\" to game \"$2\""
+#~ msgstr "游戏管理: 无法复制MOD“$1”到游戏“$2”"
+
+#~ msgid "Restart minetest for driver change to take effect"
+#~ msgstr "重启minetest让驱动变化生效"
 
 #, fuzzy
-#~ msgid "Downloading"
-#~ msgstr "下载中"
+#~ msgid "If enabled, "
+#~ msgstr "启用"
 
-#~ msgid "Touch free target"
-#~ msgstr "自由触摸目标"
+#~ msgid "No!!!"
+#~ msgstr "不!!!"
 
-#~ msgid "Scaling factor applied to menu elements: "
-#~ msgstr "菜单元素应用缩放因子"
+#~ msgid "Public Serverlist"
+#~ msgstr "公共服务器列表"
+
+#~ msgid "No of course not!"
+#~ msgstr "当然不！"
+
+#~ msgid "Useful for mod developers."
+#~ msgstr "适用 MOD 开发者。"
+
+#~ msgid "Detailed mod profiling"
+#~ msgstr "详细 mod 剖析"
 
 #, fuzzy
-#~ msgid "Preload inventory textures"
-#~ msgstr "载入中..."
+#~ msgid "Mapgen v7 cave width"
+#~ msgstr "巨大洞穴深度"
 
-#~ msgid "Advanced Settings"
-#~ msgstr "高级设置"
+#~ msgid "Mapgen v6 desert frequency"
+#~ msgstr "地图生成器 v6 沙漠频率"
+
+#~ msgid "Mapgen v6 beach frequency"
+#~ msgstr "地图生成器 v6 沙滩频率"
 
 #, fuzzy
-#~ msgid "Content Store"
-#~ msgstr "关闭商店"
+#~ msgid "Mapgen v5 cave width"
+#~ msgstr "巨大洞穴深度"
+
+#~ msgid "Mapgen fractal slice w"
+#~ msgstr "地图生成器分形片 w"
+
+#~ msgid "Mapgen fractal scale"
+#~ msgstr "地图生成器分形规模"
+
+#~ msgid "Mapgen fractal offset"
+#~ msgstr "地图生成器分形偏移"
+
+#~ msgid "Mapgen fractal julia z"
+#~ msgstr "地图生成器分形 julia z"
+
+#~ msgid "Mapgen fractal julia y"
+#~ msgstr "地图生成器分形 julia y"
+
+#~ msgid "Mapgen fractal julia x"
+#~ msgstr "地图生成器分形 julia x"
+
+#~ msgid "Mapgen fractal julia w"
+#~ msgstr "地图生成器分形 julia w"
+
+#~ msgid "Mapgen fractal iterations"
+#~ msgstr "地图生成器分形迭代"
+
+#~ msgid "Mapgen fractal fractal"
+#~ msgstr "地图生成器分形分形"
+
+#, fuzzy
+#~ msgid "Mapgen fractal cave width"
+#~ msgstr "地图生成器分形片 w"
+
+#, fuzzy
+#~ msgid "Mapgen flat cave width"
+#~ msgstr "地图生成器平面阈值"
+
+#~ msgid ""
+#~ "Determines terrain shape.\n"
+#~ "The 3 numbers in brackets control the scale of the\n"
+#~ "terrain, the 3 numbers should be identical."
+#~ msgstr "决定地形尺寸。"
+
+#~ msgid ""
+#~ "Controls size of deserts and beaches in Mapgen v6.\n"
+#~ "When snowbiomes are enabled 'mgv6_freq_desert' is ignored."
+#~ msgstr ""
+#~ "控制在 Mapgen v6 中的沙漠与沙滩大小。\n"
+#~ "当 snowbiomes 启用时「mgv6_freq_desert」会被忽略。"
+
+#~ msgid "Plus"
+#~ msgstr "加号"
+
+#~ msgid "Period"
+#~ msgstr "句号"
+
+#~ msgid "PA1"
+#~ msgstr "PA1键"
+
+#~ msgid "Minus"
+#~ msgstr "减号"
+
+#~ msgid "Kanji"
+#~ msgstr "Kanji键"
+
+#~ msgid "Kana"
+#~ msgstr "Kana键"
+
+#~ msgid "Junja"
+#~ msgstr "Junja键"
+
+#~ msgid "Final"
+#~ msgstr "Final键"
+
+#~ msgid "ExSel"
+#~ msgstr "ExSel键"
+
+#~ msgid "CrSel"
+#~ msgstr "CrSel键"
+
+#~ msgid "Comma"
+#~ msgstr "逗号"
+
+#~ msgid "Capital"
+#~ msgstr "大写锁定键"
+
+#~ msgid "Attn"
+#~ msgstr "Attn键"
+
+#~ msgid "Hide mp content"
+#~ msgstr "隐藏MOD包内容"
+
+#~ msgid ""
+#~ "Whether to support older servers before protocol version 25.\n"
+#~ "Enable if you want to connect to 0.4.12 servers and before.\n"
+#~ "Servers starting with 0.4.13 will work, 0.4.12-dev servers may work.\n"
+#~ "Disabling this option will protect your password better."
+#~ msgstr ""
+#~ "是否支持协议版本在25之前的旧版服务器。\n"
+#~ "启用如果你想连接到0.4.12及之前版本的服务器。\n"
+#~ "0.4.13开始的服务器会工作，0.4.12-dev服务器可能会工作。\n"
+#~ "禁用该项可以更好地保护你的密码。"
+
+#~ msgid "Water Features"
+#~ msgstr "水特性"
+
+#~ msgid "Valleys C Flags"
+#~ msgstr "山谷 C 标志"
+
+#~ msgid "Use key"
+#~ msgstr "使用按键"
+
+#~ msgid "The rendering back-end for Irrlicht."
+#~ msgstr "Irrlicht 的渲染后端。"
+
+#~ msgid "Modstore mods list URL"
+#~ msgstr "Mod 存储的 Mod 列表 URL"
+
+#~ msgid "Modstore download URL"
+#~ msgstr "Mod 存储下载 URL"
+
+#~ msgid "Modstore details URL"
+#~ msgstr "Mod 存储详情 URL"
+
+#~ msgid "Massive cave noise"
+#~ msgstr "巨大洞穴噪音"
+
+#~ msgid "Massive cave depth"
+#~ msgstr "巨大洞穴深度"
+
+#~ msgid "Main menu mod manager"
+#~ msgstr "主菜单 mode 管理器"
+
+#~ msgid "Main menu game manager"
+#~ msgstr "主菜单游戏管理器"
+
+#~ msgid "Lava Features"
+#~ msgstr "熔岩特性"
+
+#, fuzzy
+#~ msgid "Inventory image hack"
+#~ msgstr "库存键"
+
+#~ msgid "Height on which clouds are appearing."
+#~ msgstr "云在多高的高度出现。"
+
+#~ msgid "General"
+#~ msgstr "常规"
+
+#~ msgid ""
+#~ "Field of view while zooming in degrees.\n"
+#~ "This requires the \"zoom\" privilege on the server."
+#~ msgstr ""
+#~ "快速移动（通过“使用”键）。\n"
+#~ "这需要服务器允许“快速移动”权限。"
+
+#~ msgid "Field of view for zoom"
+#~ msgstr "放大时的视界"
+
+#~ msgid "Enables view bobbing when walking."
+#~ msgstr "启用走动时视角摇动。"
+
+#~ msgid "Enable view bobbing"
+#~ msgstr "启用视角摇动"
+
+#~ msgid ""
+#~ "Disable escape sequences, e.g. chat coloring.\n"
+#~ "Use this if you want to run a server with pre-0.4.14 clients and you want "
+#~ "to disable\n"
+#~ "the escape sequences generated by mods."
+#~ msgstr ""
+#~ "停用脱离序列,比如聊天颜色。\n"
+#~ "使用该项，如果你想使用 0.4.14 版本之前的客户端运行服务器并且禁止\n"
+#~ "模组生成的转义序列。"
+
+#~ msgid "Disable escape sequences"
+#~ msgstr "禁用转义序列"
+
+#~ msgid "Descending speed"
+#~ msgstr "下降速度"
+
+#~ msgid "Depth below which you'll find massive caves."
+#~ msgstr "巨型洞穴的最浅深度。"
+
+#~ msgid "Crouch speed"
+#~ msgstr "蹲伏速度"
+
+#~ msgid ""
+#~ "Creates unpredictable water features in caves.\n"
+#~ "These can make mining difficult. Zero disables them. (0-10)"
+#~ msgstr ""
+#~ "在洞穴中创建随机的水域。\n"
+#~ "水域会使挖矿变得困难。值为0则禁用。（0-10）"
+
+#~ msgid ""
+#~ "Creates unpredictable lava features in caves.\n"
+#~ "These can make mining difficult. Zero disables them. (0-10)"
+#~ msgstr ""
+#~ "在山洞中创建不可预知的熔岩特性。\n"
+#~ "这可以使挖掘更加困难。0 表示禁用。 (0-10)"
+
+#~ msgid "Continuous forward movement (only used for testing)."
+#~ msgstr "连续向前移动（仅用于测试）。"
+
+#~ msgid "Console key"
+#~ msgstr "控制台键"
+
+#~ msgid "Cloud height"
+#~ msgstr "云高度"
+
+#~ msgid "Caves and tunnels form at the intersection of the two noises"
+#~ msgstr "洞穴与隧道由两种噪音的交集形成"
+
+#~ msgid "Autorun key"
+#~ msgstr "自动奔跑键"
+
+#~ msgid "Approximate (X,Y,Z) scale of fractal in nodes."
+#~ msgstr "大约 (X,Y,Z) 的节点分形规模。"
+
+#~ msgid ""
+#~ "Announce to this serverlist.\n"
+#~ "If you want to announce your ipv6 address, use  serverlist_url = v6."
+#~ "servers.minetest.net."
+#~ msgstr ""
+#~ "发布到此服务器列表。\n"
+#~ "如果你想发布你的 IPv6 地址，使用 serverlist_url = v6.servers.minetest."
+#~ "net 。"
+
+#~ msgid ""
+#~ "Android systems only: Tries to create inventory textures from meshes\n"
+#~ "when no supported render was found."
+#~ msgstr "只有 Android 系统: 在未找到支持的渲染时, 尝试从网格创建库存纹理。"
+
+#~ msgid "Active Block Modifier interval"
+#~ msgstr "活动区块修改间隔"
+
+#~ msgid "Prior"
+#~ msgstr "Prior键"
+
+#~ msgid "Next"
+#~ msgstr "下一个"
+
+#~ msgid "Use"
+#~ msgstr "使用"
+
+#~ msgid "Print stacks"
+#~ msgstr "打印栈"
+
+#~ msgid "Volume changed to 100%"
+#~ msgstr "音量改到100%"
+
+#~ msgid "Volume changed to 0%"
+#~ msgstr "音量改到0%"
+
+#~ msgid "No information available"
+#~ msgstr "无信息可用"
+
+#~ msgid "Normal Mapping"
+#~ msgstr "法线贴图"
+
+#~ msgid "Play Online"
+#~ msgstr "联网游戏"
+
+#~ msgid "Uninstall selected modpack"
+#~ msgstr "删除选中的MOD包"
+
+#~ msgid "Local Game"
+#~ msgstr "本地游戏"
+
+#~ msgid "re-Install"
+#~ msgstr "重新安装"
+
+#~ msgid "Unsorted"
+#~ msgstr "未分类"
+
+#~ msgid "Successfully installed:"
+#~ msgstr "成功的安装："
+
+#~ msgid "Shortname:"
+#~ msgstr "短名称:"
+
+#~ msgid "Rating"
+#~ msgstr "评级"
+
+#~ msgid "Page $1 of $2"
+#~ msgstr "第$1页,共$2页"
+
+#~ msgid "Subgame Mods"
+#~ msgstr "子游戏模组"
+
+#~ msgid "Select path"
+#~ msgstr "选择路径"
+
+#~ msgid "Possible values are: "
+#~ msgstr "可设置的 flag: "
+
+#~ msgid "Please enter a comma seperated list of flags."
+#~ msgstr "请输入 flag, 多个 flag 以半角逗号分隔."
+
+#~ msgid "Optionally the lacunarity can be appended with a leading comma."
+#~ msgstr "可选附加一逗号起始的孔隙度参数。"
+
+#~ msgid ""
+#~ "Format: <offset>, <scale>, (<spreadX>, <spreadY>, <spreadZ>), <seed>, "
+#~ "<octaves>, <persistence>"
+#~ msgstr ""
+#~ "格式: <offset>, <scale>, (<spreadX>, <spreadY>, <spreadZ>), <seed>, "
+#~ "<octaves>, <persistence>"
+
+#~ msgid "Format is 3 numbers separated by commas and inside brackets."
+#~ msgstr "格式: (X, Y, Z)."
+
+#~ msgid "\"$1\" is not a valid flag."
+#~ msgstr "\"$1\" 不是合法的 flag."
+
+#~ msgid "No worldname given or no game selected"
+#~ msgstr "未指定世界名或未选择游戏"
+
+#~ msgid "Enable MP"
+#~ msgstr "启用MOD包"
+
+#~ msgid "Disable MP"
+#~ msgstr "禁用MOD包"

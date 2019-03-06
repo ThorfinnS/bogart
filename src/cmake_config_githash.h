@@ -3,4 +3,4 @@
 
 #pragma once
 
-#define VERSION_GITHASH "5.0.0-dev-5608f8d-dirty"
+#define VERSION_GITHASH "5.0.0"

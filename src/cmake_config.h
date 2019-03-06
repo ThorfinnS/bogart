@@ -8,7 +8,7 @@
 #define VERSION_MINOR 0
 #define VERSION_PATCH 0
 #define VERSION_EXTRA ""
-#define VERSION_STRING "5.0.0-dev"
+#define VERSION_STRING "5.0.0"
 #define PRODUCT_VERSION_STRING "5.0"
 #define STATIC_SHAREDIR "."
 #define STATIC_LOCALEDIR "locale"
